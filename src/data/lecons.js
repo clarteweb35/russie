@@ -3,7 +3,7 @@ export const lecons = [
   {
     slug: 'salutations',
     titre: 'Salutations et politesse',
-    intro: 'Les mots à utiliser dès que tu parles à quelqu’un. En russe, dire « Здравствуйте » à un inconnu fait toute la différence.',
+    intro: 'Les mots à utiliser dès que vous parlez à quelqu’un. En russe, dire « Здравствуйте » à un inconnu fait toute la différence.',
     phrases: [
       ['Здравствуйте', 'zdravstvouïté', 'Bonjour (poli)'],
       ['Привет', 'privièt', 'Salut'],
@@ -19,12 +19,12 @@ export const lecons = [
       ['До свидания', 'da svidania', 'Au revoir'],
       ['Пока', 'paka', 'Salut (à bientôt)'],
     ],
-    astuce: 'Utilise « Здравствуйте » et « Вы » avec les inconnus, « Привет » seulement entre amis.',
+    astuce: 'Utilisez « Здравствуйте » et « Вы » avec les inconnus, « Привет » seulement entre amis.',
   },
   {
     slug: 'se-presenter',
     titre: 'Se présenter',
-    intro: 'Dire qui tu es et surtout dire ce que tu ne comprends pas : la phrase la plus utile du débutant.',
+    intro: 'Dire qui vous êtes et surtout dire ce que vous ne comprenez pas : la phrase la plus utile du débutant.',
     phrases: [
       ['Меня зовут…', 'minia zavout', 'Je m’appelle…'],
       ['Очень приятно', 'otchèn priyatna', 'Enchanté'],
@@ -35,12 +35,12 @@ export const lecons = [
       ['Повторите, пожалуйста', 'paftaritié pajalousta', 'Répétez, s’il vous plaît'],
       ['Говорите медленнее', 'gavaritié miédlinéyé', 'Parlez plus lentement'],
     ],
-    astuce: 'Prépare « Меня зовут… » avec ton prénom et répète-le à voix haute.',
+    astuce: 'Préparez « Меня зовут… » avec votre prénom et répétez-le à voix haute.',
   },
   {
     slug: 'chiffres-prix-heure',
     titre: 'Chiffres, prix et heure',
-    intro: 'Pour comprendre un prix, demander l’heure ou compter ton argent.',
+    intro: 'Pour comprendre un prix, demander l’heure ou compter votre argent.',
     phrases: [
       ['Один', 'adin', '1'],
       ['Два', 'dva', '2'],
@@ -59,7 +59,7 @@ export const lecons = [
       ['Который час?', 'katoryï tchass', 'Quelle heure est-il ?'],
       ['Рубль', 'roubl', 'Rouble'],
     ],
-    astuce: 'Entraîne-toi à dire des prix : « сто рублей » (sto roubliéï), « пятьсот рублей » (piatsot roubliéï).',
+    astuce: 'Entraînez-vous à dire des prix : « сто рублей » (sto roubliéï), « пятьсот рублей » (piatsot roubliéï).',
   },
   {
     slug: 'se-deplacer',
@@ -79,12 +79,12 @@ export const lecons = [
       ['Билет', 'bilièt', 'Billet'],
       ['Мне нужно в центр', 'mnié noujna v tsèntr', 'Je dois aller au centre'],
     ],
-    astuce: 'Montre l’adresse écrite en russe sur ton téléphone au chauffeur : c’est souvent plus sûr que de la dire.',
+    astuce: 'Montrez l’adresse écrite en russe sur votre téléphone au chauffeur : c’est souvent plus sûr que de la dire.',
   },
   {
     slug: 'restaurant-courses',
     titre: 'Restaurant et courses',
-    intro: 'Commander, demander l’addition, dire comment tu paies.',
+    intro: 'Commander, demander l’addition, dire comment vous payez.',
     phrases: [
       ['Меню, пожалуйста', 'minyou pajalousta', 'Le menu, s’il vous plaît'],
       ['Я хочу…', 'ya khatchou', 'Je voudrais…'],
@@ -98,7 +98,7 @@ export const lecons = [
       ['Можно картой?', 'mojna kartoï', 'Je peux payer par carte ?'],
       ['Я вегетарианец', 'ya viegitariaiéts', 'Je suis végétarien'],
     ],
-    astuce: 'Rappel : tes cartes françaises ne fonctionnent pas en Russie. Garde des espèces et dis « наличные ».',
+    astuce: 'Rappel : vos cartes françaises ne fonctionnent pas en Russie. Gardez des espèces et dites « наличные ».',
   },
   {
     slug: 'urgences',
@@ -114,6 +114,6 @@ export const lecons = [
       ['У меня аллергия', 'ou minia alièrgiya', 'J’ai une allergie'],
       ['Позвоните в посольство Франции', 'pazvanité v pasolstva frantsii', 'Appelez l’ambassade de France'],
     ],
-    astuce: 'Note aussi le numéro de l’ambassade de France à Moscou : +7 495 937 15 00.',
+    astuce: 'Notez aussi le numéro de l’ambassade de France à Moscou : +7 495 937 15 00.',
   },
 ];

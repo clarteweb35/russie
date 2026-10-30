@@ -1,0 +1,67 @@
+---
+---
+<section class="fx" aria-labelledby="fx-title">
+  <div class="fx-head">
+    <h3 id="fx-title">Convertisseur EUR ⇄ RUB</h3>
+    <button class="fx-swap" type="button" aria-label="Inverser le sens de conversion">⇄</button>
+  </div>
+  <div class="fx-row">
+    <label>
+      <span>Euros</span>
+      <input class="fx-eur" type="text" inputmode="decimal" value="100" autocomplete="off" />
+      <b>€</b>
+    </label>
+    <label>
+      <span>Roubles</span>
+      <input class="fx-rub" type="text" inputmode="decimal" autocomplete="off" />
+      <b>₽</b>
+    </label>
+  </div>
+  <p class="fx-info" aria-live="polite">Chargement du taux…</p>
+</section>
+
+<script>
+  const fmt = (n: number, d = 2) => n.toLocaleString('fr-FR', { minimumFractionDigits: d, maximumFractionDigits: d });
+  const parse = (s: string) => parseFloat(s.replace(/\s/g, '').replace(',', '.'));
+
+  async function loadRate(): Promise<{ rate: number; date: string; source: string }> {
+    try {
+      const r = await fetch('https://www.cbr-xml-daily.ru/daily_json.js');
+      const j = await r.json();
+      const v = j.Valute.EUR;
+      return { rate: v.Value / v.Nominal, date: j.Date, source: 'Banque de Russie' };
+    } catch {
+      const r = await fetch('https://open.er-api.com/v6/latest/EUR');
+      const j = await r.json();
+      return { rate: j.rates.RUB, date: new Date(j.time_last_update_unix * 1000).toISOString(), source: 'ExchangeRate-API' };
+    }
+  }
+
+  const ratePromise = loadRate();
+
+  document.querySelectorAll<HTMLElement>('.fx').forEach((box) => {
+    const eur = box.querySelector<HTMLInputElement>('.fx-eur')!;
+    const rub = box.querySelector<HTMLInputElement>('.fx-rub')!;
+    const info = box.querySelector<HTMLElement>('.fx-info')!;
+    const swap = box.querySelector<HTMLButtonElement>('.fx-swap')!;
+    let rate = 0;
+
+    const fromEur = () => { const v = parse(eur.value); rub.value = isFinite(v) && rate ? fmt(v * rate) : ''; };
+    const fromRub = () => { const v = parse(rub.value); eur.value = isFinite(v) && rate ? fmt(v / rate) : ''; };
+    eur.addEventListener('input', fromEur);
+    rub.addEventListener('input', fromRub);
+    swap.addEventListener('click', () => {
+      const e = eur.value; eur.value = rub.value; rub.value = e;
+      fromEur();
+    });
+
+    ratePromise.then((d) => {
+      rate = d.rate;
+      const date = new Date(d.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+      info.textContent = `1 € = ${fmt(rate)} ₽ · taux ${d.source} du ${date}. Indicatif : les banques et bureaux de change appliquent leur propre taux.`;
+      fromEur();
+    }).catch(() => {
+      info.textContent = 'Taux indisponible pour le moment. Vérifiez le taux sur le site de la Banque de Russie.';
+    });
+  });
+</script>

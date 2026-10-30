@@ -1,0 +1,72 @@
+# CLAUDE.md
+
+Guide Russie : site statique Astro 5, en français. Spécification fonctionnelle : [.ai/SPEC_FONCTIONNALITES.md](.ai/SPEC_FONCTIONNALITES.md). La lire avant tout changement de contenu ou de fonctionnalité.
+
+Principes d'architecture (SSOT, DRY, KISS) et règles de contenu détaillés : [.ai/SYSTEM_PROMPT.md](.ai/SYSTEM_PROMPT.md).
+
+État du projet, chantiers et actions restantes : [.ai/AVANCEMENT.md](.ai/AVANCEMENT.md). Le mettre à jour à la fin de chaque session.
+
+## Commandes
+
+```bash
+npm install
+npm run dev -- --host 127.0.0.1 --port 4321   # http://127.0.0.1:4321/russie/
+npm run build                                 # doit passer avant tout push
+```
+
+Le site est servi sous `/russie/` en local comme en production (`base` dans `astro.config.mjs`). `http://127.0.0.1:4321/` seul renvoie une 404.
+
+## Structure
+
+- `src/layouts/Base.astro` : layout unique (en-tête, menu, bandeau de sécurité, ligne de crédibilité, pied de page, scripts d'animation).
+- `src/config.ts` : `sections` (menu et cartes), `LAST_CHECK` (date de vérification), `url()`.
+- `src/pages/*.astro` : une page par rubrique. `lecons/[slug].astro` génère les leçons depuis `src/data/lecons.js`.
+- `src/components/` : composants réutilisables (`Convertisseur.astro`).
+- `src/styles/global.css` : tous les styles, variables CSS en haut, thème sombre automatique.
+- `public/` : fichiers servis tels quels (images). Pas de copie des images à la racine du projet.
+
+## Règles à respecter
+
+1. **Liens internes** : toujours `href={url('/chemin')}`, jamais `href="/chemin"`. Sinon ils cassent sous `/russie/`. Importer `url` depuis `config` (`'../config'`, ou `'../../config'` dans `lecons/`).
+2. **Nouvelle rubrique** : l'ajouter dans `sections` de `config.ts` ; le menu et l'accueil suivent.
+3. **Contenu sensible** (droit, argent, sécurité, santé) : toujours un badge `Vérifié` ou `À confirmer`, et une source en bas de section (`<p class="src">`). Ne jamais présenter comme certain ce qui n'a pas été confirmé par une source récente. Les sources commerciales doivent être signalées comme telles. Un chiffre sans source est marqué « Estimation non vérifiée ».
+4. **Avertissement de sécurité** : ne pas le retirer ni l'affaiblir (bandeau dans `Base.astro`, encadré sur l'accueil, texte complet dans `/voyager#securite`).
+5. **Ton** : français, **vouvoiement**, phrases courtes. Les textes du site ont été écrits au tutoiement : les passer au vouvoiement page par page (voir AVANCEMENT). Les nouveaux textes sont écrits au vouvoiement.
+6. **Affiliation** : tout lien affilié est signalé comme tel, avec `rel="sponsored noopener"`. Aucun faux partenaire en attendant de vrais liens.
+7. **Pas de ressource externe** inutile : polices système, pas de CDN. Appels externes autorisés aujourd'hui : le convertisseur (Banque de Russie, repli ExchangeRate-API). **À venir** : Google Analytics 4, uniquement après consentement (voir Conventions). Aucun autre traceur.
+8. **Animations** : doivent rester désactivables (`prefers-reduced-motion`) et ne jamais cacher le contenu sans JavaScript (classe `.js` posée par `Base.astro`).
+9. **Images** : mettre dans `public/img/`, texte alternatif vide (`alt=""`) si décoratives. Éviter les fichiers de plus de 300 Ko.
+10. **Dates** : `LAST_CHECK` n'est mise à jour qu'après une vraie vérification des sources.
+
+## Conventions
+
+- Langue : français (UI, commentaires, docs). Vouvoiement dans l'interface.
+- Style : CSS dans `global.css` et blocs `<style>` de composants Astro ; JS vanilla, **aucune librairie ni dépendance ajoutée** ; animations en CSS pur, désactivées si l'utilisateur demande de réduire les animations.
+- Accessibilité : conserver `aria-*`, `role`, `alt` (texte alternatif explicite pour les photos, vide pour les illustrations décoratives), liens externes en `rel="noopener"`.
+- Performance (**Google Analytics et EcoIndex : à venir, pas encore en place**) : garder les scores PageSpeed (99-100) et **EcoIndex : B (80/100, mesure du 26/10, 337 éléments) accepté par l'éditeur ; seuil du A = ~330 éléments sur l'accueil, à ne pas chercher au prix des fonctionnalités** (compter les balises avant de grossir la page ; les bandeaux défilants doublent leur contenu) ; pas d'image ni de script externe, **sauf Google Analytics 4 (`G-XV5HSQ5YKX`), chargé uniquement après acceptation du bandeau de consentement** (jamais d'office : ne pas coller la balise gtag brute dans les pages) ; hauteurs fixes pour les bandeaux animés (pas de décalage de mise en page).
+- Commentaires de code courts, en français, qui expliquent le pourquoi.
+
+## Règles de travail (à respecter à chaque intervention)
+
+### Avant de commencer
+- **Reprise de session** : au début de chaque session, lire [.ai/AVANCEMENT.md](.ai/AVANCEMENT.md) (où on en est, prochaine action). Le mettre à jour à la fin de chaque étape.
+- **Architecture** : avant toute implémentation, lire [.ai/SYSTEM_PROMPT.md](.ai/SYSTEM_PROMPT.md) (il suffit, pas de second fichier d'architecture).
+- **Agents** : ne jamais lancer de sous-agents ni de workflow multi-agents sans me demander d'abord. Obligatoire, sans exception.
+- **Niveaux d'action** : je préfixe ma demande par un tag. Sans tag, appliquer `[strict]`.
+  - `[consultatif]` : ne modifie aucun fichier. Explique ce que tu ferais et attends ma validation.
+  - `[strict]` : avant de coder, dis quoi, pourquoi, comment, et dans quels fichiers. Puis code.
+  - `[rapide]` : code directement, explication minimale. Interdit de toucher à l'architecture (découpage des fichiers, dépendances, build, déploiement). Si le changement l'exige, arrête-toi et repasse en `[strict]`.
+- **Travaux en cours** : dès qu'une action commence (avant de modifier le moindre fichier), l'inscrire dans la section « Travaux en cours » en bas de [.ai/SPEC_FONCTIONNALITES.md](.ai/SPEC_FONCTIONNALITES.md) : date, objectif, fichiers concernés, étapes faites / restantes, mises à jour au fil de l'eau. La retirer une fois l'action terminée et mise en ligne. But : ne rien perdre si l'intervention plante.
+
+### Pendant
+- **Explications** : codeur novice, ne pas être trop technique.
+- **Pièges Windows / shell** : dans un `node -e "…"` ou un heredoc non protégé, les **accents graves (backticks) sont interprétés par le shell** ; écrire les scripts dans un fichier ou utiliser les outils Write/Edit. Une apostrophe dans une chaîne `'…'` casse un fichier de test.
+- **Vérification visuelle** quand c'est possible : `npx astro preview` puis Chrome en mode sans interface (`chrome --headless=new --screenshot=… http://localhost:…/`). Largeur minimale sous Chrome sans interface : 500 px.
+
+### Après
+- **Spec** : après tout ajout ou modification de contenu ou de fonctionnalité visible par un visiteur (y compris le style de l'article ou du site), mettre à jour [.ai/SPEC_FONCTIONNALITES.md](.ai/SPEC_FONCTIONNALITES.md) dans la même intervention. Ne pas documenter les refactos internes sans impact visible.
+- **Mise en ligne** : vérifier avec `npm test` (construit le site puis vérifie les liens internes), puis **commiter et pousser sur `main` directement, sans redemander**. Ne pas pousser si les tests échouent.
+  - Un commit par demande, message court en français.
+  - `git add` nominatif, jamais `git add -A` : d'autres modifications en attente peuvent exister, les laisser telles quelles.
+  - `git pull --rebase` avant le push. Le push déclenche le déploiement GitHub Pages.
+  - Retirer l'entrée de « Travaux en cours » dans le même commit.
