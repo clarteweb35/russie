@@ -242,3 +242,11 @@ footer { margin-top: 72px; padding: 36px 0 56px; color: var(--muted); font-size:
 .quiz-opts button:hover:not(:disabled) { transform: translateX(6px); border-color: var(--accent); }
 .quiz-opts button.good { border-color: var(--ok); background: var(--ok-soft); }
 .quiz-opts button.bad { border-color: var(--accent); background: var(--accent-soft); }
+
+/* cartes de leçons avec photo */
+.card-photo { padding: 0; }
+.card-photo .photo { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; transition: transform .6s cubic-bezier(.2, .8, .2, 1); }
+.card-photo:hover .photo { transform: scale(1.06); }
+.card-photo { overflow: hidden; }
+.card-photo h3 { margin: 18px 22px 4px; }
+.card-photo p { margin: 0 22px 20px; }

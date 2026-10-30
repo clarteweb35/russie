@@ -45,7 +45,7 @@ Permis de travail et cadre juridique.
 Alphabet cyrillique, phrases utiles, repères culturels.
 
 ### Leçons `/lecons` et `/lecons/[slug]`
-- 6 leçons : salutations, se présenter, chiffres/prix/heure, etc. Source des données : `src/data/lecons.js`.
+- 6 leçons : salutations, se présenter, chiffres/prix/heure, etc. Source des données : `src/data/lecons.js`. Chaque carte de la liste porte une photo (zoom au survol), définie par `img` et `imgAlt` dans les données.
 - Chaque phrase : russe, prononciation à la française, traduction.
 - Audio par synthèse vocale du navigateur (voix `ru-RU`), avec lecture lente et « Tout écouter ».
 - Quiz d'écoute : 6 questions, 4 choix, score final.

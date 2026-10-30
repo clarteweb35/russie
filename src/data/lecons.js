@@ -1,7 +1,10 @@
 // Chaque phrase : [russe, prononciation à la française, traduction]
+// img et imgAlt : photo de la carte de leçon (public/img/lecons/)
 export const lecons = [
   {
     slug: 'salutations',
+    img: '/img/lecons/salutations.webp',
+    imgAlt: 'Une poignée de main souriante entre un homme et une femme qui salue de la main',
     titre: 'Salutations et politesse',
     intro: 'Les mots à utiliser dès que vous parlez à quelqu’un. En russe, dire « Здравствуйте » à un inconnu fait toute la différence.',
     phrases: [
@@ -23,6 +26,8 @@ export const lecons = [
   },
   {
     slug: 'se-presenter',
+    img: '/img/lecons/se-presenter.webp',
+    imgAlt: 'Un homme souriant présente sa carte de visite',
     titre: 'Se présenter',
     intro: 'Dire qui vous êtes et surtout dire ce que vous ne comprenez pas : la phrase la plus utile du débutant.',
     phrases: [
@@ -39,6 +44,8 @@ export const lecons = [
   },
   {
     slug: 'chiffres-prix-heure',
+    img: '/img/lecons/chiffres-prix-heure.webp',
+    imgAlt: 'Un réveil, une calculatrice et une étiquette de prix posés sur un bureau',
     titre: 'Chiffres, prix et heure',
     intro: 'Pour comprendre un prix, demander l’heure ou compter votre argent.',
     phrases: [
@@ -63,6 +70,8 @@ export const lecons = [
   },
   {
     slug: 'se-deplacer',
+    img: '/img/lecons/se-deplacer.webp',
+    imgAlt: 'Dans un train en hiver, une main plante des épingles sur une carte de Russie',
     titre: 'Se déplacer',
     intro: 'Demander son chemin, prendre un taxi, trouver la gare ou le métro.',
     phrases: [
@@ -83,6 +92,8 @@ export const lecons = [
   },
   {
     slug: 'restaurant-courses',
+    img: '/img/lecons/restaurant-courses.webp',
+    imgAlt: 'Une table de restaurant russe avec un samovar, des pirojki, du pain et un menu',
     titre: 'Restaurant et courses',
     intro: 'Commander, demander l’addition, dire comment vous payez.',
     phrases: [
@@ -102,6 +113,8 @@ export const lecons = [
   },
   {
     slug: 'urgences',
+    img: '/img/lecons/urgences.webp',
+    imgAlt: 'Une trousse de premiers secours ouverte sur une table',
     titre: 'Urgences et phrases de survie',
     intro: 'À connaître avant de partir, au cas où. Numéro d’urgence en Russie : 112.',
     phrases: [

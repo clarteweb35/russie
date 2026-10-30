@@ -9,7 +9,8 @@ import { lecons } from '../../data/lecons.js';
   <p class="lead">6 leçons courtes, sans alphabet à apprendre d’abord : vous écoutez, vous répétez, vous vous entraînez avec un quiz.</p>
   <div class="grid">
     {lecons.map((l, i) => (
-      <a class="card" href={url(`/lecons/${l.slug}`)}>
+      <a class="card card-photo" href={url(`/lecons/${l.slug}`)}>
+        <img class="photo" src={url(l.img)} alt={l.imgAlt} loading="lazy" width="800" height="450" />
         <h3>{i + 1}. {l.titre}</h3>
         <p>{l.phrases.length} mots et phrases</p>
       </a>

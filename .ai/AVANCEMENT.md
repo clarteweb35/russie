@@ -23,6 +23,7 @@ Dernière mise à jour : 30 octobre 2026. Ce fichier est mis à jour à la fin d
 - [x] 6 leçons de russe avec audio (synthèse vocale), lecture lente, « Tout écouter » et quiz d'écoute.
 - [x] Convertisseur EUR ⇄ RUB (taux de la Banque de Russie, repli sur un second service).
 - [x] Accueil par parcours, avec illustrations transparentes et effet au survol.
+- [x] Photos sur les 6 cartes de leçons (WebP, 10 à 51 Ko, zoom au survol).
 
 ### Design et accessibilité
 - [x] Refonte complète du design (sobre, crème et rouge, serif pour les titres), mode sombre automatique.
