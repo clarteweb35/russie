@@ -41,7 +41,7 @@ Dernière mise à jour : 30 octobre 2026. Ce fichier est mis à jour à la fin d
 ### Priorité 1 : tout de suite
 1. [ ] Lancer `npm run build`, puis commit et push des travaux non poussés (voir « En cours »).
 2. [ ] Vérifier sur téléphone : image d'accueil, menu hamburger, audio des leçons, convertisseur.
-3. [ ] **Optimiser l'image d'accueil** (2,6 Mo → environ 150 Ko en WebP/AVIF) : gain direct sur mobile.
+3. [x] Image d'accueil optimisée : 2,6 Mo vers 218 Ko en WebP, illustrations des parcours vers 15 Ko (`scripts/optimiser-images.mjs`).
 
 ### Priorité 2 : maintenabilité
 4. [ ] Extraire le quiz et l'audio de `src/pages/lecons/[slug].astro` vers `Quiz.astro` et `src/scripts/quiz.ts`.

@@ -86,7 +86,7 @@ Liste des sources et de leur fiabilité.
 1. `src/pages/lecons/[slug].astro` mélange template, CSS global et script (quiz, audio) : extraire `Quiz.astro` et `src/scripts/quiz.ts`.
 2. Contenu écrit en dur dans les pages : créer `Alert`, `Badge`, `Sources`, ou passer en Content Collections.
 3. Date de vérification globale : prévoir une date par page.
-4. Image d'accueil de 2,6 Mo : convertir en WebP/AVIF et redimensionner.
+4. ~~Image d'accueil de 2,6 Mo~~ : faite (WebP, 218 Ko). Reste à mesurer EcoIndex.
 5. CSS global sans découpage.
 6. SEO : sitemap, favicon, robots.txt, Open Graph, canonical.
 7. `lecons.js` non typé (tuples) : passer en TypeScript avec un type `Lecon`.

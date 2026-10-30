@@ -5,15 +5,15 @@ import { sections, LAST_CHECK, url } from '../config';
 import { lecons } from '../data/lecons.js';
 
 const parcours = [
-  { n: '1', href: '/voyager', img: '/img/parcours-voyage.png', titre: 'Préparer un voyage', txt: 'Visa, sécurité, transports et démarches avant le départ.' },
-  { n: '2', href: '/vivre', img: '/img/parcours-installer.png', titre: 'S’installer', txt: 'Séjour légal, argent, logement, travail et quotidien.' },
-  { n: '3', href: '/lecons', img: '/img/parcours-russe.png', titre: 'Apprendre le russe', txt: `${lecons.length} leçons courtes avec audio et quiz d’écoute.` },
+  { n: '1', href: '/voyager', img: '/img/parcours-voyage.webp', titre: 'Préparer un voyage', txt: 'Visa, sécurité, transports et démarches avant le départ.' },
+  { n: '2', href: '/vivre', img: '/img/parcours-installer.webp', titre: 'S’installer', txt: 'Séjour légal, argent, logement, travail et quotidien.' },
+  { n: '3', href: '/lecons', img: '/img/parcours-russe.webp', titre: 'Apprendre le russe', txt: `${lecons.length} leçons courtes avec audio et quiz d’écoute.` },
 ];
 const essentiels = sections.filter((s) => ['/travailler', '/paiements', '/langue-culture'].includes(s.href));
 ---
 <Base title="Accueil">
   <section class="hero">
-    <img class="hero-image" src={url("/saint-basile-hero.png")} alt="La cathédrale Saint-Basile sous la neige, au coucher du soleil à Moscou" fetchpriority="high" />
+    <img class="hero-image" src={url("/saint-basile-hero.webp")} alt="La cathédrale Saint-Basile sous la neige, au coucher du soleil à Moscou" fetchpriority="high" />
     <div class="hero-text">
       <span class="eyebrow">Guide indépendant · mis à jour le {LAST_CHECK}</span>
       <h1>Comprendre la <em>Russie</em> avant d’agir</h1>
