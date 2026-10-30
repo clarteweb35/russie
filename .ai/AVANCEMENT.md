@@ -75,3 +75,16 @@ Dernière mise à jour : 30 octobre 2026. Ce fichier est mis à jour à la fin d
 - [ ] Nom de domaine propre (sinon l'adresse reste `clarteweb35.github.io/russie`). Si oui : `base: '/'` et réglage du domaine dans GitHub Pages.
 - [ ] Faut-il raccourcir l'avertissement de sécurité en bandeau repliable ?
 - [ ] Niveau d'animation souhaité (actuellement doux).
+
+## Quand le nom de domaine existera (en attente)
+
+À faire dans cet ordre, une fois le domaine acheté :
+1. [ ] DNS : pointer le domaine vers GitHub Pages (enregistrements indiqués dans Réglages > Pages du dépôt), puis saisir le domaine dans « Custom domain » et cocher « Enforce HTTPS ». Action de l'utilisateur.
+2. [ ] `astro.config.mjs` : `site` = le nouveau domaine, `base: '/'` (supprimer `/russie`).
+3. [ ] `scripts/verifier-liens.mjs` : passer `BASE` de `'/russie'` à `''` (ou adapter pour l'absence de préfixe).
+4. [ ] `public/robots.txt` : mettre l'adresse du sitemap sur le nouveau domaine.
+5. [ ] Ajouter un fichier `public/CNAME` contenant le domaine.
+6. [ ] Mettre à jour les adresses dans `README.md`, `CLAUDE.md` (« /russie/ ») et `.ai/SPEC_FONCTIONNALITES.md`.
+7. [ ] **Google Analytics 4** : l'utilisateur fournit l'identifiant de mesure `G-XXXXXXXXXX` propre à ce site (ne pas réutiliser celui de l'autre projet). Créer le bandeau de consentement, une page de confidentialité, et ne charger gtag qu'après acceptation.
+8. [ ] **EcoIndex** : mesurer l'accueil en ligne, compter les éléments avant d'ajouter du contenu.
+9. [ ] Vérifier le sitemap, les liens, les balises de partage et le HTTPS en ligne.
