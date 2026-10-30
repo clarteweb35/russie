@@ -53,7 +53,7 @@ Alphabet cyrillique, phrases utiles, repères culturels.
 - Sans voix russe disponible, un message l'explique.
 
 ### Mentions légales `/mentions-legales`
-Éditeur, hébergeur, images générées par IA, données personnelles, liens et partenaires. Liée depuis le pied de page. Identité et contact de l'éditeur : **à compléter**.
+Éditeur, hébergeur, images générées par IA, données personnelles, liens et partenaires. Liée depuis le pied de page. Éditeur anonyme (particulier, à titre non professionnel), identité communiquée à l'hébergeur.
 
 ### Sources `/sources`
 Liste des sources et de leur fiabilité.

@@ -1,23 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
-import Alert from '../components/Alert.astro';
 import { MENTION_IA, url } from '../config';
 ---
 <Base title="Mentions légales" description="Éditeur, hébergeur, images générées par IA et données personnelles du Guide Russie.">
   <h1>Mentions légales</h1>
   <p class="lead">Qui édite ce site, où il est hébergé, comment ses images sont produites et ce qu’il fait de vos données.</p>
 
-  <Alert titre="À compléter par l’éditeur" warn>
-    Les informations entre crochets ci-dessous (identité, adresse, contact) doivent être renseignées par l’éditeur du site avant de les considérer comme définitives.
-  </Alert>
-
   <h2>Éditeur du site</h2>
-  <ul>
-    <li><strong>Nom ou raison sociale</strong> : [à compléter]</li>
-    <li><strong>Adresse</strong> : [à compléter]</li>
-    <li><strong>Courriel de contact</strong> : [à compléter]</li>
-    <li><strong>Directeur de la publication</strong> : [à compléter]</li>
-  </ul>
+  <p>Ce site est édité à titre non professionnel par une personne physique qui a choisi de rester anonyme, conformément à la loi pour la confiance dans l’économie numérique. Son identité a été communiquée à l’hébergeur.</p>
 
   <h2>Hébergeur</h2>
   <p>Le site est hébergé par GitHub Pages : GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis. <span class="src">(Adresse à vérifier auprès de l’hébergeur.)</span></p>
