@@ -89,3 +89,7 @@ Dernière mise à jour : 30 octobre 2026. Ce fichier est mis à jour à la fin d
 7. [ ] **Google Analytics 4** : l'utilisateur fournit l'identifiant de mesure `G-XXXXXXXXXX` propre à ce site (ne pas réutiliser celui de l'autre projet). Créer le bandeau de consentement, une page de confidentialité, et ne charger gtag qu'après acceptation.
 8. [ ] **EcoIndex** : mesurer l'accueil en ligne, compter les éléments avant d'ajouter du contenu.
 9. [ ] Vérifier le sitemap, les liens, les balises de partage et le HTTPS en ligne.
+
+## À compléter par l'utilisateur
+- [ ] **Mentions légales** (`src/pages/mentions-legales.astro`) : renseigner nom ou raison sociale, adresse, courriel de contact, directeur de la publication, puis retirer l'encadré « À compléter ». Vérifier l'adresse de l'hébergeur (GitHub, Inc.).
+- [ ] Confirmer l'origine de toutes les images (la mention « image générée par IA » est appliquée à toutes, accueil compris).

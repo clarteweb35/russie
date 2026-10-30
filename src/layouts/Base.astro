@@ -1,13 +1,13 @@
 ---
 import '../styles/global.css';
 import Badge from '../components/Badge.astro';
-import { sections, LAST_CHECK, VERIFICATIONS, url } from '../config';
+import { sections, LAST_CHECK, VERIFICATIONS, pagesLegales, url } from '../config';
 interface Props { title: string; description?: string }
 const { title, description = 'Guide d’information sur la Russie : voyager, vivre, travailler — avec sources officielles et mises en garde.' } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const path = Astro.url.pathname.slice(base.length).replace(/\/$/, '') || '/';
 const isHome = path === '/';
-const showMeta = !isHome && path !== '/sources';
+const showMeta = !isHome && !['/sources', '/mentions-legales'].includes(path);
 const dateVerif = VERIFICATIONS[path] ?? LAST_CHECK;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const image = new URL(url('/saint-basile-hero.webp'), Astro.site).href;
@@ -71,7 +71,8 @@ const image = new URL(url('/saint-basile-hero.webp'), Astro.site).href;
       <div class="wrap">
         <p>Guide d’information indépendant, non officiel. Il ne remplace ni les sources officielles ni un avis juridique, médical ou fiscal.
         Les règles changent vite : vérifiez toujours auprès des autorités avant d’agir.</p>
-        <p>Dernière vérification globale : {LAST_CHECK}. <a href={url("/sources")}>Voir les sources</a>.</p>
+        <p>Dernière vérification globale : {LAST_CHECK}. <a href={url("/sources")}>Voir les sources</a>.
+        {pagesLegales.map((p) => (<> · <a href={url(p.href)}>{p.label}</a></>))}</p>
       </div>
     </footer>
     <script>

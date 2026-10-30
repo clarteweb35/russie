@@ -16,3 +16,10 @@ export const url = (p: string) => import.meta.env.BASE_URL.replace(/\/$/, '') + 
 // Dates de vérification propres à une page (sinon LAST_CHECK). Clé = chemin sans le préfixe de déploiement.
 // À renseigner quand une page est revérifiée seule, par exemple : '/voyager': '12 novembre 2026'.
 export const VERIFICATIONS: Record<string, string> = {};
+
+// Mention obligatoire sur toute image générée par IA (attributs alt et title) : ne jamais l'écrire en dur ailleurs.
+export const MENTION_IA = 'image générée par IA';
+export const legendeIA = (description: string) => `${description} (${MENTION_IA})`;
+
+// Pages hors menu : liées depuis le pied de page et présentes dans le sitemap.
+export const pagesLegales = [{ href: '/mentions-legales', label: 'Mentions légales' }];

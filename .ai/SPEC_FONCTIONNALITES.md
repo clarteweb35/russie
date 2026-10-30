@@ -52,6 +52,9 @@ Alphabet cyrillique, phrases utiles, repères culturels.
 - Navigation précédente / suivante.
 - Sans voix russe disponible, un message l'explique.
 
+### Mentions légales `/mentions-legales`
+Éditeur, hébergeur, images générées par IA, données personnelles, liens et partenaires. Liée depuis le pied de page. Identité et contact de l'éditeur : **à compléter**.
+
 ### Sources `/sources`
 Liste des sources et de leur fiabilité.
 
@@ -65,6 +68,7 @@ Liste des sources et de leur fiabilité.
 | Ligne de crédibilité | `Base.astro` | Date + légende des badges + lien Sources, sauf accueil et Sources. |
 | Animations | `Base.astro`, `global.css` | Apparition au défilement, barre de progression, transitions entre pages. Désactivées avec `prefers-reduced-motion`. |
 | Thème | `global.css` | Clair par défaut, sombre automatique (`prefers-color-scheme`). |
+| Images IA | `config.ts` (`MENTION_IA`, `legendeIA()`) | Toute image générée par IA porte « (image générée par IA) » dans `alt` et `title`. |
 | Accessibilité | `Base.astro` | Lien « Aller au contenu », `aria-current`, `aria-live` sur le taux. |
 
 ## 4. Affiliation (prévue, non active)

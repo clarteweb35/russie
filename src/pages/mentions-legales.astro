@@ -1,0 +1,46 @@
+---
+import Base from '../layouts/Base.astro';
+import Alert from '../components/Alert.astro';
+import { MENTION_IA, url } from '../config';
+---
+<Base title="Mentions légales" description="Éditeur, hébergeur, images générées par IA et données personnelles du Guide Russie.">
+  <h1>Mentions légales</h1>
+  <p class="lead">Qui édite ce site, où il est hébergé, comment ses images sont produites et ce qu’il fait de vos données.</p>
+
+  <Alert titre="À compléter par l’éditeur" warn>
+    Les informations entre crochets ci-dessous (identité, adresse, contact) doivent être renseignées par l’éditeur du site avant de les considérer comme définitives.
+  </Alert>
+
+  <h2>Éditeur du site</h2>
+  <ul>
+    <li><strong>Nom ou raison sociale</strong> : [à compléter]</li>
+    <li><strong>Adresse</strong> : [à compléter]</li>
+    <li><strong>Courriel de contact</strong> : [à compléter]</li>
+    <li><strong>Directeur de la publication</strong> : [à compléter]</li>
+  </ul>
+
+  <h2>Hébergeur</h2>
+  <p>Le site est hébergé par GitHub Pages : GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis. <span class="src">(Adresse à vérifier auprès de l’hébergeur.)</span></p>
+
+  <h2 id="images-ia">Images générées par intelligence artificielle</h2>
+  <p>Les photographies et illustrations du site (page d’accueil, parcours, cartes des leçons) sont des <strong>{MENTION_IA}</strong>. Elles servent uniquement à illustrer les thèmes abordés : ce ne sont pas des photographies de lieux, d’objets ou de personnes réels.</p>
+  <p>Cette mention figure dans le texte alternatif (<code>alt</code>) et dans l’infobulle (<code>title</code>) de chaque image concernée.</p>
+
+  <h2>Nature du contenu</h2>
+  <p>Ce guide est un site d’information indépendant et non officiel. Il ne remplace ni les sources officielles, ni un avis juridique, médical ou fiscal. Les règles évoluent vite : chaque information sensible porte un badge de fiabilité et cite ses sources. Consultez toujours les autorités compétentes avant d’agir.</p>
+
+  <h2>Données personnelles</h2>
+  <ul>
+    <li>Le site n’a pas de compte utilisateur et ne dépose aucun cookie de suivi.</li>
+    <li>Le convertisseur EUR ⇄ RUB interroge, depuis votre navigateur, le service de la Banque de Russie (cbr-xml-daily.ru) ou, en secours, ExchangeRate-API. Ces services reçoivent votre adresse IP, comme tout site que vous consultez.</li>
+    <li>Le dernier taux de change connu est conservé dans le stockage local de votre navigateur, sur votre appareil uniquement. Vous pouvez l’effacer en vidant les données du site.</li>
+    <li>Les hébergeurs peuvent enregistrer des journaux techniques de connexion.</li>
+    <li>Une mesure d’audience pourra être ajoutée plus tard : elle ne sera activée qu’après votre consentement et cette page sera alors mise à jour.</li>
+  </ul>
+
+  <h2>Liens et partenaires</h2>
+  <p>Le site cite des sources externes dont il n’est pas responsable. Si des liens d’affiliation sont ajoutés, ils seront signalés comme tels et le site pourra être rémunéré si vous vous inscrivez via ces liens, sans changer votre prix.</p>
+
+  <h2>Propriété intellectuelle</h2>
+  <p>Les textes et l’organisation du site sont la propriété de l’éditeur. Toute reprise doit citer le site. Les informations reprises de sources tierces restent la propriété de leurs auteurs et sont citées dans la page <a href={url('/sources')}>Sources</a>.</p>
+</Base>
