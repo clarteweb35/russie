@@ -71,7 +71,7 @@ export const lecons = [
   {
     slug: 'se-deplacer',
     img: '/img/lecons/se-deplacer.webp',
-    imgAlt: 'Dans un train en hiver, une main plante des épingles sur une carte de Russie',
+    imgAlt: 'Dans un train en hiver, des mains tiennent un billet près d’un verre de thé, devant un village enneigé',
     titre: 'Se déplacer',
     intro: 'Demander son chemin, prendre un taxi, trouver la gare ou le métro.',
     phrases: [
