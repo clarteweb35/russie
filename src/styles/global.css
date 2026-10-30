@@ -250,11 +250,15 @@ footer { margin-top: 72px; padding: 36px 0 56px; color: var(--muted); font-size:
 .card-photo p { margin: 0 22px 20px; }
 
 /* en-tête : drapeau qui flotte + nom de domaine */
-.brand .drapeau { width: 46px; height: auto; overflow: visible; filter: drop-shadow(0 3px 5px rgba(0, 0, 0, .18)); transition: transform .4s cubic-bezier(.34, 1.56, .64, 1); }
-.brand:hover .drapeau { transform: scale(1.12) rotate(-4deg); }
+.brand { gap: 14px; font-size: 1.35rem; }
+.brand .drapeau { width: 84px; height: auto; overflow: visible; margin: -6px 0; filter: drop-shadow(0 6px 8px rgba(30, 20, 40, .28)); transition: transform .5s cubic-bezier(.34, 1.56, .64, 1); }
+.brand:hover .drapeau { transform: scale(1.1) rotate(-3deg); }
 .brand .nom { letter-spacing: -.02em; }
 .brand .nom b { color: var(--accent); font-weight: 800; }
-.drapeau .tranche { animation: onde 1.8s ease-in-out infinite; animation-delay: calc(var(--i) * -.17s); }
-.drapeau .ombre { opacity: 0; animation: pli 1.8s ease-in-out infinite; animation-delay: calc(var(--i) * -.17s); }
-@keyframes onde { 0%, 100% { transform: translateY(-1.1px); } 50% { transform: translateY(1.1px); } }
-@keyframes pli { 0%, 100% { opacity: 0; } 50% { opacity: .2; } }
+.drapeau .tranche { animation: onde 2.4s ease-in-out infinite; animation-delay: calc(var(--i) * -.14s); }
+.drapeau .ombre { opacity: 0; animation: pli 2.4s ease-in-out infinite; animation-delay: calc(var(--i) * -.14s); }
+.drapeau .lueur { opacity: 0; animation: eclat 2.4s ease-in-out infinite; animation-delay: calc(var(--i) * -.14s); }
+@keyframes onde { 0%, 100% { transform: translateY(calc(var(--a) * -1)); } 50% { transform: translateY(var(--a)); } }
+@keyframes pli { 0%, 100% { opacity: 0; } 50% { opacity: .14; } }
+@keyframes eclat { 0%, 100% { opacity: .1; } 50% { opacity: 0; } }
+@media (max-width: 720px) { .brand .drapeau { width: 62px; } .brand { font-size: 1.2rem; } }

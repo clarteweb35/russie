@@ -1,20 +1,38 @@
 ---
 // Drapeau russe qui flotte : tranches verticales décalées dans le temps (animation CSS, coupée si mouvement réduit).
-const N = 9;
-const LARGEUR = 4;
-const X0 = 4;
-const tranches = Array.from({ length: N }, (_, i) => X0 + i * LARGEUR);
+// L'amplitude grandit en s'éloignant de la hampe, comme un vrai drapeau fixé d'un seul côté.
+const N = 26;
+const X0 = 6;
+const LARGEUR = 2;
+const HAUT = 7;
+const BANDE = 11.4;
+const tranches = Array.from({ length: N }, (_, i) => ({
+  x: X0 + i * LARGEUR,
+  amp: (0.3 + i * 0.08).toFixed(2),
+}));
 ---
-<svg class="drapeau" viewBox="0 0 42 30" role="img" aria-label="Drapeau de la Russie" focusable="false">
-  <rect x="1.4" y="2" width="1.6" height="27" rx=".8" fill="#8a8794" />
-  <circle cx="2.2" cy="2" r="1.4" fill="#e8a33d" />
-  {tranches.map((x, i) => (
-    <g class="tranche" style={`--i:${i}`}>
-      <rect x={x} y="5" width={LARGEUR + 0.4} height="6.7" fill="#ffffff" />
-      <rect x={x} y="11.7" width={LARGEUR + 0.4} height="6.7" fill="#0039a6" />
-      <rect x={x} y="18.4" width={LARGEUR + 0.4} height="6.7" fill="#d52b1e" />
-      <rect class="ombre" x={x} y="5" width={LARGEUR + 0.4} height="20.1" fill="#000" />
+<svg class="drapeau" viewBox="0 0 62 50" role="img" aria-label="Drapeau de la Russie" focusable="false">
+  <defs>
+    <linearGradient id="hampe" x1="0" x2="1">
+      <stop offset="0" stop-color="#6b6878" />
+      <stop offset=".5" stop-color="#d9d6e0" />
+      <stop offset="1" stop-color="#7d7a8a" />
+    </linearGradient>
+    <radialGradient id="or" cx=".35" cy=".3" r=".8">
+      <stop offset="0" stop-color="#fff0b8" />
+      <stop offset=".5" stop-color="#e8a33d" />
+      <stop offset="1" stop-color="#a86a12" />
+    </radialGradient>
+  </defs>
+  <rect x="2" y="3.5" width="2.2" height="46" rx="1.1" fill="url(#hampe)" />
+  <circle cx="3.1" cy="3.2" r="2.6" fill="url(#or)" />
+  {tranches.map((t, i) => (
+    <g class="tranche" style={`--i:${i}; --a:${t.amp}px`}>
+      <rect x={t.x} y={HAUT} width={LARGEUR + 0.4} height={BANDE + 0.1} fill="#ffffff" />
+      <rect x={t.x} y={HAUT + BANDE} width={LARGEUR + 0.4} height={BANDE + 0.1} fill="#0039a6" />
+      <rect x={t.x} y={HAUT + BANDE * 2} width={LARGEUR + 0.4} height={BANDE} fill="#d52b1e" />
+      <rect class="ombre" x={t.x} y={HAUT} width={LARGEUR + 0.4} height={BANDE * 3} fill="#000" />
+      <rect class="lueur" x={t.x} y={HAUT} width={LARGEUR + 0.4} height={BANDE * 3} fill="#fff" />
     </g>
   ))}
-  <rect x="4" y="5" width="36" height="20.1" fill="none" stroke="rgba(0,0,0,.18)" stroke-width=".4" class="cadre" />
 </svg>
