@@ -4,7 +4,7 @@ export const lecons = [
   {
     slug: 'salutations',
     img: '/img/lecons/salutations.webp',
-    imgAlt: 'Une poignée de main souriante entre un homme et une femme qui salue de la main',
+    imgAlt: 'Une poignée de main entre deux personnes, cadrée sur les mains, avec une main qui salue',
     titre: 'Salutations et politesse',
     intro: 'Les mots à utiliser dès que vous parlez à quelqu’un. En russe, dire « Здравствуйте » à un inconnu fait toute la différence.',
     phrases: [
@@ -71,7 +71,7 @@ export const lecons = [
   {
     slug: 'se-deplacer',
     img: '/img/lecons/se-deplacer.webp',
-    imgAlt: 'Dans un train en hiver, des mains tiennent un billet près d’un verre de thé, devant un village enneigé',
+    imgAlt: 'Dans un train en hiver, des mains tiennent un billet près d’un verre de thé fumant, devant un village enneigé',
     titre: 'Se déplacer',
     intro: 'Demander son chemin, prendre un taxi, trouver la gare ou le métro.',
     phrases: [
@@ -93,7 +93,7 @@ export const lecons = [
   {
     slug: 'restaurant-courses',
     img: '/img/lecons/restaurant-courses.webp',
-    imgAlt: 'Une table de restaurant russe avec un samovar, des pirojki, du pain et un menu',
+    imgAlt: 'Une table de restaurant russe avec des pirojki, un samovar et un menu',
     titre: 'Restaurant et courses',
     intro: 'Commander, demander l’addition, dire comment vous payez.',
     phrases: [
