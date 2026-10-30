@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import { url } from '../config';
 ---
 <Base title="Langue et culture">
   <h1>Langue et culture</h1>
@@ -46,6 +47,6 @@ import Base from '../layouts/Base.astro';
   </ul>
   <div class="alert warn">
     <strong>Rappel</strong>
-    Le conseil officiel français couvre l’ensemble du territoire. Les régions proches de l’Ukraine et du Caucase du Nord présentent des risques supplémentaires : voir la page <a href="/voyager#securite">Sécurité</a>.
+    Le conseil officiel français couvre l’ensemble du territoire. Les régions proches de l’Ukraine et du Caucase du Nord présentent des risques supplémentaires : voir la page <a href={url("/voyager#securite")}>Sécurité</a>.
   </div>
 </Base>

@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import { url } from '../../config';
 import { lecons } from '../../data/lecons.js';
 ---
 <Base title="Leçons de russe">
@@ -7,7 +8,7 @@ import { lecons } from '../../data/lecons.js';
   <p class="lead">6 leçons courtes, sans alphabet à apprendre d’abord : tu écoutes, tu répètes, tu t’entraînes avec un quiz.</p>
   <div class="grid">
     {lecons.map((l, i) => (
-      <a class="card" href={`/lecons/${l.slug}`}>
+      <a class="card" href={url(`/lecons/${l.slug}`)}>
         <h3>{i + 1}. {l.titre}</h3>
         <p>{l.phrases.length} mots et phrases</p>
       </a>

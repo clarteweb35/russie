@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 
+// Déployé sur GitHub Pages : https://clarteweb35.github.io/russie/
 export default defineConfig({
-  // Remplace par ton vrai domaine quand il sera choisi
-  site: 'https://example.com',
+  site: 'https://clarteweb35.github.io',
+  base: '/russie',
 });

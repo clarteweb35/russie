@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import { url } from '../../config';
 import { lecons } from '../../data/lecons.js';
 
 export function getStaticPaths() {
@@ -12,7 +13,7 @@ const { lecon, index, prev, next } = Astro.props;
 const quizData = JSON.stringify(lecon.phrases);
 ---
 <Base title={`Leçon ${index + 1} — ${lecon.titre}`}>
-  <p class="src"><a href="/lecons">← Toutes les leçons</a></p>
+  <p class="src"><a href={url("/lecons")}>← Toutes les leçons</a></p>
   <h1>Leçon {index + 1} : {lecon.titre}</h1>
   <p class="lead">{lecon.intro}</p>
 
@@ -46,8 +47,8 @@ const quizData = JSON.stringify(lecon.phrases);
   </div>
 
   <nav class="pager" aria-label="Navigation des leçons">
-    {prev ? <a href={`/lecons/${prev.slug}`}>← {prev.titre}</a> : <span></span>}
-    {next ? <a href={`/lecons/${next.slug}`}>{next.titre} →</a> : <a href="/lecons">Retour aux leçons</a>}
+    {prev ? <a href={url(`/lecons/${prev.slug}`)}>← {prev.titre}</a> : <span></span>}
+    {next ? <a href={url(`/lecons/${next.slug}`)}>{next.titre} →</a> : <a href={url("/lecons")}>Retour aux leçons</a>}
   </nav>
 </Base>
 

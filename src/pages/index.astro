@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { sections, LAST_CHECK } from '../config';
+import { sections, LAST_CHECK, url } from '../config';
 import { lecons } from '../data/lecons.js';
 
 const parcours = [
@@ -12,14 +12,14 @@ const essentiels = sections.filter((s) => ['/travailler', '/langue-culture', '/s
 ---
 <Base title="Accueil">
   <section class="hero">
-    <img class="hero-image" src="/saint-basile-hero.png" alt="La cathédrale Saint-Basile sous la neige, au coucher du soleil à Moscou" fetchpriority="high" />
+    <img class="hero-image" src={url("/saint-basile-hero.png")} alt="La cathédrale Saint-Basile sous la neige, au coucher du soleil à Moscou" fetchpriority="high" />
     <div class="hero-text">
       <span class="eyebrow">Guide indépendant · mis à jour le {LAST_CHECK}</span>
       <h1>Comprendre la <em>Russie</em> avant d’agir</h1>
       <p>Préparer un séjour, comprendre les démarches et apprendre les bases du russe, avec des sources vérifiables et des mises en garde honnêtes.</p>
       <div class="cta">
-        <a class="btn" href="/voyager">Préparer un voyage →</a>
-        <a class="btn-line" href="/sources">Voir les sources</a>
+        <a class="btn" href={url("/voyager")}>Préparer un voyage →</a>
+        <a class="btn-line" href={url("/sources")}>Voir les sources</a>
       </div>
     </div>
   </section>
@@ -27,7 +27,7 @@ const essentiels = sections.filter((s) => ['/travailler', '/langue-culture', '/s
   <h2>Que veux-tu faire ?</h2>
   <div class="steps">
     {parcours.map((p) => (
-      <a class="step" href={p.href}>
+      <a class="step" href={url(p.href)}>
         <span class="num">{p.n}</span>
         <h3>{p.titre}</h3>
         <p>{p.txt}</p>
@@ -41,13 +41,13 @@ const essentiels = sections.filter((s) => ['/travailler', '/langue-culture', '/s
       <strong>Avant toute démarche</strong>
       <p>Le ministère français des Affaires étrangères déconseille formellement tout déplacement dans l’ensemble de la Russie (guerre en Ukraine, risque d’arrestation et de détention arbitraires).</p>
     </div>
-    <a class="btn" href="/voyager#securite">Lire la page Sécurité</a>
+    <a class="btn" href={url("/voyager#securite")}>Lire la page Sécurité</a>
   </div>
 
   <h2>À lire aussi</h2>
   <div class="grid">
     {essentiels.map((s) => (
-      <a class="card" href={s.href}>
+      <a class="card" href={url(s.href)}>
         <div class="ico">{s.icon}</div>
         <h3>{s.label}</h3>
         <p>{s.desc}</p>
@@ -55,5 +55,5 @@ const essentiels = sections.filter((s) => ['/travailler', '/langue-culture', '/s
     ))}
   </div>
 
-  <p class="src">Chaque page indique sa date de vérification, et les affirmations sensibles renvoient à des sources listées sur la page <a href="/sources">Sources</a>.</p>
+  <p class="src">Chaque page indique sa date de vérification, et les affirmations sensibles renvoient à des sources listées sur la page <a href={url("/sources")}>Sources</a>.</p>
 </Base>

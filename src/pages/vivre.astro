@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import { url } from '../config';
 ---
 <Base title="Vivre en Russie">
   <h1>Vivre en Russie</h1>
@@ -14,7 +15,7 @@ import Base from '../layouts/Base.astro';
   <table>
     <tr><th>Statut</th><th>Principe</th></tr>
     <tr><td>Visa de court séjour</td><td>Tourisme, affaires ; durée limitée, à respecter strictement.</td></tr>
-    <tr><td>Visa de travail</td><td>Délivré sur la base d’un permis de travail et d’une invitation de l’employeur. Voir <a href="/travailler">Travailler</a>.</td></tr>
+    <tr><td>Visa de travail</td><td>Délivré sur la base d’un permis de travail et d’une invitation de l’employeur. Voir <a href={url("/travailler")}>Travailler</a>.</td></tr>
     <tr><td>Permis de séjour temporaire / permanent</td><td>Les titulaires peuvent en principe travailler sans permis de travail supplémentaire.</td></tr>
     <tr><td>Spécialiste hautement qualifié (HQS)</td><td>Voie avantageuse, avec accès simplifié à la résidence pour le salarié et sa famille.</td></tr>
   </table>

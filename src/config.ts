@@ -8,3 +8,6 @@ export const sections = [
   { href: '/lecons', label: 'Leçons de russe', icon: '🎧', desc: '6 leçons courtes avec audio et quiz d’écoute.' },
   { href: '/sources', label: 'Sources', icon: '📚', desc: 'D’où viennent les informations et leur fiabilité.' },
 ];
+
+// Préfixe les liens internes avec le sous-dossier de déploiement (ex. /russie sur GitHub Pages)
+export const url = (p: string) => import.meta.env.BASE_URL.replace(/\/$/, '') + p;
