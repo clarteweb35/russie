@@ -24,20 +24,45 @@
   const fmt = (n: number, d = 2) => n.toLocaleString('fr-FR', { minimumFractionDigits: d, maximumFractionDigits: d });
   const parse = (s: string) => parseFloat(s.replace(/\s/g, '').replace(',', '.'));
 
-  async function loadRate(): Promise<{ rate: number; date: string; source: string }> {
+  type Taux = { rate: number; date: string; source: string; enCache?: boolean };
+  const CLE = 'taux-eur-rub';
+
+  // Appel réseau avec délai maximum, pour ne pas attendre indéfiniment un service en panne
+  const getJson = async (adresse: string, delai = 5000) => {
+    const ctrl = new AbortController();
+    const minuteur = setTimeout(() => ctrl.abort(), delai);
     try {
-      const r = await fetch('https://www.cbr-xml-daily.ru/daily_json.js');
-      const j = await r.json();
+      const r = await fetch(adresse, { signal: ctrl.signal });
+      if (!r.ok) throw new Error(String(r.status));
+      return await r.json();
+    } finally {
+      clearTimeout(minuteur);
+    }
+  };
+
+  // Le stockage local peut être indisponible (navigation privée) : on ignore l'erreur
+  const lireCache = (): Taux | null => {
+    try { const c = JSON.parse(localStorage.getItem(CLE) || 'null'); return c?.rate ? { ...c, enCache: true } : null; } catch { return null; }
+  };
+  const ecrireCache = (t: Taux) => { try { localStorage.setItem(CLE, JSON.stringify(t)); } catch { /* sans importance */ } };
+
+  async function loadRate(): Promise<Taux> {
+    try {
+      const j = await getJson('https://www.cbr-xml-daily.ru/daily_json.js');
       const v = j.Valute.EUR;
       return { rate: v.Value / v.Nominal, date: j.Date, source: 'Banque de Russie' };
     } catch {
-      const r = await fetch('https://open.er-api.com/v6/latest/EUR');
-      const j = await r.json();
+      const j = await getJson('https://open.er-api.com/v6/latest/EUR');
       return { rate: j.rates.RUB, date: new Date(j.time_last_update_unix * 1000).toISOString(), source: 'ExchangeRate-API' };
     }
   }
 
-  const ratePromise = loadRate();
+  // Si les deux services échouent, on affiche le dernier taux connu (signalé comme tel)
+  const ratePromise = loadRate().then((t) => { ecrireCache(t); return t; }).catch(() => {
+    const cache = lireCache();
+    if (cache) return cache;
+    throw new Error('aucun taux');
+  });
 
   document.querySelectorAll<HTMLElement>('.fx').forEach((box) => {
     const eur = box.querySelector<HTMLInputElement>('.fx-eur')!;
@@ -58,7 +83,8 @@
     ratePromise.then((d) => {
       rate = d.rate;
       const date = new Date(d.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
-      info.textContent = `1 € = ${fmt(rate)} ₽ · taux ${d.source} du ${date}. Indicatif : les banques et bureaux de change appliquent leur propre taux.`;
+      const prefixe = d.enCache ? "Dernier taux connu (services indisponibles)" : "Taux";
+      info.textContent = `1 € = ${fmt(rate)} ₽ · ${prefixe} ${d.source} du ${date}. Indicatif : les banques et bureaux de change appliquent leur propre taux.`;
       fromEur();
     }).catch(() => {
       info.textContent = 'Taux indisponible pour le moment. Vérifiez le taux sur le site de la Banque de Russie.';

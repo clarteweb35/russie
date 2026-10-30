@@ -85,13 +85,13 @@ Liste des sources et de leur fiabilité.
 
 1. ~~Page de leçon trop chargée~~ : faite (script dans `src/scripts/lecon.ts`, composant `Quiz`, CSS dans `global.css`).
 2. Composants `Badge` et `Alert` faits ; reste le bloc « Sources » et le passage en Content Collections si le contenu grossit.
-3. Date de vérification globale : prévoir une date par page.
+3. ~~Date de vérification globale~~ : faite (`VERIFICATIONS` dans `config.ts`, par page, repli sur `LAST_CHECK`).
 4. ~~Image d'accueil de 2,6 Mo~~ : faite (WebP, 218 Ko). Reste à mesurer EcoIndex.
 5. CSS global sans découpage.
-6. SEO : sitemap, favicon, robots.txt, Open Graph, canonical.
+6. ~~SEO~~ : fait (sitemap généré, robots.txt, favicon, canonical, Open Graph). Reste une image de partage 1200x630.
 7. `lecons.js` non typé (tuples) : passer en TypeScript avec un type `Lecon`.
-8. Convertisseur sans délai maximum ni dernier taux mémorisé.
-9. Pas de README, de tests, de lint ni de contrôle de liens en CI.
+8. ~~Convertisseur fragile~~ : fait (délai de 5 s, dernier taux connu mémorisé).
+9. README et contrôle des liens en CI faits. Restent un lint et des tests de comportement.
 
 ## 7. Travaux en cours
 

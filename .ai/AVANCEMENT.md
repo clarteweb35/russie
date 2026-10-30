@@ -46,14 +46,14 @@ Dernière mise à jour : 30 octobre 2026. Ce fichier est mis à jour à la fin d
 ### Priorité 2 : maintenabilité
 4. [x] Quiz et audio extraits de la page de leçon (`src/scripts/lecon.ts`, `Quiz.astro`), CSS déplacé dans `global.css`.
 5. [x] Composants `Alert` et `Badge` créés et utilisés partout. Reste éventuellement `Sources`.
-6. [ ] Date de vérification **par page** (aujourd'hui une seule date globale `LAST_CHECK`).
+6. [x] Date de vérification par page (`VERIFICATIONS` dans `config.ts`, à renseigner quand une page est revérifiée seule).
 7. [ ] Passer `lecons.js` en TypeScript, avec un type `Lecon` et des objets `{ru, pron, fr}`.
 8. [ ] Découper `global.css` (225 lignes) et supprimer les règles en doublon sur le menu mobile.
 
 ### Priorité 3 : SEO et robustesse
-9. [ ] Sitemap (`@astrojs/sitemap`), favicon, `robots.txt`, balises Open Graph et `canonical`.
-10. [ ] Convertisseur : délai maximum sur les appels réseau, mémorisation du dernier taux.
-11. [ ] README, contrôle des liens cassés en CI, éventuellement un lint.
+9. [x] Sitemap généré (`src/pages/sitemap.xml.ts`), favicon, `robots.txt`, balises `canonical` et Open Graph.
+10. [x] Convertisseur : délai de 5 s et dernier taux connu mémorisé.
+11. [x] README et contrôle des liens en CI (`npm test` dans le déploiement). Reste éventuellement un lint.
 
 ### Contenu à vérifier ou compléter
 12. [ ] Confirmer avec une source officielle : étapes d'achat d'une SIM, démarches d'arrivée (enregistrement migratoire), tarifs notaire / apostille / traduction.

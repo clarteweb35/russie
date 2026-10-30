@@ -1,13 +1,16 @@
 ---
 import '../styles/global.css';
 import Badge from '../components/Badge.astro';
-import { sections, LAST_CHECK, url } from '../config';
+import { sections, LAST_CHECK, VERIFICATIONS, url } from '../config';
 interface Props { title: string; description?: string }
 const { title, description = 'Guide d’information sur la Russie : voyager, vivre, travailler — avec sources officielles et mises en garde.' } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const path = Astro.url.pathname.slice(base.length).replace(/\/$/, '') || '/';
 const isHome = path === '/';
 const showMeta = !isHome && path !== '/sources';
+const dateVerif = VERIFICATIONS[path] ?? LAST_CHECK;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const image = new URL(url('/saint-basile-hero.webp'), Astro.site).href;
 ---
 <!doctype html>
 <html lang="fr">
@@ -16,6 +19,16 @@ const showMeta = !isHome && path !== '/sources';
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#b3202f" />
+    <link rel="icon" type="image/svg+xml" href={url("/favicon.svg")} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="Guide Russie" />
+    <meta property="og:title" content={`${title} — Guide Russie`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={image} />
+    <meta name="twitter:card" content="summary_large_image" />
     <script is:inline>document.documentElement.classList.add('js')</script>
     <title>{title} — Guide Russie</title>
   </head>
@@ -46,7 +59,7 @@ const showMeta = !isHome && path !== '/sources';
     <main class="wrap" id="contenu">
       {showMeta && (
         <p class="meta">
-          <span>Vérifié le {LAST_CHECK}</span>
+          <span>Vérifié le {dateVerif}</span>
           <Badge type="ok">Source officielle</Badge>
           <Badge type="warn">À confirmer</Badge>
           <a href={url("/sources")}>Voir les sources</a>

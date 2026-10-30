@@ -19,7 +19,7 @@ Le site est servi sous `/russie/` en local comme en production (`base` dans `ast
 ## Structure
 
 - `src/layouts/Base.astro` : layout unique (en-tête, menu, bandeau de sécurité, ligne de crédibilité, pied de page, scripts d'animation).
-- `src/config.ts` : `sections` (menu et cartes), `LAST_CHECK` (date de vérification), `url()`.
+- `src/config.ts` : `sections` (menu, cartes, sitemap), `LAST_CHECK` (date globale), `VERIFICATIONS` (date propre à une page), `url()`.
 - `src/pages/*.astro` : une page par rubrique. `lecons/[slug].astro` génère les leçons depuis `src/data/lecons.js`.
 - `src/components/` : `Alert`, `Badge` (à utiliser pour tout encadré ou pastille, jamais le HTML en dur), `Quiz`, `Convertisseur`.
 - `src/scripts/` : scripts navigateur (`lecon.ts` : audio et quiz).
@@ -38,7 +38,7 @@ Le site est servi sous `/russie/` en local comme en production (`base` dans `ast
 7. **Pas de ressource externe** inutile : polices système, pas de CDN. Appels externes autorisés aujourd'hui : le convertisseur (Banque de Russie, repli ExchangeRate-API). **À venir** : Google Analytics 4, uniquement après consentement (voir Conventions). Aucun autre traceur.
 8. **Animations** : doivent rester désactivables (`prefers-reduced-motion`) et ne jamais cacher le contenu sans JavaScript (classe `.js` posée par `Base.astro`).
 9. **Images** : mettre dans `public/img/`, texte alternatif vide (`alt=""`) si décoratives. Éviter les fichiers de plus de 300 Ko.
-10. **Dates** : `LAST_CHECK` n'est mise à jour qu'après une vraie vérification des sources.
+10. **Dates** : `LAST_CHECK` et `VERIFICATIONS` ne sont mises à jour qu'après une vraie vérification des sources.
 
 ## Conventions
 

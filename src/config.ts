@@ -12,3 +12,7 @@ export const sections = [
 
 // Préfixe les liens internes avec le sous-dossier de déploiement (ex. /russie sur GitHub Pages)
 export const url = (p: string) => import.meta.env.BASE_URL.replace(/\/$/, '') + p;
+
+// Dates de vérification propres à une page (sinon LAST_CHECK). Clé = chemin sans le préfixe de déploiement.
+// À renseigner quand une page est revérifiée seule, par exemple : '/voyager': '12 novembre 2026'.
+export const VERIFICATIONS: Record<string, string> = {};
