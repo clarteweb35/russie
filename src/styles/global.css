@@ -249,22 +249,14 @@ footer { margin-top: 72px; padding: 36px 0 56px; color: var(--muted); font-size:
 .card-photo h3 { margin: 18px 22px 4px; }
 .card-photo p { margin: 0 22px 20px; }
 
-/* en-tête : drapeau qui flotte + nom de domaine */
-.brand { gap: 12px; font-size: 1.35rem; }
-.drapeau-wrap { position: relative; display: block; flex: none; width: 120px; height: 93px; margin: -16px 0; transition: transform .5s cubic-bezier(.34, 1.56, .64, 1); filter: drop-shadow(0 7px 8px rgba(30, 20, 40, .25)); }
-.brand:hover .drapeau-wrap { transform: scale(1.06) rotate(-2deg); }
-.drapeau-wrap .drapeau-secours { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
-.drapeau-wrap .drapeau-3d, .drapeau-wrap .hampe { display: none; }
-.drapeau-wrap.pret .drapeau-secours { display: none; }
-.drapeau-wrap.pret .drapeau-3d { display: block; position: absolute; inset: 0; width: 100%; height: 100%; }
-.drapeau-wrap.pret .hampe { display: block; position: absolute; z-index: 2; left: 5px; top: 6px; bottom: 1px; width: 4px; border-radius: 2px; background: linear-gradient(90deg, #6b6878, #e4e1ea 45%, #7d7a8a); }
-.drapeau-wrap.pret .hampe::before { content: ''; position: absolute; left: 50%; top: -5px; width: 9px; height: 9px; margin-left: -4.5px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff0b8, #e8a33d 55%, #a86a12); }
+/* en-tête : nom de domaine sur un drapeau russe en filigrane */
+.brand { position: relative; isolation: isolate; gap: 0; padding: 9px 26px; font-size: 1.35rem; }
+.brand::before, .brand::after { content: ''; position: absolute; inset: 0; z-index: -1; border-radius: 12px; pointer-events: none; -webkit-mask-image: linear-gradient(90deg, transparent, #000 16%, #000 84%, transparent); mask-image: linear-gradient(90deg, transparent, #000 16%, #000 84%, transparent); }
+.brand::before { background: linear-gradient(to bottom, #fff 0 33.4%, #0039a6 33.4% 66.7%, #d52b1e 66.7% 100%); opacity: .28; transition: opacity .4s; }
+.brand::after { background: linear-gradient(100deg, transparent 35%, rgba(255, 255, 255, .7) 50%, transparent 65%); background-size: 260% 100%; background-position: 130% 0; opacity: .5; mix-blend-mode: soft-light; animation: brillance 7s ease-in-out infinite; }
+.brand:hover::before { opacity: .4; }
 .brand .nom { letter-spacing: -.02em; }
 .brand .nom b { color: var(--accent); font-weight: 800; }
-.drapeau .tranche { animation: onde 2.4s ease-in-out infinite; animation-delay: calc(var(--i) * -.14s); }
-.drapeau .ombre { opacity: 0; animation: pli 2.4s ease-in-out infinite; animation-delay: calc(var(--i) * -.14s); }
-.drapeau .lueur { opacity: 0; animation: eclat 2.4s ease-in-out infinite; animation-delay: calc(var(--i) * -.14s); }
-@keyframes onde { 0%, 100% { transform: translateY(calc(var(--a) * -1)); } 50% { transform: translateY(var(--a)); } }
-@keyframes pli { 0%, 100% { opacity: 0; } 50% { opacity: .14; } }
-@keyframes eclat { 0%, 100% { opacity: .1; } 50% { opacity: 0; } }
-@media (max-width: 720px) { .drapeau-wrap { width: 86px; height: 67px; margin: -10px 0; } .brand { font-size: 1.2rem; } }
+@keyframes brillance { 0%, 55% { background-position: 130% 0; } 100% { background-position: -30% 0; } }
+@media (prefers-color-scheme: dark) { .brand::before { opacity: .15; } .brand:hover::before { opacity: .26; } }
+@media (max-width: 720px) { .brand { font-size: 1.2rem; padding: 6px 16px; } }
