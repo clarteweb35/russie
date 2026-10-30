@@ -1,0 +1,59 @@
+---
+import Base from '../layouts/Base.astro';
+import { sections, LAST_CHECK } from '../config';
+import { lecons } from '../data/lecons.js';
+
+const parcours = [
+  { n: '1', href: '/voyager', titre: 'Préparer un voyage', txt: 'Visa, sécurité, transports et démarches avant le départ.' },
+  { n: '2', href: '/vivre', titre: 'S’installer', txt: 'Séjour légal, argent, logement, travail et quotidien.' },
+  { n: '3', href: '/lecons', titre: 'Apprendre le russe', txt: `${lecons.length} leçons courtes avec audio et quiz d’écoute.` },
+];
+const essentiels = sections.filter((s) => ['/travailler', '/langue-culture', '/sources'].includes(s.href));
+---
+<Base title="Accueil">
+  <section class="hero">
+    <img class="hero-image" src="/saint-basile-hero.png" alt="La cathédrale Saint-Basile sous la neige, au coucher du soleil à Moscou" fetchpriority="high" />
+    <div class="hero-text">
+      <span class="eyebrow">Guide indépendant · mis à jour le {LAST_CHECK}</span>
+      <h1>Comprendre la <em>Russie</em> avant d’agir</h1>
+      <p>Préparer un séjour, comprendre les démarches et apprendre les bases du russe, avec des sources vérifiables et des mises en garde honnêtes.</p>
+      <div class="cta">
+        <a class="btn" href="/voyager">Préparer un voyage →</a>
+        <a class="btn-line" href="/sources">Voir les sources</a>
+      </div>
+    </div>
+  </section>
+
+  <h2>Que veux-tu faire ?</h2>
+  <div class="steps">
+    {parcours.map((p) => (
+      <a class="step" href={p.href}>
+        <span class="num">{p.n}</span>
+        <h3>{p.titre}</h3>
+        <p>{p.txt}</p>
+        <span class="more">Commencer →</span>
+      </a>
+    ))}
+  </div>
+
+  <div class="callout">
+    <div>
+      <strong>Avant toute démarche</strong>
+      <p>Le ministère français des Affaires étrangères déconseille formellement tout déplacement dans l’ensemble de la Russie (guerre en Ukraine, risque d’arrestation et de détention arbitraires).</p>
+    </div>
+    <a class="btn" href="/voyager#securite">Lire la page Sécurité</a>
+  </div>
+
+  <h2>À lire aussi</h2>
+  <div class="grid">
+    {essentiels.map((s) => (
+      <a class="card" href={s.href}>
+        <div class="ico">{s.icon}</div>
+        <h3>{s.label}</h3>
+        <p>{s.desc}</p>
+      </a>
+    ))}
+  </div>
+
+  <p class="src">Chaque page indique sa date de vérification, et les affirmations sensibles renvoient à des sources listées sur la page <a href="/sources">Sources</a>.</p>
+</Base>

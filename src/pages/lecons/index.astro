@@ -1,0 +1,21 @@
+---
+import Base from '../../layouts/Base.astro';
+import { lecons } from '../../data/lecons.js';
+---
+<Base title="Leçons de russe">
+  <h1>Leçons de russe essentielles</h1>
+  <p class="lead">6 leçons courtes, sans alphabet à apprendre d’abord : tu écoutes, tu répètes, tu t’entraînes avec un quiz.</p>
+  <div class="grid">
+    {lecons.map((l, i) => (
+      <a class="card" href={`/lecons/${l.slug}`}>
+        <h3>{i + 1}. {l.titre}</h3>
+        <p>{l.phrases.length} mots et phrases</p>
+      </a>
+    ))}
+  </div>
+  <div class="alert warn">
+    <strong>À propos de l’audio</strong>
+    Le son utilise la voix russe de ton appareil. Sur iPhone, Mac et Android elle est généralement disponible ; sinon, ajoute la langue russe dans les réglages de voix.
+    La voix est synthétique : elle aide à la prononciation, mais rien ne remplace un échange avec une personne russophone.
+  </div>
+</Base>

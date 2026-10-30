@@ -1,0 +1,90 @@
+---
+import '../styles/global.css';
+import { sections, LAST_CHECK } from '../config';
+interface Props { title: string; description?: string }
+const { title, description = 'Guide d’information sur la Russie : voyager, vivre, travailler — avec sources officielles et mises en garde.' } = Astro.props;
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isHome = path === '/';
+const showMeta = !isHome && path !== '/sources';
+---
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#b3202f" />
+    <script is:inline>document.documentElement.classList.add('js')</script>
+    <title>{title} — Guide Russie</title>
+  </head>
+  <body>
+    <a class="skip" href="#contenu">Aller au contenu</a>
+    <div id="progress"></div>
+    <header class="site">
+      <div class="wrap">
+        <a class="brand" href="/"><span class="logo">Р</span>Guide Russie</a>
+        <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+        <nav id="menu" aria-label="Navigation principale">
+          {sections.map((l) => (
+            <a href={l.href} aria-current={path === l.href || path.startsWith(l.href + '/') ? 'page' : undefined}>{l.label}</a>
+          ))}
+        </nav>
+      </div>
+    </header>
+
+    {!isHome && (
+      <div class="banner" role="note">
+        <div class="wrap">
+          <span><strong>Sécurité :</strong> le ministère français déconseille tout déplacement en Russie.</span>
+          <a href="/voyager#securite">Lire les conseils →</a>
+        </div>
+      </div>
+    )}
+
+    <main class="wrap" id="contenu">
+      {showMeta && (
+        <p class="meta">
+          <span>Vérifié le {LAST_CHECK}</span>
+          <span class="badge ok">Source officielle</span>
+          <span class="badge warn">À confirmer</span>
+          <a href="/sources">Voir les sources</a>
+        </p>
+      )}
+      <slot />
+    </main>
+    <footer>
+      <div class="wrap">
+        <p>Guide d’information indépendant, non officiel. Il ne remplace ni les sources officielles ni un avis juridique, médical ou fiscal.
+        Les règles changent vite : vérifie toujours auprès des autorités avant d’agir.</p>
+        <p>Dernière vérification globale : {LAST_CHECK}. <a href="/sources">Voir les sources</a>.</p>
+      </div>
+    </footer>
+    <script>
+      const bar = document.getElementById('progress');
+      const onScroll = () => {
+        const h = document.documentElement;
+        const max = h.scrollHeight - h.clientHeight;
+        if (bar) bar.style.transform = `scaleX(${max > 0 ? h.scrollTop / max : 0})`;
+      };
+      addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      const burger = document.getElementById('burger');
+      const menu = document.getElementById('menu');
+      const setMenu = (open: boolean) => {
+        menu?.classList.toggle('open', open);
+        burger?.setAttribute('aria-expanded', String(open));
+        burger?.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+      };
+      burger?.addEventListener('click', () => setMenu(!menu?.classList.contains('open')));
+      menu?.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
+      addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
+
+      const targets = document.querySelectorAll<HTMLElement>('main h2, main .lead, main table, main .card, main .step, main .callout');
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      targets.forEach((el) => { el.classList.add('reveal'); io.observe(el); });
+    </script>
+  </body>
+</html>
