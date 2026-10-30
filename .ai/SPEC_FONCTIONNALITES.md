@@ -63,6 +63,7 @@ Liste des sources et de leur fiabilité.
 | Fonctionnalité | Fichier | Comportement |
 |---|---|---|
 | Convertisseur EUR ⇄ RUB | `src/components/Convertisseur.astro` | Taux officiel de la Banque de Russie (`cbr-xml-daily.ru`), repli sur `open.er-api.com`. Conversion dans les deux sens, bouton d'inversion, date du taux affichée. Indique qu'il est indicatif. |
+| En-tête | `Base.astro`, `Drapeau.astro`, `config.ts` (`NOM_SITE`) | Nom « guide-russie.fr » et drapeau russe qui flotte (animation CSS, coupée si mouvement réduit). Favicon : drapeau. |
 | Navigation | `src/layouts/Base.astro` + `src/config.ts` (`sections`) | Menu piloté par les données, onglet actif, menu hamburger sous 720 px (fermeture par Échap et au clic). |
 | Bandeau de sécurité | `Base.astro` | Sur toutes les pages sauf l'accueil. |
 | Ligne de crédibilité | `Base.astro` | Date + légende des badges + lien Sources, sauf accueil et Sources. |

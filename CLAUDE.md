@@ -19,9 +19,9 @@ Le site est servi sous `/russie/` en local comme en production (`base` dans `ast
 ## Structure
 
 - `src/layouts/Base.astro` : layout unique (en-tête, menu, bandeau de sécurité, ligne de crédibilité, pied de page, scripts d'animation).
-- `src/config.ts` : `MENTION_IA`/`legendeIA()` (images IA), `pagesLegales` (pied de page, sitemap), `sections` (menu, cartes, sitemap), `LAST_CHECK` (date globale), `VERIFICATIONS` (date propre à une page), `url()`.
+- `src/config.ts` : `NOM_SITE` (nom affiché en en-tête), `MENTION_IA`/`legendeIA()` (images IA), `pagesLegales` (pied de page, sitemap), `sections` (menu, cartes, sitemap), `LAST_CHECK` (date globale), `VERIFICATIONS` (date propre à une page), `url()`.
 - `src/pages/*.astro` : une page par rubrique. `lecons/[slug].astro` génère les leçons depuis `src/data/lecons.js`.
-- `src/components/` : `Alert`, `Badge` (à utiliser pour tout encadré ou pastille, jamais le HTML en dur), `Quiz`, `Convertisseur`.
+- `src/components/` : `Drapeau` (logo animé), `Alert`, `Badge` (à utiliser pour tout encadré ou pastille, jamais le HTML en dur), `Quiz`, `Convertisseur`.
 - `src/scripts/` : scripts navigateur (`lecon.ts` : audio et quiz).
 - `scripts/` (racine) : outils de développement (`verifier-liens.mjs`, `optimiser-images.mjs`, `convertir-image.mjs` pour toute nouvelle image, avec recadrage optionnel `x,y,largeur,hauteur`).
 - `src/styles/global.css` : tous les styles, variables CSS en haut, thème sombre automatique.

@@ -81,7 +81,7 @@ Dernière mise à jour : 30 octobre 2026. Ce fichier est mis à jour à la fin d
 
 À faire dans cet ordre, une fois le domaine acheté :
 1. [ ] DNS : pointer le domaine vers GitHub Pages (enregistrements indiqués dans Réglages > Pages du dépôt), puis saisir le domaine dans « Custom domain » et cocher « Enforce HTTPS ». Action de l'utilisateur.
-2. [ ] `astro.config.mjs` : `site` = le nouveau domaine, `base: '/'` (supprimer `/russie`).
+2. [ ] `astro.config.mjs` : `site` = `https://guide-russie.fr` (domaine visé, libre au 30 octobre 2026, pas encore acheté), `base: '/'` (supprimer `/russie`).
 3. [ ] `scripts/verifier-liens.mjs` : passer `BASE` de `'/russie'` à `''` (ou adapter pour l'absence de préfixe).
 4. [ ] `public/robots.txt` : mettre l'adresse du sitemap sur le nouveau domaine.
 5. [ ] Ajouter un fichier `public/CNAME` contenant le domaine.

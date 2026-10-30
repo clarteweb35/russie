@@ -64,8 +64,6 @@ body {
 header.site { position: sticky; top: 0; z-index: 40; backdrop-filter: saturate(160%) blur(14px); -webkit-backdrop-filter: saturate(160%) blur(14px); background: color-mix(in srgb, var(--bg) 78%, transparent); border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent); }
 header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 12px; padding-bottom: 12px; }
 .brand { display: flex; align-items: center; gap: 10px; font: 800 1.15rem var(--sans); letter-spacing: -.02em; color: var(--fg); text-decoration: none; white-space: nowrap; }
-.brand .logo { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; color: #fff; font-size: 1.05rem; background: linear-gradient(135deg, var(--accent), var(--accent2)); box-shadow: 0 6px 16px -4px color-mix(in srgb, var(--accent) 60%, transparent); transition: transform .4s cubic-bezier(.34, 1.56, .64, 1); }
-.brand:hover .logo { transform: rotate(-12deg) scale(1.1); }
 nav { display: flex; gap: 2px; scrollbar-width: none; font-size: 14.5px; font-weight: 500; }
 nav::-webkit-scrollbar { display: none; }
 nav a { position: relative; color: var(--muted); text-decoration: none; padding: 7px 12px; border-radius: 999px; white-space: nowrap; transition: color .2s, background .2s; }
@@ -250,3 +248,13 @@ footer { margin-top: 72px; padding: 36px 0 56px; color: var(--muted); font-size:
 .card-photo { overflow: hidden; }
 .card-photo h3 { margin: 18px 22px 4px; }
 .card-photo p { margin: 0 22px 20px; }
+
+/* en-tête : drapeau qui flotte + nom de domaine */
+.brand .drapeau { width: 46px; height: auto; overflow: visible; filter: drop-shadow(0 3px 5px rgba(0, 0, 0, .18)); transition: transform .4s cubic-bezier(.34, 1.56, .64, 1); }
+.brand:hover .drapeau { transform: scale(1.12) rotate(-4deg); }
+.brand .nom { letter-spacing: -.02em; }
+.brand .nom b { color: var(--accent); font-weight: 800; }
+.drapeau .tranche { animation: onde 1.8s ease-in-out infinite; animation-delay: calc(var(--i) * -.17s); }
+.drapeau .ombre { opacity: 0; animation: pli 1.8s ease-in-out infinite; animation-delay: calc(var(--i) * -.17s); }
+@keyframes onde { 0%, 100% { transform: translateY(-1.1px); } 50% { transform: translateY(1.1px); } }
+@keyframes pli { 0%, 100% { opacity: 0; } 50% { opacity: .2; } }

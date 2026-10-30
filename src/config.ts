@@ -23,3 +23,6 @@ export const legendeIA = (description: string) => `${description} (${MENTION_IA}
 
 // Pages hors menu : liées depuis le pied de page et présentes dans le sitemap.
 export const pagesLegales = [{ href: '/mentions-legales', label: 'Mentions légales' }];
+
+// Nom affiché dans l'en-tête (domaine visé : à acheter chez OVH).
+export const NOM_SITE = 'guide-russie.fr';
