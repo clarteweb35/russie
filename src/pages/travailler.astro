@@ -1,16 +1,17 @@
 ---
 import Base from '../layouts/Base.astro';
+import Badge from '../components/Badge.astro';
+import Alert from '../components/Alert.astro';
 ---
 <Base title="Travailler en Russie">
   <h1>Travailler en Russie</h1>
   <p class="lead">Permis, visas, statuts et pièges : comment fonctionne le travail légal pour un étranger.</p>
 
-  <div class="alert warn">
-    <strong>Contexte</strong>
+  <Alert titre="Contexte" warn>
     Les sanctions internationales et la fermeture d’entreprises françaises ont profondément changé le marché : plus de 500 filiales françaises étaient présentes avant 2022, avec des réactions graduées, de la suspension provisoire à la suspension définitive. Les transferts de salaires et la protection juridique sont des points à examiner avec soin.
-  </div>
+  </Alert>
 
-  <h2>Règle générale <span class="badge ok">Vérifié</span></h2>
+  <h2>Règle générale <Badge type="ok">Vérifié</Badge></h2>
   <ul>
     <li>La grande majorité des étrangers ont besoin à la fois d’un <strong>permis de travail</strong> et d’un <strong>visa de travail</strong>.</li>
     <li>Un permis standard lie le salarié à un employeur et à un poste : changer d’employeur impose un nouveau permis.</li>
@@ -18,7 +19,7 @@ import Base from '../layouts/Base.astro';
     <li>Les visas pour les membres de la famille n’ouvrent généralement pas le droit de travailler : chacun doit obtenir son propre permis.</li>
   </ul>
 
-  <h2>Étapes typiques (permis standard) <span class="badge ok">Vérifié</span></h2>
+  <h2>Étapes typiques (permis standard) <Badge type="ok">Vérifié</Badge></h2>
   <ol>
     <li>L’employeur russe obtient le droit d’embaucher un étranger et fait la demande de permis de travail.</li>
     <li>Une fois le permis délivré, l’employeur demande une invitation pour le visa de travail.</li>
@@ -27,7 +28,7 @@ import Base from '../layouts/Base.astro';
   </ol>
   <p class="src">Source : Rivermate, guide « Work Permits & Visas in Russia ».</p>
 
-  <h2>Spécialiste hautement qualifié (HQS) <span class="badge ok">Vérifié</span></h2>
+  <h2>Spécialiste hautement qualifié (HQS) <Badge type="ok">Vérifié</Badge></h2>
   <ul>
     <li>Catégorie la plus avantageuse : traitement plus rapide, moins de restrictions, sans quota, validité jusqu’à trois ans.</li>
     <li>Seuil de rémunération : 750 000 roubles par trimestre depuis le 1er mars 2024.</li>
@@ -37,16 +38,16 @@ import Base from '../layouts/Base.astro';
   </ul>
   <p class="src">Sources : Expat Focus (mai 2026) ; cabinet Van Rhijn Legal ; Rivermate.</p>
 
-  <h2>Nouveaux dispositifs 2026 <span class="badge warn">À confirmer</span></h2>
+  <h2>Nouveaux dispositifs 2026 <Badge type="warn">À confirmer</Badge></h2>
   <p>Plusieurs médias rapportent qu’un programme de visa pour talents et spécialistes qualifiés (scientifiques, entrepreneurs, chercheurs, personnalités culturelles) est entré en vigueur en avril 2026, avec accès facilité à la résidence temporaire hors quota. Ces articles sont de seconde main ; vérifiez le texte officiel et les conditions réelles auprès d’un juriste russe ou du consulat avant de t’appuyer dessus.</p>
 
-  <h2>Travailler à distance pour des clients ou une entreprise française <span class="badge warn">À confirmer</span></h2>
+  <h2>Travailler à distance pour des clients ou une entreprise française <Badge type="warn">À confirmer</Badge></h2>
   <ul>
     <li>Vivre en Russie en travaillant pour des clients étrangers ne dispense pas de respecter les règles de séjour et fiscales locales.</li>
     <li>Vérifiez les conséquences fiscales (résidence fiscale, convention fiscale, déclarations) avec un conseiller spécialisé : je ne suis pas conseiller fiscal et ces règles dépendent de votre situation.</li>
     <li>Les paiements de clients européens vers la Russie peuvent être bloqués ou refusés par les banques à cause des sanctions.</li>
   </ul>
 
-  <h2>Sanctions et conformité <span class="badge ok">Vérifié</span></h2>
+  <h2>Sanctions et conformité <Badge type="ok">Vérifié</Badge></h2>
   <p>La France s’est jointe aux sanctions de l’Union européenne mises en œuvre à partir de février 2022. Avant de travailler pour une entreprise russe ou d’y apporter des services, vérifiez qu’elle ne relève pas d’un secteur ou d’une entité sous sanctions : leur violation peut avoir des conséquences pénales en France.</p>
 </Base>

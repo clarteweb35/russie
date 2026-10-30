@@ -1,0 +1,10 @@
+---
+// Emplacement du quiz d'écoute : la logique est dans src/scripts/lecon.ts.
+interface Props { phrases: [string, string, string][] }
+const { phrases } = Astro.props;
+---
+<h2>Quiz d’écoute</h2>
+<p>Écoutez la phrase, puis choisissez sa traduction.</p>
+<div id="quiz" data-phrases={JSON.stringify(phrases)} aria-live="polite">
+  <button class="btn" id="quiz-start" type="button">Commencer le quiz</button>
+</div>

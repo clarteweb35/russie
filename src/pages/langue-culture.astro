@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import Alert from '../components/Alert.astro';
 import { url } from '../config';
 ---
 <Base title="Langue et culture">
@@ -45,8 +46,7 @@ import { url } from '../config';
     <li><strong>Kazan, Nijni Novgorod, Ekaterinbourg</strong> : grandes villes régionales avec une vie culturelle riche.</li>
     <li><strong>Sibérie, Extrême-Orient, Anneau d’or</strong> : distances énormes ; prévoyez votre transport et votre sécurité en conséquence.</li>
   </ul>
-  <div class="alert warn">
-    <strong>Rappel</strong>
+  <Alert titre="Rappel" warn>
     Le conseil officiel français couvre l’ensemble du territoire. Les régions proches de l’Ukraine et du Caucase du Nord présentent des risques supplémentaires : voir la page <a href={url("/voyager#securite")}>Sécurité</a>.
-  </div>
+  </Alert>
 </Base>

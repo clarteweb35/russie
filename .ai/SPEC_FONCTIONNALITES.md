@@ -83,8 +83,8 @@ Liste des sources et de leur fiabilité.
 
 ## 6. Dette technique connue (par priorité)
 
-1. `src/pages/lecons/[slug].astro` mélange template, CSS global et script (quiz, audio) : extraire `Quiz.astro` et `src/scripts/quiz.ts`.
-2. Contenu écrit en dur dans les pages : créer `Alert`, `Badge`, `Sources`, ou passer en Content Collections.
+1. ~~Page de leçon trop chargée~~ : faite (script dans `src/scripts/lecon.ts`, composant `Quiz`, CSS dans `global.css`).
+2. Composants `Badge` et `Alert` faits ; reste le bloc « Sources » et le passage en Content Collections si le contenu grossit.
 3. Date de vérification globale : prévoir une date par page.
 4. ~~Image d'accueil de 2,6 Mo~~ : faite (WebP, 218 Ko). Reste à mesurer EcoIndex.
 5. CSS global sans découpage.

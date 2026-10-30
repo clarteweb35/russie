@@ -1,0 +1,6 @@
+---
+// Pastille de fiabilité : « ok » = vérifié, « warn » = à confirmer.
+interface Props { type: 'ok' | 'warn' }
+const { type } = Astro.props;
+---
+<span class={`badge ${type}`}><slot /></span>

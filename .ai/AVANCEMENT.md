@@ -44,8 +44,8 @@ Dernière mise à jour : 30 octobre 2026. Ce fichier est mis à jour à la fin d
 3. [x] Image d'accueil optimisée : 2,6 Mo vers 218 Ko en WebP, illustrations des parcours vers 15 Ko (`scripts/optimiser-images.mjs`).
 
 ### Priorité 2 : maintenabilité
-4. [ ] Extraire le quiz et l'audio de `src/pages/lecons/[slug].astro` vers `Quiz.astro` et `src/scripts/quiz.ts`.
-5. [ ] Créer les composants `Alert`, `Badge`, `Sources` pour supprimer le HTML répété.
+4. [x] Quiz et audio extraits de la page de leçon (`src/scripts/lecon.ts`, `Quiz.astro`), CSS déplacé dans `global.css`.
+5. [x] Composants `Alert` et `Badge` créés et utilisés partout. Reste éventuellement `Sources`.
 6. [ ] Date de vérification **par page** (aujourd'hui une seule date globale `LAST_CHECK`).
 7. [ ] Passer `lecons.js` en TypeScript, avec un type `Lecon` et des objets `{ru, pron, fr}`.
 8. [ ] Découper `global.css` (225 lignes) et supprimer les règles en doublon sur le menu mobile.

@@ -1,5 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
+import Badge from '../components/Badge.astro';
+import Alert from '../components/Alert.astro';
 import Convertisseur from '../components/Convertisseur.astro';
 import { url } from '../config';
 ---
@@ -9,22 +11,21 @@ import { url } from '../config';
 
   <Convertisseur />
 
-  <h2>Pourquoi un compte en Géorgie ? <span class="badge warn">À confirmer</span></h2>
+  <h2>Pourquoi un compte en Géorgie ? <Badge type="warn">À confirmer</Badge></h2>
   <ul>
     <li>Les cartes émises en France (Visa, Mastercard) ne marchent pas en Russie, et les cartes russes (dont Mir) ne marchent pas hors de Russie ou en Géorgie.</li>
     <li>Un compte géorgien sert d’<strong>intermédiaire</strong> : on y reçoit de l’argent de l’étranger, puis on l’envoie vers un compte russe ou on le retire. Il ne permet pas de payer par carte directement en Russie.</li>
     <li>Les règles de transfert Géorgie ↔ Russie changent souvent (services arrêtés, banques plus strictes). Vérifiez le trajet exact auprès de la banque avant d’y compter.</li>
   </ul>
 
-  <div class="alert warn">
-    <strong>Sanctions et conformité</strong>
+  <Alert titre="Sanctions et conformité" warn>
     Les banques géorgiennes appliquent des contrôles renforcés sur les flux liés à la Russie, et les sanctions européennes encadrent les transferts. Gardez une trace de l’origine de vos fonds, et ne comptez pas sur un compte unique pour tout faire.
-  </div>
+  </Alert>
 
-  <h2>Ouvrir le compte depuis la France <span class="badge warn">À confirmer</span></h2>
+  <h2>Ouvrir le compte depuis la France <Badge type="warn">À confirmer</Badge></h2>
   <p>L’ouverture à distance est possible dans certains cas, mais plus difficile pour un particulier sans attache en Géorgie. Elle passe en général par une <strong>procuration notariée</strong>, apostillée (la France applique la Convention de La Haye), puis traduite en géorgien. Les banques les plus citées pour les non-résidents sont Bank of Georgia et TBC Bank ; certaines banques refusent selon le profil.</p>
 
-  <h2>Budget estimé <span class="badge warn">Estimation non vérifiée</span></h2>
+  <h2>Budget estimé <Badge type="warn">Estimation non vérifiée</Badge></h2>
   <table>
     <tr><th>Poste</th><th>Estimation</th></tr>
     <tr><td>Notaire (signature, authentification)</td><td>30 à 90 €</td></tr>
@@ -36,7 +37,7 @@ import { url } from '../config';
   </table>
   <p class="src">Ces montants sont des ordres de grandeur sans source officielle : les tarifs des notaires, de l’apostille et des banques varient. Demandez un devis avant de vous engager.</p>
 
-  <h2>Partenaires <span class="badge warn">Bientôt</span></h2>
+  <h2>Partenaires <Badge type="warn">Bientôt</Badge></h2>
   <p>Des liens partenaires (banques, services de transfert, accompagnement) pourront être ajoutés ici plus tard. Si c’est le cas, ils seront <strong>clairement signalés comme affiliés</strong> : le guide pourra être rémunéré si vous vous inscrivez via ces liens, sans changer votre prix. Ils ne remplacent pas votre propre vérification.</p>
 
   <h2>Sources</h2>

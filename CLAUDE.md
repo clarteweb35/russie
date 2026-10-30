@@ -21,7 +21,9 @@ Le site est servi sous `/russie/` en local comme en production (`base` dans `ast
 - `src/layouts/Base.astro` : layout unique (en-tête, menu, bandeau de sécurité, ligne de crédibilité, pied de page, scripts d'animation).
 - `src/config.ts` : `sections` (menu et cartes), `LAST_CHECK` (date de vérification), `url()`.
 - `src/pages/*.astro` : une page par rubrique. `lecons/[slug].astro` génère les leçons depuis `src/data/lecons.js`.
-- `src/components/` : composants réutilisables (`Convertisseur.astro`).
+- `src/components/` : `Alert`, `Badge` (à utiliser pour tout encadré ou pastille, jamais le HTML en dur), `Quiz`, `Convertisseur`.
+- `src/scripts/` : scripts navigateur (`lecon.ts` : audio et quiz).
+- `scripts/` (racine) : outils de développement (`verifier-liens.mjs`, `optimiser-images.mjs`).
 - `src/styles/global.css` : tous les styles, variables CSS en haut, thème sombre automatique.
 - `public/` : fichiers servis tels quels (images). Pas de copie des images à la racine du projet.
 

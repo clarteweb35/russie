@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import Badge from '../components/Badge.astro';
 ---
 <Base title="Sources">
   <h1>Sources et méthode</h1>
@@ -7,8 +8,8 @@ import Base from '../layouts/Base.astro';
 
   <h2>Comment lire les badges</h2>
   <ul>
-    <li><span class="badge ok">Vérifié</span> : appuyé par une source officielle ou un document cité ci-dessous.</li>
-    <li><span class="badge warn">À confirmer</span> : information de seconde main, chiffre variable ou non recoupé lors de la recherche. Ne vous en servez pas pour décider sans vérification officielle.</li>
+    <li><Badge type="ok">Vérifié</Badge> : appuyé par une source officielle ou un document cité ci-dessous.</li>
+    <li><Badge type="warn">À confirmer</Badge> : information de seconde main, chiffre variable ou non recoupé lors de la recherche. Ne vous en servez pas pour décider sans vérification officielle.</li>
   </ul>
 
   <h2>Sources officielles</h2>

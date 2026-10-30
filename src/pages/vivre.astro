@@ -1,17 +1,18 @@
 ---
 import Base from '../layouts/Base.astro';
+import Badge from '../components/Badge.astro';
+import Alert from '../components/Alert.astro';
 import { url } from '../config';
 ---
 <Base title="Vivre en Russie">
   <h1>Vivre en Russie</h1>
   <p class="lead">S’installer durablement est possible juridiquement, mais le contexte actuel impose une préparation et une prudence particulières.</p>
 
-  <div class="alert">
-    <strong>Position officielle française</strong>
+  <Alert titre="Position officielle française">
     Le ministère français recommande aux ressortissants dont la présence n’est pas essentielle de quitter la Russie, et déconseille formellement tout déplacement. S’installer expose notamment à des risques de détention arbitraire, à un soutien consulaire limité et à des difficultés financières et de retour.
-  </div>
+  </Alert>
 
-  <h2>Séjour légal : les grandes voies <span class="badge ok">Vérifié</span></h2>
+  <h2>Séjour légal : les grandes voies <Badge type="ok">Vérifié</Badge></h2>
   <table>
     <tr><th>Statut</th><th>Principe</th></tr>
     <tr><td>Visa de court séjour</td><td>Tourisme, affaires ; durée limitée, à respecter strictement.</td></tr>
@@ -21,7 +22,7 @@ import { url } from '../config';
   </table>
   <p class="src">Sources : Expat Focus, « Russia – Work Permits and Working Legally » (revu mai 2026) ; Rivermate ; cabinets d’avocats cités sur la page Sources.</p>
 
-  <h2>Démarches d’arrivée <span class="badge warn">À confirmer</span></h2>
+  <h2>Démarches d’arrivée <Badge type="warn">À confirmer</Badge></h2>
   <p>Je n’ai pas pu confirmer lors de cette recherche, avec une source officielle récente, les délais exacts de ces obligations. Elles sont généralement strictes et sanctionnées ; vérifiez-les avec le service des migrations ou un juriste russe avant d’arriver :</p>
   <ul>
     <li>Enregistrement migratoire à l’adresse de résidence (carte de migration, notification d’arrivée).</li>
@@ -29,14 +30,14 @@ import { url } from '../config';
     <li>Obligations liées au statut familial (conjoint, enfants) si vous venez en famille.</li>
   </ul>
 
-  <h2>Argent et banque <span class="badge ok">Vérifié</span></h2>
+  <h2>Argent et banque <Badge type="ok">Vérifié</Badge></h2>
   <ul>
     <li>Vos cartes françaises ne fonctionnent pas sur place. Pour vivre, il faut une carte russe (Mir) ouverte dans une banque locale avec votre passeport.</li>
     <li>Les sanctions européennes compliquent les transferts bancaires depuis et vers la Russie : renseignez-vous auprès de votre banque française avant de partir, et ne comptez pas sur un accès simple à vos comptes.</li>
     <li>Gardez un moyen de revenir en France sans dépendre d’un compte russe.</li>
   </ul>
 
-  <h2>Logement, santé, quotidien <span class="badge warn">À confirmer</span></h2>
+  <h2>Logement, santé, quotidien <Badge type="warn">À confirmer</Badge></h2>
   <ul>
     <li><strong>Logement</strong> : plateformes occidentales de réservation souvent indisponibles ; les plateformes locales dominent. Prévoyez un contrat écrit et votre enregistrement migratoire à l’adresse.</li>
     <li><strong>Santé</strong> : vérifiez la couverture de votre assurance et les possibilités de rapatriement ; l’accès aux soins varie fortement selon la région.</li>
@@ -44,6 +45,6 @@ import { url } from '../config';
     <li><strong>Services en ligne</strong> : prévoir des alternatives aux applications bloquées ; le droit russe encadre l’usage des VPN.</li>
   </ul>
 
-  <h2>Communauté française <span class="badge ok">Vérifié</span></h2>
+  <h2>Communauté française <Badge type="ok">Vérifié</Badge></h2>
   <p>En mai 2022, environ 4 985 Français étaient inscrits au registre consulaire (4 386 à Moscou, 550 à Saint-Pétersbourg, 49 à Ekaterinbourg). Inscrivez-vous au registre et sur le Fil d’Ariane dès l’arrivée.</p>
 </Base>

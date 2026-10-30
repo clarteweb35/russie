@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Badge from '../components/Badge.astro';
 import { sections, LAST_CHECK, url } from '../config';
 interface Props { title: string; description?: string }
 const { title, description = 'Guide d’information sur la Russie : voyager, vivre, travailler — avec sources officielles et mises en garde.' } = Astro.props;
@@ -46,8 +47,8 @@ const showMeta = !isHome && path !== '/sources';
       {showMeta && (
         <p class="meta">
           <span>Vérifié le {LAST_CHECK}</span>
-          <span class="badge ok">Source officielle</span>
-          <span class="badge warn">À confirmer</span>
+          <Badge type="ok">Source officielle</Badge>
+          <Badge type="warn">À confirmer</Badge>
           <a href={url("/sources")}>Voir les sources</a>
         </p>
       )}

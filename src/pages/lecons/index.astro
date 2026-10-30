@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import Alert from '../../components/Alert.astro';
 import { url } from '../../config';
 import { lecons } from '../../data/lecons.js';
 ---
@@ -14,9 +15,8 @@ import { lecons } from '../../data/lecons.js';
       </a>
     ))}
   </div>
-  <div class="alert warn">
-    <strong>À propos de l’audio</strong>
+  <Alert titre="À propos de l’audio" warn>
     Le son utilise la voix russe de votre appareil. Sur iPhone, Mac et Android elle est généralement disponible ; sinon, ajoutez la langue russe dans les réglages de voix.
     La voix est synthétique : elle aide à la prononciation, mais rien ne remplace un échange avec une personne russophone.
-  </div>
+  </Alert>
 </Base>

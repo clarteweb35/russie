@@ -1,0 +1,9 @@
+---
+// Encadré d'information : rouge par défaut, orange avec `warn`.
+interface Props { titre?: string; warn?: boolean; id?: string; hidden?: boolean }
+const { titre, warn = false, id, hidden } = Astro.props;
+---
+<div class={warn ? 'alert warn' : 'alert'} id={id} hidden={hidden}>
+  {titre && <strong>{titre}</strong>}
+  <slot />
+</div>
