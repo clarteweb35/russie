@@ -63,6 +63,7 @@ Le site est servi sous `/russie/` en local comme en production (`base` dans `ast
 ### Pendant
 - **Explications** : codeur novice, ne pas être trop technique.
 - **Pièges Windows / shell** : dans un `node -e "…"` ou un heredoc non protégé, les **accents graves (backticks) sont interprétés par le shell** ; écrire les scripts dans un fichier ou utiliser les outils Write/Edit. Une apostrophe dans une chaîne `'…'` casse un fichier de test.
+- **Serveur de développement obsolète** : après des modifications faites en ligne de commande (`sed -i`), le serveur peut continuer à servir l'ancien CSS (drapeau absent, styles manquants). Le relancer ; le site publié n'est pas concerné. Pour vérifier un rendu fiable : `npm run build` puis `npx astro preview`.
 - **Vérification visuelle** quand c'est possible : `npx astro preview` puis Chrome en mode sans interface (`chrome --headless=new --screenshot=… http://localhost:…/`). Largeur minimale sous Chrome sans interface : 500 px.
 
 ### Après
