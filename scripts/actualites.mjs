@@ -1,5 +1,7 @@
 // Génère le topo hebdomadaire de l'actualité de chaque pays suivi avec l'API Gemini (recherche Google intégrée).
-// Usage : GEMINI_API_KEY=... node scripts/actualites.mjs
+// Usage : GEMINI_API_KEY_ALBANIE=... node scripts/actualites.mjs
+// Clés : une par pays (GEMINI_API_KEY_<PAYS>, ex. GEMINI_API_KEY_RUSSIE), sinon une clé commune GEMINI_API_KEY.
+// Dans GitHub Actions, les secrets du dépôt arrivent en bloc par SECRETS_JSON : ajouter un pays ne demande aucune modification du workflow.
 // Variables facultatives : GEMINI_MODEL (modèle), GEMINI_BASE_URL (tests), ACTUALITES_DIR (dossier de sortie).
 //
 // Garde-fous : les sources viennent des métadonnées de la recherche (jamais du texte du modèle), un topo sans source
@@ -7,16 +9,14 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 
-const CLE = process.env.GEMINI_API_KEY;
+// Secrets du dépôt, transmis en bloc par le workflow (SECRETS_JSON) ; les variables d'environnement restent prioritaires
+const SECRETS = JSON.parse(process.env.SECRETS_JSON || '{}');
+const lire = (nom) => process.env[nom] || SECRETS[nom] || '';
+const cle = (slug) => lire(`GEMINI_API_KEY_${slug.toUpperCase()}`) || lire('GEMINI_API_KEY');
 const MODELE = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
 const BASE = process.env.GEMINI_BASE_URL || 'https://generativelanguage.googleapis.com';
 const DOSSIER = process.env.ACTUALITES_DIR || join('src', 'data', 'actualites');
 const PAYS = JSON.parse(readFileSync(new URL('./actualites-pays.json', import.meta.url), 'utf8'));
-
-if (!CLE) {
-  console.error('GEMINI_API_KEY manquante : ajoutez-la dans les secrets du dépôt (Settings > Secrets and variables > Actions).');
-  process.exit(1);
-}
 
 const prompt = (pays, langueLocale) => `Tu fais de la veille d'actualité pour un guide d'information francophone destiné à des voyageurs et à des personnes qui s'installent à l'étranger.
 
@@ -35,7 +35,7 @@ avec au maximum 5 points.`;
 async function appeler(p, essai = 1) {
   const reponse = await fetch(`${BASE}/v1beta/models/${MODELE}:generateContent`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'x-goog-api-key': CLE },
+    headers: { 'Content-Type': 'application/json', 'x-goog-api-key': cle(p.slug) },
     body: JSON.stringify({
       contents: [{ role: 'user', parts: [{ text: prompt(p.pays, p.langueLocale) }] }],
       tools: [{ google_search: {} }],
@@ -89,6 +89,10 @@ function extraire(json) {
 mkdirSync(DOSSIER, { recursive: true });
 let reussis = 0;
 for (const p of PAYS) {
+  if (!cle(p.slug)) {
+    console.warn(`::warning::${p.slug} : aucune clé (ajoutez le secret GEMINI_API_KEY_${p.slug.toUpperCase()} ou une clé commune GEMINI_API_KEY), pays ignoré`);
+    continue;
+  }
   try {
     const topo = extraire(await appeler(p));
     const fichier = join(DOSSIER, `${p.slug}.json`);
@@ -101,6 +105,6 @@ for (const p of PAYS) {
   }
 }
 if (reussis === 0) {
-  console.error('Aucun topo généré.');
+  console.error('Aucun topo généré (clés manquantes ou erreurs ci-dessus).');
   process.exit(1);
 }

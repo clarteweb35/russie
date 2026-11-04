@@ -119,4 +119,7 @@ Liste des sources et de leur fiabilité.
 
 Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fichier) et retirée une fois terminée et mise en ligne. Chaque entrée : date, objectif, fichiers concernés, étapes faites et restantes.
 
-Aucune action en cours.
+### 4 novembre 2026 : clés par pays + vague 1 des pays (Géorgie, Turquie, Arménie, Kazakhstan, Serbie, Émirats, Thaïlande)
+- **Fichiers** : `scripts/actualites.mjs`, `.github/workflows/actualites.yml`, `src/data/pays/*`, `scripts/actualites-pays.json`, `.ai/AVANCEMENT_PAYS.md`, `.ai/*`.
+- **Fait** : cadrage.
+- **Restant** : clés par pays, un pays à la fois (recherche, données, test), commit par lot, retrait de cette entrée en fin de chantier.

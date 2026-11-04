@@ -20,7 +20,7 @@ jobs:
       - name: Générer les topos
         run: node scripts/actualites.mjs
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          SECRETS_JSON: ${{ toJSON(secrets) }}
       - name: Enregistrer les topos et relancer le déploiement
         env:
           GH_TOKEN: ${{ github.token }}
