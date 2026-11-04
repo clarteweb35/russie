@@ -129,8 +129,8 @@ Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fich
 ### 4 novembre 2026 : guides détaillés des 11 pays restants de l'ex-URSS, puis reste du monde
 - **Objectif** : Azerbaïdjan, Biélorussie, Estonie, Kirghizistan, Lettonie, Lituanie, Moldavie, Ouzbékistan, Tadjikistan, Turkménistan, Ukraine en guides « test » (sources citées, À documenter si rien de fiable), puis les autres pays par vagues.
 - **Fichiers** : `src/data/pays/<pays>.ts`, `src/data/pays/index.ts`, `scripts/actualites-pays.json`, `.ai/AVANCEMENT_PAYS.md`.
-- **Fait** : cadrage, recherches.
-- **Restant** : 11 fichiers pays (lots de 4), puis reste du monde.
+- **Fait** : les 11 pays de l’ex-URSS (3 lots, en ligne).
+- **Restant** : reste du monde, par vagues 3 et 4 de `.ai/PAYS_PREVUS.md` puis les autres pays.
 
 ### (précédent) 4 novembre 2026 : clés par pays + vague 1 des pays (Géorgie, Turquie, Arménie, Kazakhstan, Serbie, Émirats, Thaïlande)
 - **Fichiers** : `scripts/actualites.mjs`, `.github/workflows/actualites.yml`, `src/data/pays/*`, `scripts/actualites-pays.json`, `.ai/AVANCEMENT_PAYS.md`, `.ai/*`.
