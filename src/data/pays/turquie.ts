@@ -8,6 +8,7 @@ const CYRIL_TR = { label: 'Cyril Jarnias, s’installer en Turquie', url: 'https
 export const turquie: PaysComplet = {
   complet: true,
   test: true,
+  iso: 'TUR',
   slug: 'turquie',
   nom: 'Turquie',
   article: 'la Turquie',

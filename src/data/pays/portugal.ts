@@ -9,6 +9,7 @@ const EPORTUGAL = { label: 'ePortugal, demander le NIF et le NISS pour un étran
 export const portugal: PaysComplet = {
   complet: true,
   test: true,
+  iso: 'PRT',
   slug: 'portugal',
   nom: 'Portugal',
   article: 'le Portugal',

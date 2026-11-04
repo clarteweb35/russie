@@ -9,6 +9,7 @@ const STARTER_KIT = { label: 'Thailand Starter Kit, visas et déclaration des 90
 export const thailande: PaysComplet = {
   complet: true,
   test: true,
+  iso: 'THA',
   slug: 'thailande',
   nom: 'Thaïlande',
   article: 'la Thaïlande',

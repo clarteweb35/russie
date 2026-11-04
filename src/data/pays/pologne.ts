@@ -10,6 +10,7 @@ const UMK = { label: 'Université Nicolas Copernic, démarches pour les citoyens
 export const pologne: PaysComplet = {
   complet: true,
   test: true,
+  iso: 'POL',
   slug: 'pologne',
   nom: 'Pologne',
   article: 'la Pologne',

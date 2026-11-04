@@ -1,0 +1,25 @@
+// Signification des drapeaux. Ce sont des interprétations courantes, non des décisions officielles ; elles ne sont
+// rédigées que pour les pays qui ont un guide. Les autres pays affichent leur drapeau sans commentaire.
+export const SIGNIFICATION_DRAPEAU: Record<string, string> = {
+  RUS: 'Un drapeau tricolore blanc, bleu, rouge. Plusieurs lectures coexistent et aucune n’est officielle : on y voit parfois le blanc de la noblesse ou de la Russie blanche, le bleu de la fidélité ou de la Petite Russie, le rouge du courage ou de la Grande Russie.',
+  FIN: 'Une croix bleue sur fond blanc, une « croix scandinave ». On associe couramment le bleu aux lacs et au ciel, et le blanc à la neige.',
+  ALB: 'Un fond rouge frappé d’un aigle noir à deux têtes, emblème associé au héros national Skanderbeg.',
+  ESP: 'Deux bandes rouges encadrant une large bande jaune, avec les armes de l’État. Les couleurs viennent de l’héraldique des anciens royaumes.',
+  DEU: 'Trois bandes noire, rouge et or, associées au mouvement libéral et unitaire du XIXe siècle. Un dicton populaire les résume ainsi : de la nuit, à travers le sang, vers la lumière d’or.',
+  SEN: 'Les couleurs panafricaines vert, jaune et rouge, avec une étoile verte au centre de la bande jaune.',
+  VNM: 'Un fond rouge, symbole de la révolution, avec une étoile jaune à cinq branches, qui représenterait l’union des grandes catégories de la population.',
+  GEO: 'Une grande croix rouge de Saint-Georges encadrée de quatre petites croix sur fond blanc, souvent appelée drapeau à cinq croix.',
+  TUR: 'Un fond rouge avec un croissant et une étoile blancs, héritage de la tradition ottomane.',
+  ARM: 'Trois bandes horizontales rouge, bleue et orange. Interprétation courante : le rouge pour le sang et les hauts plateaux, le bleu pour le ciel, l’orange pour le courage et le travail de la terre.',
+  KAZ: 'Un fond bleu ciel avec un soleil doré et un aigle des steppes, et un ornement à la hampe. Le bleu évoque le ciel et l’unité des peuples turciques.',
+  SRB: 'Un tricolore rouge, bleu et blanc, aux couleurs panslaves, avec les armes de l’État sur la gauche.',
+  ARE: 'Les couleurs panarabes : une bande verticale rouge à la hampe, puis des bandes horizontales verte, blanche et noire.',
+  THA: 'Cinq bandes rouge, blanche, bleue, blanche, rouge. On associe couramment le rouge à la nation, le blanc à la religion et le bleu à la monarchie.',
+  MAR: 'Un fond rouge avec un pentagramme vert, le sceau de Salomon.',
+  PRT: 'Une partie verte et une partie rouge, avec une sphère armillaire et un écu au centre.',
+  ITA: 'Le tricolore vert, blanc et rouge, adopté à l’époque napoléonienne et devenu l’emblème de l’unité italienne.',
+  GRC: 'Neuf bandes bleues et blanches et une croix blanche sur fond bleu. Les neuf bandes sont souvent associées aux neuf syllabes de la devise « Liberté ou la mort ».',
+  POL: 'Deux bandes horizontales, blanche au-dessus et rouge en dessous.',
+  CHE: 'Une croix blanche sur fond rouge, l’un des deux drapeaux carrés du monde avec celui du Vatican.',
+  GBR: 'L’Union Jack associe les croix de Saint-Georges (Angleterre), de Saint-André (Écosse) et de Saint-Patrick (Irlande).',
+};

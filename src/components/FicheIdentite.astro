@@ -1,0 +1,76 @@
+---
+// Fiche d'identité d'un pays : drapeau, chiffres clés et quelques repères calculés à partir des données.
+import { url } from '../config';
+import { SIGNIFICATION_DRAPEAU } from '../data/monde/drapeaux';
+import { decalageTexte, nombre, NOTE_SOURCES_MONDE, voisins } from '../data/monde';
+import type { FicheMonde } from '../data/monde';
+
+interface Props { p: FicheMonde }
+const { p } = Astro.props;
+const signification = SIGNIFICATION_DRAPEAU[p.iso];
+const decalage = decalageTexte(p);
+const densite = p.population && p.superficie ? Math.round(p.population.valeur / p.superficie) : null;
+const lesVoisins = voisins(p);
+
+// Repères : uniquement des faits déduits des données (pas de contenu inventé)
+const reperes: string[] = [];
+if (p.enclave) reperes.push('Pays enclavé : il n’a aucun accès direct à la mer.');
+if (p.limitrophes.length === 0) reperes.push('Aucune frontière terrestre : un pays insulaire ou isolé.');
+else reperes.push(`${p.limitrophes.length} pays voisin${p.limitrophes.length > 1 ? 's' : ''} par voie terrestre.`);
+if (densite !== null) reperes.push(`Environ ${nombre(densite)} habitant${densite > 1 ? 's' : ''} par km².`);
+if (p.conduiteAGauche) reperes.push('On y conduit à gauche : une habitude à prendre avant de louer une voiture.');
+if (p.fuseaux && p.fuseaux.nb > 1 && p.fuseaux.max - p.fuseaux.min >= 2) reperes.push('Le pays s’étend sur plusieurs fuseaux horaires.');
+if (p.langues.length > 1) reperes.push(`${p.langues.length} langues officielles ou reconnues : ${p.langues.map((l) => l.nom).join(', ')}.`);
+if (p.urss && p.iso !== 'UKR') reperes.push('Ancienne république soviétique : le russe y reste utile, selon les générations (à confirmer).');
+if (p.urss && p.iso === 'UKR') reperes.push('Ancienne république soviétique ; la langue officielle est l’ukrainien.');
+---
+<section class="identite" aria-labelledby="identite-titre">
+  <h2 id="identite-titre">Fiche d’identité</h2>
+  <div class="identite-corps">
+    <figure class="drapeau-fig">
+      <img src={url(`/drapeaux/${p.iso.toLowerCase()}.svg`)} alt={`Drapeau de ${p.nom}`} width="180" height="120" loading="lazy" />
+      <figcaption>Drapeau de {p.nom}</figcaption>
+    </figure>
+    <dl class="identite-liste">
+      <div><dt>Nom officiel</dt><dd>{p.nomOfficiel}</dd></div>
+      {p.capitales.length > 0 && <div><dt>{p.capitales.length > 1 ? 'Capitales' : 'Capitale'}</dt><dd>{p.capitales.join(', ')}</dd></div>}
+      <div><dt>Région</dt><dd>{p.sousRegion ? `${p.sousRegion} (${p.region})` : p.region}</dd></div>
+      {p.langues.length > 0 && <div><dt>{p.langues.length > 1 ? 'Langues' : 'Langue'}</dt><dd>{p.langues.map((l) => l.nom).join(', ')}</dd></div>}
+      {p.devises.length > 0 && <div><dt>Monnaie</dt><dd>{p.devises.map((d) => `${d.nom} (${d.code})`).join(', ')}</dd></div>}
+      {p.indicatif && <div><dt>Indicatif téléphonique</dt><dd>{p.indicatif}</dd></div>}
+      <div><dt>Conduite</dt><dd>{p.conduiteAGauche ? 'À gauche' : 'À droite'}</dd></div>
+      {p.population && <div><dt>Population</dt><dd>{nombre(p.population.valeur)} ({p.population.annee})</dd></div>}
+      {p.superficie && <div><dt>Superficie</dt><dd>{nombre(p.superficie)} km²</dd></div>}
+      {decalage && <div><dt>Heure</dt><dd>{decalage}</dd></div>}
+      {p.domaine && <div><dt>Domaine internet</dt><dd>{p.domaine}</dd></div>}
+    </dl>
+  </div>
+
+  {signification && (
+    <div class="drapeau-sens">
+      <h3>Le drapeau et sa signification</h3>
+      <p>{signification}</p>
+      <p class="src">Interprétation courante, non officielle.</p>
+    </div>
+  )}
+
+  {reperes.length > 0 && (
+    <>
+      <h3>Quelques repères</h3>
+      <ul>{reperes.map((r) => <li>{r}</li>)}</ul>
+    </>
+  )}
+
+  {lesVoisins.length > 0 && (
+    <>
+      <h3>Pays voisins</h3>
+      <ul class="pastilles">
+        {lesVoisins.map((v) => (
+          <li><a href={url(v.href)}><img src={url(`/drapeaux/${v.iso.toLowerCase()}.svg`)} alt="" width="24" height="16" loading="lazy" />{v.nom}</a></li>
+        ))}
+      </ul>
+    </>
+  )}
+
+  <p class="src">{NOTE_SOURCES_MONDE} Le décalage horaire est calculé par rapport à Paris ; il varie avec les changements d’heure. Le côté de conduite est une information générale, à confirmer.</p>
+</section>

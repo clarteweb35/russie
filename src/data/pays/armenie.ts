@@ -8,6 +8,7 @@ const AVOCAT = { label: 'Armenian Lawyer, permis de séjour permanents et tempor
 export const armenie: PaysComplet = {
   complet: true,
   test: true,
+  iso: 'ARM',
   slug: 'armenie',
   nom: 'Arménie',
   article: 'l’Arménie',

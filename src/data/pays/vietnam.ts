@@ -7,6 +7,7 @@ const OFFICIEL_ENTREE = { label: 'Ministère de l’Europe et des Affaires étra
 export const vietnam: PaysComplet = {
   complet: true,
   test: true,
+  iso: 'VNM',
   slug: 'vietnam',
   nom: 'Vietnam',
   article: 'le Vietnam',

@@ -9,6 +9,7 @@ const DEMARCHES = { label: 'Démarches Maroc, s’expatrier au Maroc à la retra
 export const maroc: PaysComplet = {
   complet: true,
   test: true,
+  iso: 'MAR',
   slug: 'maroc',
   nom: 'Maroc',
   article: 'le Maroc',

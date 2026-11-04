@@ -173,3 +173,9 @@ Liste raisonnée des pays envisagés : `.ai/PAYS_PREVUS.md`. Suivi général du 
 - [ ] Champ de recherche ou filtre par critère (UE ou hors UE, visa, langue).
 - [ ] Rendre le convertisseur de devises générique (livre, franc suisse, zloty, dirham, baht...).
 - [ ] Vérifier le coût du build à 400 pages et plus.
+
+## Refonte « monde » (4 novembre 2026)
+- 194 États ont maintenant une page `/pays/<slug>/` (fiche d'identité, drapeau, monnaie et taux, conseils officiels). Les 21 pays à guide détaillé gardent leurs rubriques.
+- Sûr : données importées de sources ouvertes (voir `scripts/importer-monde.mjs`). À confirmer : côté de conduite, facilité d'obtention de la devise (« non documenté » par défaut), indication sur le russe dans l'ex-URSS.
+- Priorité (demande de l'éditeur : ce qui marche pour la Russie vaut pour l'ex-URSS) : guides détaillés restants Azerbaïdjan, Biélorussie, Estonie, Kirghizistan, Lettonie, Lituanie, Moldavie, Ouzbékistan, Tadjikistan, Turkménistan, Ukraine (Ukraine et Biélorussie : sensibles, alerte officielle d'abord).
+- Pas de topo hebdomadaire pour les pays sans guide (21 suivis).

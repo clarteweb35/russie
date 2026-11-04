@@ -1,0 +1,26 @@
+---
+// Galerie de photos d'un pays. Déposez vos images dans src/assets/pays/<slug-du-pays>/ (jpg, png, webp ou avif) :
+// elles apparaissent ici sans autre réglage, redimensionnées et allégées automatiquement.
+import { Image } from 'astro:assets';
+
+interface Props { slug: string; nom: string }
+const { slug, nom } = Astro.props;
+
+const toutes = import.meta.glob<{ default: ImageMetadata }>('../assets/pays/**/*.{jpg,jpeg,png,webp,avif,JPG,JPEG,PNG}', { eager: true });
+const photos = Object.entries(toutes)
+  .filter(([chemin]) => chemin.includes(`/assets/pays/${slug}/`))
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([, m]) => m.default);
+---
+{photos.length > 0 && (
+  <section class="photos" aria-labelledby={`photos-${slug}`}>
+    <h2 id={`photos-${slug}`}>Photos</h2>
+    <ul class="photos-grille">
+      {photos.map((img, i) => (
+        <li>
+          <Image src={img} alt={`${nom} : photo ${i + 1}`} width={720} height={480} loading="lazy" densities={[1, 2]} />
+        </li>
+      ))}
+    </ul>
+  </section>
+)}

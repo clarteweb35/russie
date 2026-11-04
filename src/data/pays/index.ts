@@ -20,10 +20,12 @@ import { pologne } from './pologne';
 import { suisse } from './suisse';
 import { royaumeUni } from './royaume-uni';
 
-// Liste unique des pays du menu « Autres pays ». Un pays « bientôt » s'affiche sans lien jusqu'à ce que sa fiche soit prête ;
-// un pays `test: true` est publié avec la mention « fiche en test ».
+// Guides détaillés (rubriques, leçons, sources). Les autres pays du monde n'ont qu'une fiche d'identité : voir src/data/monde/.
+// Un pays `test: true` est publié avec la mention « fiche en test ».
 export const pays: Pays[] = [finlande, albanie, espagne, allemagne, senegal, vietnam, georgie, turquie, armenie, kazakhstan, serbie, emirats, thailande, maroc, portugal, italie, grece, pologne, suisse, royaumeUni];
 
 export const paysComplets = pays.filter((p): p is PaysComplet => p.complet);
+
+export const guideParIso = (iso: string) => paysComplets.find((p) => p.iso === iso);
 
 export const cheminPays = (slug: string) => `/pays/${slug}`;

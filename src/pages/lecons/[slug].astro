@@ -10,4 +10,4 @@ export function getStaticPaths() {
 }
 const { lecon, index, prev, next } = Astro.props;
 ---
-<LeconDetail lecon={lecon} index={index} prev={prev} next={next} langue={{ nom: 'russe', code: 'ru-RU' }} base="/lecons" />
+<LeconDetail lecon={lecon} index={index} prev={prev} next={next} langue={{ nom: 'russe', code: 'ru-RU' }} base="/lecons" fil={[{ label: 'Russie', href: '/pays/russie' }, { label: 'Leçons de russe', href: '/lecons' }, { label: lecon.titre }]} />

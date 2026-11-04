@@ -5,6 +5,7 @@ const DIPLO_ENTREE = 'https://www.diplomatie.gouv.fr/fr/information-par-pays/fin
 
 export const finlande: PaysComplet = {
   complet: true,
+  iso: 'FIN',
   slug: 'finlande',
   nom: 'Finlande',
   article: 'la Finlande',

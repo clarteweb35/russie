@@ -1,68 +1,117 @@
 ---
+// Page d'accueil : sélecteur de destination. Tous les pays du monde, par ordre alphabétique, avec recherche et filtre par région.
 import Base from '../layouts/Base.astro';
-import Convertisseur from '../components/Convertisseur.astro';
-import Actualites from '../components/Actualites.astro';
-import { mediasRussie } from '../data/medias-russie';
-import { sections, LAST_CHECK, legendeIA, url } from '../config';
-import { lecons } from '../data/lecons.js';
+import { monde, groupesAlphabetiques, REGIONS } from '../data/monde';
+import { NOM_SITE, url } from '../config';
 
-const parcours = [
-  { n: '1', href: '/voyager', img: '/img/parcours-voyage.webp', alt: 'Une valise et une liste de contrôle', titre: 'Préparer un voyage', txt: 'Visa, sécurité, transports et démarches avant le départ.' },
-  { n: '2', href: '/vivre', img: '/img/parcours-installer.webp', alt: 'Des clés avec un porte-clés en forme de maison', titre: 'S’installer', txt: 'Séjour légal, argent, logement, travail et quotidien.' },
-  { n: '3', href: '/lecons', img: '/img/parcours-russe.webp', alt: 'Un abécédaire cyrillique ouvert', titre: 'Apprendre le russe', txt: `${lecons.length} leçons courtes avec audio et quiz d’écoute.` },
-];
-const essentiels = sections.filter((s) => ['/travailler', '/paiements', '/langue-culture'].includes(s.href));
+const groupes = groupesAlphabetiques();
+const guides = monde.filter((p) => p.guide || p.iso === 'RUS');
+const sansAccent = (t: string) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+
+const jsonLd = [{
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Pays du monde',
+  numberOfItems: monde.length,
+  itemListElement: monde.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.nom, url: new URL(url(p.href), Astro.site).href })),
+}];
 ---
-<Base title="Accueil">
-  <section class="hero">
-    <img class="hero-image" src={url("/saint-basile-hero.webp")} alt={legendeIA("La cathédrale Saint-Basile sous la neige, au coucher du soleil à Moscou")} title={legendeIA("La cathédrale Saint-Basile sous la neige, au coucher du soleil à Moscou")} fetchpriority="high" />
-    <div class="hero-text">
-      <span class="eyebrow">Guide indépendant · mis à jour le {LAST_CHECK}</span>
-      <h1>Comprendre la <em>Russie</em> avant d’agir</h1>
-      <p>Préparer un séjour, comprendre les démarches et apprendre les bases du russe, avec des sources vérifiables et des mises en garde honnêtes.</p>
-      <div class="cta">
-        <a class="btn" href={url("/voyager")}>Préparer un voyage →</a>
-        <a class="btn-line" href={url("/sources")}>Voir les sources</a>
+<Base
+  title="Choisissez votre destination"
+  titreComplet={`Guide des pays du monde : voyager, vivre, travailler à l’étranger | ${NOM_SITE}`}
+  description={`Choisissez votre destination parmi ${monde.length} pays : fiche d’identité, drapeau, monnaie et taux de change, conseils officiels, et guides détaillés avec leçons de langue.`}
+  jsonLd={jsonLd}
+  bandeau={false}
+>
+  <section class="accueil-hero">
+    <span class="eyebrow">Guide indépendant · {monde.length} pays · {guides.length} guides détaillés</span>
+    <h1>Choisissez votre <em>destination</em></h1>
+    <p class="lead">Voyager, vivre, travailler ou apprendre quelques mots de la langue : pour chaque pays, une fiche d’identité, le taux de change, les conseils officiels du ministère français, et, quand il existe, un guide détaillé avec sources et leçons audio.</p>
+
+    <div class="recherche" role="search">
+      <label for="recherche">Rechercher un pays</label>
+      <input id="recherche" type="search" placeholder="Ex. : Japon, Géorgie, Maroc…" autocomplete="off" />
+      <div class="filtres" role="group" aria-label="Filtrer par région">
+        <button type="button" class="filtre actif" data-region="">Toutes les régions</button>
+        {REGIONS.map((r) => <button type="button" class="filtre" data-region={r}>{r}</button>)}
       </div>
+      <p id="compte" class="src" aria-live="polite"></p>
     </div>
   </section>
 
-  <h2>Que souhaitez-vous faire ?</h2>
-  <div class="steps">
-    {parcours.map((p) => (
-      <a class="step" href={url(p.href)}>
-        <img class="step-img" src={url(p.img)} alt={legendeIA(p.alt)} title={legendeIA(p.alt)} loading="lazy" />
-        <span class="num">{p.n}</span>
-        <h3>{p.titre}</h3>
-        <p>{p.txt}</p>
-        <span class="more">Commencer →</span>
-      </a>
-    ))}
-  </div>
+  <section id="guides" aria-labelledby="guides-titre">
+    <h2 id="guides-titre">Guides détaillés</h2>
+    <p>Ces pays ont des rubriques complètes : voyager, vivre, travailler, paiements, langue et leçons audio. Les fiches « test » n’ont pas encore été relues.</p>
+    <ul class="guides-grille">
+      {guides.map((p) => (
+        <li>
+          <a href={url(p.href)}>
+            <img src={url(`/drapeaux/${p.iso.toLowerCase()}.svg`)} alt="" width="48" height="32" loading="lazy" />
+            <span><strong>{p.nom}</strong><small>{p.iso === 'RUS' ? 'Guide principal' : p.guide?.test ? 'Fiche en test' : 'Guide'}</small></span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
 
-  <div class="callout">
-    <div>
-      <strong>Avant toute démarche</strong>
-      <p>Le ministère français des Affaires étrangères déconseille formellement tout déplacement dans l’ensemble de la Russie (guerre en Ukraine, risque d’arrestation et de détention arbitraires).</p>
+  <section id="destinations" aria-labelledby="destinations-titre">
+    <h2 id="destinations-titre">Tous les pays, de A à Z</h2>
+    <nav class="alphabet" aria-label="Aller à une lettre">
+      {groupes.map((g) => <a href={`#lettre-${g.lettre}`}>{g.lettre}</a>)}
+    </nav>
+
+    <div id="liste">
+      {groupes.map((g) => (
+        <section class="groupe" id={`lettre-${g.lettre}`} aria-label={`Pays commençant par ${g.lettre}`}>
+          <h3>{g.lettre}</h3>
+          <ul class="liste-pays">
+            {g.pays.map((p) => (
+              <li data-nom={sansAccent(`${p.nom} ${p.nomOfficiel} ${p.capitales.join(' ')}`)} data-region={p.region}>
+                <a href={url(p.href)}>
+                  <img src={url(`/drapeaux/${p.iso.toLowerCase()}.svg`)} alt="" width="36" height="24" loading="lazy" />
+                  <span class="nom">{p.nom}{p.guide && <small class="tag-guide">{p.guide.test ? 'test' : 'guide'}</small>}{p.iso === 'RUS' && <small class="tag-guide">guide</small>}</span>
+                  <span class="det">{p.capitales[0] ? `${p.capitales[0]} · ` : ''}{p.sousRegion || p.region}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
     </div>
-    <a class="btn" href={url("/voyager#securite")}>Lire la page Sécurité</a>
-  </div>
+    <p id="aucun" class="src" hidden>Aucun pays ne correspond à votre recherche.</p>
+  </section>
 
-  <Actualites slug="russie" libelle="la Russie" medias={mediasRussie} officiel={{ texte: "Conseils aux voyageurs du ministère français pour la Russie", url: "https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/russie/" }} />
-
-  <h2>Argent : euros et roubles</h2>
-  <Convertisseur />
-
-  <h2>À lire aussi</h2>
-  <div class="grid">
-    {essentiels.map((s) => (
-      <a class="card" href={url(s.href)}>
-        <div class="ico">{s.icon}</div>
-        <h3>{s.label}</h3>
-        <p>{s.desc}</p>
-      </a>
-    ))}
-  </div>
-
-  <p class="src">Chaque page indique sa date de vérification, et les affirmations sensibles renvoient à des sources listées sur la page <a href={url("/sources")}>Sources</a>.</p>
+  <p class="src">Ce site est indépendant et non officiel. Pour chaque pays, les conseils aux voyageurs du ministère de l’Europe et des Affaires étrangères restent la référence. <a href={url('/mentions-legales')}>Mentions légales</a>.</p>
 </Base>
+
+<script>
+  const champ = document.getElementById('recherche') as HTMLInputElement | null;
+  const boutons = Array.from(document.querySelectorAll<HTMLButtonElement>('.filtre'));
+  const elements = Array.from(document.querySelectorAll<HTMLLIElement>('#liste li'));
+  const groupes = Array.from(document.querySelectorAll<HTMLElement>('#liste .groupe'));
+  const compte = document.getElementById('compte');
+  const aucun = document.getElementById('aucun');
+  let region = '';
+
+  const sansAccent = (t: string) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
+
+  function filtrer() {
+    const q = sansAccent(champ?.value ?? '');
+    let n = 0;
+    elements.forEach((li) => {
+      const ok = (!q || (li.dataset.nom ?? '').includes(q)) && (!region || li.dataset.region === region);
+      li.hidden = !ok;
+      if (ok) n++;
+    });
+    groupes.forEach((g) => { g.hidden = !g.querySelector('li:not([hidden])'); });
+    if (compte) compte.textContent = q || region ? `${n} pays trouvé${n > 1 ? 's' : ''}.` : '';
+    if (aucun) aucun.hidden = n > 0;
+  }
+
+  champ?.addEventListener('input', filtrer);
+  boutons.forEach((b) => b.addEventListener('click', () => {
+    region = b.dataset.region ?? '';
+    boutons.forEach((x) => x.classList.toggle('actif', x === b));
+    filtrer();
+  }));
+</script>

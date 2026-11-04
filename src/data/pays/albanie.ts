@@ -7,6 +7,7 @@ const OFFICIEL = { label: 'Ministère de l’Europe et des Affaires étrangères
 export const albanie: PaysComplet = {
   complet: true,
   test: true,
+  iso: 'ALB',
   slug: 'albanie',
   nom: 'Albanie',
   article: 'l’Albanie',

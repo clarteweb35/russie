@@ -9,6 +9,7 @@ const CYRIL_EAU = { label: 'Cyril Jarnias, vivre aux Émirats arabes unis : dém
 export const emirats: PaysComplet = {
   complet: true,
   test: true,
+  iso: 'ARE',
   slug: 'emirats',
   nom: 'Émirats arabes unis',
   article: 'les Émirats arabes unis',

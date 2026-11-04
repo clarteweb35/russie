@@ -8,6 +8,7 @@ const CYRIL_SN = { label: 'Cyril Jarnias, démarches administratives pour vivre 
 export const senegal: PaysComplet = {
   complet: true,
   test: true,
+  iso: 'SEN',
   slug: 'senegal',
   nom: 'Sénégal',
   article: 'le Sénégal',

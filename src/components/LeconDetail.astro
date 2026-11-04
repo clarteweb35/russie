@@ -15,12 +15,14 @@ interface Props {
   langue: { nom: string; code: string }; // code = langue de la voix de synthèse (ex. fi-FI)
   base: string; // chemin de la liste des leçons (ex. /lecons ou /pays/finlande/lecons)
   marque?: string;
-  pays?: { slug: string; nom: string; article: string; conseilsVoyageurs: string; test?: boolean };
+  pays?: { slug: string; nom: string; conseilsVoyageurs: string; test?: boolean; alerte?: boolean };
+  menu?: { label: string; href: string; exact?: boolean }[];
+  fil?: { label: string; href?: string }[];
   verifie?: string;
 }
-const { lecon, index, prev, next, langue, base, marque, pays, verifie } = Astro.props;
+const { lecon, index, prev, next, langue, base, marque, pays, menu, fil, verifie } = Astro.props;
 ---
-<Base title={`Leçon ${index + 1} — ${lecon.titre}`} marque={marque} pays={pays} verifie={verifie}>
+<Base title={`Leçon ${index + 1} — ${lecon.titre}`} marque={marque} pays={pays} menu={menu} fil={fil} verifie={verifie}>
   <div data-lang={langue.code}>
     <p class="src"><a href={url(base)}>← Toutes les leçons</a></p>
     <h1>Leçon {index + 1} : {lecon.titre}</h1>

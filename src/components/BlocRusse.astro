@@ -1,0 +1,24 @@
+---
+// Encadré des anciens pays de l'URSS : ce qui marche pour la Russie vaut aussi pour eux, notamment le russe.
+import Alert from './Alert.astro';
+import { url } from '../config';
+import type { FicheMonde } from '../data/monde';
+
+interface Props { p: FicheMonde }
+const { p } = Astro.props;
+// Pays où l'usage du russe peut être mal perçu : on invite à demander d'abord si l'on peut parler anglais
+const delicat = new Set(['EST', 'LVA', 'LTU', 'GEO', 'MDA']).has(p.iso);
+---
+{p.urss && p.iso === 'UKR' && (
+  <Alert titre="Langue : l’ukrainien d’abord" warn>
+    Dans le contexte de guerre, l’usage du russe peut être très mal perçu en Ukraine. Préférez quelques mots d’ukrainien ou l’anglais, et ne vous appuyez pas sur le russe pour vous faire comprendre.
+  </Alert>
+)}
+{p.urss && p.iso !== 'RUS' && p.iso !== 'UKR' && (
+  <Alert titre="Ancienne république soviétique : le russe peut servir" warn>
+    Comme en Russie, le russe reste utile dans de nombreux pays de l’ex-URSS, surtout chez les personnes plus âgées et dans les grandes villes (à confirmer pour ce pays).
+    Les <a href={url('/lecons')}>leçons de russe de ce guide</a> vous aident à vous débrouiller.
+    {delicat && <> Dans certains pays, l’usage du russe peut être mal perçu : demandez d’abord poliment si votre interlocuteur parle anglais.</>}
+    Consultez aussi le <a href={url('/pays/russie')}>guide de la Russie</a> pour les conseils de paiement et de téléphone qui valent souvent aussi ici (à vérifier pays par pays).
+  </Alert>
+)}

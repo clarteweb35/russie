@@ -1,0 +1,79 @@
+---
+import Base from '../../../layouts/Base.astro';
+import FicheIdentite from '../../../components/FicheIdentite.astro';
+import BlocDevise from '../../../components/BlocDevise.astro';
+import PhotosPays from '../../../components/PhotosPays.astro';
+import { parIso, NOTE_SOURCES_MONDE } from '../../../data/monde';
+import Actualites from '../../../components/Actualites.astro';
+import { mediasRussie } from '../../../data/medias-russie';
+import { sections, LAST_CHECK, legendeIA, url } from '../../../config';
+import { lecons } from '../../../data/lecons.js';
+
+const parcours = [
+  { n: '1', href: '/voyager', img: '/img/parcours-voyage.webp', alt: 'Une valise et une liste de contrôle', titre: 'Préparer un voyage', txt: 'Visa, sécurité, transports et démarches avant le départ.' },
+  { n: '2', href: '/vivre', img: '/img/parcours-installer.webp', alt: 'Des clés avec un porte-clés en forme de maison', titre: 'S’installer', txt: 'Séjour légal, argent, logement, travail et quotidien.' },
+  { n: '3', href: '/lecons', img: '/img/parcours-russe.webp', alt: 'Un abécédaire cyrillique ouvert', titre: 'Apprendre le russe', txt: `${lecons.length} leçons courtes avec audio et quiz d’écoute.` },
+];
+const russie = parIso('RUS')!;
+const essentiels = sections.filter((s) => ['/travailler', '/paiements', '/langue-culture'].includes(s.href));
+---
+<Base
+  title="Russie"
+  titreComplet="Russie : guide pour voyager, vivre et travailler, fiche pays | guide-russie.fr"
+  description="Russie : fiche d’identité, drapeau, rouble et taux de change, sécurité, visa, paiements, démarches et leçons de russe, avec sources officielles et mises en garde."
+  fil={[{ label: 'Russie' }]}
+  meta={false}
+>
+  <section class="hero">
+    <img class="hero-image" src={url("/saint-basile-hero.webp")} alt={legendeIA("La cathédrale Saint-Basile sous la neige, au coucher du soleil à Moscou")} title={legendeIA("La cathédrale Saint-Basile sous la neige, au coucher du soleil à Moscou")} fetchpriority="high" />
+    <div class="hero-text">
+      <span class="eyebrow">Guide indépendant · mis à jour le {LAST_CHECK}</span>
+      <h1>Comprendre la <em>Russie</em> avant d’agir</h1>
+      <p>Préparer un séjour, comprendre les démarches et apprendre les bases du russe, avec des sources vérifiables et des mises en garde honnêtes.</p>
+      <div class="cta">
+        <a class="btn" href={url("/voyager")}>Préparer un voyage →</a>
+        <a class="btn-line" href={url("/sources")}>Voir les sources</a>
+      </div>
+    </div>
+  </section>
+
+  <h2>Que souhaitez-vous faire ?</h2>
+  <div class="steps">
+    {parcours.map((p) => (
+      <a class="step" href={url(p.href)}>
+        <img class="step-img" src={url(p.img)} alt={legendeIA(p.alt)} title={legendeIA(p.alt)} loading="lazy" />
+        <span class="num">{p.n}</span>
+        <h3>{p.titre}</h3>
+        <p>{p.txt}</p>
+        <span class="more">Commencer →</span>
+      </a>
+    ))}
+  </div>
+
+  <div class="callout">
+    <div>
+      <strong>Avant toute démarche</strong>
+      <p>Le ministère français des Affaires étrangères déconseille formellement tout déplacement dans l’ensemble de la Russie (guerre en Ukraine, risque d’arrestation et de détention arbitraires).</p>
+    </div>
+    <a class="btn" href={url("/voyager#securite")}>Lire la page Sécurité</a>
+  </div>
+
+  <Actualites slug="russie" libelle="la Russie" medias={mediasRussie} officiel={{ texte: "Conseils aux voyageurs du ministère français pour la Russie", url: "https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/russie/" }} />
+
+  <FicheIdentite p={russie} />
+  <BlocDevise p={russie} />
+  <PhotosPays slug="russie" nom="Russie" />
+
+  <h2>À lire aussi</h2>
+  <div class="grid">
+    {essentiels.map((s) => (
+      <a class="card" href={url(s.href)}>
+        <div class="ico">{s.icon}</div>
+        <h3>{s.label}</h3>
+        <p>{s.desc}</p>
+      </a>
+    ))}
+  </div>
+
+  <p class="src">Chaque page indique sa date de vérification, et les affirmations sensibles renvoient à des sources listées sur la page <a href={url("/sources")}>Sources</a>.</p>
+</Base>

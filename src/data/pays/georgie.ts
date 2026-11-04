@@ -9,6 +9,7 @@ const CYRIL_BANQUES = { label: 'Cyril Jarnias, banques en Géorgie pour les expa
 export const georgie: PaysComplet = {
   complet: true,
   test: true,
+  iso: 'GEO',
   slug: 'georgie',
   nom: 'Géorgie',
   article: 'la Géorgie',

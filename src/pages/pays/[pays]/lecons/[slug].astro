@@ -1,6 +1,8 @@
 ---
 import LeconDetail from '../../../../components/LeconDetail.astro';
 import { paysComplets } from '../../../../data/pays';
+import { parIso, contextePays } from '../../../../data/monde';
+
 
 export function getStaticPaths() {
   return paysComplets.flatMap((p) =>
@@ -11,5 +13,6 @@ export function getStaticPaths() {
   );
 }
 const { p, lecon, index, prev, next } = Astro.props;
+const ctx = contextePays(parIso(p.iso)!);
 ---
-<LeconDetail lecon={lecon} index={index} prev={prev} next={next} langue={p.langue} base={`/pays/${p.slug}/lecons`} marque={`Guide ${p.nom}`} pays={p} verifie={p.verifie} />
+<LeconDetail lecon={lecon} index={index} prev={prev} next={next} langue={p.langue} base={`/pays/${p.slug}/lecons`} marque={`Guide ${p.nom}`} pays={ctx.pays} menu={ctx.menu} fil={[{ label: p.nom, href: `/pays/${p.slug}` }, { label: 'Leçons', href: `/pays/${p.slug}/lecons` }, { label: lecon.titre }]} verifie={p.verifie} />

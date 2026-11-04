@@ -1,0 +1,34 @@
+---
+// Monnaie locale : taux de change en direct et facilité de se la procurer.
+import Badge from './Badge.astro';
+import Convertisseur from './Convertisseur.astro';
+import { facilite, LIBELLE_FACILITE } from '../data/monde/devises';
+import type { FicheMonde } from '../data/monde';
+
+interface Props { p: FicheMonde }
+const { p } = Astro.props;
+const principale = p.devises[0];
+const f = facilite(p);
+const euro = p.devises.length > 0 && p.devises.every((d) => d.code === 'EUR');
+---
+{principale && (
+  <section id="monnaie" aria-labelledby="monnaie-titre">
+    <h2 id="monnaie-titre">Monnaie et taux de change</h2>
+    <p>
+      La monnaie est le <strong>{principale.nom}</strong> ({principale.code}, {principale.symbole}).
+      {p.devises.length > 1 && <> Autre{p.devises.length > 2 ? 's' : ''} monnaie{p.devises.length > 2 ? 's' : ''} : {p.devises.slice(1).map((d) => `${d.nom} (${d.code})`).join(', ')}.</>}
+    </p>
+    {euro
+      ? <p>Même monnaie que la France : <strong>aucune conversion</strong> n’est nécessaire.</p>
+      : <Convertisseur code={principale.code} nom={principale.nom} symbole={principale.symbole} />}
+
+    <div class="facilite">
+      <h3>Est-il facile de se procurer la monnaie locale ?</h3>
+      <p>
+        <Badge type={f.niveau === 'facile' ? 'ok' : 'warn'}>{LIBELLE_FACILITE[f.niveau]}</Badge>
+        {f.confiance === 'warn' && f.niveau !== 'inconnu' && <Badge type="warn">À confirmer</Badge>}
+      </p>
+      <p>{f.note}</p>
+    </div>
+  </section>
+)}

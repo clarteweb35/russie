@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import ListeLecons from '../../components/ListeLecons.astro';
 import { lecons } from '../../data/lecons.js';
 ---
-<Base title="Leçons de russe">
+<Base title="Leçons de russe" fil={[{ label: 'Russie', href: '/pays/russie' }, { label: 'Leçons de russe' }]}>
   <h1>Leçons de russe essentielles</h1>
   <p class="lead">{lecons.length} leçons courtes, sans alphabet à apprendre d’abord : vous écoutez, vous répétez, vous vous entraînez avec un quiz.</p>
   <ListeLecons lecons={lecons} base="/lecons" langue={{ nom: 'russe', code: 'ru-RU' }} />

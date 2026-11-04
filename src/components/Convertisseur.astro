@@ -1,8 +1,15 @@
 ---
+// Convertisseur euro ⇄ monnaie locale. Par défaut le rouble (comportement historique des pages russes).
+// Sources : Banque de Russie pour le rouble ; taux de référence de la Banque centrale européenne (Frankfurter) sinon ;
+// ExchangeRate-API en secours. Délai de 5 s par service, dernier taux connu mémorisé dans le navigateur.
+interface Props { code?: string; nom?: string; symbole?: string }
+const { code = 'RUB', nom = 'rouble', symbole = '₽' } = Astro.props;
+const nomMaj = nom.charAt(0).toUpperCase() + nom.slice(1);
+const idTitre = `fx-title-${code.toLowerCase()}`;
 ---
-<section class="fx" aria-labelledby="fx-title">
+<section class="fx" aria-labelledby={idTitre} data-code={code} data-symbole={symbole}>
   <div class="fx-head">
-    <h3 id="fx-title">Convertisseur EUR ⇄ RUB</h3>
+    <h3 id={idTitre}>Convertisseur EUR ⇄ {code}</h3>
     <button class="fx-swap" type="button" aria-label="Inverser le sens de conversion">⇄</button>
   </div>
   <div class="fx-row">
@@ -12,9 +19,9 @@
       <b>€</b>
     </label>
     <label>
-      <span>Roubles</span>
-      <input class="fx-rub" type="text" inputmode="decimal" autocomplete="off" />
-      <b>₽</b>
+      <span>{nomMaj}</span>
+      <input class="fx-loc" type="text" inputmode="decimal" autocomplete="off" />
+      <b>{symbole}</b>
     </label>
   </div>
   <p class="fx-info" aria-live="polite">Chargement du taux…</p>
@@ -25,7 +32,6 @@
   const parse = (s: string) => parseFloat(s.replace(/\s/g, '').replace(',', '.'));
 
   type Taux = { rate: number; date: string; source: string; enCache?: boolean };
-  const CLE = 'taux-eur-rub';
 
   // Appel réseau avec délai maximum, pour ne pas attendre indéfiniment un service en panne
   const getJson = async (adresse: string, delai = 5000) => {
@@ -41,53 +47,73 @@
   };
 
   // Le stockage local peut être indisponible (navigation privée) : on ignore l'erreur
-  const lireCache = (): Taux | null => {
-    try { const c = JSON.parse(localStorage.getItem(CLE) || 'null'); return c?.rate ? { ...c, enCache: true } : null; } catch { return null; }
+  const cle = (code: string) => `taux-eur-${code.toLowerCase()}`;
+  const lireCache = (code: string): Taux | null => {
+    try { const c = JSON.parse(localStorage.getItem(cle(code)) || 'null'); return c?.rate ? { ...c, enCache: true } : null; } catch { return null; }
   };
-  const ecrireCache = (t: Taux) => { try { localStorage.setItem(CLE, JSON.stringify(t)); } catch { /* sans importance */ } };
+  const ecrireCache = (code: string, t: Taux) => { try { localStorage.setItem(cle(code), JSON.stringify(t)); } catch { /* sans importance */ } };
 
-  async function loadRate(): Promise<Taux> {
-    try {
-      const j = await getJson('https://www.cbr-xml-daily.ru/daily_json.js');
-      const v = j.Valute.EUR;
-      return { rate: v.Value / v.Nominal, date: j.Date, source: 'Banque de Russie' };
-    } catch {
-      const j = await getJson('https://open.er-api.com/v6/latest/EUR');
-      return { rate: j.rates.RUB, date: new Date(j.time_last_update_unix * 1000).toISOString(), source: 'ExchangeRate-API' };
+  async function chargerTaux(code: string): Promise<Taux> {
+    if (code === 'RUB') {
+      try {
+        const j = await getJson('https://www.cbr-xml-daily.ru/daily_json.js');
+        const v = j.Valute.EUR;
+        return { rate: v.Value / v.Nominal, date: j.Date, source: 'de la Banque de Russie' };
+      } catch { /* repli ci-dessous */ }
+    } else {
+      try {
+        const j = await getJson(`https://api.frankfurter.dev/v1/latest?base=EUR&symbols=${code}`);
+        if (j.rates?.[code]) return { rate: j.rates[code], date: j.date, source: 'de référence de la Banque centrale européenne' };
+      } catch { /* repli ci-dessous */ }
     }
+    const j = await getJson('https://open.er-api.com/v6/latest/EUR');
+    if (!j.rates?.[code]) throw new Error('devise inconnue');
+    return { rate: j.rates[code], date: new Date(j.time_last_update_unix * 1000).toISOString(), source: 'ExchangeRate-API' };
   }
 
-  // Si les deux services échouent, on affiche le dernier taux connu (signalé comme tel)
-  const ratePromise = loadRate().then((t) => { ecrireCache(t); return t; }).catch(() => {
-    const cache = lireCache();
-    if (cache) return cache;
-    throw new Error('aucun taux');
-  });
+  // Un seul appel par devise et par page ; si tout échoue, on affiche le dernier taux connu (signalé comme tel)
+  const promesses = new Map<string, Promise<Taux>>();
+  const taux = (code: string) => {
+    if (!promesses.has(code)) {
+      promesses.set(code, chargerTaux(code).then((t) => { ecrireCache(code, t); return t; }).catch(() => {
+        const cache = lireCache(code);
+        if (cache) return cache;
+        throw new Error('aucun taux');
+      }));
+    }
+    return promesses.get(code)!;
+  };
 
   document.querySelectorAll<HTMLElement>('.fx').forEach((box) => {
+    const code = box.dataset.code || 'RUB';
+    const symbole = box.dataset.symbole || '';
     const eur = box.querySelector<HTMLInputElement>('.fx-eur')!;
-    const rub = box.querySelector<HTMLInputElement>('.fx-rub')!;
+    const loc = box.querySelector<HTMLInputElement>('.fx-loc')!;
     const info = box.querySelector<HTMLElement>('.fx-info')!;
     const swap = box.querySelector<HTMLButtonElement>('.fx-swap')!;
     let rate = 0;
 
-    const fromEur = () => { const v = parse(eur.value); rub.value = isFinite(v) && rate ? fmt(v * rate) : ''; };
-    const fromRub = () => { const v = parse(rub.value); eur.value = isFinite(v) && rate ? fmt(v / rate) : ''; };
-    eur.addEventListener('input', fromEur);
-    rub.addEventListener('input', fromRub);
+    const depuisEur = () => { const v = parse(eur.value); loc.value = isFinite(v) && rate ? fmt(v * rate) : ''; };
+    const depuisLoc = () => { const v = parse(loc.value); eur.value = isFinite(v) && rate ? fmt(v / rate) : ''; };
+    eur.addEventListener('input', depuisEur);
+    loc.addEventListener('input', depuisLoc);
     swap.addEventListener('click', () => {
-      const e = eur.value; eur.value = rub.value; rub.value = e;
-      fromEur();
+      const e = eur.value; eur.value = loc.value; loc.value = e;
+      depuisEur();
     });
 
-    ratePromise.then((d) => {
+    taux(code).then((d) => {
       rate = d.rate;
+      // Un taux très petit ou très grand garde des décimales utiles
+      const decimales = rate < 1 ? 4 : rate < 100 ? 2 : 0;
       const date = new Date(d.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
-      const prefixe = d.enCache ? "Dernier taux connu (services indisponibles)" : "Taux";
-      info.textContent = `1 € = ${fmt(rate)} ₽ · ${prefixe} ${d.source} du ${date}. Indicatif : les banques et bureaux de change appliquent leur propre taux.`;
-      fromEur();
+      const prefixe = d.enCache ? 'Dernier taux connu (services indisponibles) :' : 'Taux';
+      info.textContent = `1 € = ${fmt(rate, decimales)} ${symbole} · ${prefixe} ${d.source} du ${date}. Indicatif : les banques et bureaux de change appliquent leur propre taux.`;
+      depuisEur();
     }).catch(() => {
-      info.textContent = 'Taux indisponible pour le moment. Vérifiez le taux sur le site de la Banque de Russie.';
+      info.textContent = code === 'RUB'
+        ? 'Taux indisponible pour le moment. Vérifiez le taux sur le site de la Banque de Russie.'
+        : 'Taux indisponible pour le moment. Vérifiez le taux auprès de votre banque.';
     });
   });
 </script>

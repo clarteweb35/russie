@@ -45,6 +45,7 @@ export type Lecon = {
 
 export type PaysComplet = {
   complet: true;
+  iso: string; // code ISO 3166-1 alpha-3, lien avec la fiche mondiale
   slug: string;
   nom: string;
   article: string; // « la Finlande », « l’Albanie »

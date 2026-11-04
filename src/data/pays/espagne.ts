@@ -7,6 +7,7 @@ const GUIDE_LPJ = { label: 'Le Petit Journal, guide pratique pour les Français 
 export const espagne: PaysComplet = {
   complet: true,
   test: true,
+  iso: 'ESP',
   slug: 'espagne',
   nom: 'Espagne',
   article: 'l’Espagne',

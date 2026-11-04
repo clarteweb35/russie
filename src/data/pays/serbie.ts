@@ -7,6 +7,7 @@ const PDF_FICHE = 'https://www.diplomatie.gouv.fr/files/files/pdf/cav/Serbie%20-
 export const serbie: PaysComplet = {
   complet: true,
   test: true,
+  iso: 'SRB',
   slug: 'serbie',
   nom: 'Serbie',
   article: 'la Serbie',

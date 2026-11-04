@@ -9,6 +9,7 @@ const CYRIL_GR = { label: 'Cyril Jarnias, démarches administratives pour s’in
 export const grece: PaysComplet = {
   complet: true,
   test: true,
+  iso: 'GRC',
   slug: 'grece',
   nom: 'Grèce',
   article: 'la Grèce',

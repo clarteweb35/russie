@@ -7,6 +7,7 @@ const TOURMAG_ETA = { label: 'TourMaG, faut-il un passeport pour se rendre au Ro
 export const royaumeUni: PaysComplet = {
   complet: true,
   test: true,
+  iso: 'GBR',
   slug: 'royaume-uni',
   nom: 'Royaume-Uni',
   article: 'le Royaume-Uni',

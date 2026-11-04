@@ -8,6 +8,7 @@ const CYRIL_KZ = { label: 'Cyril Jarnias, démarches administratives au Kazakhst
 export const kazakhstan: PaysComplet = {
   complet: true,
   test: true,
+  iso: 'KAZ',
   slug: 'kazakhstan',
   nom: 'Kazakhstan',
   article: 'le Kazakhstan',

@@ -2,25 +2,59 @@
 import '../styles/global.css';
 import Badge from '../components/Badge.astro';
 import { sections, LAST_CHECK, VERIFICATIONS, pagesLegales, NOM_SITE, url } from '../config';
-import { pays as listePays } from '../data/pays';
+
+interface ElementMenu { label: string; href: string; exact?: boolean }
+interface ElementFil { label: string; href?: string }
 interface Props {
   title: string;
+  titreComplet?: string; // remplace « titre — marque » (page d'accueil)
   description?: string;
   marque?: string; // nom du guide dans le titre de l'onglet
-  pays?: { slug: string; nom: string; article: string; conseilsVoyageurs: string; test?: boolean }; // page d'un guide pays : bandeau et sources propres au pays
+  // Page d'un pays : bandeau de sécurité et sources propres au pays (alerte : situation exceptionnelle)
+  pays?: { slug: string; nom: string; conseilsVoyageurs: string; test?: boolean; alerte?: boolean };
+  menu?: ElementMenu[]; // menu propre à la page (sinon : menu de la Russie, ou aucun)
+  fil?: ElementFil[]; // fil d'Ariane (le dernier élément est la page courante)
+  jsonLd?: object[]; // données structurées supplémentaires
+  image?: string; // image de partage (chemin sans préfixe de déploiement)
+  noindex?: boolean;
   verifie?: string; // date de vérification propre à la page
   bandeau?: boolean; // false : aucun bandeau de sécurité
   meta?: boolean; // force l'affichage (ou non) de la ligne « Vérifié le … »
 }
-const { title, description = 'Guide d’information sur la Russie : voyager, vivre, travailler — avec sources officielles et mises en garde.', marque = 'Guide Russie', pays, verifie, bandeau = true, meta } = Astro.props;
+const { title, titreComplet, description = 'Guide d’information sur la Russie : voyager, vivre, travailler — avec sources officielles et mises en garde.', marque = 'Guide Russie', pays, menu, fil, jsonLd = [], image: cheminImage = '/saint-basile-hero.webp', noindex = false, verifie, bandeau = true, meta } = Astro.props;
+
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const path = Astro.url.pathname.slice(base.length).replace(/\/$/, '') || '/';
 const isHome = path === '/';
+// Pages de la Russie : leur menu est celui de la Russie
+const estPageRussie = path === '/pays/russie' || sections.some((s) => path === s.href || path.startsWith(s.href + '/'));
+const menuAffiche: ElementMenu[] = menu ?? (estPageRussie ? sections.map((s) => ({ label: s.label, href: s.href })) : isHome ? [{ label: 'Destinations', href: '/#destinations' }, { label: 'Russie', href: '/pays/russie' }] : []);
+const actif = (m: ElementMenu) => m.href.includes('#') ? false : path === m.href || (!m.exact && path.startsWith(m.href + '/'));
+
 const showMeta = meta ?? (!isHome && !['/sources', '/mentions-legales'].includes(path));
 const dateVerif = verifie ?? VERIFICATIONS[path] ?? LAST_CHECK;
 const lienSources = pays ? `/pays/${pays.slug}/sources` : '/sources';
+const titreOnglet = titreComplet ?? `${title} — ${marque}`;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
-const image = new URL(url('/saint-basile-hero.webp'), Astro.site).href;
+const image = new URL(url(cheminImage), Astro.site).href;
+const accueil = new URL(url('/'), Astro.site).href;
+
+// Fil d'Ariane : visible et déclaré aux moteurs de recherche
+const filComplet: ElementFil[] | undefined = fil ? [{ label: 'Destinations', href: '/' }, ...fil] : undefined;
+const donneesStructurees: object[] = [
+  ...(filComplet ? [{
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: filComplet.map((e, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: e.label,
+      item: e.href ? new URL(url(e.href), Astro.site).href : canonical,
+    })),
+  }] : []),
+  ...(isHome ? [{ '@context': 'https://schema.org', '@type': 'WebSite', name: NOM_SITE, url: accueil, inLanguage: 'fr' }] : []),
+  ...jsonLd,
+];
 ---
 <!doctype html>
 <html lang="fr">
@@ -29,18 +63,20 @@ const image = new URL(url('/saint-basile-hero.webp'), Astro.site).href;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#b3202f" />
+    {noindex && <meta name="robots" content="noindex, follow" />}
     <link rel="icon" type="image/svg+xml" href={url("/favicon.svg")} />
     <link rel="canonical" href={canonical} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="fr_FR" />
-    <meta property="og:site_name" content={marque} />
-    <meta property="og:title" content={`${title} — ${marque}`} />
+    <meta property="og:site_name" content={NOM_SITE} />
+    <meta property="og:title" content={titreOnglet} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={image} />
     <meta name="twitter:card" content="summary_large_image" />
+    {donneesStructurees.map((d) => <script type="application/ld+json" set:html={JSON.stringify(d)} />)}
     <script is:inline>document.documentElement.classList.add('js')</script>
-    <title>{title} — {marque}</title>
+    <title>{titreOnglet}</title>
   </head>
   <body>
     <a class="skip" href="#contenu">Aller au contenu</a>
@@ -50,34 +86,25 @@ const image = new URL(url('/saint-basile-hero.webp'), Astro.site).href;
         <a class="brand" href={url("/")} aria-label={`${NOM_SITE}, accueil`}><span class="nom">{NOM_SITE.replace(".fr", "")}<b>.fr</b></span></a>
         <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
         <nav id="menu" aria-label="Navigation principale">
-          {sections.map((l) => (
-            <a href={url(l.href)} aria-current={path === l.href || path.startsWith(l.href + '/') ? 'page' : undefined}>{l.label}</a>
+          {!isHome && <a class="retour" href={url('/#destinations')}>← Toutes les destinations</a>}
+          {menuAffiche.map((m) => (
+            <a href={url(m.href)} aria-current={actif(m) ? 'page' : undefined}>{m.label}</a>
           ))}
-          <div class="menu-pays">
-            <a href={url('/pays')} aria-haspopup="true" aria-current={path === '/pays' || path.startsWith('/pays/') ? 'page' : undefined}>Autres pays <span aria-hidden="true">▾</span></a>
-            <ul class="sous-menu">
-              {listePays.map((p) => (
-                <li>
-                  {p.complet
-                    ? <a href={url(`/pays/${p.slug}`)}>{p.nom}{p.test && <small class="tag-test">test</small>}</a>
-                    : <span class="bientot">{p.nom} <small>bientôt</small></span>}
-                </li>
-              ))}
-            </ul>
-          </div>
         </nav>
       </div>
     </header>
 
     {pays && (
-      <div class="banner banner-pays" role="note">
+      <div class={pays.alerte ? 'banner banner-alerte' : 'banner banner-pays'} role="note">
         <div class="wrap">
-          <span>{pays.test && <strong class="tag-test">Fiche en test</strong>} <strong>Avant de partir :</strong> consultez les conseils officiels du ministère français pour {pays.article}.</span>
+          <span>{pays.test && <strong class="tag-test">Fiche en test</strong>} {pays.alerte
+            ? <><strong>Sécurité :</strong> situation exceptionnelle. Lisez la fiche officielle du ministère français avant toute décision.</>
+            : <><strong>Avant de partir :</strong> consultez la fiche « {pays.nom} » des conseils aux voyageurs du ministère français.</>}</span>
           <a href={pays.conseilsVoyageurs} rel="noopener">Conseils aux voyageurs →</a>
         </div>
       </div>
     )}
-    {!pays && bandeau && !isHome && (
+    {!pays && bandeau && !isHome && estPageRussie && (
       <div class="banner" role="note">
         <div class="wrap">
           <span><strong>Sécurité :</strong> le ministère français déconseille tout déplacement en Russie.</span>
@@ -87,6 +114,15 @@ const image = new URL(url('/saint-basile-hero.webp'), Astro.site).href;
     )}
 
     <main class="wrap" id="contenu">
+      {filComplet && (
+        <nav class="fil" aria-label="Fil d’Ariane">
+          <ol>
+            {filComplet.map((e, i) => (
+              <li>{e.href && i < filComplet.length - 1 ? <a href={url(e.href)}>{e.label}</a> : <span aria-current="page">{e.label}</span>}</li>
+            ))}
+          </ol>
+        </nav>
+      )}
       {showMeta && (
         <p class="meta">
           <span>Vérifié le {dateVerif}</span>
@@ -101,7 +137,7 @@ const image = new URL(url('/saint-basile-hero.webp'), Astro.site).href;
       <div class="wrap">
         <p>Guide d’information indépendant, non officiel. Il ne remplace ni les sources officielles ni un avis juridique, médical ou fiscal.
         Les règles changent vite : vérifiez toujours auprès des autorités avant d’agir.</p>
-        <p>Dernière vérification globale : {LAST_CHECK}. <a href={url("/sources")}>Voir les sources</a>.
+        <p>Dernière vérification globale : {LAST_CHECK}. <a href={url("/sources")}>Voir les sources</a>. <a href={url("/#destinations")}>Toutes les destinations</a>.
         {pagesLegales.map((p) => (<> · <a href={url(p.href)}>{p.label}</a></>))}</p>
       </div>
     </footer>

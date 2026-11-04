@@ -8,6 +8,7 @@ const UNIMI = { label: 'Université de Milan, documents de résidence', url: 'ht
 export const italie: PaysComplet = {
   complet: true,
   test: true,
+  iso: 'ITA',
   slug: 'italie',
   nom: 'Italie',
   article: 'l’Italie',

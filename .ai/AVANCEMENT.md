@@ -158,3 +158,6 @@ Albanie, Espagne, Allemagne, Sénégal, Vietnam sont publiées avec le bandeau �
 Le suivi détaillé (ce qui est fait, ce qui est sûr, ce qui reste, par pays) est dans **`.ai/AVANCEMENT_PAYS.md`**. À la fin de la session : 21 guides (Russie, Finlande, 19 fiches en test), 296 pages, vagues 1 et 2 de `.ai/PAYS_PREVUS.md` terminées.
 
 - Secrets du topo hebdomadaire : l'utilisateur a `GEMINI_API_KEY_RUSSIE`, `GEMINI_API_KEY_FINLANDE` et `GEMINI_API_KEY_ALBANIE`. Les autres pays sont ignorés tant qu'ils n'ont pas leur secret `GEMINI_API_KEY_<PAYS>` (tirets remplacés par des soulignés, ex. `GEMINI_API_KEY_ROYAUME_UNI`) ou qu'une clé commune `GEMINI_API_KEY` existe.
+
+## 4 novembre 2026 : refonte « monde »
+Accueil = choix de destination, 194 pays, fiche d'identité, drapeaux, convertisseur générique, SEO. Détails dans `.ai/AVANCEMENT_PAYS.md`. À mesurer : poids de l'accueil / EcoIndex. Prochaine action : guides ex-URSS, puis vagues 3-4.

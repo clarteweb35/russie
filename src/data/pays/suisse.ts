@@ -34,6 +34,7 @@ const lecons: Lecon[] = allemagne.lecons.map((l) => {
 export const suisse: PaysComplet = {
   complet: true,
   test: true,
+  iso: 'CHE',
   slug: 'suisse',
   nom: 'Suisse',
   article: 'la Suisse',

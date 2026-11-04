@@ -7,6 +7,7 @@ const ANMELDUNG = { label: 'Amtsdeutschland, déclarer son adresse (Anmeldung)',
 export const allemagne: PaysComplet = {
   complet: true,
   test: true,
+  iso: 'DEU',
   slug: 'allemagne',
   nom: 'Allemagne',
   article: 'l’Allemagne',

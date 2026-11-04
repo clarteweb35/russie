@@ -1,62 +1,173 @@
 ---
+// Page d'un pays du monde : la même pour tous. Les pays qui ont un guide détaillé y ajoutent leurs rubriques.
 import Base from '../../../layouts/Base.astro';
 import Alert from '../../../components/Alert.astro';
 import Actualites from '../../../components/Actualites.astro';
-import { paysComplets } from '../../../data/pays';
-import { url, leNomDeLangue, deNomDeLangue } from '../../../config';
+import FicheIdentite from '../../../components/FicheIdentite.astro';
+import BlocDevise from '../../../components/BlocDevise.astro';
+import BlocRusse from '../../../components/BlocRusse.astro';
+import PhotosPays from '../../../components/PhotosPays.astro';
+import { monde, estRussie, contextePays, memeSousRegion, conseilsDe, ALERTE_SECURITE, decalageTexte } from '../../../data/monde';
+import { PARCOURS_GENERIQUES } from '../../../data/lecons-generiques';
+import { NOM_SITE, url, legendeIA, leNomDeLangue, deNomDeLangue } from '../../../config';
 
 export function getStaticPaths() {
-  return paysComplets.map((p) => ({ params: { pays: p.slug }, props: { p } }));
+  // La Russie a sa propre page (src/pages/pays/russie/)
+  return monde.filter((p) => !estRussie(p)).map((p) => ({ params: { pays: p.slug }, props: { p } }));
 }
 const { p } = Astro.props;
-const base = `/pays/${p.slug}`;
+const g = p.guide;
+const ctx = contextePays(p);
+const alerte = ALERTE_SECURITE.has(p.iso);
+const COULEURS_REGION: Record<string, string> = { Afrique: '#7a4b12', Amériques: '#1f5f3f', Asie: '#7a1f3d', Europe: '#1d3a7a', Océanie: '#0e6a7a' };
+const couleur = g?.couleur ?? COULEURS_REGION[p.region] ?? '#2b3a55';
+
+// SEO : titre et description propres à chaque pays
+const capitale = p.capitales[0];
+const monnaie = p.devises[0];
+const description = `${p.nom} : ${capitale ? `capitale ${capitale}, ` : ''}${p.langues.length ? `${p.langues.length > 1 ? 'langues' : 'langue officielle'} : ${p.langues.slice(0, 2).map((l) => l.nom).join(', ')}, ` : ''}${monnaie ? `monnaie ${monnaie.nom}, ` : ''}drapeau, taux de change et conseils aux voyageurs.`.replace(/, $/, '.');
+const accueilPays = new URL(url(p.href), Astro.site).href;
+const jsonLd = [{
+  '@context': 'https://schema.org',
+  '@type': 'Country',
+  name: p.nom,
+  alternateName: p.nomOfficiel,
+  url: accueilPays,
+  description,
+  image: new URL(url(`/drapeaux/${p.iso.toLowerCase()}.svg`), Astro.site).href,
+}];
+const proches = memeSousRegion(p);
+
+// Autres rubriques du guide, présentées sous les trois parcours
+const autres = g ? g.rubriques.filter((r) => !['voyager', 'vivre'].includes(r.slug)) : [];
 ---
-<Base title={`Guide ${p.nom}`} marque={`Guide ${p.nom}`} pays={p} verifie={p.verifie} meta={false}>
-  <section class="hero-pays" style={`--c1:${p.couleur}`}>
-    <span class="eyebrow">Guide indépendant · mis à jour le {p.verifie}</span>
-    <h1>Préparer {p.article}</h1>
-    <p>{p.accroche}</p>
+<Base
+  title={p.nom}
+  titreComplet={`${p.nom} : fiche pays, drapeau, monnaie et conseils | ${NOM_SITE}`}
+  description={description}
+  menu={ctx.menu}
+  pays={ctx.pays}
+  fil={[{ label: p.nom }]}
+  jsonLd={jsonLd}
+  verifie={g?.verifie}
+  meta={false}
+>
+  <section class="hero-pays" style={`--c1:${couleur}`}>
+    <div class="hero-ligne">
+      <img class="hero-drapeau" src={url(`/drapeaux/${p.iso.toLowerCase()}.svg`)} alt={`Drapeau de ${p.nom}`} width="150" height="100" />
+      <div>
+        <span class="eyebrow">{g ? 'Guide détaillé' : 'Fiche pays'} · {p.sousRegion || p.region}</span>
+        <h1>{p.nom}</h1>
+      </div>
+    </div>
+    <p>{g ? g.accroche : `Fiche d’identité de ${p.nom}, monnaie et taux de change, conseils officiels du ministère français. Un guide détaillé (voyager, vivre, travailler, leçons de langue) reste à rédiger.`}</p>
     <div class="cta">
-      <a class="btn" href={url(`${base}/voyager`)}>Voyager →</a>
-      <a class="btn-line" href={url(`${base}/lecons`)}>🎧 Apprendre {leNomDeLangue(p.langue.nom)}</a>
+      {g
+        ? <><a class="btn" href={url(`${p.href}/voyager`)}>Voyager →</a><a class="btn-line" href={url(`${p.href}/lecons`)}>🎧 Apprendre {leNomDeLangue(g.langue.nom)}</a></>
+        : <><a class="btn" href="#securite">Conseils officiels →</a><a class="btn-line" href="#monnaie">Monnaie et change</a></>}
     </div>
   </section>
 
-  <h2>Explorer</h2>
-  <div class="grid">
-    {p.rubriques.map((r) => (
-      <a class="card" href={url(`${base}/${r.slug}`)}>
-        <div class="ico">{r.icone}</div>
-        <h3>{r.titre}</h3>
-        <p>{r.resume}</p>
-        <span class="more">Ouvrir →</span>
-      </a>
-    ))}
-    <a class="card" href={url(`${base}/lecons`)}>
-      <div class="ico">🎧</div>
-      <h3>Leçons {deNomDeLangue(p.langue.nom)}</h3>
-      <p>{p.lecons.length} leçons courtes avec audio et quiz d’écoute.</p>
-      <span class="more">Ouvrir →</span>
-    </a>
-    <a class="card" href={url(`${base}/sources`)}>
-      <div class="ico">📚</div>
-      <h3>Sources</h3>
-      <p>D’où viennent les informations et leur fiabilité.</p>
-      <span class="more">Ouvrir →</span>
-    </a>
-  </div>
-
-  <Actualites slug={p.slug} libelle={p.article} medias={p.mediasLocaux} officiel={{ texte: `Conseils aux voyageurs du ministère français pour ${p.article}`, url: p.conseilsVoyageurs }} />
-
-  {p.test && (
+  {g?.test && (
     <Alert titre="Fiche en test" warn>
-      Cette fiche a été construite à partir de recherches rapides, pour la plupart sur des sources non officielles. Elle n’a pas été relue : <strong>vérifiez chaque point sur la fiche officielle du ministère</strong> avant de décider. Les leçons de langue sont à faire relire par un locuteur.
+      Ce guide a été construit à partir de recherches rapides, pour la plupart sur des sources non officielles. Il n’a pas été relu : <strong>vérifiez chaque point sur la fiche officielle du ministère</strong> avant de décider. Les leçons de langue sont à faire relire par un locuteur.
     </Alert>
   )}
+  <BlocRusse p={p} />
 
-  {!p.test && (
-  <Alert titre="Guide en cours de rédaction" warn>
-    Plusieurs sections sont marquées « À confirmer » ou « À documenter » : elles reposent sur des sources non officielles ou restent à compléter. Vérifiez toujours auprès des autorités avant d’agir.
-  </Alert>
+  <FicheIdentite p={p} />
+
+  {g && (
+    <>
+      <h2>Que souhaitez-vous faire ?</h2>
+      <div class="steps">
+        <a class="step" href={url(`${p.href}/voyager`)}>
+          <img class="step-img" src={url(PARCOURS_GENERIQUES.voyager.img)} alt={legendeIA(PARCOURS_GENERIQUES.voyager.alt)} title={legendeIA(PARCOURS_GENERIQUES.voyager.alt)} loading="lazy" />
+          <span class="num">1</span>
+          <h3>Préparer un voyage</h3>
+          <p>{g.rubriques.find((r) => r.slug === 'voyager')?.resume}</p>
+          <span class="more">Commencer →</span>
+        </a>
+        <a class="step" href={url(`${p.href}/vivre`)}>
+          <img class="step-img" src={url(PARCOURS_GENERIQUES.vivre.img)} alt={legendeIA(PARCOURS_GENERIQUES.vivre.alt)} title={legendeIA(PARCOURS_GENERIQUES.vivre.alt)} loading="lazy" />
+          <span class="num">2</span>
+          <h3>S’installer</h3>
+          <p>{g.rubriques.find((r) => r.slug === 'vivre')?.resume}</p>
+          <span class="more">Commencer →</span>
+        </a>
+        <a class="step" href={url(`${p.href}/lecons`)}>
+          <img class="step-img" src={url(PARCOURS_GENERIQUES.langue.img)} alt={legendeIA(PARCOURS_GENERIQUES.langue.alt)} title={legendeIA(PARCOURS_GENERIQUES.langue.alt)} loading="lazy" />
+          <span class="num">3</span>
+          <h3>Apprendre {leNomDeLangue(g.langue.nom)}</h3>
+          <p>{g.lecons.length} leçons courtes avec audio et quiz d’écoute.</p>
+          <span class="more">Commencer →</span>
+        </a>
+      </div>
+
+      <h2>Tout le guide</h2>
+      <div class="grid">
+        {autres.map((r) => (
+          <a class="card" href={url(`${p.href}/${r.slug}`)}>
+            <div class="ico">{r.icone}</div>
+            <h3>{r.titre}</h3>
+            <p>{r.resume}</p>
+            <span class="more">Ouvrir →</span>
+          </a>
+        ))}
+        <a class="card" href={url(`${p.href}/lecons`)}>
+          <div class="ico">🎧</div>
+          <h3>Leçons {deNomDeLangue(g.langue.nom)}</h3>
+          <p>{g.lecons.length} leçons courtes avec audio et quiz d’écoute.</p>
+          <span class="more">Ouvrir →</span>
+        </a>
+        <a class="card" href={url(`${p.href}/sources`)}>
+          <div class="ico">📚</div>
+          <h3>Sources</h3>
+          <p>D’où viennent les informations et leur fiabilité.</p>
+          <span class="more">Ouvrir →</span>
+        </a>
+      </div>
+    </>
+  )}
+
+  <BlocDevise p={p} />
+
+  <section id="securite" aria-labelledby="securite-titre">
+    <h2 id="securite-titre">Sécurité et conseils officiels</h2>
+    {alerte && (
+      <Alert titre="Situation de sécurité exceptionnelle">
+        Lisez la fiche officielle du ministère français avant toute décision de déplacement. Ce site ne détaille pas la situation de ce pays.
+      </Alert>
+    )}
+    <p>
+      La <a href={conseilsDe(p)} rel="noopener">fiche « {p.nom} » des conseils aux voyageurs du ministère de l’Europe et des Affaires étrangères</a> est la référence : risques, entrée et séjour, santé, numéros d’urgence. Lisez-les avant de partir, et inscrivez-vous sur le fil d’Ariane si vous séjournez à l’étranger.
+    </p>
+    {!p.diplo && <p class="src">Ce pays n’a pas de fiche à son nom dans notre vérification : le lien renvoie à la liste générale des pays.</p>}
+  </section>
+
+  {g && (
+    <Actualites slug={g.slug} libelle={g.article} medias={g.mediasLocaux} officiel={{ texte: `Conseils aux voyageurs du ministère français pour ${g.nom}`, url: g.conseilsVoyageurs }} />
+  )}
+
+  <PhotosPays slug={p.slug} nom={p.nom} />
+
+  {!g && (
+    <section>
+      <h2>Guide détaillé</h2>
+      <p>Les rubriques voyager, vivre, travailler, paiements et leçons de langue n’existent pas encore pour ce pays. Elles suivent le modèle des autres guides du site, avec sources citées et niveau de fiabilité pour chaque information.</p>
+      <p class="src">Pour les pays qui ont déjà un guide, voir la <a href={url('/#guides')}>liste des guides détaillés</a>.</p>
+    </section>
+  )}
+
+  {proches.length > 0 && (
+    <section>
+      <h2>Autres pays : {p.sousRegion || p.region}</h2>
+      <ul class="pastilles">
+        {proches.map((v) => (
+          <li><a href={url(v.href)}><img src={url(`/drapeaux/${v.iso.toLowerCase()}.svg`)} alt="" width="24" height="16" loading="lazy" />{v.nom}</a></li>
+        ))}
+      </ul>
+      <p class="src"><a href={url('/#destinations')}>← Toutes les destinations</a></p>
+    </section>
   )}
 </Base>

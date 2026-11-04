@@ -19,12 +19,19 @@ Site statique d'information, en français, pour voyager, vivre, travailler et ap
 
 ## 2. Pages et fonctionnalités
 
-### Accueil `/`
-- Bandeau d'accueil : promesse, deux boutons (Préparer un voyage, Voir les sources), photo de la cathédrale Saint-Basile.
-- « Que veux-tu faire ? » : 3 parcours (Préparer un voyage, S'installer, Apprendre le russe), avec illustrations transparentes qui se révèlent au survol.
-- Encadré de sécurité avec lien vers `/voyager#securite`.
-- Convertisseur EUR ⇄ RUB.
-- « À lire aussi » : Travailler, Paiements, Langue & culture.
+### Accueil `/` : choix de la destination
+- Page générale : titre, champ de recherche (sans tenir compte des accents), filtre par région, puis **tous les pays du monde (194 États) classés par ordre alphabétique**, chacun avec son drapeau. Les pays à guide détaillé sont mis en avant (liste « guides détaillés », ancre `#guides`).
+- SEO : titre et description propres, balise canonique, Open Graph, données structurées (WebSite, ItemList), fil d'Ariane, plan du site généré depuis les données.
+- L'ancien accueil russe est devenu la page `/pays/russie/`.
+
+### Page d'un pays `/pays/<pays>/` (identique pour tous)
+- En-tête avec drapeau, **fiche d'identité** (nom officiel, capitale, région, langues, monnaie, indicatif, conduite, population, superficie, décalage horaire avec Paris, domaine internet), **signification du drapeau** (pays à guide uniquement, interprétation courante non officielle), repères déduits des données, pays voisins cliquables.
+- **Monnaie** : convertisseur EUR ⇄ monnaie locale (taux BCE via Frankfurter, repli ExchangeRate-API, Banque de Russie pour le rouble) et encadré « Est-il facile de se procurer la monnaie locale ? » (évaluation éditoriale, « non documenté » par défaut, À confirmer).
+- **Conseils officiels** du ministère français (lien vérifié ou liste générale), alerte renforcée pour les pays déconseillés.
+- **Photos** : déposées par l'éditeur dans `src/assets/pays/<slug>/` (voir le LISEZMOI du dossier) ; rien ne s'affiche sans photo.
+- **Anciennes républiques soviétiques** : encadré sur l'usage du russe et lien vers le guide de la Russie (Ukraine : consigne inverse).
+- Menu d'en-tête propre au pays, lien « Toutes les destinations » pour revenir à l'accueil.
+- Pays à guide détaillé : mêmes rubriques que ci-dessous.
 
 ### Voyager `/voyager`
 Sections à ancres : `#securite`, `#visa`, `#vols`, `#argent`, `#assurance`, `#communications` (dont `#sim`), puis la checklist avant le départ.
@@ -52,8 +59,8 @@ Alphabet cyrillique, phrases utiles, repères culturels.
 - Navigation précédente / suivante.
 - Sans voix pour la langue de la leçon (russe, finnois…), un message l'explique et un pas à pas repliable « Comment ajouter la voix ? » détaille l'installation sur Windows, Mac, iPhone et Android (composant `GuideVoix`).
 
-### Autres pays `/pays/`
-- Menu « Autres pays » dans la navigation (liste déroulante, intégrée au menu hamburger sur mobile) et page `/pays/` qui liste les destinations.
+### Guides détaillés `/pays/<pays>/…`
+- Un menu propre au pays remplace l'ancienne liste « Autres pays » ; `/pays/` redirige vers l'accueil.
 - Pays : Finlande (fiche complète, non relue) et 19 fiches **en test**, non relues : Albanie, Espagne, Allemagne, Sénégal, Vietnam, Géorgie, Turquie, Arménie, Kazakhstan, Serbie, Émirats arabes unis, Thaïlande, Maroc, Portugal, Italie, Grèce, Pologne, Suisse, Royaume-Uni. Bandeau « Fiche en test » sur chaque page du pays, mention « test » dans le menu et la liste. Suivi pays par pays : `.ai/AVANCEMENT_PAYS.md` ; autres pays envisagés : `.ai/PAYS_PREVUS.md`.
 - Chaque fiche pays comprend aussi la liste de ses **médias locaux** (nature indicative : public, privé, d'État, indépendant), affichée dans « L'actu de la semaine ».
 - Pour chaque pays prêt : page d'accueil `/pays/<pays>/` (carte par rubrique), rubriques `voyager`, `vivre`, `travailler`, `paiements`, `langue-culture`, `lecons` (6 leçons audio + quiz) et `sources` (liste générée automatiquement depuis les sources citées dans les sections).
@@ -119,7 +126,7 @@ Liste des sources et de leur fiabilité.
 
 Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fichier) et retirée une fois terminée et mise en ligne. Chaque entrée : date, objectif, fichiers concernés, étapes faites et restantes.
 
-### 4 novembre 2026 : clés par pays + vague 1 des pays (Géorgie, Turquie, Arménie, Kazakhstan, Serbie, Émirats, Thaïlande)
+### (précédent) 4 novembre 2026 : clés par pays + vague 1 des pays (Géorgie, Turquie, Arménie, Kazakhstan, Serbie, Émirats, Thaïlande)
 - **Fichiers** : `scripts/actualites.mjs`, `.github/workflows/actualites.yml`, `src/data/pays/*`, `scripts/actualites-pays.json`, `.ai/AVANCEMENT_PAYS.md`, `.ai/*`.
 - **Fait** : clés par pays ; vagues 1 et 2 (14 pays en test) ; suivi dans `.ai/AVANCEMENT_PAYS.md`.
 - **Restant** : vagues 3 et 4 de `.ai/PAYS_PREVUS.md`, puis retrait de cette entrée.
