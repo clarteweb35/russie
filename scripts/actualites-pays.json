@@ -19,5 +19,9 @@
   {"slug":"grece","pays":"Grèce","libelle":"la Grèce","langueLocale":"grec"},
   {"slug":"pologne","pays":"Pologne","libelle":"la Pologne","langueLocale":"polonais"},
   {"slug":"suisse","pays":"Suisse","libelle":"la Suisse","langueLocale":"français et allemand"},
-  {"slug":"royaume-uni","pays":"Royaume-Uni","libelle":"le Royaume-Uni","langueLocale":"anglais"}
+  {"slug":"royaume-uni","pays":"Royaume-Uni","libelle":"le Royaume-Uni","langueLocale":"anglais"},
+  {"slug":"estonie","pays":"Estonie","libelle":"l’Estonie","langueLocale":"estonien"},
+  {"slug":"lettonie","pays":"Lettonie","libelle":"la Lettonie","langueLocale":"letton"},
+  {"slug":"lituanie","pays":"Lituanie","libelle":"la Lituanie","langueLocale":"lituanien"},
+  {"slug":"azerbaidjan","pays":"Azerbaïdjan","libelle":"l’Azerbaïdjan","langueLocale":"azéri et russe"}
 ]

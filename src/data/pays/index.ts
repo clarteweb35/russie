@@ -20,9 +20,13 @@ import { pologne } from './pologne';
 import { suisse } from './suisse';
 import { royaumeUni } from './royaume-uni';
 
+import { estonie } from './estonie';
+import { lettonie } from './lettonie';
+import { lituanie } from './lituanie';
+import { azerbaidjan } from './azerbaidjan';
 // Guides détaillés (rubriques, leçons, sources). Les autres pays du monde n'ont qu'une fiche d'identité : voir src/data/monde/.
 // Un pays `test: true` est publié avec la mention « fiche en test ».
-export const pays: Pays[] = [finlande, albanie, espagne, allemagne, senegal, vietnam, georgie, turquie, armenie, kazakhstan, serbie, emirats, thailande, maroc, portugal, italie, grece, pologne, suisse, royaumeUni];
+export const pays: Pays[] = [finlande, albanie, espagne, allemagne, senegal, vietnam, georgie, turquie, armenie, kazakhstan, serbie, emirats, thailande, maroc, portugal, italie, grece, pologne, suisse, royaumeUni, estonie, lettonie, lituanie, azerbaidjan];
 
 export const paysComplets = pays.filter((p): p is PaysComplet => p.complet);
 

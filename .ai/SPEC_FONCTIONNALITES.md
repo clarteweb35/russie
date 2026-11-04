@@ -126,6 +126,12 @@ Liste des sources et de leur fiabilité.
 
 Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fichier) et retirée une fois terminée et mise en ligne. Chaque entrée : date, objectif, fichiers concernés, étapes faites et restantes.
 
+### 4 novembre 2026 : guides détaillés des 11 pays restants de l'ex-URSS, puis reste du monde
+- **Objectif** : Azerbaïdjan, Biélorussie, Estonie, Kirghizistan, Lettonie, Lituanie, Moldavie, Ouzbékistan, Tadjikistan, Turkménistan, Ukraine en guides « test » (sources citées, À documenter si rien de fiable), puis les autres pays par vagues.
+- **Fichiers** : `src/data/pays/<pays>.ts`, `src/data/pays/index.ts`, `scripts/actualites-pays.json`, `.ai/AVANCEMENT_PAYS.md`.
+- **Fait** : cadrage, recherches.
+- **Restant** : 11 fichiers pays (lots de 4), puis reste du monde.
+
 ### (précédent) 4 novembre 2026 : clés par pays + vague 1 des pays (Géorgie, Turquie, Arménie, Kazakhstan, Serbie, Émirats, Thaïlande)
 - **Fichiers** : `scripts/actualites.mjs`, `.github/workflows/actualites.yml`, `src/data/pays/*`, `scripts/actualites-pays.json`, `.ai/AVANCEMENT_PAYS.md`, `.ai/*`.
 - **Fait** : clés par pays ; vagues 1 et 2 (14 pays en test) ; suivi dans `.ai/AVANCEMENT_PAYS.md`.
