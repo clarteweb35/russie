@@ -142,7 +142,7 @@ main { padding-bottom: 20px; }
 /* encadrés et badges */
 .alert { position: relative; margin: 22px 0; padding: 16px 20px 16px 22px; border-radius: 16px; font-size: 15px; line-height: 1.6; background: var(--accent-soft); border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent); }
 .alert::before { content: ''; position: absolute; left: 0; top: 14px; bottom: 14px; width: 4px; border-radius: 4px; background: var(--accent); }
-.alert strong { display: block; margin-bottom: 4px; }
+.alert .alert-titre { display: block; margin-bottom: 4px; font-weight: 700; }
 .alert.warn { background: var(--warn-soft); border-color: color-mix(in srgb, var(--warn) 25%, transparent); }
 .alert.warn::before { background: var(--warn); }
 .notice { margin: 18px 0 0; font-size: 14px; }
@@ -318,3 +318,11 @@ footer { margin-top: 72px; padding: 36px 0 56px; color: var(--muted); font-size:
 .guide-voix h4:first-child { margin-top: 0; }
 .guide-voix ol { margin: 0 0 6px; padding-left: 22px; }
 .guide-voix li { margin-bottom: 4px; }
+
+/* fiches pays en test */
+.tag-test { display: inline-block; margin-left: 6px; padding: 1px 8px; border-radius: 999px; font: 700 11px var(--sans); text-transform: uppercase; letter-spacing: .04em; background: var(--warn-soft); color: var(--warn); vertical-align: middle; }
+.banner-pays .tag-test { margin: 0 8px 0 0; }
+.sous-menu .tag-test { margin-left: 8px; }
+.card h3 .tag-test { margin-left: 10px; }
+.medias { padding-left: 20px; }
+.medias li { margin-bottom: 6px; }

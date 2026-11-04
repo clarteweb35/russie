@@ -7,7 +7,7 @@ interface Props {
   title: string;
   description?: string;
   marque?: string; // nom du guide dans le titre de l'onglet
-  pays?: { slug: string; nom: string; article: string; conseilsVoyageurs: string }; // page d'un guide pays : bandeau et sources propres au pays
+  pays?: { slug: string; nom: string; article: string; conseilsVoyageurs: string; test?: boolean }; // page d'un guide pays : bandeau et sources propres au pays
   verifie?: string; // date de vérification propre à la page
   bandeau?: boolean; // false : aucun bandeau de sécurité
   meta?: boolean; // force l'affichage (ou non) de la ligne « Vérifié le … »
@@ -59,7 +59,7 @@ const image = new URL(url('/saint-basile-hero.webp'), Astro.site).href;
               {listePays.map((p) => (
                 <li>
                   {p.complet
-                    ? <a href={url(`/pays/${p.slug}`)}>{p.nom}</a>
+                    ? <a href={url(`/pays/${p.slug}`)}>{p.nom}{p.test && <small class="tag-test">test</small>}</a>
                     : <span class="bientot">{p.nom} <small>bientôt</small></span>}
                 </li>
               ))}
@@ -72,7 +72,7 @@ const image = new URL(url('/saint-basile-hero.webp'), Astro.site).href;
     {pays && (
       <div class="banner banner-pays" role="note">
         <div class="wrap">
-          <span><strong>Avant de partir :</strong> consultez les conseils officiels du ministère français pour {pays.article}.</span>
+          <span>{pays.test && <strong class="tag-test">Fiche en test</strong>} <strong>Avant de partir :</strong> consultez les conseils officiels du ministère français pour {pays.article}.</span>
           <a href={pays.conseilsVoyageurs} rel="noopener">Conseils aux voyageurs →</a>
         </div>
       </div>

@@ -1,7 +1,9 @@
 ---
-// Topo hebdomadaire généré par IA (scripts/actualites.mjs). Rien ne s'affiche tant qu'aucun topo n'a été généré.
+// « L'actu de la semaine » : (1) topo généré par IA et traduit en français (scripts/actualites.mjs), affiché seulement
+// quand il existe ; (2) liens vers les médias locaux, toujours affichés quand la liste est fournie.
 import Badge from './Badge.astro';
 import Alert from './Alert.astro';
+import type { Media } from '../data/pays/types';
 
 interface Topo {
   slug: string;
@@ -11,31 +13,48 @@ interface Topo {
   points: { titre: string; texte: string }[];
   sources: { titre: string; url: string }[];
 }
-interface Props { slug: string; libelle: string; officiel?: { texte: string; url: string } }
-const { slug, libelle, officiel } = Astro.props;
+interface Props { slug: string; libelle: string; medias?: Media[]; officiel?: { texte: string; url: string } }
+const { slug, libelle, medias = [], officiel } = Astro.props;
 
 const fichiers = import.meta.glob<Topo>('../data/actualites/*.json', { eager: true, import: 'default' });
 const topo = Object.entries(fichiers).find(([chemin]) => chemin.endsWith(`/${slug}.json`))?.[1];
 const date = topo ? new Date(topo.genere).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
 ---
-{topo && (
+{(topo || medias.length > 0) && (
   <section class="actu" aria-labelledby={`actu-${slug}`}>
-    <h2 id={`actu-${slug}`}>L’actu de la semaine <Badge type="warn">Résumé généré par IA</Badge></h2>
-    <p class="src">Pour {libelle}, généré le {date} avec {topo.modele} à partir d’une recherche web. Peut contenir des erreurs : consultez les sources.</p>
-    <p>{topo.resume}</p>
-    {topo.points.length > 0 && (
-      <ul>
-        {topo.points.map((p) => <li><strong>{p.titre}</strong> : {p.texte}</li>)}
-      </ul>
+    <h2 id={`actu-${slug}`}>L’actu de la semaine{topo && <> <Badge type="warn">Résumé généré par IA</Badge></>}</h2>
+
+    {topo && (
+      <>
+        <p class="src">Pour {libelle}, généré le {date} avec {topo.modele} à partir d’une recherche web, en privilégiant la presse locale, puis traduit en français. Peut contenir des erreurs ou des erreurs de traduction : consultez les sources.</p>
+        <p>{topo.resume}</p>
+        {topo.points.length > 0 && (
+          <ul>
+            {topo.points.map((p) => <li><strong>{p.titre}</strong> : {p.texte}</li>)}
+          </ul>
+        )}
+        <p class="src">
+          Sources du topo :{' '}
+          {topo.sources.map((s, i) => <>{i > 0 && ' ; '}<a href={s.url} rel="noopener">{s.titre}</a></>)}
+        </p>
+        {officiel && (
+          <Alert titre="Ce résumé n’est pas un conseil de voyage" warn>
+            <a href={officiel.url} rel="noopener">{officiel.texte}</a>
+          </Alert>
+        )}
+      </>
     )}
-    <p class="src">
-      Sources :{' '}
-      {topo.sources.map((s, i) => <>{i > 0 && ' ; '}<a href={s.url} rel="noopener">{s.titre}</a></>)}
-    </p>
-    {officiel && (
-      <Alert titre="Ce résumé n’est pas un conseil de voyage" warn>
-        <a href={officiel.url} rel="noopener">{officiel.texte}</a>
-      </Alert>
+
+    {medias.length > 0 && (
+      <>
+        <h3>Suivre l’actualité sur place</h3>
+        <ul class="medias">
+          {medias.map((m) => (
+            <li><a href={m.url} rel="noopener"><strong>{m.nom}</strong></a> : {m.nature} ({m.langue})</li>
+          ))}
+        </ul>
+        <p class="src">Liste non exhaustive. La nature de chaque média est indicative : un média d’État reflète la position des autorités, et l’indépendance varie selon les pays. Vérifiez et croisez les sources.</p>
+      </>
     )}
   </section>
 )}

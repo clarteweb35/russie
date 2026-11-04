@@ -1,4 +1,9 @@
 [
-  { "slug": "russie", "pays": "Russie", "libelle": "la Russie" },
-  { "slug": "finlande", "pays": "Finlande", "libelle": "la Finlande" }
+  { "slug": "russie", "pays": "Russie", "libelle": "la Russie", "langueLocale": "russe" },
+  { "slug": "finlande", "pays": "Finlande", "libelle": "la Finlande", "langueLocale": "finnois et suédois" },
+  { "slug": "albanie", "pays": "Albanie", "libelle": "l’Albanie", "langueLocale": "albanais" },
+  { "slug": "espagne", "pays": "Espagne", "libelle": "l’Espagne", "langueLocale": "espagnol" },
+  { "slug": "allemagne", "pays": "Allemagne", "libelle": "l’Allemagne", "langueLocale": "allemand" },
+  { "slug": "senegal", "pays": "Sénégal", "libelle": "le Sénégal", "langueLocale": "français" },
+  { "slug": "vietnam", "pays": "Vietnam", "libelle": "le Vietnam", "langueLocale": "vietnamien" }
 ]

@@ -132,3 +132,23 @@ Choix de l'utilisateur : **Gemini** et **publication automatique**. Le code est 
 - [ ] Contradiction avec le choix « 100 % français » : Gemini (Google) et GitHub Actions (Microsoft). À reprendre lors de la migration vers OVH (remplacer la tâche planifiée par un cron, et éventuellement le fournisseur d'IA).
 - [ ] Les tâches planifiées de GitHub peuvent être suspendues après une longue période sans activité sur le dépôt.
 - [ ] Ajouter chaque nouveau pays prêt dans `scripts/actualites-pays.json`.
+
+## Cinq fiches pays en test (4 novembre 2026)
+
+Albanie, Espagne, Allemagne, Sénégal, Vietnam sont publiées avec le bandeau « Fiche en test ». Elles reposent sur des recherches rapides, surtout des sources non officielles ou partielles. Liste des autres pays envisagés : `.ai/PAYS_PREVUS.md`.
+
+### À faire pour sortir du mode test (par pays)
+1. [ ] Lire les fiches officielles du ministère (rubrique sécurité de chaque pays : seules les adresses ont été vérifiées) et corriger les sections « À documenter ».
+2. [ ] Faire relire les leçons par un locuteur : albanais, vietnamien (tons non rendus), wolof (phrases limitées, aucune voix de synthèse), et, dans une moindre mesure, espagnol et allemand.
+3. [ ] Vérifier les numéros d'urgence, la monnaie, les cartes, la santé, le logement : sections vides ou à documenter.
+4. [ ] Photos des cartes de leçons (vignettes colorées pour l'instant) : fournir ou générer, avec la mention IA via `legendeIA()`.
+5. [ ] Retirer `test: true` du fichier du pays une fois relu.
+
+### Points signalés dans les fiches
+- **Vietnam** : dépêche sur une suspension temporaire de l'exemption de visa pour la France, date et état à vérifier avant toute publication « complète ».
+- **Albanie** : durée de séjour sans visa contradictoire (90 jours ou un an), et permis de travail pour un Européen contradictoire.
+- **Sénégal** : zones à risque et nouvelles dispositions pénales (2026) citées par des sources non officielles uniquement.
+- **Médias locaux** : natures indicatives, notamment « média d'État » à confirmer pour le Vietnam. `ria.ru` n'a pas répondu lors du contrôle et n'est pas listé pour la Russie.
+
+### Question ouverte
+- [ ] Noms des secrets de dépôt : l'utilisateur en a 3, la clé Gemini doit s'appeler `GEMINI_API_KEY` (sinon adapter `.github/workflows/actualites.yml`).

@@ -10,7 +10,7 @@ import { url } from '../../config';
     {pays.map((p) => (
       p.complet ? (
         <a class="card" href={url(`/pays/${p.slug}`)}>
-          <h3>{p.nom}</h3>
+          <h3>{p.nom}{p.test && <span class="tag-test">test</span>}</h3>
           <p>{p.accroche}</p>
           <span class="more">Ouvrir le guide →</span>
         </a>

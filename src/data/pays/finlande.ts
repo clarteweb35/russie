@@ -525,4 +525,11 @@ export const finlande: PaysComplet = {
   ],
 
   sourcesSupplementaires: [],
+
+  mediasLocaux: [
+    { nom: 'Yle', url: 'https://yle.fi', nature: 'service public de radio-télévision', langue: 'finnois, suédois' },
+    { nom: 'Helsingin Sanomat', url: 'https://www.hs.fi', nature: 'quotidien privé', langue: 'finnois' },
+    { nom: 'Ilta-Sanomat', url: 'https://www.is.fi', nature: 'quotidien populaire privé', langue: 'finnois' },
+    { nom: 'Hufvudstadsbladet', url: 'https://www.hbl.fi', nature: 'quotidien privé suédophone', langue: 'suédois' },
+  ],
 };

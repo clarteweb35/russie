@@ -15,7 +15,7 @@ interface Props {
   langue: { nom: string; code: string }; // code = langue de la voix de synthèse (ex. fi-FI)
   base: string; // chemin de la liste des leçons (ex. /lecons ou /pays/finlande/lecons)
   marque?: string;
-  pays?: { slug: string; nom: string; article: string; conseilsVoyageurs: string };
+  pays?: { slug: string; nom: string; article: string; conseilsVoyageurs: string; test?: boolean };
   verifie?: string;
 }
 const { lecon, index, prev, next, langue, base, marque, pays, verifie } = Astro.props;

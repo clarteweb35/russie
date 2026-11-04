@@ -18,12 +18,13 @@ if (!CLE) {
   process.exit(1);
 }
 
-const prompt = (pays) => `Tu fais de la veille d'actualité pour un guide d'information francophone destiné à des voyageurs et à des personnes qui s'installent à l'étranger.
+const prompt = (pays, langueLocale) => `Tu fais de la veille d'actualité pour un guide d'information francophone destiné à des voyageurs et à des personnes qui s'installent à l'étranger.
 
 Aujourd'hui, nous sommes le ${new Date().toISOString().slice(0, 10)}. Fais le point sur l'actualité des sept derniers jours en ${pays}, en te limitant à ce qui peut intéresser un voyageur ou un futur résident : politique, sécurité, économie, transports, santé, événements et météo notables.
 
 Règles strictes :
 - Utilise uniquement des informations trouvées par la recherche web. N'invente rien. S'il y a peu d'informations, dis-le.
+- Cherche en priorité dans la presse locale, en ${langueLocale} (agences de presse, quotidiens et chaînes du pays), puis complète avec des médias internationaux. Traduis fidèlement en français les informations lues dans une autre langue, sans rien ajouter qui ne soit pas dans les articles.
 - Reste factuel et neutre. Ne donne aucun conseil de voyage et ne prends pas la place des conseils officiels.
 - Écris en français, avec des phrases courtes.
 
@@ -31,12 +32,12 @@ Réponds uniquement par un objet JSON, sans texte autour, de la forme :
 {"resume": "3 à 4 phrases", "points": [{"titre": "titre court", "texte": "1 à 2 phrases"}]}
 avec au maximum 5 points.`;
 
-async function appeler(pays, essai = 1) {
+async function appeler(p, essai = 1) {
   const reponse = await fetch(`${BASE}/v1beta/models/${MODELE}:generateContent`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'x-goog-api-key': CLE },
     body: JSON.stringify({
-      contents: [{ role: 'user', parts: [{ text: prompt(pays) }] }],
+      contents: [{ role: 'user', parts: [{ text: prompt(p.pays, p.langueLocale) }] }],
       tools: [{ google_search: {} }],
       generationConfig: { temperature: 0.2 },
     }),
@@ -44,7 +45,7 @@ async function appeler(pays, essai = 1) {
   });
   if ((reponse.status === 429 || reponse.status >= 500) && essai < 3) {
     await new Promise((r) => setTimeout(r, 5000 * essai));
-    return appeler(pays, essai + 1);
+    return appeler(p, essai + 1);
   }
   if (!reponse.ok) {
     const detail = (await reponse.text()).slice(0, 300);
@@ -89,7 +90,7 @@ mkdirSync(DOSSIER, { recursive: true });
 let reussis = 0;
 for (const p of PAYS) {
   try {
-    const topo = extraire(await appeler(p.pays));
+    const topo = extraire(await appeler(p));
     const fichier = join(DOSSIER, `${p.slug}.json`);
     writeFileSync(fichier, JSON.stringify({ slug: p.slug, genere: new Date().toISOString(), modele: MODELE, ...topo }, null, 2) + '\n');
     console.log(`${p.slug} : ${topo.points.length} points, ${topo.sources.length} sources`);

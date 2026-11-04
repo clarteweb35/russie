@@ -58,6 +58,8 @@ export type PaysComplet = {
   rubriques: Rubrique[];
   lecons: Lecon[];
   sourcesSupplementaires?: Source[];
+  mediasLocaux: Media[];
+  test?: boolean; // fiche non relue : bandeau « fiche en test » et mention dans le menu
 };
 
 export type PaysBientot = {
@@ -68,3 +70,6 @@ export type PaysBientot = {
 };
 
 export type Pays = PaysComplet | PaysBientot;
+
+// Média d'actualité local, listé sous le topo hebdomadaire. La nature est donnée à titre indicatif.
+export type Media = { nom: string; url: string; nature: string; langue: string };

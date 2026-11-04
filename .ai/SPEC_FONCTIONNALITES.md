@@ -54,7 +54,8 @@ Alphabet cyrillique, phrases utiles, repères culturels.
 
 ### Autres pays `/pays/`
 - Menu « Autres pays » dans la navigation (liste déroulante, intégrée au menu hamburger sur mobile) et page `/pays/` qui liste les destinations.
-- Pays prévus : Finlande, Albanie, Espagne, Allemagne, Sénégal, Vietnam. **Finlande : complète (pilote).** Les cinq autres sont affichées « Bientôt », sans lien, jusqu'à ce que leur fiche soit prête.
+- Pays : Finlande (fiche complète) et Albanie, Espagne, Allemagne, Sénégal, Vietnam (**fiches en test**, non relues : bandeau « Fiche en test » sur chaque page du pays, mention « test » dans le menu et la liste). Autres pays envisagés : voir `.ai/PAYS_PREVUS.md`.
+- Chaque fiche pays comprend aussi la liste de ses **médias locaux** (nature indicative : public, privé, d'État, indépendant), affichée dans « L'actu de la semaine ».
 - Pour chaque pays prêt : page d'accueil `/pays/<pays>/` (carte par rubrique), rubriques `voyager`, `vivre`, `travailler`, `paiements`, `langue-culture`, `lecons` (6 leçons audio + quiz) et `sources` (liste générée automatiquement depuis les sources citées dans les sections).
 - Bandeau d'en-tête propre au pays : lien vers les conseils officiels du ministère français pour ce pays (le bandeau d'alerte sur la Russie n'apparaît pas hors des pages russes).
 - Même système de confiance que la Russie : badges `Vérifié` / `À confirmer` / `À documenter`, sources par section, date de vérification propre au pays.
@@ -62,8 +63,8 @@ Alphabet cyrillique, phrases utiles, repères culturels.
 - Source unique : un fichier de données par pays (`src/data/pays/<pays>.ts`), le registre `src/data/pays/index.ts` et les mêmes pages pour tous.
 
 ### L'actu de la semaine (Russie et pays prêts)
-- Bloc sur l'accueil de la Russie et sur l'accueil de chaque pays suivi, avec badge « Résumé généré par IA », date de génération, modèle, résumé de 3 à 4 phrases, jusqu'à 5 points et les sources en lien. Rappel que ce n'est pas un conseil de voyage, avec lien vers les conseils officiels. **Rien ne s'affiche tant qu'aucun topo n'a été généré.**
-- Génération : `scripts/actualites.mjs` appelle l'API Gemini avec la recherche Google intégrée (modèle réglable par `GEMINI_MODEL`, `gemini-2.5-flash` par défaut). Liste des pays suivis : `scripts/actualites-pays.json`. Résultat : `src/data/actualites/<pays>.json`.
+- Deux volets : (1) un topo généré par IA, **cherché en priorité dans la presse locale puis traduit en français** ; (2) les liens vers les **médias locaux** du pays, affichés même avant le premier topo. Bloc sur l'accueil de la Russie et sur l'accueil de chaque pays, avec badge « Résumé généré par IA », date de génération, modèle, résumé de 3 à 4 phrases, jusqu'à 5 points et les sources en lien. Rappel que ce n'est pas un conseil de voyage, avec lien vers les conseils officiels. **Rien ne s'affiche tant qu'aucun topo n'a été généré.**
+- Génération : `scripts/actualites.mjs` appelle l'API Gemini avec la recherche Google intégrée (modèle réglable par `GEMINI_MODEL`, `gemini-2.5-flash` par défaut). Liste des pays suivis et langue locale : `scripts/actualites-pays.json` (les 7 pays actuels). Résultat : `src/data/actualites/<pays>.json`.
 - Fréquence : workflow `.github/workflows/actualites.yml`, chaque lundi à 6 h UTC (ou à la demande), qui enregistre les fichiers, puis relance le déploiement.
 - Publication automatique (choix de l'éditeur). Garde-fous : sources prises dans les métadonnées de la recherche et non dans le texte du modèle, liens `https` uniquement, topo refusé sans source, un échec ne remplace jamais le topo précédent.
 - Clé : secret de dépôt `GEMINI_API_KEY`. Elle n'est jamais dans le code ni côté navigateur.
