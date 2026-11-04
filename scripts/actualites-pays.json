@@ -23,5 +23,12 @@
   {"slug":"estonie","pays":"Estonie","libelle":"l’Estonie","langueLocale":"estonien"},
   {"slug":"lettonie","pays":"Lettonie","libelle":"la Lettonie","langueLocale":"letton"},
   {"slug":"lituanie","pays":"Lituanie","libelle":"la Lituanie","langueLocale":"lituanien"},
-  {"slug":"azerbaidjan","pays":"Azerbaïdjan","libelle":"l’Azerbaïdjan","langueLocale":"azéri et russe"}
+  {"slug":"azerbaidjan","pays":"Azerbaïdjan","libelle":"l’Azerbaïdjan","langueLocale":"azéri et russe"},
+  {"slug":"bielorussie","pays":"Biélorussie","libelle":"la Biélorussie","langueLocale":"biélorusse et russe"},
+  {"slug":"kirghizistan","pays":"Kirghizistan","libelle":"le Kirghizistan","langueLocale":"kirghize et russe"},
+  {"slug":"moldavie","pays":"Moldavie","libelle":"la Moldavie","langueLocale":"roumain et russe"},
+  {"slug":"ouzbekistan","pays":"Ouzbékistan","libelle":"l’Ouzbékistan","langueLocale":"ouzbek et russe"},
+  {"slug":"tadjikistan","pays":"Tadjikistan","libelle":"le Tadjikistan","langueLocale":"tadjik et russe"},
+  {"slug":"turkmenistan","pays":"Turkménistan","libelle":"le Turkménistan","langueLocale":"turkmène et russe"},
+  {"slug":"ukraine","pays":"Ukraine","libelle":"l’Ukraine","langueLocale":"ukrainien"}
 ]

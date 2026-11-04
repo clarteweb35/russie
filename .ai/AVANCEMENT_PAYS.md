@@ -179,3 +179,5 @@ Liste raisonnée des pays envisagés : `.ai/PAYS_PREVUS.md`. Suivi général du 
 - Sûr : données importées de sources ouvertes (voir `scripts/importer-monde.mjs`). À confirmer : côté de conduite, facilité d'obtention de la devise (« non documenté » par défaut), indication sur le russe dans l'ex-URSS.
 - Priorité (demande de l'éditeur : ce qui marche pour la Russie vaut pour l'ex-URSS) : guides détaillés restants Azerbaïdjan, Biélorussie, Estonie, Kirghizistan, Lettonie, Lituanie, Moldavie, Ouzbékistan, Tadjikistan, Turkménistan, Ukraine (Ukraine et Biélorussie : sensibles, alerte officielle d'abord).
 - Pas de topo hebdomadaire pour les pays sans guide (21 suivis).
+
+- 4 novembre 2026 : les 11 pays restants de l’ex-URSS ont leur guide en test (modèle commun `src/data/pays/modele.ts`) : Azerbaïdjan, Biélorussie, Estonie, Kirghizistan, Lettonie, Lituanie, Moldavie, Ouzbékistan, Tadjikistan, Turkménistan, Ukraine. Entrée : sources citées, À confirmer ; sécurité : fiche officielle à lire ; autres rubriques : À documenter ; leçons à faire relire par un locuteur.
