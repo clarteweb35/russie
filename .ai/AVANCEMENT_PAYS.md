@@ -1,6 +1,6 @@
 # Avancement des fiches pays
 
-Fichier de suivi des guides pays. Dernière mise à jour : 4 novembre 2026, après le lot 1.
+Fichier de suivi des guides pays. Dernière mise à jour : 4 novembre 2026, après le lot 2 (vague 1 terminée).
 Liste raisonnée des pays envisagés : `.ai/PAYS_PREVUS.md`. Suivi général du projet : `.ai/AVANCEMENT.md`.
 
 ## Comment lire ce fichier
@@ -27,9 +27,9 @@ Liste raisonnée des pays envisagés : `.ai/PAYS_PREVUS.md`. Suivi général du 
 | **Turquie** | 1 | test | oui | 6, turc | 4 | Faible : fiche officielle non lue |
 | **Arménie** | 1 | test | oui | 6, arménien | 4 | Moyenne : extraits de fiche officielle |
 | **Kazakhstan** | 1 | test | oui | 6, kazakh | 4 | Bonne pour l'entrée (page officielle d'août 2026), reste privé |
-| Serbie | 1 | **à faire** | non | | | |
-| Émirats arabes unis | 1 | **à faire** | non | | | |
-| Thaïlande | 1 | **à faire** | non | | | |
+| **Serbie** | 1 | test | oui | 6, serbe (alphabet latin) | 4 | Moyenne : extrait de fiche officielle, portail eUprava pour l’adresse |
+| **Émirats arabes unis** | 1 | test | oui | 6, arabe standard | 4 | **Faible : conseil officiel à vérifier en priorité** |
+| **Thaïlande** | 1 | test | oui | 6, thaï | 4 | Faible : durée sans visa contradictoire |
 
 ## Détail des fiches du lot 1 (4 novembre 2026)
 
@@ -57,6 +57,39 @@ Liste raisonnée des pays envisagés : `.ai/PAYS_PREVUS.md`. Suivi général du 
 - **À documenter** : sécurité (fiche non lue), argent, santé, banque, logement, impôts.
 - **Reste** : confirmer la plateforme et le coût de l'autorisation électronique ; lire la fiche de sécurité ; relire les leçons de kazakh.
 
+
+## Détail des fiches du lot 2 (4 novembre 2026)
+
+### Serbie
+- **Sûr (source officielle)** : pour un séjour de plus de 90 jours, contacter l'ambassade de Serbie en France avant le départ ; déclaration d'adresse au commissariat sous 24 heures (portail officiel eUprava).
+- **À confirmer** : passages directs avec le Kosovo (conseils belges) ; permis de séjour temporaire (6 mois à 1 an) ; visa D ; permis unique obligatoire pour travailler depuis le 1er février 2024 (cabinet d'avocats) ; attentes de plusieurs heures aux frontières (site commercial, août 2026).
+- **À documenter** : pièces d'identité acceptées à l'entrée, sécurité (fiche non lue), argent, santé, banque, logement.
+- **Reste** : lire la fiche officielle ; confirmer le permis unique sur eUprava ; relire les leçons (alphabet latin uniquement, le cyrillique n'est pas proposé).
+
+### Émirats arabes unis (page : `/pays/emirats/`)
+- **Sûr (source officielle, extraits)** : alertes aux missiles et aux drones signalées par la fiche d'avril 2026 ; menace terroriste régionale ; accidents graves en buggy, quad et scooter des mers ; conseil de s'inscrire sur le fil d'Ariane.
+- **À vérifier EN PRIORITÉ** : un article de presse (7 avril 2026) indique que le ministère déconseille le pays sauf raison impérative. La version actuelle du conseil n'a pas été confirmée. **Cette fiche ne doit pas passer en « complète » avant lecture de la fiche officielle.**
+- **À confirmer** : visa valable 30 jours (site commercial, contredit l'idée d'un visa à l'arrivée) ; Emirates ID et assurance santé obligatoires ; résidence salariée de 2 ans ; Golden Visa (seuil de 2 millions de dirhams variable selon les sources).
+- **À documenter** : législation locale (alcool, drogues, réseaux sociaux, tenue) : sujet important, non trouvé ; argent, santé, banque, impôts.
+- **Reste** : lire intégralement la fiche officielle, dont « Législation locale » ; relire les leçons d'arabe.
+
+### Thaïlande
+- **Sûr (source officielle, en-tête seulement)** : dernière mise à jour de la page « dernières minutes et alertes » le 11 septembre 2026.
+- **À confirmer** : séjour sans visa de 60 jours, annoncé à 30 jours à partir du 15 septembre 2026 (site commercial, sources contradictoires) ; passeport valable 6 mois ; carte d'arrivée numérique (TDAC) ; visa LTR de 10 ans ; visa retraité à partir de 50 ans ; déclaration des 90 jours (TM.47) et TM.30 ; résidence fiscale au-delà de 180 jours.
+- **À documenter** : sécurité et lois locales (stupéfiants, propos sur la monarchie), argent, santé, banque, logement.
+- **Reste** : lire la fiche officielle ; confirmer la durée sans visa ; relire les leçons de thaï (tons non rendus).
+
+## Bilan de la vague 1
+
+7 pays sur 7 sont publiés en test : Géorgie, Turquie, Arménie, Kazakhstan, Serbie, Émirats arabes unis, Thaïlande. **Total : 14 guides (Russie, Finlande, 12 pays en test).** Les vagues 2 à 4 restent à faire.
+
+## Journal des commits
+
+| Date | Commit | Contenu |
+|---|---|---|
+| 4 novembre 2026 | `e0afda2` | Lot 1 : Géorgie, Turquie, Arménie, Kazakhstan, clés par pays, ce fichier |
+| 4 novembre 2026 | (à venir) | Lot 2 : Serbie, Émirats, Thaïlande |
+
 ## Ce qui est transversal et déjà en place
 
 - Topo hebdomadaire par pays (script, workflow, clés par pays `GEMINI_API_KEY_<PAYS>` ou clé commune `GEMINI_API_KEY`). **N'a jamais tourné avec une vraie clé.** Pays sans clé : ignorés avec un avertissement.
@@ -66,7 +99,7 @@ Liste raisonnée des pays envisagés : `.ai/PAYS_PREVUS.md`. Suivi général du 
 
 ## Reste à faire, tous pays confondus (par priorité)
 
-1. [ ] **Terminer la vague 1** : Serbie, Émirats arabes unis, Thaïlande.
+1. [x] Vague 1 terminée (7 pays). **Prochaine étape : vague 2** (Maroc, Portugal, Italie, Grèce, Pologne, Suisse, Royaume-Uni).
 2. [ ] **Faire relire les leçons par des locuteurs** (13 langues au total) : priorité au wolof, au vietnamien (tons), au géorgien, à l'arménien, au thaï et à l'arabe.
 3. [ ] **Lire les rubriques « Sécurité » des fiches officielles** et reporter les points sûrs (numéros d'urgence compris) : aucun numéro d'urgence n'est vérifié aujourd'hui.
 4. [ ] **Ajouter les secrets du topo** : `GEMINI_API_KEY_<PAYS>` pour chaque pays (3 existent : RUSSIE, FINLANDE, ALBANIE), ou une clé commune `GEMINI_API_KEY`.

@@ -9,5 +9,8 @@
   {"slug":"georgie","pays":"Géorgie","libelle":"la Géorgie","langueLocale":"géorgien"},
   {"slug":"turquie","pays":"Turquie","libelle":"la Turquie","langueLocale":"turc"},
   {"slug":"armenie","pays":"Arménie","libelle":"l’Arménie","langueLocale":"arménien"},
-  {"slug":"kazakhstan","pays":"Kazakhstan","libelle":"le Kazakhstan","langueLocale":"kazakh et russe"}
+  {"slug":"kazakhstan","pays":"Kazakhstan","libelle":"le Kazakhstan","langueLocale":"kazakh et russe"},
+  {"slug":"serbie","pays":"Serbie","libelle":"la Serbie","langueLocale":"serbe"},
+  {"slug":"emirats","pays":"Émirats arabes unis","libelle":"les Émirats arabes unis","langueLocale":"arabe et anglais"},
+  {"slug":"thailande","pays":"Thaïlande","libelle":"la Thaïlande","langueLocale":"thaï et anglais"}
 ]

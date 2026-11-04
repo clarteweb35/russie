@@ -12,7 +12,9 @@ import { join } from 'node:path';
 // Secrets du dépôt, transmis en bloc par le workflow (SECRETS_JSON) ; les variables d'environnement restent prioritaires
 const SECRETS = JSON.parse(process.env.SECRETS_JSON || '{}');
 const lire = (nom) => process.env[nom] || SECRETS[nom] || '';
-const cle = (slug) => lire(`GEMINI_API_KEY_${slug.toUpperCase()}`) || lire('GEMINI_API_KEY');
+// Un nom de secret GitHub ne peut contenir que des lettres, chiffres et soulignés : tout autre caractère devient « _ »
+const nomSecret = (slug) => `GEMINI_API_KEY_${slug.toUpperCase().replace(/[^A-Z0-9]/g, "_")}`;
+const cle = (slug) => lire(nomSecret(slug)) || lire("GEMINI_API_KEY");
 const MODELE = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
 const BASE = process.env.GEMINI_BASE_URL || 'https://generativelanguage.googleapis.com';
 const DOSSIER = process.env.ACTUALITES_DIR || join('src', 'data', 'actualites');
@@ -90,7 +92,7 @@ mkdirSync(DOSSIER, { recursive: true });
 let reussis = 0;
 for (const p of PAYS) {
   if (!cle(p.slug)) {
-    console.warn(`::warning::${p.slug} : aucune clé (ajoutez le secret GEMINI_API_KEY_${p.slug.toUpperCase()} ou une clé commune GEMINI_API_KEY), pays ignoré`);
+    console.warn(`::warning::${p.slug} : aucune clé (ajoutez le secret ${nomSecret(p.slug)} ou une clé commune GEMINI_API_KEY), pays ignoré`);
     continue;
   }
   try {

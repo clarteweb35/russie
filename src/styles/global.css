@@ -326,3 +326,6 @@ footer { margin-top: 72px; padding: 36px 0 56px; color: var(--muted); font-size:
 .card h3 .tag-test { margin-left: 10px; }
 .medias { padding-left: 20px; }
 .medias li { margin-bottom: 6px; }
+
+/* menu « Autres pays » : défilement quand la liste s'allonge */
+.sous-menu { max-height: 70vh; overflow-y: auto; }
