@@ -3,7 +3,7 @@ import Base from '../../../layouts/Base.astro';
 import Alert from '../../../components/Alert.astro';
 import Actualites from '../../../components/Actualites.astro';
 import { paysComplets } from '../../../data/pays';
-import { url } from '../../../config';
+import { url, leNomDeLangue, deNomDeLangue } from '../../../config';
 
 export function getStaticPaths() {
   return paysComplets.map((p) => ({ params: { pays: p.slug }, props: { p } }));
@@ -18,7 +18,7 @@ const base = `/pays/${p.slug}`;
     <p>{p.accroche}</p>
     <div class="cta">
       <a class="btn" href={url(`${base}/voyager`)}>Voyager →</a>
-      <a class="btn-line" href={url(`${base}/lecons`)}>🎧 Apprendre le {p.langue.nom}</a>
+      <a class="btn-line" href={url(`${base}/lecons`)}>🎧 Apprendre {leNomDeLangue(p.langue.nom)}</a>
     </div>
   </section>
 
@@ -34,7 +34,7 @@ const base = `/pays/${p.slug}`;
     ))}
     <a class="card" href={url(`${base}/lecons`)}>
       <div class="ico">🎧</div>
-      <h3>Leçons de {p.langue.nom}</h3>
+      <h3>Leçons {deNomDeLangue(p.langue.nom)}</h3>
       <p>{p.lecons.length} leçons courtes avec audio et quiz d’écoute.</p>
       <span class="more">Ouvrir →</span>
     </a>

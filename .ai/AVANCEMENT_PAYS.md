@@ -1,6 +1,6 @@
 # Avancement des fiches pays
 
-Fichier de suivi des guides pays. Dernière mise à jour : 4 novembre 2026, après le lot 2 (vague 1 terminée).
+Fichier de suivi des guides pays. Dernière mise à jour : 4 novembre 2026, après le lot 3 (vague 1 terminée, vague 2 en cours).
 Liste raisonnée des pays envisagés : `.ai/PAYS_PREVUS.md`. Suivi général du projet : `.ai/AVANCEMENT.md`.
 
 ## Comment lire ce fichier
@@ -30,6 +30,13 @@ Liste raisonnée des pays envisagés : `.ai/PAYS_PREVUS.md`. Suivi général du 
 | **Serbie** | 1 | test | oui | 6, serbe (alphabet latin) | 4 | Moyenne : extrait de fiche officielle, portail eUprava pour l’adresse |
 | **Émirats arabes unis** | 1 | test | oui | 6, arabe standard | 4 | **Faible : conseil officiel à vérifier en priorité** |
 | **Thaïlande** | 1 | test | oui | 6, thaï | 4 | Faible : durée sans visa contradictoire |
+| **Maroc** | 2 | test | oui | 6 (courtes), darija | 4 | Faible : fiche officielle non lue, passeport et validité contradictoires |
+| **Portugal** | 2 | test | oui | 6, portugais | 4 | Bonne pour l'entrée (fiche officielle du 30 juin 2026), reste privé |
+| **Italie** | 2 | test | oui | 6, italien | 4 | Faible : fiche officielle non lue |
+| **Grèce** | 2 | test | oui | 6, grec | 4 | Moyenne : extrait de fiche officielle (entrée, assurance) |
+| Pologne | 2 | **à faire** | non | | | |
+| Suisse | 2 | **à faire** | non | | | |
+| Royaume-Uni | 2 | **à faire** | non | | | |
 
 ## Détail des fiches du lot 1 (4 novembre 2026)
 
@@ -83,12 +90,39 @@ Liste raisonnée des pays envisagés : `.ai/PAYS_PREVUS.md`. Suivi général du 
 
 7 pays sur 7 sont publiés en test : Géorgie, Turquie, Arménie, Kazakhstan, Serbie, Émirats arabes unis, Thaïlande. **Total : 14 guides (Russie, Finlande, 12 pays en test).** Les vagues 2 à 4 restent à faire.
 
+## Détail des fiches du lot 3 (4 novembre 2026, vague 2)
+
+### Portugal
+- **Sûr (source officielle)** : passeport ou carte d'identité en cours de validité suffisent ; transit vers un pays hors Schengen : vérifier la destination finale ; au-delà de 3 mois, s'enregistrer à la mairie (Câmara municipal). Fiche d'entrée mise à jour le 30 juin 2026.
+- **À confirmer** : CRUE (certificat d'enregistrement), NIF (ne prouve pas la résidence), NISS (distinct du NIF), demande combinée en ligne ; carte d'identité périmée : préférer le passeport (conseil d'agences).
+- **À documenter** : sécurité (fiche non lue), santé, banque, logement, régimes fiscaux (très changeants).
+- **Reste** : lire la fiche de sécurité ; vérifier les pièces sur eportugal.gov.pt ; relire les leçons.
+
+### Italie
+- **Sûr** : rien de confirmé par la fiche officielle française (non lue).
+- **À confirmer** : CNI ou passeport valides (pas de carte périmée) ; codice fiscale ; inscription à l'état civil au-delà de 3 mois ; SSN via l'ASL (guides privés et universitaires).
+- **À documenter** : sécurité, séismes, santé, banque, logement, emploi.
+- **Reste** : lire la fiche officielle (entrée et sécurité) ; relire les leçons.
+
+### Grèce
+- **Sûr (source officielle)** : passeport ou carte d'identité valides, entrée libre ; vérifier son assurance avant de partir ; pas de visa spécifique pour les voyages d'affaires ; coordonnées de l'ambassade et du consulat.
+- **À confirmer** : enregistrement dans les 90 jours via KEP ou la police ; attestation gratuite valable 5 ans (une source) ; AFM (impôts) et AMKA (sécurité sociale) ; banque (passeport suffisant ou AFM exigé, sources divergentes).
+- **À documenter** : sécurité (incendies de forêt, séismes), santé, logement, emploi.
+- **Reste** : lire la rubrique « Sécurité » ; vérifier sur gov.gr ; relire les leçons de grec.
+
+### Maroc
+- **Sûr** : l'adresse de la fiche officielle répond (mise à jour d'avril 2026 d'après le résultat) ; son contenu n'a pas été lu.
+- **À confirmer** : passeport obligatoire (la CNI seule ne suffit plus, presse spécialisée) ; 90 jours sans visa ; validité du passeport contradictoire (3 ou 6 mois) ; immatriculation sous 15 jours si séjour de plus de 3 mois ; cartes de séjour (salarié, rentier) ; AMO obligatoire ; la carte « retraité » interdit toute activité.
+- **À documenter** : sécurité (zones d'alerte, Sahara occidental, frontière algérienne), argent, santé, logement, procédure auprès de l'agence nationale pour l'emploi.
+- **Reste** : lire la fiche officielle ; relire les leçons de darija (phrases limitées, à valider par un locuteur).
+
 ## Journal des commits
 
 | Date | Commit | Contenu |
 |---|---|---|
 | 4 novembre 2026 | `e0afda2` | Lot 1 : Géorgie, Turquie, Arménie, Kazakhstan, clés par pays, ce fichier |
-| 4 novembre 2026 | (à venir) | Lot 2 : Serbie, Émirats, Thaïlande |
+| 4 novembre 2026 | `d506c43` | Lot 2 : Serbie, Émirats, Thaïlande ; menu défilant |
+| 4 novembre 2026 | (à venir) | Lot 3 : Maroc, Portugal, Italie, Grèce ; élision des noms de langue |
 
 ## Ce qui est transversal et déjà en place
 

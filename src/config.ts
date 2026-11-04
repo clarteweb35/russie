@@ -26,3 +26,8 @@ export const pagesLegales = [{ href: '/mentions-legales', label: 'Mentions léga
 
 // Nom affiché dans l'en-tête (domaine visé : à acheter chez OVH).
 export const NOM_SITE = 'guide-russie.fr';
+
+// Élision devant une voyelle : « le russe », « l’arabe » ; « leçons de russe », « leçons d’arabe »
+const VOYELLE = /^[aeiouyàâéèêëîïôûü]/i;
+export const leNomDeLangue = (nom: string) => (VOYELLE.test(nom) ? `l’${nom}` : `le ${nom}`);
+export const deNomDeLangue = (nom: string) => (VOYELLE.test(nom) ? `d’${nom}` : `de ${nom}`);

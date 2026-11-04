@@ -12,5 +12,9 @@
   {"slug":"kazakhstan","pays":"Kazakhstan","libelle":"le Kazakhstan","langueLocale":"kazakh et russe"},
   {"slug":"serbie","pays":"Serbie","libelle":"la Serbie","langueLocale":"serbe"},
   {"slug":"emirats","pays":"Émirats arabes unis","libelle":"les Émirats arabes unis","langueLocale":"arabe et anglais"},
-  {"slug":"thailande","pays":"Thaïlande","libelle":"la Thaïlande","langueLocale":"thaï et anglais"}
+  {"slug":"thailande","pays":"Thaïlande","libelle":"la Thaïlande","langueLocale":"thaï et anglais"},
+  {"slug":"maroc","pays":"Maroc","libelle":"le Maroc","langueLocale":"arabe et français"},
+  {"slug":"portugal","pays":"Portugal","libelle":"le Portugal","langueLocale":"portugais"},
+  {"slug":"italie","pays":"Italie","libelle":"l’Italie","langueLocale":"italien"},
+  {"slug":"grece","pays":"Grèce","libelle":"la Grèce","langueLocale":"grec"}
 ]

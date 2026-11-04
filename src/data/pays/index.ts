@@ -12,10 +12,14 @@ import { kazakhstan } from './kazakhstan';
 import { serbie } from './serbie';
 import { emirats } from './emirats';
 import { thailande } from './thailande';
+import { maroc } from './maroc';
+import { portugal } from './portugal';
+import { italie } from './italie';
+import { grece } from './grece';
 
 // Liste unique des pays du menu « Autres pays ». Un pays « bientôt » s'affiche sans lien jusqu'à ce que sa fiche soit prête ;
 // un pays `test: true` est publié avec la mention « fiche en test ».
-export const pays: Pays[] = [finlande, albanie, espagne, allemagne, senegal, vietnam, georgie, turquie, armenie, kazakhstan, serbie, emirats, thailande];
+export const pays: Pays[] = [finlande, albanie, espagne, allemagne, senegal, vietnam, georgie, turquie, armenie, kazakhstan, serbie, emirats, thailande, maroc, portugal, italie, grece];
 
 export const paysComplets = pays.filter((p): p is PaysComplet => p.complet);
 
