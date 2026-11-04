@@ -26,7 +26,7 @@ Le site est servi sous `/russie/` en local comme en production (`base` dans `ast
 - `src/pages/pays/` : les pages de tous les guides pays (accueil, rubriques, sources, leçons), générées depuis le registre. Ne jamais copier une page par pays.
 - `src/components/` : aussi `Sections` (rend le contenu d'un pays), `LeconDetail` et `ListeLecons` (leçons de la Russie et des pays).
 - `src/scripts/` : scripts navigateur (`lecon.ts` : audio et quiz).
-- `scripts/` (racine) : outils de développement (`verifier-liens.mjs`, `optimiser-images.mjs`, `convertir-image.mjs` pour toute nouvelle image, avec recadrage optionnel `x,y,largeur,hauteur`).
+- `scripts/` (racine) : outils de développement (`verifier-liens.mjs`, `optimiser-images.mjs`, `actualites.mjs` (topo hebdomadaire, voir `.ai/AVANCEMENT.md`), `convertir-image.mjs` pour toute nouvelle image, avec recadrage optionnel `x,y,largeur,hauteur`).
 - `src/styles/global.css` : tous les styles, variables CSS en haut, thème sombre automatique.
 - `public/` : fichiers servis tels quels (images). Pas de copie des images à la racine du projet.
 
@@ -38,7 +38,7 @@ Le site est servi sous `/russie/` en local comme en production (`base` dans `ast
 4. **Avertissement de sécurité** : ne pas le retirer ni l'affaiblir (bandeau dans `Base.astro`, encadré sur l'accueil, texte complet dans `/voyager#securite`).
 5. **Ton** : français, **vouvoiement**, phrases courtes. Les textes du site ont été écrits au tutoiement : les passer au vouvoiement page par page (voir AVANCEMENT). Les nouveaux textes sont écrits au vouvoiement.
 6. **Affiliation** : tout lien affilié est signalé comme tel, avec `rel="sponsored noopener"`. Aucun faux partenaire en attendant de vrais liens.
-7. **Pas de ressource externe** inutile : polices système, pas de CDN. Appels externes autorisés aujourd'hui : le convertisseur (Banque de Russie, repli ExchangeRate-API). **À venir** : Google Analytics 4, uniquement après consentement (voir Conventions). Aucun autre traceur.
+7. **Pas de ressource externe** inutile : polices système, pas de CDN. Appels externes autorisés aujourd'hui : le convertisseur (Banque de Russie, repli ExchangeRate-API) depuis le navigateur ; l'API Gemini, uniquement depuis la tâche hebdomadaire (jamais depuis le navigateur du visiteur, clé en secret de dépôt). **À venir** : Google Analytics 4, uniquement après consentement (voir Conventions). Aucun autre traceur.
 8. **Animations** : doivent rester désactivables (`prefers-reduced-motion`) et ne jamais cacher le contenu sans JavaScript (classe `.js` posée par `Base.astro`).
 9. **Images** : mettre dans `public/img/`, WebP, moins de 300 Ko. **Toute image générée par IA** porte la mention dans `alt` et `title` via `legendeIA()` de `config.ts` (jamais en dur) ; le texte alternatif décrit l'image.
 10. **Dates** : `LAST_CHECK` et `VERIFICATIONS` ne sont mises à jour qu'après une vraie vérification des sources.

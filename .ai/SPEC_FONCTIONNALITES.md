@@ -61,6 +61,13 @@ Alphabet cyrillique, phrases utiles, repères culturels.
 - Cours de langue : voix de synthèse du navigateur dans la langue du pays (code `fi-FI` pour le finnois). Si l'appareil n'a pas de voix pour cette langue, un message l'explique et le texte et la prononciation restent affichés.
 - Source unique : un fichier de données par pays (`src/data/pays/<pays>.ts`), le registre `src/data/pays/index.ts` et les mêmes pages pour tous.
 
+### L'actu de la semaine (Russie et pays prêts)
+- Bloc sur l'accueil de la Russie et sur l'accueil de chaque pays suivi, avec badge « Résumé généré par IA », date de génération, modèle, résumé de 3 à 4 phrases, jusqu'à 5 points et les sources en lien. Rappel que ce n'est pas un conseil de voyage, avec lien vers les conseils officiels. **Rien ne s'affiche tant qu'aucun topo n'a été généré.**
+- Génération : `scripts/actualites.mjs` appelle l'API Gemini avec la recherche Google intégrée (modèle réglable par `GEMINI_MODEL`, `gemini-2.5-flash` par défaut). Liste des pays suivis : `scripts/actualites-pays.json`. Résultat : `src/data/actualites/<pays>.json`.
+- Fréquence : workflow `.github/workflows/actualites.yml`, chaque lundi à 6 h UTC (ou à la demande), qui enregistre les fichiers, puis relance le déploiement.
+- Publication automatique (choix de l'éditeur). Garde-fous : sources prises dans les métadonnées de la recherche et non dans le texte du modèle, liens `https` uniquement, topo refusé sans source, un échec ne remplace jamais le topo précédent.
+- Clé : secret de dépôt `GEMINI_API_KEY`. Elle n'est jamais dans le code ni côté navigateur.
+
 ### Mentions légales `/mentions-legales`
 Éditeur, hébergeur, images générées par IA, données personnelles, liens et partenaires. Liée depuis le pied de page. Éditeur anonyme (particulier, à titre non professionnel), identité communiquée à l'hébergeur.
 

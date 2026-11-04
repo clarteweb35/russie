@@ -1,6 +1,7 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import Alert from '../../../components/Alert.astro';
+import Actualites from '../../../components/Actualites.astro';
 import { paysComplets } from '../../../data/pays';
 import { url } from '../../../config';
 
@@ -44,6 +45,8 @@ const base = `/pays/${p.slug}`;
       <span class="more">Ouvrir →</span>
     </a>
   </div>
+
+  <Actualites slug={p.slug} libelle={p.article} officiel={{ texte: `Conseils aux voyageurs du ministère français pour ${p.article}`, url: p.conseilsVoyageurs }} />
 
   <Alert titre="Guide en cours de rédaction" warn>
     Plusieurs sections sont marquées « À confirmer » ou « À documenter » : elles reposent sur des sources non officielles ou restent à compléter. Vérifiez toujours auprès des autorités avant d’agir.

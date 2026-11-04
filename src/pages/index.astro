@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Convertisseur from '../components/Convertisseur.astro';
+import Actualites from '../components/Actualites.astro';
 import { sections, LAST_CHECK, legendeIA, url } from '../config';
 import { lecons } from '../data/lecons.js';
 
@@ -45,6 +46,8 @@ const essentiels = sections.filter((s) => ['/travailler', '/paiements', '/langue
     </div>
     <a class="btn" href={url("/voyager#securite")}>Lire la page Sécurité</a>
   </div>
+
+  <Actualites slug="russie" libelle="la Russie" officiel={{ texte: "Conseils aux voyageurs du ministère français pour la Russie", url: "https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/russie/" }} />
 
   <h2>Argent : euros et roubles</h2>
   <Convertisseur />

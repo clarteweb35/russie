@@ -115,3 +115,20 @@ Décisions de l'utilisateur : **pays pilote d'abord** (Finlande), puis les autre
 5. [ ] Page d'accueil de la Russie : mettre en avant le menu « Autres pays » si besoin.
 6. [ ] Mentions légales : préciser que le site couvre plusieurs pays.
 7. [ ] Nom de domaine : `guide-russie.fr` convient mal à un site multi-pays. Décider si les pays restent sous `/pays/` ou si le site change de nom.
+
+## Topo hebdomadaire d'actualité (4 novembre 2026)
+
+Choix de l'utilisateur : **Gemini** et **publication automatique**. Le code est prêt et testé avec un faux serveur ; il n'a **jamais tourné avec une vraie clé**.
+
+### À faire par l'utilisateur (dans cet ordre)
+1. [ ] Créer une clé d'API dans Google AI Studio (aistudio.google.com).
+2. [ ] Ajouter le secret `GEMINI_API_KEY` : dépôt GitHub > Settings > Secrets and variables > Actions > New repository secret. **Ne jamais envoyer la clé dans le chat.**
+3. [ ] Vérifier le nom du modèle dans Google AI Studio (le code utilise `gemini-2.5-flash` par défaut, qui peut avoir été remplacé) ; sinon ajouter une variable `GEMINI_MODEL` dans le workflow.
+4. [ ] Lancer le workflow à la main : onglet Actions > « Actualités hebdomadaires » > Run workflow. Relire le premier topo obtenu.
+
+### À surveiller
+- [ ] Qualité des topos, surtout pour la Russie (sujet sensible). Si des erreurs passent, passer en validation avant publication.
+- [ ] Conditions et quotas de l'API (offre gratuite : conditions d'utilisation des données à lire).
+- [ ] Contradiction avec le choix « 100 % français » : Gemini (Google) et GitHub Actions (Microsoft). À reprendre lors de la migration vers OVH (remplacer la tâche planifiée par un cron, et éventuellement le fournisseur d'IA).
+- [ ] Les tâches planifiées de GitHub peuvent être suspendues après une longue période sans activité sur le dépôt.
+- [ ] Ajouter chaque nouveau pays prêt dans `scripts/actualites-pays.json`.
