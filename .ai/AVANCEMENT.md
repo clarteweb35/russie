@@ -1,6 +1,6 @@
 # Avancement : Guide Russie
 
-Dernière mise à jour : 30 octobre 2026. Ce fichier est mis à jour à la fin de chaque session de travail.
+Dernière mise à jour : 4 novembre 2026. Ce fichier est mis à jour à la fin de chaque session de travail.
 
 **Production** : https://clarteweb35.github.io/russie/ (déploiement automatique à chaque push sur `main`)
 **Note d'architecture** : 74 / 100 (détail dans `.ai/SPEC_FONCTIONNALITES.md`, §6)
@@ -95,3 +95,23 @@ Dernière mise à jour : 30 octobre 2026. Ce fichier est mis à jour à la fin d
 - [ ] **À réévaluer dès que des revenus arrivent** (liens d'affiliation, publicité) : le site peut alors être considéré comme professionnel, ce qui oblige à publier l'identité de l'éditeur, une adresse et un contact. À vérifier avant d'activer l'affiliation.
 - [ ] Vérifier l'adresse de l'hébergeur (GitHub, Inc.) citée dans les mentions légales.
 - [ ] Confirmer l'origine de toutes les images : la mention « image générée par IA » est appliquée à toutes, accueil compris.
+
+## Guides pays (chantier du 4 novembre 2026)
+
+Décisions de l'utilisateur : **pays pilote d'abord** (Finlande), puis les autres avec le même modèle ; **cours de langue avec audio quand l'appareil a une voix**, message sinon.
+
+### Fait
+- [x] Menu « Autres pays » (liste déroulante, hamburger sur mobile) et page `/pays/`.
+- [x] Modèle de données (`src/data/pays/types.ts`), registre, pages communes (accueil pays, rubriques, sources automatiques, leçons), composants `Sections`, `LeconDetail`, `ListeLecons`.
+- [x] Leçons de la Russie refaites avec les mêmes composants ; script audio lisant la langue de la page.
+- [x] **Finlande complète** : 5 rubriques sourcées, 6 leçons de finnois (code voix `fi-FI`), sources générées.
+- [x] Correctifs au passage : photos des cartes de leçons au bon format 16/9, lien de retour des leçons qui chevauchait la ligne « Vérifié le ».
+
+### À faire (par priorité)
+1. [ ] **Faire relire la Finlande** par l'utilisateur (ton, choix des badges, sections `À documenter` : logement, coût de la vie, recherche d'emploi, culture, transports).
+2. [ ] Photos des cartes de leçons de la Finlande (aujourd'hui des vignettes colorées) : fournir ou générer 6 images, mention IA via `legendeIA()`.
+3. [ ] **Albanie, Espagne, Allemagne, Sénégal, Vietnam** : une fiche chacune sur le modèle de `finlande.ts`, avec recherches web et sources. Langues et codes de voix : albanais `sq-AL` (voix rare), espagnol `es-ES`, allemand `de-DE`, wolof (pas de voix standard) ou français pour le Sénégal, vietnamien `vi-VN`.
+4. [ ] Convertisseur de devises générique (Albanie : lek, Vietnam : dong, Sénégal : franc CFA) : le composant actuel est fixé sur EUR et RUB.
+5. [ ] Page d'accueil de la Russie : mettre en avant le menu « Autres pays » si besoin.
+6. [ ] Mentions légales : préciser que le site couvre plusieurs pays.
+7. [ ] Nom de domaine : `guide-russie.fr` convient mal à un site multi-pays. Décider si les pays restent sous `/pays/` ou si le site change de nom.

@@ -1,0 +1,26 @@
+---
+import Base from '../../layouts/Base.astro';
+import { pays } from '../../data/pays';
+import { url } from '../../config';
+---
+<Base title="Autres pays" bandeau={false} meta={false}>
+  <h1>Autres pays</h1>
+  <p class="lead">Le même guide pour d’autres destinations : voyager, vivre, travailler, payer et apprendre les premiers mots de la langue. Chaque pays a ses propres sources et ses badges de fiabilité.</p>
+  <div class="grid">
+    {pays.map((p) => (
+      p.complet ? (
+        <a class="card" href={url(`/pays/${p.slug}`)}>
+          <h3>{p.nom}</h3>
+          <p>{p.accroche}</p>
+          <span class="more">Ouvrir le guide →</span>
+        </a>
+      ) : (
+        <div class="card card-bientot" aria-disabled="true">
+          <h3>{p.nom}</h3>
+          <p>Guide en préparation.</p>
+          <span class="badge warn">Bientôt</span>
+        </div>
+      )
+    ))}
+  </div>
+</Base>

@@ -52,6 +52,15 @@ Alphabet cyrillique, phrases utiles, repères culturels.
 - Navigation précédente / suivante.
 - Sans voix russe disponible, un message l'explique.
 
+### Autres pays `/pays/`
+- Menu « Autres pays » dans la navigation (liste déroulante, intégrée au menu hamburger sur mobile) et page `/pays/` qui liste les destinations.
+- Pays prévus : Finlande, Albanie, Espagne, Allemagne, Sénégal, Vietnam. **Finlande : complète (pilote).** Les cinq autres sont affichées « Bientôt », sans lien, jusqu'à ce que leur fiche soit prête.
+- Pour chaque pays prêt : page d'accueil `/pays/<pays>/` (carte par rubrique), rubriques `voyager`, `vivre`, `travailler`, `paiements`, `langue-culture`, `lecons` (6 leçons audio + quiz) et `sources` (liste générée automatiquement depuis les sources citées dans les sections).
+- Bandeau d'en-tête propre au pays : lien vers les conseils officiels du ministère français pour ce pays (le bandeau d'alerte sur la Russie n'apparaît pas hors des pages russes).
+- Même système de confiance que la Russie : badges `Vérifié` / `À confirmer` / `À documenter`, sources par section, date de vérification propre au pays.
+- Cours de langue : voix de synthèse du navigateur dans la langue du pays (code `fi-FI` pour le finnois). Si l'appareil n'a pas de voix pour cette langue, un message l'explique et le texte et la prononciation restent affichés.
+- Source unique : un fichier de données par pays (`src/data/pays/<pays>.ts`), le registre `src/data/pays/index.ts` et les mêmes pages pour tous.
+
 ### Mentions légales `/mentions-legales`
 Éditeur, hébergeur, images générées par IA, données personnelles, liens et partenaires. Liée depuis le pied de page. Éditeur anonyme (particulier, à titre non professionnel), identité communiquée à l'hébergeur.
 

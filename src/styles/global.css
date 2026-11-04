@@ -260,3 +260,52 @@ footer { margin-top: 72px; padding: 36px 0 56px; color: var(--muted); font-size:
 @keyframes brillance { 0%, 55% { background-position: 130% 0; } 100% { background-position: -30% 0; } }
 @media (prefers-color-scheme: dark) { .brand::before { opacity: .15; } .brand:hover::before { opacity: .26; } }
 @media (max-width: 720px) { .brand { font-size: 1.2rem; padding: 6px 16px; } }
+
+/* menu « Autres pays » */
+.menu-pays { position: relative; }
+.menu-pays > a { display: inline-block; }
+.sous-menu { display: none; position: absolute; top: 100%; right: 0; z-index: 60; min-width: 200px; margin: 6px 0 0; padding: 8px; list-style: none; border-radius: 14px; background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow-hi); }
+.menu-pays:hover .sous-menu, .menu-pays:focus-within .sous-menu { display: block; animation: rise .2s ease both; }
+.sous-menu li { margin: 0; }
+.sous-menu a, .sous-menu .bientot { display: block; padding: 8px 12px; border-radius: 10px; white-space: nowrap; font-size: 14.5px; }
+.sous-menu .bientot { color: var(--muted); cursor: default; }
+.sous-menu .bientot small { margin-left: 6px; font-size: 11px; padding: 1px 7px; border-radius: 999px; background: var(--warn-soft); color: var(--warn); }
+@media (max-width: 720px) {
+  .menu-pays > a { display: block; }
+  .sous-menu { display: block; position: static; margin: 2px 0 6px 12px; padding: 0; border: 0; box-shadow: none; background: transparent; }
+}
+
+/* guides pays */
+.banner-pays { background: var(--bg2); border-bottom-color: var(--line); }
+.hero-pays { margin: 28px 0 8px; padding: clamp(28px, 5vw, 56px); border-radius: 24px; color: #fff; background: linear-gradient(135deg, var(--c1), color-mix(in srgb, var(--c1) 62%, #000)); box-shadow: var(--shadow-hi); }
+.hero-pays .eyebrow { display: inline-block; font-size: 12.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; opacity: .85; margin-bottom: 14px; }
+.hero-pays h1 { margin: 0 0 14px; font-size: clamp(2rem, 5vw, 3.2rem); color: #fff; }
+.hero-pays p { max-width: 56ch; font-size: 1.1rem; color: rgba(255, 255, 255, .88); margin-bottom: 24px; }
+.hero-pays .btn { background: #fff; color: #1b1a22; box-shadow: 0 10px 24px -10px rgba(0, 0, 0, .5); }
+.hero-pays .btn-line { color: #fff; border-color: rgba(255, 255, 255, .45); }
+.hero-pays .btn-line:hover { color: #fff; border-color: #fff; background: rgba(255, 255, 255, .12); }
+.card-bientot { opacity: .65; cursor: default; }
+.card-bientot:hover { transform: none; box-shadow: var(--shadow); border-color: var(--line); }
+.card-sans-photo .vignette { display: grid; place-items: center; aspect-ratio: 16 / 9; font: 800 3.4rem var(--serif); color: rgba(255, 255, 255, .92); background: linear-gradient(135deg, var(--c1), color-mix(in srgb, var(--c1) 60%, #000)); transition: transform .6s cubic-bezier(.2, .8, .2, 1); }
+.card-sans-photo:hover .vignette { transform: scale(1.06); }
+
+/* photos des cartes : le format 16/9 l'emporte sur l'attribut height de l'image */
+.card-photo .photo { height: auto; }
+
+/* menu : resserré sous 1100 px, hamburger sous 900 px (huit entrées au total) */
+@media (max-width: 1100px) {
+  nav a { padding: 6px 9px; font-size: 14px; }
+  .brand { padding: 8px 18px; font-size: 1.2rem; }
+}
+@media (max-width: 900px) {
+  header.site .wrap { flex-direction: row; flex-wrap: wrap; align-items: center; }
+  .burger { display: flex; }
+  nav { display: none; flex-direction: column; width: 100%; gap: 2px; padding-top: 8px; overflow: visible; }
+  nav.open { display: flex; animation: rise .25s ease both; }
+  nav a { padding: 12px 14px; border-radius: 10px; font-size: 16px; }
+  .menu-pays > a { display: block; }
+  .sous-menu { display: block; position: static; margin: 2px 0 6px 12px; padding: 0; border: 0; box-shadow: none; background: transparent; }
+}
+
+/* page de leçon : le lien de retour ne chevauche pas la ligne « Vérifié le » */
+.meta + [data-lang] > .src:first-child { margin-top: 34px; }

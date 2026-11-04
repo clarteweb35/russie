@@ -1,0 +1,62 @@
+---
+// Page d'une leçon : phrases avec audio, astuce et quiz. Commune à la Russie et aux guides pays.
+import Base from '../layouts/Base.astro';
+import Alert from './Alert.astro';
+import Quiz from './Quiz.astro';
+import { url } from '../config';
+import type { Lecon } from '../data/pays/types';
+
+interface Props {
+  lecon: Lecon;
+  index: number;
+  prev?: Lecon;
+  next?: Lecon;
+  langue: { nom: string; code: string }; // code = langue de la voix de synthèse (ex. fi-FI)
+  base: string; // chemin de la liste des leçons (ex. /lecons ou /pays/finlande/lecons)
+  marque?: string;
+  pays?: { slug: string; nom: string; article: string; conseilsVoyageurs: string };
+  verifie?: string;
+}
+const { lecon, index, prev, next, langue, base, marque, pays, verifie } = Astro.props;
+---
+<Base title={`Leçon ${index + 1} — ${lecon.titre}`} marque={marque} pays={pays} verifie={verifie}>
+  <div data-lang={langue.code}>
+    <p class="src"><a href={url(base)}>← Toutes les leçons</a></p>
+    <h1>Leçon {index + 1} : {lecon.titre}</h1>
+    <p class="lead">{lecon.intro}</p>
+
+    <div class="controls">
+      <label><input type="checkbox" id="slow" /> Lecture lente</label>
+      <button class="btn" id="play-all" type="button">▶ Tout écouter</button>
+    </div>
+    <Alert warn id="voice-msg" hidden>
+      Aucune voix pour le {langue.nom} n’a été trouvée sur cet appareil. Ajoutez le {langue.nom} dans les réglages de voix ou essayez un autre navigateur.
+    </Alert>
+
+    <ul class="phrases">
+      {lecon.phrases.map(([original, pron, fr]) => (
+        <li>
+          <button class="play" type="button" data-ru={original} aria-label={`Écouter : ${original}`}>▶</button>
+          <div>
+            <div class="ru">{original}</div>
+            <div class="pron">{pron}</div>
+            <div class="fr">{fr}</div>
+          </div>
+        </li>
+      ))}
+    </ul>
+
+    <Alert titre="Astuce">{lecon.astuce}</Alert>
+
+    <Quiz phrases={lecon.phrases} />
+
+    <nav class="pager" aria-label="Navigation des leçons">
+      {prev ? <a href={url(`${base}/${prev.slug}`)}>← {prev.titre}</a> : <span></span>}
+      {next ? <a href={url(`${base}/${next.slug}`)}>{next.titre} →</a> : <a href={url(base)}>Retour aux leçons</a>}
+    </nav>
+  </div>
+</Base>
+
+<script>
+  import '../scripts/lecon.ts';
+</script>

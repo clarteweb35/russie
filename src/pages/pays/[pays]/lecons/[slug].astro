@@ -1,0 +1,15 @@
+---
+import LeconDetail from '../../../../components/LeconDetail.astro';
+import { paysComplets } from '../../../../data/pays';
+
+export function getStaticPaths() {
+  return paysComplets.flatMap((p) =>
+    p.lecons.map((l, i) => ({
+      params: { pays: p.slug, slug: l.slug },
+      props: { p, lecon: l, index: i, prev: p.lecons[i - 1], next: p.lecons[i + 1] },
+    })),
+  );
+}
+const { p, lecon, index, prev, next } = Astro.props;
+---
+<LeconDetail lecon={lecon} index={index} prev={prev} next={next} langue={p.langue} base={`/pays/${p.slug}/lecons`} marque={`Guide ${p.nom}`} pays={p} verifie={p.verifie} />

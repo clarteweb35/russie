@@ -22,6 +22,9 @@ Le site est servi sous `/russie/` en local comme en production (`base` dans `ast
 - `src/config.ts` : `NOM_SITE` (nom affiché en en-tête), `MENTION_IA`/`legendeIA()` (images IA), `pagesLegales` (pied de page, sitemap), `sections` (menu, cartes, sitemap), `LAST_CHECK` (date globale), `VERIFICATIONS` (date propre à une page), `url()`.
 - `src/pages/*.astro` : une page par rubrique. `lecons/[slug].astro` génère les leçons depuis `src/data/lecons.js`.
 - `src/components/` : `Alert`, `Badge` (à utiliser pour tout encadré ou pastille, jamais le HTML en dur), `Quiz`, `Convertisseur`.
+- `src/data/pays/` : un fichier par pays (`finlande.ts`...), le modèle de données `types.ts` et le registre `index.ts`. Un pays « bientôt » y figure avec `complet: false`.
+- `src/pages/pays/` : les pages de tous les guides pays (accueil, rubriques, sources, leçons), générées depuis le registre. Ne jamais copier une page par pays.
+- `src/components/` : aussi `Sections` (rend le contenu d'un pays), `LeconDetail` et `ListeLecons` (leçons de la Russie et des pays).
 - `src/scripts/` : scripts navigateur (`lecon.ts` : audio et quiz).
 - `scripts/` (racine) : outils de développement (`verifier-liens.mjs`, `optimiser-images.mjs`, `convertir-image.mjs` pour toute nouvelle image, avec recadrage optionnel `x,y,largeur,hauteur`).
 - `src/styles/global.css` : tous les styles, variables CSS en haut, thème sombre automatique.
@@ -39,6 +42,7 @@ Le site est servi sous `/russie/` en local comme en production (`base` dans `ast
 8. **Animations** : doivent rester désactivables (`prefers-reduced-motion`) et ne jamais cacher le contenu sans JavaScript (classe `.js` posée par `Base.astro`).
 9. **Images** : mettre dans `public/img/`, WebP, moins de 300 Ko. **Toute image générée par IA** porte la mention dans `alt` et `title` via `legendeIA()` de `config.ts` (jamais en dur) ; le texte alternatif décrit l'image.
 10. **Dates** : `LAST_CHECK` et `VERIFICATIONS` ne sont mises à jour qu'après une vraie vérification des sources.
+11. **Ajouter un pays** : créer `src/data/pays/<pays>.ts` (type `PaysComplet`) puis remplacer son entrée « bientôt » dans `src/data/pays/index.ts`. Menu, sitemap, sources et pages suivent tout seuls. Le contenu va dans les données, pas dans des pages. Mêmes règles de fiabilité que pour la Russie : une section sans source fiable est marquée `À documenter` plutôt que remplie de chiffres inventés.
 
 ## Conventions
 

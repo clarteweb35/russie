@@ -1,0 +1,51 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Alert from '../../../components/Alert.astro';
+import { paysComplets } from '../../../data/pays';
+import { url } from '../../../config';
+
+export function getStaticPaths() {
+  return paysComplets.map((p) => ({ params: { pays: p.slug }, props: { p } }));
+}
+const { p } = Astro.props;
+const base = `/pays/${p.slug}`;
+---
+<Base title={`Guide ${p.nom}`} marque={`Guide ${p.nom}`} pays={p} verifie={p.verifie} meta={false}>
+  <section class="hero-pays" style={`--c1:${p.couleur}`}>
+    <span class="eyebrow">Guide indépendant · mis à jour le {p.verifie}</span>
+    <h1>Préparer {p.article}</h1>
+    <p>{p.accroche}</p>
+    <div class="cta">
+      <a class="btn" href={url(`${base}/voyager`)}>Voyager →</a>
+      <a class="btn-line" href={url(`${base}/lecons`)}>🎧 Apprendre le {p.langue.nom}</a>
+    </div>
+  </section>
+
+  <h2>Explorer</h2>
+  <div class="grid">
+    {p.rubriques.map((r) => (
+      <a class="card" href={url(`${base}/${r.slug}`)}>
+        <div class="ico">{r.icone}</div>
+        <h3>{r.titre}</h3>
+        <p>{r.resume}</p>
+        <span class="more">Ouvrir →</span>
+      </a>
+    ))}
+    <a class="card" href={url(`${base}/lecons`)}>
+      <div class="ico">🎧</div>
+      <h3>Leçons de {p.langue.nom}</h3>
+      <p>{p.lecons.length} leçons courtes avec audio et quiz d’écoute.</p>
+      <span class="more">Ouvrir →</span>
+    </a>
+    <a class="card" href={url(`${base}/sources`)}>
+      <div class="ico">📚</div>
+      <h3>Sources</h3>
+      <p>D’où viennent les informations et leur fiabilité.</p>
+      <span class="more">Ouvrir →</span>
+    </a>
+  </div>
+
+  <Alert titre="Guide en cours de rédaction" warn>
+    Plusieurs sections sont marquées « À confirmer » ou « À documenter » : elles reposent sur des sources non officielles ou restent à compléter. Vérifiez toujours auprès des autorités avant d’agir.
+  </Alert>
+</Base>

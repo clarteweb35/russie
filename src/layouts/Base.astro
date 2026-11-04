@@ -2,13 +2,23 @@
 import '../styles/global.css';
 import Badge from '../components/Badge.astro';
 import { sections, LAST_CHECK, VERIFICATIONS, pagesLegales, NOM_SITE, url } from '../config';
-interface Props { title: string; description?: string }
-const { title, description = 'Guide d’information sur la Russie : voyager, vivre, travailler — avec sources officielles et mises en garde.' } = Astro.props;
+import { pays as listePays } from '../data/pays';
+interface Props {
+  title: string;
+  description?: string;
+  marque?: string; // nom du guide dans le titre de l'onglet
+  pays?: { slug: string; nom: string; article: string; conseilsVoyageurs: string }; // page d'un guide pays : bandeau et sources propres au pays
+  verifie?: string; // date de vérification propre à la page
+  bandeau?: boolean; // false : aucun bandeau de sécurité
+  meta?: boolean; // force l'affichage (ou non) de la ligne « Vérifié le … »
+}
+const { title, description = 'Guide d’information sur la Russie : voyager, vivre, travailler — avec sources officielles et mises en garde.', marque = 'Guide Russie', pays, verifie, bandeau = true, meta } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const path = Astro.url.pathname.slice(base.length).replace(/\/$/, '') || '/';
 const isHome = path === '/';
-const showMeta = !isHome && !['/sources', '/mentions-legales'].includes(path);
-const dateVerif = VERIFICATIONS[path] ?? LAST_CHECK;
+const showMeta = meta ?? (!isHome && !['/sources', '/mentions-legales'].includes(path));
+const dateVerif = verifie ?? VERIFICATIONS[path] ?? LAST_CHECK;
+const lienSources = pays ? `/pays/${pays.slug}/sources` : '/sources';
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const image = new URL(url('/saint-basile-hero.webp'), Astro.site).href;
 ---
@@ -23,14 +33,14 @@ const image = new URL(url('/saint-basile-hero.webp'), Astro.site).href;
     <link rel="canonical" href={canonical} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="fr_FR" />
-    <meta property="og:site_name" content="Guide Russie" />
-    <meta property="og:title" content={`${title} — Guide Russie`} />
+    <meta property="og:site_name" content={marque} />
+    <meta property="og:title" content={`${title} — ${marque}`} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={image} />
     <meta name="twitter:card" content="summary_large_image" />
     <script is:inline>document.documentElement.classList.add('js')</script>
-    <title>{title} — Guide Russie</title>
+    <title>{title} — {marque}</title>
   </head>
   <body>
     <a class="skip" href="#contenu">Aller au contenu</a>
@@ -43,11 +53,31 @@ const image = new URL(url('/saint-basile-hero.webp'), Astro.site).href;
           {sections.map((l) => (
             <a href={url(l.href)} aria-current={path === l.href || path.startsWith(l.href + '/') ? 'page' : undefined}>{l.label}</a>
           ))}
+          <div class="menu-pays">
+            <a href={url('/pays')} aria-haspopup="true" aria-current={path === '/pays' || path.startsWith('/pays/') ? 'page' : undefined}>Autres pays <span aria-hidden="true">▾</span></a>
+            <ul class="sous-menu">
+              {listePays.map((p) => (
+                <li>
+                  {p.complet
+                    ? <a href={url(`/pays/${p.slug}`)}>{p.nom}</a>
+                    : <span class="bientot">{p.nom} <small>bientôt</small></span>}
+                </li>
+              ))}
+            </ul>
+          </div>
         </nav>
       </div>
     </header>
 
-    {!isHome && (
+    {pays && (
+      <div class="banner banner-pays" role="note">
+        <div class="wrap">
+          <span><strong>Avant de partir :</strong> consultez les conseils officiels du ministère français pour {pays.article}.</span>
+          <a href={pays.conseilsVoyageurs} rel="noopener">Conseils aux voyageurs →</a>
+        </div>
+      </div>
+    )}
+    {!pays && bandeau && !isHome && (
       <div class="banner" role="note">
         <div class="wrap">
           <span><strong>Sécurité :</strong> le ministère français déconseille tout déplacement en Russie.</span>
@@ -62,7 +92,7 @@ const image = new URL(url('/saint-basile-hero.webp'), Astro.site).href;
           <span>Vérifié le {dateVerif}</span>
           <Badge type="ok">Source officielle</Badge>
           <Badge type="warn">À confirmer</Badge>
-          <a href={url("/sources")}>Voir les sources</a>
+          <a href={url(lienSources)}>Voir les sources</a>
         </p>
       )}
       <slot />

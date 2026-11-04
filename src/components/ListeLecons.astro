@@ -1,0 +1,29 @@
+---
+// Grille des cartes de leçons : commune à la Russie et aux guides pays.
+import Alert from './Alert.astro';
+import { url, legendeIA } from '../config';
+import type { Lecon } from '../data/pays/types';
+
+interface Props {
+  lecons: Lecon[];
+  base: string; // ex. /lecons ou /pays/finlande/lecons
+  langue: { nom: string; code: string };
+  couleur?: string; // couleur des cartes sans photo
+}
+const { lecons, base, langue, couleur = '#b3202f' } = Astro.props;
+---
+<div class="grid" style={`--c1:${couleur}`}>
+  {lecons.map((l, i) => (
+    <a class={l.img ? 'card card-photo' : 'card card-photo card-sans-photo'} href={url(`${base}/${l.slug}`)}>
+      {l.img
+        ? <img class="photo" src={url(l.img)} alt={legendeIA(l.imgAlt ?? l.titre)} title={legendeIA(l.imgAlt ?? l.titre)} loading="lazy" width="800" height="450" />
+        : <div class="vignette" aria-hidden="true">{i + 1}</div>}
+      <h3>{i + 1}. {l.titre}</h3>
+      <p>{l.phrases.length} mots et phrases</p>
+    </a>
+  ))}
+</div>
+<Alert titre="À propos de l’audio" warn>
+  Le son utilise la voix {langue.nom} de votre appareil. Quand elle est installée, un clic sur ▶ lit la phrase ; sinon, ajoutez la langue {langue.nom} dans les réglages de voix.
+  La voix est synthétique : elle aide à la prononciation, mais rien ne remplace un échange avec une personne qui parle {langue.nom}.
+</Alert>

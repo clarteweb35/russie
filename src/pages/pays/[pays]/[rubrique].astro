@@ -1,0 +1,15 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Sections from '../../../components/Sections.astro';
+import { paysComplets } from '../../../data/pays';
+
+export function getStaticPaths() {
+  return paysComplets.flatMap((p) => p.rubriques.map((r) => ({ params: { pays: p.slug, rubrique: r.slug }, props: { p, r } })));
+}
+const { p, r } = Astro.props;
+---
+<Base title={`${r.titre}`} description={r.intro} marque={`Guide ${p.nom}`} pays={p} verifie={p.verifie}>
+  <h1>{r.titre}</h1>
+  <p class="lead">{r.intro}</p>
+  <Sections sections={r.sections} />
+</Base>

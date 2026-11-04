@@ -1,0 +1,48 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Badge from '../../../components/Badge.astro';
+import { paysComplets } from '../../../data/pays';
+import type { Source } from '../../../data/pays/types';
+
+export function getStaticPaths() {
+  return paysComplets.map((p) => ({ params: { pays: p.slug }, props: { p } }));
+}
+const { p } = Astro.props;
+
+// Liste construite automatiquement depuis les sources citées dans les sections (une seule source de vérité)
+const groupes = p.rubriques
+  .map((r) => {
+    const vues = new Set<string>();
+    const sources: Source[] = [];
+    r.sections.forEach((s) => (s.sources ?? []).forEach((src) => {
+      if (!vues.has(src.url)) { vues.add(src.url); sources.push(src); }
+    }));
+    return { titre: r.titre, sources };
+  })
+  .filter((g) => g.sources.length > 0);
+---
+<Base title="Sources" marque={`Guide ${p.nom}`} pays={p} verifie={p.verifie} meta={false}>
+  <h1>Sources — {p.nom}</h1>
+  <p class="lead">Les informations de ce guide viennent des pages ci-dessous. Dernière recherche : {p.verifie}.</p>
+
+  <h2>Comment lire les badges</h2>
+  <ul>
+    <li><Badge type="ok">Vérifié</Badge> : confirmé par une source officielle ou institutionnelle récente.</li>
+    <li><Badge type="warn">À confirmer</Badge> : information de seconde main (guide d’université, prestataire, blog) ou non recoupée. Ne vous en servez pas pour décider sans vérification officielle.</li>
+    <li><Badge type="warn">À documenter</Badge> : section volontairement laissée vide faute de source fiable.</li>
+  </ul>
+
+  <h2>Source officielle de référence</h2>
+  <ul class="src">
+    <li><a href={p.conseilsVoyageurs} rel="noopener">Ministère de l’Europe et des Affaires étrangères, conseils aux voyageurs pour {p.nom}</a></li>
+  </ul>
+
+  {groupes.map((g) => (
+    <>
+      <h2>{g.titre}</h2>
+      <ul class="src">
+        {g.sources.map((s) => <li><a href={s.url} rel="noopener">{s.label}</a>{s.nature && ` (${s.nature})`}</li>)}
+      </ul>
+    </>
+  ))}
+</Base>

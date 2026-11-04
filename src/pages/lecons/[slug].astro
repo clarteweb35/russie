@@ -1,8 +1,5 @@
 ---
-import Base from '../../layouts/Base.astro';
-import Alert from '../../components/Alert.astro';
-import Quiz from '../../components/Quiz.astro';
-import { url } from '../../config';
+import LeconDetail from '../../components/LeconDetail.astro';
 import { lecons } from '../../data/lecons.js';
 
 export function getStaticPaths() {
@@ -13,42 +10,4 @@ export function getStaticPaths() {
 }
 const { lecon, index, prev, next } = Astro.props;
 ---
-<Base title={`Leçon ${index + 1} — ${lecon.titre}`}>
-  <p class="src"><a href={url("/lecons")}>← Toutes les leçons</a></p>
-  <h1>Leçon {index + 1} : {lecon.titre}</h1>
-  <p class="lead">{lecon.intro}</p>
-
-  <div class="controls">
-    <label><input type="checkbox" id="slow" /> Lecture lente</label>
-    <button class="btn" id="play-all" type="button">▶ Tout écouter</button>
-  </div>
-  <Alert warn id="voice-msg" hidden>
-    Aucune voix russe n’a été trouvée sur cet appareil. Ajoutez le russe dans les réglages de voix ou essayez un autre navigateur.
-  </Alert>
-
-  <ul class="phrases">
-    {lecon.phrases.map(([ru, pron, fr]) => (
-      <li>
-        <button class="play" type="button" data-ru={ru} aria-label={`Écouter : ${ru}`}>▶</button>
-        <div>
-          <div class="ru">{ru}</div>
-          <div class="pron">{pron}</div>
-          <div class="fr">{fr}</div>
-        </div>
-      </li>
-    ))}
-  </ul>
-
-  <Alert titre="Astuce">{lecon.astuce}</Alert>
-
-  <Quiz phrases={lecon.phrases} />
-
-  <nav class="pager" aria-label="Navigation des leçons">
-    {prev ? <a href={url(`/lecons/${prev.slug}`)}>← {prev.titre}</a> : <span></span>}
-    {next ? <a href={url(`/lecons/${next.slug}`)}>{next.titre} →</a> : <a href={url("/lecons")}>Retour aux leçons</a>}
-  </nav>
-</Base>
-
-<script>
-  import '../../scripts/lecon.ts';
-</script>
+<LeconDetail lecon={lecon} index={index} prev={prev} next={next} langue={{ nom: 'russe', code: 'ru-RU' }} base="/lecons" />

@@ -1,4 +1,6 @@
 // Audio (synthèse vocale) et quiz d'écoute des leçons. Chargé par src/pages/lecons/[slug].astro.
+// Langue de la leçon, fournie par la page (attribut data-lang) ; russe par défaut
+const LANG = document.querySelector<HTMLElement>('[data-lang]')?.dataset.lang || 'ru-RU';
 let voice: SpeechSynthesisVoice | null = null;
 const synth = window.speechSynthesis;
 const msg = document.getElementById('voice-msg');
@@ -7,7 +9,7 @@ const slow = document.getElementById('slow') as HTMLInputElement | null;
 function pickVoice() {
   if (!synth) return;
   const vs = synth.getVoices();
-  voice = vs.find((v) => v.lang.toLowerCase().startsWith('ru')) || null;
+  voice = vs.find((v) => v.lang.toLowerCase().startsWith(LANG.split('-')[0].toLowerCase())) || null;
   if (msg) msg.hidden = !!voice;
 }
 if (synth) {
@@ -22,7 +24,7 @@ function speak(text: string, onEnd?: () => void) {
   if (!synth) { onEnd?.(); return; }
   synth.cancel();
   const u = new SpeechSynthesisUtterance(text);
-  u.lang = 'ru-RU';
+  u.lang = LANG;
   if (voice) u.voice = voice;
   u.rate = slow?.checked ? 0.6 : 0.9;
   if (onEnd) { u.onend = onEnd; u.onerror = onEnd; }

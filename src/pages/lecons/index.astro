@@ -1,23 +1,10 @@
 ---
 import Base from '../../layouts/Base.astro';
-import Alert from '../../components/Alert.astro';
-import { url, legendeIA } from '../../config';
+import ListeLecons from '../../components/ListeLecons.astro';
 import { lecons } from '../../data/lecons.js';
 ---
 <Base title="Leçons de russe">
   <h1>Leçons de russe essentielles</h1>
-  <p class="lead">6 leçons courtes, sans alphabet à apprendre d’abord : vous écoutez, vous répétez, vous vous entraînez avec un quiz.</p>
-  <div class="grid">
-    {lecons.map((l, i) => (
-      <a class="card card-photo" href={url(`/lecons/${l.slug}`)}>
-        <img class="photo" src={url(l.img)} alt={legendeIA(l.imgAlt)} title={legendeIA(l.imgAlt)} loading="lazy" width="800" height="450" />
-        <h3>{i + 1}. {l.titre}</h3>
-        <p>{l.phrases.length} mots et phrases</p>
-      </a>
-    ))}
-  </div>
-  <Alert titre="À propos de l’audio" warn>
-    Le son utilise la voix russe de votre appareil. Sur iPhone, Mac et Android elle est généralement disponible ; sinon, ajoutez la langue russe dans les réglages de voix.
-    La voix est synthétique : elle aide à la prononciation, mais rien ne remplace un échange avec une personne russophone.
-  </Alert>
+  <p class="lead">{lecons.length} leçons courtes, sans alphabet à apprendre d’abord : vous écoutez, vous répétez, vous vous entraînez avec un quiz.</p>
+  <ListeLecons lecons={lecons} base="/lecons" langue={{ nom: 'russe', code: 'ru-RU' }} />
 </Base>

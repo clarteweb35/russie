@@ -1,0 +1,15 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import ListeLecons from '../../../../components/ListeLecons.astro';
+import { paysComplets } from '../../../../data/pays';
+
+export function getStaticPaths() {
+  return paysComplets.map((p) => ({ params: { pays: p.slug }, props: { p } }));
+}
+const { p } = Astro.props;
+---
+<Base title={`Leçons de ${p.langue.nom}`} marque={`Guide ${p.nom}`} pays={p} verifie={p.verifie}>
+  <h1>Leçons de {p.langue.nom} essentielles</h1>
+  <p class="lead">{p.lecons.length} leçons courtes : vous écoutez, vous répétez, vous vous entraînez avec un quiz.</p>
+  <ListeLecons lecons={p.lecons} base={`/pays/${p.slug}/lecons`} langue={p.langue} couleur={p.couleur} />
+</Base>

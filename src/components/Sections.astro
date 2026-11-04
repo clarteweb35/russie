@@ -1,0 +1,36 @@
+---
+// Rend les sections d'une rubrique de guide pays (titre, badge, blocs, sources).
+import Badge from './Badge.astro';
+import Alert from './Alert.astro';
+import type { Section } from '../data/pays/types';
+
+interface Props { sections: Section[] }
+const { sections } = Astro.props;
+---
+{sections.map((s) => (
+  <>
+    <h2 id={s.id}>{s.titre}{s.badge && <> <Badge type={s.badge.type}>{s.badge.texte}</Badge></>}</h2>
+    {s.blocs.map((b) => {
+      if (b.type === 'p') return <p set:html={b.html} />;
+      if (b.type === 'liste') return <ul>{b.items.map((i) => <li set:html={i} />)}</ul>;
+      if (b.type === 'tableau') {
+        return (
+          <table>
+            <tr>{b.entetes.map((h) => <th>{h}</th>)}</tr>
+            {b.lignes.map((l) => <tr>{l.map((c) => <td set:html={c} />)}</tr>)}
+          </table>
+        );
+      }
+      return <Alert titre={b.titre} warn={b.warn}><Fragment set:html={b.html} /></Alert>;
+    })}
+    {s.sources && s.sources.length > 0 && (
+      <p class="src">
+        Sources :{' '}
+        {s.sources.map((src, i) => (
+          <>{i > 0 && ' ; '}<a href={src.url} rel="noopener">{src.label}</a>{src.nature && ` (${src.nature})`}</>
+        ))}
+      </p>
+    )}
+    {s.note && <p class="src">{s.note}</p>}
+  </>
+))}
