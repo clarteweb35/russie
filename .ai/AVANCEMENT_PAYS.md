@@ -1,6 +1,6 @@
 # Avancement des fiches pays
 
-Fichier de suivi des guides pays. Dernière mise à jour : 4 novembre 2026, après le lot 3 (vague 1 terminée, vague 2 en cours).
+Fichier de suivi des guides pays. Dernière mise à jour : 4 novembre 2026, après le lot 4 (vagues 1 et 2 terminées).
 Liste raisonnée des pays envisagés : `.ai/PAYS_PREVUS.md`. Suivi général du projet : `.ai/AVANCEMENT.md`.
 
 ## Comment lire ce fichier
@@ -34,9 +34,9 @@ Liste raisonnée des pays envisagés : `.ai/PAYS_PREVUS.md`. Suivi général du 
 | **Portugal** | 2 | test | oui | 6, portugais | 4 | Bonne pour l'entrée (fiche officielle du 30 juin 2026), reste privé |
 | **Italie** | 2 | test | oui | 6, italien | 4 | Faible : fiche officielle non lue |
 | **Grèce** | 2 | test | oui | 6, grec | 4 | Moyenne : extrait de fiche officielle (entrée, assurance) |
-| Pologne | 2 | **à faire** | non | | | |
-| Suisse | 2 | **à faire** | non | | | |
-| Royaume-Uni | 2 | **à faire** | non | | | |
+| **Pologne** | 2 | test | oui | 6, polonais | 4 | Bonne pour l’entrée et la frontière (extraits de fiche officielle, avril 2026), reste privé |
+| **Suisse** | 2 | test | oui | 6, allemand (formules suisses) | 4 | Moyenne : portail officiel suisse pour l’entrée, séjour via sites privés |
+| **Royaume-Uni** | 2 | test | oui | 6, anglais | 4 | Faible : passeport et ETA via presse spécialisée, gov.uk non lu |
 
 ## Détail des fiches du lot 1 (4 novembre 2026)
 
@@ -116,13 +116,38 @@ Liste raisonnée des pays envisagés : `.ai/PAYS_PREVUS.md`. Suivi général du 
 - **À documenter** : sécurité (zones d'alerte, Sahara occidental, frontière algérienne), argent, santé, logement, procédure auprès de l'agence nationale pour l'emploi.
 - **Reste** : lire la fiche officielle ; relire les leçons de darija (phrases limitées, à valider par un locuteur).
 
+## Détail des fiches du lot 4 (4 novembre 2026, fin de la vague 2)
+
+### Pologne
+- **Sûr (source officielle, extraits)** : passeport ou carte d'identité valides ; justificatif de ressources possible à l'entrée ; contrôles d'identité et ralentissements aux frontières terrestres Schengen ; vigilance particulière près des frontières avec les pays hors Union européenne ; fiche mise à jour en avril 2026.
+- **À confirmer** : enregistrement du séjour de plus de 3 mois auprès de la voïvodie ; PESEL (au-delà de 30 jours, ne donne pas le droit de travailler) ; NFZ et ZUS ; pas de permis de travail pour un Européen.
+- **À documenter** : situation exacte aux frontières avec l'Ukraine et la Biélorussie (points de passage fermés, non lus), argent, banque, logement, emploi.
+- **Reste** : lire la rubrique de sécurité complète ; confirmer les formulaires auprès de la voïvodie ; relire les leçons de polonais.
+
+### Suisse
+- **Sûr (sources officielles suisses)** : document de voyage reconnu (passeport ou carte d'identité) pour entrer, pas de visa mentionné pour un Français en séjour touristique ; validité des cartes d'identité françaises.
+- **À confirmer** : annonce à la commune sous 14 jours (un guide dit 3 mois) ; assurance maladie LAMal sous 3 mois ; permis L (3 à 12 mois) et B (contrat durable) ; annonce en ligne pour une mission de 3 mois ou moins.
+- **À documenter** : sécurité, argent (francs suisses), santé, banque, frontaliers (permis G), impôts, salaires.
+- **Reste** : lire la fiche française ; confirmer les délais auprès de la commune et du canton ; relire les leçons (allemand standard, dialecte suisse non traité).
+
+### Royaume-Uni
+- **Sûr** : rien de confirmé par une source officielle (fiche française et gov.uk non lues).
+- **À confirmer** : passeport obligatoire (contradiction avec une page Eurostar sur la carte d'identité) ; ETA obligatoire depuis le 2 avril 2025, valable 2 ans ; surtaxe santé et frais du visa Skilled Worker (chiffres de cabinets, non vérifiés) ; régime « EU Settlement Scheme » pour les arrivées d'avant 2021, non documenté.
+- **À documenter** : sécurité, argent, santé, banque, logement, impôts, emploi.
+- **Reste** : lire gov.uk et la fiche française ; ne demander l'ETA que sur le site officiel britannique ; relire les leçons.
+
+## Bilan de la vague 2
+
+7 pays sur 7 sont publiés en test : Maroc, Portugal, Italie, Grèce, Pologne, Suisse, Royaume-Uni. **Total : 21 guides (Russie, Finlande, 19 pays en test)** et 296 pages.
+
 ## Journal des commits
 
 | Date | Commit | Contenu |
 |---|---|---|
 | 4 novembre 2026 | `e0afda2` | Lot 1 : Géorgie, Turquie, Arménie, Kazakhstan, clés par pays, ce fichier |
 | 4 novembre 2026 | `d506c43` | Lot 2 : Serbie, Émirats, Thaïlande ; menu défilant |
-| 4 novembre 2026 | (à venir) | Lot 3 : Maroc, Portugal, Italie, Grèce ; élision des noms de langue |
+| 4 novembre 2026 | `b3d1570` | Lot 3 : Maroc, Portugal, Italie, Grèce ; élision des noms de langue |
+| 4 novembre 2026 | (à venir) | Lot 4 : Pologne, Suisse, Royaume-Uni (fin de la vague 2) |
 
 ## Ce qui est transversal et déjà en place
 
@@ -133,7 +158,7 @@ Liste raisonnée des pays envisagés : `.ai/PAYS_PREVUS.md`. Suivi général du 
 
 ## Reste à faire, tous pays confondus (par priorité)
 
-1. [x] Vague 1 terminée (7 pays). **Prochaine étape : vague 2** (Maroc, Portugal, Italie, Grèce, Pologne, Suisse, Royaume-Uni).
+1. [x] Vagues 1 et 2 terminées (14 pays). **Prochaine étape : vague 3** (Japon, Chine, Corée du Sud, Inde, Indonésie, Égypte), puis vague 4.
 2. [ ] **Faire relire les leçons par des locuteurs** (13 langues au total) : priorité au wolof, au vietnamien (tons), au géorgien, à l'arménien, au thaï et à l'arabe.
 3. [ ] **Lire les rubriques « Sécurité » des fiches officielles** et reporter les points sûrs (numéros d'urgence compris) : aucun numéro d'urgence n'est vérifié aujourd'hui.
 4. [ ] **Ajouter les secrets du topo** : `GEMINI_API_KEY_<PAYS>` pour chaque pays (3 existent : RUSSIE, FINLANDE, ALBANIE), ou une clé commune `GEMINI_API_KEY`.
@@ -141,3 +166,10 @@ Liste raisonnée des pays envisagés : `.ai/PAYS_PREVUS.md`. Suivi général du 
 6. [ ] Passer chaque fiche en « complète » (`test: false`) après relecture.
 7. [ ] Vagues 2 à 4 de `.ai/PAYS_PREVUS.md`.
 8. [ ] Rendre le convertisseur de devises générique (euro vers lari, dram, tenge, livre turque, dirham, baht...).
+
+## Idées d'amélioration du site pour beaucoup de pays
+
+- [ ] **Regrouper les pays par région** dans le menu « Autres pays » et sur la page `/pays/` (Europe, Caucase et Asie centrale, Afrique, Asie, Moyen-Orient) : 20 cartes à la suite deviennent difficiles à parcourir.
+- [ ] Champ de recherche ou filtre par critère (UE ou hors UE, visa, langue).
+- [ ] Rendre le convertisseur de devises générique (livre, franc suisse, zloty, dirham, baht...).
+- [ ] Vérifier le coût du build à 400 pages et plus.

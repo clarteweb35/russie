@@ -54,7 +54,7 @@ Alphabet cyrillique, phrases utiles, repères culturels.
 
 ### Autres pays `/pays/`
 - Menu « Autres pays » dans la navigation (liste déroulante, intégrée au menu hamburger sur mobile) et page `/pays/` qui liste les destinations.
-- Pays : Finlande (fiche complète) et Albanie, Espagne, Allemagne, Sénégal, Vietnam (**fiches en test**, non relues : bandeau « Fiche en test » sur chaque page du pays, mention « test » dans le menu et la liste). Autres pays envisagés : voir `.ai/PAYS_PREVUS.md`.
+- Pays : Finlande (fiche complète, non relue) et 19 fiches **en test**, non relues : Albanie, Espagne, Allemagne, Sénégal, Vietnam, Géorgie, Turquie, Arménie, Kazakhstan, Serbie, Émirats arabes unis, Thaïlande, Maroc, Portugal, Italie, Grèce, Pologne, Suisse, Royaume-Uni. Bandeau « Fiche en test » sur chaque page du pays, mention « test » dans le menu et la liste. Suivi pays par pays : `.ai/AVANCEMENT_PAYS.md` ; autres pays envisagés : `.ai/PAYS_PREVUS.md`.
 - Chaque fiche pays comprend aussi la liste de ses **médias locaux** (nature indicative : public, privé, d'État, indépendant), affichée dans « L'actu de la semaine ».
 - Pour chaque pays prêt : page d'accueil `/pays/<pays>/` (carte par rubrique), rubriques `voyager`, `vivre`, `travailler`, `paiements`, `langue-culture`, `lecons` (6 leçons audio + quiz) et `sources` (liste générée automatiquement depuis les sources citées dans les sections).
 - Bandeau d'en-tête propre au pays : lien vers les conseils officiels du ministère français pour ce pays (le bandeau d'alerte sur la Russie n'apparaît pas hors des pages russes).
@@ -121,5 +121,5 @@ Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fich
 
 ### 4 novembre 2026 : clés par pays + vague 1 des pays (Géorgie, Turquie, Arménie, Kazakhstan, Serbie, Émirats, Thaïlande)
 - **Fichiers** : `scripts/actualites.mjs`, `.github/workflows/actualites.yml`, `src/data/pays/*`, `scripts/actualites-pays.json`, `.ai/AVANCEMENT_PAYS.md`, `.ai/*`.
-- **Fait** : cadrage.
-- **Restant** : clés par pays, un pays à la fois (recherche, données, test), commit par lot, retrait de cette entrée en fin de chantier.
+- **Fait** : clés par pays ; vagues 1 et 2 (14 pays en test) ; suivi dans `.ai/AVANCEMENT_PAYS.md`.
+- **Restant** : vagues 3 et 4 de `.ai/PAYS_PREVUS.md`, puis retrait de cette entrée.

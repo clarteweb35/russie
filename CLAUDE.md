@@ -22,7 +22,7 @@ Le site est servi sous `/russie/` en local comme en production (`base` dans `ast
 - `src/config.ts` : `NOM_SITE` (nom affiché en en-tête), `MENTION_IA`/`legendeIA()` (images IA), `pagesLegales` (pied de page, sitemap), `sections` (menu, cartes, sitemap), `LAST_CHECK` (date globale), `VERIFICATIONS` (date propre à une page), `url()`.
 - `src/pages/*.astro` : une page par rubrique. `lecons/[slug].astro` génère les leçons depuis `src/data/lecons.js`.
 - `src/components/` : `Alert`, `Badge` (à utiliser pour tout encadré ou pastille, jamais le HTML en dur), `Quiz`, `Convertisseur`.
-- `src/data/pays/` : un fichier par pays (`finlande.ts`...), le modèle de données `types.ts` et le registre `index.ts`. Un pays « bientôt » y figure avec `complet: false`.
+- `src/data/pays/` : un fichier par pays (`finlande.ts`...), le modèle de données `types.ts`, le registre `index.ts` et les aides communes `aides.ts` (`diplo()`, `aDocumenter()`, `securiteALire()`...). Suivi pays par pays : `.ai/AVANCEMENT_PAYS.md`. Un pays « bientôt » y figure avec `complet: false`.
 - `src/pages/pays/` : les pages de tous les guides pays (accueil, rubriques, sources, leçons), générées depuis le registre. Ne jamais copier une page par pays.
 - `src/components/` : aussi `Sections` (rend le contenu d'un pays), `LeconDetail` et `ListeLecons` (leçons de la Russie et des pays).
 - `src/scripts/` : scripts navigateur (`lecon.ts` : audio et quiz).

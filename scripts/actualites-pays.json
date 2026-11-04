@@ -16,5 +16,8 @@
   {"slug":"maroc","pays":"Maroc","libelle":"le Maroc","langueLocale":"arabe et français"},
   {"slug":"portugal","pays":"Portugal","libelle":"le Portugal","langueLocale":"portugais"},
   {"slug":"italie","pays":"Italie","libelle":"l’Italie","langueLocale":"italien"},
-  {"slug":"grece","pays":"Grèce","libelle":"la Grèce","langueLocale":"grec"}
+  {"slug":"grece","pays":"Grèce","libelle":"la Grèce","langueLocale":"grec"},
+  {"slug":"pologne","pays":"Pologne","libelle":"la Pologne","langueLocale":"polonais"},
+  {"slug":"suisse","pays":"Suisse","libelle":"la Suisse","langueLocale":"français et allemand"},
+  {"slug":"royaume-uni","pays":"Royaume-Uni","libelle":"le Royaume-Uni","langueLocale":"anglais"}
 ]

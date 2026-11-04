@@ -152,3 +152,9 @@ Albanie, Espagne, Allemagne, Sénégal, Vietnam sont publiées avec le bandeau �
 
 ### Question ouverte
 - [ ] Noms des secrets de dépôt : l'utilisateur en a 3, la clé Gemini doit s'appeler `GEMINI_API_KEY` (sinon adapter `.github/workflows/actualites.yml`).
+
+## Guides pays : suivi dans un fichier dédié (4 novembre 2026)
+
+Le suivi détaillé (ce qui est fait, ce qui est sûr, ce qui reste, par pays) est dans **`.ai/AVANCEMENT_PAYS.md`**. À la fin de la session : 21 guides (Russie, Finlande, 19 fiches en test), 296 pages, vagues 1 et 2 de `.ai/PAYS_PREVUS.md` terminées.
+
+- Secrets du topo hebdomadaire : l'utilisateur a `GEMINI_API_KEY_RUSSIE`, `GEMINI_API_KEY_FINLANDE` et `GEMINI_API_KEY_ALBANIE`. Les autres pays sont ignorés tant qu'ils n'ont pas leur secret `GEMINI_API_KEY_<PAYS>` (tirets remplacés par des soulignés, ex. `GEMINI_API_KEY_ROYAUME_UNI`) ou qu'une clé commune `GEMINI_API_KEY` existe.
