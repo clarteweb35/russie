@@ -1,0 +1,39 @@
+---
+// Pas à pas pour installer une voix de synthèse (affiché quand le navigateur n'a pas de voix pour la langue).
+interface Props { langue: string }
+const { langue } = Astro.props;
+---
+<details class="guide-voix">
+  <summary>Comment ajouter la voix ?</summary>
+  <div class="guide-voix-corps">
+    <h4>Sur Windows 11</h4>
+    <ol>
+      <li>Ouvrez <em>Paramètres</em> puis <em>Heure et langue</em> et <em>Voix</em> (ou <em>Parole</em>).</li>
+      <li>Sous « Gérer les voix », cliquez sur <em>Ajouter des voix</em>.</li>
+      <li>Cherchez « {langue} », cochez une voix, puis validez.</li>
+      <li>Autre chemin : <em>Langue et région</em>, ajoutez la langue et gardez <em>Synthèse vocale</em> cochée pendant l’installation.</li>
+    </ol>
+
+    <h4>Sur Mac</h4>
+    <ol>
+      <li>Ouvrez <em>Réglages Système</em> puis <em>Accessibilité</em> et <em>Contenu énoncé</em>.</li>
+      <li>Dans « Voix système », choisissez <em>Gérer les voix…</em></li>
+      <li>Cherchez « {langue} » et cliquez sur l’icône de téléchargement (nuage) à côté d’une voix.</li>
+    </ol>
+
+    <h4>Sur iPhone ou iPad</h4>
+    <ol>
+      <li>Ouvrez <em>Réglages</em> puis <em>Accessibilité</em> et <em>Contenu énoncé</em>, puis <em>Voix</em>.</li>
+      <li>Choisissez « {langue} », puis touchez le bouton de téléchargement à côté d’une voix. Utilisez le Wi-Fi : certaines voix pèsent plus de 100 Mo.</li>
+    </ol>
+
+    <h4>Sur Android</h4>
+    <ol>
+      <li>Ouvrez <em>Paramètres</em> puis <em>Langue et saisie</em> et <em>Sortie de synthèse vocale</em> (sur certains téléphones : <em>Accessibilité</em>).</li>
+      <li>Touchez la roue dentée à côté du moteur préféré, puis <em>Installer les données vocales</em>.</li>
+      <li>Choisissez « {langue} » et téléchargez la voix. Si la langue n’apparaît pas, ajoutez-la d’abord dans <em>Langues</em>.</li>
+    </ol>
+
+    <p class="src">Ensuite : fermez complètement le navigateur, rouvrez-le, puis rechargez cette page. Les intitulés des menus changent selon la version de votre appareil : en cas de doute, cherchez « voix » ou « synthèse vocale » dans les réglages. Si aucune voix n’existe pour cette langue sur votre appareil, vous pouvez quand même lire le texte et la prononciation, et essayer un autre navigateur (Microsoft Edge propose souvent des voix en ligne pour de nombreuses langues, à confirmer).</p>
+  </div>
+</details>

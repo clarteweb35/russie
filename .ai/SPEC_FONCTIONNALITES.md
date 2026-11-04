@@ -50,7 +50,7 @@ Alphabet cyrillique, phrases utiles, repères culturels.
 - Audio par synthèse vocale du navigateur (voix `ru-RU`), avec lecture lente et « Tout écouter ».
 - Quiz d'écoute : 6 questions, 4 choix, score final.
 - Navigation précédente / suivante.
-- Sans voix russe disponible, un message l'explique.
+- Sans voix pour la langue de la leçon (russe, finnois…), un message l'explique et un pas à pas repliable « Comment ajouter la voix ? » détaille l'installation sur Windows, Mac, iPhone et Android (composant `GuideVoix`).
 
 ### Autres pays `/pays/`
 - Menu « Autres pays » dans la navigation (liste déroulante, intégrée au menu hamburger sur mobile) et page `/pays/` qui liste les destinations.

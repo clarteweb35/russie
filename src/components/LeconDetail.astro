@@ -3,6 +3,7 @@
 import Base from '../layouts/Base.astro';
 import Alert from './Alert.astro';
 import Quiz from './Quiz.astro';
+import GuideVoix from './GuideVoix.astro';
 import { url } from '../config';
 import type { Lecon } from '../data/pays/types';
 
@@ -31,6 +32,7 @@ const { lecon, index, prev, next, langue, base, marque, pays, verifie } = Astro.
     </div>
     <Alert warn id="voice-msg" hidden>
       Aucune voix pour le {langue.nom} n’a été trouvée sur cet appareil. Ajoutez le {langue.nom} dans les réglages de voix ou essayez un autre navigateur.
+      <GuideVoix langue={langue.nom} />
     </Alert>
 
     <ul class="phrases">

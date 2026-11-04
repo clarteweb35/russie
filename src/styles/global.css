@@ -309,3 +309,12 @@ footer { margin-top: 72px; padding: 36px 0 56px; color: var(--muted); font-size:
 
 /* page de leçon : le lien de retour ne chevauche pas la ligne « Vérifié le » */
 .meta + [data-lang] > .src:first-child { margin-top: 34px; }
+
+/* guide d'installation de la voix, dans l'avertissement des leçons */
+.guide-voix { margin-top: 10px; }
+.guide-voix summary { cursor: pointer; font-weight: 600; color: var(--accent); }
+.guide-voix-corps { margin-top: 10px; padding: 14px 16px; border-radius: 12px; background: var(--card); border: 1px solid var(--line); }
+.guide-voix h4 { margin: 14px 0 4px; font: 700 14px var(--sans); }
+.guide-voix h4:first-child { margin-top: 0; }
+.guide-voix ol { margin: 0 0 6px; padding-left: 22px; }
+.guide-voix li { margin-bottom: 4px; }
