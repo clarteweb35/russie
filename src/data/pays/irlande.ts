@@ -11,7 +11,6 @@ export const irlande = guideEurope({
   ],
   sourcesSupp: [
     { label: 'Law Society Gazette, passeport obligatoire pour les voyages vers la Grande-Bretagne', url: 'https://www.lawsociety.ie/gazette/top-stories/2026/feb/passport-now-mandatory-for-all-trips-to-britain/', nature: 'presse professionnelle' },
-    { label: 'Tourism Ireland, visas et passeports', url: 'https://www2.ireland.com/en-gb/help-and-advice/practical-information/visas-and-passports', nature: 'tourisme officiel irlandais' },
   ],
   introLangue: 'L’anglais est la langue de tous les jours ; l’irlandais (gaélique) est langue officielle et se voit sur les panneaux. L’accent irlandais est parfois difficile à suivre : n’hésitez pas à demander de répéter.',
   lecons: LECONS_ANGLAIS, astuce: 'En Irlande, « grand » veut souvent dire « très bien ». Prononciations approximatives.',

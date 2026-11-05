@@ -187,3 +187,9 @@ Liste raisonnée des pays envisagés : `.ai/PAYS_PREVUS.md`. Suivi général du 
 - 5 novembre 2026 : vague 4 (Canada, États-Unis, Mexique, Brésil, Madagascar, Île Maurice, Australie, Nouvelle-Zélande) en test, leçons d’anglais mutualisées (`src/data/pays/anglais.ts`). Non fait : Côte d’Ivoire (langue des leçons non sourcée). À surveiller : tarif et règles de l’ESTA américaine.
 
 - 5 novembre 2026 : Europe, 13 pays en test via la fonction commune `guideEurope` (`src/data/pays/europe.ts`) et des leçons partagées (`langues.ts`). Bulgarie : euro depuis le 1er janvier 2026. Irlande : règles propres vers le Royaume-Uni (ETA, passeport exigé par certaines compagnies).
+
+## Reste du monde (5 novembre 2026)
+- 134 pays générés par `monde-guides.ts` : tous les pays du monde (sauf la France) ont maintenant un guide en test.
+- Entrée sourcée (À confirmer) pour : Tunisie, Algérie, Afrique du Sud, Kenya, Tanzanie, République dominicaine, Malaisie, Singapour, Philippines, Népal, Laos. Les autres : « À documenter ».
+- Sans leçons : pays francophones d’Afrique, Éthiopie, Somalie, Érythrée, Cambodge, Laos, Birmanie, Mongolie, Bhoutan, Maldives, Timor oriental, Corée du Nord, Andorre, Monaco, Macédoine du Nord, Slovaquie, Slovénie, Haïti, Guinées.
+- À ajuster au bilan : sourcer l’entrée des pays prioritaires restants, relire les leçons, décider des pays à suivre par le topo hebdomadaire, vérifier les médias locaux (liens écrits de mémoire, non testés).

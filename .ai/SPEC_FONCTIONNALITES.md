@@ -60,6 +60,10 @@ Alphabet cyrillique, phrases utiles, repères culturels.
 - Sans voix pour la langue de la leçon (russe, finnois…), un message l'explique et un pas à pas repliable « Comment ajouter la voix ? » détaille l'installation sur Windows, Mac, iPhone et Android (composant `GuideVoix`).
 
 ### Guides détaillés `/pays/<pays>/…`
+- **Tous les pays du monde (sauf la France) ont un guide**, tous en « fiche en test ». Trois niveaux : (1) pays rédigés un par un (`src/data/pays/<pays>.ts`, dont l’Europe via `europe.ts`), (2) les 134 autres pays générés par `monde-guides.ts` : fiche, sécurité (renvoi à la fiche officielle), entrée (`monde-entrees.ts`, sourcée pour 11 pays, « À documenter » pour les autres), médias locaux, leçons seulement si un support de langue existe.
+- Les leçons de langue sont **facultatives** : sans support fiable (pays francophones d’Afrique, langues rares), la rubrique « Leçons » est masquée. Les leçons sont partagées entre pays de même langue (`anglais.ts`, `langues.ts`, `langues-monde.ts`).
+- Les pays où la situation de sécurité est grave affichent un encadré d’alerte renvoyant à la fiche officielle (`ALERTE_SECURITE` dans `src/data/monde/index.ts`) ; la liste est indicative, sans prétendre reproduire le classement officiel.
+- Pas de topo hebdomadaire pour les pays sans clé ni entrée dans `scripts/actualites-pays.json` (une soixantaine suivis).
 - Un menu propre au pays remplace l'ancienne liste « Autres pays » ; `/pays/` redirige vers l'accueil.
 - Pays : Finlande (fiche complète, non relue) et 57 fiches **en test**, non relues : Belgique, Pays-Bas, Autriche, Irlande, Danemark, Suède, Norvège, Islande, Croatie, Tchéquie, Hongrie, Roumanie, Bulgarie, Japon, Chine, Corée du Sud, Inde, Indonésie, Égypte, Canada, États-Unis, Mexique, Brésil, Madagascar, Île Maurice, Australie, Nouvelle-Zélande, Azerbaïdjan, Biélorussie, Estonie, Kirghizistan, Lettonie, Lituanie, Moldavie, Ouzbékistan, Tadjikistan, Turkménistan, Ukraine (ex-URSS, avec la même structure), Albanie, Espagne, Allemagne, Sénégal, Vietnam, Géorgie, Turquie, Arménie, Kazakhstan, Serbie, Émirats arabes unis, Thaïlande, Maroc, Portugal, Italie, Grèce, Pologne, Suisse, Royaume-Uni. Bandeau « Fiche en test » sur chaque page du pays, mention « test » dans le menu et la liste. Suivi pays par pays : `.ai/AVANCEMENT_PAYS.md` ; autres pays envisagés : `.ai/PAYS_PREVUS.md`.
 - Chaque fiche pays comprend aussi la liste de ses **médias locaux** (nature indicative : public, privé, d'État, indépendant), affichée dans « L'actu de la semaine ».
@@ -126,13 +130,4 @@ Liste des sources et de leur fiabilité.
 
 Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fichier) et retirée une fois terminée et mise en ligne. Chaque entrée : date, objectif, fichiers concernés, étapes faites et restantes.
 
-### 4 novembre 2026 : guides détaillés des 11 pays restants de l'ex-URSS, puis reste du monde
-- **Objectif** : Azerbaïdjan, Biélorussie, Estonie, Kirghizistan, Lettonie, Lituanie, Moldavie, Ouzbékistan, Tadjikistan, Turkménistan, Ukraine en guides « test » (sources citées, À documenter si rien de fiable), puis les autres pays par vagues.
-- **Fichiers** : `src/data/pays/<pays>.ts`, `src/data/pays/index.ts`, `scripts/actualites-pays.json`, `.ai/AVANCEMENT_PAYS.md`.
-- **Fait** : ex-URSS, vagues 3 et 4, puis 13 pays d’Europe, en ligne.
-- **Restant** : Côte d’Ivoire (langue des leçons non sourcée), reste de l’Europe (Slovaquie, Slovénie, Bosnie, Monténégro, Macédoine du Nord, Malte, Chypre, petits États), puis Asie, Afrique, Amériques, Océanie.
-
-### (précédent) 4 novembre 2026 : clés par pays + vague 1 des pays (Géorgie, Turquie, Arménie, Kazakhstan, Serbie, Émirats, Thaïlande)
-- **Fichiers** : `scripts/actualites.mjs`, `.github/workflows/actualites.yml`, `src/data/pays/*`, `scripts/actualites-pays.json`, `.ai/AVANCEMENT_PAYS.md`, `.ai/*`.
-- **Fait** : clés par pays ; vagues 1 et 2 (14 pays en test) ; suivi dans `.ai/AVANCEMENT_PAYS.md`.
-- **Restant** : vagues 3 et 4 de `.ai/PAYS_PREVUS.md`, puis retrait de cette entrée.
+Aucun travail en cours.
