@@ -7,7 +7,7 @@ import { parIso, contextePays } from '../../../../data/monde';
 
 
 export function getStaticPaths() {
-  return paysComplets.map((p) => ({ params: { pays: p.slug }, props: { p } }));
+  return paysComplets.filter((p) => p.lecons.length > 0).map((p) => ({ params: { pays: p.slug }, props: { p } }));
 }
 const { p } = Astro.props;
 const ctx = contextePays(parIso(p.iso)!);

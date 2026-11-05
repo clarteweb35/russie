@@ -18,7 +18,7 @@ export const GET: APIRoute = ({ site }) => {
     // Sous-pages des guides détaillés
     ...paysComplets.flatMap((p) => [
       `/pays/${p.slug}/sources`,
-      `/pays/${p.slug}/lecons`,
+      ...(p.lecons.length > 0 ? [`/pays/${p.slug}/lecons`] : []),
       ...p.rubriques.map((r) => `/pays/${p.slug}/${r.slug}`),
       ...p.lecons.map((l) => `/pays/${p.slug}/lecons/${l.slug}`),
     ]),

@@ -63,7 +63,7 @@ const autres = g ? g.rubriques.filter((r) => !['voyager', 'vivre'].includes(r.sl
     <p>{g ? g.accroche : `Fiche d’identité de ${p.nom}, monnaie et taux de change, conseils officiels du ministère français. Un guide détaillé (voyager, vivre, travailler, leçons de langue) reste à rédiger.`}</p>
     <div class="cta">
       {g
-        ? <><a class="btn" href={url(`${p.href}/voyager`)}>Voyager →</a><a class="btn-line" href={url(`${p.href}/lecons`)}>🎧 Apprendre {leNomDeLangue(g.langue.nom)}</a></>
+        ? <><a class="btn" href={url(`${p.href}/voyager`)}>Voyager →</a>{g.lecons.length > 0 && <a class="btn-line" href={url(`${p.href}/lecons`)}>🎧 Apprendre {leNomDeLangue(g.langue.nom)}</a>}</>
         : <><a class="btn" href="#securite">Conseils officiels →</a><a class="btn-line" href="#monnaie">Monnaie et change</a></>}
     </div>
   </section>
@@ -95,13 +95,13 @@ const autres = g ? g.rubriques.filter((r) => !['voyager', 'vivre'].includes(r.sl
           <p>{g.rubriques.find((r) => r.slug === 'vivre')?.resume}</p>
           <span class="more">Commencer →</span>
         </a>
-        <a class="step" href={url(`${p.href}/lecons`)}>
+        {g.lecons.length > 0 && (<a class="step" href={url(`${p.href}/lecons`)}>
           <img class="step-img" src={url(PARCOURS_GENERIQUES.langue.img)} alt={legendeIA(PARCOURS_GENERIQUES.langue.alt)} title={legendeIA(PARCOURS_GENERIQUES.langue.alt)} loading="lazy" />
           <span class="num">3</span>
           <h3>Apprendre {leNomDeLangue(g.langue.nom)}</h3>
           <p>{g.lecons.length} leçons courtes avec audio et quiz d’écoute.</p>
           <span class="more">Commencer →</span>
-        </a>
+        </a>)}
       </div>
 
       <h2>Tout le guide</h2>
@@ -114,12 +114,12 @@ const autres = g ? g.rubriques.filter((r) => !['voyager', 'vivre'].includes(r.sl
             <span class="more">Ouvrir →</span>
           </a>
         ))}
-        <a class="card" href={url(`${p.href}/lecons`)}>
+        {g.lecons.length > 0 && (<a class="card" href={url(`${p.href}/lecons`)}>
           <div class="ico">🎧</div>
           <h3>Leçons {deNomDeLangue(g.langue.nom)}</h3>
           <p>{g.lecons.length} leçons courtes avec audio et quiz d’écoute.</p>
           <span class="more">Ouvrir →</span>
-        </a>
+        </a>)}
         <a class="card" href={url(`${p.href}/sources`)}>
           <div class="ico">📚</div>
           <h3>Sources</h3>

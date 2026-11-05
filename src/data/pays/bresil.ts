@@ -1,6 +1,7 @@
 import type { PaysComplet } from './types';
 import { diplo, securiteALire } from './aides';
 import { leconsType, rubriquesType } from './modele';
+import { PORTUGAIS } from './langues-monde';
 
 const D = diplo('bresil');
 
@@ -47,13 +48,6 @@ export const bresil: PaysComplet = {
     introLangue: 'Le portugais brésilien se prononce différemment du portugais du Portugal : voyelles plus ouvertes, « t » et « d » adoucis devant « i ». L’anglais est peu pratiqué hors du tourisme. Le « tu » et le « você » s’emploient largement.',
     langue: [],
   }),
-  lecons: leconsType({
-    salutations: [['Olá', 'ola'], ['Boa noite', 'boa noïtchi'], ['Obrigado', 'obrigadou'], ['Por favor', 'pour favor'], ['Com licença', 'kom lissènça'], ['Sim', 'sim'], ['Não', 'nãou'], ['Tchau', 'tchaou']],
-    presenter: [['Meu nome é…', 'mèou nomi é'], ['Eu sou da França', 'èou sô da frança'], ['Falo um pouco de português', 'falou oum pôkou dji portougués'], ['Você fala inglês?', 'vocè fala inglés'], ['Não entendi', 'nãou entendji']],
-    chiffres: [['um', 'oum'], ['dois', 'doïs'], ['três', 'très'], ['cinco', 'sinkou'], ['dez', 'dès'], ['Quanto custa?', 'kouantou koustâ']],
-    deplacer: [['Onde fica…?', 'ondji fika'], ['A estação', 'a ichtaçãou'], ['O aeroporto', 'ou aéroportou'], ['Uma passagem', 'ouma passajèm'], ['À esquerda', 'a ichkèrda'], ['À direita', 'a djirèïta'], ['Em frente', 'èm frèntchi']],
-    resto: [['Uma mesa para dois', 'ouma méza para doïs'], ['O cardápio, por favor', 'ou kardapiou pour favor'], ['Água', 'agoua'], ['Café', 'kafé'], ['A conta, por favor', 'a konta pour favor'], ['Eu gostaria de…', 'èou goustaria dji']],
-    urgences: [['Socorro!', 'sokorrou'], ['Chame a polícia!', 'chami a polissia'], ['Chame uma ambulância!', 'chami ouma ambouLansia'], ['Preciso de um médico', 'précizou dji oum médikou'], ['Estou perdido', 'ichtô pèrdjidou'], ['Onde fica a farmácia?', 'ondji fika a farmassia']],
-  }, 'Prononciations approximatives (portugais brésilien). Faites relire par un locuteur.'),
+  lecons: leconsType(PORTUGAIS, 'Prononciations approximatives (portugais brésilien). Faites relire par un locuteur.'),
   sourcesSupplementaires: [],
 };

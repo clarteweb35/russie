@@ -81,7 +81,7 @@ export const decalageTexte = (f: Fiche) => {
 // Page générique des conseils du ministère, quand un pays n'a pas sa propre page
 export const CONSEILS_GENERIQUES = 'https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/';
 // Pays en situation de sécurité exceptionnelle : la page renvoie en premier lieu à la fiche officielle
-export const ALERTE_SECURITE = new Set(['UKR', 'BLR']);
+export const ALERTE_SECURITE = new Set(['UKR', 'BLR', 'AFG', 'IRQ', 'IRN', 'ISR', 'LBN', 'LBY', 'MLI', 'BFA', 'NER', 'SDN', 'SSD', 'SOM', 'SYR', 'YEM', 'CAF', 'HTI', 'PRK', 'MMR', 'TCD', 'COD']);
 
 export const conseilsDe = (f: Fiche) => f.diplo?.securite ?? CONSEILS_GENERIQUES;
 
@@ -101,7 +101,7 @@ export const contextePays = (f: FicheMonde) => {
     ...(g
       ? [
           ...g.rubriques.map((r) => ({ label: LIBELLES[r.slug] ?? r.titre, href: `${f.href}/${r.slug}` })),
-          { label: 'Leçons', href: `${f.href}/lecons` },
+          ...(g.lecons.length > 0 ? [{ label: 'Leçons', href: `${f.href}/lecons` }] : []),
           { label: 'Sources', href: `${f.href}/sources` },
         ]
       : [{ label: 'Monnaie', href: `${f.href}#monnaie` }, { label: 'Sécurité', href: `${f.href}#securite` }]),

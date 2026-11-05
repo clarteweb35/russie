@@ -1,6 +1,7 @@
 import type { PaysComplet } from './types';
 import { diplo, securiteALire } from './aides';
 import { leconsType, rubriquesType } from './modele';
+import { ESPAGNOL } from './langues-monde';
 
 const D = diplo('mexique');
 
@@ -47,13 +48,6 @@ export const mexique: PaysComplet = {
     introLangue: 'L’espagnol du Mexique est clair et se comprend facilement. Les Mexicains apprécient qu’on tente quelques mots. L’anglais est courant dans les zones touristiques, moins ailleurs.',
     langue: [],
   }),
-  lecons: leconsType({
-    salutations: [['Hola', 'ola'], ['Buenas noches', 'bouénass notchèss'], ['Gracias', 'grassiass'], ['Por favor', 'por favor'], ['Disculpe', 'diskoulpé'], ['Sí', 'si'], ['No', 'no'], ['Adiós', 'adioss']],
-    presenter: [['Me llamo…', 'mé yamo'], ['Soy de Francia', 'soï dé franssia'], ['Hablo un poco de español', 'ablo oun poko dé espagnol'], ['¿Habla inglés?', 'abla inglèss'], ['No entendí', 'no entendi']],
-    chiffres: [['uno', 'ouno'], ['dos', 'doss'], ['tres', 'tress'], ['cinco', 'sinko'], ['diez', 'diéss'], ['¿Cuánto cuesta?', 'couanto couesta']],
-    deplacer: [['¿Dónde está…?', 'donndé esta'], ['La estación', 'la estassion'], ['El aeropuerto', 'èl aéropouerto'], ['Un boleto', 'oun boléto'], ['A la izquierda', 'a la iskierda'], ['A la derecha', 'a la dérétcha'], ['Todo derecho', 'todo dérétcho']],
-    resto: [['Una mesa para dos', 'ouna mésa para doss'], ['El menú, por favor', 'èl ménou por favor'], ['Agua', 'agoua'], ['Café', 'kafé'], ['La cuenta, por favor', 'la couenta por favor'], ['Quisiera…', 'kissièra']],
-    urgences: [['¡Ayuda!', 'ayouda'], ['¡Llame a la policía!', 'yamé a la polissia'], ['¡Llame a una ambulancia!', 'yamé a ouna ambouliancia'], ['Necesito un médico', 'nécessito oun médico'], ['Estoy perdido', 'estoï pèrdido'], ['¿Dónde hay una farmacia?', 'donndé aï ouna farmassia']],
-  }, 'L’espagnol ressemble au français sur beaucoup de mots. Faites relire ces prononciations par un locuteur.'),
+  lecons: leconsType(ESPAGNOL, 'L’espagnol ressemble au français sur beaucoup de mots. Faites relire ces prononciations par un locuteur.'),
   sourcesSupplementaires: [],
 };

@@ -1,6 +1,7 @@
 import type { PaysComplet } from './types';
 import { diplo, securiteALire } from './aides';
 import { leconsType, rubriquesType } from './modele';
+import { ARABE } from './langues-monde';
 
 const D = diplo('egypte');
 
@@ -50,13 +51,6 @@ export const egypte: PaysComplet = {
     introLangue: 'La langue officielle est l’arabe, écrit de droite à gauche. Les Égyptiens parlent un dialecte propre, compris dans une grande partie du monde arabe. L’anglais est courant dans le tourisme. Les phrases ci-dessous sont en arabe standard, simples et comprises.',
     langue: [],
   }),
-  lecons: leconsType({
-    salutations: [['مرحبا', 'marhaba'], ['مساء الخير', 'massa al-khaïr'], ['شكرا', 'choukran'], ['من فضلك', 'min fadlak'], ['عفوا', 'afwan'], ['نعم', 'naam'], ['لا', 'la'], ['مع السلامة', 'maa salama']],
-    presenter: [['اسمي…', 'ismi'], ['أنا من فرنسا', 'ana min faransa'], ['أتكلم القليل من العربية', 'atakallam al-qalil min al-arabiya'], ['هل تتكلم الإنجليزية؟', 'hal tatakallam al-ingliziya'], ['لم أفهم', 'lam afham']],
-    chiffres: [['واحد', 'wahid'], ['اثنان', 'ithnan'], ['ثلاثة', 'thalatha'], ['خمسة', 'khamsa'], ['عشرة', 'achara'], ['بكم هذا؟', 'bikam hada']],
-    deplacer: [['أين…؟', 'ayna'], ['محطة القطار', 'mahattat al-qitar'], ['المطار', 'al-matar'], ['تذكرة', 'tadhkira'], ['يسار', 'yassar'], ['يمين', 'yamin'], ['على طول', 'ala toul']],
-    resto: [['طاولة لشخصين', 'tawila li-chakhsayn'], ['القائمة من فضلك', 'al-qa’ima min fadlak'], ['ماء', 'maa'], ['قهوة', 'qahwa'], ['الحساب من فضلك', 'al-hissab min fadlak'], ['أريد…', 'ouridou']],
-    urgences: [['النجدة!', 'an-najda'], ['اتصل بالشرطة!', 'ittassil bi-chourta'], ['اتصل بالإسعاف!', 'ittassil bi-l-issaf'], ['أحتاج إلى طبيب', 'ahtaj ila tabib'], ['أنا ضائع', 'ana daï’'], ['أين الصيدلية؟', 'ayna as-saydaliya']],
-  }, 'Prononciations approximatives (arabe standard). Les Égyptiens disent souvent « shukran » pour merci. Faites relire par un locuteur.'),
+  lecons: leconsType(ARABE, 'Prononciations approximatives (arabe standard). Les Égyptiens disent souvent « shukran » pour merci. Faites relire par un locuteur.'),
   sourcesSupplementaires: [],
 };
