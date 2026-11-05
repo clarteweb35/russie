@@ -44,5 +44,18 @@
   {"slug":"madagascar","pays":"Madagascar","libelle":"Madagascar","langueLocale":"malgache et français"},
   {"slug":"ile-maurice","pays":"Île Maurice","libelle":"l’île Maurice","langueLocale":"anglais, français et créole"},
   {"slug":"australie","pays":"Australie","libelle":"l’Australie","langueLocale":"anglais"},
-  {"slug":"nouvelle-zelande","pays":"Nouvelle-Zélande","libelle":"la Nouvelle-Zélande","langueLocale":"anglais et maori"}
+  {"slug":"nouvelle-zelande","pays":"Nouvelle-Zélande","libelle":"la Nouvelle-Zélande","langueLocale":"anglais et maori"},
+  {"slug":"belgique","pays":"Belgique","libelle":"la Belgique","langueLocale":"français et néerlandais"},
+  {"slug":"pays-bas","pays":"Pays-Bas","libelle":"les Pays-Bas","langueLocale":"néerlandais"},
+  {"slug":"autriche","pays":"Autriche","libelle":"l’Autriche","langueLocale":"allemand"},
+  {"slug":"irlande","pays":"Irlande","libelle":"l’Irlande","langueLocale":"anglais"},
+  {"slug":"danemark","pays":"Danemark","libelle":"le Danemark","langueLocale":"danois"},
+  {"slug":"suede","pays":"Suède","libelle":"la Suède","langueLocale":"suédois"},
+  {"slug":"norvege","pays":"Norvège","libelle":"la Norvège","langueLocale":"norvégien"},
+  {"slug":"islande","pays":"Islande","libelle":"l’Islande","langueLocale":"islandais"},
+  {"slug":"croatie","pays":"Croatie","libelle":"la Croatie","langueLocale":"croate"},
+  {"slug":"tchequie","pays":"Tchéquie","libelle":"la Tchéquie","langueLocale":"tchèque"},
+  {"slug":"hongrie","pays":"Hongrie","libelle":"la Hongrie","langueLocale":"hongrois"},
+  {"slug":"roumanie","pays":"Roumanie","libelle":"la Roumanie","langueLocale":"roumain"},
+  {"slug":"bulgarie","pays":"Bulgarie","libelle":"la Bulgarie","langueLocale":"bulgare"}
 ]

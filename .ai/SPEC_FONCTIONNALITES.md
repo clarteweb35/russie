@@ -61,7 +61,7 @@ Alphabet cyrillique, phrases utiles, repères culturels.
 
 ### Guides détaillés `/pays/<pays>/…`
 - Un menu propre au pays remplace l'ancienne liste « Autres pays » ; `/pays/` redirige vers l'accueil.
-- Pays : Finlande (fiche complète, non relue) et 44 fiches **en test**, non relues : Japon, Chine, Corée du Sud, Inde, Indonésie, Égypte, Canada, États-Unis, Mexique, Brésil, Madagascar, Île Maurice, Australie, Nouvelle-Zélande, Azerbaïdjan, Biélorussie, Estonie, Kirghizistan, Lettonie, Lituanie, Moldavie, Ouzbékistan, Tadjikistan, Turkménistan, Ukraine (ex-URSS, avec la même structure), Albanie, Espagne, Allemagne, Sénégal, Vietnam, Géorgie, Turquie, Arménie, Kazakhstan, Serbie, Émirats arabes unis, Thaïlande, Maroc, Portugal, Italie, Grèce, Pologne, Suisse, Royaume-Uni. Bandeau « Fiche en test » sur chaque page du pays, mention « test » dans le menu et la liste. Suivi pays par pays : `.ai/AVANCEMENT_PAYS.md` ; autres pays envisagés : `.ai/PAYS_PREVUS.md`.
+- Pays : Finlande (fiche complète, non relue) et 57 fiches **en test**, non relues : Belgique, Pays-Bas, Autriche, Irlande, Danemark, Suède, Norvège, Islande, Croatie, Tchéquie, Hongrie, Roumanie, Bulgarie, Japon, Chine, Corée du Sud, Inde, Indonésie, Égypte, Canada, États-Unis, Mexique, Brésil, Madagascar, Île Maurice, Australie, Nouvelle-Zélande, Azerbaïdjan, Biélorussie, Estonie, Kirghizistan, Lettonie, Lituanie, Moldavie, Ouzbékistan, Tadjikistan, Turkménistan, Ukraine (ex-URSS, avec la même structure), Albanie, Espagne, Allemagne, Sénégal, Vietnam, Géorgie, Turquie, Arménie, Kazakhstan, Serbie, Émirats arabes unis, Thaïlande, Maroc, Portugal, Italie, Grèce, Pologne, Suisse, Royaume-Uni. Bandeau « Fiche en test » sur chaque page du pays, mention « test » dans le menu et la liste. Suivi pays par pays : `.ai/AVANCEMENT_PAYS.md` ; autres pays envisagés : `.ai/PAYS_PREVUS.md`.
 - Chaque fiche pays comprend aussi la liste de ses **médias locaux** (nature indicative : public, privé, d'État, indépendant), affichée dans « L'actu de la semaine ».
 - Pour chaque pays prêt : page d'accueil `/pays/<pays>/` (carte par rubrique), rubriques `voyager`, `vivre`, `travailler`, `paiements`, `langue-culture`, `lecons` (6 leçons audio + quiz) et `sources` (liste générée automatiquement depuis les sources citées dans les sections).
 - Bandeau d'en-tête propre au pays : lien vers les conseils officiels du ministère français pour ce pays (le bandeau d'alerte sur la Russie n'apparaît pas hors des pages russes).
@@ -129,8 +129,8 @@ Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fich
 ### 4 novembre 2026 : guides détaillés des 11 pays restants de l'ex-URSS, puis reste du monde
 - **Objectif** : Azerbaïdjan, Biélorussie, Estonie, Kirghizistan, Lettonie, Lituanie, Moldavie, Ouzbékistan, Tadjikistan, Turkménistan, Ukraine en guides « test » (sources citées, À documenter si rien de fiable), puis les autres pays par vagues.
 - **Fichiers** : `src/data/pays/<pays>.ts`, `src/data/pays/index.ts`, `scripts/actualites-pays.json`, `.ai/AVANCEMENT_PAYS.md`.
-- **Fait** : les 11 pays de l’ex-URSS, puis les vagues 3 et 4 (14 pays), en ligne.
-- **Restant** : Côte d’Ivoire (pas de source fiable pour sa langue de leçons), puis les autres pays par région.
+- **Fait** : ex-URSS, vagues 3 et 4, puis 13 pays d’Europe, en ligne.
+- **Restant** : Côte d’Ivoire (langue des leçons non sourcée), reste de l’Europe (Slovaquie, Slovénie, Bosnie, Monténégro, Macédoine du Nord, Malte, Chypre, petits États), puis Asie, Afrique, Amériques, Océanie.
 
 ### (précédent) 4 novembre 2026 : clés par pays + vague 1 des pays (Géorgie, Turquie, Arménie, Kazakhstan, Serbie, Émirats, Thaïlande)
 - **Fichiers** : `scripts/actualites.mjs`, `.github/workflows/actualites.yml`, `src/data/pays/*`, `scripts/actualites-pays.json`, `.ai/AVANCEMENT_PAYS.md`, `.ai/*`.

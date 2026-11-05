@@ -185,3 +185,5 @@ Liste raisonnée des pays envisagés : `.ai/PAYS_PREVUS.md`. Suivi général du 
 - 5 novembre 2026 : vague 3 (Japon, Chine, Corée du Sud, Inde, Indonésie, Égypte) en test. Entrée sourcée (À confirmer) ; dates d’expiration à surveiller : exemption chinoise et dispense K-ETA coréenne jusqu’au 31 décembre 2026, hausse du visa égyptien au 1er janvier 2027.
 
 - 5 novembre 2026 : vague 4 (Canada, États-Unis, Mexique, Brésil, Madagascar, Île Maurice, Australie, Nouvelle-Zélande) en test, leçons d’anglais mutualisées (`src/data/pays/anglais.ts`). Non fait : Côte d’Ivoire (langue des leçons non sourcée). À surveiller : tarif et règles de l’ESTA américaine.
+
+- 5 novembre 2026 : Europe, 13 pays en test via la fonction commune `guideEurope` (`src/data/pays/europe.ts`) et des leçons partagées (`langues.ts`). Bulgarie : euro depuis le 1er janvier 2026. Irlande : règles propres vers le Royaume-Uni (ETA, passeport exigé par certaines compagnies).

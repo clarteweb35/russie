@@ -1,6 +1,7 @@
 import type { PaysComplet } from './types';
 import { diplo, securiteALire } from './aides';
 import { leconsType, rubriquesType } from './modele';
+import { ROUMAIN } from './langues';
 
 const D = diplo('moldavie');
 
@@ -46,13 +47,6 @@ export const moldavie: PaysComplet = {
     introLangue: 'La langue officielle est le roumain (appelé « moldave » dans certains textes). Le russe est très répandu. Le roumain s’écrit avec l’alphabet latin et est proche des langues latines : un francophone en reconnaît beaucoup de mots.',
     langue: [],
   }),
-  lecons: leconsType({
-    salutations: [['Bună ziua', 'bouna ziwa'], ['Bună seara', 'bouna sara'], ['Mulțumesc', 'moultsoumèsk'], ['Vă rog', 'vè rog'], ['Scuzați-mă', 'skouzatsi mè'], ['Da', 'da'], ['Nu', 'nou'], ['La revedere', 'la révédéré']],
-    presenter: [['Mă numesc…', 'mè noumèsk'], ['Sunt din Franța', 'sount din frantsa'], ['Vorbesc puțin românește', 'vorbèsk poutsin romenèchté'], ['Vorbiți engleză?', 'vorbitsi èngléza'], ['Nu am înțeles', 'nou am intsélès']],
-    chiffres: [['unu', 'ounou'], ['doi', 'doï'], ['trei', 'trèï'], ['cinci', 'tchintchi'], ['zece', 'zètché'], ['Cât costă?', 'kit kosta']],
-    deplacer: [['Unde este…?', 'oundé yèssté'], ['Gara', 'gara'], ['Aeroportul', 'aéroportoul'], ['Un bilet', 'oun bilèt'], ['La stânga', 'la stinga'], ['La dreapta', 'la dryapta'], ['Drept înainte', 'drèpt inaïnté']],
-    resto: [['O masă pentru doi', 'o massa pèntrou doï'], ['Meniul, vă rog', 'mènioul vè rog'], ['Apă', 'apa'], ['O cafea', 'o kafya'], ['Nota, vă rog', 'nota vè rog'], ['Aș dori…', 'ach dori']],
-    urgences: [['Ajutor!', 'ajoutor'], ['Chemați poliția!', 'kémats politsia'], ['Chemați o ambulanță!', 'kémats o amboulantsa'], ['Am nevoie de un medic', 'am névoyé dé oun médik'], ['Sunt pierdut', 'sount pyèrdout'], ['Unde este farmacia?', 'oundé yèssté farmassia']],
-  }, 'Un francophone comprend déjà beaucoup de mots. Le russe est aussi très utile (voir les leçons de russe). Faites relire par un locuteur.'),
+  lecons: leconsType(ROUMAIN, 'Un francophone comprend déjà beaucoup de mots. Le russe est aussi très utile (voir les leçons de russe). Faites relire par un locuteur.'),
   sourcesSupplementaires: [],
 };
