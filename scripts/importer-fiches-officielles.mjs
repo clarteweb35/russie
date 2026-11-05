@@ -5,7 +5,7 @@ import fs from 'node:fs';
 
 const SORTIE = new URL('../src/data/monde/officiel.json', import.meta.url);
 const PAYS = JSON.parse(fs.readFileSync(new URL('../src/data/monde/pays.json', import.meta.url), 'utf8'));
-const RUBRIQUES = { securite: 'conseils-aux-voyageurs-securite', entree: 'conseils-aux-voyageurs-entree-sejour', sante: 'conseils-aux-voyageurs-sante', utiles: 'conseils-aux-voyageurs-informations-utiles', contacts: 'conseils-aux-voyageurs-contacts-utiles' };
+const RUBRIQUES = { securite: 'conseils-aux-voyageurs-securite', entree: 'conseils-aux-voyageurs-entree-sejour', sante: 'conseils-aux-voyageurs-sante', utiles: 'conseils-aux-voyageurs-informations-utiles', contacts: 'conseils-aux-voyageurs-contacts-utiles', affaires: 'conseils-aux-voyageurs-voyages-d-affaires' };
 
 const nettoyer = (t) =>
   t.replace(/&nbsp;|&#160;/g, ' ').replace(/&#0?39;|&rsquo;|&apos;/g, '’').replace(/&amp;/g, '&').replace(/&quot;/g, '"')
