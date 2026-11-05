@@ -59,10 +59,11 @@ import { hongrie } from './hongrie';
 import { roumanie } from './roumanie';
 import { bulgarie } from './bulgarie';
 import { guidesMonde } from './monde-guides';
+import { avecOfficiel } from './officiel';
 
 // Guides détaillés (rubriques, leçons, sources). Les autres pays du monde n'ont qu'une fiche d'identité : voir src/data/monde/.
 // Un pays `test: true` est publié avec la mention « fiche en test ».
-export const pays: Pays[] = [finlande, albanie, espagne, allemagne, senegal, vietnam, georgie, turquie, armenie, kazakhstan, serbie, emirats, thailande, maroc, portugal, italie, grece, pologne, suisse, royaumeUni, estonie, lettonie, lituanie, azerbaidjan, bielorussie, kirghizistan, moldavie, ouzbekistan, tadjikistan, turkmenistan, ukraine, japon, chine, coreeDuSud, inde, indonesie, egypte, canada, etatsUnis, mexique, bresil, madagascar, ileMaurice, australie, nouvelleZelande, belgique, paysBas, autriche, irlande, danemark, suede, norvege, islande, croatie, tchequie, hongrie, roumanie, bulgarie, ...guidesMonde];
+export const pays: Pays[] = [finlande, albanie, espagne, allemagne, senegal, vietnam, georgie, turquie, armenie, kazakhstan, serbie, emirats, thailande, maroc, portugal, italie, grece, pologne, suisse, royaumeUni, estonie, lettonie, lituanie, azerbaidjan, bielorussie, kirghizistan, moldavie, ouzbekistan, tadjikistan, turkmenistan, ukraine, japon, chine, coreeDuSud, inde, indonesie, egypte, canada, etatsUnis, mexique, bresil, madagascar, ileMaurice, australie, nouvelleZelande, belgique, paysBas, autriche, irlande, danemark, suede, norvege, islande, croatie, tchequie, hongrie, roumanie, bulgarie, ...guidesMonde].map((p) => (p.complet ? avecOfficiel(p) : p));
 
 export const paysComplets = pays.filter((p): p is PaysComplet => p.complet);
 

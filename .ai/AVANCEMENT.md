@@ -96,6 +96,10 @@ Dernière mise à jour : 4 novembre 2026. Ce fichier est mis à jour à la fin d
 - [ ] Vérifier l'adresse de l'hébergeur (GitHub, Inc.) citée dans les mentions légales.
 - [ ] Confirmer l'origine de toutes les images : la mention « image générée par IA » est appliquée à toutes, accueil compris.
 
+## Fiches officielles automatiques (5 novembre 2026)
+
+Tous les guides pays reprennent désormais sécurité, entrée, santé, usages et contacts depuis les fiches du ministère (voir `.ai/AVANCEMENT_PAYS.md`). Prochaine étape : documenter vivre, travailler, paiements pour les destinations les plus visitées.
+
 ## Guides pays (chantier du 4 novembre 2026)
 
 Décisions de l'utilisateur : **pays pilote d'abord** (Finlande), puis les autres avec le même modèle ; **cours de langue avec audio quand l'appareil a une voix**, message sinon.

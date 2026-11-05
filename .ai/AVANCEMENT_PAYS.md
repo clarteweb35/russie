@@ -193,3 +193,11 @@ Liste raisonnée des pays envisagés : `.ai/PAYS_PREVUS.md`. Suivi général du 
 - Entrée sourcée (À confirmer) pour : Tunisie, Algérie, Afrique du Sud, Kenya, Tanzanie, République dominicaine, Malaisie, Singapour, Philippines, Népal, Laos. Les autres : « À documenter ».
 - Sans leçons : pays francophones d’Afrique, Éthiopie, Somalie, Érythrée, Cambodge, Laos, Birmanie, Mongolie, Bhoutan, Maldives, Timor oriental, Corée du Nord, Andorre, Monaco, Macédoine du Nord, Slovaquie, Slovénie, Haïti, Guinées.
 - À ajuster au bilan : sourcer l’entrée des pays prioritaires restants, relire les leçons, décider des pays à suivre par le topo hebdomadaire, vérifier les médias locaux (liens écrits de mémoire, non testés).
+
+## Fiches officielles automatiques (5 novembre 2026)
+
+- `scripts/importer-fiches-officielles.mjs` lit les rubriques Sécurité, Entrée/séjour, Santé, Informations utiles et Contacts utiles des 182 fiches du ministère (licence Etalab 2.0) ; `officiel.ts` les injecte dans tous les guides (badge « Vérifié » si fiche de moins de 13 mois).
+- Effet : la règle « sécurité à lire par un humain » ne vaut plus pour ces pays : le texte officiel est affiché. Le contenu n’a pas été relu mot à mot ; il est cité tel quel avec sa date.
+- Reste « À documenter » pour tous : vivre (séjour long, banque, logement), travailler, moyens de paiement. Sources privées à chercher pays par pays.
+- Pays sans fiche ministère (12 environ : par exemple la France, certains territoires) : inchangés.
+- À refaire régulièrement : relancer l’import (les fiches changent) puis `npm test`.

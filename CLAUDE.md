@@ -28,6 +28,7 @@ Le site est servi sous `/russie/` en local comme en production (`base` dans `ast
 - `src/data/pays/` : un fichier par pays (`finlande.ts`...), le modèle de données `types.ts`, le registre `index.ts` et les aides communes `aides.ts` (`diplo()`, `aDocumenter()`, `securiteALire()`...). Suivi pays par pays : `.ai/AVANCEMENT_PAYS.md`. Un pays « bientôt » y figure avec `complet: false`.
 - `src/pages/pays/` : les pages de tous les guides pays (accueil, rubriques, sources, leçons), générées depuis le registre. Ne jamais copier une page par pays.
 - `src/components/` : aussi `Sections` (rend le contenu d'un pays), `LeconDetail` et `ListeLecons` (leçons de la Russie et des pays).
+- Fiches officielles : `scripts/importer-fiches-officielles.mjs` récupère sécurité, entrée, santé, informations utiles et contacts du ministère (diplomatie.gouv.fr) dans `src/data/monde/officiel.json` (généré, ne pas éditer) ; `src/data/pays/officiel.ts` les injecte dans tous les guides. À relancer pour actualiser (mise à jour mensuelle conseillée).
 - `src/scripts/` : scripts navigateur (`lecon.ts` : audio et quiz).
 - `scripts/` (racine) : outils de développement (`verifier-liens.mjs`, `optimiser-images.mjs`, `actualites.mjs` (topo hebdomadaire, voir `.ai/AVANCEMENT.md`), `convertir-image.mjs` pour toute nouvelle image, avec recadrage optionnel `x,y,largeur,hauteur`).
 - `src/styles/global.css` : tous les styles, variables CSS en haut, thème sombre automatique.
