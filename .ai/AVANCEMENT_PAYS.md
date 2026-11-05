@@ -183,3 +183,5 @@ Liste raisonnée des pays envisagés : `.ai/PAYS_PREVUS.md`. Suivi général du 
 - 4 novembre 2026 : les 11 pays restants de l’ex-URSS ont leur guide en test (modèle commun `src/data/pays/modele.ts`) : Azerbaïdjan, Biélorussie, Estonie, Kirghizistan, Lettonie, Lituanie, Moldavie, Ouzbékistan, Tadjikistan, Turkménistan, Ukraine. Entrée : sources citées, À confirmer ; sécurité : fiche officielle à lire ; autres rubriques : À documenter ; leçons à faire relire par un locuteur.
 
 - 5 novembre 2026 : vague 3 (Japon, Chine, Corée du Sud, Inde, Indonésie, Égypte) en test. Entrée sourcée (À confirmer) ; dates d’expiration à surveiller : exemption chinoise et dispense K-ETA coréenne jusqu’au 31 décembre 2026, hausse du visa égyptien au 1er janvier 2027.
+
+- 5 novembre 2026 : vague 4 (Canada, États-Unis, Mexique, Brésil, Madagascar, Île Maurice, Australie, Nouvelle-Zélande) en test, leçons d’anglais mutualisées (`src/data/pays/anglais.ts`). Non fait : Côte d’Ivoire (langue des leçons non sourcée). À surveiller : tarif et règles de l’ESTA américaine.

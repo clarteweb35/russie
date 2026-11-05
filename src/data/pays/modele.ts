@@ -4,7 +4,8 @@ import { aDocumenter, cultureACompleter, paiementsACompleter } from './aides';
 // Modèle commun des guides rédigés à partir de peu de sources : les rubriques et les six leçons ont toujours la même forme.
 // Chaque pays ne fournit que ce qui lui est propre (sécurité, entrée, langue) ; le reste est marqué « À documenter ».
 
-type Paire = [string, string]; // [texte dans la langue du pays, prononciation à la française]
+// [texte dans la langue du pays, prononciation à la française, traduction française si elle diffère du modèle]
+type Paire = [string, string, string?];
 
 // Phrases françaises des six leçons, dans l'ordre : le pays fournit les traductions dans le même ordre.
 const FR = {
@@ -20,7 +21,7 @@ export type TraductionsLecons = { [K in keyof typeof FR]: Paire[] };
 
 const phrases = (cle: keyof typeof FR, t: TraductionsLecons): Phrase[] => {
   if (t[cle].length !== FR[cle].length) throw new Error(`Leçon « ${cle} » : ${FR[cle].length} phrases attendues, ${t[cle].length} reçues`);
-  return t[cle].map(([texte, prononciation], i) => [texte, prononciation, FR[cle][i]] as Phrase);
+  return t[cle].map(([texte, prononciation, fr], i) => [texte, prononciation, fr ?? FR[cle][i]] as Phrase);
 };
 
 export const leconsType = (t: TraductionsLecons, astuceSalut: string): Lecon[] => [

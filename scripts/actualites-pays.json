@@ -36,5 +36,13 @@
   {"slug":"coree-du-sud","pays":"Corée du Sud","libelle":"la Corée du Sud","langueLocale":"coréen"},
   {"slug":"inde","pays":"Inde","libelle":"l’Inde","langueLocale":"hindi et anglais"},
   {"slug":"indonesie","pays":"Indonésie","libelle":"l’Indonésie","langueLocale":"indonésien"},
-  {"slug":"egypte","pays":"Égypte","libelle":"l’Égypte","langueLocale":"arabe"}
+  {"slug":"egypte","pays":"Égypte","libelle":"l’Égypte","langueLocale":"arabe"},
+  {"slug":"canada","pays":"Canada","libelle":"le Canada","langueLocale":"anglais et français"},
+  {"slug":"etats-unis","pays":"États-Unis","libelle":"les États-Unis","langueLocale":"anglais"},
+  {"slug":"mexique","pays":"Mexique","libelle":"le Mexique","langueLocale":"espagnol"},
+  {"slug":"bresil","pays":"Brésil","libelle":"le Brésil","langueLocale":"portugais"},
+  {"slug":"madagascar","pays":"Madagascar","libelle":"Madagascar","langueLocale":"malgache et français"},
+  {"slug":"ile-maurice","pays":"Île Maurice","libelle":"l’île Maurice","langueLocale":"anglais, français et créole"},
+  {"slug":"australie","pays":"Australie","libelle":"l’Australie","langueLocale":"anglais"},
+  {"slug":"nouvelle-zelande","pays":"Nouvelle-Zélande","libelle":"la Nouvelle-Zélande","langueLocale":"anglais et maori"}
 ]

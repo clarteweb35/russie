@@ -37,9 +37,17 @@ import { coreeDuSud } from './coree-du-sud';
 import { inde } from './inde';
 import { indonesie } from './indonesie';
 import { egypte } from './egypte';
+import { canada } from './canada';
+import { etatsUnis } from './etats-unis';
+import { mexique } from './mexique';
+import { bresil } from './bresil';
+import { madagascar } from './madagascar';
+import { ileMaurice } from './ile-maurice';
+import { australie } from './australie';
+import { nouvelleZelande } from './nouvelle-zelande';
 // Guides détaillés (rubriques, leçons, sources). Les autres pays du monde n'ont qu'une fiche d'identité : voir src/data/monde/.
 // Un pays `test: true` est publié avec la mention « fiche en test ».
-export const pays: Pays[] = [finlande, albanie, espagne, allemagne, senegal, vietnam, georgie, turquie, armenie, kazakhstan, serbie, emirats, thailande, maroc, portugal, italie, grece, pologne, suisse, royaumeUni, estonie, lettonie, lituanie, azerbaidjan, bielorussie, kirghizistan, moldavie, ouzbekistan, tadjikistan, turkmenistan, ukraine, japon, chine, coreeDuSud, inde, indonesie, egypte];
+export const pays: Pays[] = [finlande, albanie, espagne, allemagne, senegal, vietnam, georgie, turquie, armenie, kazakhstan, serbie, emirats, thailande, maroc, portugal, italie, grece, pologne, suisse, royaumeUni, estonie, lettonie, lituanie, azerbaidjan, bielorussie, kirghizistan, moldavie, ouzbekistan, tadjikistan, turkmenistan, ukraine, japon, chine, coreeDuSud, inde, indonesie, egypte, canada, etatsUnis, mexique, bresil, madagascar, ileMaurice, australie, nouvelleZelande];
 
 export const paysComplets = pays.filter((p): p is PaysComplet => p.complet);
 
