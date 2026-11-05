@@ -30,5 +30,11 @@
   {"slug":"ouzbekistan","pays":"Ouzbékistan","libelle":"l’Ouzbékistan","langueLocale":"ouzbek et russe"},
   {"slug":"tadjikistan","pays":"Tadjikistan","libelle":"le Tadjikistan","langueLocale":"tadjik et russe"},
   {"slug":"turkmenistan","pays":"Turkménistan","libelle":"le Turkménistan","langueLocale":"turkmène et russe"},
-  {"slug":"ukraine","pays":"Ukraine","libelle":"l’Ukraine","langueLocale":"ukrainien"}
+  {"slug":"ukraine","pays":"Ukraine","libelle":"l’Ukraine","langueLocale":"ukrainien"},
+  {"slug":"japon","pays":"Japon","libelle":"le Japon","langueLocale":"japonais"},
+  {"slug":"chine","pays":"Chine","libelle":"la Chine","langueLocale":"chinois mandarin"},
+  {"slug":"coree-du-sud","pays":"Corée du Sud","libelle":"la Corée du Sud","langueLocale":"coréen"},
+  {"slug":"inde","pays":"Inde","libelle":"l’Inde","langueLocale":"hindi et anglais"},
+  {"slug":"indonesie","pays":"Indonésie","libelle":"l’Indonésie","langueLocale":"indonésien"},
+  {"slug":"egypte","pays":"Égypte","libelle":"l’Égypte","langueLocale":"arabe"}
 ]
