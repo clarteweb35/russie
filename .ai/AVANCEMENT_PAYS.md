@@ -200,4 +200,4 @@ Liste raisonnée des pays envisagés : `.ai/PAYS_PREVUS.md`. Suivi général du 
 - Effet : la règle « sécurité à lire par un humain » ne vaut plus pour ces pays : le texte officiel est affiché. Le contenu n’a pas été relu mot à mot ; il est cité tel quel avec sa date.
 - Reste « À documenter » pour tous : vivre (séjour long, banque, logement), travailler, moyens de paiement. Sources privées à chercher pays par pays.
 - Pays sans fiche ministère (12 environ : par exemple la France, certains territoires) : inchangés.
-- À refaire régulièrement : relancer l’import (les fiches changent) puis `npm test`.
+- Mise à jour automatique : le workflow `fiches-officielles.yml` relance l’import le 2 de chaque mois, enregistre `officiel.json` s’il a changé et redéploie. Lancement manuel possible (Actions > Run workflow).

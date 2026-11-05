@@ -1,0 +1,36 @@
+name: Fiches officielles du ministère (mensuel)
+
+on:
+  schedule:
+    - cron: '0 5 2 * *' # le 2 de chaque mois à 5 h UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  fiches:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Importer les fiches (sécurité, entrée, santé, usages, contacts)
+        run: node scripts/importer-fiches-officielles.mjs
+      - name: Enregistrer et relancer le déploiement
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/monde/officiel.json
+          if git diff --cached --quiet; then
+            echo "Aucun changement à enregistrer."
+            exit 0
+          fi
+          git commit -m "Fiches officielles du ministère (import mensuel automatique)"
+          git pull --rebase
+          git push
+          gh workflow run deploy.yml
