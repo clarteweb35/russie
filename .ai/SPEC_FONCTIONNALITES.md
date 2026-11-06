@@ -328,3 +328,8 @@ Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fich
 
 - **Recherche** : dès la première lettre, un panneau de suggestions s'affiche juste sous le champ (« a » : les pays en A ; « al » : Albanie, Algérie, Allemagne). Classement : nom qui commence par la saisie, puis mot du nom (dès 2 lettres), puis nom officiel ou capitale (dès 3 lettres, par exemple « Tbilissi » trouve la Géorgie). Clavier : Entrée ouvre le premier résultat, ↓ ↑ parcourent la liste, Échap vide la recherche. Le filtre par région s'applique aussi aux suggestions. La liste A–Z plus bas se filtre toujours.
 - **Marque** : l'en-tête n'a plus le drapeau russe en filigrane ni l'effet de brillance ; un petit globe et le nom du site. La liste des pays affiche le nom puis la capitale l'un sous l'autre, et l'étiquette « beta » (et non « test »).
+
+## 17. Public national (7 novembre 2026)
+
+- Voyage Malin s'adresse à toute la France, plus seulement à Rennes et Nantes : l'accroche de l'en-tête des pages bons plans et astuces devient « Départs de toute la France », le titre et la description de `/bons-plans/` aussi. La ville de départ affichée par défaut dans le tableau des départs, quand l'offre n'en donne pas, est « — » (et non plus RNS/NTE). Le filtre par ville de départ de la page des bons plans se construit déjà à partir des offres.
+- Pas encore traité : le flux Awin ne fournit pas toujours la ville de départ (champ `villeDepart` des offres) ; à vérifier au premier flux réel. Les pages de démonstration locales `demo-index*.astro` (non versionnées) parlent encore de Rennes et Nantes.

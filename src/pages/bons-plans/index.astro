@@ -104,10 +104,10 @@ const populaires = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
     {bonsPlans.length === 0 && <meta name="robots" content="noindex" />}
-    <title>Voyage Malin — Bons plans weekend au départ de Rennes &amp; Nantes</title>
+    <title>Voyage Malin — Bons plans voyage, au départ de toute la France</title>
     <meta
       name="description"
-      content="Bons plans voyage weekend, moins de 200€, au départ de Rennes et Nantes. Repérés et vérifiés chaque jour."
+      content="Bons plans voyage weekend, moins de 200€, au départ de toute la France. Un prix n’est publié que s’il est vraiment bas par rapport à l’historique observé."
     />
     <link rel="stylesheet" href={url("/styles/global.css")} />
   </head>
@@ -124,7 +124,7 @@ const populaires = [
         ) : (
           pourTableau.map((offre) => (
             <div class="departure-row">
-              <span class="departure-row__from">{offre.data.villeDepart ?? "RNS/NTE"}</span>
+              <span class="departure-row__from">{offre.data.villeDepart ?? "—"}</span>
               <span class="departure-row__dest flap">{extraireDestination(offre)}</span>
               <span class="departure-row__duree flap">
                 {offre.data.duree ? `${offre.data.duree}j` : "weekend"}
