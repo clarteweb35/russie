@@ -37,7 +37,7 @@ const labelConfiance: Record<string, string> = {
     <VmHeader />
 
     <a class="back-link" href={url("/bons-plans/")}>&larr; Retour au tableau des départs</a>
-    {pays && <a class="back-link" href={`${pays.href}/`}>Voir la fiche pays : {pays.nom} (monnaie, conseils officiels) &rarr;</a>}
+    {pays && <a class="back-link" href={url(`${pays.href}/`)}>Voir la fiche pays : {pays.nom} (monnaie, conseils officiels) &rarr;</a>}
 
     <article class="ticket-article">
       {
