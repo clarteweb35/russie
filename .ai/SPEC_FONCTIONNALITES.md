@@ -278,3 +278,10 @@ Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fich
 
 - Le site https://clarteweb35.github.io/russie/ est le site général « Voyage Malin ». Le passage au domaine se fait sans changer le code : variable de dépôt `DOMAINE` (voir `.ai/AVANCEMENT.md`). `robots.txt` est généré (`src/pages/robots.txt.ts`).
 - Topo hebdomadaire : 193 pays (`scripts/actualites-pays.json`). Clé Gemini : secret par pays `GEMINI_API_KEY_<PAYS>`, sinon `GEMINI_API_KEY_GENERAL`.
+
+## 10. Fiabilité et identité (6 novembre 2026, suite à un avis extérieur)
+
+- Le bandeau sous le fil d’Ariane ne porte plus de pastilles globales « Source officielle » / « À confirmer » : il indique la dernière vérification et rappelle que chaque section affiche sa propre fiabilité.
+- Le badge « Vérifié » des textes importés du ministère tient compte de la date réelle du build, de la date d’import de la rubrique (moins de 100 jours) et d’un éventuel échec d’actualisation (rubrique conservée mais signalée « À confirmer »).
+- Identité : description et marque par défaut « Voyage Malin » (pays du monde), image de partage générique (la Russie garde la sienne), favicon globe, README.
+- Topos d’actualité : aucun enregistré tant que la tâche hebdomadaire n’a pas tourné avec la clé `GEMINI_API_KEY_GENERAL`.

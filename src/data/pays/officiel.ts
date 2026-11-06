@@ -8,13 +8,14 @@ import fiches from '../monde/pays.json';
 
 type Cle = "securite" | "entree" | "sante" | "utiles" | "contacts" | "affaires";
 type Ligne = { k: 'p' | 'li'; x: string };
-type Rub = { maj: string; s: { t: string; l: Ligne[] }[] };
+type Rub = { maj: string; import?: string; echec?: boolean; s: { t: string; l: Ligne[] }[] };
 const DATA = officiel as unknown as Record<string, Partial<Record<Cle, Rub>>>;
 
 const echapper = (t: string) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const PORTEE = /^Quelle est la portée des Conseils aux Voyageurs/;
 const MOIS = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
-const AUJOURDHUI = new Date('2026-11-05');
+// Date du build : le badge « Vérifié » vieillit tout seul si l'import mensuel s'arrête
+const AUJOURDHUI = new Date();
 
 // « 15 septembre 2026 » -> Date ; null si illisible
 const lireDate = (maj: string) => {
@@ -51,14 +52,16 @@ const construire = (cle: Cle, iso: string, nom: string, url: string): Section | 
   }
   if (!blocs.length) return null;
   const d = lireDate(r.maj);
-  const recent = d ? (AUJOURDHUI.getTime() - d.getTime()) / 86400000 < 400 : false;
+  const jours = (x: Date) => (AUJOURDHUI.getTime() - x.getTime()) / 86400000;
+  const importe = r.import ? jours(new Date(r.import)) < 100 : true;
+  const recent = d ? jours(d) < 400 && importe && !r.echec : false;
   return {
     id: cle,
     titre: TITRES[cle],
     badge: recent ? { type: 'ok', texte: 'Vérifié' } : { type: 'warn', texte: 'À confirmer' },
     blocs,
     sources: [{ label: `Ministère de l’Europe et des Affaires étrangères, fiche ${nom} (${NOMS[cle]})${r.maj ? `, mise à jour le ${r.maj}` : ''}`, url, nature: 'source officielle' }],
-    note: `Texte repris de la fiche officielle${r.maj ? ` mise à jour le ${r.maj}` : ''}, sans modification de sens (licence Etalab 2.0). Les conseils évoluent : relisez la fiche d’origine juste avant le départ.`,
+    note: `Texte repris de la fiche officielle${r.maj ? ` mise à jour le ${r.maj}` : ''}, sans modification de sens (licence Etalab 2.0).${r.echec ? ' Cette rubrique n’a pas pu être actualisée lors du dernier import : relisez la fiche d’origine.' : ''} Les conseils évoluent : relisez la fiche d’origine juste avant le départ.`,
   };
 };
 

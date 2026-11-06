@@ -79,7 +79,8 @@ if (process.argv[1] && process.argv[1].endsWith('importer-fiches-officielles.mjs
         if (seul.length && !seul.includes(cle)) continue;
         const html = await telecharger(`https://www.diplomatie.gouv.fr/fr/information-par-pays/${p.diplo.slug}/${fin}`);
         const l = html ? lire(html) : null;
-        if (l && l.s.length) sortie[cle] = l;
+        if (l && l.s.length) sortie[cle] = { ...l, import: new Date().toISOString().slice(0, 10) };
+        else if (existant[p.iso]?.[cle]) sortie[cle] = { ...existant[p.iso][cle], echec: true }; // gardée mais signalée comme non renouvelée
         await attendre(300);
       }
       existant[p.iso] = { ...(existant[p.iso] || {}), ...sortie };

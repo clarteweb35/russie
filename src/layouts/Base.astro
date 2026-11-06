@@ -21,7 +21,7 @@ interface Props {
   bandeau?: boolean; // false : aucun bandeau de sécurité
   meta?: boolean; // force l'affichage (ou non) de la ligne « Vérifié le … »
 }
-const { title, titreComplet, description = 'Guide d’information sur la Russie : voyager, vivre, travailler — avec sources officielles et mises en garde.', marque = 'Guide Russie', pays, menu, fil, jsonLd = [], image: cheminImage = '/saint-basile-hero.webp', noindex = false, verifie, bandeau = true, meta } = Astro.props;
+const { title, titreComplet, description = 'Guide d’information sur les pays du monde : voyager, vivre, travailler — avec sources officielles et mises en garde.', marque = 'Voyage Malin', pays, menu, fil, jsonLd = [], image: cheminImage = '/img/parcours-voyage.webp', noindex = false, verifie, bandeau = true, meta } = Astro.props;
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const path = Astro.url.pathname.slice(base.length).replace(/\/$/, '') || '/';
@@ -125,9 +125,8 @@ const donneesStructurees: object[] = [
       )}
       {showMeta && (
         <p class="meta">
-          <span>Vérifié le {dateVerif}</span>
-          <Badge type="ok">Source officielle</Badge>
-          <Badge type="warn">À confirmer</Badge>
+          <span>Dernière vérification : {dateVerif}</span>
+          <span>Chaque section indique sa fiabilité : Vérifié, À confirmer ou À documenter.</span>
           <a href={url(lienSources)}>Voir les sources</a>
         </p>
       )}
