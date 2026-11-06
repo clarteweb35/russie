@@ -2,12 +2,18 @@
 import Base from '../layouts/Base.astro';
 import { MENTION_IA, url } from '../config';
 ---
-<Base title="Mentions légales" description="Éditeur, hébergeur, images générées par IA et données personnelles du Guide Russie.">
+<Base title="Mentions légales" description="Éditeur, hébergeur, liens affiliés, contenus générés par IA et données personnelles de Voyage Malin.">
   <h1>Mentions légales</h1>
   <p class="lead">Qui édite ce site, où il est hébergé, comment ses images sont produites et ce qu’il fait de vos données.</p>
 
   <h2>Éditeur du site</h2>
-  <p>Ce site est édité à titre non professionnel par une personne physique qui a choisi de rester anonyme, conformément à la loi pour la confiance dans l’économie numérique. Son identité a été communiquée à l’hébergeur.</p>
+  <!-- À compléter dès qu'ils existent : adresse e-mail de contact, numéro SIRET (aucun des deux n'est affiché tant qu'il n'existe pas). -->
+  <p>Voyage Malin est édité par <strong>Julien Guillois</strong>, à titre individuel.</p>
+  <ul>
+    <li>Adresse : Chaumeré, 35113 Domagné.</li>
+    <li>Téléphone : 06 36 00 36 17.</li>
+    <li>Directeur de la publication : Julien Guillois.</li>
+  </ul>
 
   <h2>Hébergeur</h2>
   <p>Le site est hébergé par GitHub Pages : GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis. <span class="src">(Adresse à vérifier auprès de l’hébergeur.)</span></p>
@@ -43,7 +49,7 @@ import { MENTION_IA, url } from '../config';
   </ul>
 
   <h2>Liens et partenaires</h2>
-  <p>Le site cite des sources externes dont il n’est pas responsable. Si des liens d’affiliation sont ajoutés, ils seront signalés comme tels et le site pourra être rémunéré si vous vous inscrivez via ces liens, sans changer votre prix.</p>
+  <p>Le site cite des sources externes dont il n’est pas responsable. Les liens d’affiliation sont décrits dans la rubrique « Liens affiliés » ci-dessus : ils sont signalés comme tels et ne changent pas votre prix.</p>
 
   <h2>Propriété intellectuelle</h2>
   <p>Les textes et l’organisation du site sont la propriété de l’éditeur. Toute reprise doit citer le site. Les informations reprises de sources tierces restent la propriété de leurs auteurs et sont citées dans la page <a href={url('/sources')}>Sources</a>.</p>

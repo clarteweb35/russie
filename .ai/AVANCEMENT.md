@@ -86,7 +86,7 @@ Le site https://clarteweb35.github.io/russie/ est le site général (marque « V
 4. [ ] Mettre à jour README.md, CLAUDE.md (« /russie/ ») et la spec une fois le domaine actif.
 5. [ ] **Google Analytics 4** : l'utilisateur fournit l'identifiant `G-XXXXXXXXXX`. Bandeau de consentement, page de confidentialité, gtag chargé seulement après acceptation.
 6. [ ] **EcoIndex** : mesurer l'accueil en ligne, compter les éléments avant d'ajouter du contenu.
-7. [ ] Compléter l'éditeur et l'hébergeur dans les mentions légales (obligatoire dès qu'il y a de l'affiliation).
+7. [~] Mentions légales : éditeur renseigné le 7 novembre 2026 (Julien Guillois, Chaumeré 35113 Domagné, téléphone, directeur de la publication). Reste : adresse e-mail de contact et numéro SIRET (à ajouter dès qu'ils existent, repère en commentaire dans `mentions-legales.astro`) ; déclaration d'activité (micro-entreprise) à faire par l'éditeur.
 
 ## Points de vigilance
 - [x] Mentions légales : éditeur anonyme à titre non professionnel (décision de l'utilisateur, 30 octobre 2026), identité communiquée à l'hébergeur uniquement.

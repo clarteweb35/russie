@@ -311,3 +311,7 @@ Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fich
 ## 14. Photo de la leçon « Se déplacer » hors ex-URSS (7 novembre 2026)
 
 - Les pays dont le guide a des leçons, **hors ex-URSS**, affichent sur la carte « Se déplacer » une photo (compartiment de train : tasse, carnet, stylo, écharpe, clé), image générée par IA, légendée via `legendeIA()`. La Russie garde sa photo (thé dans un verre à anse) ; les pays de l'ex-URSS gardent la vignette numérotée. Fichier : `public/img/lecons/se-deplacer-monde.webp` ; configuration : `IMAGES_HORS_URSS` dans `src/data/lecons-generiques.ts`. Même principe pour « Restaurant et courses » : photo d'une table dressée avec des clients attablés (`restaurant-courses-monde.webp`, image générée par IA), la Russie gardant la sienne (samovar et pirojki).
+
+## 15. Mentions légales : éditeur identifié (7 novembre 2026)
+
+- La page `/mentions-legales` ne parle plus d'un éditeur anonyme : elle affiche l'éditeur (Julien Guillois, à titre individuel), son adresse, son téléphone et le directeur de la publication, avec l'hébergeur (GitHub Pages). Pas d'e-mail ni de SIRET affichés tant qu'ils n'existent pas. Rubriques « Liens affiliés », « Bons plans », « Villes à connaître » ajoutées.
