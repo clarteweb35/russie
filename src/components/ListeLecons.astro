@@ -2,7 +2,7 @@
 // Grille des cartes de leçons : commune à la Russie et aux guides pays.
 import Alert from './Alert.astro';
 import { url, legendeIA } from '../config';
-import { IMAGES_GENERIQUES } from '../data/lecons-generiques';
+import { IMAGES_GENERIQUES, IMAGES_HORS_URSS } from '../data/lecons-generiques';
 import type { Lecon } from '../data/pays/types';
 
 interface Props {
@@ -10,10 +10,11 @@ interface Props {
   base: string; // ex. /lecons ou /pays/finlande/lecons
   langue: { nom: string; code: string };
   couleur?: string; // couleur des cartes sans photo
+  urss?: boolean; // pays de l'ex-URSS : pas de photo « hors ex-URSS »
 }
-const { lecons, base, langue, couleur = '#b3202f' } = Astro.props;
+const { lecons, base, langue, couleur = '#b3202f', urss = false } = Astro.props;
 // Photo propre à la leçon, sinon photo générique commune à tous les pays, sinon vignette numérotée
-const photo = (l: Lecon) => (l.img ? { img: l.img, imgAlt: l.imgAlt ?? l.titre } : IMAGES_GENERIQUES[l.slug]);
+const photo = (l: Lecon) => (l.img ? { img: l.img, imgAlt: l.imgAlt ?? l.titre } : IMAGES_GENERIQUES[l.slug] ?? (urss ? undefined : IMAGES_HORS_URSS[l.slug]));
 ---
 <div class="grid" style={`--c1:${couleur}`}>
   {lecons.map((l, i) => (

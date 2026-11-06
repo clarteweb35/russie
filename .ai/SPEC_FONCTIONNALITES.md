@@ -307,3 +307,7 @@ Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fich
 - L'historique ne se construit que si la collecte tourne régulièrement : prévoir une exécution quotidienne (à planifier après le premier essai manuel). Tant que l'historique est trop court, aucune offre n'est publiée : c'est voulu.
 - **Non testé sur un vrai flux** : seulement avec un faux serveur. Les noms de balises (`AWIN_FIELD_MAP`) sont ceux du prototype et sont à ajuster au premier flux réel.
 - Dépendance de développement ajoutée : `fast-xml-parser` (scripts hors ligne uniquement, absente du site publié).
+
+## 14. Photo de la leçon « Se déplacer » hors ex-URSS (7 novembre 2026)
+
+- Les pays dont le guide a des leçons, **hors ex-URSS**, affichent sur la carte « Se déplacer » une photo (compartiment de train : tasse, carnet, stylo, écharpe, clé), image générée par IA, légendée via `legendeIA()`. La Russie garde sa photo (thé dans un verre à anse) ; les pays de l'ex-URSS gardent la vignette numérotée. Fichier : `public/img/lecons/se-deplacer-monde.webp` ; configuration : `IMAGES_HORS_URSS` dans `src/data/lecons-generiques.ts`. La carte « Restaurant et courses » n'a toujours pas de photo hors Russie.
