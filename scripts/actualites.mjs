@@ -96,6 +96,7 @@ function extraire(json) {
 
 mkdirSync(DOSSIER, { recursive: true });
 let reussis = 0;
+let quotas = 0; // refus de quota (429) consécutifs
 for (const p of (LIMITE ? PAYS.slice(0, LIMITE) : PAYS)) {
   if (!cle(p.slug)) {
     console.warn(`::warning::${p.slug} : aucune clé (ajoutez le secret ${nomSecret(p.slug)} ou la clé commune GEMINI_API_KEY_GENERAL), pays ignoré`);
@@ -107,10 +108,14 @@ for (const p of (LIMITE ? PAYS.slice(0, LIMITE) : PAYS)) {
     writeFileSync(fichier, JSON.stringify({ slug: p.slug, genere: new Date().toISOString(), modele: MODELE, ...topo }, null, 2) + '\n');
     console.log(`${p.slug} : ${topo.points.length} points, ${topo.sources.length} sources`);
     reussis++;
+    quotas = 0;
     await new Promise((r) => setTimeout(r, PAUSE_MS)); // ménage le quota de l'API
   } catch (e) {
     // Le topo précédent est conservé : on signale seulement l'erreur
     console.warn(`::warning::${p.slug} : ${e.message}`);
+    // Quota épuisé : insister ferait perdre des heures pour rien. On s'arrête, les topos déjà générés sont conservés.
+    quotas = /répondu 429/.test(e.message) ? quotas + 1 : 0;
+    if (quotas >= 3) { console.error('Quota Gemini refusé 3 fois de suite : arrêt. Vérifiez le quota et la facturation du projet Google (https://ai.dev/rate-limit), puis relancez.'); break; }
     if (e.fatale) { console.error('Modèle introuvable : arrêt du traitement. Définissez GEMINI_MODEL ou mettez à jour le modèle par défaut.'); process.exit(1); }
   }
 }

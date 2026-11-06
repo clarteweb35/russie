@@ -4,6 +4,15 @@ on:
   schedule:
     - cron: '0 4 3 * *' # le 3 de chaque mois à 4 h UTC
   workflow_dispatch:
+    inputs:
+      limite:
+        description: 'Nombre de pays à traiter (vide = tous ; 3 pour un essai)'
+        required: false
+        default: ''
+      modele:
+        description: 'Modèle Gemini (vide = modèle par défaut du script)'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -22,6 +31,8 @@ jobs:
         run: node scripts/villes.mjs
         env:
           SECRETS_JSON: ${{ toJSON(secrets) }}
+          VILLES_LIMITE: ${{ inputs.limite }}
+          GEMINI_MODEL: ${{ inputs.modele }}
       - name: Enregistrer et relancer le déploiement
         env:
           GH_TOKEN: ${{ github.token }}

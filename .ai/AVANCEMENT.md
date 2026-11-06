@@ -180,3 +180,9 @@ Accueil = choix de destination, 194 pays, fiche d'identité, drapeaux, convertis
 - Le premier lancement des villes a échoué partout : `gemini-2.5-flash` n'est plus disponible pour les nouveaux comptes (erreur 404 ; Google recommande `gemini-3.8-flash`). Modèle par défaut changé dans `actualites.mjs`, `villes.mjs` et `bons-plans/generer.mjs` ; `GEMINI_MODEL` permet de le changer sans toucher au code.
 - Les trois scripts s'arrêtent maintenant dès la première erreur 404 (au lieu de refaire 193 appels voués à l'échec).
 - À vérifier au prochain lancement réel : la recherche web (`google_search`) fonctionne-t-elle avec ce modèle par l'API actuelle ? Google évoque une « Interactions API » ; si la réponse n'a plus de sources, le topo est refusé (c'est le garde-fou) et il faudra adapter l'appel.
+
+## Quota Gemini refusé (7 novembre 2026)
+
+- Après le changement de modèle, les villes échouent en 429 « You exceeded your current quota » : le projet Google de la clé n'a pas (ou plus) de quota pour ce modèle avec la recherche web. Ce n'est pas un défaut du code.
+- Les scripts villes et actualités s'arrêtent maintenant après 3 refus de quota consécutifs (au lieu de ~2 min perdues par pays). Les lancements manuels des deux workflows acceptent « limite » (nombre de pays, 3 pour un essai) et « modele ».
+- À faire côté utilisateur : regarder https://ai.dev/rate-limit (quota du modèle et de la recherche web), activer la facturation du projet si le palier gratuit n'inclut pas la recherche web pour ce modèle, ou essayer un autre modèle via l'entrée « modele ».
