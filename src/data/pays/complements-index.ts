@@ -6,9 +6,11 @@ import { LOT2 } from './complements-2';
 import { LOT3 } from './complements-3';
 import { LOT4 } from './complements-4';
 import { LOT5 } from './complements-5';
+import { LOT6 } from './complements-6';
+import { LOT7 } from './complements-7';
 
 // Destinations les plus visitées : moyens de paiement, banque et logement rédigés d'après des sources privées (voir complements.ts).
-export const COMPLEMENTS: Record<string, Complement> = { ...LOT1, ...LOT2, ...LOT3, ...LOT4, ...LOT5 };
+export const COMPLEMENTS: Record<string, Complement> = { ...LOT1, ...LOT2, ...LOT3, ...LOT4, ...LOT5, ...LOT6, ...LOT7 };
 
 const aDocumenter = (s: Section) => s.badge?.texte === 'À documenter';
 

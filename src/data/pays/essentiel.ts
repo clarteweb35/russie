@@ -75,7 +75,7 @@ export const essentiel = (iso: string, href: string): { maj: string; blocs: Bloc
 
   // Argent : seulement si des compléments sourcés existent
   const c = COMPLEMENTS[iso];
-  if (c?.paiements) {
+  if (c?.paiements && !c.paiements.items[0].startsWith('Aucune source fiable')) {
     blocs.push({ id: 'argent', titre: 'Argent', icone: '💳', badge: 'warn', items: c.paiements.items.slice(0, 3), alerte: 'Sources privées : à confirmer auprès de votre banque.', lien: { label: 'Paiements en détail', chemin: `${href}/paiements` } });
   }
 

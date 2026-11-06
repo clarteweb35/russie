@@ -19,10 +19,12 @@ export const src = (label: string, url: string, nature: string): Source => ({ la
 
 const NOTE = 'Rédigé d’après des sources privées citées ci-dessous, sans source officielle : les règles et les tarifs changent. Vérifiez auprès de votre banque ou d’un professionnel avant de décider. Recherche du 6 novembre 2026.';
 
+const vide = (f: Fiche) => f.items.every((i) => i.startsWith('Aucune source fiable'));
+
 const section = (id: string, titre: string, f: Fiche): Section => ({
   id,
   titre,
-  badge: { type: 'warn', texte: 'À confirmer' },
+  badge: { type: 'warn', texte: vide(f) ? 'À documenter' : 'À confirmer' },
   blocs: [
     { type: 'liste', items: f.items },
     ...(f.alerte ? [{ type: 'alerte' as const, warn: true, titre: 'À vérifier', html: f.alerte }] : []),
@@ -31,6 +33,13 @@ const section = (id: string, titre: string, f: Fiche): Section => ({
   note: NOTE,
 });
 
-export const sectionPaiements = (f: Fiche) => section('moyens-de-paiement', 'Cartes, espèces et distributeurs', f);
+// Écritures courtes pour les lots de pays : f(items, sources, alerte?) et s(label, url, nature)
+export const f = (items: string[], sources: Source[], alerte?: string): Fiche => ({ items, sources, ...(alerte ? { alerte } : {}) });
+export const NATURES = { off: OFFICIEL, pre: PRESSE, gui: GUIDE, for: FORUM, exp: EXPATS, pro: PRO } as const;
+export const s = (label: string, url: string, nature: keyof typeof NATURES = 'exp'): Source => src(label, url, NATURES[nature]);
+// Rien de fiable trouvé : la section le dit et renvoie vers un professionnel local
+export const ABSENT = (sujet: string): string => 'Aucune source fiable n’a été trouvée sur ' + sujet + ' lors de la recherche du 6 novembre 2026.';
+
+export const sectionPaiements =(f: Fiche) => section('moyens-de-paiement', 'Cartes, espèces et distributeurs', f);
 export const sectionBanque = (f: Fiche) => section('compte-bancaire', 'Ouvrir un compte bancaire', f);
 export const sectionLogement = (f: Fiche) => section('louer-logement', 'Se loger et louer', f);
