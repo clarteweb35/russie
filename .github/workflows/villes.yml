@@ -1,0 +1,39 @@
+name: Villes à connaître (mensuel)
+
+on:
+  schedule:
+    - cron: '0 4 3 * *' # le 3 de chaque mois à 4 h UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  villes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Générer les topos de villes
+        run: node scripts/villes.mjs
+        env:
+          SECRETS_JSON: ${{ toJSON(secrets) }}
+      - name: Enregistrer et relancer le déploiement
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/villes
+          if git diff --cached --quiet; then
+            echo "Aucun changement à enregistrer."
+            exit 0
+          fi
+          git commit -m "Villes à connaître (génération automatique)"
+          git pull --rebase
+          git push
+          gh workflow run deploy.yml

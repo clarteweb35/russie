@@ -285,3 +285,8 @@ Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fich
 - Le badge « Vérifié » des textes importés du ministère tient compte de la date réelle du build, de la date d’import de la rubrique (moins de 100 jours) et d’un éventuel échec d’actualisation (rubrique conservée mais signalée « À confirmer »).
 - Identité : description et marque par défaut « Voyage Malin » (pays du monde), image de partage générique (la Russie garde la sienne), favicon globe, README.
 - Topos d’actualité : aucun enregistré tant que la tâche hebdomadaire n’a pas tourné avec la clé `GEMINI_API_KEY_GENERAL`.
+
+## 11. Villes à connaître (6 novembre 2026)
+
+- Sur la fiche de chaque pays (193), un bloc « Les villes à connaître » présente 3 villes ou lieux choisis selon trois critères affichés (intérêt touristique, importance pratique, diversité) : pourquoi, 3 choses à voir, un conseil pratique seulement si une source le donne. Le bloc disparaît si le topo a plus de 120 jours. Texte **généré par IA** (Gemini, recherche web), badge « Résumé généré par IA », sources citées, absent tant que rien n’est généré.
+- Génération : `scripts/villes.mjs`, workflow mensuel `villes.yml` (le 3 du mois), clé `GEMINI_API_KEY_GENERAL`. Un topo sans source est refusé et un échec ne remplace jamais l’ancien. Données : `src/data/villes/<pays>.json`.

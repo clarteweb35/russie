@@ -1,0 +1,38 @@
+---
+// « Les villes à connaître » : topo généré par IA à partir d'une recherche web (scripts/villes.mjs).
+// Affiché seulement quand il existe et qu'il a moins de 120 jours ; toujours signalé comme généré et à vérifier.
+import Badge from './Badge.astro';
+
+interface Ville { critere?: string; nom: string; pourquoi: string; a_voir: string[]; conseil: string }
+interface Topo { slug: string; genere: string; modele: string; villes: Ville[]; sources: { titre: string; url: string }[] }
+interface Props { slug: string; libelle: string }
+const { slug, libelle } = Astro.props;
+
+const LIBELLES: Record<string, string> = { interet: 'Intérêt touristique', pratique: 'Importance pratique', diversite: 'Diversité' };
+const fichiers = import.meta.glob<Topo>('../data/villes/*.json', { eager: true, import: 'default' });
+const brut = Object.entries(fichiers).find(([chemin]) => chemin.endsWith(`/${slug}.json`))?.[1];
+// Un topo ancien n'est plus affiché plutôt que de risquer des informations périmées
+const topo = brut && (Date.now() - new Date(brut.genere).getTime()) / 86400000 < 120 ? brut : undefined;
+const date = topo ? new Date(topo.genere).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
+---
+{topo && (
+  <section class="villes" aria-labelledby={`villes-${slug}`}>
+    <h2 id={`villes-${slug}`}>Les villes à connaître <Badge type="warn">Résumé généré par IA</Badge></h2>
+    <p class="src">Trois villes choisies selon des critères explicites : la plus citée pour son intérêt touristique, la plus importante pour l'organisation du voyage (arrivée, transports) et une destination d'un autre type pour la diversité. Le choix reste indicatif et dépend de votre voyage. Pour {libelle}, généré le {date} avec {topo.modele} à partir d’une recherche web : vérifiez horaires, prix et accès sur les sources.</p>
+    <div class="grid">
+      {topo.villes.map((v) => (
+        <article class="card villes-carte">
+          {v.critere && LIBELLES[v.critere] && <p class="src">{LIBELLES[v.critere]}</p>}
+          <h3>{v.nom}</h3>
+          <p>{v.pourquoi}</p>
+          {v.a_voir.length > 0 && <ul>{v.a_voir.map((a) => <li>{a}</li>)}</ul>}
+          {v.conseil && <p class="src">{v.conseil}</p>}
+        </article>
+      ))}
+    </div>
+    <p class="src">
+      Sources :{' '}
+      {topo.sources.map((s, i) => <>{i > 0 && ' ; '}<a href={s.url} rel="noopener">{s.titre}</a></>)}
+    </p>
+  </section>
+)}

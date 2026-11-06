@@ -215,3 +215,9 @@ Liste raisonnée des pays envisagés : `.ai/PAYS_PREVUS.md`. Suivi général du 
 - Volontairement sans contenu : les 22 pays de `ALERTE_SECURITE` (voyage déconseillé), pour ne pas encourager le départ.
 - Sans source trouvée (restent « À documenter ») : Finlande, Corée du Sud, Qatar, Arabie saoudite, Koweït, Bahreïn, Pakistan, Bangladesh, Bhoutan, Ghana, Nigeria, Éthiopie, Rwanda, Seychelles, Uruguay, Paraguay, Venezuela, Moldavie, Kirghizistan, Tadjikistan, Turkménistan, petits États du Pacifique et des Caraïbes, etc. Une recherche pays par pays serait nécessaire.
 - Version « essentielle » : `/pays/<pays>/essentiel/` pour tous les pays ayant une fiche officielle.
+
+## Villes à connaître (6 novembre 2026)
+
+- Pipeline testé avec un faux serveur seulement ; à lancer une fois à la main (Actions > Villes à connaître > Run workflow) pour vérifier clé, quota et qualité. Relire un échantillon de pays avant de s’y fier.
+- Faisabilité (estimation, à confirmer au premier lancement) : 193 appels avec recherche web, environ 20 à 30 secondes chacun plus 6 secondes de pause, soit 1,5 à 2 heures par exécution mensuelle. Le quota quotidien de recherche de l’API et son prix sont à vérifier dans la console Google AI Studio ; les villes (le 3) et les actualités (le lundi) sont décalées pour ne pas se partager le même quota.
+- Dette : `villes.mjs` duplique les fonctions d’appel de `actualites.mjs` ; à factoriser dans un module commun.
