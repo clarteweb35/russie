@@ -201,3 +201,10 @@ Liste raisonnée des pays envisagés : `.ai/PAYS_PREVUS.md`. Suivi général du 
 - Reste « À documenter » pour tous : vivre (séjour long, banque, logement), travailler, moyens de paiement. Sources privées à chercher pays par pays.
 - Pays sans fiche ministère (12 environ : par exemple la France, certains territoires) : inchangés.
 - Mise à jour automatique : le workflow `fiches-officielles.yml` relance l’import le 2 de chaque mois, enregistre `officiel.json` s’il a changé et redéploie. Lancement manuel possible (Actions > Run workflow).
+
+## Paiements, banque et logement des 20 destinations (6 novembre 2026)
+
+- Pays : ESP ITA PRT GRC MAR TUN DZA TUR USA GBR DEU BEL CHE HRV THA JPN MEX DOM EGY CAN. Fichiers `src/data/pays/complements-1.ts` à `-5.ts`, assemblés par `complements-index.ts`.
+- Sources : sites privés (guides, forums d’expatriés, banques en ligne, cabinets), toutes signalées comme telles ; rien d’officiel lisible pour ces sujets. Recherche du 6 novembre 2026.
+- Lacunes assumées : caution/logement non sourcés pour Tunisie (partiel), États-Unis, Croatie, Thaïlande, Mexique (partiel), République dominicaine, Égypte ; ces sections le disent et renvoient à un professionnel.
+- À relire par un humain : montants de frais (changent vite), seuils de devises (Tunisie, Algérie).
