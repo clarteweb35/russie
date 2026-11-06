@@ -8,6 +8,7 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { createHash } from 'node:crypto';
 import { XMLParser } from 'fast-xml-parser';
+import { REGLES, evaluer } from './regles.mjs';
 
 const SECRETS = JSON.parse(process.env.SECRETS_JSON || '{}');
 const FLUX = process.env.AWIN_FEED_URL || SECRETS.AWIN_FEED_URL || '';
@@ -70,12 +71,6 @@ function normaliser(brut) {
   };
 }
 
-const mediane = (releves) => {
-  if (!releves.length) return null;
-  const t = releves.map((r) => r.prix_reduit).sort((a, b) => a - b);
-  const mid = Math.floor(t.length / 2);
-  return t.length % 2 ? t[mid] : Math.round(((t[mid - 1] + t[mid]) / 2) * 100) / 100;
-};
 
 if (!FLUX) {
   console.error('Aucun flux : définissez le secret AWIN_FEED_URL (adresse du datafeed Awin).');
@@ -107,17 +102,24 @@ const stock = lireJson(FICHIER_OFFRES, {});
 const historique = lireJson(FICHIER_HISTORIQUE, {});
 const maintenant = new Date().toISOString();
 const limite = Date.now() - JOURS_HISTORIQUE * 86400000;
+const retenues = [];
+const ecartees = {};
 for (const o of offres) {
+  const precedents = historique[o.offer_hash] ?? [];
+  // Jugé AVANT d'ajouter le relevé du jour : une offre ne se compare pas à elle-même
+  const verdict = evaluer(o, precedents);
+  if (verdict.retenue) {
+    retenues.push({ ...o, prix_median_90j: verdict.mediane, prix_min_observe: verdict.minimum, nb_releves_historique: verdict.releves, jours_historique: verdict.jours });
+  } else {
+    ecartees[verdict.raison] = (ecartees[verdict.raison] || 0) + 1;
+  }
   stock[o.offer_hash] = { ...o, last_seen_at: maintenant };
-  const releves = historique[o.offer_hash] ?? [];
-  releves.push({ prix_initial: o.prix_initial, prix_reduit: o.prix_reduit, collected_at: maintenant });
-  historique[o.offer_hash] = releves.filter((r) => new Date(r.collected_at).getTime() >= limite);
+  historique[o.offer_hash] = [...precedents, { prix_initial: o.prix_initial, prix_reduit: o.prix_reduit, collected_at: maintenant }]
+    .filter((r) => new Date(r.collected_at).getTime() >= limite);
 }
 writeFileSync(FICHIER_OFFRES, JSON.stringify(stock, null, 2) + '\n');
 writeFileSync(FICHIER_HISTORIQUE, JSON.stringify(historique, null, 2) + '\n');
-writeFileSync(FICHIER_ENRICHIES, JSON.stringify(offres.map((o) => ({
-  ...o,
-  prix_median_90j: mediane(historique[o.offer_hash]),
-  nb_releves_historique: historique[o.offer_hash].length,
-})), null, 2) + '\n');
+// Seules les offres au vrai bon prix passent à la génération (liste vide possible : c'est normal au début)
+writeFileSync(FICHIER_ENRICHIES, JSON.stringify(retenues, null, 2) + '\n');
+console.log(`${retenues.length} offres retenues sur ${offres.length}. Écartées : ${JSON.stringify(ecartees)}. Seuils : ${JSON.stringify(REGLES)}`);
 console.log(`Enregistré dans ${DOSSIER}.`);

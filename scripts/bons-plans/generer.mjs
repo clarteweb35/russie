@@ -6,8 +6,9 @@
 // Garde-fous : les champs chiffrés viennent des données de l'offre, jamais du texte du modèle ; une offre factice
 // (lien « EXEMPLE ») est refusée ; un article déjà généré n'est pas régénéré ; aucun lien n'est laissé dans le texte
 // (le bouton de la page porte le lien, avec rel="sponsored") ; les images du flux ne sont pas reprises (pas d'image externe).
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, unlinkSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { REGLES } from './regles.mjs';
 
 const SECRETS = JSON.parse(process.env.SECRETS_JSON || '{}');
 const lire = (nom) => process.env[nom] || SECRETS[nom] || '';
@@ -24,12 +25,12 @@ if (!CLE) { console.error('Aucune clé Gemini (GEMINI_API_KEY_BONS_PLANS, GEMINI
 const PROMPT = `Tu es le rédacteur en chef d'un site de bons plans voyages. Ton rôle : transformer des données brutes d'offre en un article web prêt à publier, honnête et engageant. Écris en français, au vouvoiement.
 
 ## DONNÉES D'ENTRÉE
-Un objet JSON : destination, voyagiste, prix_initial (prix barré), prix_reduit, dates_disponibilite, duree_sejour, inclusions, type_hebergement, prix_median_90j (optionnel), ville_depart (optionnel).
+Un objet JSON : destination, voyagiste, prix_initial (prix habituel que nous avons observé : médiane de nos relevés, et non le prix barré du marchand), prix_reduit, dates_disponibilite, duree_sejour, inclusions, type_hebergement, ville_depart (optionnel).
 
 ## ÉTAPE 1 — VÉRIFICATION (obligatoire, bloc <verification>, non publié)
 1. reduction_pct = ((prix_initial - prix_reduit) / prix_initial) * 100.
 2. Prix par jour (prix_reduit / duree_sejour) si la durée est connue.
-3. Plausibilité : sous 10 % de réduction, ton factuel et non promotionnel ; au-dessus de 70 % sans prix_median_90j, suspicion de « prix barré gonflé » et prudence ; si prix_median_90j est fourni, compare-y le prix réduit.
+3. Plausibilité : sous 10 % de réduction, ton factuel et non promotionnel ; au-dessus de 70 %, prudence : vérifie si le prix de référence est crédible.
 4. Cohérence des dates.
 5. Niveau de confiance. Dans le frontmatter, confidence vaut EXACTEMENT "ELEVE", "MOYEN" ou "FAIBLE" (majuscules, sans accent). Si FAIBLE, pas d'intitulé « Bon plan du jour » : « Offre repérée », et dis que la réduction est à vérifier à la réservation.
 
@@ -55,7 +56,7 @@ async function appeler(offre, essai = 1) {
     body: JSON.stringify({
       system_instruction: { parts: [{ text: PROMPT }] },
       // Le lien n'est pas transmis au modèle : il n'en a pas besoin et ne peut donc pas le déformer
-      contents: [{ role: 'user', parts: [{ text: JSON.stringify({ ...offre, lien_affiliation: undefined, offer_hash: undefined }, null, 2) }] }],
+      contents: [{ role: 'user', parts: [{ text: JSON.stringify({ ...offre, prix_initial: offre.prix_median_90j, prix_median_90j: undefined, prix_min_observe: undefined, nb_releves_historique: undefined, jours_historique: undefined, lien_affiliation: undefined, offer_hash: undefined }, null, 2) }] }],
       generationConfig: { temperature: 0.3 },
     }),
     signal: AbortSignal.timeout(90_000),
@@ -101,7 +102,8 @@ let ecrits = 0, ignores = 0, existants = 0;
 for (const offre of LIMITE ? offres.slice(0, LIMITE) : offres) {
   const fichier = join(DOSSIER, `${slug(offre.destination)}-${offre.offer_hash}.md`);
   if (/(awinmid|awinaffid)=EXEMPLE/i.test(offre.lien_affiliation ?? '')) { console.warn(`::warning::${offre.destination} : lien factice, ignoré`); ignores++; continue; }
-  if (existsSync(fichier)) { existants++; continue; }
+  // Déjà écrit au même prix : rien à refaire. Prix changé : l'article est régénéré, sinon il afficherait un prix périmé.
+  if (existsSync(fichier) && Number(readFileSync(fichier, 'utf8').match(/^prix: ([\d.]+)/m)?.[1]) === offre.prix_reduit) { existants++; continue; }
   try {
     const texte = await appeler(offre);
     const article = bloc(texte, 'article');
@@ -109,7 +111,8 @@ for (const offre of LIMITE ? offres.slice(0, LIMITE) : offres) {
     const { attrs, corps } = separer(article);
     if (!attrs.title || !attrs.description) throw new Error('titre ou description manquant');
     const avis = bloc(texte, 'avis');
-    const reduction = Math.round(((offre.prix_initial - offre.prix_reduit) / offre.prix_initial) * 100);
+    // Réduction par rapport à NOTRE prix habituel observé (médiane), pas au prix barré du marchand
+    const reduction = Math.round(((offre.prix_median_90j - offre.prix_reduit) / offre.prix_median_90j) * 100);
     const final = yaml({
       title: attrs.title,
       description: attrs.description,
@@ -118,14 +121,16 @@ for (const offre of LIMITE ? offres.slice(0, LIMITE) : offres) {
       destination: offre.destination,
       voyagiste: offre.voyagiste,
       prix: offre.prix_reduit,
-      prixInitial: offre.prix_initial,
+      prixInitial: offre.prix_median_90j,
       reduction,
       duree: offre.duree_sejour ?? undefined,
       villeDepart: offre.ville_depart ?? undefined,
       lien: offre.lien_affiliation,
       avisPourquoi: avis.match(/POURQUOI:\s*(.+)/i)?.[1]?.trim(),
       avisAttention: avis.match(/ATTENTION:\s*(.+)/i)?.[1]?.trim(),
-    }) + corps.replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/https?:\/\/\S+/g, '').trim() + '\n';
+    }) + corps.replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/https?:\/\/\S+/g, '').trim() +
+      // Base de la décision, écrite à partir des données (jamais par le modèle)
+      `\n\n*Pourquoi cette offre est publiée : son prix est au moins ${Math.round((1 - REGLES.SOUS_MEDIANE) * 100)} % sous le prix médian que nous avons observé (${offre.prix_median_90j} €, sur ${offre.nb_releves_historique} relevés en ${offre.jours_historique} jours) et il est au plus ${Math.round((REGLES.MARGE_SUR_MINIMUM - 1) * 100)} % au-dessus du plus bas prix relevé auparavant (${offre.prix_min_observe} €).*\n`;
     writeFileSync(fichier, final);
     console.log(`${offre.destination} : article écrit`);
     ecrits++;
@@ -135,5 +140,13 @@ for (const offre of LIMITE ? offres.slice(0, LIMITE) : offres) {
     ignores++;
   }
 }
-console.log(`Terminé : ${ecrits} articles, ${existants} déjà présents, ${ignores} ignorés.`);
-if (ecrits === 0 && existants === 0) process.exit(1);
+// Une offre qui ne passe plus le filtre de prix disparaît du site (un prix périmé serait trompeur)
+const retenus = new Set(offres.map((o) => o.offer_hash));
+let retires = 0;
+for (const f of readdirSync(DOSSIER)) {
+  const h = f.match(/-([0-9a-f]{16})\.md$/)?.[1];
+  if (h && !retenus.has(h)) { unlinkSync(join(DOSSIER, f)); console.log(`${f} : retiré (n'est plus un bon prix)`); retires++; }
+}
+console.log(`Terminé : ${ecrits} articles, ${existants} déjà à jour, ${retires} retirés, ${ignores} ignorés.`);
+// Aucune offre retenue est normal au début : seule une génération qui échoue partout est une erreur
+if (offres.length > 0 && ecrits === 0 && existants === 0) process.exit(1);

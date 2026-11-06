@@ -173,3 +173,4 @@ Accueil = choix de destination, 194 pays, fiche d'identité, drapeaux, convertis
 
 - Fait : scripts, workflow manuel, bouton affilié sur la page d'offre (SPEC §13). L'ancien dossier `C:\Users\hp\bons-plans-voyages\` n'est plus nécessaire (ne rien supprimer sans décision).
 - À faire : créer un flux Awin réel, le mettre en secret `AWIN_FEED_URL`, lancer le workflow à la main, ajuster `AWIN_FIELD_MAP` d'après le message « offres rejetées », relire les premiers articles, puis seulement envisager une planification.
+- Filtre de prix ajouté (SPEC §13) : testé avec un historique préparé (retenue, écartée, retirée quand le prix remonte). Il faudra planifier la collecte (une fois par jour) pour que l'historique se construise, puis ajuster les seuils de `regles.mjs` d'après les premiers résultats réels.
