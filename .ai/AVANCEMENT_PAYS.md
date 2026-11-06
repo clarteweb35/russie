@@ -208,3 +208,10 @@ Liste raisonnée des pays envisagés : `.ai/PAYS_PREVUS.md`. Suivi général du 
 - Sources : sites privés (guides, forums d’expatriés, banques en ligne, cabinets), toutes signalées comme telles ; rien d’officiel lisible pour ces sujets. Recherche du 6 novembre 2026.
 - Lacunes assumées : caution/logement non sourcés pour Tunisie (partiel), États-Unis, Croatie, Thaïlande, Mexique (partiel), République dominicaine, Égypte ; ces sections le disent et renvoient à un professionnel.
 - À relire par un humain : montants de frais (changent vite), seuils de devises (Tunisie, Algérie).
+
+## Paiements : paquets 2 à 5 (6 novembre 2026)
+
+- `complements-6.ts` à `complements-10.ts` : 107 pays au total ont maintenant une rubrique paiements sourcée (sources privées citées). Banque et logement : seulement quand une source existait, sinon « À documenter ».
+- Volontairement sans contenu : les 22 pays de `ALERTE_SECURITE` (voyage déconseillé), pour ne pas encourager le départ.
+- Sans source trouvée (restent « À documenter ») : Finlande, Corée du Sud, Qatar, Arabie saoudite, Koweït, Bahreïn, Pakistan, Bangladesh, Bhoutan, Ghana, Nigeria, Éthiopie, Rwanda, Seychelles, Uruguay, Paraguay, Venezuela, Moldavie, Kirghizistan, Tadjikistan, Turkménistan, petits États du Pacifique et des Caraïbes, etc. Une recherche pays par pays serait nécessaire.
+- Version « essentielle » : `/pays/<pays>/essentiel/` pour tous les pays ayant une fiche officielle.
