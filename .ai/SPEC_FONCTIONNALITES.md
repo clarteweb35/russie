@@ -131,7 +131,11 @@ Liste des sources et de leur fiabilité.
 Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fichier) et retirée une fois terminée et mise en ligne. Chaque entrée : date, objectif, fichiers concernés, étapes faites et restantes.
 
 
-## 8. Site général, domaine et actualités (6 novembre 2026)
+## 8. Version « essentielle » (6 novembre 2026)
+
+- Chaque pays qui a une fiche officielle (183 dont la Russie) a une page « L’essentiel » : `/pays/<pays>/essentiel/` (Russie : `/essentiel/`). Bloc Entrée, Sécurité, Santé, Argent (si compléments sourcés), Urgences ; une à quatre lignes par bloc, chacune renvoyant au détail. Zéro texte écrit à la main : tout est extrait des fiches officielles importées (première phrase des rubriques utiles) et des compléments, donc rien d’inventé. Code : `src/data/pays/essentiel.ts`, `src/components/Essentiel.astro`. Bouton « L’essentiel » sur la fiche pays, entrée de menu, plan du site.
+
+## 9. Site général, domaine et actualités (6 novembre 2026)
 
 - Le site https://clarteweb35.github.io/russie/ est le site général « Voyage Malin ». Le passage au domaine se fait sans changer le code : variable de dépôt `DOMAINE` (voir `.ai/AVANCEMENT.md`). `robots.txt` est généré (`src/pages/robots.txt.ts`).
 - Topo hebdomadaire : 193 pays (`scripts/actualites-pays.json`). Clé Gemini : secret par pays `GEMINI_API_KEY_<PAYS>`, sinon `GEMINI_API_KEY_GENERAL`.

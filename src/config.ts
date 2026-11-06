@@ -1,6 +1,7 @@
 export const LAST_CHECK = '30 octobre 2026';
 
 export const sections = [
+  { href: '/essentiel', label: 'L’essentiel', icon: '⚡', desc: 'Entrée, sécurité, santé et argent en quelques lignes.' },
   { href: '/voyager', label: 'Voyager', icon: '✈️', desc: 'Visa, sécurité, transports et démarches avant le départ.' },
   { href: '/vivre', label: 'Vivre', icon: '🏠', desc: 'Séjour légal, argent, logement et quotidien.' },
   { href: '/travailler', label: 'Travailler', icon: '💼', desc: 'Permis de travail et cadre juridique.' },

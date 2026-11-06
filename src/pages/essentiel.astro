@@ -1,0 +1,10 @@
+---
+// Version essentielle de la Russie : mêmes règles que pour les autres pays (voir data/pays/essentiel.ts).
+import Base from '../layouts/Base.astro';
+import Essentiel from '../components/Essentiel.astro';
+---
+<Base title="Russie : l’essentiel" description="Russie : entrée, sécurité, santé et argent en quelques lignes, d’après les fiches officielles du ministère français." fil={[{ label: 'Russie', href: '/pays/russie' }, { label: 'L’essentiel' }]}>
+  <h1>Russie : l’essentiel</h1>
+  <p class="lead">L’indispensable avant de partir, sans détour. Chaque rubrique renvoie au détail.</p>
+  <Essentiel iso="RUS" href="" nom="la Russie" alerteSecurite={true} />
+</Base>

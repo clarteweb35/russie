@@ -2,6 +2,7 @@
 import brut from './pays.json';
 import { guideParIso } from '../pays';
 import type { PaysComplet } from '../pays/types';
+import { aEssentiel } from '../pays/essentiel';
 
 export type Fiche = {
   iso: string;
@@ -98,6 +99,7 @@ export const contextePays = (f: FicheMonde) => {
   const g = f.guide;
   const menu = [
     { label: 'Fiche', href: f.href, exact: true },
+    ...(aEssentiel(f.iso) ? [{ label: 'L’essentiel', href: `${f.href}/essentiel` }] : []),
     ...(g
       ? [
           ...g.rubriques.map((r) => ({ label: LIBELLES[r.slug] ?? r.titre, href: `${f.href}/${r.slug}` })),

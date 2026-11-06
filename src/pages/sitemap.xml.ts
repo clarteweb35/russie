@@ -3,6 +3,7 @@ import { sections, pagesLegales, url } from '../config';
 import { lecons } from '../data/lecons.js';
 import { paysComplets } from '../data/pays';
 import { monde } from '../data/monde';
+import { aEssentiel } from '../data/pays/essentiel';
 
 // Plan du site généré depuis les données (rubriques, leçons, pays) : aucune adresse n'est écrite à la main.
 export const GET: APIRoute = ({ site }) => {
@@ -13,7 +14,8 @@ export const GET: APIRoute = ({ site }) => {
     ...sections.map((s) => s.href),
     ...lecons.map((l) => `/lecons/${l.slug}`),
     ...pagesLegales.map((p) => p.href),
-    // Tous les autres pays du monde (une page chacun)
+    // Tous les autres pays du monde (une page chacun), avec leur version essentielle quand les fiches officielles existent
+    ...monde.filter((p) => p.iso !== 'RUS' && aEssentiel(p.iso)).map((p) => `${p.href}/essentiel`),
     ...monde.filter((p) => p.iso !== 'RUS').map((p) => p.href),
     // Sous-pages des guides détaillés
     ...paysComplets.flatMap((p) => [

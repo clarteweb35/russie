@@ -1,0 +1,38 @@
+---
+// Version « essentielle » d'un pays : l'indispensable, sans commentaire, avec renvoi vers le détail.
+import Badge from './Badge.astro';
+import Alert from './Alert.astro';
+import { essentiel } from '../data/pays/essentiel';
+import { url } from '../config';
+
+interface Props { iso: string; href: string; nom: string; alerteSecurite?: boolean }
+const { iso, href, nom, alerteSecurite = false } = Astro.props;
+const { maj, blocs } = essentiel(iso, href);
+---
+{alerteSecurite && (
+  <Alert titre="Voyage déconseillé" warn>
+    Le ministère français déconseille formellement ou fortement les déplacements dans ce pays. Lisez sa fiche avant toute décision.
+  </Alert>
+)}
+<div class="essentiel">
+  {blocs.map((b) => (
+    <section class="essentiel-bloc" id={b.id} aria-labelledby={`ess-${b.id}`}>
+      <h2 id={`ess-${b.id}`}><span aria-hidden="true">{b.icone}</span> {b.titre} <Badge type={b.badge}>{b.badge === 'ok' ? 'Source officielle' : 'À confirmer'}</Badge></h2>
+      {b.alerte && <p class="essentiel-alerte"><strong>{b.alerte}</strong></p>}
+      <ul>
+        {b.items.map((i) => <li set:html={i} />)}
+      </ul>
+      <p class="essentiel-lien"><a href={url(b.lien.chemin)}>{b.lien.label} →</a></p>
+    </section>
+  ))}
+</div>
+<p class="src">Extraits des fiches du ministère de l’Europe et des Affaires étrangères pour {nom}{maj ? `, mises à jour le ${maj}` : ''}. Les conseils évoluent : relisez la fiche d’origine avant de partir. Les lignes marquées « À confirmer » viennent de sources privées citées dans le détail.</p>
+<style>
+  .essentiel { display: grid; gap: 14px; margin: 18px 0; }
+  .essentiel-bloc { border: 1px solid var(--line, rgba(0,0,0,.15)); border-radius: 12px; padding: 14px 18px; background: var(--card, transparent); }
+  .essentiel-bloc h2 { margin: 0 0 8px; font-size: 1.15rem; }
+  .essentiel-bloc ul { margin: 0; padding-left: 1.2rem; }
+  .essentiel-bloc li { margin: 6px 0; }
+  .essentiel-alerte { margin: 0 0 8px; color: var(--warn, #9a5b00); }
+  .essentiel-lien { margin: 10px 0 0; font-weight: 600; }
+</style>

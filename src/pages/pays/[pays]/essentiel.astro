@@ -1,0 +1,18 @@
+---
+// Version essentielle d'un pays : même page pour tous, calculée depuis les fiches officielles (voir data/pays/essentiel.ts).
+import Base from '../../../layouts/Base.astro';
+import Essentiel from '../../../components/Essentiel.astro';
+import { monde, estRussie, contextePays, ALERTE_SECURITE } from '../../../data/monde';
+import { aEssentiel } from '../../../data/pays/essentiel';
+
+export function getStaticPaths() {
+  return monde.filter((p) => !estRussie(p) && aEssentiel(p.iso)).map((p) => ({ params: { pays: p.slug }, props: { p } }));
+}
+const { p } = Astro.props;
+const ctx = contextePays(p);
+---
+<Base title={`${p.nom} : l’essentiel`} description={`${p.nom} : entrée, sécurité, santé et argent en quelques lignes, d’après les fiches officielles du ministère français.`} marque={`Guide ${p.nom}`} {...ctx} fil={[{ label: p.nom, href: p.href }, { label: 'L’essentiel' }]} verifie={p.guide?.verifie}>
+  <h1>{p.nom} : l’essentiel</h1>
+  <p class="lead">L’indispensable avant de partir, sans détour. Chaque rubrique renvoie au détail.</p>
+  <Essentiel iso={p.iso} href={p.href} nom={p.nom} alerteSecurite={ALERTE_SECURITE.has(p.iso)} />
+</Base>

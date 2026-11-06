@@ -8,6 +8,7 @@ import BlocDevise from '../../../components/BlocDevise.astro';
 import BlocRusse from '../../../components/BlocRusse.astro';
 import PhotosPays from '../../../components/PhotosPays.astro';
 import { monde, estRussie, contextePays, memeSousRegion, conseilsDe, ALERTE_SECURITE, decalageTexte } from '../../../data/monde';
+import { aEssentiel } from '../../../data/pays/essentiel';
 import { PARCOURS_GENERIQUES } from '../../../data/lecons-generiques';
 import { NOM_SITE, url, legendeIA, leNomDeLangue, deNomDeLangue } from '../../../config';
 
@@ -63,7 +64,7 @@ const autres = g ? g.rubriques.filter((r) => !['voyager', 'vivre'].includes(r.sl
     <p>{g ? g.accroche : `Fiche d’identité de ${p.nom}, monnaie et taux de change, conseils officiels du ministère français. Un guide détaillé (voyager, vivre, travailler, leçons de langue) reste à rédiger.`}</p>
     <div class="cta">
       {g
-        ? <><a class="btn" href={url(`${p.href}/voyager`)}>Voyager →</a>{g.lecons.length > 0 && <a class="btn-line" href={url(`${p.href}/lecons`)}>🎧 Apprendre {leNomDeLangue(g.langue.nom)}</a>}</>
+        ? <>{aEssentiel(p.iso) && <a class="btn" href={url(`${p.href}/essentiel`)}>⚡ L’essentiel</a>}<a class="btn-line" href={url(`${p.href}/voyager`)}>Voyager →</a>{g.lecons.length > 0 && <a class="btn-line" href={url(`${p.href}/lecons`)}>🎧 Apprendre {leNomDeLangue(g.langue.nom)}</a>}</>
         : <><a class="btn" href="#securite">Conseils officiels →</a><a class="btn-line" href="#monnaie">Monnaie et change</a></>}
     </div>
   </section>
