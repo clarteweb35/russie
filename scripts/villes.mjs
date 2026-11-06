@@ -12,7 +12,7 @@ const SECRETS = JSON.parse(process.env.SECRETS_JSON || '{}');
 const lire = (nom) => process.env[nom] || SECRETS[nom] || '';
 const nomSecret = (slug) => `GEMINI_API_KEY_${slug.toUpperCase().replace(/[^A-Z0-9]/g, '_')}`;
 const cle = (slug) => lire(nomSecret(slug)) || lire('GEMINI_API_KEY_GENERAL') || lire('GEMINI_API_KEY');
-const MODELE = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
+const MODELE = process.env.GEMINI_MODEL || 'gemini-3.8-flash';
 const BASE = process.env.GEMINI_BASE_URL || 'https://generativelanguage.googleapis.com';
 const DOSSIER = process.env.VILLES_DIR || join('src', 'data', 'villes');
 const PAUSE_MS = Number(process.env.VILLES_PAUSE_MS ?? 6000);
@@ -49,7 +49,11 @@ async function appeler(p, essai = 1) {
     await new Promise((ok) => setTimeout(ok, ATTENTE_MS * essai));
     return appeler(p, essai + 1);
   }
-  if (!r.ok) throw new Error(`Gemini a répondu ${r.status}. ${(await r.text()).slice(0, 300)}`);
+  if (!r.ok) {
+    const erreur = new Error(`Gemini a répondu ${r.status}. ${(await r.text()).slice(0, 300)}`);
+    erreur.fatale = r.status === 404; // modèle retiré ou inconnu : tous les pays échoueraient pareil
+    throw erreur;
+  }
   return r.json();
 }
 
@@ -101,6 +105,7 @@ for (const p of LIMITE ? PAYS.slice(0, LIMITE) : PAYS) {
     await new Promise((ok) => setTimeout(ok, PAUSE_MS));
   } catch (e) {
     console.warn(`::warning::${p.slug} : ${e.message}`);
+    if (e.fatale) { console.error('Modèle introuvable : arrêt du traitement. Définissez GEMINI_MODEL ou mettez à jour le modèle par défaut.'); process.exit(1); }
   }
 }
 if (reussis === 0) {

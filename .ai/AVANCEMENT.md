@@ -125,7 +125,7 @@ Choix de l'utilisateur : **Gemini** et **publication automatique**. Le code est 
 ### À faire par l'utilisateur (dans cet ordre)
 1. [ ] Créer une clé d'API dans Google AI Studio (aistudio.google.com).
 2. [ ] Ajouter le secret `GEMINI_API_KEY` : dépôt GitHub > Settings > Secrets and variables > Actions > New repository secret. **Ne jamais envoyer la clé dans le chat.**
-3. [ ] Vérifier le nom du modèle dans Google AI Studio (le code utilise `gemini-2.5-flash` par défaut, qui peut avoir été remplacé) ; sinon ajouter une variable `GEMINI_MODEL` dans le workflow.
+3. [ ] Vérifier le nom du modèle dans Google AI Studio (le code utilise `gemini-3.8-flash` par défaut, qui peut avoir été remplacé) ; sinon ajouter une variable `GEMINI_MODEL` dans le workflow.
 4. [ ] Lancer le workflow à la main : onglet Actions > « Actualités hebdomadaires » > Run workflow. Relire le premier topo obtenu.
 
 ### À surveiller
@@ -174,3 +174,9 @@ Accueil = choix de destination, 194 pays, fiche d'identité, drapeaux, convertis
 - Fait : scripts, workflow manuel, bouton affilié sur la page d'offre (SPEC §13). L'ancien dossier `C:\Users\hp\bons-plans-voyages\` n'est plus nécessaire (ne rien supprimer sans décision).
 - À faire : créer un flux Awin réel, le mettre en secret `AWIN_FEED_URL`, lancer le workflow à la main, ajuster `AWIN_FIELD_MAP` d'après le message « offres rejetées », relire les premiers articles, puis seulement envisager une planification.
 - Filtre de prix ajouté (SPEC §13) : testé avec un historique préparé (retenue, écartée, retirée quand le prix remonte). Il faudra planifier la collecte (une fois par jour) pour que l'historique se construise, puis ajuster les seuils de `regles.mjs` d'après les premiers résultats réels.
+
+## Modèle Gemini retiré (6 novembre 2026)
+
+- Le premier lancement des villes a échoué partout : `gemini-2.5-flash` n'est plus disponible pour les nouveaux comptes (erreur 404 ; Google recommande `gemini-3.8-flash`). Modèle par défaut changé dans `actualites.mjs`, `villes.mjs` et `bons-plans/generer.mjs` ; `GEMINI_MODEL` permet de le changer sans toucher au code.
+- Les trois scripts s'arrêtent maintenant dès la première erreur 404 (au lieu de refaire 193 appels voués à l'échec).
+- À vérifier au prochain lancement réel : la recherche web (`google_search`) fonctionne-t-elle avec ce modèle par l'API actuelle ? Google évoque une « Interactions API » ; si la réponse n'a plus de sources, le topo est refusé (c'est le garde-fou) et il faudra adapter l'appel.

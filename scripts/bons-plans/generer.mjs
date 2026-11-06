@@ -13,7 +13,7 @@ import { REGLES } from './regles.mjs';
 const SECRETS = JSON.parse(process.env.SECRETS_JSON || '{}');
 const lire = (nom) => process.env[nom] || SECRETS[nom] || '';
 const CLE = lire('GEMINI_API_KEY_BONS_PLANS') || lire('GEMINI_API_KEY_GENERAL') || lire('GEMINI_API_KEY');
-const MODELE = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
+const MODELE = process.env.GEMINI_MODEL || 'gemini-3.8-flash';
 const BASE = process.env.GEMINI_BASE_URL || 'https://generativelanguage.googleapis.com';
 const DONNEES = process.env.BONS_PLANS_DATA || join('data', 'bons-plans');
 const DOSSIER = process.env.BONS_PLANS_DIR || join('src', 'content', 'bons-plans');
@@ -65,7 +65,11 @@ async function appeler(offre, essai = 1) {
     await new Promise((ok) => setTimeout(ok, 20000 * essai));
     return appeler(offre, essai + 1);
   }
-  if (!r.ok) throw new Error(`Gemini a répondu ${r.status}. ${(await r.text()).slice(0, 300)}`);
+  if (!r.ok) {
+    const erreur = new Error(`Gemini a répondu ${r.status}. ${(await r.text()).slice(0, 300)}`);
+    erreur.fatale = r.status === 404;
+    throw erreur;
+  }
   const texte = (await r.json())?.candidates?.[0]?.content?.parts?.map((p) => p.text ?? '').join('');
   if (!texte) throw new Error('réponse vide');
   return texte;
@@ -137,6 +141,7 @@ for (const offre of LIMITE ? offres.slice(0, LIMITE) : offres) {
     await new Promise((ok) => setTimeout(ok, PAUSE_MS));
   } catch (e) {
     console.warn(`::warning::${offre.destination} : ${e.message}`);
+    if (e.fatale) { console.error('Modèle introuvable : arrêt du traitement. Définissez GEMINI_MODEL.'); process.exit(1); }
     ignores++;
   }
 }

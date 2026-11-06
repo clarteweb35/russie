@@ -75,7 +75,7 @@ Alphabet cyrillique, phrases utiles, repères culturels.
 
 ### L'actu de la semaine (Russie et pays prêts)
 - Deux volets : (1) un topo généré par IA, **cherché en priorité dans la presse locale puis traduit en français** ; (2) les liens vers les **médias locaux** du pays, affichés même avant le premier topo. Bloc sur l'accueil de la Russie et sur l'accueil de chaque pays, avec badge « Résumé généré par IA », date de génération, modèle, résumé de 3 à 4 phrases, jusqu'à 5 points et les sources en lien. Rappel que ce n'est pas un conseil de voyage, avec lien vers les conseils officiels. **Rien ne s'affiche tant qu'aucun topo n'a été généré.**
-- Génération : `scripts/actualites.mjs` appelle l'API Gemini avec la recherche Google intégrée (modèle réglable par `GEMINI_MODEL`, `gemini-2.5-flash` par défaut). Liste des pays suivis et langue locale : `scripts/actualites-pays.json` (les 7 pays actuels). Résultat : `src/data/actualites/<pays>.json`.
+- Génération : `scripts/actualites.mjs` appelle l'API Gemini avec la recherche Google intégrée (modèle réglable par `GEMINI_MODEL`, `gemini-3.8-flash` par défaut). Liste des pays suivis et langue locale : `scripts/actualites-pays.json` (les 7 pays actuels). Résultat : `src/data/actualites/<pays>.json`.
 - Fréquence : workflow `.github/workflows/actualites.yml`, chaque lundi à 6 h UTC (ou à la demande), qui enregistre les fichiers, puis relance le déploiement.
 - Publication automatique (choix de l'éditeur). Garde-fous : sources prises dans les métadonnées de la recherche et non dans le texte du modèle, liens `https` uniquement, topo refusé sans source, un échec ne remplace jamais le topo précédent.
 - Clé : secret de dépôt `GEMINI_API_KEY`. Elle n'est jamais dans le code ni côté navigateur.
@@ -214,7 +214,7 @@ Alphabet cyrillique, phrases utiles, repères culturels.
 
 ### L'actu de la semaine (Russie et pays prêts)
 - Deux volets : (1) un topo généré par IA, **cherché en priorité dans la presse locale puis traduit en français** ; (2) les liens vers les **médias locaux** du pays, affichés même avant le premier topo. Bloc sur l'accueil de la Russie et sur l'accueil de chaque pays, avec badge « Résumé généré par IA », date de génération, modèle, résumé de 3 à 4 phrases, jusqu'à 5 points et les sources en lien. Rappel que ce n'est pas un conseil de voyage, avec lien vers les conseils officiels. **Rien ne s'affiche tant qu'aucun topo n'a été généré.**
-- Génération : `scripts/actualites.mjs` appelle l'API Gemini avec la recherche Google intégrée (modèle réglable par `GEMINI_MODEL`, `gemini-2.5-flash` par défaut). Liste des pays suivis et langue locale : `scripts/actualites-pays.json` (les 7 pays actuels). Résultat : `src/data/actualites/<pays>.json`.
+- Génération : `scripts/actualites.mjs` appelle l'API Gemini avec la recherche Google intégrée (modèle réglable par `GEMINI_MODEL`, `gemini-3.8-flash` par défaut). Liste des pays suivis et langue locale : `scripts/actualites-pays.json` (les 7 pays actuels). Résultat : `src/data/actualites/<pays>.json`.
 - Fréquence : workflow `.github/workflows/actualites.yml`, chaque lundi à 6 h UTC (ou à la demande), qui enregistre les fichiers, puis relance le déploiement.
 - Publication automatique (choix de l'éditeur). Garde-fous : sources prises dans les métadonnées de la recherche et non dans le texte du modèle, liens `https` uniquement, topo refusé sans source, un échec ne remplace jamais le topo précédent.
 - Clé : secret de dépôt `GEMINI_API_KEY`. Elle n'est jamais dans le code ni côté navigateur.

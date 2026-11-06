@@ -19,7 +19,7 @@ const cle = (slug) => lire(nomSecret(slug)) || lire("GEMINI_API_KEY_GENERAL") ||
 const PAUSE_MS = Number(process.env.ACTUALITES_PAUSE_MS ?? 6000);
 const ATTENTE_MS = Number(process.env.ACTUALITES_ATTENTE_MS ?? 20000);
 const LIMITE = Number(process.env.ACTUALITES_LIMITE ?? 0);
-const MODELE = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
+const MODELE = process.env.GEMINI_MODEL || 'gemini-3.8-flash';
 const BASE = process.env.GEMINI_BASE_URL || 'https://generativelanguage.googleapis.com';
 const DOSSIER = process.env.ACTUALITES_DIR || join('src', 'data', 'actualites');
 const PAYS = JSON.parse(readFileSync(new URL('./actualites-pays.json', import.meta.url), 'utf8'));
@@ -56,7 +56,9 @@ async function appeler(p, essai = 1) {
   if (!reponse.ok) {
     const detail = (await reponse.text()).slice(0, 300);
     const aide = reponse.status === 404 ? ` Le modèle « ${MODELE} » est introuvable : définissez GEMINI_MODEL avec un modèle disponible dans Google AI Studio.` : '';
-    throw new Error(`Gemini a répondu ${reponse.status}.${aide} ${detail}`);
+    const erreur = new Error(`Gemini a répondu ${reponse.status}.${aide} ${detail}`);
+    erreur.fatale = reponse.status === 404; // inutile d'insister : tous les pays échoueraient pareil
+    throw erreur;
   }
   return reponse.json();
 }
@@ -109,6 +111,7 @@ for (const p of (LIMITE ? PAYS.slice(0, LIMITE) : PAYS)) {
   } catch (e) {
     // Le topo précédent est conservé : on signale seulement l'erreur
     console.warn(`::warning::${p.slug} : ${e.message}`);
+    if (e.fatale) { console.error('Modèle introuvable : arrêt du traitement. Définissez GEMINI_MODEL ou mettez à jour le modèle par défaut.'); process.exit(1); }
   }
 }
 if (reussis === 0) {
