@@ -315,3 +315,16 @@ Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fich
 ## 15. Mentions légales : éditeur identifié (7 novembre 2026)
 
 - La page `/mentions-legales` ne parle plus d'un éditeur anonyme : elle affiche l'éditeur (Julien Guillois, à titre individuel), son adresse, son téléphone et le directeur de la publication, avec l'hébergeur (GitHub Pages). Pas d'e-mail ni de SIRET affichés tant qu'ils n'existent pas. Rubriques « Liens affiliés », « Bons plans », « Villes à connaître » ajoutées.
+
+## 16. Maquette de l’accueil Voyage Malin (7 novembre 2026)
+
+- Route de démonstration `/demo-index/`, noindex, sans remplacement de l’accueil : accroche locale Rennes/Nantes, exemples d’offres explicitement signalés, exploration par budget/départ, liens vers guides pays et transparence tarifaire. Aucune offre de démonstration n’est une offre réelle. Fichier : `src/pages/demo-index.astro`.
+
+## 17. Seconde maquette visuelle de l’accueil (7 novembre 2026)
+
+- Route non indexable `/demo-index-2/`, sans remplacement de l’accueil. Variante plus illustrée et colorée de la maquette précédente, avec l’illustration de valise et les logos partenaires déjà présents dans `public/`. Exemples d’offres et prix signalés comme fictifs. Fichier : `src/pages/demo-index-2.astro`.
+
+## 16. Accueil : recherche progressive et marque neutre (7 novembre 2026)
+
+- **Recherche** : dès la première lettre, un panneau de suggestions s'affiche juste sous le champ (« a » : les pays en A ; « al » : Albanie, Algérie, Allemagne). Classement : nom qui commence par la saisie, puis mot du nom (dès 2 lettres), puis nom officiel ou capitale (dès 3 lettres, par exemple « Tbilissi » trouve la Géorgie). Clavier : Entrée ouvre le premier résultat, ↓ ↑ parcourent la liste, Échap vide la recherche. Le filtre par région s'applique aussi aux suggestions. La liste A–Z plus bas se filtre toujours.
+- **Marque** : l'en-tête n'a plus le drapeau russe en filigrane ni l'effet de brillance ; un petit globe et le nom du site. La liste des pays affiche le nom puis la capitale l'un sous l'autre, et l'étiquette « beta » (et non « test »).

@@ -83,7 +83,7 @@ const donneesStructurees: object[] = [
     <div id="progress"></div>
     <header class="site">
       <div class="wrap">
-        <a class="brand" href={url("/")} aria-label={`${NOM_SITE}, accueil`}><span class="nom">{NOM_SITE}</span></a>
+        <a class="brand" href={url("/")} aria-label={`${NOM_SITE}, accueil`}><svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><ellipse cx="12" cy="12" rx="4.2" ry="9.5"/><path d="M2.5 12h19M4 7.5h16M4 16.5h16"/></svg><span class="nom">{NOM_SITE}</span></a>
         <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
         <nav id="menu" aria-label="Navigation principale">
           {!isHome && <a class="retour" href={url('/#destinations')}>← Toutes les destinations</a>}

@@ -249,17 +249,11 @@ footer { margin-top: 72px; padding: 36px 0 56px; color: var(--muted); font-size:
 .card-photo h3 { margin: 18px 22px 4px; }
 .card-photo p { margin: 0 22px 20px; }
 
-/* en-tête : nom de domaine sur un drapeau russe en filigrane */
-.brand { position: relative; isolation: isolate; gap: 0; padding: 9px 26px; font-size: 1.35rem; }
-.brand::before, .brand::after { content: ''; position: absolute; inset: 0; z-index: -1; border-radius: 12px; pointer-events: none; -webkit-mask-image: linear-gradient(90deg, transparent, #000 16%, #000 84%, transparent); mask-image: linear-gradient(90deg, transparent, #000 16%, #000 84%, transparent); }
-.brand::before { background: linear-gradient(to bottom, #fff 0 33.4%, #0039a6 33.4% 66.7%, #d52b1e 66.7% 100%); opacity: .28; transition: opacity .4s; }
-.brand::after { background: linear-gradient(100deg, transparent 35%, rgba(255, 255, 255, .7) 50%, transparent 65%); background-size: 260% 100%; background-position: 130% 0; opacity: .5; mix-blend-mode: soft-light; animation: brillance 7s ease-in-out infinite; }
-.brand:hover::before { opacity: .4; }
+/* en-tête : nom du site, neutre (le site couvre tous les pays) avec un petit globe */
+.brand { gap: 9px; padding: 6px 4px; font-size: 1.35rem; }
+.brand .globe { flex: none; width: 1.15em; height: 1.15em; color: var(--accent); }
 .brand .nom { letter-spacing: -.02em; }
-.brand .nom b { color: var(--accent); font-weight: 800; }
-@keyframes brillance { 0%, 55% { background-position: 130% 0; } 100% { background-position: -30% 0; } }
-@media (prefers-color-scheme: dark) { .brand::before { opacity: .15; } .brand:hover::before { opacity: .26; } }
-@media (max-width: 720px) { .brand { font-size: 1.2rem; padding: 6px 16px; } }
+@media (max-width: 720px) { .brand { font-size: 1.2rem; } }
 
 /* menu « Autres pays » */
 .menu-pays { position: relative; }
@@ -295,7 +289,7 @@ footer { margin-top: 72px; padding: 36px 0 56px; color: var(--muted); font-size:
 /* menu : resserré sous 1100 px, hamburger sous 900 px (huit entrées au total) */
 @media (max-width: 1100px) {
   nav a { padding: 6px 9px; font-size: 14px; }
-  .brand { padding: 8px 18px; font-size: 1.2rem; }
+  .brand { font-size: 1.2rem; }
 }
 @media (max-width: 900px) {
   header.site .wrap { flex-direction: row; flex-wrap: wrap; align-items: center; }
@@ -363,10 +357,17 @@ header.site nav .retour { font-weight: 600; color: var(--accent); }
 .guides-grille span, .liste-pays a > span { display: flex; flex-direction: column; min-width: 0; line-height: 1.25; }
 .guides-grille small, .liste-pays .det { font-size: 12.5px; color: var(--muted); }
 .liste-pays .nom { font-weight: 600; }
+/* liste des pays : drapeau à gauche, nom puis capitale l'un sous l'autre */
+.liste-pays a { display: grid; grid-template-columns: 36px 1fr; column-gap: 12px; align-items: center; }
+.liste-pays a img { grid-row: 1 / 3; }
+.liste-pays .nom { display: block; }
+.liste-pays .det { grid-column: 2; }
 .tag-guide { display: inline-block; margin-left: 8px; padding: 1px 7px; border-radius: 999px; font: 700 10.5px var(--sans); text-transform: uppercase; letter-spacing: .04em; background: var(--ok-soft); color: var(--ok); }
 .alphabet { display: flex; flex-wrap: wrap; gap: 4px; margin: 12px 0 4px; }
 .alphabet a { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; text-decoration: none; font-weight: 700; background: var(--card); border: 1px solid var(--line); color: var(--fg); }
 .alphabet a:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+/* suggestions de la recherche : juste sous le champ, mises en avant */
+.resultats { margin: 12px 0 4px; padding: 10px; max-height: 22rem; overflow-y: auto; border: 2px solid var(--accent); border-radius: 16px; background: var(--card); box-shadow: var(--shadow); }
 .groupe { scroll-margin-top: 90px; }
 .groupe h3 { margin: 22px 0 0; font-size: 1.6rem; color: var(--accent); }
 [hidden] { display: none !important; }
