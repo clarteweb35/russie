@@ -298,3 +298,10 @@ Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fich
 - **Aucune offre n'est publiée aujourd'hui** : les 3 offres d'exemple de la fusion (liens « EXEMPLE ») n'ont pas été reprises. La page des bons plans est en `noindex` et absente du plan du site tant qu'il n'y a pas d'offre. Les offres sont des fichiers `src/content/bons-plans/*.md` (schéma dans `src/content.config.ts`) ; le pipeline qui les génère n'est pas dans ce dépôt.
 - Polices externes (Google Fonts) retirées des pages reprises : polices système. Mentions légales complétées (affiliation, bons plans, villes à connaître).
 - Dépôt de fusion `voyages-malins` : abandonné au profit de ce site (option « A »).
+
+## 13. Pipeline des bons plans (6 novembre 2026)
+
+- Les offres sont produites par deux scripts de ce dépôt : `scripts/bons-plans/collecter.mjs` (flux Awin XML, historique des prix sur 90 jours dans `data/bons-plans/`) puis `scripts/bons-plans/generer.mjs` (article Gemini dans `src/content/bons-plans/`). Workflow `bons-plans.yml` : **lancement manuel seulement**. Secrets : `AWIN_FEED_URL` et une clé Gemini (`GEMINI_API_KEY_BONS_PLANS`, sinon `GEMINI_API_KEY_GENERAL`).
+- Garde-fous : offre factice (identifiants Awin « EXEMPLE »), incomplète ou sans réduction refusée ; chiffres tirés des données et non du texte du modèle ; aucun lien dans le texte généré ; le bouton « Voir l'offre » de la page porte le lien avec `rel="sponsored noopener"` ; images du flux non reprises ; un article déjà généré n'est pas régénéré.
+- **Non testé sur un vrai flux** : seulement avec un faux serveur. Les noms de balises (`AWIN_FIELD_MAP`) sont ceux du prototype et sont à ajuster au premier flux réel.
+- Dépendance de développement ajoutée : `fast-xml-parser` (scripts hors ligne uniquement, absente du site publié).

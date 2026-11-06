@@ -75,6 +75,15 @@ const labelConfiance: Record<string, string> = {
             </div>
           )
         }
+        {
+          offre.data.lien && (
+            <p>
+              <a class="pays-teaser__cta" href={offre.data.lien} target="_blank" rel="sponsored noopener">
+                Voir l'offre{offre.data.voyagiste ? ` chez ${offre.data.voyagiste}` : ""} →
+              </a>
+            </p>
+          )
+        }
       </div>
     </article>
     <VmFooter affilie={Boolean(offre.data.lien)} />
