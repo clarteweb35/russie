@@ -25,6 +25,12 @@ export const legendeIA = (description: string) => `${description} (${MENTION_IA}
 // Pages hors menu : liées depuis le pied de page et présentes dans le sitemap.
 export const pagesLegales = [{ href: '/mentions-legales', label: 'Mentions légales' }];
 
+// Rubriques éditoriales de Voyage Malin : liées depuis l'accueil et le pied de page, présentes dans le plan du site.
+export const pagesEditoriales = [
+  { href: '/bons-plans', label: 'Bons plans' },
+  { href: '/guides', label: 'Astuces & hacks voyage' },
+];
+
 // Nom affiché dans l'en-tête (domaine visé : à acheter chez OVH).
 export const NOM_SITE = 'Voyage Malin';
 

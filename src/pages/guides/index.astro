@@ -1,0 +1,66 @@
+---
+import { url } from "../../config";
+import VmHeader from "../../components/VmHeader.astro";
+import VmFooter from "../../components/VmFooter.astro";
+import { getCollection } from "astro:content";
+
+const guides = (await getCollection("guides")).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
+    <title>Astuces &amp; Hacks Voyage — Voyage Malin</title>
+    <meta
+      name="description"
+      content="Conseils pratiques pour voyager malin : repérer les vrais bons plans, préparer son séjour, éviter les pièges classiques."
+    />
+    <link rel="stylesheet" href={url("/styles/global.css")} />
+  </head>
+  <body>
+    <VmHeader />
+
+    <main>
+      <section class="guides-intro">
+        <p class="guides-intro__label">📚 Astuces &amp; Hacks Voyage</p>
+        <h1 class="guides-intro__title">Voyager malin, pas cher</h1>
+        <p class="guides-intro__text">
+          Des conseils pratiques pour repérer les vrais bons plans, préparer votre séjour et voyager
+          léger — sans y passer des heures.
+        </p>
+      </section>
+
+      <ul class="guides-list">
+        {
+          guides.length === 0 ? (
+            <li class="empty-state">Aucun guide publié pour le moment. Revenez bientôt.</li>
+          ) : (
+            guides.map((guide) => (
+              <li>
+                <a class="guide-card" href={url(`/guides/${guide.id}/`)}>
+                  <div class="guide-card__media">
+                    {guide.data.image ? (
+                      <img src={url(guide.data.image)} alt={guide.data.title} loading="lazy" />
+                    ) : (
+                      <div class="guide-card__media-fallback">✈️</div>
+                    )}
+                  </div>
+                  <div class="guide-card__body">
+                    <h2 class="guide-card__title">{guide.data.title}</h2>
+                    <p class="guide-card__description">{guide.data.description}</p>
+                    <span class="guide-card__cta">Lire le guide →</span>
+                  </div>
+                </a>
+              </li>
+            ))
+          )
+        }
+      </ul>
+    </main>
+    <VmFooter affilie={false} />
+  </body>
+</html>

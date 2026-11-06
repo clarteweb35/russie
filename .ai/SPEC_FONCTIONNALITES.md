@@ -290,3 +290,11 @@ Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fich
 
 - Sur la fiche de chaque pays (193), un bloc « Les villes à connaître » présente 3 villes ou lieux choisis selon trois critères affichés (intérêt touristique, importance pratique, diversité) : pourquoi, 3 choses à voir, un conseil pratique seulement si une source le donne. Le bloc disparaît si le topo a plus de 120 jours. Texte **généré par IA** (Gemini, recherche web), badge « Résumé généré par IA », sources citées, absent tant que rien n’est généré.
 - Génération : `scripts/villes.mjs`, workflow mensuel `villes.yml` (le 3 du mois), clé `GEMINI_API_KEY_GENERAL`. Un topo sans source est refusé et un échec ne remplace jamais l’ancien. Données : `src/data/villes/<pays>.json`.
+
+## 12. Voyage Malin réuni dans ce site (6 novembre 2026)
+
+- Ce site reprend l'ancien Voyage Malin : **Bons plans** (`/bons-plans/`, une page par offre), **Astuces & hacks voyage** (`/guides/`), liens dans le menu d'accueil, le pied de page et le plan du site. L'accueil (choix de destination) et les pages du guide ne changent pas.
+- Chaque fiche pays (sauf Russie et pays déconseillés par le ministère) a « Avant de partir » (assurance, partenaire selon la région) et « Bons plans vers ce pays » quand des offres existent. Liens affiliés : `rel="sponsored noopener"` et mention « Liens affiliés ». Partenaires et règles : `src/data/partenaires.ts` ; rattachement offre ↔ pays : `src/data/offres-pays.ts`.
+- **Aucune offre n'est publiée aujourd'hui** : les 3 offres d'exemple de la fusion (liens « EXEMPLE ») n'ont pas été reprises. La page des bons plans est en `noindex` et absente du plan du site tant qu'il n'y a pas d'offre. Les offres sont des fichiers `src/content/bons-plans/*.md` (schéma dans `src/content.config.ts`) ; le pipeline qui les génère n'est pas dans ce dépôt.
+- Polices externes (Google Fonts) retirées des pages reprises : polices système. Mentions légales complétées (affiliation, bons plans, villes à connaître).
+- Dépôt de fusion `voyages-malins` : abandonné au profit de ce site (option « A »).

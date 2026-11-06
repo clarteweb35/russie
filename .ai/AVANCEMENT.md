@@ -163,3 +163,8 @@ Le suivi détaillé (ce qui est fait, ce qui est sûr, ce qui reste, par pays) e
 
 ## 4 novembre 2026 : refonte « monde »
 Accueil = choix de destination, 194 pays, fiche d'identité, drapeaux, convertisseur générique, SEO. Détails dans `.ai/AVANCEMENT_PAYS.md`. À mesurer : poids de l'accueil / EcoIndex. Prochaine action : guides ex-URSS, puis vagues 3-4.
+
+## Voyage Malin réuni dans ce site (6 novembre 2026)
+
+- Fait : bons plans, astuces, blocs d'affiliation sur les fiches pays, menu, pied de page, plan du site, mentions légales (voir SPEC §12).
+- À faire : (1) brancher le pipeline qui écrit les offres dans `src/content/bons-plans/` (il vit dans l'ancien dépôt `bons-plans-voyages-site`) ; (2) vérifier que les liens Awin et les identifiants partenaires sont bien ceux de l'éditeur ; (3) décider de l'avenir du dépôt privé `voyages-malins` (plus nécessaire) et du site Vercel actuel ; (4) au transfert du domaine, suivre la procédure ci-dessus (variable `DOMAINE`).

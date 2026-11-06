@@ -1,0 +1,82 @@
+---
+import { url } from "../../config";
+import VmHeader from "../../components/VmHeader.astro";
+import VmFooter from "../../components/VmFooter.astro";
+import { getCollection, render } from "astro:content";
+import { paysDeOffre } from "../../data/offres-pays";
+
+export async function getStaticPaths() {
+  const bonsPlans = await getCollection("bons-plans");
+  return bonsPlans.map((offre) => ({
+    params: { id: offre.id },
+    props: { offre },
+  }));
+}
+
+const { offre } = Astro.props;
+const { Content } = await render(offre);
+const pays = paysDeOffre(offre);
+
+const labelConfiance: Record<string, string> = {
+  ELEVE: "Bon plan confirmé",
+  MOYEN: "Offre repérée",
+  FAIBLE: "À vérifier avant réservation",
+};
+---
+
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
+    <title>{offre.data.title}</title>
+    <meta name="description" content={offre.data.description} />
+    <link rel="stylesheet" href={url("/styles/global.css")} />
+  </head>
+  <body>
+    <VmHeader />
+
+    <a class="back-link" href={url("/bons-plans/")}>&larr; Retour au tableau des départs</a>
+    {pays && <a class="back-link" href={`${pays.href}/`}>Voir la fiche pays : {pays.nom} (monnaie, conseils officiels) &rarr;</a>}
+
+    <article class="ticket-article">
+      {
+        offre.data.image && (
+          <div class="ticket-article__media">
+            <img src={url(offre.data.image)} alt={offre.data.destination ?? offre.data.title} />
+          </div>
+        )
+      }
+      <div class={`ticket-article__stub ${offre.data.image ? "" : "no-media"}`}>
+        <span class="ticket-article__confidence">
+          {labelConfiance[offre.data.confidence] ?? offre.data.confidence}
+        </span>
+        <h1>{offre.data.title}</h1>
+      </div>
+      <div class="ticket-article__perforation"></div>
+      <div class="ticket-article__body">
+        <Content />
+        {
+          (offre.data.avisPourquoi || offre.data.avisAttention) && (
+            <div class="avis-malin">
+              <p class="avis-malin__title">🧭 L'avis du Malin</p>
+              {offre.data.avisPourquoi && (
+                <div class="avis-malin__row">
+                  <span class="avis-malin__label">Pourquoi</span>
+                  <span>{offre.data.avisPourquoi}</span>
+                </div>
+              )}
+              {offre.data.avisAttention && (
+                <div class="avis-malin__row">
+                  <span class="avis-malin__label">Attention</span>
+                  <span>{offre.data.avisAttention}</span>
+                </div>
+              )}
+            </div>
+          )
+        }
+      </div>
+    </article>
+    <VmFooter affilie={Boolean(offre.data.lien)} />
+  </body>
+</html>

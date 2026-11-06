@@ -1,0 +1,48 @@
+---
+// Bloc « Avant de partir » d'une fiche pays : assurance voyage (HelloSafe) et partenaire adapté à la région.
+// Toute la configuration est dans src/data/partenaires.ts. Rien n'est affiché pour la Russie ni pour les pays
+// où le ministère français déconseille formellement le voyage.
+import { ALERTE_SECURITE } from '../data/monde';
+import type { FicheMonde } from '../data/monde';
+import {
+  ASSURANCE_ANNULATION, ASSURANCE_SCHENGEN, ASSURANCE_VOYAGE, PARTENAIRES, REGLES_PAR_REGION, SANS_MONETISATION, SCHENGEN, mention, partenaireParId,
+} from '../data/partenaires';
+
+interface Props { p: FicheMonde }
+const { p } = Astro.props;
+
+const actif = !SANS_MONETISATION.has(p.iso) && !ALERTE_SECURITE.has(p.iso);
+const schengen = SCHENGEN.has(p.iso);
+const ids = new Set(
+  REGLES_PAR_REGION.filter((r) => r.regions?.includes(p.region) || r.sousRegions?.includes(p.sousRegion)).map((r) => r.partenaire),
+);
+// Un seul partenaire de voyage mis en avant : le premier de la liste de règles qui correspond
+const partenaire = REGLES_PAR_REGION.map((r) => r.partenaire).filter((id) => ids.has(id)).map((id) => partenaireParId(id)).find(Boolean);
+void PARTENAIRES;
+---
+{actif && (
+  <section id="avant-de-partir" aria-labelledby="avant-titre">
+    <h2 id="avant-titre">Avant de partir</h2>
+    <p>Une assurance couvre les frais médicaux, l’annulation et le rapatriement. Comparez les offres avant de réserver.</p>
+    <ul class="avant-liens">
+      <li><a href={ASSURANCE_VOYAGE.url} target="_blank" rel="sponsored noopener">{ASSURANCE_VOYAGE.label} (HelloSafe) →</a></li>
+      <li><a href={ASSURANCE_ANNULATION.url} target="_blank" rel="sponsored noopener">{ASSURANCE_ANNULATION.label} (HelloSafe) →</a></li>
+      {schengen && <li><a href={ASSURANCE_SCHENGEN.url} target="_blank" rel="sponsored noopener">{ASSURANCE_SCHENGEN.label} (HelloSafe) →</a></li>}
+    </ul>
+    {partenaire && (
+      <div class="grid">
+        <a class="card" href={partenaire.url} target="_blank" rel="sponsored noopener">
+          <div class="ico">🧭</div>
+          <h3>{partenaire.nom}</h3>
+          <p>{partenaire.description}</p>
+          <span class="more">Découvrir →</span>
+        </a>
+      </div>
+    )}
+    <p class="src">{mention} Ces liens sont des partenariats commerciaux : ils sont indiqués comme tels.</p>
+  </section>
+)}
+<style>
+  .avant-liens { padding-left: 1.2rem; }
+  .avant-liens li { margin: 0.35rem 0; }
+</style>

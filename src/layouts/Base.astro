@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import Badge from '../components/Badge.astro';
-import { sections, LAST_CHECK, VERIFICATIONS, pagesLegales, NOM_SITE, url } from '../config';
+import { sections, LAST_CHECK, VERIFICATIONS, pagesLegales, pagesEditoriales, NOM_SITE, url } from '../config';
 
 interface ElementMenu { label: string; href: string; exact?: boolean }
 interface ElementFil { label: string; href?: string }
@@ -28,7 +28,7 @@ const path = Astro.url.pathname.slice(base.length).replace(/\/$/, '') || '/';
 const isHome = path === '/';
 // Pages de la Russie : leur menu est celui de la Russie
 const estPageRussie = path === '/pays/russie' || sections.some((s) => path === s.href || path.startsWith(s.href + '/'));
-const menuAffiche: ElementMenu[] = menu ?? (estPageRussie ? sections.map((s) => ({ label: s.label, href: s.href })) : isHome ? [{ label: 'Destinations', href: '/#destinations' }, { label: 'Russie', href: '/pays/russie' }] : []);
+const menuAffiche: ElementMenu[] = menu ?? (estPageRussie ? sections.map((s) => ({ label: s.label, href: s.href })) : isHome ? [{ label: 'Destinations', href: '/#destinations' }, { label: 'Russie', href: '/pays/russie' }, ...pagesEditoriales.map((e) => ({ label: e.label, href: e.href }))] : []);
 const actif = (m: ElementMenu) => m.href.includes('#') ? false : path === m.href || (!m.exact && path.startsWith(m.href + '/'));
 
 const showMeta = meta ?? (!isHome && !['/sources', '/mentions-legales'].includes(path));
@@ -137,7 +137,7 @@ const donneesStructurees: object[] = [
         <p>Guide d’information indépendant, non officiel. Il ne remplace ni les sources officielles ni un avis juridique, médical ou fiscal.
         Les règles changent vite : vérifiez toujours auprès des autorités avant d’agir.</p>
         <p>Dernière vérification globale : {LAST_CHECK}. <a href={url("/sources")}>Voir les sources</a>. <a href={url("/#destinations")}>Toutes les destinations</a>.
-        {pagesLegales.map((p) => (<> · <a href={url(p.href)}>{p.label}</a></>))}</p>
+        {[...pagesEditoriales, ...pagesLegales].map((p) => (<> · <a href={url(p.href)}>{p.label}</a></>))}</p>
       </div>
     </footer>
     <script>

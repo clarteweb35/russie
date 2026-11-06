@@ -1,0 +1,31 @@
+---
+import { url } from "../config";
+// Bloc « Bons plans vers [pays] » : affiche les offres de Voyage Malin dont la destination correspond au pays.
+// Rien n'apparaît s'il n'y en a pas, ni pour la Russie, ni pour un pays déconseillé par le ministère.
+import { ALERTE_SECURITE } from '../data/monde';
+import type { FicheMonde } from '../data/monde';
+import { offresDuPays } from '../data/offres-pays';
+import { SANS_MONETISATION, mention } from '../data/partenaires';
+
+interface Props { p: FicheMonde }
+const { p } = Astro.props;
+
+const actif = !SANS_MONETISATION.has(p.iso) && !ALERTE_SECURITE.has(p.iso);
+const offres = actif ? await offresDuPays(p.iso) : [];
+---
+{offres.length > 0 && (
+  <section id="bons-plans" aria-labelledby="bons-plans-titre">
+    <h2 id="bons-plans-titre">Bons plans vers {p.nom}</h2>
+    <div class="grid">
+      {offres.map((o) => (
+        <a class="card" href={url(`/bons-plans/${o.id}/`)}>
+          <div class="ico">✈️</div>
+          <h3>{o.data.title}</h3>
+          <p>{o.data.voyagiste ? `Offre repérée chez ${o.data.voyagiste}.` : o.data.description}{o.data.prix ? ` Dès ${o.data.prix} €.` : ''}</p>
+          <span class="more">Voir l’offre →</span>
+        </a>
+      ))}
+    </div>
+    <p class="src">{mention}</p>
+  </section>
+)}

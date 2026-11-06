@@ -1,0 +1,48 @@
+---
+import { url } from "../../config";
+import VmHeader from "../../components/VmHeader.astro";
+import VmFooter from "../../components/VmFooter.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const guides = await getCollection("guides");
+  return guides.map((guide) => ({
+    params: { id: guide.id },
+    props: { guide },
+  }));
+}
+
+const { guide } = Astro.props;
+const { Content } = await render(guide);
+---
+
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
+    <title>{guide.data.title} — Voyage Malin</title>
+    <meta name="description" content={guide.data.description} />
+    <link rel="stylesheet" href={url("/styles/global.css")} />
+  </head>
+  <body>
+    <VmHeader />
+
+    <a class="back-link" href={url("/guides/")}>← Tous les guides</a>
+
+    <article class="guide-article">
+      {
+        guide.data.image && (
+          <div class="guide-article__media">
+            <img src={url(guide.data.image)} alt={guide.data.title} />
+          </div>
+        )
+      }
+      <div class="guide-article__body">
+        <h1>{guide.data.title}</h1>
+        <Content />
+      </div>
+    </article>
+    <VmFooter affilie={false} />
+  </body>
+</html>

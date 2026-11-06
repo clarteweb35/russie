@@ -4,6 +4,8 @@ import Base from '../../../layouts/Base.astro';
 import Alert from '../../../components/Alert.astro';
 import Actualites from '../../../components/Actualites.astro';
 import VillesPays from '../../../components/VillesPays.astro';
+import AvantDePartir from '../../../components/AvantDePartir.astro';
+import BonsPlansPays from '../../../components/BonsPlansPays.astro';
 import FicheIdentite from '../../../components/FicheIdentite.astro';
 import BlocDevise from '../../../components/BlocDevise.astro';
 import BlocRusse from '../../../components/BlocRusse.astro';
@@ -151,6 +153,9 @@ const autres = g ? g.rubriques.filter((r) => !['voyager', 'vivre'].includes(r.sl
     <VillesPays slug={g.slug} libelle={g.article} />
     <Actualites slug={g.slug} libelle={g.article} medias={g.mediasLocaux} officiel={{ texte: `Conseils aux voyageurs du ministère français pour ${g.nom}`, url: g.conseilsVoyageurs }} />
   )}
+
+  <AvantDePartir p={p} />
+  <BonsPlansPays p={p} />
 
   <PhotosPays slug={p.slug} nom={p.nom} />
 

@@ -1,14 +1,21 @@
 import type { APIRoute } from 'astro';
-import { sections, pagesLegales, url } from '../config';
+import { getCollection } from 'astro:content';
+import { sections, pagesLegales, pagesEditoriales, url } from '../config';
 import { lecons } from '../data/lecons.js';
 import { paysComplets } from '../data/pays';
 import { monde } from '../data/monde';
 import { aEssentiel } from '../data/pays/essentiel';
 
 // Plan du site généré depuis les données (rubriques, leçons, pays) : aucune adresse n'est écrite à la main.
-export const GET: APIRoute = ({ site }) => {
+export const GET: APIRoute = async ({ site }) => {
+  const bonsPlans = await getCollection('bons-plans');
+  const guides = await getCollection('guides');
   const chemins = [
     '/',
+    // Voyage Malin : la page des bons plans n'est listée que s'il y a des offres (sinon elle est en noindex)
+    ...pagesEditoriales.map((e) => e.href).filter((h) => h !== '/bons-plans' || bonsPlans.length > 0),
+    ...bonsPlans.map((o) => `/bons-plans/${o.id}`),
+    ...guides.map((g) => `/guides/${g.id}`),
     // Russie : page du pays, rubriques, leçons
     '/pays/russie',
     ...sections.map((s) => s.href),
