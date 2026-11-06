@@ -11,7 +11,7 @@ export const lituanie: PaysComplet = {
   slug: 'lituanie',
   nom: 'Lituanie',
   article: 'la Lituanie',
-  accroche: 'Un pays balte de l’Union européenne et de l’espace Schengen, voisin de la Biélorussie et de l’enclave russe de Kaliningrad. Fiche en test, à vérifier.',
+  accroche: 'Un pays balte de l’Union européenne et de l’espace Schengen, voisin de la Biélorussie et de l’enclave russe de Kaliningrad. Fiche beta, à vérifier.',
   couleur: '#006a44',
   langue: { nom: 'lituanien', code: 'lt-LT' },
   devise: 'euro',

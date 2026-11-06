@@ -11,7 +11,7 @@ export const chine: PaysComplet = {
   slug: 'chine',
   nom: 'Chine',
   article: 'la Chine',
-  accroche: 'Un pays-continent où le paiement par application est devenu la norme et où Internet est filtré. Entrée sans visa pour 30 jours, jusqu’à fin 2026 selon les sources. Fiche en test, à vérifier.',
+  accroche: 'Un pays-continent où le paiement par application est devenu la norme et où Internet est filtré. Entrée sans visa pour 30 jours, jusqu’à fin 2026 selon les sources. Fiche beta, à vérifier.',
   couleur: '#de2910',
   langue: { nom: 'chinois mandarin', code: 'zh-CN' },
   devise: 'yuan (renminbi)',

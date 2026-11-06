@@ -2,7 +2,7 @@ import { guideEurope } from './europe';
 
 export const croatie = guideEurope({
   iso: 'HRV', slug: 'croatie', nom: 'Croatie', article: 'la Croatie', lieu: 'en Croatie',
-  accroche: 'Un pays de l’Adriatique de l’Union européenne, de l’espace Schengen et de la zone euro. Fiche en test, à vérifier.',
+  accroche: 'Un pays de l’Adriatique de l’Union européenne, de l’espace Schengen et de la zone euro. Fiche beta, à vérifier.',
   couleur: '#171796', langue: { nom: 'croate', code: 'hr-HR' }, devise: 'euro', monnaieAvecArticle: 'l’euro', regime: 'schengen-ue',
   introLangue: 'Le croate s’écrit avec l’alphabet latin et des lettres à signes (č, ć, š, ž, đ). L’anglais est très courant sur la côte et dans le tourisme.',
   lecons: {

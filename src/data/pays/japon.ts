@@ -11,7 +11,7 @@ export const japon: PaysComplet = {
   slug: 'japon',
   nom: 'Japon',
   article: 'le Japon',
-  accroche: 'Un archipel d’Asie de l’Est où l’on conduit à gauche, où les espèces comptent encore beaucoup et où trois écritures cohabitent. Entrée sans visa pour un court séjour. Fiche en test, à vérifier.',
+  accroche: 'Un archipel d’Asie de l’Est où l’on conduit à gauche, où les espèces comptent encore beaucoup et où trois écritures cohabitent. Entrée sans visa pour un court séjour. Fiche beta, à vérifier.',
   couleur: '#bc002d',
   langue: { nom: 'japonais', code: 'ja-JP' },
   devise: 'yen',

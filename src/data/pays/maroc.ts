@@ -13,7 +13,7 @@ export const maroc: PaysComplet = {
   slug: 'maroc',
   nom: 'Maroc',
   article: 'le Maroc',
-  accroche: 'Un pays proche et très prisé des francophones, mais hors de l’Union européenne : passeport obligatoire, carte de séjour et assurance maladie locale pour s’installer. Fiche en test, à vérifier.',
+  accroche: 'Un pays proche et très prisé des francophones, mais hors de l’Union européenne : passeport obligatoire, carte de séjour et assurance maladie locale pour s’installer. Fiche beta, à vérifier.',
   couleur: '#a8201a',
   langue: { nom: 'arabe marocain', code: 'ar-MA' },
   devise: 'dirham marocain',

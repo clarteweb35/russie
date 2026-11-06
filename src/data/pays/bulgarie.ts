@@ -2,7 +2,7 @@ import { guideEurope } from './europe';
 
 export const bulgarie = guideEurope({
   iso: 'BGR', slug: 'bulgarie', nom: 'Bulgarie', article: 'la Bulgarie', lieu: 'en Bulgarie',
-  accroche: 'Un pays des Balkans de l’Union européenne et de l’espace Schengen, passé à l’euro début 2026, à l’alphabet cyrillique. Fiche en test, à vérifier.',
+  accroche: 'Un pays des Balkans de l’Union européenne et de l’espace Schengen, passé à l’euro début 2026, à l’alphabet cyrillique. Fiche beta, à vérifier.',
   couleur: '#00966e', langue: { nom: 'bulgare', code: 'bg-BG' }, devise: 'euro', monnaieAvecArticle: 'l’euro', regime: 'schengen-ue',
   monnaieNote: 'La Bulgarie a adopté l’<strong>euro le 1er janvier 2026</strong> ; selon la presse bulgare, l’euro est la seule monnaie légale depuis le 1er février 2026. Le lev peut être échangé gratuitement auprès de la banque centrale.',
   sourcesSupp: [{ label: 'BTA, 87 % des levs retirés deux mois après l’adoption de l’euro', url: 'https://www.bta.bg/en/news/1073860-87-of-leva-withdrawn-from-circulation-two-months-after-euro-adoption', nature: 'agence de presse publique bulgare' }],

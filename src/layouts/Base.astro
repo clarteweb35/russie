@@ -83,7 +83,7 @@ const donneesStructurees: object[] = [
     <div id="progress"></div>
     <header class="site">
       <div class="wrap">
-        <a class="brand" href={url("/")} aria-label={`${NOM_SITE}, accueil`}><span class="nom">{NOM_SITE.replace(".fr", "")}<b>.fr</b></span></a>
+        <a class="brand" href={url("/")} aria-label={`${NOM_SITE}, accueil`}><span class="nom">{NOM_SITE}</span></a>
         <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
         <nav id="menu" aria-label="Navigation principale">
           {!isHome && <a class="retour" href={url('/#destinations')}>← Toutes les destinations</a>}
@@ -97,7 +97,7 @@ const donneesStructurees: object[] = [
     {pays && (
       <div class={pays.alerte ? 'banner banner-alerte' : 'banner banner-pays'} role="note">
         <div class="wrap">
-          <span>{pays.test && <strong class="tag-test">Fiche en test</strong>} {pays.alerte
+          <span>{pays.test && <strong class="tag-test">Beta</strong>} {pays.alerte
             ? <><strong>Sécurité :</strong> situation exceptionnelle. Lisez la fiche officielle du ministère français avant toute décision.</>
             : <><strong>Avant de partir :</strong> consultez la fiche « {pays.nom} » des conseils aux voyageurs du ministère français.</>}</span>
           <a href={pays.conseilsVoyageurs} rel="noopener">Conseils aux voyageurs →</a>

@@ -3,7 +3,7 @@ import { LECONS_ANGLAIS } from './anglais';
 
 export const irlande = guideEurope({
   iso: 'IRL', slug: 'irlande', nom: 'Irlande', article: 'l’Irlande', lieu: 'en Irlande',
-  accroche: 'Un pays de l’Union européenne hors Schengen, où l’on conduit à gauche et où l’on parle anglais et irlandais. Fiche en test, à vérifier.',
+  accroche: 'Un pays de l’Union européenne hors Schengen, où l’on conduit à gauche et où l’on parle anglais et irlandais. Fiche beta, à vérifier.',
   couleur: '#169b62', langue: { nom: 'anglais', code: 'en-IE' }, devise: 'euro', monnaieAvecArticle: 'l’euro', regime: 'ue-hors-schengen',
   entreeSupp: [
     'Pour aller de l’Irlande vers l’<strong>Irlande du Nord ou le Royaume-Uni</strong>, les règles sont distinctes : une autorisation (ETA) peut être exigée pour un visiteur, et certaines compagnies (Aer Lingus depuis février 2026) demandent un passeport. Vérifiez avant de voyager.',

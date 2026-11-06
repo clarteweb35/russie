@@ -11,7 +11,7 @@ export const coreeDuSud: PaysComplet = {
   slug: 'coree-du-sud',
   nom: 'Corée du Sud',
   article: 'la Corée du Sud',
-  accroche: 'Un pays d’Asie de l’Est très connecté, à l’écriture propre (le hangeul). Les Français sont dispensés d’autorisation de voyage K-ETA jusqu’à fin 2026. Fiche en test, à vérifier.',
+  accroche: 'Un pays d’Asie de l’Est très connecté, à l’écriture propre (le hangeul). Les Français sont dispensés d’autorisation de voyage K-ETA jusqu’à fin 2026. Fiche beta, à vérifier.',
   couleur: '#003478',
   langue: { nom: 'coréen', code: 'ko-KR' },
   devise: 'won sud-coréen',

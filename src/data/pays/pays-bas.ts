@@ -3,7 +3,7 @@ import { NEERLANDAIS } from './langues';
 
 export const paysBas = guideEurope({
   iso: 'NLD', slug: 'pays-bas', nom: 'Pays-Bas', article: 'les Pays-Bas', lieu: 'aux Pays-Bas',
-  accroche: 'Un pays de l’Union européenne et de l’espace Schengen, réputé pour le vélo et pour la bonne pratique de l’anglais. Fiche en test, à vérifier.',
+  accroche: 'Un pays de l’Union européenne et de l’espace Schengen, réputé pour le vélo et pour la bonne pratique de l’anglais. Fiche beta, à vérifier.',
   couleur: '#21468b', langue: { nom: 'néerlandais', code: 'nl-NL' }, devise: 'euro', monnaieAvecArticle: 'l’euro', regime: 'schengen-ue',
   introLangue: 'Le néerlandais s’écrit avec l’alphabet latin et ressemble à la fois à l’allemand et à l’anglais. La grande majorité des Néerlandais parlent bien l’anglais, ce qui facilite le séjour.',
   lecons: NEERLANDAIS, astuce: 'Les Néerlandais passent vite à l’anglais : tentez quelques mots, ils apprécient. Prononciations approximatives.',

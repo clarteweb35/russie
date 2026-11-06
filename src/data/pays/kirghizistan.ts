@@ -12,7 +12,7 @@ export const kirghizistan: PaysComplet = {
   slug: 'kirghizistan',
   nom: 'Kirghizistan',
   article: 'le Kirghizistan',
-  accroche: 'Un pays de montagnes d’Asie centrale, ancien pays soviétique où le russe reste langue officielle. Fiche en test, à vérifier.',
+  accroche: 'Un pays de montagnes d’Asie centrale, ancien pays soviétique où le russe reste langue officielle. Fiche beta, à vérifier.',
   couleur: '#e8112d',
   langue: { nom: 'kirghize', code: 'ky-KG' },
   devise: 'som kirghize',

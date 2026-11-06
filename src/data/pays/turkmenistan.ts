@@ -11,7 +11,7 @@ export const turkmenistan: PaysComplet = {
   slug: 'turkmenistan',
   nom: 'Turkménistan',
   article: 'le Turkménistan',
-  accroche: 'Un des pays les plus fermés d’Asie centrale : le visa est obligatoire et, pour le tourisme, une invitation est exigée. Fiche en test, à vérifier.',
+  accroche: 'Un des pays les plus fermés d’Asie centrale : le visa est obligatoire et, pour le tourisme, une invitation est exigée. Fiche beta, à vérifier.',
   couleur: '#00843d',
   langue: { nom: 'turkmène', code: 'tk-TM' },
   devise: 'manat turkmène',

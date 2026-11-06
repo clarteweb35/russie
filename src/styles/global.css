@@ -319,7 +319,7 @@ footer { margin-top: 72px; padding: 36px 0 56px; color: var(--muted); font-size:
 .guide-voix ol { margin: 0 0 6px; padding-left: 22px; }
 .guide-voix li { margin-bottom: 4px; }
 
-/* fiches pays en test */
+/* fiches pays en beta */
 .tag-test { display: inline-block; margin-left: 6px; padding: 1px 8px; border-radius: 999px; font: 700 11px var(--sans); text-transform: uppercase; letter-spacing: .04em; background: var(--warn-soft); color: var(--warn); vertical-align: middle; }
 .banner-pays .tag-test { margin: 0 8px 0 0; }
 .sous-menu .tag-test { margin-left: 8px; }

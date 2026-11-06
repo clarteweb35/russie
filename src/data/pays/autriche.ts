@@ -3,7 +3,7 @@ import { ALLEMAND } from './langues';
 
 export const autriche = guideEurope({
   iso: 'AUT', slug: 'autriche', nom: 'Autriche', article: 'l’Autriche', lieu: 'en Autriche',
-  accroche: 'Un pays alpin de l’Union européenne et de l’espace Schengen, de langue allemande. Fiche en test, à vérifier.',
+  accroche: 'Un pays alpin de l’Union européenne et de l’espace Schengen, de langue allemande. Fiche beta, à vérifier.',
   couleur: '#ed2939', langue: { nom: 'allemand', code: 'de-AT' }, devise: 'euro', monnaieAvecArticle: 'l’euro', regime: 'schengen-ue',
   introLangue: 'On parle allemand, avec des mots et un accent propres à l’Autriche (« Grüß Gott » pour saluer). L’anglais est courant dans le tourisme et chez les jeunes.',
   lecons: ALLEMAND, astuce: 'En Autriche, on dit souvent « Grüß Gott » pour dire bonjour. Prononciations approximatives.',

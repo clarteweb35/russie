@@ -2,7 +2,7 @@ import { guideEurope } from './europe';
 
 export const suede = guideEurope({
   iso: 'SWE', slug: 'suede', nom: 'Suède', article: 'la Suède', lieu: 'en Suède',
-  accroche: 'Un pays scandinave de l’Union européenne et de l’espace Schengen, qui a gardé sa propre monnaie. Fiche en test, à vérifier.',
+  accroche: 'Un pays scandinave de l’Union européenne et de l’espace Schengen, qui a gardé sa propre monnaie. Fiche beta, à vérifier.',
   couleur: '#006aa7', langue: { nom: 'suédois', code: 'sv-SE' }, devise: 'couronne suédoise', monnaieAvecArticle: 'la couronne suédoise', regime: 'schengen-ue',
   introLangue: 'Le suédois s’écrit avec l’alphabet latin et trois lettres supplémentaires (å, ä, ö). La plupart des Suédois parlent très bien l’anglais.',
   lecons: {

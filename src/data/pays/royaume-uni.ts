@@ -11,7 +11,7 @@ export const royaumeUni: PaysComplet = {
   slug: 'royaume-uni',
   nom: 'Royaume-Uni',
   article: 'le Royaume-Uni',
-  accroche: 'Depuis le Brexit, les règles changent : passeport, autorisation électronique de voyage, visa de travail et surtaxe santé. Fiche en test, à vérifier.',
+  accroche: 'Depuis le Brexit, les règles changent : passeport, autorisation électronique de voyage, visa de travail et surtaxe santé. Fiche beta, à vérifier.',
   couleur: '#1d3a7a',
   langue: { nom: 'anglais', code: 'en-GB' },
   devise: 'livre sterling',

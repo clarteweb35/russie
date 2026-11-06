@@ -12,7 +12,7 @@ export const italie: PaysComplet = {
   slug: 'italie',
   nom: 'Italie',
   article: 'l’Italie',
-  accroche: 'Un pays de l’Union européenne aux démarches très communales : numéro fiscal, inscription à la mairie, puis santé. Fiche en test, à vérifier.',
+  accroche: 'Un pays de l’Union européenne aux démarches très communales : numéro fiscal, inscription à la mairie, puis santé. Fiche beta, à vérifier.',
   couleur: '#1e6b3a',
   langue: { nom: 'italien', code: 'it-IT' },
   devise: 'euro',

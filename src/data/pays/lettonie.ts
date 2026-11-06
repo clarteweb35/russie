@@ -11,7 +11,7 @@ export const lettonie: PaysComplet = {
   slug: 'lettonie',
   nom: 'Lettonie',
   article: 'la Lettonie',
-  accroche: 'Un pays balte de l’Union européenne et de l’espace Schengen, voisin de la Russie et de la Biélorussie. Fiche en test, à vérifier.',
+  accroche: 'Un pays balte de l’Union européenne et de l’espace Schengen, voisin de la Russie et de la Biélorussie. Fiche beta, à vérifier.',
   couleur: '#9e3039',
   langue: { nom: 'letton', code: 'lv-LV' },
   devise: 'euro',

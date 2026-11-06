@@ -12,7 +12,7 @@ export const egypte: PaysComplet = {
   slug: 'egypte',
   nom: 'Égypte',
   article: 'l’Égypte',
-  accroche: 'Un pays du Nil à l’écriture arabe, où le visa s’obtient à l’arrivée ou en ligne pour environ 30 dollars. Lisez d’abord les consignes de sécurité du ministère français. Fiche en test, à vérifier.',
+  accroche: 'Un pays du Nil à l’écriture arabe, où le visa s’obtient à l’arrivée ou en ligne pour environ 30 dollars. Lisez d’abord les consignes de sécurité du ministère français. Fiche beta, à vérifier.',
   couleur: '#c09300',
   langue: { nom: 'arabe', code: 'ar-EG' },
   devise: 'livre égyptienne',

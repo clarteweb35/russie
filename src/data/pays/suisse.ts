@@ -38,7 +38,7 @@ export const suisse: PaysComplet = {
   slug: 'suisse',
   nom: 'Suisse',
   article: 'la Suisse',
-  accroche: 'Un pays voisin hors de l’Union européenne, où l’on parle français, allemand, italien et romanche : permis de séjour, assurance maladie privée obligatoire et francs suisses. Fiche en test, à vérifier.',
+  accroche: 'Un pays voisin hors de l’Union européenne, où l’on parle français, allemand, italien et romanche : permis de séjour, assurance maladie privée obligatoire et francs suisses. Fiche beta, à vérifier.',
   couleur: '#c8102e',
   langue: { nom: 'allemand', code: 'de-CH' },
   devise: 'franc suisse',

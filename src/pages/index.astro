@@ -47,7 +47,7 @@ const jsonLd = [{
         <li>
           <a href={url(p.href)}>
             <img src={url(`/drapeaux/${p.iso.toLowerCase()}.svg`)} alt="" width="48" height="32" loading="lazy" />
-            <span><strong>{p.nom}</strong><small>{p.iso === 'RUS' ? 'Guide principal' : p.guide?.test ? 'Fiche en test' : 'Guide'}</small></span>
+            <span><strong>{p.nom}</strong><small>{p.iso === 'RUS' ? 'Guide principal' : p.guide?.test ? 'Beta' : 'Guide'}</small></span>
           </a>
         </li>
       ))}

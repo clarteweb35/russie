@@ -12,7 +12,7 @@ export const senegal: PaysComplet = {
   slug: 'senegal',
   nom: 'Sénégal',
   article: 'le Sénégal',
-  accroche: 'Un pays hors de l’Union européenne où le français est langue officielle et le wolof la langue du quotidien. Santé, démarches et monnaie diffèrent. Fiche en test, à vérifier.',
+  accroche: 'Un pays hors de l’Union européenne où le français est langue officielle et le wolof la langue du quotidien. Santé, démarches et monnaie diffèrent. Fiche beta, à vérifier.',
   couleur: '#00703c',
   // Le wolof n’a pas de voix de synthèse sur la plupart des appareils : les leçons restent lisibles sans audio
   langue: { nom: 'wolof', code: 'wo-SN' },

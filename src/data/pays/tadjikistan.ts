@@ -11,7 +11,7 @@ export const tadjikistan: PaysComplet = {
   slug: 'tadjikistan',
   nom: 'Tadjikistan',
   article: 'le Tadjikistan',
-  accroche: 'Un pays de très hautes montagnes d’Asie centrale, ancien pays soviétique, où le russe reste utile. Un permis spécial est exigé pour le Haut-Badakhchan. Fiche en test, à vérifier.',
+  accroche: 'Un pays de très hautes montagnes d’Asie centrale, ancien pays soviétique, où le russe reste utile. Un permis spécial est exigé pour le Haut-Badakhchan. Fiche beta, à vérifier.',
   couleur: '#006600',
   langue: { nom: 'tadjik', code: 'tg-TJ' },
   devise: 'somoni',

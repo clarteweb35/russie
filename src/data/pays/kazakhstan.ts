@@ -12,7 +12,7 @@ export const kazakhstan: PaysComplet = {
   slug: 'kazakhstan',
   nom: 'Kazakhstan',
   article: 'le Kazakhstan',
-  accroche: 'Un très grand pays d’Asie centrale où le russe est très répandu : entrée sans visa pour 30 jours mais avec une autorisation électronique à obtenir à l’avance. Fiche en test, à vérifier.',
+  accroche: 'Un très grand pays d’Asie centrale où le russe est très répandu : entrée sans visa pour 30 jours mais avec une autorisation électronique à obtenir à l’avance. Fiche beta, à vérifier.',
   couleur: '#00a3b4',
   langue: { nom: 'kazakh', code: 'kk-KZ' },
   devise: 'tenge',

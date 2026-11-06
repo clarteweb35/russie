@@ -13,7 +13,7 @@ export const emirats: PaysComplet = {
   slug: 'emirats',
   nom: 'Émirats arabes unis',
   article: 'les Émirats arabes unis',
-  accroche: 'Un pays du Golfe où les lois, la fiscalité et le séjour diffèrent fortement de la France. La situation de sécurité régionale demande de consulter la fiche officielle avant toute décision. Fiche en test, à vérifier.',
+  accroche: 'Un pays du Golfe où les lois, la fiscalité et le séjour diffèrent fortement de la France. La situation de sécurité régionale demande de consulter la fiche officielle avant toute décision. Fiche beta, à vérifier.',
   couleur: '#00732f',
   langue: { nom: 'arabe', code: 'ar-AE' },
   devise: 'dirham',

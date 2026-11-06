@@ -60,7 +60,7 @@ export type PaysComplet = {
   lecons: Lecon[];
   sourcesSupplementaires?: Source[];
   mediasLocaux: Media[];
-  test?: boolean; // fiche non relue : bandeau « fiche en test » et mention dans le menu
+  test?: boolean; // fiche non relue : bandeau « beta » et mention dans le menu
 };
 
 export type PaysBientot = {

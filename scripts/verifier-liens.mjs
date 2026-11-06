@@ -3,7 +3,8 @@ import { readdirSync, readFileSync, existsSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
 const DIST = 'dist';
-const BASE = '/russie';
+// Même règle que astro.config.mjs : sous /russie sauf si le domaine propre est défini
+const BASE = process.env.DOMAINE ? '' : '/russie';
 
 function pages(dir) {
   return readdirSync(dir).flatMap((nom) => {

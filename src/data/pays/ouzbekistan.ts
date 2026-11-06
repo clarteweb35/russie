@@ -11,7 +11,7 @@ export const ouzbekistan: PaysComplet = {
   slug: 'ouzbekistan',
   nom: 'Ouzbékistan',
   article: 'l’Ouzbékistan',
-  accroche: 'Un pays d’Asie centrale célèbre pour Samarcande et Boukhara, ouvert aux Français sans visa pour un court séjour. Le russe y reste très utile. Fiche en test, à vérifier.',
+  accroche: 'Un pays d’Asie centrale célèbre pour Samarcande et Boukhara, ouvert aux Français sans visa pour un court séjour. Le russe y reste très utile. Fiche beta, à vérifier.',
   couleur: '#1eb53a',
   langue: { nom: 'ouzbek', code: 'uz-UZ' },
   devise: 'sum ouzbek',

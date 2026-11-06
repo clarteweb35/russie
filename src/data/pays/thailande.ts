@@ -13,7 +13,7 @@ export const thailande: PaysComplet = {
   slug: 'thailande',
   nom: 'Thaïlande',
   article: 'la Thaïlande',
-  accroche: 'Une langue à tons et un alphabet propre, un séjour sans visa dont la durée change, et des visas de long séjour très variés. Fiche en test, à vérifier.',
+  accroche: 'Une langue à tons et un alphabet propre, un séjour sans visa dont la durée change, et des visas de long séjour très variés. Fiche beta, à vérifier.',
   couleur: '#2d2a6e',
   langue: { nom: 'thaï', code: 'th-TH' },
   devise: 'baht',

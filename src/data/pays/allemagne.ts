@@ -11,7 +11,7 @@ export const allemagne: PaysComplet = {
   slug: 'allemagne',
   nom: 'Allemagne',
   article: 'l’Allemagne',
-  accroche: 'Un pays de l’Union européenne avec une administration très formalisée : déclaration d’adresse, numéro fiscal, assurance maladie obligatoire. Fiche en test, à vérifier.',
+  accroche: 'Un pays de l’Union européenne avec une administration très formalisée : déclaration d’adresse, numéro fiscal, assurance maladie obligatoire. Fiche beta, à vérifier.',
   couleur: '#1f2937',
   langue: { nom: 'allemand', code: 'de-DE' },
   devise: 'euro',

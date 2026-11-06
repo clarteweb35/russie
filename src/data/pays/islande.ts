@@ -2,7 +2,7 @@ import { guideEurope } from './europe';
 
 export const islande = guideEurope({
   iso: 'ISL', slug: 'islande', nom: 'Islande', article: 'l’Islande', lieu: 'en Islande',
-  accroche: 'Une île volcanique de l’espace Schengen, hors de l’Union européenne, avec sa propre monnaie. Fiche en test, à vérifier.',
+  accroche: 'Une île volcanique de l’espace Schengen, hors de l’Union européenne, avec sa propre monnaie. Fiche beta, à vérifier.',
   couleur: '#02529c', langue: { nom: 'islandais', code: 'is-IS' }, devise: 'couronne islandaise', monnaieAvecArticle: 'la couronne islandaise', regime: 'schengen-hors-ue',
   introLangue: 'L’islandais est très proche du vieux norrois et garde des lettres anciennes (þ, ð). Presque tous les Islandais parlent très bien l’anglais.',
   lecons: {

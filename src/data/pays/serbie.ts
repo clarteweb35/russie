@@ -11,7 +11,7 @@ export const serbie: PaysComplet = {
   slug: 'serbie',
   nom: 'Serbie',
   article: 'la Serbie',
-  accroche: 'Un pays des Balkans hors de l’Union européenne, qui s’écrit en cyrillique et en alphabet latin : déclaration d’adresse sous 24 heures et permis unique pour travailler. Fiche en test, à vérifier.',
+  accroche: 'Un pays des Balkans hors de l’Union européenne, qui s’écrit en cyrillique et en alphabet latin : déclaration d’adresse sous 24 heures et permis unique pour travailler. Fiche beta, à vérifier.',
   couleur: '#1b3a6b',
   langue: { nom: 'serbe', code: 'sr-RS' },
   devise: 'dinar serbe',

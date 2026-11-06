@@ -2,7 +2,7 @@ import { guideEurope } from './europe';
 
 export const danemark = guideEurope({
   iso: 'DNK', slug: 'danemark', nom: 'Danemark', article: 'le Danemark', lieu: 'au Danemark',
-  accroche: 'Un pays scandinave de l’Union européenne et de l’espace Schengen, qui a gardé sa propre monnaie. Fiche en test, à vérifier.',
+  accroche: 'Un pays scandinave de l’Union européenne et de l’espace Schengen, qui a gardé sa propre monnaie. Fiche beta, à vérifier.',
   couleur: '#c8102e', langue: { nom: 'danois', code: 'da-DK' }, devise: 'couronne danoise', monnaieAvecArticle: 'la couronne danoise', regime: 'schengen-ue',
   introLangue: 'Le danois est difficile à prononcer pour un francophone, mais presque tous les Danois parlent très bien l’anglais. Les phrases ci-dessous sont à titre de politesse.',
   lecons: {

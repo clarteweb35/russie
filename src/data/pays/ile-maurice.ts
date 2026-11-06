@@ -13,7 +13,7 @@ export const ileMaurice: PaysComplet = {
   slug: 'ile-maurice',
   nom: 'Île Maurice',
   article: 'l’île Maurice',
-  accroche: 'Une île de l’océan Indien où le français, l’anglais et le créole se côtoient. Entrée sans visa pour un court séjour, avec un formulaire en ligne à remplir. Fiche en test, à vérifier.',
+  accroche: 'Une île de l’océan Indien où le français, l’anglais et le créole se côtoient. Entrée sans visa pour un court séjour, avec un formulaire en ligne à remplir. Fiche beta, à vérifier.',
   couleur: '#ea2839',
   langue: { nom: 'anglais', code: 'en-GB' },
   devise: 'roupie mauricienne',

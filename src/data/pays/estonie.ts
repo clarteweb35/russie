@@ -11,7 +11,7 @@ export const estonie: PaysComplet = {
   slug: 'estonie',
   nom: 'Estonie',
   article: 'l’Estonie',
-  accroche: 'Un pays balte de l’Union européenne et de l’espace Schengen, très numérique, voisin de la Russie. Fiche en test, à vérifier.',
+  accroche: 'Un pays balte de l’Union européenne et de l’espace Schengen, très numérique, voisin de la Russie. Fiche beta, à vérifier.',
   couleur: '#0072ce',
   langue: { nom: 'estonien', code: 'et-EE' },
   devise: 'euro',

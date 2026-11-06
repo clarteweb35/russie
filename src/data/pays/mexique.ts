@@ -12,7 +12,7 @@ export const mexique: PaysComplet = {
   slug: 'mexique',
   nom: 'Mexique',
   article: 'le Mexique',
-  accroche: 'Un grand pays d’Amérique du Nord de langue espagnole, accessible sans visa jusqu’à 180 jours pour le tourisme. Lisez d’abord les conseils de sécurité par région. Fiche en test, à vérifier.',
+  accroche: 'Un grand pays d’Amérique du Nord de langue espagnole, accessible sans visa jusqu’à 180 jours pour le tourisme. Lisez d’abord les conseils de sécurité par région. Fiche beta, à vérifier.',
   couleur: '#006847',
   langue: { nom: 'espagnol', code: 'es-MX' },
   devise: 'peso mexicain',

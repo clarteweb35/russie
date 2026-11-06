@@ -12,7 +12,7 @@ export const moldavie: PaysComplet = {
   slug: 'moldavie',
   nom: 'Moldavie',
   article: 'la Moldavie',
-  accroche: 'Un petit pays d’Europe de l’Est, de langue roumaine, candidat à l’Union européenne, où le russe reste très utilisé. Fiche en test, à vérifier.',
+  accroche: 'Un petit pays d’Europe de l’Est, de langue roumaine, candidat à l’Union européenne, où le russe reste très utilisé. Fiche beta, à vérifier.',
   couleur: '#0046ae',
   langue: { nom: 'roumain', code: 'ro-MD' },
   devise: 'leu moldave',

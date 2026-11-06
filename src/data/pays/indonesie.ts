@@ -11,7 +11,7 @@ export const indonesie: PaysComplet = {
   slug: 'indonesie',
   nom: 'Indonésie',
   article: 'l’Indonésie',
-  accroche: 'Un archipel d’Asie du Sud-Est dont Bali est la destination la plus connue. Un visa à l’arrivée payant est nécessaire. Fiche en test, à vérifier.',
+  accroche: 'Un archipel d’Asie du Sud-Est dont Bali est la destination la plus connue. Un visa à l’arrivée payant est nécessaire. Fiche beta, à vérifier.',
   couleur: '#ce1126',
   langue: { nom: 'indonésien', code: 'id-ID' },
   devise: 'roupie indonésienne',

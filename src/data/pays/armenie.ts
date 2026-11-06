@@ -12,7 +12,7 @@ export const armenie: PaysComplet = {
   slug: 'armenie',
   nom: 'Arménie',
   article: 'l’Arménie',
-  accroche: 'Un pays du Caucase hors de l’Union européenne, voisin de la Géorgie et de l’Iran : entrée facile, mais deux frontières fermées et un alphabet propre. Fiche en test, à vérifier.',
+  accroche: 'Un pays du Caucase hors de l’Union européenne, voisin de la Géorgie et de l’Iran : entrée facile, mais deux frontières fermées et un alphabet propre. Fiche beta, à vérifier.',
   couleur: '#d90012',
   langue: { nom: 'arménien', code: 'hy-AM' },
   devise: 'dram',

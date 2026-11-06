@@ -12,7 +12,7 @@ export const etatsUnis: PaysComplet = {
   slug: 'etats-unis',
   nom: 'États-Unis',
   article: 'les États-Unis',
-  accroche: 'Un pays où la voiture et la carte bancaire sont presque obligatoires, et dont l’entrée passe par une autorisation en ligne (ESTA) dont les règles évoluent. Fiche en test, à vérifier.',
+  accroche: 'Un pays où la voiture et la carte bancaire sont presque obligatoires, et dont l’entrée passe par une autorisation en ligne (ESTA) dont les règles évoluent. Fiche beta, à vérifier.',
   couleur: '#3c3b6e',
   langue: { nom: 'anglais', code: 'en-US' },
   devise: 'dollar américain',

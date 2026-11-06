@@ -11,7 +11,7 @@ export const madagascar: PaysComplet = {
   slug: 'madagascar',
   nom: 'Madagascar',
   article: 'Madagascar',
-  accroche: 'Une grande île de l’océan Indien où le français et le malgache sont officiels. Un visa est nécessaire, en ligne ou à l’arrivée. Fiche en test, à vérifier.',
+  accroche: 'Une grande île de l’océan Indien où le français et le malgache sont officiels. Un visa est nécessaire, en ligne ou à l’arrivée. Fiche beta, à vérifier.',
   couleur: '#fc3d32',
   langue: { nom: 'malgache', code: 'mg-MG' },
   devise: 'ariary',

@@ -12,7 +12,7 @@ export const bresil: PaysComplet = {
   slug: 'bresil',
   nom: 'Brésil',
   article: 'le Brésil',
-  accroche: 'Un pays-continent de langue portugaise, accessible sans visa jusqu’à 90 jours. Son portugais diffère de celui du Portugal. Fiche en test, à vérifier.',
+  accroche: 'Un pays-continent de langue portugaise, accessible sans visa jusqu’à 90 jours. Son portugais diffère de celui du Portugal. Fiche beta, à vérifier.',
   couleur: '#009c3b',
   langue: { nom: 'portugais brésilien', code: 'pt-BR' },
   devise: 'real',

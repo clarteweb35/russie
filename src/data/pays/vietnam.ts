@@ -11,7 +11,7 @@ export const vietnam: PaysComplet = {
   slug: 'vietnam',
   nom: 'Vietnam',
   article: 'le Vietnam',
-  accroche: 'Un pays hors de l’Union européenne, avec une langue à tons : exemption de visa de courte durée, permis de travail et carte de résidence très encadrés. Fiche en test, à vérifier.',
+  accroche: 'Un pays hors de l’Union européenne, avec une langue à tons : exemption de visa de courte durée, permis de travail et carte de résidence très encadrés. Fiche beta, à vérifier.',
   couleur: '#b3141a',
   langue: { nom: 'vietnamien', code: 'vi-VN' },
   devise: 'dong',

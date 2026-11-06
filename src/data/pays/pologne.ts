@@ -14,7 +14,7 @@ export const pologne: PaysComplet = {
   slug: 'pologne',
   nom: 'Pologne',
   article: 'la Pologne',
-  accroche: 'Un pays de l’Union européenne proche de l’Ukraine et de la Biélorussie : libre circulation, des démarches simples (PESEL, enregistrement), et une vigilance particulière près de certaines frontières. Fiche en test, à vérifier.',
+  accroche: 'Un pays de l’Union européenne proche de l’Ukraine et de la Biélorussie : libre circulation, des démarches simples (PESEL, enregistrement), et une vigilance particulière près de certaines frontières. Fiche beta, à vérifier.',
   couleur: '#c1272d',
   langue: { nom: 'polonais', code: 'pl-PL' },
   devise: 'zloty',

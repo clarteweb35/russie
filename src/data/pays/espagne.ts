@@ -11,7 +11,7 @@ export const espagne: PaysComplet = {
   slug: 'espagne',
   nom: 'Espagne',
   article: 'l’Espagne',
-  accroche: 'Un pays de l’Union européenne : libre circulation, mais des démarches d’installation (NIE, registre) à connaître. Fiche en test, à vérifier.',
+  accroche: 'Un pays de l’Union européenne : libre circulation, mais des démarches d’installation (NIE, registre) à connaître. Fiche beta, à vérifier.',
   couleur: '#a8071a',
   langue: { nom: 'espagnol', code: 'es-ES' },
   devise: 'euro',

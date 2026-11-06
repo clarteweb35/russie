@@ -2,7 +2,7 @@ import { guideEurope } from './europe';
 
 export const norvege = guideEurope({
   iso: 'NOR', slug: 'norvege', nom: 'Norvège', article: 'la Norvège', lieu: 'en Norvège',
-  accroche: 'Un pays scandinave de l’espace Schengen mais hors de l’Union européenne, avec sa propre monnaie. Fiche en test, à vérifier.',
+  accroche: 'Un pays scandinave de l’espace Schengen mais hors de l’Union européenne, avec sa propre monnaie. Fiche beta, à vérifier.',
   couleur: '#ba0c2f', langue: { nom: 'norvégien', code: 'nb-NO' }, devise: 'couronne norvégienne', monnaieAvecArticle: 'la couronne norvégienne', regime: 'schengen-hors-ue',
   introLangue: 'Le norvégien (bokmål) s’écrit avec l’alphabet latin et trois lettres supplémentaires (æ, ø, å). Presque tous les Norvégiens parlent très bien l’anglais.',
   lecons: {

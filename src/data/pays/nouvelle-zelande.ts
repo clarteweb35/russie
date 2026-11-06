@@ -12,7 +12,7 @@ export const nouvelleZelande: PaysComplet = {
   slug: 'nouvelle-zelande',
   nom: 'Nouvelle-Zélande',
   article: 'la Nouvelle-Zélande',
-  accroche: 'Un pays insulaire du Pacifique où l’on conduit à gauche. Une autorisation électronique (NZeTA) et une taxe touristique sont exigées. Fiche en test, à vérifier.',
+  accroche: 'Un pays insulaire du Pacifique où l’on conduit à gauche. Une autorisation électronique (NZeTA) et une taxe touristique sont exigées. Fiche beta, à vérifier.',
   couleur: '#00247d',
   langue: { nom: 'anglais', code: 'en-NZ' },
   devise: 'dollar néo-zélandais',

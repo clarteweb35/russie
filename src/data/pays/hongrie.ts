@@ -2,7 +2,7 @@ import { guideEurope } from './europe';
 
 export const hongrie = guideEurope({
   iso: 'HUN', slug: 'hongrie', nom: 'Hongrie', article: 'la Hongrie', lieu: 'en Hongrie',
-  accroche: 'Un pays d’Europe centrale de l’Union européenne et de l’espace Schengen, à la langue très différente de ses voisines. Fiche en test, à vérifier.',
+  accroche: 'Un pays d’Europe centrale de l’Union européenne et de l’espace Schengen, à la langue très différente de ses voisines. Fiche beta, à vérifier.',
   couleur: '#436f4d', langue: { nom: 'hongrois', code: 'hu-HU' }, devise: 'forint', monnaieAvecArticle: 'le forint', regime: 'schengen-ue',
   introLangue: 'Le hongrois n’est pas une langue indo-européenne : il ne ressemble ni au français ni aux langues voisines. L’anglais et l’allemand sont courants à Budapest et dans le tourisme.',
   lecons: {

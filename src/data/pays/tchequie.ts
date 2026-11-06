@@ -2,7 +2,7 @@ import { guideEurope } from './europe';
 
 export const tchequie = guideEurope({
   iso: 'CZE', slug: 'tchequie', diploSlug: 'republique-tcheque', nom: 'Tchéquie', article: 'la Tchéquie', lieu: 'en Tchéquie',
-  accroche: 'Un pays d’Europe centrale de l’Union européenne et de l’espace Schengen, qui a gardé sa propre monnaie. Fiche en test, à vérifier.',
+  accroche: 'Un pays d’Europe centrale de l’Union européenne et de l’espace Schengen, qui a gardé sa propre monnaie. Fiche beta, à vérifier.',
   couleur: '#11457e', langue: { nom: 'tchèque', code: 'cs-CZ' }, devise: 'couronne tchèque', monnaieAvecArticle: 'la couronne tchèque', regime: 'schengen-ue',
   introLangue: 'Le tchèque s’écrit avec l’alphabet latin et beaucoup de signes (č, ř, š, ž, ě…). L’anglais est courant à Prague et dans le tourisme, moins ailleurs.',
   lecons: {

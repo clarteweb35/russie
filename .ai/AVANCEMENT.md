@@ -77,18 +77,16 @@ Dernière mise à jour : 4 novembre 2026. Ce fichier est mis à jour à la fin d
 - [ ] Faut-il raccourcir l'avertissement de sécurité en bandeau repliable ?
 - [ ] Niveau d'animation souhaité (actuellement doux).
 
-## Quand le nom de domaine existera (en attente)
+## Quand le nom de domaine sera transféré (site général « Voyage Malin »)
 
-À faire dans cet ordre, une fois le domaine acheté :
-1. [ ] DNS : pointer le domaine vers GitHub Pages (enregistrements indiqués dans Réglages > Pages du dépôt), puis saisir le domaine dans « Custom domain » et cocher « Enforce HTTPS ». Action de l'utilisateur.
-2. [ ] `astro.config.mjs` : `site` = `https://guide-russie.fr` (domaine visé, libre au 30 octobre 2026, pas encore acheté), `base: '/'` (supprimer `/russie`).
-3. [ ] `scripts/verifier-liens.mjs` : passer `BASE` de `'/russie'` à `''` (ou adapter pour l'absence de préfixe).
-4. [ ] `public/robots.txt` : mettre l'adresse du sitemap sur le nouveau domaine.
-5. [ ] Ajouter un fichier `public/CNAME` contenant le domaine.
-6. [ ] Mettre à jour les adresses dans `README.md`, `CLAUDE.md` (« /russie/ ») et `.ai/SPEC_FONCTIONNALITES.md`.
-7. [ ] **Google Analytics 4** : l'utilisateur fournit l'identifiant de mesure `G-XXXXXXXXXX` propre à ce site (ne pas réutiliser celui de l'autre projet). Créer le bandeau de consentement, une page de confidentialité, et ne charger gtag qu'après acceptation.
-8. [ ] **EcoIndex** : mesurer l'accueil en ligne, compter les éléments avant d'ajouter du contenu.
-9. [ ] Vérifier le sitemap, les liens, les balises de partage et le HTTPS en ligne.
+Le site https://clarteweb35.github.io/russie/ est le site général (marque « Voyage Malin », choix de destination parmi 194 pays). Il est prêt : le passage au domaine ne demande aucune modification du code.
+1. [ ] Domaine voyagesmalins.fr : détacher de Vercel, puis chez OVH pointer `www` en CNAME vers `clarteweb35.github.io.` (et l'apex vers les 4 adresses A de GitHub Pages : 185.199.108.153, .109.153, .110.153, .111.153). Action de l'utilisateur.
+2. [ ] GitHub : Réglages > Secrets and variables > Actions > Variables > créer `DOMAINE` = `www.voyagesmalins.fr`. Puis Réglages > Pages > Custom domain = `www.voyagesmalins.fr`, et cocher « Enforce HTTPS » après la vérification DNS. Relancer le déploiement (Actions > Déploiement > Run workflow).
+3. [ ] Vérifier : accueil, une fiche pays, `/robots.txt` et `/sitemap.xml` sur le nouveau domaine. Ajouter la propriété dans Search Console.
+4. [ ] Mettre à jour README.md, CLAUDE.md (« /russie/ ») et la spec une fois le domaine actif.
+5. [ ] **Google Analytics 4** : l'utilisateur fournit l'identifiant `G-XXXXXXXXXX`. Bandeau de consentement, page de confidentialité, gtag chargé seulement après acceptation.
+6. [ ] **EcoIndex** : mesurer l'accueil en ligne, compter les éléments avant d'ajouter du contenu.
+7. [ ] Compléter l'éditeur et l'hébergeur dans les mentions légales (obligatoire dès qu'il y a de l'affiliation).
 
 ## Points de vigilance
 - [x] Mentions légales : éditeur anonyme à titre non professionnel (décision de l'utilisateur, 30 octobre 2026), identité communiquée à l'hébergeur uniquement.
@@ -118,7 +116,7 @@ Décisions de l'utilisateur : **pays pilote d'abord** (Finlande), puis les autre
 4. [ ] Convertisseur de devises générique (Albanie : lek, Vietnam : dong, Sénégal : franc CFA) : le composant actuel est fixé sur EUR et RUB.
 5. [ ] Page d'accueil de la Russie : mettre en avant le menu « Autres pays » si besoin.
 6. [ ] Mentions légales : préciser que le site couvre plusieurs pays.
-7. [ ] Nom de domaine : `guide-russie.fr` convient mal à un site multi-pays. Décider si les pays restent sous `/pays/` ou si le site change de nom.
+7. [x] Nom du site : « Voyage Malin » (6 novembre 2026), domaine voyagesmalins.fr en attente de transfert.
 
 ## Topo hebdomadaire d'actualité (4 novembre 2026)
 

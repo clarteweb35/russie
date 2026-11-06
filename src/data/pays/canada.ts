@@ -12,7 +12,7 @@ export const canada: PaysComplet = {
   slug: 'canada',
   nom: 'Canada',
   article: 'le Canada',
-  accroche: 'Un pays immense, officiellement bilingue, où le français domine au Québec et l’anglais ailleurs. Une autorisation de voyage électronique est exigée pour entrer par avion. Fiche en test, à vérifier.',
+  accroche: 'Un pays immense, officiellement bilingue, où le français domine au Québec et l’anglais ailleurs. Une autorisation de voyage électronique est exigée pour entrer par avion. Fiche beta, à vérifier.',
   couleur: '#d52b1e',
   langue: { nom: 'anglais', code: 'en-CA' },
   devise: 'dollar canadien',

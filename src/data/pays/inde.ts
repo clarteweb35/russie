@@ -11,7 +11,7 @@ export const inde: PaysComplet = {
   slug: 'inde',
   nom: 'Inde',
   article: 'l’Inde',
-  accroche: 'Un pays-continent aux langues multiples où l’on conduit à gauche. Un visa électronique en ligne est nécessaire. Fiche en test, à vérifier.',
+  accroche: 'Un pays-continent aux langues multiples où l’on conduit à gauche. Un visa électronique en ligne est nécessaire. Fiche beta, à vérifier.',
   couleur: '#ff9933',
   langue: { nom: 'hindi', code: 'hi-IN' },
   devise: 'roupie indienne',

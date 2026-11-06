@@ -13,7 +13,7 @@ export const portugal: PaysComplet = {
   slug: 'portugal',
   nom: 'Portugal',
   article: 'le Portugal',
-  accroche: 'Un pays de l’Union européenne très prisé des francophones : libre circulation, avec trois numéros à obtenir pour s’installer (fiscal, sécurité sociale, santé). Fiche en test, à vérifier.',
+  accroche: 'Un pays de l’Union européenne très prisé des francophones : libre circulation, avec trois numéros à obtenir pour s’installer (fiscal, sécurité sociale, santé). Fiche beta, à vérifier.',
   couleur: '#046a38',
   langue: { nom: 'portugais', code: 'pt-PT' },
   devise: 'euro',

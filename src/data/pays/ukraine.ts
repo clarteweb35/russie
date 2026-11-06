@@ -12,7 +12,7 @@ export const ukraine: PaysComplet = {
   slug: 'ukraine',
   nom: 'Ukraine',
   article: 'l’Ukraine',
-  accroche: 'Un pays en guerre : le ministère français déconseille formellement tout déplacement. Cette fiche aide surtout à comprendre la langue et à suivre l’actualité. Fiche en test, à vérifier.',
+  accroche: 'Un pays en guerre : le ministère français déconseille formellement tout déplacement. Cette fiche aide surtout à comprendre la langue et à suivre l’actualité. Fiche beta, à vérifier.',
   couleur: '#0057b7',
   langue: { nom: 'ukrainien', code: 'uk-UA' },
   devise: 'hryvnia',

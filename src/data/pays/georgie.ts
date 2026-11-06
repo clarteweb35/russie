@@ -13,7 +13,7 @@ export const georgie: PaysComplet = {
   slug: 'georgie',
   nom: 'Géorgie',
   article: 'la Géorgie',
-  accroche: 'Un pays du Caucase hors de l’Union européenne, au séjour sans visa très long et à l’alphabet unique. Souvent cité pour y ouvrir un compte bancaire. Fiche en test, à vérifier.',
+  accroche: 'Un pays du Caucase hors de l’Union européenne, au séjour sans visa très long et à l’alphabet unique. Souvent cité pour y ouvrir un compte bancaire. Fiche beta, à vérifier.',
   couleur: '#8b1a2b',
   langue: { nom: 'géorgien', code: 'ka-GE' },
   devise: 'lari',

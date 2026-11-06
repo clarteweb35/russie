@@ -13,7 +13,7 @@ export const grece: PaysComplet = {
   slug: 'grece',
   nom: 'Grèce',
   article: 'la Grèce',
-  accroche: 'Un pays de l’Union européenne à l’alphabet propre : libre circulation, avec numéro fiscal et sécurité sociale à obtenir pour s’installer. Fiche en test, à vérifier.',
+  accroche: 'Un pays de l’Union européenne à l’alphabet propre : libre circulation, avec numéro fiscal et sécurité sociale à obtenir pour s’installer. Fiche beta, à vérifier.',
   couleur: '#0d5eaf',
   langue: { nom: 'grec', code: 'el-GR' },
   devise: 'euro',

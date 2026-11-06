@@ -11,7 +11,7 @@ export const azerbaidjan: PaysComplet = {
   slug: 'azerbaidjan',
   nom: 'Azerbaïdjan',
   article: 'l’Azerbaïdjan',
-  accroche: 'Un pays du Caucase au bord de la mer Caspienne, ancien pays soviétique où le russe reste utile. Un visa électronique est nécessaire. Fiche en test, à vérifier.',
+  accroche: 'Un pays du Caucase au bord de la mer Caspienne, ancien pays soviétique où le russe reste utile. Un visa électronique est nécessaire. Fiche beta, à vérifier.',
   couleur: '#0092bc',
   langue: { nom: 'azéri', code: 'az-AZ' },
   devise: 'manat azerbaïdjanais',

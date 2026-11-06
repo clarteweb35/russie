@@ -12,7 +12,7 @@ export const australie: PaysComplet = {
   slug: 'australie',
   nom: 'Australie',
   article: 'l’Australie',
-  accroche: 'Un pays-continent où l’on conduit à gauche, et dont les contrôles à la frontière sont stricts. Une autorisation électronique (ETA) est exigée, demandée par application. Fiche en test, à vérifier.',
+  accroche: 'Un pays-continent où l’on conduit à gauche, et dont les contrôles à la frontière sont stricts. Une autorisation électronique (ETA) est exigée, demandée par application. Fiche beta, à vérifier.',
   couleur: '#00843d',
   langue: { nom: 'anglais', code: 'en-AU' },
   devise: 'dollar australien',

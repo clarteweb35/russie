@@ -25,7 +25,7 @@ export const legendeIA = (description: string) => `${description} (${MENTION_IA}
 export const pagesLegales = [{ href: '/mentions-legales', label: 'Mentions légales' }];
 
 // Nom affiché dans l'en-tête (domaine visé : à acheter chez OVH).
-export const NOM_SITE = 'guide-russie.fr';
+export const NOM_SITE = 'Voyage Malin';
 
 // Élision devant une voyelle : « le russe », « l’arabe » ; « leçons de russe », « leçons d’arabe »
 const VOYELLE = /^[aeiouyàâéèêëîïôûü]/i;

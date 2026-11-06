@@ -1,6 +1,6 @@
 // Génère le topo hebdomadaire de l'actualité de chaque pays suivi avec l'API Gemini (recherche Google intégrée).
 // Usage : GEMINI_API_KEY_ALBANIE=... node scripts/actualites.mjs
-// Clés : une par pays (GEMINI_API_KEY_<PAYS>, ex. GEMINI_API_KEY_RUSSIE), sinon une clé commune GEMINI_API_KEY.
+// Clés : une par pays (GEMINI_API_KEY_<PAYS>, ex. GEMINI_API_KEY_RUSSIE), sinon la clé commune GEMINI_API_KEY_GENERAL (ou GEMINI_API_KEY).
 // Dans GitHub Actions, les secrets du dépôt arrivent en bloc par SECRETS_JSON : ajouter un pays ne demande aucune modification du workflow.
 // Variables facultatives : GEMINI_MODEL (modèle), GEMINI_BASE_URL (tests), ACTUALITES_DIR (dossier de sortie).
 //
@@ -14,7 +14,7 @@ const SECRETS = JSON.parse(process.env.SECRETS_JSON || '{}');
 const lire = (nom) => process.env[nom] || SECRETS[nom] || '';
 // Un nom de secret GitHub ne peut contenir que des lettres, chiffres et soulignés : tout autre caractère devient « _ »
 const nomSecret = (slug) => `GEMINI_API_KEY_${slug.toUpperCase().replace(/[^A-Z0-9]/g, "_")}`;
-const cle = (slug) => lire(nomSecret(slug)) || lire("GEMINI_API_KEY");
+const cle = (slug) => lire(nomSecret(slug)) || lire("GEMINI_API_KEY_GENERAL") || lire("GEMINI_API_KEY");
 const MODELE = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
 const BASE = process.env.GEMINI_BASE_URL || 'https://generativelanguage.googleapis.com';
 const DOSSIER = process.env.ACTUALITES_DIR || join('src', 'data', 'actualites');
@@ -92,7 +92,7 @@ mkdirSync(DOSSIER, { recursive: true });
 let reussis = 0;
 for (const p of PAYS) {
   if (!cle(p.slug)) {
-    console.warn(`::warning::${p.slug} : aucune clé (ajoutez le secret ${nomSecret(p.slug)} ou une clé commune GEMINI_API_KEY), pays ignoré`);
+    console.warn(`::warning::${p.slug} : aucune clé (ajoutez le secret ${nomSecret(p.slug)} ou la clé commune GEMINI_API_KEY_GENERAL), pays ignoré`);
     continue;
   }
   try {
@@ -101,6 +101,7 @@ for (const p of PAYS) {
     writeFileSync(fichier, JSON.stringify({ slug: p.slug, genere: new Date().toISOString(), modele: MODELE, ...topo }, null, 2) + '\n');
     console.log(`${p.slug} : ${topo.points.length} points, ${topo.sources.length} sources`);
     reussis++;
+    await new Promise((r) => setTimeout(r, 1500)); // ménage le quota de l'API
   } catch (e) {
     // Le topo précédent est conservé : on signale seulement l'erreur
     console.warn(`::warning::${p.slug} : ${e.message}`);

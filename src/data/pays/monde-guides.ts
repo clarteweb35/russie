@@ -238,7 +238,7 @@ const construire = ([iso, article, cle, medias]: Ligne): PaysComplet => {
     slug: f.slug,
     nom: f.nom,
     article,
-    accroche: `${f.sousRegion || f.region} : fiche en test. L’entrée, la sécurité et la monnaie renvoient aux sources officielles ; le reste reste à documenter.`,
+    accroche: `${f.sousRegion || f.region} : fiche beta. L’entrée, la sécurité et la monnaie renvoient aux sources officielles ; le reste reste à documenter.`,
     couleur: COULEURS[f.region] ?? '#2b3a55',
     langue: p?.langue ?? { nom: f.langues[0]?.nom ?? 'langue locale', code: f.langues[0]?.code ?? '' },
     devise: monnaie,

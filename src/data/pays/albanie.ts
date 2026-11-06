@@ -11,7 +11,7 @@ export const albanie: PaysComplet = {
   slug: 'albanie',
   nom: 'Albanie',
   article: 'l’Albanie',
-  accroche: 'Un pays hors de l’Union européenne : les règles d’entrée, d’assurance et d’installation diffèrent de celles de la France. Fiche en test, à vérifier.',
+  accroche: 'Un pays hors de l’Union européenne : les règles d’entrée, d’assurance et d’installation diffèrent de celles de la France. Fiche beta, à vérifier.',
   couleur: '#8a1c1c',
   langue: { nom: 'albanais', code: 'sq-AL' },
   devise: 'lek',

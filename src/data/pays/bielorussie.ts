@@ -12,7 +12,7 @@ export const bielorussie: PaysComplet = {
   slug: 'bielorussie',
   nom: 'Biélorussie',
   article: 'la Biélorussie',
-  accroche: 'Un pays d’Europe de l’Est allié de la Russie, ancien pays soviétique où le russe est très répandu. Lisez d’abord la fiche officielle du ministère français. Fiche en test, à vérifier.',
+  accroche: 'Un pays d’Europe de l’Est allié de la Russie, ancien pays soviétique où le russe est très répandu. Lisez d’abord la fiche officielle du ministère français. Fiche beta, à vérifier.',
   couleur: '#c8313e',
   langue: { nom: 'biélorusse', code: 'be-BY' },
   devise: 'rouble biélorusse',

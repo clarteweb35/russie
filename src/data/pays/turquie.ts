@@ -12,7 +12,7 @@ export const turquie: PaysComplet = {
   slug: 'turquie',
   nom: 'Turquie',
   article: 'la Turquie',
-  accroche: 'Un pays hors de l’Union européenne, entre Europe et Asie : séjour sans visa de courte durée, mais titre de séjour et assurance santé spécifiques pour s’installer. Fiche en test, à vérifier.',
+  accroche: 'Un pays hors de l’Union européenne, entre Europe et Asie : séjour sans visa de courte durée, mais titre de séjour et assurance santé spécifiques pour s’installer. Fiche beta, à vérifier.',
   couleur: '#b3141a',
   langue: { nom: 'turc', code: 'tr-TR' },
   devise: 'livre turque',
