@@ -15,6 +15,10 @@ const lire = (nom) => process.env[nom] || SECRETS[nom] || '';
 // Un nom de secret GitHub ne peut contenir que des lettres, chiffres et soulignés : tout autre caractère devient « _ »
 const nomSecret = (slug) => `GEMINI_API_KEY_${slug.toUpperCase().replace(/[^A-Z0-9]/g, "_")}`;
 const cle = (slug) => lire(nomSecret(slug)) || lire("GEMINI_API_KEY_GENERAL") || lire("GEMINI_API_KEY");
+// Réglages du rythme (variables facultatives, utiles pour les tests) : pause entre pays, attente après erreur, nombre de pays
+const PAUSE_MS = Number(process.env.ACTUALITES_PAUSE_MS ?? 6000);
+const ATTENTE_MS = Number(process.env.ACTUALITES_ATTENTE_MS ?? 20000);
+const LIMITE = Number(process.env.ACTUALITES_LIMITE ?? 0);
 const MODELE = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
 const BASE = process.env.GEMINI_BASE_URL || 'https://generativelanguage.googleapis.com';
 const DOSSIER = process.env.ACTUALITES_DIR || join('src', 'data', 'actualites');
@@ -45,8 +49,8 @@ async function appeler(p, essai = 1) {
     }),
     signal: AbortSignal.timeout(90_000),
   });
-  if ((reponse.status === 429 || reponse.status >= 500) && essai < 3) {
-    await new Promise((r) => setTimeout(r, 5000 * essai));
+  if ((reponse.status === 429 || reponse.status >= 500) && essai < 4) {
+    await new Promise((r) => setTimeout(r, ATTENTE_MS * essai));
     return appeler(p, essai + 1);
   }
   if (!reponse.ok) {
@@ -90,7 +94,7 @@ function extraire(json) {
 
 mkdirSync(DOSSIER, { recursive: true });
 let reussis = 0;
-for (const p of PAYS) {
+for (const p of (LIMITE ? PAYS.slice(0, LIMITE) : PAYS)) {
   if (!cle(p.slug)) {
     console.warn(`::warning::${p.slug} : aucune clé (ajoutez le secret ${nomSecret(p.slug)} ou la clé commune GEMINI_API_KEY_GENERAL), pays ignoré`);
     continue;
@@ -101,7 +105,7 @@ for (const p of PAYS) {
     writeFileSync(fichier, JSON.stringify({ slug: p.slug, genere: new Date().toISOString(), modele: MODELE, ...topo }, null, 2) + '\n');
     console.log(`${p.slug} : ${topo.points.length} points, ${topo.sources.length} sources`);
     reussis++;
-    await new Promise((r) => setTimeout(r, 1500)); // ménage le quota de l'API
+    await new Promise((r) => setTimeout(r, PAUSE_MS)); // ménage le quota de l'API
   } catch (e) {
     // Le topo précédent est conservé : on signale seulement l'erreur
     console.warn(`::warning::${p.slug} : ${e.message}`);
