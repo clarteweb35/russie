@@ -120,7 +120,7 @@ Liste des sources et de leur fiabilité.
 2. Composants `Badge` et `Alert` faits ; reste le bloc « Sources » et le passage en Content Collections si le contenu grossit.
 3. ~~Date de vérification globale~~ : faite (`VERIFICATIONS` dans `config.ts`, par page, repli sur `LAST_CHECK`).
 4. ~~Image d'accueil de 2,6 Mo~~ : faite (WebP, 218 Ko). Reste à mesurer EcoIndex.
-5. ~~CSS global sans découpage~~ : fait (7 fichiers par thème, §30). Reste la seconde feuille `public/styles/global.css` (1025 lignes, bons plans et guides), à fusionner avec la première.
+5. ~~CSS global sans découpage~~ : fait (7 fichiers par thème, §30). La seconde feuille (bons plans et guides) a été fusionnée le 7 novembre 2026 (§31).
 6. ~~SEO~~ : fait (sitemap généré, robots.txt, favicon, canonical, Open Graph). Reste une image de partage 1200x630.
 7. ~~`lecons.js` non typé~~ : fait (`lecons.ts`, type `Lecon`).
 8. ~~Convertisseur fragile~~ : fait (délai de 5 s, dernier taux connu mémorisé).
@@ -274,3 +274,10 @@ Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fich
 - Premier résultat : `/bons-plans/` n'avait pas de `<h1>` ; un titre masqué à l'œil (lu par les lecteurs d'écran) a été ajouté, sans changement visible.
 - `src/styles/global.css` devient une liste d'`@import` ordonnée vers 7 fichiers thématiques ; le CSS produit est inchangé.
 - Les leçons de russe sont typées (`Lecon`), comme celles des autres pays.
+
+## 31. Style unifié, alerte de sécurité, alias de recherche, leçons locales (7 novembre 2026)
+
+- **Style unique** : les pages bons plans, offres, astuces et guides utilisent le même gabarit (`Base.astro`) et les mêmes variables que le reste du site : en-tête et menu, fil d'Ariane, bandeau bêta, bandeau de consentement (la mesure d'audience y est donc proposée comme ailleurs), pied de page avec mentions légales. Une seule feuille de style (`src/styles/bons-plans.css` pour ces pages). Supprimés : `public/styles/global.css`, `VmHeader`, `VmFooter`. Mention d'affiliation affichée en bas des pages qui portent un lien affilié. La page bons plans a un vrai titre visible.
+- **Alerte « voyage déconseillé »** : sur les pays de `ALERTE_SECURITE` et sur la Russie, le bandeau rouge est la toute première chose de la page (avant l'en-tête). Il clignote lentement (0,6 par seconde) sauf si le visiteur a demandé de réduire les animations ; le bandeau « Avant de partir » n'est plus affiché sur ces pays (redondant). Contrôlé par `scripts/verifier-pages.mjs`.
+- **Recherche de l'accueil** : les sigles et autres noms courants (USA, RDC, RCA, UK, EAU, Ceylan, Zaïre…) mènent au bon pays, en tête des suggestions. Table : `ALIAS` dans `src/data/monde/index.ts`.
+- **Leçons de langue locale** : quand le français ou l'anglais est langue officielle, les leçons proposent la première langue locale de la fiche si un support existe (règle dans `monde-guides.ts`). Aujourd'hui : Comores, Érythrée et Tchad (arabe), Guinée équatoriale (espagnol, exception documentée). Les autres pays gardent leur choix précédent, faute de support pour leur première langue locale (kikongo, afrikaans, tswana, créoles…). La rubrique « Langue » le précise.

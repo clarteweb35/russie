@@ -47,6 +47,31 @@ export const monde: FicheMonde[] = (brut as Fiche[])
 
 export const parSlug = (slug: string) => monde.find((p) => p.slug === slug);
 export const parIso = (iso: string) => monde.find((p) => p.iso === iso);
+
+// Autres façons d'écrire ou d'abréger un pays (sigles usuels, anciens noms, formes courantes) : la recherche de l'accueil
+// les reconnaît. Écrits sans accent, en minuscules. Une seule source : ne pas les recopier ailleurs.
+export const ALIAS: Record<string, string[]> = {
+  USA: ['usa', 'us', 'etats unis', 'etats-unis d amerique'],
+  COD: ['rdc', 'rd congo', 'congo kinshasa', 'zaire'],
+  COG: ['congo brazzaville', 'rep du congo'],
+  CAF: ['rca', 'centrafrique'],
+  GBR: ['uk', 'grande-bretagne', 'angleterre', 'ecosse', 'pays de galles', 'irlande du nord'],
+  ARE: ['eau', 'uae', 'emirats'],
+  CIV: ['cote d ivoire', 'ivory coast'],
+  CZE: ['republique tcheque', 'tchequie'],
+  PRK: ['rpdc'],
+  KOR: ['coree'],
+  MMR: ['myanmar'],
+  SWZ: ['swaziland'],
+  TLS: ['timor'],
+  NLD: ['hollande'],
+  BIH: ['bosnie'],
+  MKD: ['macedoine'],
+  CPV: ['cap vert', 'cabo verde'],
+  VNM: ['viet nam'],
+  LKA: ['ceylan'],
+  RUS: ['urss', 'federation de russie'],
+};
 export const estRussie = (p: Fiche) => p.iso === RUSSIE;
 
 // Lettre de regroupement alphabétique, sans accent (« Émirats » range sous E, « Île Maurice » sous I)

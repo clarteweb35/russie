@@ -39,6 +39,19 @@ const PACKS: Record<string, Pack> = {
   croate: { lecons: croatie.lecons, langue: croatie.langue, note: 'Les langues du pays sont très proches du croate : ces leçons servent aussi.' },
 };
 
+// Pays où le français ou l'anglais est langue officielle : on propose d'apprendre la première langue locale
+// (première de la liste de la fiche, hors français et anglais) si un support de leçons existe. Sinon, le choix de la ligne ci-dessous s'applique.
+const SUPPORT_PAR_CODE: Record<string, string> = { ara: 'arabe', swa: 'swahili', spa: 'espagnol', por: 'portugais', fas: 'persan', pes: 'persan', heb: 'hebreu', nld: 'neerlandais', deu: 'allemand', ell: 'grec', ita: 'italien', hrv: 'croate' };
+// Exception : la liste des langues est classée par code, pas par usage. L'espagnol est la langue principale de la Guinée équatoriale.
+const LANGUE_LOCALE_PREFEREE: Record<string, string> = { GNQ: 'espagnol' };
+const langueLocaleProposee = (f: Fiche): string | null => {
+  const officielles = f.langues.map((l) => l.code);
+  if (!officielles.includes('fra') && !officielles.includes('eng')) return null;
+  if (LANGUE_LOCALE_PREFEREE[f.iso]) return LANGUE_LOCALE_PREFEREE[f.iso];
+  const premiere = f.langues.find((l) => l.code !== 'fra' && l.code !== 'eng');
+  return premiere ? SUPPORT_PAR_CODE[premiere.code] ?? null : null;
+};
+
 // [code ISO, nom avec article, langue des leçons ou null, médias locaux]
 type M = [string, string, string, string];
 type Ligne = [string, string, string | null, M[]];
@@ -205,8 +218,12 @@ type Fiche = (typeof fiches)[number];
 const construire = ([iso, article, cle, medias]: Ligne): PaysComplet => {
   const f = (fiches as Fiche[]).find((x) => x.iso === iso);
   if (!f) throw new Error(`Pays inconnu : ${iso}`);
-  const p = cle ? PACKS[cle] : null;
-  if (cle && !p) throw new Error(`Support de leçons inconnu : ${cle}`);
+  const locale = langueLocaleProposee(f);
+  const cleFinale = locale && PACKS[locale] ? locale : cle;
+  const p = cleFinale ? PACKS[cleFinale] : null;
+  if (cleFinale && !p) throw new Error(`Support de leçons inconnu : ${cleFinale}`);
+  const officielle = f.langues.some((l) => l.code === 'fra') ? 'français' : 'anglais';
+  const noteLocale = locale && PACKS[locale] ? ` Le ${officielle} est aussi langue officielle : les leçons proposent la langue locale, plus utile au contact des habitants.` : '';
   const D = f.diplo ? diplo(f.diplo.slug) : GENERIQUE;
   const lieu = lieuDe(iso, article);
   const monnaie = f.devises.map((d) => d.nom).join(' / ') || 'monnaie locale';
@@ -258,7 +275,7 @@ const construire = ([iso, article, cle, medias]: Ligne): PaysComplet => {
       },
       entree: sectionEntree,
       introLangue: p
-        ? `Langue(s) du pays : ${langues}. Les leçons donnent les bases du ${p.langue.nom}. ${p.note}`
+        ? `Langue(s) du pays : ${langues}. Les leçons donnent les bases du ${p.langue.nom}. ${p.note}${noteLocale}`
         : `Langue(s) du pays : ${langues || 'non renseignée'}. Les leçons de langue ne sont pas encore disponibles pour ce pays.`,
       langue: [],
     }),

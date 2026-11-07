@@ -80,6 +80,23 @@ const donneesStructurees: object[] = [
   </head>
   <body>
     <a class="skip" href="#contenu">Aller au contenu</a>
+    {/* Pays déconseillés (et Russie) : l'alerte est la toute première chose vue, et clignote tant que le visiteur n'a pas demandé de réduire les animations */}
+    {pays?.alerte && (
+      <div class="banner banner-alerte" role="note">
+        <div class="wrap">
+          <span>{pays.test && <strong class="tag-test">Beta</strong>} <span class="picto" aria-hidden="true">⚠</span> <strong>Voyage déconseillé :</strong> situation de sécurité exceptionnelle. Lisez la fiche officielle du ministère français avant toute décision.</span>
+          <a href={pays.conseilsVoyageurs} rel="noopener">Conseils aux voyageurs →</a>
+        </div>
+      </div>
+    )}
+    {!pays && bandeau && !isHome && estPageRussie && (
+      <div class="banner banner-alerte" role="note">
+        <div class="wrap">
+          <span><span class="picto" aria-hidden="true">⚠</span> <strong>Voyage déconseillé :</strong> le ministère français déconseille tout déplacement en Russie.</span>
+          <a href={url("/voyager#securite")}>Lire les conseils →</a>
+        </div>
+      </div>
+    )}
     <div id="progress"></div>
     <header class={isHome ? "site accueil" : "site"}>
       <div class="wrap">
@@ -100,21 +117,11 @@ const donneesStructurees: object[] = [
       </div>
     )}
 
-    {pays && (
-      <div class={pays.alerte ? 'banner banner-alerte' : 'banner banner-pays'} role="note">
+    {pays && !pays.alerte && (
+      <div class="banner banner-pays" role="note">
         <div class="wrap">
-          <span>{pays.test && <strong class="tag-test">Beta</strong>} {pays.alerte
-            ? <><strong>Sécurité :</strong> situation exceptionnelle. Lisez la fiche officielle du ministère français avant toute décision.</>
-            : <><strong>Avant de partir :</strong> consultez la fiche « {pays.nom} » des conseils aux voyageurs du ministère français.</>}</span>
+          <span>{pays.test && <strong class="tag-test">Beta</strong>} <strong>Avant de partir :</strong> consultez la fiche « {pays.nom} » des conseils aux voyageurs du ministère français.</span>
           <a href={pays.conseilsVoyageurs} rel="noopener">Conseils aux voyageurs →</a>
-        </div>
-      </div>
-    )}
-    {!pays && bandeau && !isHome && estPageRussie && (
-      <div class="banner" role="note">
-        <div class="wrap">
-          <span><strong>Sécurité :</strong> le ministère français déconseille tout déplacement en Russie.</span>
-          <a href={url("/voyager#securite")}>Lire les conseils →</a>
         </div>
       </div>
     )}

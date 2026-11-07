@@ -20,7 +20,14 @@
   --maxw: 980px;
   --sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  --mono: var(--sans); /* une seule famille de polices sur tout le site */
+  --radius: 14px;
+  --board: #101b3a; /* panneaux sombres (tableau des départs) : identiques en clair et en sombre */
+  --board-ink: #eef2fb;
 }
+/* Rouge d'alerte (voyage déconseillé, calendrier) : valeurs uniques, clair puis sombre */
+:root { --bad: #b3261e; --bad-soft: #fde8e6; }
+@media (prefers-color-scheme: dark) { :root { --bad: #ff8a80; --bad-soft: #3a1b19; } }
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #0b1226;

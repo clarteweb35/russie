@@ -76,7 +76,16 @@ header.site nav .retour { font-weight: 600; color: var(--accent); }
 .photos-grille li { margin: 0; }
 .photos-grille img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 14px; box-shadow: var(--shadow); }
 
-.banner-alerte { background: var(--accent-soft); border-bottom-color: color-mix(in srgb, var(--accent) 35%, transparent); }
+/* Alerte « voyage déconseillé » : tout en haut de page, rouge, et clignotante si les animations sont permises (0,6 clignotement par seconde, sous le seuil de sécurité des 3 par seconde) */
+.banner-alerte { background: var(--bad-soft); border-bottom: 3px solid var(--bad); font-size: 15px; }
+.banner-alerte .wrap { padding-top: 10px; padding-bottom: 10px; }
+.banner-alerte .picto { color: var(--bad); font-size: 1.15em; }
+@keyframes alerte-clignote { 0%, 100% { background: var(--bad-soft); } 50% { background: color-mix(in srgb, var(--bad) 38%, var(--bad-soft)); } }
+@keyframes picto-clignote { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
+@media (prefers-reduced-motion: no-preference) {
+  .banner-alerte { animation: alerte-clignote 1.6s ease-in-out infinite; }
+  .banner-alerte .picto { animation: picto-clignote 1.6s ease-in-out infinite; }
+}
 
 @media (max-width: 720px) {
   .identite-corps { grid-template-columns: 1fr; }

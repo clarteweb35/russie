@@ -6,3 +6,4 @@
 @import './monde.css';       /* accueil « monde », fil d'Ariane, fiche d'identité, photos, cours de langues */
 @import './outils.css';      /* liste de bagages, quand partir, budget, calendrier */
 @import './services.css';    /* fil d'Ariane du ministère, bandeau de consentement */
+@import './bons-plans.css';  /* bons plans, astuces et guides voyage */

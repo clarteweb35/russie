@@ -32,6 +32,10 @@ for (const page of liste) {
   // la crée seulement après acceptation ; son code, lui, contient légitimement l'adresse de GTM.
   if (/(?:src|href)="[^"]*(?:googletagmanager|google-analytics)/i.test(html)) ajoute(page, 'balise Google Tag Manager / Analytics dans le HTML (doit rester derrière le consentement)');
 
+  // Alerte « voyage déconseillé » : toujours avant l'en-tête, donc la première chose vue
+  const alerte = html.indexOf('banner-alerte');
+  if (alerte >= 0 && alerte > html.indexOf('<header')) ajoute(page, "l'alerte « voyage déconseillé » doit précéder l'en-tête");
+
   // Pas de script externe
   for (const [, src] of html.matchAll(/<script[^>]+src="(https?:[^"]+)"/gi)) ajoute(page, `script externe : ${src}`);
 

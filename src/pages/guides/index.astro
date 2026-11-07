@@ -1,7 +1,6 @@
 ---
 import { url } from "../../config";
-import VmHeader from "../../components/VmHeader.astro";
-import VmFooter from "../../components/VmFooter.astro";
+import Base from "../../layouts/Base.astro";
 import { getCollection } from "astro:content";
 
 const guides = (await getCollection("guides")).sort(
@@ -9,22 +8,14 @@ const guides = (await getCollection("guides")).sort(
 );
 ---
 
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
-    <title>Astuces &amp; Hacks Voyage — Voyages Malins</title>
-    <meta
-      name="description"
-      content="Conseils pratiques pour voyager malin : repérer les vrais bons plans, préparer son séjour, éviter les pièges classiques."
-    />
-    <link rel="stylesheet" href={url("/styles/global.css")} />
-  </head>
-  <body>
-    <VmHeader />
+<Base
+  title="Astuces & hacks voyage"
+  description="Conseils pratiques pour voyager malin : repérer les vrais bons plans, préparer son séjour, éviter les pièges classiques."
+  meta={false}
+  fil={[{ label: "Astuces & hacks voyage" }]}
+>
 
-    <main>
+    <div class="guides">
       <section class="guides-intro">
         <p class="guides-intro__label">📚 Astuces &amp; Hacks Voyage</p>
         <h1 class="guides-intro__title">Voyager malin, pas cher</h1>
@@ -60,7 +51,5 @@ const guides = (await getCollection("guides")).sort(
           )
         }
       </ul>
-    </main>
-    <VmFooter affilie={false} />
-  </body>
-</html>
+    </div>
+</Base>

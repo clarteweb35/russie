@@ -1,7 +1,7 @@
 ---
 import { url } from "../../config";
-import VmHeader from "../../components/VmHeader.astro";
-import VmFooter from "../../components/VmFooter.astro";
+import Base from "../../layouts/Base.astro";
+import { mention } from "../../data/partenaires";
 import { getCollection, render } from "astro:content";
 import { paysDeOffre } from "../../data/offres-pays";
 
@@ -24,17 +24,12 @@ const labelConfiance: Record<string, string> = {
 };
 ---
 
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
-    <title>{offre.data.title}</title>
-    <meta name="description" content={offre.data.description} />
-    <link rel="stylesheet" href={url("/styles/global.css")} />
-  </head>
-  <body>
-    <VmHeader />
+<Base
+  title={offre.data.title}
+  description={offre.data.description}
+  meta={false}
+  fil={[{ label: "Bons plans", href: "/bons-plans/" }, { label: offre.data.title }]}
+>
 
     <a class="back-link" href={url("/bons-plans/")}>&larr; Retour au tableau des départs</a>
     {pays && <a class="back-link" href={url(`${pays.href}/`)}>Voir la fiche pays : {pays.nom} (monnaie, conseils officiels) &rarr;</a>}
@@ -86,6 +81,5 @@ const labelConfiance: Record<string, string> = {
         }
       </div>
     </article>
-    <VmFooter affilie={Boolean(offre.data.lien)} />
-  </body>
-</html>
+    {offre.data.lien && <p class="src">{mention}</p>}
+</Base>
