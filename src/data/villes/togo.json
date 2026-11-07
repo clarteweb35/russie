@@ -1,0 +1,53 @@
+{
+  "slug": "togo",
+  "genere": "2026-11-07T00:36:22.757Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Koutammakou",
+      "pourquoi": "Inscrit au patrimoine mondial de l’UNESCO depuis 2004 : le pays des Batammariba, avec ses habitations en terre ; l’accès se fait généralement depuis Kara ou Kandé, en 4×4, avec un guide-accompagnateur local.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Lomé",
+      "pourquoi": "Capitale, ville côtière mêlant animation urbaine, richesse culturelle et détente au bord de l’océan ; les plages entre Lomé, Baguida et Aného sont prisées.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Kpalimé",
+      "pourquoi": "Dans la région des Plateaux, base d’excursions : le mont Agou, point culminant du pays (986 m), et les cascades de Womé et de Kpimé sont proches.",
+      "a_voir": [
+        "Le mont Agou",
+        "Les cascades de Womé et de Kpimé"
+      ],
+      "conseil": "Il n’existe qu’une route nord-sud, donc les trajets sont longs ; un guide local est fortement recommandé pour les randonnées et les sites naturels."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Evaneos : Togo, que voir",
+      "url": "https://www.evaneos.fr/togo/voyage/etape/"
+    },
+    {
+      "titre": "Routard : voyage au Togo",
+      "url": "https://www.routard.com/fr/guide/afrique/togo"
+    },
+    {
+      "titre": "Cityzeum : Togo",
+      "url": "https://www.cityzeum.com/tourisme/togo"
+    },
+    {
+      "titre": "Génération Voyage : 10 incontournables du Togo",
+      "url": "https://generationvoyage.fr/?p=349754"
+    },
+    {
+      "titre": "Le Mag Voyage : que faire au Togo",
+      "url": "https://www.lemagvoyage.fr/togo/que-faire-togo/"
+    }
+  ]
+}

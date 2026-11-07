@@ -1,0 +1,53 @@
+{
+  "slug": "ghana",
+  "genere": "2026-11-07T00:35:04.115Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Cape Coast et Elmina",
+      "pourquoi": "Leurs forts sont inscrits à l’UNESCO et retracent cinq siècles d’histoire ; le château d’Elmina, construit par les Portugais en 1482, est la plus ancienne construction européenne d’Afrique. Cape Coast sert de base pour le parc de Kakum et ses passerelles dans la canopée.",
+      "a_voir": [
+        "Les forts de Cape Coast et d’Elmina",
+        "Le parc de Kakum"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Accra",
+      "pourquoi": "Capitale et point d’entrée de la plupart des itinéraires ; la plupart des auberges du pays y sont.",
+      "a_voir": [
+        "Jamestown",
+        "Le mémorial Nkrumah",
+        "Le quartier d’Osu"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Parc national de Mole",
+      "pourquoi": "Dans le nord du pays, on y voit notamment des éléphants et des phacochères.",
+      "a_voir": [],
+      "conseil": "Pour y accéder, les sources conseillent les bus longue distance ou la location d’un 4×4, surtout en saison des pluies."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Partirou : visiter le Ghana",
+      "url": "https://www.partirou.com/visiter/ghana/"
+    },
+    {
+      "titre": "Le Mag Voyage : que faire au Ghana",
+      "url": "https://www.lemagvoyage.fr/ghana/que-faire-ghana/"
+    },
+    {
+      "titre": "Routard : itinéraires conseillés au Ghana",
+      "url": "https://www.routard.com/fr/guide/a/itineraires-conseilles/afrique/ghana"
+    },
+    {
+      "titre": "Evaneos : Ghana, que voir",
+      "url": "https://www.evaneos.fr/ghana/voyage/etape/"
+    }
+  ]
+}

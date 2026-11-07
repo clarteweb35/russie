@@ -1,0 +1,51 @@
+{
+  "slug": "gambie",
+  "genere": "2026-11-07T00:36:22.757Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Kotu",
+      "pourquoi": "Zone balnéaire proche de Banjul, avec Kololi et Bijilo : hôtels, plages et clubs de sports nautiques, balades à cheval sur la plage et dans les forêts.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Banjul",
+      "pourquoi": "Capitale, étape présentée comme incontournable mais peu touristique, hormis un monument et un musée ; le musée national présente le passé colonial et l’histoire de l’esclavage. À environ 30 minutes de Serrekunda en voiture.",
+      "a_voir": [
+        "Le musée national de la Gambie"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Le fleuve Gambie",
+      "pourquoi": "Une sortie en pirogue permet de découvrir le parc national de Makasutu, près de Brikama, puis les bolongs bordés de mangrove ; le village de Juffureh est lié à l’histoire de Kunta Kinté.",
+      "a_voir": [
+        "Le parc de Makasutu",
+        "Juffureh"
+      ],
+      "conseil": "La Gambie se visite plutôt en saison sèche, de novembre à février ; la saison des pluies va de juin à septembre."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Partirou : visiter la Gambie",
+      "url": "https://www.partirou.com/visiter/gambie/"
+    },
+    {
+      "titre": "Routard : Banjul",
+      "url": "https://www.routard.com/fr/guide/afrique/gambie/cote-ouest-de-la-gambie/banjul"
+    },
+    {
+      "titre": "Evaneos : Gambie, que voir",
+      "url": "https://www.evaneos.fr/gambie/voyage/etape/"
+    },
+    {
+      "titre": "Kayak : guide de la Gambie",
+      "url": "https://www.kayak.fr/Gambie.87.dc.guide"
+    }
+  ]
+}

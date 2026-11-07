@@ -1,0 +1,50 @@
+{
+  "slug": "mauritanie",
+  "genere": "2026-11-07T00:36:22.757Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Chinguetti",
+      "pourquoi": "Ancienne cité caravanière classée à l’UNESCO, réputée pour ses bibliothèques anciennes et ses ruelles de sable ; on peut arriver à l’aube ou y passer la nuit pour profiter du lieu au calme.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Atar",
+      "pourquoi": "Base logistique pour les excursions vers Chinguetti, Ouadane ou Terjit ; un guide signale de prévoir assez d’ouguiyas en espèces avant de la quitter, les distributeurs manquant ensuite. Nouakchott est la capitale.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Banc d’Arguin",
+      "pourquoi": "Parc de 12 000 km² entre Atlantique et Sahara, classé à l’UNESCO depuis 1989, parmi les plus grandes concentrations d’oiseaux migrateurs ; certains sites demandent une autorisation ou un guide local.",
+      "a_voir": [],
+      "conseil": "La haute saison va de novembre à mars ; les sources conseillent de vérifier les conseils aux voyageurs du ministère avant de partir."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Génération Voyage : 10 incontournables de Mauritanie",
+      "url": "https://generationvoyage.fr/visiter-mauritanie-faire-voir/"
+    },
+    {
+      "titre": "Le Mag Voyage : que faire en Mauritanie",
+      "url": "https://www.lemagvoyage.fr/mauritanie/que-faire-mauritanie/"
+    },
+    {
+      "titre": "Partir.com : lieux d’intérêt en Mauritanie",
+      "url": "https://www.partir.com/Mauritanie/lieux-d-interet.html"
+    },
+    {
+      "titre": "Partirou : visiter la Mauritanie",
+      "url": "https://www.partirou.com/visiter/mauritanie/"
+    },
+    {
+      "titre": "Routard : Mauritanie",
+      "url": "https://www.routard.com/fr/guide/top/afrique/mauritanie"
+    }
+  ]
+}

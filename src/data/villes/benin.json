@@ -1,0 +1,50 @@
+{
+  "slug": "benin",
+  "genere": "2026-11-07T00:36:22.757Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Ouidah",
+      "pourquoi": "La ville du vaudou ; la Fête du Vodoun, en janvier, est un temps fort culturel, et une nuit sur place évite de la survoler.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Cotonou et Porto-Novo",
+      "pourquoi": "Cotonou est la ville la plus importante du pays ; Porto-Novo est la capitale.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Ganvié",
+      "pourquoi": "Plus grand village lacustre d’Afrique, à 20 km au nord de Cotonou, sur le lac Nokoué ; un guide conseille une journée pour la balade en pirogue.",
+      "a_voir": [],
+      "conseil": "Le Routard déconseille le Nord (parc de la Pendjari) pour des raisons de sécurité aux frontières et juge le Sud très sûr : vérifiez les conseils officiels de votre pays."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : incontournables au Bénin",
+      "url": "https://www.routard.com/guide_a_voir/benin.htm"
+    },
+    {
+      "titre": "Lonely Planet : 7 lieux incontournables à voir au Bénin",
+      "url": "https://www.lonelyplanet.fr/article/7-lieux-incontournables-voir-au-benin"
+    },
+    {
+      "titre": "Génération Voyage : 10 incontournables du Bénin",
+      "url": "https://generationvoyage.fr/visiter-benin-faire-voir/"
+    },
+    {
+      "titre": "Où et quand : visiter le Bénin",
+      "url": "https://www.ou-et-quand.net/ou-aller/benin/"
+    },
+    {
+      "titre": "Partirou : visiter le Bénin",
+      "url": "https://www.partirou.com/visiter/benin/"
+    }
+  ]
+}

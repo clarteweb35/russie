@@ -1,0 +1,53 @@
+{
+  "slug": "gabon",
+  "genere": "2026-11-07T00:36:22.757Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Parc national de Loango",
+      "pourquoi": "Considéré comme l’un des incontournables du pays pour ses safaris, ses plages et ses paysages sauvages, à environ 300 km de la capitale ; accessible seulement par des forfaits de lodges ou d’agences, à budget plus élevé.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Libreville",
+      "pourquoi": "Capitale : front de mer, marchés animés (le marché du Mont-Bouët est souvent recommandé pour une matinée) et mausolée Léon Mba.",
+      "a_voir": [
+        "Le marché du Mont-Bouët",
+        "Le mausolée Léon Mba"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Parc national de la Lopé",
+      "pourquoi": "Inscrit au patrimoine mondial de l’humanité, réputé pour sa mosaïque savane-forêt et ses éléphants de forêt ; le train depuis Libreville l’atteint en 5 à 7 heures environ.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : voyage au Gabon",
+      "url": "https://www.routard.com/fr/guide/afrique/gabon"
+    },
+    {
+      "titre": "Evaneos : Gabon, que voir",
+      "url": "https://www.evaneos.fr/gabon/voyage/etape/"
+    },
+    {
+      "titre": "OK Voyage : paysages du Gabon",
+      "url": "https://www.okvoyage.com/post/paysages-gabon/"
+    },
+    {
+      "titre": "Wild Expedition : Gabon",
+      "url": "https://wildexpedition.com/fr/pays-2/gabon/"
+    },
+    {
+      "titre": "Cityzeum : Gabon",
+      "url": "https://www.cityzeum.com/tourisme/gabon"
+    }
+  ]
+}

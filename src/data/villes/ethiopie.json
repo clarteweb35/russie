@@ -1,0 +1,46 @@
+{
+  "slug": "ethiopie",
+  "genere": "2026-11-07T00:35:04.115Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Lalibela",
+      "pourquoi": "Classée à l’UNESCO, célèbre pour ses églises creusées à même le roc ; fait partie du circuit historique du nord avec Axoum et Gondar.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Addis-Abeba",
+      "pourquoi": "Capitale, présentée comme la porte d’entrée du voyage en Éthiopie.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Danakil",
+      "pourquoi": "L’un des temps forts du voyage, avec le volcan Erta Ale en activité quasi permanente ; les guides rappellent que ces environnements extrêmes demandent une préparation et un encadrement sérieux.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : incontournables en Éthiopie",
+      "url": "https://www.routard.com/guide_a_voir/ethiopie.htm"
+    },
+    {
+      "titre": "Partirou : visiter l’Éthiopie",
+      "url": "https://www.partirou.com/visiter/ethiopie/"
+    },
+    {
+      "titre": "Fairmoove : guide de voyage Éthiopie",
+      "url": "https://www.fairmoove.fr/guide-voyage/ethiopie"
+    },
+    {
+      "titre": "Voyageurs du Monde : Éthiopie",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/idees-voyage/grands-voyages-itinerants-autotour/ethiopie-30"
+    }
+  ]
+}

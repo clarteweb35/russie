@@ -1,0 +1,49 @@
+{
+  "slug": "nigeria",
+  "genere": "2026-11-07T00:36:22.757Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Lagos",
+      "pourquoi": "Souvent la porte d’entrée la plus intense du pays, à découvrir quartier par quartier.",
+      "a_voir": [
+        "Le National Museum, à Onikan",
+        "Le Lekki Conservation Centre"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Abuja",
+      "pourquoi": "Capitale à l’architecture planifiée ; une source conseille de faire appel à un guide local.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Calabar",
+      "pourquoi": "Respiration plus calme que Lagos, connue pour son héritage créole, sa cuisine et son carnaval de décembre ; la forêt du Cross River National Park est proche.",
+      "a_voir": [],
+      "conseil": "Avant tout déplacement hors de Lagos ou d’Abuja, une source recommande de vérifier les conseils aux voyageurs du ministère des Affaires étrangères et d’éviter les trajets de nuit."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Partirou : visiter le Nigéria",
+      "url": "https://www.partirou.com/visiter/nigeria/"
+    },
+    {
+      "titre": "Le Mag Voyage : que faire au Nigéria",
+      "url": "https://www.lemagvoyage.fr/nigeria/que-faire-nigeria/"
+    },
+    {
+      "titre": "Africa.com : guide de voyage Nigéria",
+      "url": "https://africa.com/travel-guide/nigeria-travel-guide"
+    },
+    {
+      "titre": "Audiala : destinations au Nigéria",
+      "url": "https://audiala.com/en/nigeria/"
+    }
+  ]
+}

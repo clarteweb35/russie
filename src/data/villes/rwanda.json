@@ -1,0 +1,52 @@
+{
+  "slug": "rwanda",
+  "genere": "2026-11-07T00:36:22.757Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Parc national des Volcans",
+      "pourquoi": "Point fort du pays pour la faune : gorilles de montagne, et singes dorés lors d’un trek complémentaire. Les permis sont payants et chers : vérifiez le tarif actuel avant de réserver.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Kigali",
+      "pourquoi": "Capitale ; plusieurs guides placent le Mémorial du génocide en tête des visites, avec les marchés locaux, les galeries d’art et la vie nocturne.",
+      "a_voir": [
+        "Le Mémorial du génocide"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Lac Kivu",
+      "pourquoi": "Lieu de détente ; un guide conseille au moins une nuit, idéalement deux. Les villes principales sur ses rives sont Rubavu, Karongi et Cyangugu.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Génération Voyage : 10 incontournables du Rwanda",
+      "url": "https://generationvoyage.fr/?p=354296"
+    },
+    {
+      "titre": "Le Mag Voyage : que faire au Rwanda",
+      "url": "https://www.lemagvoyage.fr/rwanda/que-faire-rwanda/"
+    },
+    {
+      "titre": "Evaneos : Rwanda, que voir",
+      "url": "https://www.evaneos.fr/rwanda/voyage/etape/"
+    },
+    {
+      "titre": "Où et quand : visiter le Rwanda",
+      "url": "https://www.ou-et-quand.net/ou-aller/rwanda/"
+    },
+    {
+      "titre": "Routard : voyage au Rwanda",
+      "url": "https://www.routard.com/fr/guide/afrique/rwanda"
+    }
+  ]
+}

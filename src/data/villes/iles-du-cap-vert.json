@@ -1,0 +1,55 @@
+{
+  "slug": "iles-du-cap-vert",
+  "genere": "2026-11-07T00:35:04.115Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Santo Antão",
+      "pourquoi": "L’île coup de cœur des randonneurs : les sentiers de la vallée de Paul et la caldeira de Cova sont les grands classiques.",
+      "a_voir": [
+        "La vallée de Paul",
+        "La caldeira de Cova"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Praia",
+      "pourquoi": "Capitale et plus grande ville du pays, sur l’île de Santiago ; Cidade Velha, ancienne ville coloniale, est proche.",
+      "a_voir": [
+        "Cidade Velha"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Sal et Boa Vista",
+      "pourquoi": "Les îles les plus accessibles pour le soleil, les grandes plages et un hébergement confortable ; kitesurf et windsurf à Santa Maria (Sal), dunes du désert de Viana et plage de Santa Monica à Boa Vista.",
+      "a_voir": [],
+      "conseil": "Selon l’une des sources, pour un premier voyage, le duo São Vicente–Santo Antão associe culture et marche, tandis que Sal ou Boa Vista conviennent à un séjour reposant."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Evaneos : Cap-Vert, que voir",
+      "url": "https://www.evaneos.fr/cap-vert/voyage/etape/"
+    },
+    {
+      "titre": "Partirou : visiter le Cap-Vert",
+      "url": "https://www.partirou.com/visiter/cap-vert/"
+    },
+    {
+      "titre": "WeRoad : que voir au Cap-Vert",
+      "url": "https://www.weroad.fr/blog/que-voir-au-cap-vert-les-incontournables-entre-iles-plages-et-culture-creole"
+    },
+    {
+      "titre": "Lonely Planet : Cap-Vert, quelle île choisir",
+      "url": "https://www.lonelyplanet.fr/article/cap-vert-quelle-ile-choisir"
+    },
+    {
+      "titre": "Routard : visiter Praia",
+      "url": "https://www.routard.com/guide_voyage_lieu/5602-praia.htm"
+    }
+  ]
+}

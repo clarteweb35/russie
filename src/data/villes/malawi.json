@@ -1,0 +1,46 @@
+{
+  "slug": "malawi",
+  "genere": "2026-11-07T00:36:22.757Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Lac Malawi",
+      "pourquoi": "Point fort du pays : inscrit au patrimoine mondial de l’UNESCO, long d’environ 587 km, avec de nombreuses baies, plages et îles ; Cape Maclear et l’île de Mumbo comptent parmi ses endroits paradisiaques.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Lilongwe",
+      "pourquoi": "Capitale peu connue, présentée par Voyageurs du Monde comme une escale citadine détendue.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Parc national de Liwonde",
+      "pourquoi": "Traversé par la rivière Shire, l’un des meilleurs endroits du pays pour observer la faune.",
+      "a_voir": [],
+      "conseil": "Evaneos indique que la meilleure saison s’étend de mai à septembre."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Lonely Planet : Malawi, les 10 plus beaux endroits",
+      "url": "https://www.lonelyplanet.fr/article/malawi-les-10-plus-beaux-endroits-visiter"
+    },
+    {
+      "titre": "Lonely Planet : que faire au Malawi",
+      "url": "https://www.lonelyplanet.fr/destinations/afrique/malawi/que-faire"
+    },
+    {
+      "titre": "Evaneos : Malawi",
+      "url": "https://www.evaneos.fr/malawi/voyage/"
+    },
+    {
+      "titre": "Voyageurs du Monde : partir au Malawi avec un guide",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyage-malawi-thyolo-plateau-de-zomba-parc-national-du-liwonde-lac-malawi-lilongwe/partir-au-malawi-avec-un-guide-safari-plages-rencontres/pfi4788"
+    }
+  ]
+}

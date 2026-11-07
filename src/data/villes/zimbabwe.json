@@ -1,0 +1,50 @@
+{
+  "slug": "zimbabwe",
+  "genere": "2026-11-07T00:35:04.115Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Chutes Victoria",
+      "pourquoi": "Présentées comme le cœur touristique du pays ; les hautes eaux, en mars-avril, offrent brouillard d’eau et arcs-en-ciel. La ville est surnommée « capitale de l’aventure ».",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Harare",
+      "pourquoi": "Capitale du pays. Les sources consultées ne la décrivent pas : vérifiez ailleurs avant d’en faire une étape.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Great Zimbabwe",
+      "pourquoi": "Site classé au patrimoine mondial de l’UNESCO, présenté comme incontournable ; une légende veut que la reine de Saba y ait résidé.",
+      "a_voir": [],
+      "conseil": "Une source indique que la haute saison correspond à la saison sèche, de mai à octobre."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Go2Africa : meilleurs endroits à visiter au Zimbabwe",
+      "url": "https://www.go2africa.com/fr/destinations/zimbabwe/ou-aller"
+    },
+    {
+      "titre": "Génération Voyage : 8 plus beaux endroits du Zimbabwe",
+      "url": "https://generationvoyage.fr/?p=98991"
+    },
+    {
+      "titre": "Voyageurs du Monde : Zimbabwe, à voir à faire",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/zimbabwe/things-to-do/"
+    },
+    {
+      "titre": "Bouger Voyager : que voir au Zimbabwe",
+      "url": "https://www.bouger-voyager.com/que-voir-au-zimbabwe/"
+    },
+    {
+      "titre": "Partirou : visiter le Zimbabwe",
+      "url": "https://www.partirou.com/visiter/zimbabwe/"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "slug": "pakistan",
+  "genere": "2026-11-07T00:35:04.115Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Lahore",
+      "pourquoi": "Ville animée, décrite comme la capitale historique des empires moghol et sikh, avec ses jardins moghols et sa gastronomie.",
+      "a_voir": [
+        "Le fort de Lahore",
+        "La mosquée Badshahi, l’une des plus grandes au monde"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Islamabad",
+      "pourquoi": "Capitale du pays ; un itinéraire type la combine avec Lahore et Hunza. Les sources consultées la décrivent peu.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Skardu",
+      "pourquoi": "Base arrière de tout le Karakoram, d’où partent les treks vers le K2, le Broad Peak et les Gasherbrum.",
+      "a_voir": [],
+      "conseil": "Wildtrips recommande d’y aller de juin à septembre. Les sources consultées ne traitent pas des conditions de sécurité : consultez les conseils aux voyageurs du ministère avant tout projet de voyage."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Génération Voyage : 10 incontournables du Pakistan",
+      "url": "https://generationvoyage.fr/?p=378868"
+    },
+    {
+      "titre": "Partirou : visiter le Pakistan",
+      "url": "https://www.partirou.com/visiter/pakistan/"
+    },
+    {
+      "titre": "Partirou : le nord du Pakistan",
+      "url": "https://www.partirou.com/visiter/pakistan/nord/"
+    },
+    {
+      "titre": "Wildtrips : Skardu, que visiter",
+      "url": "https://www.wildtrips.net/lieux/Skardu-Pakistan-que-visiter.htm"
+    }
+  ]
+}

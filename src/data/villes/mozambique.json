@@ -1,0 +1,50 @@
+{
+  "slug": "mozambique",
+  "genere": "2026-11-07T00:35:04.115Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Île de Mozambique",
+      "pourquoi": "Ville de pierre de culture swahilie et portugaise, classée parmi les destinations à ne pas manquer.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Maputo",
+      "pourquoi": "Capitale animée, avec ses rues art déco, son marché aux poissons et ses cafés d’esprit portugais ; un article la conseille plutôt comme point de départ d’un road trip vers le nord que comme destination principale.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Archipel de Bazaruto",
+      "pourquoi": "Cinq îles tropicales, dont Benguerra et Bazaruto sont les plus grandes ; Vilanculos en est la porte d’entrée, et l’on y fait des balades en boutre traditionnel.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Voyageurs du Monde : Mozambique, à voir à faire",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/mozambique/things-to-do/"
+    },
+    {
+      "titre": "Routard : voyage au Mozambique",
+      "url": "https://www.routard.com/fr/guide/afrique/mozambique"
+    },
+    {
+      "titre": "Génération Voyage : 9 incontournables du Mozambique",
+      "url": "https://generationvoyage.fr/visiter-mozambique-faire-voir/"
+    },
+    {
+      "titre": "Evaneos : Mozambique, que voir",
+      "url": "https://www.evaneos.fr/mozambique/voyage/etape/"
+    },
+    {
+      "titre": "Go2Africa : guide de voyage au Mozambique",
+      "url": "https://www.go2africa.com/fr/blog-de-voyage-africain/guide-de-voyage-ultime-pour-des-vacances-au-mozambique"
+    }
+  ]
+}

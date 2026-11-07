@@ -1,0 +1,55 @@
+{
+  "slug": "australie",
+  "genere": "2026-11-07T00:35:04.115Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Sydney",
+      "pourquoi": "Ville la plus plébiscitée par les voyageurs sur un site de classement ; l’Opéra, la plage de Bondi et le ferry vers Manly sont cités.",
+      "a_voir": [
+        "L’Opéra de Sydney",
+        "La plage de Bondi",
+        "Le ferry vers Manly"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Canberra",
+      "pourquoi": "Capitale fédérale et siège du Parlement, présentée comme discrète mais captivante.",
+      "a_voir": [
+        "Le Parlement, inauguré en 1988"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Uluru",
+      "pourquoi": "Au cœur de l’Outback, le rocher porte aussi le nom d’Ayers Rock ; le parc national d’Uluru-Kata Tjuta est souvent associé à une visite culturelle.",
+      "a_voir": [
+        "Uluru",
+        "Kata Tjuta"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Voyageurs du Monde : Australie, à voir à faire",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/australie/things-to-do/"
+    },
+    {
+      "titre": "Cityzeum : carte touristique d’Australie",
+      "url": "https://www.cityzeum.com/carte-touristique/australie"
+    },
+    {
+      "titre": "MétéoMédia : cinq villes australiennes à visiter",
+      "url": "https://www.meteomedia.com/fr/nouvelles/art-de-vivre/tourisme/cinq-villes-australiennes-que-vous-devriez-visiter?period=3"
+    },
+    {
+      "titre": "Avygeo : guide Australie",
+      "url": "https://www.avygeo.com/fr/guide/oceanie/australie"
+    }
+  ]
+}

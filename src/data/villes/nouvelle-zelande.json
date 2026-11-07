@@ -1,0 +1,45 @@
+{
+  "slug": "nouvelle-zelande",
+  "genere": "2026-11-07T00:35:04.115Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Milford Sound",
+      "pourquoi": "Fjord emblématique du parc national de Fiordland, sur la côte sud-ouest de l’île du Sud ; le Milford Track, de 53,5 km, se parcourt en quatre jours, et une promenade facile de 30 minutes longe le fjord.",
+      "a_voir": [
+        "Le Milford Track",
+        "La promenade de 30 minutes le long du fjord"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Auckland",
+      "pourquoi": "Plus grande ville du pays, mêlant culture, nature et aventure ; un itinéraire type prévoit une journée de dégustation de vin sur l’île de Waiheke.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Rotorua",
+      "pourquoi": "Destination incontournable, célèbre pour ses sources chaudes naturelles, son activité géothermique et sa culture maorie.",
+      "a_voir": [],
+      "conseil": "Selon Tourlane, les périodes plus calmes sont le printemps (octobre-novembre) et l’automne (avril à juin)."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Tourlane : Nouvelle-Zélande",
+      "url": "https://www.tourlane.fr/oceanie/nouvelle-zelande"
+    },
+    {
+      "titre": "Routard : visiter Milford Sound",
+      "url": "https://www.routard.com/guide_voyage_lieu/6333-milford_sound.htm"
+    },
+    {
+      "titre": "RACV : meilleurs endroits à visiter en Nouvelle-Zélande",
+      "url": "https://www.racv.com.au/royalauto/travel/international/best-places-to-visit-things-to-do-new-zealand.html"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "slug": "botswana",
+  "genere": "2026-11-07T00:35:04.115Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Delta de l’Okavango",
+      "pourquoi": "Le grand classique : présenté comme le plus grand delta intérieur du monde, découvert en pirogue traditionnelle (mokoro) ou en safari aérien.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Maun",
+      "pourquoi": "Porte d’entrée habituelle du delta ; les sources la décrivent peu.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Makgadikgadi",
+      "pourquoi": "Immenses salines, vestiges d’un superlac qui couvrait une superficie plus grande que la Suisse ; flamants roses, migrations de zèbres et très gros baobabs à proximité.",
+      "a_voir": [],
+      "conseil": "Un guide recommande au moins 13 jours pour couvrir les principaux sites du pays."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Cityzeum : Botswana",
+      "url": "https://www.cityzeum.com/tourisme/botswana"
+    },
+    {
+      "titre": "Le Petit Journal : le Botswana ou la vie sauvage",
+      "url": "https://lepetitjournal.com/johannesburg/le-botswana-ou-la-vie-sauvage-223093"
+    },
+    {
+      "titre": "Voyageurs du Monde : les plus beaux paysages du Botswana",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/magazine-voyage/les-plus-beaux-paysages-du-botswana"
+    },
+    {
+      "titre": "Où et quand : visiter le Botswana",
+      "url": "https://www.ou-et-quand.net/ou-aller/botswana/"
+    },
+    {
+      "titre": "Génération Voyage : 11 plus beaux endroits du Botswana",
+      "url": "https://generationvoyage.fr/endroits-visiter-botswana/"
+    }
+  ]
+}

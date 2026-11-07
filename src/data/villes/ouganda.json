@@ -1,0 +1,46 @@
+{
+  "slug": "ouganda",
+  "genere": "2026-11-07T00:36:22.757Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Forêt impénétrable de Bwindi",
+      "pourquoi": "Permet des treks à la rencontre des gorilles de montagne ; un article la présente comme le but ultime des voyageurs en Ouganda.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Kampala",
+      "pourquoi": "Capitale, point de passage, décrite comme un visage authentique de l’Ouganda contemporain ; les circuits prévoient souvent le musée national, les marchés locaux et le sanctuaire des martyrs.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Murchison Falls",
+      "pourquoi": "Plus vaste parc national du pays, réputé pour ses chutes et ses croisières sur le Nil ; près de 500 espèces d’oiseaux et des chimpanzés.",
+      "a_voir": [],
+      "conseil": "Une source indique que le meilleur moment va de décembre à mars (saison sèche) ; il n’existe pas de vol direct depuis la France."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Evaneos : Ouganda, que voir",
+      "url": "https://www.evaneos.fr/ouganda/voyage/etape/"
+    },
+    {
+      "titre": "Voyageurs du Monde : Ouganda en avion-taxi",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyage-ouganda-murchison-falls-queen-elizabeth-np-bwindi-jinja/ouganda-en-avion-taxi-murchison-falls-queen-elizabeth-np-bwindi/pfi6800"
+    },
+    {
+      "titre": "OK Voyage : que voir et faire en Ouganda",
+      "url": "https://www.okvoyage.com/post/ouganda-incontournables/"
+    },
+    {
+      "titre": "Go2Africa : où aller en Ouganda",
+      "url": "https://www.go2africa.com/fr/destinations/ouganda/ou-aller"
+    }
+  ]
+}

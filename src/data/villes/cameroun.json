@@ -1,0 +1,57 @@
+{
+  "slug": "cameroun",
+  "genere": "2026-11-07T00:36:22.757Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Kribi",
+      "pourquoi": "Plages de sable fin et poisson braisé au bord de l’eau, à environ 180 km de Douala.",
+      "a_voir": [
+        "Les chutes de la Lobé",
+        "L’île aux chimpanzés de Pongo-Songo"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Yaoundé",
+      "pourquoi": "Capitale perchée sur sept collines, avec des musées comme le Musée national.",
+      "a_voir": [
+        "Le Musée national"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Foumban",
+      "pourquoi": "Berceau du peuple Bamoun, ville d’art et d’artisanat, avec le palais du sultan.",
+      "a_voir": [
+        "Le palais du sultan"
+      ],
+      "conseil": "Les sources conseillent les transports organisés pour les longues distances ; vérifiez les conseils aux voyageurs du ministère avant de partir."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : incontournables au Cameroun",
+      "url": "https://www.routard.com/guide_a_voir/cameroun.htm"
+    },
+    {
+      "titre": "Partirou : visiter le Cameroun",
+      "url": "https://www.partirou.com/visiter/cameroun/"
+    },
+    {
+      "titre": "Evaneos : Cameroun, que voir",
+      "url": "https://www.evaneos.fr/cameroun/voyage/etape/"
+    },
+    {
+      "titre": "Bouger Voyager : que faire au Cameroun",
+      "url": "https://www.bouger-voyager.com/que-faire-au-cameroun/"
+    },
+    {
+      "titre": "Le Mag Voyage : Cameroun, choses à voir et à faire",
+      "url": "https://www.lemagvoyage.fr/cameroun-choses-a-voir-faire-douala-yaounde-kribi-nord-montagnes-parcs/"
+    }
+  ]
+}

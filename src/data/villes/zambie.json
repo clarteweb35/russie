@@ -1,0 +1,50 @@
+{
+  "slug": "zambie",
+  "genere": "2026-11-07T00:35:04.115Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Chutes Victoria (Livingstone)",
+      "pourquoi": "Décrites comme le spectacle le plus majestueux d’Afrique australe ; Livingstone, ancienne capitale, sert de camp de base via le parc Mosi-oa-Tunya.",
+      "a_voir": [],
+      "conseil": "Un site conseille d’arriver tôt le matin pour éviter la chaleur."
+    },
+    {
+      "critere": "pratique",
+      "nom": "Lusaka",
+      "pourquoi": "Capitale, présentée comme le point de départ pour découvrir la Zambie urbaine, avec cafés, galeries d’art et restaurants.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "South Luangwa",
+      "pourquoi": "Réputé pour sa faune : éléphants, hippopotames, girafes de Thornicroft et forte concentration de léopards le long de la rivière ; berceau du safari à pied.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : voyage en Zambie",
+      "url": "https://www.routard.com/fr/guide/afrique/zambie"
+    },
+    {
+      "titre": "Go2Africa : meilleurs endroits à visiter en Zambie",
+      "url": "https://www.go2africa.com/fr/destinations/zambie/ou-aller"
+    },
+    {
+      "titre": "Le Mag Voyage : que faire en Zambie",
+      "url": "https://www.lemagvoyage.fr/que-faire-zambie/"
+    },
+    {
+      "titre": "Génération Voyage : 10 incontournables de Zambie",
+      "url": "https://generationvoyage.fr/visiter-zambie-faire-voir/"
+    },
+    {
+      "titre": "Voyageurs du Monde : Zambie, à voir à faire",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/zambie/things-to-do/"
+    }
+  ]
+}
