@@ -1,0 +1,48 @@
+{
+  "slug": "saint-christophe-et-nieves",
+  "genere": "2026-11-07T00:38:48.773Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Brimstone Hill",
+      "pourquoi": "Forteresse classée à l’UNESCO, l’un des monuments militaires les mieux conservés des Amériques ; environ 30 minutes de route depuis Basseterre, visite de 3 à 4 heures.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Basseterre",
+      "pourquoi": "Porte d’entrée du pays, à l’identité créole et à l’héritage britannique.",
+      "a_voir": [
+        "La place de l’Indépendance",
+        "Le Memorial Berkeley"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Nevis (Charlestown)",
+      "pourquoi": "La capitale de Nevis mérite au moins une demi-journée : front de mer, maisons géorgiennes et Museum of Nevis History ; Alexander Hamilton y est né. Pinney’s Beach est citée parmi les incontournables.",
+      "a_voir": [
+        "Le Museum of Nevis History",
+        "Pinney’s Beach"
+      ],
+      "conseil": "La haute saison va de décembre à avril ; de juillet à novembre, c’est la saison des pluies et des ouragans."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Le Mag Voyage : que faire à Saint-Christophe-et-Niévès",
+      "url": "https://www.lemagvoyage.fr/saint-christophe-et-nieves/que-faire-saint-christophe-et-nieves"
+    },
+    {
+      "titre": "Cityzeum : parc national de la forteresse de Brimstone Hill",
+      "url": "https://www.cityzeum.com/parc-national-de-la-forteresse-de-brimstone-hill"
+    },
+    {
+      "titre": "Génération Voyage : Saint-Christophe-et-Niévès",
+      "url": "https://generationvoyage.fr/saint-christophe-et-nieves-p351840/"
+    }
+  ]
+}

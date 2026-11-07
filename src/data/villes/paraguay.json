@@ -1,0 +1,53 @@
+{
+  "slug": "paraguay",
+  "genere": "2026-11-07T00:38:48.773Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Missions jésuites de Trinidad et de Jesús",
+      "pourquoi": "Les deux sont au patrimoine mondial de l’UNESCO : Trinidad, près d’Encarnación, est l’une des réductions les mieux conservées du pays ; Jesús, à une douzaine de kilomètres au nord, est presque intacte, sa construction ayant été interrompue en 1767.",
+      "a_voir": [
+        "La mission de Trinidad",
+        "La mission de Jesús"
+      ],
+      "conseil": "Un billet unique donne généralement accès aux trois principales missions ; pour Trinidad, le spectacle nocturne son et lumière est conseillé."
+    },
+    {
+      "critere": "pratique",
+      "nom": "Asunción",
+      "pourquoi": "Capitale, surnommée la « Mère des villes », fondée au XVIe siècle ; point de départ logique d’un premier voyage, elle concentre une grande part du patrimoine historique.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Encarnación",
+      "pourquoi": "Base pour explorer le sud, connue pour ses plages fluviales (Añá Cuá, Ñatípa) et son carnaval de janvier-février.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Lonely Planet : les missions jésuites du Paraguay",
+      "url": "https://www.lonelyplanet.fr/destinations/amerique/paraguay/que-faire/missions-jesuites"
+    },
+    {
+      "titre": "Routard : voyage au Paraguay",
+      "url": "https://www.routard.com/fr/guide/ameriques/paraguay"
+    },
+    {
+      "titre": "Globe Trotting : le Paraguay, que faire et que voir",
+      "url": "https://www.globe-trotting.com/post/le-paraguay-que-faire-et-que-voir"
+    },
+    {
+      "titre": "Génération Voyage : 9 plus beaux endroits du Paraguay",
+      "url": "https://generationvoyage.fr/endroits-visiter-paraguay/"
+    },
+    {
+      "titre": "OK Voyage : visiter le Paraguay",
+      "url": "https://www.okvoyage.com/post/paraguay/"
+    }
+  ]
+}

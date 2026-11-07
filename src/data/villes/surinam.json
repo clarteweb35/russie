@@ -1,0 +1,49 @@
+{
+  "slug": "surinam",
+  "genere": "2026-11-07T00:38:48.773Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Brownsberg",
+      "pourquoi": "Parc naturel à environ 130 km au sud de Paramaribo, géré par la fondation STINASU ; randonnées et cascades, singes hurleurs, toucans et plus de 300 espèces d’oiseaux. Compter une journée, ou une nuit sur place.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Paramaribo",
+      "pourquoi": "Capitale animée, présentée par un guide comme la plus remarquable des Guyanes ; fort Zeelandia, temple hindou et architecture coloniale.",
+      "a_voir": [
+        "Le fort Zeelandia",
+        "Le marché central"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Galibi",
+      "pourquoi": "Réserve connue pour les tortues marines ; les excursions partent de Paramaribo, ou d’Albina pour les villages galibis.",
+      "a_voir": [],
+      "conseil": "Selon un guide français, la meilleure période va de février à avril et d’août à novembre (saison sèche)."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : incontournables au Surinam",
+      "url": "https://www.routard.com/guide_a_voir/surinam.htm"
+    },
+    {
+      "titre": "Routard : itinéraires conseillés au Surinam",
+      "url": "https://www.routard.com/fr/guide/a/itineraires-conseilles/ameriques/surinam"
+    },
+    {
+      "titre": "Routard : la côte du Surinam",
+      "url": "https://www.routard.com/fr/guide/ameriques/surinam/cote"
+    },
+    {
+      "titre": "BucketListly : deux semaines au Suriname",
+      "url": "https://www.bucketlistly.blog/posts/suriname-itinerary"
+    }
+  ]
+}

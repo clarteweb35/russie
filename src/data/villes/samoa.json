@@ -1,0 +1,52 @@
+{
+  "slug": "samoa",
+  "genere": "2026-11-07T00:39:54.252Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Savai’i",
+      "pourquoi": "Île largement inhabitée et sauvage, au paysage et au littoral impressionnants ; le Routard cite le cap Mulinu’u et les trous soufflants d’Alofaaga. Le ferry de Mulifanua à Saleloga prend environ une heure et demie.",
+      "a_voir": [
+        "Le cap Mulinu’u",
+        "Les trous soufflants d’Alofaaga"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Apia (Upolu)",
+      "pourquoi": "Capitale, sur Upolu, île la plus peuplée de l’archipel et siège de l’aéroport international ; le Routard cite le Museum of Samoa et la cathédrale Mulivai (1905).",
+      "a_voir": [
+        "Le Museum of Samoa",
+        "La cathédrale Mulivai"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Lalomanu",
+      "pourquoi": "Destination phare de la côte sud-est d’Upolu, où le Routard recommande de passer un à deux jours dans les fale.",
+      "a_voir": [],
+      "conseil": "Le Routard recommande la saison sèche, de mai à octobre."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : Upolu",
+      "url": "https://www.routard.com/fr/guide/oceanie/samoa/upolu"
+    },
+    {
+      "titre": "Routard : voyage aux Samoa",
+      "url": "https://www.routard.com/fr/guide/oceanie/samoa"
+    },
+    {
+      "titre": "Routard : itinéraires conseillés aux Samoa",
+      "url": "https://www.routard.com/fr/guide/a/itineraires-conseilles/oceanie/samoa"
+    },
+    {
+      "titre": "Voyageurs du Monde : guide de voyage Samoa",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/samoa"
+    }
+  ]
+}

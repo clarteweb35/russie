@@ -1,0 +1,53 @@
+{
+  "slug": "sainte-lucie",
+  "genere": "2026-11-07T00:38:48.773Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Les Pitons (Soufrière)",
+      "pourquoi": "Aiguilles volcaniques au sud de Soufrière, classées à l’UNESCO ; le secteur du sud-ouest est présenté comme le plus spectaculaire de l’île.",
+      "a_voir": [
+        "Le Tet Paul Nature Trail, belle vue sur les Pitons",
+        "Les Sulphur Springs, sources chaudes et fumerolles"
+      ],
+      "conseil": "La montée du Gros Piton exige d’être accompagné par un guide certifié."
+    },
+    {
+      "critere": "pratique",
+      "nom": "Castries",
+      "pourquoi": "Capitale et porte d’entrée urbaine, avec son port de croisière et son marché couvert ; Morne Fortune domine la ville.",
+      "a_voir": [],
+      "conseil": "Il n’existe pas de vol direct Paris–Castries (escale à Fort-de-France) ; la saison sèche, de décembre à mai, est généralement considérée comme la plus agréable."
+    },
+    {
+      "critere": "diversite",
+      "nom": "Marigot Bay",
+      "pourquoi": "Présentée comme l’un des plus beaux mouillages de l’arc antillais.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : côte sud de Sainte-Lucie",
+      "url": "https://www.routard.com/fr/guide/ameriques/sainte-lucie/cote-sud"
+    },
+    {
+      "titre": "Routard : Soufrière",
+      "url": "https://www.routard.com/fr/guide/ameriques/sainte-lucie/cote-ouest/soufriere"
+    },
+    {
+      "titre": "Le Mag Voyage : que faire à Sainte-Lucie",
+      "url": "https://www.lemagvoyage.fr/sainte-lucie/que-faire-sainte-lucie"
+    },
+    {
+      "titre": "Air Caraïbes : visites à Sainte-Lucie",
+      "url": "https://www.aircaraibes.com/destinations/sainte-lucie/visites"
+    },
+    {
+      "titre": "Génération Voyage : guide touristique Sainte-Lucie",
+      "url": "https://generationvoyage.fr/?p=72836"
+    }
+  ]
+}

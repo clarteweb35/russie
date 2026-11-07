@@ -1,0 +1,45 @@
+{
+  "slug": "salvador",
+  "genere": "2026-11-07T00:38:48.773Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Suchitoto",
+      "pourquoi": "Étape clé, au centre historique coloré et à la vie culturelle animée ; une journée suffit pour les principaux attraits, une nuit permet d’en profiter davantage.",
+      "a_voir": [
+        "Le site archéologique de Cihuatán",
+        "La cascade de Los Tercios, parfois visitée avec un accompagnateur"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "San Salvador",
+      "pourquoi": "Capitale du pays. Les sources consultées ne la décrivent pas : vérifiez ailleurs avant d’en faire une étape.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Joya de Cerén",
+      "pourquoi": "Site classé au patrimoine mondial de l’UNESCO ; les vestiges sont modestes à l’œil nu, et un guide ou de bonnes explications sur place sont conseillés.",
+      "a_voir": [],
+      "conseil": "La saison sèche, de novembre à avril, est la meilleure période, selon Evaneos."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : visiter Suchitoto",
+      "url": "https://www.routard.com/fr/guide/ameriques/salvador/suchitoto"
+    },
+    {
+      "titre": "Le Mag Voyage : que faire au Salvador",
+      "url": "https://www.lemagvoyage.fr/salvador/que-faire-au-salvador/"
+    },
+    {
+      "titre": "Evaneos : Salvador, que voir",
+      "url": "https://www.evaneos.fr/salvador/voyage/etape/"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "slug": "timor-oriental",
+  "genere": "2026-11-07T00:39:54.252Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Atauro",
+      "pourquoi": "Île à une trentaine de kilomètres au nord de Dili, accessible en bateau rapide ou en ferry, réputée pour ses récifs et la diversité de ses poissons : meilleur site pour la plongée et le snorkeling.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Dili",
+      "pourquoi": "Capitale ; la statue du Cristo Rei domine l’extrémité orientale de la baie, et les sites de mémoire, comme le cimetière de Santa Cruz, complètent la visite.",
+      "a_voir": [
+        "Le Cristo Rei",
+        "Le cimetière de Santa Cruz"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Mont Ramelau",
+      "pourquoi": "Point culminant du pays, à 2 963 m ; le lever du soleil au sommet est l’attrait principal, avec un départ généralement depuis Hatobuilico.",
+      "a_voir": [],
+      "conseil": "Il vaut mieux éviter la saison des pluies, de décembre à avril."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Le Mag Voyage : que faire au Timor-Leste",
+      "url": "https://www.lemagvoyage.fr/que-faire-timor-leste/"
+    },
+    {
+      "titre": "Avygeo : guide Timor oriental",
+      "url": "https://www.avygeo.com/fr/guide/asie/timor_oriental"
+    },
+    {
+      "titre": "Timor-Leste : lieux populaires à visiter",
+      "url": "https://www.timorleste.tl/?p=5316"
+    },
+    {
+      "titre": "The Crazy Tourist : 15 meilleurs lieux du Timor-Leste",
+      "url": "https://www.thecrazytourist.com/15-best-places-visit-east-timor-timor-leste/"
+    }
+  ]
+}

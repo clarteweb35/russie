@@ -1,0 +1,49 @@
+{
+  "slug": "antigua-et-barbuda",
+  "genere": "2026-11-07T00:38:48.773Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "English Harbour et Nelson’s Dockyard",
+      "pourquoi": "Site phare de l’île, classé à l’UNESCO et le plus visité du pays ; la vue sur English Harbour et Falmouth Harbour depuis Shirley Heights est particulièrement appréciée, notamment le dimanche soir.",
+      "a_voir": [
+        "Nelson’s Dockyard",
+        "Shirley Heights"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "St. John’s",
+      "pourquoi": "Capitale et principale ville portuaire, avec un marché animé, la cathédrale et le Musée d’Antigua-et-Barbuda ; le fort James, du XVIIIe siècle, offre un bon point de vue au coucher du soleil.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Barbuda",
+      "pourquoi": "Expérience plus lente et moins développée qu’Antigua, avec beaucoup moins d’hôtels et de pensions ; ses lagunes sont mises en avant. Les sources la détaillent peu.",
+      "a_voir": [],
+      "conseil": "Les sources recommandent au moins cinq jours sur Antigua pour un premier séjour."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : visiter Antigua",
+      "url": "https://www.routard.com/fr/guide/ameriques/antigua-et-barbuda/antigua"
+    },
+    {
+      "titre": "Cityzeum : Antigua-et-Barbuda",
+      "url": "https://www.cityzeum.com/tourisme/antigua-et-barbuda"
+    },
+    {
+      "titre": "Cestee : Antigua-et-Barbuda, 20 lieux à voir",
+      "url": "https://www.cestee.fr/destination/antigua-et-barbuda/visiter"
+    },
+    {
+      "titre": "Cyril Jarnias : sites touristiques d’Antigua-et-Barbuda",
+      "url": "https://www.cyriljarnias.com/?p=36282"
+    }
+  ]
+}

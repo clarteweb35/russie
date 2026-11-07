@@ -1,0 +1,51 @@
+{
+  "slug": "vanuatu",
+  "genere": "2026-11-07T00:39:54.252Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Tanna et le volcan Yasur",
+      "pourquoi": "Point fort le plus souvent cité : Voyageurs du Monde présente le Yasur comme le volcan le plus accessible du monde ; l’île est aussi le refuge de traditions tribales et de villages traditionnels.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Port-Vila (Efate)",
+      "pourquoi": "Capitale et porte d’entrée du pays ; le Vanuatu Cultural Centre est présenté comme la meilleure introduction aux cultures de l’archipel.",
+      "a_voir": [
+        "Le Vanuatu Cultural Centre"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Espiritu Santo",
+      "pourquoi": "Réputée pour la plongée et ses trous bleus, entourée de lagons ; Luganville, deuxième ville du pays, est liée à la présence américaine pendant la Seconde Guerre mondiale.",
+      "a_voir": [
+        "Le Coolidge, épave de la Seconde Guerre mondiale",
+        "Millennium Cave"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Toploc : 10 choses à voir au Vanuatu",
+      "url": "https://toploc.com/blog/oceanie/visiter-le-vanuatu"
+    },
+    {
+      "titre": "Evaneos : Vanuatu, que voir",
+      "url": "https://www.evaneos.fr/vanuatu/voyage/etape/"
+    },
+    {
+      "titre": "Voyageurs du Monde : guide de voyage Vanuatu",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/vanuatu"
+    },
+    {
+      "titre": "Le Mag Voyage : que faire au Vanuatu",
+      "url": "https://www.lemagvoyage.fr/vanuatu/que-faire-vanuatu/"
+    }
+  ]
+}

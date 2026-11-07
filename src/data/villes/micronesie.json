@@ -1,0 +1,42 @@
+{
+  "slug": "micronesie",
+  "genere": "2026-11-07T00:39:54.252Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Nan Madol (Pohnpei)",
+      "pourquoi": "Décrit comme la « Venise du Pacifique perdue dans la jungle », ensemble de plus de 90 îlots artificiels.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Palikir",
+      "pourquoi": "Capitale du pays. Les sources consultées ne la décrivent pas ; elles signalent que les vols entre les États fédérés sont rares et chers.",
+      "a_voir": [],
+      "conseil": "Un guide suggère qu’une dizaine de jours suffisent pour visiter de nombreux sites à Yap, Chuuk et Pohnpei."
+    },
+    {
+      "critere": "diversite",
+      "nom": "Chuuk",
+      "pourquoi": "Paradis des plongeurs, avec des épaves de la Seconde Guerre mondiale dans un lagon où l’aviation américaine a coulé l’essentiel de la flotte japonaise.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : voyage en Micronésie",
+      "url": "https://www.routard.com/fr/guide/oceanie/micronesie"
+    },
+    {
+      "titre": "Routard : incontournables en Micronésie",
+      "url": "https://www.routard.com/fr/guide/top/oceanie/micronesie"
+    },
+    {
+      "titre": "TravelDojo : États fédérés de Micronésie",
+      "url": "https://www.traveldojo.com/old-world/20699"
+    }
+  ]
+}

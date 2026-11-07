@@ -1,0 +1,52 @@
+{
+  "slug": "fidji",
+  "genere": "2026-11-07T00:39:54.252Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Îles Yasawa",
+      "pourquoi": "Archipel volcanique au nord, plus sauvage et isolé que les Mamanuca ; un guide conseille de prévoir plusieurs nuits pour voir les raies manta.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Nadi",
+      "pourquoi": "Son aéroport international est la porte d’entrée de la plupart des visiteurs, et la ville est le point de départ de nombreuses excursions ; les Mamanuca sont accessibles en ferry rapide depuis Viti Levu.",
+      "a_voir": [
+        "Le Jardin du Géant endormi"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Levuka",
+      "pourquoi": "Ancienne capitale des Fidji, sur l’île d’Ovalau, inscrite au patrimoine mondial de l’UNESCO. Suva, la capitale actuelle, est le centre politique et économique.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : Viti Levu",
+      "url": "https://www.routard.com/fr/guide/oceanie/iles-fidji/viti-levu"
+    },
+    {
+      "titre": "Où et quand : visiter les îles Fidji",
+      "url": "https://www.ou-et-quand.net/ou-aller/iles-fidji/"
+    },
+    {
+      "titre": "Le Mag Voyage : que faire aux Fidji",
+      "url": "https://www.lemagvoyage.fr/fidji/que-faire-fidji/"
+    },
+    {
+      "titre": "Evaneos : îles Fidji, que voir",
+      "url": "https://www.evaneos.fr/iles-fidji/voyage/etape/"
+    },
+    {
+      "titre": "Voyageurs du Monde : Fidji, l’autre paradis",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/magazine-voyage/fidji-l-autre-paradis"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "slug": "iles-salomon",
+  "genere": "2026-11-07T00:39:54.252Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Lagon de Marovo",
+      "pourquoi": "Présenté comme le spot phare pour la plongée de récif, réputé pour ses coraux mous et sa faune.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Honiara (Guadalcanal)",
+      "pourquoi": "Capitale, sur Guadalcanal, dont l’aéroport international reçoit des vols directs depuis Brisbane et Auckland.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Iron Bottom Sound",
+      "pourquoi": "Détroit au nord de Guadalcanal, son nom venant des quelque 1 400 avions et de la centaine d’épaves de la Seconde Guerre mondiale qui s’y trouvent ; quelques épaves sont plongeables depuis la côte, près d’Honiara.",
+      "a_voir": [],
+      "conseil": "Selon une source, la plongée est bonne toute l’année ; la saison humide va de novembre à avril, avec des pluies légères."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Lonely Planet : les îles Salomon, hors des sentiers battus",
+      "url": "https://www.lonelyplanet.fr/article/les-iles-salomon-hors-des-sentiers-battus-en-oceanie"
+    },
+    {
+      "titre": "Lonely Planet : les îles Salomon, l’un des derniers paradis sauvages",
+      "url": "https://www.lonelyplanet.fr/article/les-iles-salomon-lun-des-derniers-paradis-sauvages-du-pacifique"
+    },
+    {
+      "titre": "DiveSSI : plongée aux îles Salomon",
+      "url": "https://www.divessi.com/fr/blog/solomon-islands-scuba-diving-hidden-gems-2170"
+    },
+    {
+      "titre": "World Travel Guide : îles Salomon",
+      "url": "https://worldtravelguide.net/guides/oceania/solomon-islands/things-to-do"
+    }
+  ]
+}

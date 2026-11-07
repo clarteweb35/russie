@@ -1,0 +1,49 @@
+{
+  "slug": "trinite-et-tobago",
+  "genere": "2026-11-07T00:38:48.773Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Pigeon Point et Buccoo Reef (Tobago)",
+      "pourquoi": "À la pointe sud-ouest de Tobago, vue sur le Buccoo Reef, récif corallien majeur des Caraïbes, et sur le Nylon Pool ; excursions en bateau à fond de verre, stand-up paddle et kayak.",
+      "a_voir": [],
+      "conseil": "Un résultat signale la fermeture temporaire du Buccoo Reef Marine Park après un incident en avril 2024 : confirmez son statut auprès des autorités locales avant de prévoir l’excursion."
+    },
+    {
+      "critere": "pratique",
+      "nom": "Port-d’Espagne",
+      "pourquoi": "Capitale de Trinité, île du carnaval, présenté comme le plus festif de la Caraïbe ; berceau du steel pan.",
+      "a_voir": [
+        "Fort George, pour la vue",
+        "Les « Magnificent Seven », manoirs de l’époque espagnole"
+      ],
+      "conseil": "La saison sèche, de la mi-janvier à mars, coïncide généralement avec le carnaval ; il est conseillé de réserver son logement à l’avance."
+    },
+    {
+      "critere": "diversite",
+      "nom": "Caroni Bird Sanctuary",
+      "pourquoi": "Mangroves et colonies d’ibis rouges, pour les amateurs de nature ; Maracas Beach est souvent citée pour les plages du nord de Trinité.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : Trinité-et-Tobago",
+      "url": "https://www.routard.com/fr/guide/ameriques/trinite-et-tobago"
+    },
+    {
+      "titre": "Evaneos : Trinité-et-Tobago, que voir",
+      "url": "https://www.evaneos.fr/trinite-et-tobago/voyage/etape/"
+    },
+    {
+      "titre": "Routard : Pigeon Point",
+      "url": "https://www.routard.com/fr/guide/ameriques/trinite-et-tobago/tobago/pigeon-point"
+    },
+    {
+      "titre": "Routard : Port-d’Espagne",
+      "url": "https://www.routard.com/fr/guide/ameriques/trinite-et-tobago/trinite/port-of-spain-port-d-espagne"
+    }
+  ]
+}

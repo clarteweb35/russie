@@ -1,0 +1,49 @@
+{
+  "slug": "brunei",
+  "genere": "2026-11-07T00:39:54.252Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Kampong Ayer",
+      "pourquoi": "Le « village flottant », la plus grande colonie sur pilotis du monde, décrite en 1521 comme la Venise de l’Est ; une croisière sur la rivière Brunei permet de le voir depuis l’eau.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Bandar Seri Begawan",
+      "pourquoi": "Capitale, petite ville bien rangée que l’on parcourt à pied en moins d’une heure ; mosquées monumentales, centres commerciaux et front de mer sur la rivière Brunei.",
+      "a_voir": [
+        "La mosquée Sultan Omar Ali Saifuddien",
+        "Le Musée national (Muzium Brunei)"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Ulu Temburong",
+      "pourquoi": "Une journée dans ce parc national est recommandée, combinée à une croisière dans la mangrove ; la réserve forestière de Peradayan est une alternative.",
+      "a_voir": [],
+      "conseil": "Trois jours complets suffisent pour les principales attractions."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Partirou : visiter Brunei",
+      "url": "https://www.partirou.com/visiter/brunei/"
+    },
+    {
+      "titre": "Cestee : que faire à Brunei Darussalam",
+      "url": "https://www.cestee.fr/destination/brunei-darussalam/que-faire"
+    },
+    {
+      "titre": "Cestee : que faire à Bandar Seri Begawan",
+      "url": "https://www.cestee.fr/destination/brunei-darussalam/bandar-seri-begawan/que-faire"
+    },
+    {
+      "titre": "Visit World : voyageurs à Brunei",
+      "url": "https://visitworld.today/fr/blog/1134/what-to-see-for-travelers-in-brunei-features-of-entering-the-country"
+    }
+  ]
+}

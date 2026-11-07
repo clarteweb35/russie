@@ -1,0 +1,46 @@
+{
+  "slug": "palaos",
+  "genere": "2026-11-07T00:39:54.252Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Rock Islands",
+      "pourquoi": "Classées à l’UNESCO, environ 300 îlots protégés par une grande barrière de corail, principal attraction de l’archipel ; on les visite en bateau, avec plongée et snorkeling.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Koror",
+      "pourquoi": "Plus grande ville de l’archipel et ancienne capitale, où l’on découvre surtout la culture locale.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Lac des Méduses (Eil Malk)",
+      "pourquoi": "Petit lac marin célèbre pour ses méduses dorées sans dard, où l’on peut nager.",
+      "a_voir": [],
+      "conseil": "Le lac a fermé temporairement en 2016, a rouvert en 2018, et une source indique que les méduses étaient absentes en 2023 : renseignez-vous sur son état actuel avant de réserver. La saison sèche, de novembre à avril, est présentée comme idéale."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Koror State Government : informations pour les touristes",
+      "url": "https://kororstategov.com/tourist.html"
+    },
+    {
+      "titre": "Le Mag Voyage : que faire aux Palaos",
+      "url": "https://www.lemagvoyage.fr/palaos/que-faire-palaos/"
+    },
+    {
+      "titre": "Cityzeum : les Rock Islands",
+      "url": "https://www.cityzeum.com/rock-islands"
+    },
+    {
+      "titre": "Cyril Jarnias : sites touristiques aux Palaos",
+      "url": "https://www.cyriljarnias.com/?p=39423"
+    }
+  ]
+}

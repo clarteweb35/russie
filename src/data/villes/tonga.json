@@ -1,0 +1,49 @@
+{
+  "slug": "tonga",
+  "genere": "2026-11-07T00:39:54.252Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Vava’u",
+      "pourquoi": "Principal pôle nautique, très réputé pour l’observation des baleines à bosse, présentes de fin juin à novembre (saison officielle d’observation : juillet à octobre) ; Neiafu domine le Port of Refuge, mouillage naturel apprécié des voiliers.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Nuku’alofa (Tongatapu)",
+      "pourquoi": "Capitale, sur l’île principale, et porte d’entrée la plus logique ; le Tonga National Museum présente objets, cartes et traditions artisanales, et le marché de Talamahu est cité.",
+      "a_voir": [
+        "Le Tonga National Museum",
+        "Le marché de Talamahu"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Ha’apai",
+      "pourquoi": "Décrite comme plus lente et plus sableuse ; les baleines à bosse y viennent aussi mettre bas.",
+      "a_voir": [],
+      "conseil": "Les sources ne s’accordent pas sur la saison cyclonique : vérifiez les périodes de fortes pluies et de cyclones avant de réserver."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Le Mag Voyage : que faire aux Tonga",
+      "url": "https://www.lemagvoyage.fr/tonga/que-faire-tonga/"
+    },
+    {
+      "titre": "DiveSSI : nager avec les baleines à bosse à Tonga",
+      "url": "https://www.divessi.com/fr/blog/swimming-with-humpbacks-in-tonga-9699.html"
+    },
+    {
+      "titre": "Kayak : guide de Tonga",
+      "url": "https://www.kayak.fr/Tonga.241.dc.guide"
+    },
+    {
+      "titre": "Trip.com : guide de Tonga",
+      "url": "https://fr.trip.com/travel-guide/destination/tonga-100245/"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "slug": "guyana",
+  "genere": "2026-11-07T00:38:48.773Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Chutes de Kaieteur",
+      "pourquoi": "Principal atout du pays : en saison haute, environ 660 m³ d’eau tombent chaque seconde d’une hauteur de 226 m, au cœur d’une forêt primaire ; on s’y rend généralement en petit avion charter depuis Georgetown, souvent en excursion d’une journée.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Georgetown",
+      "pourquoi": "Capitale et point de départ des itinéraires.",
+      "a_voir": [
+        "Le marché Stabroek et la promenade",
+        "Les jardins botaniques et les musées"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Rupununi",
+      "pourquoi": "Région la plus sauvage, au sud : savanes d’environ 13 000 km², ranchs et communautés amérindiennes ; des circuits de plusieurs jours partent de Lethem.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "TravelDojo : Guyana",
+      "url": "https://www.traveldojo.com/guyana/"
+    },
+    {
+      "titre": "Bradt Guides : les principaux sites naturels du Guyana",
+      "url": "https://bradtguides.com/?p=7645"
+    },
+    {
+      "titre": "Visit World : voyage au Guyana",
+      "url": "https://visitworld.today/fr/guyana/travel/info"
+    },
+    {
+      "titre": "Last Frontiers : Guyana classique",
+      "url": "https://lastfrontiers.com/itineraries/classic-guyana"
+    }
+  ]
+}
