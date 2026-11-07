@@ -349,3 +349,9 @@ Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fich
 - Le site s'appelle **Voyages Malins** (`NOM_SITE`). Palette du logo : bleu marine (accent), jaune, turquoise, avec thème sombre ; le rouge de la Russie n'est plus la couleur du site.
 - Accueil : logo (`public/img/logo-voyages-malins.webp`, sur fond blanc car non transparent), titre « Tout pour préparer votre voyage, au même endroit », recherche progressive, bloc « Tout au même endroit » (essentiel, guides, leçons, villes, bons plans et astuces ; chiffres calculés depuis les données), exemple du Japon (3 étapes et 4 vignettes de leçons, légendées « image générée par IA »), puis guides et liste A à Z.
 - Le carré `logo-voyages-malins-carre.webp` est prêt mais pas encore utilisé (favicon ou partage social).
+
+## Retouche de l'accueil et page « Cours de langues » (7 novembre 2026)
+
+- Accueil : bloc « Tout au même endroit, pour chaque voyage » (six cartes : essentiel, guides, leçons, villes, bons plans et astuces, et « Comparer les vols » signalée **à venir**, sans lien : aucun comparateur n'existe), puis un fil « J'apprends, je prépare, je choisis, je pars » suivi sur la Finlande (guide le plus riche, seul relu), puis huit pays à la une (`A_LA_UNE` dans `config.ts` ; la Russie y figure avec « Voyage déconseillé »), puis la liste A à Z. La recherche reste dans le premier écran.
+- En-tête : sur l'accueil, pas de nom (le logo est dans la page) ; sur les pages intérieures, le logo horizontal. « Russie » n'est plus dans le menu de l'accueil.
+- `/langues` « Cours de langues » (menu de l'accueil, pied de page, plan du site) : recherche par pays (affiche la langue et ouvre la leçon du pays) et liste des langues par ordre alphabétique, sans les pays. Une langue partagée ouvre les leçons de son pays d'origine. Données lues dans le registre, rien écrit à la main.

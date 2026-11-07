@@ -1,16 +1,23 @@
 ---
 // Page d'accueil : sélecteur de destination. Tous les pays du monde, par ordre alphabétique, avec recherche et filtre par région.
 import Base from '../layouts/Base.astro';
-import { monde, groupesAlphabetiques, REGIONS } from '../data/monde';
+import Badge from '../components/Badge.astro';
+import { monde, groupesAlphabetiques, REGIONS, ALERTE_SECURITE, parIso } from '../data/monde';
+import { offresDuPays } from '../data/offres-pays';
 import { paysComplets } from '../data/pays';
-import { NOM_SITE, url, legendeIA } from '../config';
+import { NOM_SITE, url, legendeIA, A_LA_UNE } from '../config';
 
 const groupes = groupesAlphabetiques();
 const guides = monde.filter((p) => p.guide || p.iso === 'RUS');
+const alaUne = A_LA_UNE.map((iso) => parIso(iso)).filter((p) => p !== undefined);
 // Chiffres de l'accueil calculés depuis les données (jamais écrits en dur)
 const nbLecons = paysComplets.filter((p) => p.lecons.length > 0).length + 1; // + la Russie, hors registre
 const nbVilles = Object.keys(import.meta.glob('../data/villes/*.json')).length;
-const exemple = paysComplets.find((p) => p.slug === 'japon' && p.lecons.length > 0);
+// Le même pays sert de fil conducteur : le plus riche du site (Finlande), avec sa première leçon
+const exemple = paysComplets.find((p) => p.slug === 'finlande' && p.lecons.length > 0);
+const lecon = exemple?.lecons[0];
+const phrasesLecon = lecon ? lecon.phrases.slice(0, 3) : [];
+const nbOffres = exemple ? (await offresDuPays(exemple.iso)).length : 0;
 const vignettes = [
   { titre: 'Salutations', img: '/img/lecons/salutations.webp', alt: 'Une poignée de main entre deux personnes' },
   { titre: 'Se présenter', img: '/img/lecons/se-presenter.webp', alt: 'Un homme souriant présente sa carte de visite' },
@@ -53,25 +60,52 @@ const jsonLd = [{
   </section>
 
   <section id="tout-au-meme-endroit" aria-labelledby="tout-titre">
-    <h2 id="tout-titre">Tout au même endroit, pour chaque pays</h2>
+    <h2 id="tout-titre">Tout au même endroit, pour chaque voyage</h2>
     <ul class="atouts">
       <li><span class="ico" aria-hidden="true">⚡</span><div><h3>L’essentiel en une page</h3><p>Entrée, sécurité, santé, argent, urgences : l’indispensable en quelques lignes, tiré des fiches du ministère des Affaires étrangères.</p></div></li>
       <li><span class="ico" aria-hidden="true">🧭</span><div><h3>Des guides détaillés</h3><p>Voyager, vivre, travailler, payer sur place, avec les sources et un badge « vérifié » ou « à confirmer ». {guides.length} pays déjà.</p></div></li>
       <li><span class="ico" aria-hidden="true">🎧</span><div><h3>Des leçons pour parler</h3><p>Les phrases utiles dans la langue du pays : vous écoutez, vous répétez, vous vous entraînez avec un quiz. {nbLecons} pays déjà.</p></div></li>
       <li><span class="ico" aria-hidden="true">📍</span><div><h3>Les villes à connaître</h3><p>Trois idées de villes ou de sites par pays, avec les sources consultées. {nbVilles} pays.</p></div></li>
       <li><span class="ico" aria-hidden="true">🏷️</span><div><h3>Bons plans et astuces</h3><p>Des offres retenues seulement si le prix est vraiment bas, et des astuces pour voyager moins cher. <a href={url('/bons-plans')}>Bons plans</a> · <a href={url('/guides')}>Astuces</a></p></div></li>
+      <li class="a-venir"><span class="ico" aria-hidden="true">✈️</span><div><h3>Comparer les vols <Badge type="warn">À venir</Badge></h3><p>Choisissez votre ville de départ et vos dates, puis trouvez des options pour rejoindre votre destination. Ce service n’est pas encore disponible.</p></div></li>
     </ul>
   </section>
 
-  {exemple && (
-    <section id="exemple" aria-labelledby="exemple-titre">
-      <h2 id="exemple-titre">Un exemple : {exemple.nom}</h2>
-      <p>Une seule page pays, et tout se déroule : de l’information officielle aux premiers mots de la langue.</p>
-      <ul class="etapes">
-        <li><a href={url(`/pays/${exemple.slug}/essentiel`)}><strong>1. L’essentiel</strong><span>Entrée, sécurité, santé, urgences</span></a></li>
-        <li><a href={url(`/pays/${exemple.slug}`)}><strong>2. Le guide</strong><span>Voyager, argent, villes à connaître</span></a></li>
-        <li><a href={url(`/pays/${exemple.slug}/lecons`)}><strong>3. Les leçons</strong><span>{exemple.lecons.length} leçons audio avec quiz</span></a></li>
-      </ul>
+  {exemple && lecon && (
+    <section id="parcours" aria-labelledby="parcours-titre">
+      <h2 id="parcours-titre">Un seul endroit pour préparer votre voyage</h2>
+      <p>Prenons {exemple.article} : voici comment les contenus se complètent, de la première leçon au départ.</p>
+      <ol class="fil">
+        <li>
+          <a href={url(`/pays/${exemple.slug}/lecons/${lecon.slug}`)}>
+            <span class="num">1</span>
+            <strong>J’apprends</strong>
+            <span class="txt">Une leçon audio avec quiz, par exemple « {lecon.titre} » : {phrasesLecon.map(([mot, , fr]) => `${mot} (${fr.split(' / ')[0].toLowerCase()})`).join(', ')}.</span>
+          </a>
+        </li>
+        <li>
+          <a href={url(`/pays/${exemple.slug}/essentiel`)}>
+            <span class="num">2</span>
+            <strong>Je prépare</strong>
+            <span class="txt">L’essentiel du pays en une page : entrée, sécurité, santé, argent et urgences, d’après les fiches du ministère.</span>
+          </a>
+        </li>
+        <li>
+          <a href={url(`/pays/${exemple.slug}`)}>
+            <span class="num">3</span>
+            <strong>Je choisis</strong>
+            <span class="txt">Le guide détaillé : voyager, vivre, payer sur place et villes à connaître, avec les sources citées.</span>
+          </a>
+        </li>
+        <li>
+          <a href={url('/bons-plans')}>
+            <span class="num">4</span>
+            <strong>Je pars</strong>
+            <span class="txt">{nbOffres > 0 ? `${nbOffres} offre${nbOffres > 1 ? 's' : ''} repérée${nbOffres > 1 ? 's' : ''} vers ${exemple.article}.` : 'Les bons plans : une offre n’est publiée que si son prix est vraiment bas, donc il n’y en a pas toujours.'}</span>
+          </a>
+        </li>
+      </ol>
+      <p class="src">{nbLecons} pays ont des leçons audio, {nbVilles} ont leur page « villes à connaître ».</p>
       <ul class="vignettes-lecons">
         {vignettes.map((v) => (
           <li><a href={url(`/pays/${exemple.slug}/lecons`)}><img src={url(v.img)} alt={legendeIA(v.alt)} title={legendeIA(v.alt)} width="320" height="190" loading="lazy" /><span>{v.titre}</span></a></li>
@@ -81,18 +115,19 @@ const jsonLd = [{
   )}
 
   <section id="guides" aria-labelledby="guides-titre">
-    <h2 id="guides-titre">Guides détaillés</h2>
-    <p>Ces pays ont des rubriques complètes : voyager, vivre, travailler, paiements, langue et leçons audio. Les fiches « beta » n’ont pas encore été relues.</p>
+    <h2 id="guides-titre">Des pays à la une</h2>
+    <p>Les guides les plus complets du site. Les fiches « beta » n’ont pas encore été relues.</p>
     <ul class="guides-grille">
-      {guides.map((p) => (
+      {alaUne.map((p) => (
         <li>
           <a href={url(p.href)}>
             <img src={url(`/drapeaux/${p.iso.toLowerCase()}.svg`)} alt="" width="48" height="32" loading="lazy" />
-            <span><strong>{p.nom}</strong><small>{p.iso === 'RUS' ? 'Guide principal' : p.guide?.test ? 'Beta' : 'Guide'}</small></span>
+            <span><strong>{p.nom}</strong><small>{p.iso === 'RUS' || ALERTE_SECURITE.has(p.iso) ? 'Voyage déconseillé' : p.guide?.test ? 'Beta' : 'Guide relu'}</small></span>
           </a>
         </li>
       ))}
     </ul>
+    <p><a href="#destinations">Voir les {monde.length} pays, de A à Z →</a></p>
   </section>
 
   <section id="destinations" aria-labelledby="destinations-titre">

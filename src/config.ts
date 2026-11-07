@@ -27,6 +27,7 @@ export const pagesLegales = [{ href: '/mentions-legales', label: 'Mentions léga
 
 // Rubriques éditoriales de Voyages Malins : liées depuis l'accueil et le pied de page, présentes dans le plan du site.
 export const pagesEditoriales = [
+  { href: '/langues', label: 'Cours de langues' },
   { href: '/bons-plans', label: 'Bons plans' },
   { href: '/guides', label: 'Astuces & hacks voyage' },
 ];
@@ -38,3 +39,6 @@ export const NOM_SITE = 'Voyages Malins';
 const VOYELLE = /^[aeiouyàâéèêëîïôûü]/i;
 export const leNomDeLangue = (nom: string) => (VOYELLE.test(nom) ? `l’${nom}` : `le ${nom}`);
 export const deNomDeLangue = (nom: string) => (VOYELLE.test(nom) ? `d’${nom}` : `de ${nom}`);
+
+// Pays mis à la une sur l'accueil : les guides les plus riches (Finlande, seule fiche relue ; puis les plus fournis en contenu). La Russie y figure avec la mention « Voyage déconseillé ».
+export const A_LA_UNE = ['FIN', 'RUS', 'GEO', 'ESP', 'ALB', 'DEU', 'SEN', 'VNM'];

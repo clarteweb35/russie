@@ -1,0 +1,109 @@
+---
+// Cours de langues : toutes les langues dont le site propose des leçons, par ordre alphabétique, avec les pays concernés.
+// Aucune donnée écrite ici : tout vient du registre des pays (et de la Russie, hors registre).
+import Base from '../layouts/Base.astro';
+import { paysComplets } from '../data/pays';
+import { lecons as leconsRusse } from '../data/lecons.js';
+import { parIso } from '../data/monde';
+import { url } from '../config';
+
+type Entree = { nom: string; iso: string; href: string; nb: number; natif: boolean };
+const sansAccent = (t: string) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+const majuscule = (t: string) => t.charAt(0).toUpperCase() + t.slice(1);
+
+// langue -> pays où elle est enseignée (une langue peut servir plusieurs pays : espagnol, anglais, portugais…)
+const parLangue = new Map<string, Entree[]>();
+// « natif » : le pays dont le code de la langue porte le nom (en-GB : Royaume-Uni, es-ES : Espagne)
+const ajouter = (langue: string, e: Entree) => parLangue.set(langue, [...(parLangue.get(langue) ?? []), e]);
+ajouter('russe', { nom: 'Russie', iso: 'RUS', href: '/lecons', nb: leconsRusse.length, natif: true });
+paysComplets.filter((p) => p.lecons.length > 0).forEach((p) => ajouter(p.langue.nom, { nom: p.nom, iso: p.iso, href: `/pays/${p.slug}/lecons`, nb: p.lecons.length, natif: p.langue.code.split('-')[1] === parIso(p.iso)?.iso2 }));
+
+const langues = [...parLangue.entries()]
+  // Un clic ouvre les leçons du pays « natif » de la langue, sinon du premier pays par ordre alphabétique
+  .map(([nom, pays]) => {
+    const tries = pays.sort((a, b) => Number(b.natif) - Number(a.natif) || a.nom.localeCompare(b.nom, 'fr'));
+    return { nom, href: tries[0].href, nb: tries[0].nb };
+  })
+  .sort((a, b) => sansAccent(a.nom).localeCompare(sansAccent(b.nom), 'fr'));
+
+// Recherche par pays : le pays, sa langue et le lien direct vers ses leçons
+const parPays = [{ nom: 'Russie', iso: 'RUS', langue: 'russe', href: url('/lecons'), nb: leconsRusse.length }]
+  .concat(paysComplets.filter((p) => p.lecons.length > 0).map((p) => ({ nom: p.nom, iso: p.iso, langue: p.langue.nom, href: url(`/pays/${p.slug}/lecons`), nb: p.lecons.length })))
+  .sort((a, b) => sansAccent(a.nom).localeCompare(sansAccent(b.nom), 'fr'))
+  .map((p) => ({ ...p, n: sansAccent(p.nom), drapeau: url(`/drapeaux/${p.iso.toLowerCase()}.svg`) }));
+
+const lettres = [...new Set(langues.map((l) => sansAccent(l.nom).charAt(0).toUpperCase()))];
+---
+<Base title="Cours de langues" description={`Familiarisez-vous avec ${langues.length} langues : leçons courtes avec audio et quiz, classées par ordre alphabétique.`}>
+  <h1>Cours de langues</h1>
+  <p class="lead">Quelques leçons courtes pour vous familiariser avec la langue de votre destination : vous écoutez, vous répétez, vous vous entraînez avec un quiz. {langues.length} langues, classées par ordre alphabétique.</p>
+  <p class="src">Ces leçons donnent les phrases utiles d’un voyage (salutations, chiffres, déplacements, restaurant, urgences). Elles ne remplacent pas un cours complet.</p>
+
+  <section aria-labelledby="par-pays">
+    <h2 id="par-pays">Par pays</h2>
+    <p>Tapez votre destination : nous vous indiquons sa langue et vous ouvrons directement la leçon.</p>
+    <div class="recherche" role="search">
+      <label for="recherche-langue">Rechercher un pays</label>
+      <input id="recherche-langue" type="search" placeholder="Ex. : Japon, Maroc, Brésil…" autocomplete="off" aria-controls="resultats-langue" />
+      <ul id="resultats-langue" class="liste-pays resultats" aria-label="Pays correspondants" hidden></ul>
+    </div>
+    <script type="application/json" id="donnees-langues" set:html={JSON.stringify(parPays)} />
+  </section>
+
+  <h2 id="par-langue">Par langue</h2>
+  <nav class="alphabet" aria-label="Aller à une lettre">
+    {lettres.map((l) => <a href={`#langue-${l}`}>{l}</a>)}
+  </nav>
+
+  {lettres.map((l) => (
+    <section class="groupe" id={`langue-${l}`} aria-label={`Langues commençant par ${l}`}>
+      <h2>{l}</h2>
+      <ul class="chips langues-liste">
+        {langues.filter((x) => sansAccent(x.nom).charAt(0).toUpperCase() === l).map((x) => (
+          <li><a href={url(x.href)}>{majuscule(x.nom)}<small>{x.nb} leçons</small></a></li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</Base>
+
+<script>
+  type Pays = { n: string; nom: string; langue: string; href: string; nb: number; drapeau: string };
+  const donnees: Pays[] = JSON.parse(document.getElementById('donnees-langues')?.textContent ?? '[]');
+  const champ = document.getElementById('recherche-langue') as HTMLInputElement | null;
+  const liste = document.getElementById('resultats-langue') as HTMLUListElement | null;
+  const sansAccent = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
+  const mots = (s: string) => s.split(/[s'’-]+/);
+
+  champ?.addEventListener('input', () => {
+    if (!liste) return;
+    const q = sansAccent(champ.value);
+    liste.replaceChildren();
+    if (!q) { liste.hidden = true; return; }
+    // Le nom commence par la saisie d'abord, puis un mot du nom (dès 2 lettres)
+    const trouves = donnees
+      .map((p) => ({ p, rang: p.n.startsWith(q) ? 0 : q.length >= 2 && mots(p.n).some((m) => m.startsWith(q)) ? 1 : -1 }))
+      .filter((x) => x.rang >= 0)
+      .sort((a, b) => a.rang - b.rang);
+    trouves.forEach(({ p }) => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = p.href;
+      const img = document.createElement('img');
+      img.src = p.drapeau; img.alt = ''; img.width = 36; img.height = 24;
+      const nom = document.createElement('span');
+      nom.className = 'nom'; nom.textContent = p.nom;
+      const det = document.createElement('span');
+      det.className = 'det'; det.textContent = `${p.langue} · ${p.nb} leçons`;
+      a.append(img, nom, det);
+      li.append(a);
+      liste.append(li);
+    });
+    liste.hidden = trouves.length === 0;
+  });
+  // Entrée ouvre le premier résultat ; Échap efface la saisie
+  champ?.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') { const a = liste?.querySelector('a'); if (a) { e.preventDefault(); a.click(); } }
+    else if (e.key === 'Escape') { champ.value = ''; champ.dispatchEvent(new Event('input')); }
+  });
+</script>
