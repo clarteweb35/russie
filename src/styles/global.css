@@ -536,3 +536,23 @@ header.site.accueil .wrap { justify-content: flex-end; }
 .banner-beta { background: var(--warn-soft); border-bottom-color: var(--line); }
 .liens-sources { list-style: none; padding: 0; columns: 3 160px; column-gap: 16px; }
 .liens-sources li { margin: 0 0 4px; break-inside: avoid; }
+
+/* Calendrier « quand partir » d'une fiche pays */
+:root { --bad: #b3261e; --bad-soft: #fde8e6; }
+@media (prefers-color-scheme: dark) { :root { --bad: #ff8a80; --bad-soft: #3a1b19; } }
+.calendrier { list-style: none; padding: 0; margin: 14px 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+.mois-cal { margin: 0; padding: 12px 14px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); border-top: 5px solid var(--line); }
+.mois-cal h3 { margin: 0; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px; font-size: 1.05rem; }
+.mois-cal .etat { font: 700 12px var(--sans); padding: 2px 9px; border-radius: 999px; }
+.mois-cal .chiffres { margin: 2px 0 6px; font-size: 13.5px; color: var(--muted); }
+.mois-cal .raisons { list-style: none; padding: 0; margin: 0; font-size: 14px; line-height: 1.4; }
+.mois-cal .raisons li { margin: 0 0 3px; padding-left: 16px; position: relative; }
+.mois-cal .raisons li::before { content: '•'; position: absolute; left: 3px; }
+.mois-cal .att::before { content: '▲'; font-size: 9px; top: 3px; color: var(--bad); }
+.mois-cal .atout::before { content: '✓'; color: var(--ok); }
+.niveau-bon { border-top-color: var(--ok); }
+.niveau-bon .etat { background: var(--ok-soft); color: var(--ok); }
+.niveau-moins { border-top-color: var(--accent2); }
+.niveau-moins .etat { background: var(--warn-soft); color: var(--warn); }
+.niveau-eviter { border-top-color: var(--bad); }
+.niveau-eviter .etat { background: var(--bad-soft); color: var(--bad); }

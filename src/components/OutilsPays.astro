@@ -1,0 +1,25 @@
+---
+// Bloc « outils » d'une fiche pays : ne propose que les outils qui ont quelque chose à dire pour ce pays.
+import { DONNEES } from '../data/quand-partir';
+import { BUDGETS } from '../data/budget-voyage';
+import { url } from '../config';
+import type { FicheMonde } from '../data/monde';
+
+interface Props { p: FicheMonde }
+const { p } = Astro.props;
+const lieu = p.guide?.article ?? p.nom; // « l’Espagne », « la Finlande »
+const outils = [
+  { label: 'Liste de bagages', desc: `Une liste à cocher pour ${lieu}, à imprimer ou à garder sur votre téléphone.`, href: `/outils/liste-de-bagages?pays=${p.slug}`, icon: '🧳' },
+  ...(DONNEES.pays[p.slug] ? [{ label: 'Quand partir ?', desc: `Les douze mois : climat, affluence et prix de l’hébergement.`, href: `/outils/quand-partir?pays=${p.slug}`, icon: '📅' }] : []),
+  ...(BUDGETS[p.slug] ? [{ label: 'Estimer le budget', desc: 'Une estimation du séjour sur place, hors vols.', href: `/outils/budget-voyage?pays=${p.slug}`, icon: '💶' }] : []),
+];
+---
+<section id="outils-pays" aria-labelledby="outils-pays-titre">
+  <h2 id="outils-pays-titre">Préparer votre départ</h2>
+  <ul class="atouts">
+    {outils.map((o) => (
+      <li><span class="ico" aria-hidden="true">{o.icon}</span><div><h3><a href={url(o.href)}>{o.label}</a></h3><p>{o.desc}</p></div></li>
+    ))}
+  </ul>
+  <p class="src"><a href={url('/outils')}>Tous les outils</a></p>
+</section>

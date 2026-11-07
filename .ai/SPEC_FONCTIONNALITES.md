@@ -132,6 +132,7 @@ Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fich
 
 
 
+
 ## 8. Version « essentielle » (6 novembre 2026)
 
 - Chaque pays qui a une fiche officielle (183 dont la Russie) a une page « L’essentiel » : `/pays/<pays>/essentiel/` (Russie : `/essentiel/`). Bloc Entrée, Sécurité, Santé, Argent (si compléments sourcés), Urgences ; une à quatre lignes par bloc, chacune renvoyant au détail. Zéro texte écrit à la main : tout est extrait des fiches officielles importées (première phrase des rubriques utiles) et des compléments, donc rien d’inventé. Code : `src/data/pays/essentiel.ts`, `src/components/Essentiel.astro`. Bouton « L’essentiel » sur la fiche pays, entrée de menu, plan du site.
@@ -377,3 +378,10 @@ Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fich
 - Outils en ligne : liste de bagages, « Quand partir ? », « Estimer le budget ». La page budget est en `noindex` et absente du plan du site tant qu'aucune destination n'a d'estimation sourcée.
 - Correctif : le fil d'Ariane s'affichait en cartes (collision de la classe `.fil` avec le parcours de l'accueil, renommé `.parcours-liste`).
 - `/sources` est la page générale « Sources et méthode » (badges, sources du site, contenus IA, liens vers la page Sources de chaque pays). Les sources du guide Russie sont désormais sur `/pays/russie/sources` (avant : `/sources`, qui montrait la Russie à tort).
+
+## Calendrier « quand partir » et outils sur les fiches pays (7 novembre 2026)
+
+- Les 10 fiches pays documentées (Espagne, Portugal, Italie, Grèce, Croatie, Finlande, Allemagne, Islande, Pologne, Autriche) ont une section « Quand partir » : douze cartes (janvier à décembre), chacune « Bon moment », « Moins bon » ou « À éviter », avec les raisons chiffrées et les sources. Composant : `CalendrierPays.astro` ; règles : `lectureMois` et `REGLES` dans `src/data/quand-partir.ts`.
+- Règles (affichées sur la page, rédigées par Voyages Malins, pas une recommandation officielle) : points d'attention = moins de 10 °C ou plus de 30 °C, 100 mm de pluie ou plus, affluence forte (indice > 125), prix de l'hébergement plus élevés (indice > 105) ; atouts = 15 à 28 °C, moins de 50 mm, affluence calme (< 75), prix plus bas (< 95). 0 point d'attention : « Bon moment » ; 1 : « Moins bon » ; 2 ou plus : « À éviter ». Les autres pays affichent une ligne honnête : calendrier pas encore disponible.
+- Toutes les fiches pays ont un bloc « Préparer votre départ » (`OutilsPays.astro`) : liste de bagages pour tous, « Quand partir ? » et budget seulement pour les pays qui ont des données. L'outil « Quand partir ? » accepte `?pays=<slug>`.
+- Limite : seuls les pays d'Europe couverts par Eurostat ont un calendrier. Étendre à d'autres pays demande une autre source de fréquentation et de prix.

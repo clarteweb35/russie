@@ -1,0 +1,40 @@
+---
+// Calendrier « quand partir » d'un pays : un mois = un libellé + les raisons, tirés des données sourcées (Eurostat, NASA).
+// Seuls les pays documentés (src/data/quand-partir.json) en ont un ; les autres affichent un message honnête.
+import { DONNEES, MOIS, REGLES, SEUILS, LIBELLE_NIVEAU, lectureMois } from '../data/quand-partir';
+import { url } from '../config';
+import type { FicheMonde } from '../data/monde';
+
+interface Props { p: FicheMonde }
+const { p } = Astro.props;
+const d = DONNEES.pays[p.slug];
+const mois = d ? MOIS.map((nom, i) => ({ nom, ...lectureMois(d, i) })) : [];
+const dateFr = (iso: string) => new Date(`${iso}T12:00:00`).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+const s = DONNEES.sources;
+---
+{d ? (
+  <section id="quand-partir" aria-labelledby="quand-titre">
+    <h2 id="quand-titre">Quand partir : {p.nom}</h2>
+    <p>Le calendrier résume chaque mois d’après la température et les pluies de {d.ville.nom}, l’affluence touristique et le prix de l’hébergement dans le pays. C’est une lecture générale : elle varie selon la région et le type de voyage. « À éviter » signale plusieurs points d’attention cumulés (foule, prix, météo), jamais un danger.</p>
+    <ol class="calendrier">
+      {mois.map((m) => (
+        <li class={`mois-cal niveau-${m.niveau}`}>
+          <h3>{m.nom.charAt(0).toUpperCase() + m.nom.slice(1)} <span class="etat">{LIBELLE_NIVEAU[m.niveau]}</span></h3>
+          <p class="chiffres">{m.chiffres}</p>
+          <ul class="raisons">
+            {m.attention.map((r) => <li class="att">{r}</li>)}
+            {m.atouts.map((r) => <li class="atout">{r}</li>)}
+            {m.attention.length + m.atouts.length === 0 && <li>Rien de marquant ce mois-ci.</li>}
+          </ul>
+        </li>
+      ))}
+    </ol>
+    <details class="faq">
+      <summary>Comment sont établis ces libellés ?</summary>
+      <p>Règles simples de Voyages Malins, pas une recommandation officielle. Points d’attention : température moyenne sous {REGLES.froid} °C ou au-dessus de {REGLES.chaud} °C, {REGLES.pluieForte} mm de pluie ou plus dans le mois, affluence forte (indice au-dessus de {SEUILS.affluenceForte}), prix de l’hébergement plus élevés (indice au-dessus de {SEUILS.prixHaut}). Atouts : entre {REGLES.confortMin} et {REGLES.confortMax} °C, moins de {REGLES.pluieFaible} mm de pluie, affluence calme (sous {SEUILS.affluenceCalme}), prix plus bas (sous {SEUILS.prixBas}). Aucun point d’attention : « Bon moment » ; un : « Moins bon » ; deux ou plus : « À éviter ». Un mois « à éviter » peut convenir selon vos priorités (par exemple la plage en pleine saison).</p>
+    </details>
+    <p class="src">Sources : <a href={s.climat.url} rel="noopener">{s.climat.nom}</a> (climat, ville de référence : {d.ville.nom}, données modélisées) ; <a href={s.affluence.url} rel="noopener">Eurostat, nuitées</a> et <a href={s.prix.url} rel="noopener">Eurostat, prix de l’hébergement</a> (pays entier). Consultées le {dateFr(s.climat.acces)}. <a href={url(`/outils/quand-partir?pays=${p.slug}`)}>Voir les détails dans l’outil « Quand partir ? »</a>.</p>
+  </section>
+) : (
+  <p class="src" id="quand-partir">Calendrier « quand partir » : pas encore disponible pour {p.nom}. Nous ne publions que des données sourcées, aujourd’hui pour quelques pays d’Europe : voir l’<a href={url('/outils/quand-partir')}>outil « Quand partir ? »</a>.</p>
+)}

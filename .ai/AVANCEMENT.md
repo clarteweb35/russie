@@ -204,3 +204,6 @@ Accueil = choix de destination, 194 pays, fiche d'identité, drapeaux, convertis
 - **Décision à prendre** : la page budget n'a aucune estimation. Soit trouver une source défendable pour quelques destinations, soit la retirer du menu et du plan du site tant qu'elle est vide.
 - Étendre « Quand partir ? » hors Europe demande une autre source de fréquentation et de prix (Eurostat ne couvre que l'Europe).
 - Le build local peut manquer de mémoire (code 134) : relancer, ou `NODE_OPTIONS=--max-old-space-size=6144 npm test`.
+
+## 7 novembre 2026 (soir) : calendrier sur les fiches pays
+- Fait : calendrier « quand partir » sur les 10 pays documentés, bloc « Préparer votre départ » sur toutes les fiches. À faire : étendre à d’autres pays (autre source de fréquentation et de prix nécessaire) ; décider quand la page budget aura des données.

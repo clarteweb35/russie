@@ -5,6 +5,8 @@ import Alert from '../../../components/Alert.astro';
 import Actualites from '../../../components/Actualites.astro';
 import VillesPays from '../../../components/VillesPays.astro';
 import AvantDePartir from '../../../components/AvantDePartir.astro';
+import CalendrierPays from '../../../components/CalendrierPays.astro';
+import OutilsPays from '../../../components/OutilsPays.astro';
 import BonsPlansPays from '../../../components/BonsPlansPays.astro';
 import FicheIdentite from '../../../components/FicheIdentite.astro';
 import BlocDevise from '../../../components/BlocDevise.astro';
@@ -155,7 +157,8 @@ const autres = g ? g.rubriques.filter((r) => !['voyager', 'vivre'].includes(r.sl
   )}
 
   <AvantDePartir p={p} />
-  <p class="src">Préparer votre valise : <a href={url(`/outils/liste-de-bagages?pays=${p.slug}`)}>liste de bagages pour {p.nom}</a>.</p>
+  <CalendrierPays p={p} />
+  <OutilsPays p={p} />
   <BonsPlansPays p={p} />
 
   <PhotosPays slug={p.slug} nom={p.nom} />

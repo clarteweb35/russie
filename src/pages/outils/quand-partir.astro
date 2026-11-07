@@ -24,7 +24,7 @@ const rubriques = [
 
 const faq = [
   { q: 'Pourquoi seulement quelques destinations ?', r: `Nous ne publions que des données que nous pouvons sourcer et dater. Pour ${destinations.length} pays d’Europe, des sources ouvertes et officielles existent (Eurostat, NASA). Pour les autres, nous n’avons pas encore de données fiables : nous préférons ne rien afficher que d’inventer des notes ou des saisons.` },
-  { q: 'Quel est le meilleur mois pour partir ?', r: 'Il n’y en a pas d’unique : cela dépend de la région du pays, du type de voyage (plage, ville, randonnée) et de vos priorités. C’est pourquoi nous ne calculons aucune note globale. Chaque critère est présenté séparément, à vous de les pondérer.' },
+  { q: 'Quel est le meilleur mois pour partir ?', r: 'Il n’y en a pas d’unique : cela dépend de la région du pays, du type de voyage (plage, ville, randonnée) et de vos priorités. C’est pourquoi cet outil présente chaque critère séparément, sans note globale. Sur la fiche de chaque pays documenté, un calendrier propose une lecture mois par mois (« bon moment », « moins bon », « à éviter ») avec ses raisons et ses règles affichées : c’est un résumé de ces critères, pas une recommandation officielle.' },
   { q: 'D’où viennent les températures et les précipitations ?', r: 'Elles proviennent de la climatologie NASA POWER (réanalyse MERRA-2, 2001 à 2025) au point d’une ville de référence. Ce sont des données modélisées sur une grille d’environ 50 km, pas des relevés de station, et une seule ville par pays : le climat varie parfois beaucoup d’une région à l’autre.' },
   { q: 'Que mesure l’affluence ?', r: 'Le nombre de nuitées dans les hébergements touristiques du pays entier (Eurostat), tous visiteurs confondus, moyenné sur les trois dernières années complètes. L’indice 100 correspond à un mois moyen. Un lieu précis peut être plus ou moins fréquenté que la moyenne du pays.' },
   { q: 'Que mesure le prix de l’hébergement ?', r: 'La variation saisonnière de l’indice des prix de l’hébergement (Eurostat). Il montre quels mois sont plus chers ou moins chers dans un même pays, pas le prix d’une chambre, et il ne permet pas de comparer deux pays entre eux. Le niveau de prix des restaurants et hôtels, par rapport à la moyenne européenne, est indiqué à part.' },
@@ -206,6 +206,8 @@ const donnees = { mois: MOIS, pays: destinations, seuils: SEUILS };
 
   // --- Par pays : les douze mois, un critère par colonne ---
   const fPays = $<HTMLSelectElement>('p-pays');
+  const demande = new URLSearchParams(location.search).get('pays');
+  if (demande && pays.some((x) => x.s === demande)) fPays.value = demande;
   const barre = (v: number, min: number, max: number) => {
     const b = el('span', 'barre'); b.setAttribute('aria-hidden', 'true');
     b.style.setProperty('--v', `${max === min ? 50 : Math.max(6, ((v - min) / (max - min)) * 100)}%`);
