@@ -3,27 +3,31 @@
 // uniquement pour les destinations dont les données sont documentées (src/data/quand-partir.json, généré avec sources et dates).
 // Aucun score global, aucune valeur estimée.
 import Base from '../../layouts/Base.astro';
-import { DONNEES, MOIS, SEUILS } from '../../data/quand-partir';
+import { DONNEES, MOIS, SEUILS, sansCalendrier } from '../../data/quand-partir';
 import { parIso } from '../../data/monde';
 import { outils, NOM_SITE, url } from '../../config';
 
 const destinations = Object.values(DONNEES.pays)
+  .filter((d) => !sansCalendrier(d.iso))
   .map((d) => {
     const f = parIso(d.iso)!;
-    return { s: d.slug, i: d.iso.toLowerCase(), n: f.nom, h: url(f.href), v: d.ville.nom, t: d.climat?.temperature, p: d.climat?.pluie, a: d.affluence?.indice, x: d.prix?.indice, nv: d.niveauPrix };
+    return { s: f.slug, i: d.iso.toLowerCase(), n: f.nom, h: url(f.href), v: d.ville.nom, t: d.climat?.temperature, p: d.climat?.pluie, a: d.affluence?.indice, x: d.prix?.indice, nv: d.niveauPrix };
   })
   .sort((a, b) => a.n.localeCompare(b.n, 'fr'));
 
+const completes = destinations.filter((d) => d.a && d.x).length; // pays avec climat + affluence + prix
 const dateFr = (iso: string) => new Date(`${iso}T12:00:00`).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
 const rubriques = [
   { cle: 'climat', titre: 'Climat : température et précipitations' },
   { cle: 'affluence', titre: 'Affluence touristique' },
   { cle: 'prix', titre: 'Prix de l’hébergement' },
   { cle: 'niveauPrix', titre: 'Niveau de prix du pays (repère)' },
+  { cle: 'capitales', titre: 'Situation des capitales' },
 ] as const;
 
 const faq = [
-  { q: 'Pourquoi seulement quelques destinations ?', r: `Nous ne publions que des données que nous pouvons sourcer et dater. Pour ${destinations.length} pays d’Europe, des sources ouvertes et officielles existent (Eurostat, NASA). Pour les autres, nous n’avons pas encore de données fiables : nous préférons ne rien afficher que d’inventer des notes ou des saisons.` },
+  { q: 'Pourquoi l’affluence et les prix ne concernent-ils que quelques pays ?', r: `Nous ne publions que des données que nous pouvons sourcer et dater. Eurostat fournit la fréquentation et les prix de l’hébergement pour l’Europe seulement : ${completes} pays ici. Pour les autres pays, nous n’avons pas de source ouverte du même niveau, donc nous ne les affichons pas plutôt que d’inventer des niveaux d’affluence ou de prix.` },
+  { q: 'Le climat de la capitale représente-t-il tout le pays ?', r: 'Pas toujours. Pour les pays sans données d’affluence, le climat est celui de la capitale, qui peut différer fortement de celui des régions touristiques (altitude, littoral, désert, île). Le calendrier est alors présenté comme un repère climatique, avec des libellés « Climat favorable », « Climat moins favorable » ou « Climat peu favorable ».' },
   { q: 'Quel est le meilleur mois pour partir ?', r: 'Il n’y en a pas d’unique : cela dépend de la région du pays, du type de voyage (plage, ville, randonnée) et de vos priorités. C’est pourquoi cet outil présente chaque critère séparément, sans note globale. Sur la fiche de chaque pays documenté, un calendrier propose une lecture mois par mois (« bon moment », « moins bon », « à éviter ») avec ses raisons et ses règles affichées : c’est un résumé de ces critères, pas une recommandation officielle.' },
   { q: 'D’où viennent les températures et les précipitations ?', r: 'Elles proviennent de la climatologie NASA POWER (réanalyse MERRA-2, 2001 à 2025) au point d’une ville de référence. Ce sont des données modélisées sur une grille d’environ 50 km, pas des relevés de station, et une seule ville par pays : le climat varie parfois beaucoup d’une région à l’autre.' },
   { q: 'Que mesure l’affluence ?', r: 'Le nombre de nuitées dans les hébergements touristiques du pays entier (Eurostat), tous visiteurs confondus, moyenné sur les trois dernières années complètes. L’indice 100 correspond à un mois moyen. Un lieu précis peut être plus ou moins fréquenté que la moyenne du pays.' },
@@ -51,8 +55,8 @@ const donnees = { mois: MOIS, pays: destinations, seuils: SEUILS };
   <h1>Quand partir ?</h1>
   <p class="lead">Choisissez un mois pour découvrir les destinations adaptées, ou un pays pour voir ses douze mois d’un coup d’œil. Le climat, l’affluence et le prix de l’hébergement sont présentés séparément, chacun avec sa source.</p>
   <div class="alert warn">
-    <strong class="alert-titre">{destinations.length} destinations documentées, pas plus</strong>
-    Nous ne publions que des données sourcées et datées, aujourd’hui pour {destinations.length} pays d’Europe. Une recommandation générale peut varier selon la région du pays et le type de voyage : prenez ces indications comme un repère, pas comme une règle.
+    <strong class="alert-titre">Données complètes pour {completes} pays, climat seul pour les autres</strong>
+    Pour {completes} pays d’Europe, nous avons le climat, l’affluence et le prix de l’hébergement (Eurostat, NASA). Pour les {destinations.length - completes} autres, seul le climat de la capitale est disponible : ni l’affluence ni les prix. Les pays dont le ministère déconseille le voyage sont exclus. Une recommandation générale peut varier selon la région du pays et le type de voyage : prenez ces indications comme un repère, pas comme une règle.
   </div>
 
   <noscript><div class="alert warn"><strong class="alert-titre">JavaScript est nécessaire</strong>Cet outil fonctionne dans votre navigateur. Les sources et les questions fréquentes ci-dessous restent lisibles.</div></noscript>
@@ -89,6 +93,7 @@ const donnees = { mois: MOIS, pays: destinations, seuils: SEUILS };
         </select>
       </div>
     </form>
+    <p class="src">Les filtres d’affluence et de prix ne s’appliquent qu’aux {completes} pays qui ont ces données ; sans filtre, tous les pays avec climat sont listés.</p>
     <p id="q-compte" role="status" aria-live="polite"></p>
     <ul id="q-resultats" class="quand-liste"></ul>
   </section>

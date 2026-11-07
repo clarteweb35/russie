@@ -27,7 +27,7 @@ const jsonLd = [{
 }];
 
 // Repère de niveau de prix (Eurostat), fourni à part et jamais présenté comme un budget
-const niveaux = Object.fromEntries(Object.values(DONNEES.pays).filter((d) => d.niveauPrix).map((d) => [d.slug, d.niveauPrix]));
+const niveaux = Object.fromEntries(Object.values(DONNEES.pays).filter((d) => d.niveauPrix).map((d) => [parIso(d.iso)!.slug, d.niveauPrix]));
 const donnees = { budgets: BUDGETS, niveaux, sourceNiveau: DONNEES.sources.niveauPrix, pays: monde.map((p) => ({ s: p.slug, n: p.nom, h: url(p.href) })), styles: STYLES, postes: POSTES };
 ---
 <Base

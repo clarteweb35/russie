@@ -1,25 +1,35 @@
 ---
-// Calendrier « quand partir » d'un pays : un mois = un libellé + les raisons, tirés des données sourcées (Eurostat, NASA).
-// Seuls les pays documentés (src/data/quand-partir.json) en ont un ; les autres affichent un message honnête.
-import { DONNEES, MOIS, REGLES, SEUILS, LIBELLE_NIVEAU, lectureMois } from '../data/quand-partir';
+// Calendrier « quand partir » d'un pays : un mois = un libellé + les raisons, tirés des données sourcées (NASA, Eurostat).
+// Deux niveaux : pays documentés (climat + affluence + prix) et autres pays (climat de la capitale seul, libellés « Climat… »).
+// Pays déconseillés par le ministère : aucun calendrier (règle de sécurité du site).
+import { DONNEES, MOIS, REGLES, SEUILS, LIBELLE_NIVEAU, LIBELLE_CLIMAT, climatSeul, sansCalendrier, lectureMois } from '../data/quand-partir';
 import { url } from '../config';
 import type { FicheMonde } from '../data/monde';
 
 interface Props { p: FicheMonde }
 const { p } = Astro.props;
-const d = DONNEES.pays[p.slug];
-const mois = d ? MOIS.map((nom, i) => ({ nom, ...lectureMois(d, i) })) : [];
+const d = DONNEES.pays[p.iso];
+const refus = sansCalendrier(p.iso);
+const seul = d ? climatSeul(d) : false;
+const libelles = seul ? LIBELLE_CLIMAT : LIBELLE_NIVEAU;
+const mois = d && !refus ? MOIS.map((nom, i) => ({ nom, ...lectureMois(d, i) })) : [];
 const dateFr = (iso: string) => new Date(`${iso}T12:00:00`).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
 const s = DONNEES.sources;
 ---
-{d ? (
+{refus ? (
+  <p class="src" id="quand-partir">Calendrier « quand partir » non proposé : le ministère français déconseille de voyager dans ce pays, et nous ne présentons pas de « bon moment » pour s’y rendre. Consultez les conseils aux voyageurs.</p>
+) : d ? (
   <section id="quand-partir" aria-labelledby="quand-titre">
     <h2 id="quand-titre">Quand partir : {p.nom}</h2>
-    <p>Le calendrier résume chaque mois d’après la température et les pluies de {d.ville.nom}, l’affluence touristique et le prix de l’hébergement dans le pays. C’est une lecture générale : elle varie selon la région et le type de voyage. « À éviter » signale plusieurs points d’attention cumulés (foule, prix, météo), jamais un danger.</p>
+    {seul ? (
+      <p>Ce calendrier ne repose que sur le <strong>climat de {d.ville.nom}</strong> (température et pluie). L’affluence touristique et les prix de l’hébergement ne sont pas disponibles pour ce pays.{d.ville.capitale ? ' La capitale ne représente pas toujours le climat des régions touristiques (altitude, littoral, désert) : prenez-le comme un repère.' : ''} La lecture varie aussi selon la région et le type de voyage.</p>
+    ) : (
+      <p>Le calendrier résume chaque mois d’après la température et les pluies de {d.ville.nom}, l’affluence touristique et le prix de l’hébergement dans le pays. C’est une lecture générale : elle varie selon la région et le type de voyage. « À éviter » signale plusieurs points d’attention cumulés (foule, prix, météo), jamais un danger.</p>
+    )}
     <ol class="calendrier">
       {mois.map((m) => (
         <li class={`mois-cal niveau-${m.niveau}`}>
-          <h3>{m.nom.charAt(0).toUpperCase() + m.nom.slice(1)} <span class="etat">{LIBELLE_NIVEAU[m.niveau]}</span></h3>
+          <h3>{m.nom.charAt(0).toUpperCase() + m.nom.slice(1)} <span class="etat">{libelles[m.niveau]}</span></h3>
           <p class="chiffres">{m.chiffres}</p>
           <ul class="raisons">
             {m.attention.map((r) => <li class="att">{r}</li>)}
@@ -31,10 +41,10 @@ const s = DONNEES.sources;
     </ol>
     <details class="faq">
       <summary>Comment sont établis ces libellés ?</summary>
-      <p>Règles simples de Voyages Malins, pas une recommandation officielle. Points d’attention : température moyenne sous {REGLES.froid} °C ou au-dessus de {REGLES.chaud} °C, {REGLES.pluieForte} mm de pluie ou plus dans le mois, affluence forte (indice au-dessus de {SEUILS.affluenceForte}), prix de l’hébergement plus élevés (indice au-dessus de {SEUILS.prixHaut}). Atouts : entre {REGLES.confortMin} et {REGLES.confortMax} °C, moins de {REGLES.pluieFaible} mm de pluie, affluence calme (sous {SEUILS.affluenceCalme}), prix plus bas (sous {SEUILS.prixBas}). Aucun point d’attention : « Bon moment » ; un : « Moins bon » ; deux ou plus : « À éviter ». Un mois « à éviter » peut convenir selon vos priorités (par exemple la plage en pleine saison).</p>
+      <p>Règles simples de Voyages Malins, pas une recommandation officielle. Points d’attention : température moyenne sous {REGLES.froid} °C ou au-dessus de {REGLES.chaud} °C, {REGLES.pluieForte} mm de pluie ou plus dans le mois{seul ? '' : `, affluence forte (indice au-dessus de ${SEUILS.affluenceForte}), prix de l’hébergement plus élevés (indice au-dessus de ${SEUILS.prixHaut})`}. Atouts : entre {REGLES.confortMin} et {REGLES.confortMax} °C, moins de {REGLES.pluieFaible} mm de pluie{seul ? '' : `, affluence calme (sous ${SEUILS.affluenceCalme}), prix plus bas (sous ${SEUILS.prixBas})`}. Aucun point d’attention : « {libelles.bon} » ; un : « {libelles.moins} » ; deux ou plus : « {libelles.eviter} ». Un mois peu favorable peut convenir selon vos priorités, par exemple la plage en pleine saison ou la randonnée par temps frais.</p>
     </details>
-    <p class="src">Sources : <a href={s.climat.url} rel="noopener">{s.climat.nom}</a> (climat, ville de référence : {d.ville.nom}, données modélisées) ; <a href={s.affluence.url} rel="noopener">Eurostat, nuitées</a> et <a href={s.prix.url} rel="noopener">Eurostat, prix de l’hébergement</a> (pays entier). Consultées le {dateFr(s.climat.acces)}. <a href={url(`/outils/quand-partir?pays=${p.slug}`)}>Voir les détails dans l’outil « Quand partir ? »</a>.</p>
+    <p class="src">Sources : <a href={s.climat.url} rel="noopener">{s.climat.nom}</a> (climat, ville de référence : {d.ville.nom}, données modélisées){seul ? '' : <> ; <a href={s.affluence.url} rel="noopener">Eurostat, nuitées</a> et <a href={s.prix.url} rel="noopener">Eurostat, prix de l’hébergement</a> (pays entier)</>}{d.ville.capitale ? <> ; <a href={s.capitales.url} rel="noopener">Wikidata</a> (coordonnées de la capitale)</> : ''}. Consultées le {dateFr(s.climat.acces)}. <a href={url(`/outils/quand-partir?pays=${p.slug}`)}>Voir les détails dans l’outil « Quand partir ? »</a>.</p>
   </section>
 ) : (
-  <p class="src" id="quand-partir">Calendrier « quand partir » : pas encore disponible pour {p.nom}. Nous ne publions que des données sourcées, aujourd’hui pour quelques pays d’Europe : voir l’<a href={url('/outils/quand-partir')}>outil « Quand partir ? »</a>.</p>
+  <p class="src" id="quand-partir">Calendrier « quand partir » : pas de données climatiques disponibles pour {p.nom}. Nous ne publions que des données sourcées : voir l’<a href={url('/outils/quand-partir')}>outil « Quand partir ? »</a>.</p>
 )}

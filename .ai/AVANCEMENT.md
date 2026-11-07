@@ -207,3 +207,6 @@ Accueil = choix de destination, 194 pays, fiche d'identité, drapeaux, convertis
 
 ## 7 novembre 2026 (soir) : calendrier sur les fiches pays
 - Fait : calendrier « quand partir » sur les 10 pays documentés, bloc « Préparer votre départ » sur toutes les fiches. À faire : étendre à d’autres pays (autre source de fréquentation et de prix nécessaire) ; décider quand la page budget aura des données.
+
+## 7 novembre 2026 (nuit) : calendrier climatique pour tous les pays
+- Fait : 194 pays dans `quand-partir.json` (10 documentés + 184 capitales). Calendrier sur chaque fiche, sauf pays déconseillés et Russie. À faire : relire les libellés sur quelques pays (la capitale peut mal représenter un pays), et chercher une source d’affluence et de prix hors Europe.

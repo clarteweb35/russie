@@ -1,21 +1,24 @@
 // Outil « Quand partir ? » : lecture des données importées (src/data/quand-partir.json, généré par
 // scripts/importer-quand-partir.mjs) et règles de lecture des indices. Aucune valeur n'est écrite ici.
 import brut from './quand-partir.json';
+import { ALERTE_SECURITE } from './monde';
 
 export const MOIS = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
 
 export type Source = { nom: string; url: string; periode: string; acces: string; maj?: string; note: string };
 export type DonneesPays = {
   iso: string;
-  slug: string;
-  ville: { nom: string; lat: number; lon: number };
+  ville: { nom: string; lat: number; lon: number; capitale?: boolean }; // capitale : ville de référence = capitale (climat seul)
   climat?: { temperature: number[]; pluie: number[] };
   affluence?: { indice: number[]; annees: string[] };
   prix?: { indice: number[]; annees: string[] };
   niveauPrix?: { valeur: number; annee: string };
 };
 
-export const DONNEES = brut as { genere: string; sources: Record<'climat' | 'affluence' | 'prix' | 'niveauPrix', Source>; pays: Record<string, DonneesPays> };
+export const DONNEES = brut as unknown as { genere: string; sources: Record<'climat' | 'affluence' | 'prix' | 'niveauPrix' | 'capitales', Source>; pays: Record<string, DonneesPays> }; // clé = code ISO3
+
+// Pays dont le voyage est déconseillé par le ministère (et la Russie) : pas de calendrier « bon moment », conformément à la règle de sécurité du site
+export const sansCalendrier = (iso: string) => ALERTE_SECURITE.has(iso) || iso === 'RUS';
 
 // Seuils de lecture choisis par Voyages Malins (indice 100 = moyenne de l'année). Ils sont affichés sur la page.
 export const SEUILS = { affluenceCalme: 75, affluenceForte: 125, prixBas: 95, prixHaut: 105 };
@@ -25,7 +28,7 @@ export const bandePrix = (i: number) => (i < SEUILS.prixBas ? 'plus bas' : i <= 
 
 // ---- Calendrier d'un pays : lecture mois par mois, par règles simples et affichées (aucune note inventée) ----
 // Chaque mois reçoit des points d'attention (défavorables) et des atouts, tirés des seuils ci-dessous, tous visibles sur la page.
-export const REGLES = { froid: 10, chaud: 30, confortMin: 15, confortMax: 28, pluieForte: 100, pluieFaible: 50 };
+export const REGLES = { froid: 10, chaud: 28, confortMin: 15, confortMax: 28, pluieForte: 150, pluieFaible: 50 };
 
 export type Niveau = 'bon' | 'moins' | 'eviter';
 export const LIBELLE_NIVEAU: Record<Niveau, string> = { bon: 'Bon moment', moins: 'Moins bon', eviter: 'À éviter' };
@@ -60,3 +63,7 @@ export function lectureMois(d: DonneesPays, m: number) {
   const chiffres = [t !== undefined ? `${dec(t)} °C` : '', p !== undefined ? `${p} mm` : ''].filter(Boolean).join(' · ');
   return { niveau, atouts, attention, chiffres };
 }
+
+// Pays sans données d'affluence ni de prix : le libellé ne parle que du climat
+export const LIBELLE_CLIMAT: Record<Niveau, string> = { bon: 'Climat favorable', moins: 'Climat moins favorable', eviter: 'Climat peu favorable' };
+export const climatSeul = (d: DonneesPays) => !d.affluence || !d.prix;
