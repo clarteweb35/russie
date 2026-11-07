@@ -221,3 +221,8 @@ Liste raisonnée des pays envisagés : `.ai/PAYS_PREVUS.md`. Suivi général du 
 - Pipeline testé avec un faux serveur seulement ; à lancer une fois à la main (Actions > Villes à connaître > Run workflow) pour vérifier clé, quota et qualité. Relire un échantillon de pays avant de s’y fier.
 - Faisabilité (estimation, à confirmer au premier lancement) : 193 appels avec recherche web, environ 20 à 30 secondes chacun plus 6 secondes de pause, soit 1,5 à 2 heures par exécution mensuelle. Le quota quotidien de recherche de l’API et son prix sont à vérifier dans la console Google AI Studio ; les villes (le 3) et les actualités (le lundi) sont décalées pour ne pas se partager le même quota.
 - Dette : `villes.mjs` duplique les fonctions d’appel de `actualites.mjs` ; à factoriser dans un module commun.
+
+## Villes à connaître : rédaction par Claude (7 novembre 2026)
+
+- Paquet 1 fait (20 pays, voir SPEC §19). Reste 173 pays, à traiter par paquets de 20, en commençant par les destinations les plus visitées. Les 22 pays de `ALERTE_SECURITE` seront à traiter à part (est-il pertinent de suggérer des villes à visiter là où le ministère déconseille le voyage ?).
+- Limites assumées : les sources sont des sites de voyage de qualité inégale ; le critère « importance pratique » se limite souvent à « capitale » faute de source sur les aéroports.

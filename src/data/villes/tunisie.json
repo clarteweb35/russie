@@ -1,0 +1,50 @@
+{
+  "slug": "tunisie",
+  "genere": "2026-11-07T00:14:31.752Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Sousse",
+      "pourquoi": "Destination de détente et de culture en bord de mer ; le site d’El Jem est à proximité.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Tunis",
+      "pourquoi": "Capitale ; médina et souks, avec le site de Carthage facilement accessible depuis la ville.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Tozeur",
+      "pourquoi": "Présentée comme la porte du désert, entre oasis et terres arides.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "TourMaG : top 5 des villes à visiter en Tunisie",
+      "url": "https://www.tourmag.com/Top-5-des-villes-a-visiter-en-Tunisie_a112581.html"
+    },
+    {
+      "titre": "Milesopedia : guide de voyage en Tunisie",
+      "url": "https://milesopedia.com/guides/destination/tunisie/"
+    },
+    {
+      "titre": "Routard : incontournables en Tunisie",
+      "url": "https://www.routard.com/guide_a_voir/tunisie.htm"
+    },
+    {
+      "titre": "Où et quand : où aller en Tunisie",
+      "url": "https://www.ou-et-quand.net/ou-aller/tunisie/"
+    },
+    {
+      "titre": "Voyageurs du Monde : guide de voyage Tunisie",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/tunisie"
+    }
+  ]
+}

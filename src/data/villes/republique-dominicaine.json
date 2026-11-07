@@ -1,0 +1,46 @@
+{
+  "slug": "republique-dominicaine",
+  "genere": "2026-11-07T00:14:31.752Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Punta Cana",
+      "pourquoi": "Station balnéaire phare du pays ; un séjour tout compris y est souvent recommandé.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Saint-Domingue",
+      "pourquoi": "Capitale, étape incontournable au riche patrimoine colonial.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Puerto Plata",
+      "pourquoi": "Citée comme l’une des principales destinations touristiques du pays ; maisons de style victorien, vieux fort et plage de Playa Dorada pour la détente.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Lastminute : séjour en République dominicaine",
+      "url": "https://www.fr.lastminute.com/sejour/voyage-republique-dominicaine.html"
+    },
+    {
+      "titre": "Bouger Voyager : 3 lieux incontournables en République dominicaine",
+      "url": "https://www.bouger-voyager.com/3-lieux-incontournables-a-visiter-en-republique-dominicaine/"
+    },
+    {
+      "titre": "Où et quand : République dominicaine",
+      "url": "https://www.ou-et-quand.net/ou-aller/republique-dominicaine/"
+    },
+    {
+      "titre": "Génération Voyage : plus beaux endroits de République dominicaine",
+      "url": "https://generationvoyage.fr/?p=82441"
+    }
+  ]
+}

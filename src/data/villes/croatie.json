@@ -1,0 +1,56 @@
+{
+  "slug": "croatie",
+  "genere": "2026-11-07T00:14:31.752Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Dubrovnik",
+      "pourquoi": "Placée en tête par presque toutes les sources : patrimoine historique, remparts médiévaux et cuisine méditerranéenne.",
+      "a_voir": [
+        "Les remparts médiévaux"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Zagreb",
+      "pourquoi": "Capitale : mélange d’architecture historique et moderne.",
+      "a_voir": [
+        "La vieille ville",
+        "Le marché Dolac",
+        "La cathédrale"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Split",
+      "pourquoi": "Deuxième ville du pays et point de départ des ferries et catamarans vers les îles.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Cityzeum : les plus belles villes de Croatie",
+      "url": "https://www.cityzeum.com/ar/les-plus-belles-villes-de-croatie-a-decouvrir-ou-a-redecouvrir"
+    },
+    {
+      "titre": "Terdav : que visiter en Croatie",
+      "url": "https://www.terdav.com/magazine-voyage/que-visiter-lors-un-voyage-en-croatie"
+    },
+    {
+      "titre": "OK Voyage : les belles villes de Croatie",
+      "url": "https://www.okvoyage.com/post/villes-croatie/"
+    },
+    {
+      "titre": "Evaneos : Croatie, que voir",
+      "url": "https://www.evaneos.fr/croatie/voyage/etape/"
+    },
+    {
+      "titre": "Club Med : que visiter en Croatie",
+      "url": "https://www.clubmed.fr/l/que-visiter-en-croatie"
+    }
+  ]
+}

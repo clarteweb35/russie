@@ -1,0 +1,49 @@
+{
+  "slug": "espagne",
+  "genere": "2026-11-07T00:14:31.752Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Barcelone",
+      "pourquoi": "Citée dans presque toutes les listes d’incontournables ; capitale de la Catalogne, en bord de mer.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Madrid",
+      "pourquoi": "Capitale du pays ; les itinéraires proposés partent souvent de Madrid avant Barcelone, Séville et Valence.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Grenade",
+      "pourquoi": "Ville de la Sierra Nevada, en Andalousie, citée pour l’Alhambra et le Generalife.",
+      "a_voir": [
+        "L’Alhambra",
+        "Le Generalife"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Airinfo : itinéraire des villes emblématiques d’Espagne",
+      "url": "https://airinfo.org/2024/02/16/guide-de-voyage-en-espagne-un-itineraire-pour-decouvrir-les-villes-emblematiques-espagnoles/"
+    },
+    {
+      "titre": "Lonely Planet : Espagne",
+      "url": "https://www.lonelyplanet.fr/destinations/europe/espagne"
+    },
+    {
+      "titre": "Guías Viajar : les plus belles villes d’Espagne",
+      "url": "https://guias-viajar.com/fr/tourisme-espagne/les-plus-belles-villes-d%27Espagne/"
+    },
+    {
+      "titre": "Voyage avec nous : plus belles villes d’Espagne",
+      "url": "https://www.voyageavecnous.fr/plus-belles-villes-espagne/"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "slug": "irlande",
+  "genere": "2026-11-07T00:14:31.752Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Galway",
+      "pourquoi": "Citée avec son port ; le Connemara, dans le comté de Galway, est souvent présenté comme l’un des plus beaux endroits du pays.",
+      "a_voir": [
+        "Le Connemara"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Dublin",
+      "pourquoi": "Centre historique et administratif, plus grande ville de l’île (plus d’un million d’habitants).",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Kilkenny",
+      "pourquoi": "Ville connue pour son château du XIIIe siècle.",
+      "a_voir": [
+        "Le château de Kilkenny"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Où et quand : où aller en Irlande",
+      "url": "https://www.ou-et-quand.net/guides-voyage/irlande/ou-aller/"
+    },
+    {
+      "titre": "Génération Voyage : les plus beaux endroits d’Irlande",
+      "url": "https://generationvoyage.fr/endroits-visiter-irlande/"
+    },
+    {
+      "titre": "Voyage avec nous : où aller en Irlande",
+      "url": "https://www.voyageavecnous.fr/ou-aller-en-irlande/"
+    },
+    {
+      "titre": "Chéri fais tes valises : top 10 des villes d’Irlande",
+      "url": "https://www.cherifaistesvalises.com/top-10-des-plus-belles-villes-dirlande/"
+    }
+  ]
+}

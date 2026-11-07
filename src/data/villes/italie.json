@@ -1,0 +1,46 @@
+{
+  "slug": "italie",
+  "genere": "2026-11-07T00:14:31.752Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Florence",
+      "pourquoi": "Une des villes les plus connues d’Italie, avec Rome et Venise ; citée comme bonne base pour explorer sa région.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Rome",
+      "pourquoi": "Capitale et ville la plus visitée du pays.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Naples",
+      "pourquoi": "Capitale de la Campanie, sur la côte ouest, citée parmi les plus belles villes du pays.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Milesopedia : guide de voyage Italie",
+      "url": "https://milesopedia.com/guides/destination/italie/"
+    },
+    {
+      "titre": "Luxe Admiral : quelle ville visiter en Italie",
+      "url": "https://www.luxe-admiral.com/blog/quelle-ville-visiter-en-italie"
+    },
+    {
+      "titre": "Voyage avec nous : plus belles villes d’Italie",
+      "url": "https://www.voyageavecnous.fr/plus-belles-villes-en-italie"
+    },
+    {
+      "titre": "Lonely Planet : Italie",
+      "url": "https://www.lonelyplanet.fr/destinations/europe/italie"
+    }
+  ]
+}

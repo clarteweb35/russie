@@ -1,0 +1,46 @@
+{
+  "slug": "grece",
+  "genere": "2026-11-07T00:14:31.752Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Santorin (Cyclades)",
+      "pourquoi": "Les Cyclades sont présentées comme l’image emblématique du pays, avec Santorin et Mykonos.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Athènes",
+      "pourquoi": "Capitale et plus grande ville ; passage obligé de la Grèce continentale, riche en monuments antiques.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Héraklion",
+      "pourquoi": "Capitale de la Crète, la plus grande île de Grèce ; ville animée.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Lonely Planet : villes et régions de Grèce",
+      "url": "https://www.lonelyplanet.fr/destinations/europe/grece/villes-et-regions"
+    },
+    {
+      "titre": "Visit World : 10 villes à visiter en Grèce",
+      "url": "https://visitworld.today/fr/blog/4640/what-to-see-in-greece-10-cities-to-visit"
+    },
+    {
+      "titre": "Your Little Black Book : guide de voyage en Grèce",
+      "url": "https://www.yourlittleblackbook.me/fr/travelguide/europe/greece/"
+    },
+    {
+      "titre": "Discover Greece : carte de la Grèce",
+      "url": "https://www.discovergreece.com/fr/map"
+    }
+  ]
+}

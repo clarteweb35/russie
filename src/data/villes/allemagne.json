@@ -1,0 +1,49 @@
+{
+  "slug": "allemagne",
+  "genere": "2026-11-07T00:14:31.752Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Munich",
+      "pourquoi": "Citée parmi les incontournables avec Berlin et Francfort ; présentée comme la ville traditionnelle, au cœur de la Bavière.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Berlin",
+      "pourquoi": "Capitale, présentée comme la capitale culturelle et historique du pays.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Cologne",
+      "pourquoi": "Mise en avant pour sa cathédrale et les bords du Rhin.",
+      "a_voir": [
+        "La cathédrale",
+        "Les bords du Rhin"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "AXA Schengen : 10 villes allemandes à visiter",
+      "url": "https://www.axa-schengen.com/fr/guide-voyage/10-villes-allemandes-a-visiter"
+    },
+    {
+      "titre": "FlixBus : villes à visiter en Allemagne",
+      "url": "https://www.flixbus.fr/decouvrir/destinations/villes-allemagne"
+    },
+    {
+      "titre": "OK Voyage : villes d’Allemagne à visiter",
+      "url": "https://www.okvoyage.com/post/villes-allemagne/"
+    },
+    {
+      "titre": "Routard : incontournables en Allemagne",
+      "url": "https://www.routard.com/guide_a_voir/allemagne.htm"
+    }
+  ]
+}

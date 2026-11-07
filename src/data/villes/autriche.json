@@ -1,0 +1,50 @@
+{
+  "slug": "autriche",
+  "genere": "2026-11-07T00:14:31.752Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Salzbourg",
+      "pourquoi": "Ville natale de Mozart, souvent présentée comme une étape incontournable.",
+      "a_voir": [
+        "La forteresse de Hohensalzburg",
+        "Les jardins Mirabell",
+        "La cathédrale"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Vienne",
+      "pourquoi": "Capitale presque toujours en tête : six siècles d’histoire impériale et plus d’une centaine de musées.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Innsbruck",
+      "pourquoi": "Ville médiévale du Tyrol, destination par excellence des sports d’hiver.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Toploc : 15 choses à voir en Autriche",
+      "url": "https://toploc.com/blog/europe/visiter-autriche"
+    },
+    {
+      "titre": "Voyage avec nous : que faire en Autriche",
+      "url": "https://www.voyageavecnous.fr/que-faire-en-autriche/"
+    },
+    {
+      "titre": "SNCF Connect : top 10 des lieux à visiter en Autriche",
+      "url": "https://www.sncf-connect.com/article/top-10-des-lieux-a-visiter-en-autriche"
+    },
+    {
+      "titre": "Voyage Tips : visiter l’Autriche",
+      "url": "https://www.voyagetips.com/que-faire-en-autriche/"
+    }
+  ]
+}

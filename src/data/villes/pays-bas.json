@@ -1,0 +1,50 @@
+{
+  "slug": "pays-bas",
+  "genere": "2026-11-07T00:14:31.752Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Delft",
+      "pourquoi": "Petite ville de canaux réputée pour sa faïence bleu et blanc, citée comme alternative plus calme à Amsterdam.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Amsterdam",
+      "pourquoi": "Capitale et porte d’entrée du voyage, surnommée la « Venise du Nord » pour ses canaux ; la plupart des autres villes sont à moins de 45 minutes en train.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Rotterdam",
+      "pourquoi": "Deuxième ville du pays, connue pour son architecture contemporaine et la Markthal.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "NH Hotels : lieux à voir près d’Amsterdam",
+      "url": "https://www.nh-hotels.com/fr/guides-de-voyage/amsterdam/voir-pres-amsterdam"
+    },
+    {
+      "titre": "OK Voyage : villes des Pays-Bas",
+      "url": "https://www.okvoyage.com/post/villes-pays-bas/"
+    },
+    {
+      "titre": "Où et quand : Pays-Bas",
+      "url": "https://www.ou-et-quand.net/ou-aller/pays-bas/"
+    },
+    {
+      "titre": "Hostelz : voyager seul aux Pays-Bas",
+      "url": "https://www.hostelz.com/fr/voyage-solo-en-pays-bas"
+    },
+    {
+      "titre": "Routard : incontournables aux Pays-Bas",
+      "url": "https://www.routard.com/guide_a_voir/pays_bas.htm"
+    }
+  ]
+}

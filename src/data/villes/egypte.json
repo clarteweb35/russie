@@ -1,0 +1,55 @@
+{
+  "slug": "egypte",
+  "genere": "2026-11-07T00:14:31.752Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Louxor",
+      "pourquoi": "Surnommée le plus grand musée à ciel ouvert du monde.",
+      "a_voir": [
+        "La Vallée des Rois",
+        "Le temple de Hatchepsout"
+      ],
+      "conseil": "Un guide conseille au moins deux à trois jours sur place."
+    },
+    {
+      "critere": "pratique",
+      "nom": "Le Caire",
+      "pourquoi": "Capitale ; un guide récent met en avant le Grand Musée égyptien et les pyramides de Gizeh.",
+      "a_voir": [
+        "Le Grand Musée égyptien",
+        "Les pyramides de Gizeh",
+        "Memphis et Saqqarah, à proximité"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Assouan",
+      "pourquoi": "Aux portes de la Nubie, plus paisible que les autres grandes villes ; les temples d’Abou Simbel sont accessibles depuis la ville.",
+      "a_voir": [
+        "Les temples d’Abou Simbel"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Sem Elegant Voyage : destinations d’Égypte 2026",
+      "url": "https://semelegantvoyage.com/fr-lu/destinations-egypte-votre-guide-complet-des-sites-incon-lu/"
+    },
+    {
+      "titre": "Avygeo : top des villes d’Égypte",
+      "url": "https://www.avygeo.com/fr/top-destinations/top-villes/afrique/egypte"
+    },
+    {
+      "titre": "Routard : visiter Louxor",
+      "url": "https://www.routard.com/guide_voyage_lieu/3004-louxor.htm"
+    },
+    {
+      "titre": "Génération Voyage : les plus belles villes d’Égypte",
+      "url": "https://generationvoyage.fr/villes-egypte/"
+    }
+  ]
+}

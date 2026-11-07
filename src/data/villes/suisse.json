@@ -1,0 +1,50 @@
+{
+  "slug": "suisse",
+  "genere": "2026-11-07T00:14:31.752Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Lucerne",
+      "pourquoi": "Située entre le lac des Quatre-Cantons et la montagne ; présentée comme un lieu incontournable.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Berne",
+      "pourquoi": "Capitale au charme médiéval ; abrite, selon un guide, la plus longue promenade commerçante d’Europe.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Zermatt",
+      "pourquoi": "Station de ski mythique, au pied du Cervin.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Voyage Privé : guide de voyage en Suisse",
+      "url": "https://www.voyage-prive.com/offres/guide-de-voyage-en-suisse"
+    },
+    {
+      "titre": "Cityzeum : guide Suisse",
+      "url": "https://www.cityzeum.com/guide/suisse-7750"
+    },
+    {
+      "titre": "Routard : incontournables en Suisse",
+      "url": "https://www.routard.com/guide_a_voir/suisse.htm"
+    },
+    {
+      "titre": "WeRoad : que voir en Suisse",
+      "url": "https://www.weroad.fr/blog/que-voir-en-suisse"
+    },
+    {
+      "titre": "Interrail : itinéraire en Suisse",
+      "url": "https://www.interrail.com/fr/plan-your-trip/trip-ideas/recommended-routes/classic-routes/switzerland-itinerary"
+    }
+  ]
+}

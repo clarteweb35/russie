@@ -1,0 +1,53 @@
+{
+  "slug": "thailande",
+  "genere": "2026-11-07T00:14:31.752Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Chiang Mai",
+      "pourquoi": "Ancienne capitale de l’empire Lanna, avec plus de 300 temples.",
+      "a_voir": [
+        "Le Doi Suthep, point de vue panoramique",
+        "Le Wat Chedi Luang, dans la vieille ville"
+      ],
+      "conseil": "Selon Lonely Planet, mieux vaut venir de novembre à janvier ou en saison des pluies : de fin février à début avril, la ville est souvent envahie par la fumée des feux agricoles."
+    },
+    {
+      "critere": "pratique",
+      "nom": "Bangkok",
+      "pourquoi": "Capitale et métropole animée ; beaucoup de voyageurs y atterrissent avant de repartir aussitôt, ce que Lonely Planet juge dommage.",
+      "a_voir": [
+        "Wat Pho",
+        "Wat Arun",
+        "Le marché de Chatuchak"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Phuket",
+      "pourquoi": "Destination de plages et de détente, desservie par un aéroport international bien connecté.",
+      "a_voir": [],
+      "conseil": "Meilleure période : de décembre à mars (températures agréables, temps dégagé)."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Lonely Planet : villes et régions de Thaïlande",
+      "url": "https://www.lonelyplanet.fr/destinations/asie/thailande/villes-et-regions"
+    },
+    {
+      "titre": "Partir.com : top 6 des villes de Thaïlande",
+      "url": "https://www.partir.com/Thailande/villes-thailande/visite-a-voir.html"
+    },
+    {
+      "titre": "Voyageurs du Monde : guide de voyage Thaïlande",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/thailande"
+    },
+    {
+      "titre": "Avygeo : guide Thaïlande",
+      "url": "https://www.avygeo.com/fr/guide/asie/thailande"
+    }
+  ]
+}

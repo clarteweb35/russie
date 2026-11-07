@@ -1,0 +1,49 @@
+{
+  "slug": "royaume-uni",
+  "genere": "2026-11-07T00:14:31.752Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Édimbourg",
+      "pourquoi": "Citée comme l’une des villes pittoresques du pays, avec Glasgow ; les Highlands sont présentés comme l’une des régions sauvages les plus spectaculaires d’Europe.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Londres",
+      "pourquoi": "Plus grande ville d’Angleterre ; Cambridge, York et Canterbury sont citées comme villes à explorer depuis Londres.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Belfast",
+      "pourquoi": "Capitale de l’Irlande du Nord, mise en avant pour ses fresques historiques et contemporaines et la Chaussée des Géants.",
+      "a_voir": [
+        "Les fresques de la ville",
+        "La Chaussée des Géants"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Visa ETA : meilleures villes britanniques",
+      "url": "https://visaeta.uk/fr/?p=2396"
+    },
+    {
+      "titre": "Voyageurs du Monde : Grande-Bretagne, à voir à faire",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/grande-bretagne/things-to-do/"
+    },
+    {
+      "titre": "Où et quand : visiter le Royaume-Uni",
+      "url": "https://www.ou-et-quand.net/ou-aller/royaume-uni/"
+    },
+    {
+      "titre": "Kayak : villes du Royaume-Uni",
+      "url": "https://www.kayak.fr/news/?p=23654"
+    }
+  ]
+}

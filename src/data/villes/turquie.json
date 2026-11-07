@@ -1,0 +1,49 @@
+{
+  "slug": "turquie",
+  "genere": "2026-11-07T00:14:31.752Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Istanbul",
+      "pourquoi": "Revient systématiquement dans les guides ; présentée comme un carrefour des continents, entre histoire et modernité.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Ankara",
+      "pourquoi": "Capitale du pays. Les sources consultées la traitent peu : un guide conseille de la visiter avec un guide local.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Cappadoce",
+      "pourquoi": "Attraction phare de l’intérieur du pays.",
+      "a_voir": [
+        "Vol en montgolfière au lever du soleil",
+        "Les villes souterraines"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : incontournables en Turquie",
+      "url": "https://www.routard.com/guide_a_voir/turquie.htm"
+    },
+    {
+      "titre": "Lastminute : les villes de Turquie",
+      "url": "https://www.fr.lastminute.com/idees-voyage/moyen-orient/turquie/villes-de-turquie"
+    },
+    {
+      "titre": "Guías Viajar : tourisme en Turquie",
+      "url": "https://guias-viajar.com/fr/Europe/tourisme-en-Turquie/"
+    },
+    {
+      "titre": "Selectour : que faire en Turquie",
+      "url": "https://www.selectour.com/magazine/article/que-faire-en-turquie"
+    }
+  ]
+}

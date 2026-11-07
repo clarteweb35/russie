@@ -333,3 +333,12 @@ Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fich
 ## 19. Filtre « Départ » en menu déroulant (7 novembre 2026)
 
 - Sur `/bons-plans/`, le filtre par ville de départ est un menu déroulant (« Toutes les villes », puis chaque ville avec son nombre d'offres, par ordre alphabétique) au lieu d'une rangée de boutons, pour tenir avec un public national. Les villes viennent des offres ; sans ville de départ dans les offres, le filtre n'apparaît pas. Le filtre de budget reste en boutons.
+
+## 20. Démonstration de l’index pays dans le style des bons plans (7 novembre 2026)
+
+- Route locale `/demo-pays/`, marquée `noindex`, sans remplacement de l’accueil actuel. Reprend l’identité des pages commerciales (en-tête, palette marine/jaune, typographie, cartes façon billet) et conserve le répertoire de pays, la recherche, les filtres régionaux, les drapeaux et les liens. Aucune publication prévue dans cette tâche. Fichier : `src/pages/demo-pays.astro`.
+
+## 19. Villes à connaître rédigées à la main (7 novembre 2026)
+
+- Faute de quota Gemini, les topos de villes sont aussi rédigés par Claude à partir de recherches web, par paquets de 20 pays, dans les mêmes fichiers `src/data/villes/<pays>.json` ; le champ `modele` vaut « Claude (recherche web) » et s'affiche sur le bloc. Si le workflow `villes.yml` fonctionne un jour, il remplace ces fichiers. Règles : rien d'autre que ce que disent les résultats de recherche ; les sources sont des sites de voyage (signalés comme non officiels) ; le critère « importance pratique » repose sur la capitale ou un nœud de transport cité, jamais sur un aéroport non vérifié ; conseils pratiques seulement s'ils sont sourcés ; le bloc disparaît après 120 jours.
+- Paquet 1 (20 pays) : Espagne, Italie, Portugal, Grèce, Maroc, Turquie, Allemagne, Royaume-Uni, Belgique, Suisse, États-Unis, Thaïlande, Tunisie, Croatie, Pays-Bas, Irlande, Japon, Autriche, Égypte, République dominicaine.

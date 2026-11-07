@@ -31,7 +31,7 @@ const date = topo ? new Date(topo.genere).toLocaleDateString('fr-FR', { day: 'nu
       ))}
     </div>
     <p class="src">
-      Sources :{' '}
+      Sources (sites de voyage, pas des sources officielles) :{' '}
       {topo.sources.map((s, i) => <>{i > 0 && ' ; '}<a href={s.url} rel="noopener">{s.titre}</a></>)}
     </p>
   </section>

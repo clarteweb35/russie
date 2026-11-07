@@ -1,0 +1,46 @@
+{
+  "slug": "portugal",
+  "genere": "2026-11-07T00:14:31.752Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Porto",
+      "pourquoi": "Revient souvent dans les guides, qui soulignent son charme.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Lisbonne",
+      "pourquoi": "Capitale du pays, présente dans presque tous les guides.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Faro",
+      "pourquoi": "Ville de l’Algarve, riche en culture mais souvent éclipsée par les stations balnéaires voisines.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Winalist : guide pour un voyage au Portugal",
+      "url": "https://www.winalist.fr/blog/portugal/voyage-portugal"
+    },
+    {
+      "titre": "OK Voyage : la plus belle ville du Portugal",
+      "url": "https://www.okvoyage.com/?p=43301"
+    },
+    {
+      "titre": "Paris Match : cinq villes à visiter au Portugal",
+      "url": "https://www.parismatch.be/lifestyle/voyages/2021/08/05/cinq-villes-a-visiter-au-portugal-qui-changent-de-lisbonne-et-porto-GYCNQXEGJVFSBOD26FGBL6VIIQ/"
+    },
+    {
+      "titre": "Cityzeum : les plus belles villes du Portugal",
+      "url": "https://www.cityzeum.com/ar/les-plus-belles-villes-de-portugal"
+    }
+  ]
+}

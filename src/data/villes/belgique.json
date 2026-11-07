@@ -1,0 +1,46 @@
+{
+  "slug": "belgique",
+  "genere": "2026-11-07T00:14:31.752Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Bruges",
+      "pourquoi": "Offre une plongée dans le passé médiéval ; l’une des villes d’art les plus citées, avec Gand.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Bruxelles",
+      "pourquoi": "Capitale du pays et étape majeure, notamment pour la bande dessinée.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Ostende",
+      "pourquoi": "Présentée comme la station balnéaire la plus prisée de Belgique.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "FlixBus : villes à visiter en Belgique",
+      "url": "https://www.flixbus.fr/decouvrir/destinations/villes-belgique"
+    },
+    {
+      "titre": "Routard : incontournables en Belgique",
+      "url": "https://www.routard.com/guide_a_voir/belgique.htm"
+    },
+    {
+      "titre": "Cityzeum : guide Belgique",
+      "url": "https://www.cityzeum.com/guide/belgique"
+    },
+    {
+      "titre": "Où et quand : où aller en Belgique",
+      "url": "https://www.ou-et-quand.net/guides-voyage/belgique/ou-aller/"
+    }
+  ]
+}

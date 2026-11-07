@@ -1,0 +1,52 @@
+{
+  "slug": "maroc",
+  "genere": "2026-11-07T00:14:31.752Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Marrakech",
+      "pourquoi": "Souvent citée comme la ville la plus animée du pays ; médina classée à l’UNESCO. C’est l’une des quatre villes impériales.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Rabat",
+      "pourquoi": "Capitale du pays, inscrite au patrimoine mondial ; l’une des quatre villes impériales.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Merzouga",
+      "pourquoi": "Au bord du Sahara, connue pour les grandes dunes de l’Erg Chebbi.",
+      "a_voir": [
+        "Les dunes de l’Erg Chebbi"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Lastminute : quelles villes visiter au Maroc",
+      "url": "https://www.fr.lastminute.com/idees-voyage/afrique/maroc/quelles-villes-visiter"
+    },
+    {
+      "titre": "Bladi : les plus belles villes marocaines",
+      "url": "https://www.bladi.net/plus-belles-villes-marocaines,40275.html"
+    },
+    {
+      "titre": "Milesopedia : guide de voyage Maroc",
+      "url": "https://milesopedia.fr/guides/meilleures-destinations-maroc/"
+    },
+    {
+      "titre": "WeRoad : que voir au Maroc",
+      "url": "https://www.weroad.fr/blog/que-voir-au-maroc/"
+    },
+    {
+      "titre": "TourMaG : les incontournables du Maroc",
+      "url": "https://www.tourmag.com/Vacances-au-Maroc-les-incontournables_a113146.html"
+    }
+  ]
+}

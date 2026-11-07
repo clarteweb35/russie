@@ -1,0 +1,54 @@
+{
+  "slug": "japon",
+  "genere": "2026-11-07T00:14:31.752Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Kyoto",
+      "pourquoi": "Présentée comme conjuguant poésie, art et modernité ; la plupart des premiers voyageurs se limitent au duo Tokyo / Kyoto.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Tokyo",
+      "pourquoi": "Capitale et métropole la plus peuplée du monde, entre temples traditionnels et néons de Shibuya.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Osaka",
+      "pourquoi": "Grande ville jugée bien différente de Tokyo par ses habitants, son ambiance et sa gastronomie ; bonne base pour une excursion à Nara.",
+      "a_voir": [
+        "Le quartier de Dotonbori",
+        "Les okonomiyaki, version d’Osaka",
+        "Nara et le Todai-ji, en excursion"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Japan Experience : les villes du Japon",
+      "url": "https://www.japan-experience.com/fr/decouvrir/villes"
+    },
+    {
+      "titre": "JRailPass : grandes villes japonaises",
+      "url": "https://www.jrailpass.com/blog/fr/grandes-villes-japonaises"
+    },
+    {
+      "titre": "Voyageurs du Monde : Japon, à voir à faire",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/japon/a-voir-a-faire"
+    },
+    {
+      "titre": "Routard (forum) : Osaka ou Hiroshima",
+      "url": "https://www.routard.com/forums/t/osaka-ou-hiroshima/345065"
+    },
+    {
+      "titre": "Osaka Info : excursion à Hiroshima",
+      "url": "https://osaka-info.jp/fr/information/around-trip/hiroshima.html"
+    }
+  ]
+}

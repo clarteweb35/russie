@@ -1,0 +1,50 @@
+{
+  "slug": "etats-unis",
+  "genere": "2026-11-07T00:14:31.752Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "New York",
+      "pourquoi": "Présentée comme le cœur des États-Unis et la ville la plus fréquentée à visiter.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Washington",
+      "pourquoi": "Capitale fédérale, imprégnée de politique et d’histoire, riche en monuments.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Miami",
+      "pourquoi": "Connue pour ses plages et son street art.",
+      "a_voir": [
+        "South Beach",
+        "Le quartier de Wynwood (fresques de street art)",
+        "Les Everglades, à proximité"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Guías Viajar : guide des États-Unis",
+      "url": "https://guias-viajar.com/fr/guide-des-%C3%A9tats-unis/"
+    },
+    {
+      "titre": "Daily Geek Show : villes des États-Unis",
+      "url": "https://dailygeekshow.com/etats-unis-villes/"
+    },
+    {
+      "titre": "Voyageurs du Monde : États-Unis, un petit tour en ville",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/idees-voyage/un-petit-tour-en-ville/etats-unis-38"
+    },
+    {
+      "titre": "Routard : incontournables aux États-Unis",
+      "url": "https://www.routard.com/guide_a_voir/etats_unis.htm"
+    }
+  ]
+}
