@@ -1,0 +1,244 @@
+---
+// Outil « Quand partir ? » : trois critères présentés séparément (climat, affluence, prix de l'hébergement),
+// uniquement pour les destinations dont les données sont documentées (src/data/quand-partir.json, généré avec sources et dates).
+// Aucun score global, aucune valeur estimée.
+import Base from '../../layouts/Base.astro';
+import { DONNEES, MOIS, SEUILS } from '../../data/quand-partir';
+import { parIso } from '../../data/monde';
+import { outils, NOM_SITE, url } from '../../config';
+
+const destinations = Object.values(DONNEES.pays)
+  .map((d) => {
+    const f = parIso(d.iso)!;
+    return { s: d.slug, i: d.iso.toLowerCase(), n: f.nom, h: url(f.href), v: d.ville.nom, t: d.climat?.temperature, p: d.climat?.pluie, a: d.affluence?.indice, x: d.prix?.indice, nv: d.niveauPrix };
+  })
+  .sort((a, b) => a.n.localeCompare(b.n, 'fr'));
+
+const dateFr = (iso: string) => new Date(`${iso}T12:00:00`).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+const rubriques = [
+  { cle: 'climat', titre: 'Climat : température et précipitations' },
+  { cle: 'affluence', titre: 'Affluence touristique' },
+  { cle: 'prix', titre: 'Prix de l’hébergement' },
+  { cle: 'niveauPrix', titre: 'Niveau de prix du pays (repère)' },
+] as const;
+
+const faq = [
+  { q: 'Pourquoi seulement quelques destinations ?', r: `Nous ne publions que des données que nous pouvons sourcer et dater. Pour ${destinations.length} pays d’Europe, des sources ouvertes et officielles existent (Eurostat, NASA). Pour les autres, nous n’avons pas encore de données fiables : nous préférons ne rien afficher que d’inventer des notes ou des saisons.` },
+  { q: 'Quel est le meilleur mois pour partir ?', r: 'Il n’y en a pas d’unique : cela dépend de la région du pays, du type de voyage (plage, ville, randonnée) et de vos priorités. C’est pourquoi nous ne calculons aucune note globale. Chaque critère est présenté séparément, à vous de les pondérer.' },
+  { q: 'D’où viennent les températures et les précipitations ?', r: 'Elles proviennent de la climatologie NASA POWER (réanalyse MERRA-2, 2001 à 2025) au point d’une ville de référence. Ce sont des données modélisées sur une grille d’environ 50 km, pas des relevés de station, et une seule ville par pays : le climat varie parfois beaucoup d’une région à l’autre.' },
+  { q: 'Que mesure l’affluence ?', r: 'Le nombre de nuitées dans les hébergements touristiques du pays entier (Eurostat), tous visiteurs confondus, moyenné sur les trois dernières années complètes. L’indice 100 correspond à un mois moyen. Un lieu précis peut être plus ou moins fréquenté que la moyenne du pays.' },
+  { q: 'Que mesure le prix de l’hébergement ?', r: 'La variation saisonnière de l’indice des prix de l’hébergement (Eurostat). Il montre quels mois sont plus chers ou moins chers dans un même pays, pas le prix d’une chambre, et il ne permet pas de comparer deux pays entre eux. Le niveau de prix des restaurants et hôtels, par rapport à la moyenne européenne, est indiqué à part.' },
+  { q: 'Les vols sont-ils pris en compte ?', r: 'Non. Cet outil ne concerne que la destination, pas le trajet. Les prix des vols varient selon la ville de départ, la date de réservation et la compagnie.' },
+];
+
+const jsonLd = [{
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.r } })),
+}];
+
+const donnees = { mois: MOIS, pays: destinations, seuils: SEUILS };
+---
+<Base
+  title="Quand partir ? Climat, affluence et prix, mois par mois"
+  titreComplet={`Quand partir ? Climat, affluence et prix de l’hébergement mois par mois | ${NOM_SITE}`}
+  description={`Choisissez un mois pour voir quelles destinations conviennent, ou un pays pour comparer ses douze mois : température, pluie, affluence et prix de l’hébergement, avec sources officielles datées.`}
+  fil={[{ label: 'Outils', href: '/outils' }, { label: 'Quand partir ?' }]}
+  jsonLd={jsonLd}
+  meta={false}
+  bandeau={false}
+>
+  <h1>Quand partir ?</h1>
+  <p class="lead">Choisissez un mois pour découvrir les destinations adaptées, ou un pays pour voir ses douze mois d’un coup d’œil. Le climat, l’affluence et le prix de l’hébergement sont présentés séparément, chacun avec sa source.</p>
+  <div class="alert warn">
+    <strong class="alert-titre">{destinations.length} destinations documentées, pas plus</strong>
+    Nous ne publions que des données sourcées et datées, aujourd’hui pour {destinations.length} pays d’Europe. Une recommandation générale peut varier selon la région du pays et le type de voyage : prenez ces indications comme un repère, pas comme une règle.
+  </div>
+
+  <noscript><div class="alert warn"><strong class="alert-titre">JavaScript est nécessaire</strong>Cet outil fonctionne dans votre navigateur. Les sources et les questions fréquentes ci-dessous restent lisibles.</div></noscript>
+
+  <section aria-labelledby="par-mois">
+    <h2 id="par-mois">Par mois : où partir ?</h2>
+    <form id="form-mois" class="bagages-form" aria-label="Choix du mois et des préférences" onsubmit="return false">
+      <div class="champ">
+        <label for="q-mois">Mois de départ</label>
+        <select id="q-mois">{MOIS.map((m, i) => <option value={i}>{m.charAt(0).toUpperCase() + m.slice(1)}</option>)}</select>
+      </div>
+      <div class="champ">
+        <label for="q-tmin">Température moyenne, de (°C)</label>
+        <input id="q-tmin" type="number" value="15" min="-20" max="40" inputmode="numeric" />
+      </div>
+      <div class="champ">
+        <label for="q-tmax">à (°C)</label>
+        <input id="q-tmax" type="number" value="28" min="-20" max="45" inputmode="numeric" />
+      </div>
+      <div class="champ">
+        <label for="q-aff">Affluence</label>
+        <select id="q-aff">
+          <option value="">Peu importe</option>
+          <option value="moyenne">Calme ou moyenne</option>
+          <option value="calme">Calme seulement</option>
+        </select>
+      </div>
+      <div class="champ">
+        <label for="q-prix">Prix de l’hébergement</label>
+        <select id="q-prix">
+          <option value="">Peu importe</option>
+          <option value="moyen">Plus bas ou proche de la moyenne</option>
+          <option value="bas">Plus bas seulement</option>
+        </select>
+      </div>
+    </form>
+    <p id="q-compte" role="status" aria-live="polite"></p>
+    <ul id="q-resultats" class="quand-liste"></ul>
+  </section>
+
+  <section aria-labelledby="par-pays">
+    <h2 id="par-pays">Par pays : les douze mois</h2>
+    <form id="form-pays" class="bagages-form" aria-label="Choix du pays" onsubmit="return false">
+      <div class="champ">
+        <label for="p-pays">Pays</label>
+        <select id="p-pays">{destinations.map((d) => <option value={d.s}>{d.n}</option>)}</select>
+      </div>
+    </form>
+    <div id="p-resume"></div>
+    <div class="table-scroll">
+      <table id="p-table" class="quand-table">
+        <caption id="p-legende"></caption>
+        <thead><tr><th scope="col">Mois</th><th scope="col">Température moyenne</th><th scope="col">Pluie</th><th scope="col">Affluence</th><th scope="col">Prix de l’hébergement</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="src">Seuils de lecture choisis par Voyages Malins pour interpréter les indices (100 = moyenne de l’année) : affluence « calme » sous {SEUILS.affluenceCalme}, « forte » au-dessus de {SEUILS.affluenceForte} ; prix « plus bas » sous {SEUILS.prixBas}, « plus élevé » au-dessus de {SEUILS.prixHaut}.</p>
+  </section>
+
+  <section aria-labelledby="sources-quand">
+    <h2 id="sources-quand">Sources et dates</h2>
+    <ul class="sources-liste">
+      {rubriques.map((r) => {
+        const s = DONNEES.sources[r.cle];
+        return (
+          <li>
+            <strong>{r.titre}</strong><br />
+            <a href={s.url} rel="noopener">{s.nom}</a>. {s.periode}.{s.maj ? ` Jeu de données mis à jour le ${dateFr(s.maj)}.` : ''} Consulté le {dateFr(s.acces)}. {s.note}
+          </li>
+        );
+      })}
+    </ul>
+    <p class="src">Source officielle (Eurostat) pour la fréquentation et les prix ; source scientifique modélisée (NASA) pour le climat. Aucune de ces données n’a été estimée ou complétée par Voyages Malins.</p>
+  </section>
+
+  <section aria-labelledby="liens-quand">
+    <h2 id="liens-quand">Pour aller plus loin</h2>
+    <ul class="guides-grille">
+      {destinations.map((d) => (
+        <li>
+          <a href={d.h}>
+            <img src={url(`/drapeaux/${d.i}.svg`)} alt="" width="48" height="32" loading="lazy" />
+            <span><strong>{d.n}</strong><small>Guide du pays</small></span>
+          </a>
+        </li>
+      ))}
+    </ul>
+    <p>Autres outils : {outils.filter((o) => o.href !== '/outils/quand-partir').map((o, i) => <>{i > 0 && ' · '}<a href={url(o.href)}>{o.label}</a></>)} · <a href={url('/outils')}>Tous les outils</a></p>
+  </section>
+
+  <section aria-labelledby="faq-quand">
+    <h2 id="faq-quand">Questions fréquentes</h2>
+    {faq.map((f) => (
+      <details class="faq"><summary>{f.q}</summary><p>{f.r}</p></details>
+    ))}
+  </section>
+
+  <script type="application/json" id="donnees-quand" set:html={JSON.stringify(donnees)} />
+</Base>
+
+<script>
+  type Pays = { s: string; n: string; h: string; v: string; t?: number[]; p?: number[]; a?: number[]; x?: number[]; nv?: { valeur: number; annee: string } };
+  const d = JSON.parse(document.getElementById('donnees-quand')?.textContent ?? '{}');
+  const MOIS: string[] = d.mois;
+  const pays: Pays[] = d.pays;
+  const S = d.seuils as { affluenceCalme: number; affluenceForte: number; prixBas: number; prixHaut: number };
+  const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
+  const maj = (m: string) => m.charAt(0).toUpperCase() + m.slice(1);
+  const dec = (n: number) => n.toLocaleString('fr-FR', { maximumFractionDigits: 1 });
+  const bandeAff = (i: number) => (i < S.affluenceCalme ? 'calme' : i <= S.affluenceForte ? 'moyenne' : 'forte');
+  const bandePrix = (i: number) => (i < S.prixBas ? 'plus bas' : i <= S.prixHaut ? 'proche de la moyenne' : 'plus élevé');
+  const el = (tag: string, classe?: string, texte?: string) => { const e = document.createElement(tag); if (classe) e.className = classe; if (texte !== undefined) e.textContent = texte; return e; };
+
+  // --- Par mois : filtres sur chacun des critères, sans score global ---
+  const fMois = $<HTMLSelectElement>('q-mois');
+  fMois.value = String(new Date().getMonth());
+  function parMois() {
+    const m = Number(fMois.value);
+    const tmin = Number($<HTMLInputElement>('q-tmin').value);
+    const tmax = Number($<HTMLInputElement>('q-tmax').value);
+    const aff = $<HTMLSelectElement>('q-aff').value;
+    const prix = $<HTMLSelectElement>('q-prix').value;
+    const liste = $('q-resultats');
+    liste.replaceChildren();
+    let n = 0;
+    pays.forEach((p) => {
+      const t = p.t?.[m]; const a = p.a?.[m]; const x = p.x?.[m];
+      // Une donnée absente exclut la destination dès que le critère correspondant est demandé
+      if (Number.isFinite(tmin) && Number.isFinite(tmax) && (t === undefined || t < tmin || t > tmax)) return;
+      if (aff === 'calme' && (a === undefined || bandeAff(a) !== 'calme')) return;
+      if (aff === 'moyenne' && (a === undefined || bandeAff(a) === 'forte')) return;
+      if (prix === 'bas' && (x === undefined || bandePrix(x) !== 'plus bas')) return;
+      if (prix === 'moyen' && (x === undefined || bandePrix(x) === 'plus élevé')) return;
+      n++;
+      const li = el('li', 'quand-carte');
+      const a1 = el('a', '', p.n) as HTMLAnchorElement; a1.href = p.h;
+      const titre = el('h3'); titre.append(a1);
+      li.append(titre, el('p', 'quand-ville', `Ville de référence : ${p.v}`));
+      const dl = el('dl', 'quand-crit');
+      const ligne = (k: string, v: string) => { dl.append(el('dt', '', k), el('dd', '', v)); };
+      if (t !== undefined) ligne('Température', `${dec(t)} °C${p.p ? `, ${p.p[m]} mm de pluie` : ''}`);
+      if (a !== undefined) ligne('Affluence', `${bandeAff(a)} (indice ${a})`);
+      if (x !== undefined) ligne('Prix de l’hébergement', `${bandePrix(x)} (indice ${x})`);
+      li.append(dl);
+      liste.append(li);
+    });
+    $('q-compte').textContent = `${n} destination${n > 1 ? 's' : ''} sur ${pays.length} documentée${pays.length > 1 ? 's' : ''} correspond${n > 1 ? 'ent' : ''} en ${MOIS[m]}.`;
+  }
+  $('form-mois').addEventListener('input', parMois);
+  parMois();
+
+  // --- Par pays : les douze mois, un critère par colonne ---
+  const fPays = $<HTMLSelectElement>('p-pays');
+  const barre = (v: number, min: number, max: number) => {
+    const b = el('span', 'barre'); b.setAttribute('aria-hidden', 'true');
+    b.style.setProperty('--v', `${max === min ? 50 : Math.max(6, ((v - min) / (max - min)) * 100)}%`);
+    return b;
+  };
+  function parPays() {
+    const p = pays.find((x) => x.s === fPays.value);
+    if (!p) return;
+    const mois = new Date().getMonth();
+    $('p-legende').textContent = `${p.n} : ${MOIS.length} mois, ville de référence ${p.v}`;
+    const corps = $('p-table').querySelector('tbody')!;
+    corps.replaceChildren();
+    const tmin = p.t ? Math.min(...p.t) : 0; const tmax = p.t ? Math.max(...p.t) : 0;
+    const pmax = p.p ? Math.max(...p.p) : 0;
+    const amax = p.a ? Math.max(...p.a) : 0;
+    const xmin = p.x ? Math.min(...p.x) : 0; const xmax = p.x ? Math.max(...p.x) : 0;
+    MOIS.forEach((nom, i) => {
+      const tr = el('tr', i === mois ? 'mois-courant' : '');
+      tr.append(el('th', '', maj(nom)));
+      tr.getElementsByTagName('th')[0].setAttribute('scope', 'row');
+      const cell = (txt: string | undefined, b?: HTMLElement) => { const td = el('td'); if (txt === undefined) { td.textContent = 'Non disponible'; td.className = 'nd'; } else { td.append(el('span', 'val', txt)); if (b) td.append(b); } tr.append(td); };
+      cell(p.t ? `${dec(p.t[i])} °C` : undefined, p.t ? barre(p.t[i], tmin, tmax) : undefined);
+      cell(p.p ? `${p.p[i]} mm` : undefined, p.p ? barre(p.p[i], 0, pmax) : undefined);
+      cell(p.a ? `${bandeAff(p.a[i])} (${p.a[i]})` : undefined, p.a ? barre(p.a[i], 0, amax) : undefined);
+      cell(p.x ? `${bandePrix(p.x[i])} (${p.x[i]})` : undefined, p.x ? barre(p.x[i], xmin, xmax) : undefined);
+      corps.append(tr);
+    });
+    const resume = $('p-resume');
+    resume.replaceChildren();
+    if (p.nv) resume.append(el('p', 'src', `Repère : le niveau de prix des restaurants et hôtels en ${p.n} est de ${p.nv.valeur} en ${p.nv.annee} (moyenne de l’Union européenne = 100). Ce n’est pas un budget.`));
+    const g = el('p', 'src'); const a = el('a', '', `Guide ${p.n}`) as HTMLAnchorElement; a.href = p.h; g.append(a);
+    resume.append(g);
+  }
+  fPays.addEventListener('change', parPays);
+  parPays();
+</script>

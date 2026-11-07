@@ -28,6 +28,7 @@ export const pagesLegales = [{ href: '/mentions-legales', label: 'Mentions léga
 // Rubriques éditoriales de Voyages Malins : liées depuis l'accueil et le pied de page, présentes dans le plan du site.
 export const pagesEditoriales = [
   { href: '/langues', label: 'Cours de langues' },
+  { href: '/outils', label: 'Outils' },
   { href: '/bons-plans', label: 'Bons plans' },
   { href: '/guides', label: 'Astuces & hacks voyage' },
 ];
@@ -42,3 +43,13 @@ export const deNomDeLangue = (nom: string) => (VOYELLE.test(nom) ? `d’${nom}` 
 
 // Pays mis à la une sur l'accueil : les guides les plus riches (Finlande, seule fiche relue ; puis les plus fournis en contenu). La Russie y figure avec la mention « Voyage déconseillé ».
 export const A_LA_UNE = ['FIN', 'RUS', 'GEO', 'ESP', 'ALB', 'DEU', 'SEN', 'VNM'];
+
+// Outils pratiques : source unique pour la page /outils, le plan du site et les liens croisés.
+export const outils = [
+  { href: '/outils/quand-partir', label: 'Quand partir ?', icon: '📅', desc: 'Choisissez un mois pour découvrir les destinations adaptées, ou un pays pour voir ses douze mois : climat, affluence et prix, avec sources.' },
+  { href: '/outils/budget-voyage', label: 'Estimer le budget', icon: '💶', desc: 'Une estimation du séjour sur place selon la destination, le style et la durée, hors vols. Affichée seulement quand les données sont sourcées.' },
+  { href: '/outils/liste-de-bagages', label: 'Liste de bagages', icon: '🧳', desc: 'Une liste à cocher selon votre destination, la durée et le type de séjour, à imprimer ou à garder sur votre téléphone.' },
+];
+
+// Bandeau affiché en haut de toutes les pages tant que le site est jeune : à retirer (vider la chaîne) quand il ne l'est plus.
+export const MESSAGE_BETA = 'Voyages Malins vient d’être créé : le site est en version bêta. Certaines fiches n’ont pas encore été relues et le contenu évolue.';

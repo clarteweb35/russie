@@ -189,3 +189,18 @@ Accueil = choix de destination, 194 pays, fiche d'identité, drapeaux, convertis
 
 ## 7 novembre 2026 : nouvel accueil et identité Voyages Malins
 - Fait : accueil refondu, palette et nom du logo. À voir : le compte d'éléments de l'accueil (EcoIndex) a augmenté ; logo carré à brancher en favicon ; trois maquettes `demo-*.astro` toujours non commitées.
+
+## 7 novembre 2026 (nuit) : générateur de liste de bagages
+- Fait et publié ni publié : `/outils`, `/outils/liste-de-bagages`, `src/data/bagages.ts`, lien sur les fiches pays.
+- Correctif inclus : la classe `.fil` de mon parcours d'accueil entrait en collision avec le fil d'Ariane (cartes énormes sur toutes les pages avec fil d'Ariane, dans le commit 8d6ba97 déjà en ligne) ; renommée `.parcours-liste`. À publier rapidement.
+- À faire : tester les coches et l'impression sur un vrai téléphone ; ajouter les objets personnels si souhaité ; relire les objets de `bagages.ts`.
+
+## Images du carrousel : suivi des licences (7 novembre 2026)
+
+- Créé `src/assets/carousel/SOURCES.md` pour conserver, avec chaque image, le nom de fichier, le photographe, les liens vers la page et le profil, la licence et la date de téléchargement. Première entrée : photo Unsplash de Svetlana Gumerova, `svetlana-gumerova-6fAgnT3Dhl4-unsplash.jpg`.
+
+## 7 novembre 2026 (nuit) : « Quand partir ? » et « Estimer le budget »
+- Fait et publié : les deux pages, l'import (`scripts/importer-quand-partir.mjs`), `quand-partir.ts`, `budget-voyage.ts`.
+- **Décision à prendre** : la page budget n'a aucune estimation. Soit trouver une source défendable pour quelques destinations, soit la retirer du menu et du plan du site tant qu'elle est vide.
+- Étendre « Quand partir ? » hors Europe demande une autre source de fréquentation et de prix (Eurostat ne couvre que l'Europe).
+- Le build local peut manquer de mémoire (code 134) : relancer, ou `NODE_OPTIONS=--max-old-space-size=6144 npm test`.

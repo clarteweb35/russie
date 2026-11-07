@@ -155,6 +155,7 @@ const autres = g ? g.rubriques.filter((r) => !['voyager', 'vivre'].includes(r.sl
   )}
 
   <AvantDePartir p={p} />
+  <p class="src">Préparer votre valise : <a href={url(`/outils/liste-de-bagages?pays=${p.slug}`)}>liste de bagages pour {p.nom}</a>.</p>
   <BonsPlansPays p={p} />
 
   <PhotosPays slug={p.slug} nom={p.nom} />

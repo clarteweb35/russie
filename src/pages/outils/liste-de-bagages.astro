@@ -1,0 +1,316 @@
+---
+// Générateur de liste de bagages. Les règles sont dans src/data/bagages.ts ; les suggestions propres à un pays
+// viennent des données des pays (monnaie, formalités, leçons) et sont transmises au script en JSON.
+import Base from '../../layouts/Base.astro';
+import { SEJOURS, CLIMATS, CATEGORIES, OBJETS } from '../../data/bagages';
+import { monde, ALERTE_SECURITE, conseilsDe, parIso } from '../../data/monde';
+import { facilite } from '../../data/monde/devises';
+import { aEssentiel } from '../../data/pays/essentiel';
+import { paysComplets } from '../../data/pays';
+import { NOM_SITE, A_LA_UNE, url } from '../../config';
+
+// Leçons : pays du registre avec leçons, plus la Russie (hors registre)
+const lecons = new Map<string, string>(paysComplets.filter((p) => p.lecons.length > 0).map((p) => [p.iso, `/pays/${p.slug}/lecons`]));
+lecons.set('RUS', '/lecons');
+
+// Données de destination : uniquement ce que le projet sait de façon fiable
+const destinations = monde.map((p) => {
+  const euro = p.devises.length > 0 && p.devises.every((d) => d.code === 'EUR');
+  const fa = facilite(p);
+  const alerte = ALERTE_SECURITE.has(p.iso) || p.iso === 'RUS';
+  return {
+    s: p.slug,
+    n: p.nom,
+    h: url(p.href),
+    e: aEssentiel(p.iso) ? url(p.iso === 'RUS' ? '/essentiel' : `${p.href}/essentiel`) : '',
+    l: lecons.has(p.iso) ? url(lecons.get(p.iso)!) : '',
+    d: euro ? '' : p.devises.slice(0, 2).map((d) => d.nom).join(' ou '),
+    f: euro || fa.niveau === 'inconnu' ? '' : fa.note,
+    c: fa.confiance,
+    ...(alerte ? { a: 1, v: conseilsDe(p) } : {}),
+  };
+});
+
+const aLaUne = A_LA_UNE.map((iso) => parIso(iso)).filter((p) => p !== undefined);
+
+const faq = [
+  { q: 'Cette liste convient-elle à tous les voyages ?', r: 'C’est une base de départ, pas une liste exhaustive. Elle s’adapte à la durée, au type de séjour, au climat et à la présence d’un enfant, mais vous connaissez mieux que nous vos habitudes et vos besoins : ajoutez, retirez, et gardez le reste en tête.' },
+  { q: 'Où sont enregistrées mes coches ?', r: 'Uniquement dans votre navigateur, sur cet appareil. Rien n’est envoyé à notre site. Si vous videz les données du navigateur, si vous changez d’appareil ou si vous utilisez la navigation privée, la liste repart de zéro.' },
+  { q: 'Les suggestions propres au pays sont-elles officielles ?', r: 'Non. Pour les formalités d’entrée, nous renvoyons à la fiche du ministère de l’Europe et des Affaires étrangères, qui reste la référence. Les indications sur la monnaie locale sont des repères à confirmer auprès de votre banque. Aucun objet de la liste ne constitue une obligation officielle.' },
+  { q: 'La liste donne-t-elle des conseils médicaux ?', r: 'Non. Elle rappelle des objets courants (trousse de soins, médicaments habituels avec leur ordonnance). Pour les vaccins, les traitements préventifs ou une situation personnelle, consultez votre médecin et la fiche officielle du pays.' },
+  { q: 'Combien de vêtements emporter pour un long séjour ?', r: 'Les quantités sont volontairement plafonnées : au-delà d’une dizaine de jours, il est plus simple de prévoir une lessive que d’alourdir la valise. Les limites de poids de votre compagnie restent à vérifier.' },
+  { q: 'Comment imprimer la liste ?', r: 'Utilisez le bouton « Imprimer » : la page se met en forme pour le papier, avec les cases à cocher. Dans la fenêtre d’impression, vous pouvez aussi choisir « Enregistrer au format PDF ».' },
+];
+
+const jsonLd = [{
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.r } })),
+}];
+
+const donnees = { objets: OBJETS, categories: CATEGORIES, pays: destinations, sejours: SEJOURS, climats: CLIMATS };
+---
+<Base
+  title="Liste de bagages à cocher et à imprimer"
+  titreComplet={`Liste de bagages à cocher et à imprimer, selon votre destination | ${NOM_SITE}`}
+  description="Générez une liste de bagages selon votre destination, la durée, le type de séjour et le climat. À cocher sur mobile, mémorisée sur votre appareil, imprimable en un clic."
+  fil={[{ label: 'Outils', href: '/outils' }, { label: 'Liste de bagages' }]}
+  jsonLd={jsonLd}
+  meta={false}
+  bandeau={false}
+>
+  <h1>Liste de bagages à cocher et à imprimer</h1>
+  <p class="lead">Dites-nous où vous allez, pour combien de temps et pour quel type de séjour : nous composons une liste classée par catégories, que vous cochez au fur et à mesure et qui reste mémorisée sur votre appareil.</p>
+  <p class="src">C’est une base de départ, pas un avis médical ni une obligation officielle. Pour les formalités et les risques sanitaires, la référence est la fiche du ministère de l’Europe et des Affaires étrangères.</p>
+
+  <noscript><div class="alert warn"><strong class="alert-titre">JavaScript est nécessaire</strong>Cet outil fonctionne dans votre navigateur et demande JavaScript. Les questions fréquentes ci-dessous restent lisibles.</div></noscript>
+
+  <form id="form-bagages" class="bagages-form no-print" aria-label="Paramètres du voyage" onsubmit="return false">
+    <div class="champ">
+      <label for="b-pays">Destination</label>
+      <select id="b-pays">
+        <option value="">Non précisée (liste générique)</option>
+        {monde.map((p) => <option value={p.slug}>{p.nom}</option>)}
+      </select>
+    </div>
+    <div class="champ">
+      <label for="b-jours">Durée du séjour (jours)</label>
+      <input id="b-jours" type="number" min="1" max="90" value="7" inputmode="numeric" />
+    </div>
+    <div class="champ">
+      <label for="b-sejour">Type de séjour</label>
+      <select id="b-sejour">{SEJOURS.map((s) => <option value={s.id}>{s.label}</option>)}</select>
+    </div>
+    <div class="champ">
+      <label for="b-climat">Saison ou climat</label>
+      <select id="b-climat">{CLIMATS.map((c) => <option value={c.id} selected={c.id === 'tempere'}>{c.label}</option>)}</select>
+    </div>
+    <div class="champ cases">
+      <label><input type="checkbox" id="b-pluie" /> Pluie probable</label>
+      <label><input type="checkbox" id="b-enfant" /> Je voyage avec un enfant</label>
+    </div>
+  </form>
+
+  <section id="resultat" class="bagages" aria-labelledby="titre-liste">
+    <h2 id="titre-liste">Votre liste</h2>
+    <div id="alerte-pays"></div>
+    <div class="progression no-print">
+      <progress id="avancement" max="1" value="0" aria-labelledby="avancement-texte"></progress>
+      <p id="avancement-texte" role="status" aria-live="polite"></p>
+    </div>
+    <div class="actions no-print">
+      <button type="button" id="b-imprimer" class="btn-bagages">Imprimer la liste</button>
+      <button type="button" id="b-decocher" class="btn-bagages secondaire">Tout décocher</button>
+      <button type="button" id="b-reinit" class="btn-bagages secondaire">Réinitialiser</button>
+    </div>
+    <div id="liste-bagages" class="bagages-liste"></div>
+    <p id="liens-pays" class="src no-print"></p>
+  </section>
+
+  <section class="no-print" aria-labelledby="guides-bagages">
+    <h2 id="guides-bagages">Préparer la destination</h2>
+    <p>Une fois la valise prête, le guide du pays complète la préparation : formalités, argent sur place, villes à connaître et leçons pour parler.</p>
+    <ul class="guides-grille">
+      {aLaUne.map((p) => (
+        <li>
+          <a href={url(p.href)}>
+            <img src={url(`/drapeaux/${p.iso.toLowerCase()}.svg`)} alt="" width="48" height="32" loading="lazy" />
+            <span><strong>{p.nom}</strong><small>Guide du pays</small></span>
+          </a>
+        </li>
+      ))}
+    </ul>
+    <p><a href={url('/#destinations')}>Voir tous les pays →</a> · <a href={url('/outils')}>Tous les outils</a></p>
+  </section>
+
+  <section class="no-print" aria-labelledby="faq-bagages">
+    <h2 id="faq-bagages">Questions fréquentes</h2>
+    {faq.map((f) => (
+      <details class="faq">
+        <summary>{f.q}</summary>
+        <p>{f.r}</p>
+      </details>
+    ))}
+  </section>
+
+  <script type="application/json" id="donnees-bagages" set:html={JSON.stringify(donnees)} />
+</Base>
+
+<script>
+  type Cond = { sejour?: string[]; climat?: string[]; pluie?: boolean; enfant?: boolean };
+  type Objet = { id: string; cat: string; label: string; note?: string; quand?: Cond[]; qte?: { base: number; parJour: number; min: number; max: number } };
+  type Pays = { s: string; n: string; h: string; e: string; l: string; d: string; f: string; c: string; a?: number; v?: string };
+  type Ligne = { id: string; cat: string; label: string; note?: string; aConfirmer?: boolean; lien?: { href: string; texte: string } };
+  type Choix = { pays: string; jours: number; sejour: string; climat: string; pluie: boolean; enfant: boolean };
+
+  const donnees = JSON.parse(document.getElementById('donnees-bagages')?.textContent ?? '{}');
+  const objets: Objet[] = donnees.objets;
+  const categories: { id: string; label: string }[] = donnees.categories;
+  const pays: Pays[] = donnees.pays;
+  const sejours: { id: string; label: string }[] = donnees.sejours;
+  const climats: { id: string; label: string }[] = donnees.climats;
+
+  const CLE = 'vm-bagages-v1';
+  const defaut: Choix = { pays: '', jours: 7, sejour: 'ville', climat: 'tempere', pluie: false, enfant: false };
+  let choix: Choix = { ...defaut };
+  let coches = new Set<string>();
+
+  const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
+  const fPays = $<HTMLSelectElement>('b-pays');
+  const fJours = $<HTMLInputElement>('b-jours');
+  const fSejour = $<HTMLSelectElement>('b-sejour');
+  const fClimat = $<HTMLSelectElement>('b-climat');
+  const fPluie = $<HTMLInputElement>('b-pluie');
+  const fEnfant = $<HTMLInputElement>('b-enfant');
+  const zone = $<HTMLDivElement>('liste-bagages');
+
+  // Mémoire locale : le stockage peut être bloqué (navigation privée) : on s'en passe sans erreur
+  const lire = () => {
+    try {
+      const s = JSON.parse(localStorage.getItem(CLE) ?? 'null');
+      if (s?.choix) choix = { ...defaut, ...s.choix };
+      if (Array.isArray(s?.coches)) coches = new Set(s.coches);
+    } catch { /* rien à restaurer */ }
+  };
+  const ecrire = () => {
+    try { localStorage.setItem(CLE, JSON.stringify({ choix, coches: [...coches] })); } catch { /* stockage indisponible */ }
+  };
+
+  const borne = (n: number, min: number, max: number) => Math.min(max, Math.max(min, n));
+  const concerne = (o: Objet) =>
+    !o.quand || o.quand.some((c) =>
+      (!c.sejour || c.sejour.includes(choix.sejour)) && (!c.climat || c.climat.includes(choix.climat)) &&
+      (!c.pluie || choix.pluie) && (!c.enfant || choix.enfant));
+
+  function lignes(): Ligne[] {
+    const res: Ligne[] = objets.filter(concerne).map((o) => ({
+      id: o.id, cat: o.cat, note: o.note,
+      label: o.qte ? o.label.replace('{n}', String(borne(Math.round(o.qte.base + o.qte.parJour * choix.jours), o.qte.min, o.qte.max))) : o.label,
+    }));
+    const p = pays.find((x) => x.s === choix.pays);
+    if (p) {
+      // Suggestions propres au pays : formalités (renvoi vers la fiche officielle), monnaie, leçons
+      res.push({ id: `dest-entree-${p.s}`, cat: 'papiers', label: `Formalités d’entrée pour ${p.n} : à vérifier avant de réserver`, note: 'Les règles changent : la fiche officielle fait foi.', lien: { href: p.e || p.h, texte: p.e ? 'L’essentiel du pays' : 'Fiche du pays' } });
+      if (p.d) res.push({ id: `dest-devise-${p.s}`, cat: 'argent', label: `Un peu d’espèces en ${p.d}`, note: p.f || undefined, aConfirmer: Boolean(p.f) && p.c === 'warn', lien: { href: p.h, texte: `Guide ${p.n}` } });
+      if (p.l) res.push({ id: `dest-lecons-${p.s}`, cat: 'divers', label: 'Quelques phrases dans la langue locale', note: 'Des leçons courtes avec audio et quiz.', lien: { href: p.l, texte: 'Voir les leçons' } });
+    }
+    return res;
+  }
+
+  const fait = (tag: string, classe?: string, texte?: string) => {
+    const e = document.createElement(tag);
+    if (classe) e.className = classe;
+    if (texte) e.textContent = texte;
+    return e;
+  };
+
+  function majProgression() {
+    const cases = Array.from(zone.querySelectorAll<HTMLInputElement>('input[data-id]'));
+    const total = cases.length;
+    const ok = cases.filter((c) => c.checked).length;
+    const barre = $<HTMLProgressElement>('avancement');
+    barre.max = Math.max(total, 1);
+    barre.value = ok;
+    $('avancement-texte').textContent = total === 0 ? '' : ok === total ? `Valise prête : ${total} objets sur ${total}.` : `${ok} objet${ok > 1 ? 's' : ''} sur ${total} rangé${ok > 1 ? 's' : ''}.`;
+    zone.querySelectorAll<HTMLElement>('section.cat').forEach((s) => {
+      const c = Array.from(s.querySelectorAll<HTMLInputElement>('input[data-id]'));
+      const compteur = s.querySelector('.cat-n');
+      if (compteur) compteur.textContent = `${c.filter((x) => x.checked).length}/${c.length}`;
+    });
+  }
+
+  function afficher() {
+    const p = pays.find((x) => x.s === choix.pays);
+    const sejour = sejours.find((s) => s.id === choix.sejour)?.label ?? '';
+    const climat = climats.find((c) => c.id === choix.climat)?.label ?? '';
+    $('titre-liste').textContent = `Liste de bagages : ${p ? p.n : 'destination non précisée'}, ${choix.jours} jour${choix.jours > 1 ? 's' : ''}`;
+    zone.replaceChildren();
+
+    const tous = lignes();
+    categories.forEach((cat) => {
+      const items = tous.filter((l) => l.cat === cat.id);
+      if (items.length === 0) return;
+      const section = fait('section', 'cat');
+      const titre = fait('h3');
+      titre.append(cat.label + ' ', fait('span', 'cat-n'));
+      const liste = fait('ul');
+      items.forEach((l) => {
+        const li = fait('li');
+        const label = fait('label', 'obj');
+        const c = document.createElement('input');
+        c.type = 'checkbox'; c.dataset.id = l.id; c.checked = coches.has(l.id);
+        label.append(c, fait('span', 'txt', l.label));
+        li.append(label);
+        if (l.note || l.lien) {
+          const note = fait('small', 'note', l.note ? l.note + ' ' : '');
+          if (l.aConfirmer) note.append(fait('span', 'a-confirmer', 'À confirmer '));
+          if (l.lien) { const a = fait('a', '', l.lien.texte) as HTMLAnchorElement; a.href = l.lien.href; note.append(a); }
+          li.append(note);
+        }
+        liste.append(li);
+      });
+      section.append(titre, liste);
+      zone.append(section);
+    });
+
+    // Encadré pour les pays déconseillés par le ministère
+    const alerte = $('alerte-pays');
+    alerte.replaceChildren();
+    if (p?.a) {
+      const box = fait('div', 'alert warn');
+      box.append(fait('strong', 'alert-titre', 'Voyage déconseillé par le ministère'));
+      box.append('Cette liste ne constitue pas une invitation à voyager. Consultez les conseils officiels avant tout projet. ');
+      const a = fait('a', '', 'Conseils aux voyageurs') as HTMLAnchorElement;
+      a.href = p.v ?? p.h; a.rel = 'noopener';
+      box.append(a);
+      alerte.append(box);
+    }
+
+    const liens = $('liens-pays');
+    liens.replaceChildren();
+    if (p) {
+      liens.append('Pour ' + p.n + ' : ');
+      const ajoute = (href: string, texte: string) => { const a = fait('a', '', texte) as HTMLAnchorElement; a.href = href; liens.append(a); };
+      ajoute(p.h, 'guide du pays');
+      if (p.e) { liens.append(' · '); ajoute(p.e, 'l’essentiel'); }
+      if (p.l) { liens.append(' · '); ajoute(p.l, 'leçons de langue'); }
+    }
+    // Résumé des choix, visible surtout à l'impression
+    const resume = fait('p', 'resume-choix', `${sejour} · ${climat}${choix.pluie ? ' · pluie probable' : ''}${choix.enfant ? ' · avec un enfant' : ''}`);
+    zone.prepend(resume);
+    majProgression();
+  }
+
+  function synchroniserFormulaire() {
+    fPays.value = choix.pays; fJours.value = String(choix.jours); fSejour.value = choix.sejour; fClimat.value = choix.climat;
+    fPluie.checked = choix.pluie; fEnfant.checked = choix.enfant;
+  }
+  function lireFormulaire() {
+    const j = Number.parseInt(fJours.value, 10);
+    choix = { pays: fPays.value, jours: Number.isFinite(j) ? borne(j, 1, 90) : defaut.jours, sejour: fSejour.value, climat: fClimat.value, pluie: fPluie.checked, enfant: fEnfant.checked };
+  }
+
+  lire();
+  // Lien direct depuis une fiche pays : ?pays=japon
+  const demande = new URLSearchParams(location.search).get('pays');
+  if (demande && pays.some((p) => p.s === demande)) choix.pays = demande;
+  synchroniserFormulaire();
+  afficher();
+
+  $('form-bagages').addEventListener('input', () => { lireFormulaire(); ecrire(); afficher(); });
+  zone.addEventListener('change', (e) => {
+    const c = e.target as HTMLInputElement;
+    if (!c.dataset.id) return;
+    if (c.checked) coches.add(c.dataset.id); else coches.delete(c.dataset.id);
+    ecrire();
+    majProgression();
+  });
+  $('b-imprimer').addEventListener('click', () => window.print());
+  $('b-decocher').addEventListener('click', () => { coches.clear(); ecrire(); afficher(); });
+  $('b-reinit').addEventListener('click', () => {
+    if (!window.confirm('Effacer vos choix et toutes les coches ?')) return;
+    choix = { ...defaut }; coches.clear();
+    try { localStorage.removeItem(CLE); } catch { /* rien à effacer */ }
+    synchroniserFormulaire(); afficher();
+  });
+</script>

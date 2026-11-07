@@ -1,0 +1,182 @@
+---
+// Outil « Estimer le budget » : le calcul est prêt, mais il n'affiche une estimation que pour les destinations
+// dont les fourchettes sont sourcées et datées (src/data/budget-voyage.ts). Sinon : « estimation non disponible ».
+import Base from '../../layouts/Base.astro';
+import { monde } from '../../data/monde';
+import { BUDGETS, STYLES, POSTES } from '../../data/budget-voyage';
+import { DONNEES } from '../../data/quand-partir';
+import { outils, A_LA_UNE, NOM_SITE, url } from '../../config';
+import { parIso } from '../../data/monde';
+
+const nbDestinations = Object.keys(BUDGETS).length;
+const aLaUne = A_LA_UNE.map((iso) => parIso(iso)).filter((p) => p !== undefined);
+const dateFr = (iso: string) => new Date(`${iso}T12:00:00`).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+
+const faq = [
+  { q: 'Les vols sont-ils inclus ?', r: 'Non. L’estimation porte uniquement sur le séjour sur place : hébergement, repas, transports sur place, activités et divers. Le prix des vols dépend de votre ville de départ, de la date de réservation et de la compagnie.' },
+  { q: 'Ces montants sont-ils des tarifs exacts ?', r: 'Non, ce sont des fourchettes indicatives par personne et par jour, arrondies. Les prix réels varient selon la saison, la ville, le moment de la réservation et vos choix. Votre budget réel peut sortir de la fourchette.' },
+  { q: 'Pourquoi l’estimation est-elle indisponible pour ma destination ?', r: 'Nous ne publions une estimation que si nous disposons d’une source citée, d’une méthode claire et d’une date de mise à jour. À défaut, nous préférons afficher « estimation non disponible » plutôt que des chiffres inventés ou repris sans pouvoir les vérifier.' },
+  { q: 'D’où viendront les chiffres ?', r: 'Chaque estimation indiquera sa source, sa méthode et sa date. Une source commerciale (guide, site de voyage) sera signalée comme telle. Aucun chiffre ne sera affiché sans cette information.' },
+  { q: 'Que signifient les styles de voyage ?', r: 'Petit budget : hébergement simple et repas économiques. Intermédiaire : hôtels de gamme moyenne et restaurants. Confort : hôtels confortables et déplacements pratiques. Ces styles servent à choisir une fourchette, ils ne garantissent aucun niveau de prestation.' },
+];
+
+const jsonLd = [{
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.r } })),
+}];
+
+// Repère de niveau de prix (Eurostat), fourni à part et jamais présenté comme un budget
+const niveaux = Object.fromEntries(Object.values(DONNEES.pays).filter((d) => d.niveauPrix).map((d) => [d.slug, d.niveauPrix]));
+const donnees = { budgets: BUDGETS, niveaux, sourceNiveau: DONNEES.sources.niveauPrix, pays: monde.map((p) => ({ s: p.slug, n: p.nom, h: url(p.href) })), styles: STYLES, postes: POSTES };
+---
+<Base
+  title="Estimer le budget de son voyage"
+  titreComplet={`Estimer le budget de son voyage, hors vols : hébergement, repas, transports | ${NOM_SITE}`}
+  description="Estimez le budget d’un séjour selon la destination, le style de voyage, la durée et le nombre de voyageurs : fourchettes basse et haute, par personne et au total, avec source, méthode et date. Vols exclus."
+  fil={[{ label: 'Outils', href: '/outils' }, { label: 'Estimer le budget' }]}
+  jsonLd={jsonLd}
+  meta={false}
+  bandeau={false}
+  noindex={nbDestinations === 0}
+>
+  <h1>Estimer le budget de son voyage</h1>
+  <p class="lead">Choisissez une destination, un style de voyage, une durée et le nombre de voyageurs : l’outil donne une fourchette basse et haute, par personne et au total, avec la répartition entre hébergement, repas, transports sur place, activités et divers.</p>
+  <div class="alert">
+    <strong class="alert-titre">Les vols ne sont pas inclus</strong>
+    L’estimation ne couvre que le séjour sur place. Ce sont des fourchettes indicatives, pas des tarifs exacts.
+  </div>
+  {nbDestinations === 0 && (
+    <div class="alert warn">
+      <strong class="alert-titre">Aucune estimation disponible pour l’instant</strong>
+      Nous n’affichons un budget que si nous pouvons citer une source, une méthode et une date. Aucune destination n’a encore franchi ce cap : l’outil est prêt, mais il n’invente pas de chiffres. Pour certains pays d’Europe, un repère de niveau de prix officiel (Eurostat) est donné à la place.
+    </div>
+  )}
+
+  <noscript><div class="alert warn"><strong class="alert-titre">JavaScript est nécessaire</strong>Cet outil fonctionne dans votre navigateur. Les explications et les questions fréquentes ci-dessous restent lisibles.</div></noscript>
+
+  <form id="form-budget" class="bagages-form" aria-label="Paramètres du voyage" onsubmit="return false">
+    <div class="champ">
+      <label for="g-pays">Destination</label>
+      <select id="g-pays">
+        {monde.map((p) => <option value={p.slug}>{p.nom}</option>)}
+      </select>
+    </div>
+    <div class="champ">
+      <label for="g-style">Style de voyage</label>
+      <select id="g-style">{STYLES.map((s) => <option value={s.id} selected={s.id === 'moyen'}>{s.label}</option>)}</select>
+    </div>
+    <div class="champ">
+      <label for="g-jours">Durée (jours)</label>
+      <input id="g-jours" type="number" min="1" max="90" value="7" inputmode="numeric" />
+    </div>
+    <div class="champ">
+      <label for="g-voyageurs">Nombre de voyageurs</label>
+      <input id="g-voyageurs" type="number" min="1" max="12" value="2" inputmode="numeric" />
+    </div>
+  </form>
+
+  <section id="g-resultat" aria-labelledby="g-titre" aria-live="polite">
+    <h2 id="g-titre">Votre estimation</h2>
+    <div id="g-contenu"></div>
+  </section>
+
+  <section aria-labelledby="g-methode">
+    <h2 id="g-methode">Comment nous établissons les estimations</h2>
+    <ul>
+      <li>Chaque destination affichée repose sur des fourchettes <strong>par personne et par jour</strong>, avec une source citée, une méthode décrite et une date de mise à jour.</li>
+      <li>Les sources commerciales (guides, sites de voyage) sont signalées comme telles.</li>
+      <li>Les montants sont multipliés par la durée et le nombre de voyageurs, puis arrondis à 5 € près pour ne pas laisser croire à une précision qui n’existe pas.</li>
+      <li>Les vols sont toujours exclus, de même que les assurances, les visas et les achats personnels hors « divers ».</li>
+      <li>Sans données défendables, l’outil affiche « estimation non disponible ».</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="g-liens">
+    <h2 id="g-liens">Pour aller plus loin</h2>
+    <ul class="guides-grille">
+      {aLaUne.map((p) => (
+        <li>
+          <a href={url(p.href)}>
+            <img src={url(`/drapeaux/${p.iso.toLowerCase()}.svg`)} alt="" width="48" height="32" loading="lazy" />
+            <span><strong>{p.nom}</strong><small>Guide du pays</small></span>
+          </a>
+        </li>
+      ))}
+    </ul>
+    <p>Autres outils : {outils.filter((o) => o.href !== '/outils/budget-voyage').map((o, i) => <>{i > 0 && ' · '}<a href={url(o.href)}>{o.label}</a></>)} · <a href={url('/outils')}>Tous les outils</a> · <a href={url('/#destinations')}>Tous les pays</a></p>
+  </section>
+
+  <section aria-labelledby="faq-budget">
+    <h2 id="faq-budget">Questions fréquentes</h2>
+    {faq.map((f) => (
+      <details class="faq"><summary>{f.q}</summary><p>{f.r}</p></details>
+    ))}
+  </section>
+
+  <script type="application/json" id="donnees-budget" set:html={JSON.stringify(donnees)} />
+</Base>
+
+<script>
+  import { calculerBudget } from '../../data/budget-voyage';
+  import type { BudgetDestination, Style, Poste } from '../../data/budget-voyage';
+
+  const d = JSON.parse(document.getElementById('donnees-budget')?.textContent ?? '{}');
+  const budgets: Record<string, BudgetDestination> = d.budgets;
+  const niveaux: Record<string, { valeur: number; annee: string }> = d.niveaux;
+  const pays: { s: string; n: string; h: string }[] = d.pays;
+  const labelsPostes: Record<Poste, string> = Object.fromEntries(d.postes.map((p: { id: string; label: string }) => [p.id, p.label]));
+  const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
+  const el = (tag: string, classe?: string, texte?: string) => { const e = document.createElement(tag); if (classe) e.className = classe; if (texte !== undefined) e.textContent = texte; return e; };
+  const eur = (n: number) => `${n.toLocaleString('fr-FR')} €`;
+  const plage = (f: [number, number]) => `${eur(f[0])} à ${eur(f[1])}`;
+  const dateFr = (iso: string) => new Date(`${iso}T12:00:00`).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+
+  const fPays = $<HTMLSelectElement>('g-pays');
+  const demande = new URLSearchParams(location.search).get('pays');
+  if (demande && pays.some((p) => p.s === demande)) fPays.value = demande;
+
+  function afficher() {
+    const zone = $('g-contenu');
+    zone.replaceChildren();
+    const p = pays.find((x) => x.s === fPays.value);
+    if (!p) return;
+    const jours = Math.min(90, Math.max(1, Number.parseInt($<HTMLInputElement>('g-jours').value, 10) || 7));
+    const voyageurs = Math.min(12, Math.max(1, Number.parseInt($<HTMLInputElement>('g-voyageurs').value, 10) || 2));
+    const style = $<HTMLSelectElement>('g-style').value as Style;
+    const b = budgets[p.s];
+
+    if (!b) {
+      const boite = el('div', 'alert warn');
+      boite.append(el('strong', 'alert-titre', `Estimation non disponible pour ${p.n}`));
+      boite.append('Nous n’avons pas de données sourcées, datées et défendables pour cette destination : plutôt que d’inventer un montant, nous n’en affichons aucun.');
+      zone.append(boite);
+      const n = niveaux[p.s];
+      if (n) zone.append(el('p', 'src', `Repère officiel, qui n’est pas un budget : le niveau de prix des restaurants et hôtels en ${p.n} est de ${n.valeur} en ${n.annee} (moyenne de l’Union européenne = 100). Source : ${d.sourceNiveau.nom}, consulté le ${dateFr(d.sourceNiveau.acces)}.`));
+      const g = el('p', 'src'); const a = el('a', '', `Guide ${p.n}`) as HTMLAnchorElement; a.href = p.h; g.append(a);
+      zone.append(g);
+      return;
+    }
+
+    const r = calculerBudget(b, style, jours, voyageurs);
+    zone.append(el('p', '', `${p.n}, ${jours} jour${jours > 1 ? 's' : ''}, ${voyageurs} voyageur${voyageurs > 1 ? 's' : ''}. Vols exclus.`));
+    const resume = el('div', 'budget-total');
+    resume.append(el('p', '', `Par personne : ${plage(r.parPersonne)}`), el('p', 'fort', `Total : ${plage(r.total)}`));
+    zone.append(resume);
+    const table = el('table', 'quand-table');
+    table.append(el('caption', '', 'Répartition de l’estimation'));
+    const tete = el('thead'); const tr0 = el('tr');
+    ['Poste', 'Par personne', 'Total'].forEach((t) => { const th = el('th', '', t); th.setAttribute('scope', 'col'); tr0.append(th); });
+    tete.append(tr0); table.append(tete);
+    const corps = el('tbody');
+    r.postes.forEach((po) => { const tr = el('tr'); const th = el('th', '', labelsPostes[po.id]); th.setAttribute('scope', 'row'); tr.append(th, el('td', '', plage(po.parPersonne)), el('td', '', plage(po.total))); corps.append(tr); });
+    table.append(corps);
+    const wrap = el('div', 'table-scroll'); wrap.append(table); zone.append(wrap);
+    const info = el('p', 'src', `Méthode : ${b.methode} Source${b.source.commerciale ? ' commerciale' : ''} : `);
+    const a = el('a', '', b.source.nom) as HTMLAnchorElement; a.href = b.source.url; a.rel = 'noopener'; info.append(a, `. Mise à jour : ${dateFr(b.maj)}. Fourchettes indicatives, hors vols.`);
+    zone.append(info);
+  }
+
+  $('form-budget').addEventListener('input', afficher);
+  afficher();
+</script>

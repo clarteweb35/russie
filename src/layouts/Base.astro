@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import Badge from '../components/Badge.astro';
-import { sections, LAST_CHECK, VERIFICATIONS, pagesLegales, pagesEditoriales, NOM_SITE, url } from '../config';
+import { sections, LAST_CHECK, VERIFICATIONS, pagesLegales, pagesEditoriales, NOM_SITE, MESSAGE_BETA, url } from '../config';
 
 interface ElementMenu { label: string; href: string; exact?: boolean }
 interface ElementFil { label: string; href?: string }
@@ -93,6 +93,12 @@ const donneesStructurees: object[] = [
         </nav>
       </div>
     </header>
+
+    {MESSAGE_BETA && (
+      <div class="banner banner-beta" role="note">
+        <div class="wrap"><span>{MESSAGE_BETA}</span></div>
+      </div>
+    )}
 
     {pays && (
       <div class={pays.alerte ? 'banner banner-alerte' : 'banner banner-pays'} role="note">

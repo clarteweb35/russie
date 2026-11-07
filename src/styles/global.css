@@ -438,13 +438,13 @@ header.site nav .retour { font-weight: 600; color: var(--accent); }
   nav a[aria-current='page'] { color: #0b1226; }
   .etapes a { background: var(--accent); }
 }
-.fil { list-style: none; padding: 0; margin: 14px 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); counter-reset: fil; }
-.fil li { margin: 0; }
-.fil a { position: relative; display: flex; flex-direction: column; gap: 6px; height: 100%; padding: 18px 18px 16px; border-radius: 16px; background: var(--card); border: 1px solid var(--line); border-top: 4px solid var(--accent2); color: var(--fg); text-decoration: none; box-shadow: var(--shadow); transition: transform .25s, border-color .25s; }
-.fil a:hover { transform: translateY(-2px); border-color: var(--accent); }
-.fil .num { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 800; }
-.fil strong { font: 800 1.15rem var(--serif); }
-.fil .txt { font-size: 15px; color: var(--muted); line-height: 1.5; }
+.parcours-liste { list-style: none; padding: 0; margin: 14px 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); counter-reset: fil; }
+.parcours-liste li { margin: 0; }
+.parcours-liste a { position: relative; display: flex; flex-direction: column; gap: 6px; height: 100%; padding: 18px 18px 16px; border-radius: 16px; background: var(--card); border: 1px solid var(--line); border-top: 4px solid var(--accent2); color: var(--fg); text-decoration: none; box-shadow: var(--shadow); transition: transform .25s, border-color .25s; }
+.parcours-liste a:hover { transform: translateY(-2px); border-color: var(--accent); }
+.parcours-liste .num { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 800; }
+.parcours-liste strong { font: 800 1.15rem var(--serif); }
+.parcours-liste .txt { font-size: 15px; color: var(--muted); line-height: 1.5; }
 /* Accueil : le logo est dans le premier écran, l'en-tête ne garde que le menu */
 header.site.accueil .wrap { justify-content: flex-end; }
 .atouts .a-venir { border-top-color: var(--line); border-style: dashed; background: transparent; box-shadow: none; }
@@ -457,3 +457,80 @@ header.site.accueil .wrap { justify-content: flex-end; }
 .chips small { color: var(--muted); font-size: 12.5px; font-weight: 400; }
 /* Logo horizontal dans l'en-tête des pages intérieures (fond blanc : le logo n'est pas transparent) */
 .brand img { display: block; height: 44px; width: auto; padding: 2px 8px; border-radius: 8px; background: #fff; }
+
+/* Outil « Liste de bagages » */
+.bagages-form { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin: 18px 0; padding: 18px; border-radius: 16px; background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow); }
+.bagages-form .champ { display: flex; flex-direction: column; gap: 6px; }
+.bagages-form label { font-size: 14px; font-weight: 600; color: var(--muted); }
+.bagages-form select, .bagages-form input[type='number'] { width: 100%; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); font: 500 1rem var(--sans); min-height: 46px; }
+.bagages-form select:focus, .bagages-form input[type='number']:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent); }
+.bagages-form .cases { justify-content: center; }
+.bagages-form .cases label { display: flex; align-items: center; gap: 10px; min-height: 40px; color: var(--fg); font-weight: 500; }
+.bagages-form input[type='checkbox'], .bagages-liste input[type='checkbox'] { width: 22px; height: 22px; flex: none; accent-color: var(--accent); }
+.bagages .progression { margin: 6px 0 14px; }
+.bagages progress { width: 100%; height: 14px; border-radius: 999px; overflow: hidden; appearance: none; border: 0; background: var(--bg2); }
+.bagages progress::-webkit-progress-bar { background: var(--bg2); border-radius: 999px; }
+.bagages progress::-webkit-progress-value { background: linear-gradient(90deg, var(--accent), var(--accent2)); border-radius: 999px; }
+.bagages progress::-moz-progress-bar { background: var(--accent); border-radius: 999px; }
+.bagages .progression p { margin: 6px 0 0; font-weight: 600; }
+.bagages .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+.btn-bagages { padding: 12px 20px; min-height: 46px; border-radius: 12px; border: 1px solid var(--accent); background: var(--accent); color: #fff; font: 700 1rem var(--sans); cursor: pointer; }
+.btn-bagages.secondaire { background: transparent; color: var(--accent); }
+.btn-bagages:hover { box-shadow: var(--shadow); }
+.resume-choix { grid-column: 1 / -1; margin: 0; color: var(--muted); font-size: 14.5px; }
+.bagages-liste { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); align-items: start; }
+.bagages-liste .cat { padding: 14px 16px 8px; border-radius: 16px; background: var(--card); border: 1px solid var(--line); border-top: 4px solid var(--accent2); }
+.bagages-liste h3 { margin: 0 0 6px; display: flex; justify-content: space-between; align-items: baseline; }
+.bagages-liste .cat-n { font: 600 13px var(--sans); color: var(--muted); }
+.bagages-liste ul { list-style: none; padding: 0; margin: 0; }
+.bagages-liste li { margin: 0; padding: 2px 0; border-top: 1px solid var(--line); }
+.bagages-liste li:first-child { border-top: 0; }
+.bagages-liste .obj { display: flex; align-items: flex-start; gap: 12px; min-height: 44px; padding: 9px 0 2px; cursor: pointer; line-height: 1.4; }
+.bagages-liste .obj input:checked + .txt { text-decoration: line-through; color: var(--muted); }
+.bagages-liste .note { display: block; margin: 0 0 8px 34px; font-size: 13.5px; color: var(--muted); line-height: 1.4; }
+.bagages-liste .a-confirmer { display: inline-block; padding: 1px 8px; border-radius: 999px; background: var(--warn-soft); color: var(--warn); font-weight: 600; font-size: 12px; }
+.faq { margin: 8px 0; padding: 12px 16px; border-radius: 12px; background: var(--card); border: 1px solid var(--line); }
+.faq summary { cursor: pointer; font-weight: 600; }
+.faq p { margin: 10px 0 0; color: var(--muted); }
+
+/* Impression : seule la liste reste, en deux colonnes, avec les cases à cocher */
+@media print {
+  header.site, footer, .banner, #progress, nav.fil, .meta, .no-print, .bagages .actions, .bagages .progression { display: none !important; }
+  body { background: #fff !important; color: #000; font-size: 11.5pt; line-height: 1.4; }
+  main { padding: 0; max-width: none; }
+  h1 { font-size: 18pt; margin: 0 0 4pt; }
+  .lead, .src { display: none; }
+  .bagages h2 { margin: 6pt 0; font-size: 14pt; padding-left: 0; }
+  .bagages h2::before { display: none; }
+  .bagages-liste { display: block; column-count: 2; column-gap: 20pt; }
+  .bagages-liste .cat { break-inside: avoid; margin: 0 0 10pt; padding: 0 0 4pt; border: 0; border-radius: 0; background: none; }
+  .bagages-liste .resume-choix { column-span: all; color: #000; }
+  .bagages-liste .note { color: #333; font-size: 9.5pt; }
+  .bagages-liste .obj input:checked + .txt { color: #000; }
+  .bagages-liste input[type='checkbox'] { width: 13pt; height: 13pt; }
+}
+
+/* Outils « Quand partir ? » et « Estimer le budget » */
+.quand-liste { list-style: none; padding: 0; margin: 12px 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.quand-carte { margin: 0; padding: 14px 16px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); border-top: 4px solid var(--accent2); }
+.quand-carte h3 { margin: 0 0 2px; }
+.quand-ville { margin: 0 0 8px; font-size: 13.5px; color: var(--muted); }
+.quand-crit { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; font-size: 14.5px; }
+.quand-crit dt { color: var(--muted); }
+.quand-crit dd { margin: 0; font-weight: 600; }
+.table-scroll { overflow-x: auto; margin: 12px 0; }
+.quand-table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 560px; }
+.quand-table caption { text-align: left; font-weight: 600; padding: 0 0 8px; color: var(--muted); }
+.quand-table th, .quand-table td { padding: 8px 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: middle; }
+.quand-table thead th { font-size: 13px; color: var(--muted); }
+.quand-table tbody th { font-weight: 600; white-space: nowrap; }
+.quand-table td.nd { color: var(--muted); font-style: italic; }
+.quand-table .val { display: block; }
+.quand-table .barre { display: block; height: 6px; margin-top: 4px; border-radius: 4px; width: var(--v, 0%); max-width: 140px; background: linear-gradient(90deg, var(--accent), var(--accent2)); }
+.quand-table tr.mois-courant { background: var(--accent-soft); }
+.sources-liste { padding-left: 20px; }
+.sources-liste li { margin-bottom: 12px; font-size: 15px; }
+.budget-total { margin: 10px 0; padding: 14px 18px; border-radius: 14px; background: var(--accent-soft); }
+.budget-total p { margin: 0; }
+.budget-total .fort { font: 800 1.35rem var(--serif); color: var(--accent); }
+.banner-beta { background: var(--warn-soft); border-bottom-color: var(--line); }

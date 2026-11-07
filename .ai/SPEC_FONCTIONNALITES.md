@@ -131,6 +131,7 @@ Liste des sources et de leur fiabilité.
 Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fichier) et retirée une fois terminée et mise en ligne. Chaque entrée : date, objectif, fichiers concernés, étapes faites et restantes.
 
 
+
 ## 8. Version « essentielle » (6 novembre 2026)
 
 - Chaque pays qui a une fiche officielle (183 dont la Russie) a une page « L’essentiel » : `/pays/<pays>/essentiel/` (Russie : `/essentiel/`). Bloc Entrée, Sécurité, Santé, Argent (si compléments sourcés), Urgences ; une à quatre lignes par bloc, chacune renvoyant au détail. Zéro texte écrit à la main : tout est extrait des fiches officielles importées (première phrase des rubriques utiles) et des compléments, donc rien d’inventé. Code : `src/data/pays/essentiel.ts`, `src/components/Essentiel.astro`. Bouton « L’essentiel » sur la fiche pays, entrée de menu, plan du site.
@@ -355,3 +356,23 @@ Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fich
 - Accueil : bloc « Tout au même endroit, pour chaque voyage » (six cartes : essentiel, guides, leçons, villes, bons plans et astuces, et « Comparer les vols » signalée **à venir**, sans lien : aucun comparateur n'existe), puis un fil « J'apprends, je prépare, je choisis, je pars » suivi sur la Finlande (guide le plus riche, seul relu), puis huit pays à la une (`A_LA_UNE` dans `config.ts` ; la Russie y figure avec « Voyage déconseillé »), puis la liste A à Z. La recherche reste dans le premier écran.
 - En-tête : sur l'accueil, pas de nom (le logo est dans la page) ; sur les pages intérieures, le logo horizontal. « Russie » n'est plus dans le menu de l'accueil.
 - `/langues` « Cours de langues » (menu de l'accueil, pied de page, plan du site) : recherche par pays (affiche la langue et ouvre la leçon du pays) et liste des langues par ordre alphabétique, sans les pays. Une langue partagée ouvre les leçons de son pays d'origine. Données lues dans le registre, rien écrit à la main.
+
+## Outils : liste de bagages (7 novembre 2026)
+
+- `/outils` : page d'entrée des outils (liste dans `outils` de `config.ts`, aussi utilisée par le plan du site). « Outils » est dans le menu de l'accueil et le pied de page.
+- `/outils/liste-de-bagages` : formulaire (destination facultative, durée de 1 à 90 jours, type de séjour, climat, pluie probable, enfant), liste classée en sept catégories (papiers, vêtements, toilette, santé, appareils, argent, divers), cases à cocher, barre de progression, mémoire sur l'appareil (`localStorage`, clé `vm-bagages-v1`, sans compte ni envoi), « Tout décocher », « Réinitialiser » et impression en deux colonnes. `?pays=<slug>` présélectionne la destination (lien depuis chaque fiche pays). FAQ de six questions avec données structurées.
+- Règles : `src/data/bagages.ts` (objets, conditions, quantités). Suggestions propres à un pays, uniquement depuis des données fiables du projet : renvoi vers la fiche officielle pour les formalités, monnaie locale et facilité d'obtention (marquées « À confirmer » quand non sourcées), leçons de langue ; encadré « Voyage déconseillé » pour les pays concernés. Pas de prises électriques, de vaccins ni de climat par pays : le projet n'a pas ces données.
+- Limites assumées : aucun conseil médical personnalisé, aucune obligation officielle ; avertissement visible sous le titre. Pas d'ajout d'objets personnels (possible plus tard).
+
+## Outils : « Quand partir ? » et « Estimer le budget » (7 novembre 2026)
+
+- **Quand partir ?** (`/outils/quand-partir`) : choix d'un mois (filtres de température, d'affluence et de prix, sans score global) ou d'un pays (tableau des douze mois). Trois critères présentés séparément, plus un repère de niveau de prix, chacun avec sa source, sa période et sa date. **10 destinations documentées** (Espagne, Portugal, Italie, Grèce, Croatie, Finlande, Allemagne, Islande, Pologne, Autriche) : seuls les pays d'Europe couverts par Eurostat. Aucune note, température, saison ou affluence inventée : une série incomplète = rubrique « Non disponible ».
+- Données : `src/data/quand-partir.json`, **généré** par `node scripts/importer-quand-partir.mjs` (ne pas éditer ; à relancer pour actualiser). Sources : NASA POWER (climat, modélisé, une ville de référence par pays), Eurostat `tour_occ_nim` (nuitées), `prc_hicp_midx` CP112 (prix de l'hébergement, variation saisonnière), `prc_ppp_ind` A0111 (niveau de prix, UE27 = 100). Les seuils de lecture des indices (calme, forte, plus bas, plus élevé) sont de Voyages Malins et affichés sur la page. Lecture : `src/data/quand-partir.ts`.
+- **Estimer le budget** (`/outils/budget-voyage`) : formulaire (destination, style, durée, voyageurs) et calcul prêts (basse et haute, par personne et total, cinq postes, vols exclus, arrondi à 5 €), mais **aucune destination n'a d'estimation** : aucune source ouverte et défendable n'a été trouvée (les sites de conseils de voyage divergent d'un facteur deux et ne publient pas leur méthode). L'outil affiche « estimation non disponible » et, pour les pays d'Europe, le repère Eurostat de niveau de prix, présenté comme tel. Une destination s'ajoute dans `BUDGETS` (`src/data/budget-voyage.ts`) avec fourchettes, méthode, source (commerciale signalée) et date ; `verifierBudget` contrôle l'entrée.
+- Les deux outils sont dans `outils` de `config.ts` (page `/outils`, plan du site).
+
+## Bandeau « version bêta » et publication des outils (7 novembre 2026)
+
+- Un bandeau jaune sous l'en-tête de toutes les pages indique que le site vient d'être créé et qu'il est en version bêta. Texte : `MESSAGE_BETA` dans `config.ts` (le vider pour le retirer). Il n'affecte pas le bandeau de sécurité, et n'est pas imprimé.
+- Outils en ligne : liste de bagages, « Quand partir ? », « Estimer le budget ». La page budget est en `noindex` et absente du plan du site tant qu'aucune destination n'a d'estimation sourcée.
+- Correctif : le fil d'Ariane s'affichait en cartes (collision de la classe `.fil` avec le parcours de l'accueil, renommé `.parcours-liste`).

@@ -1,0 +1,27 @@
+---
+// Page d'entrée des outils : la liste vient de config.ts (outils), source unique avec le plan du site.
+import Base from '../../layouts/Base.astro';
+import { outils, NOM_SITE, url } from '../../config';
+---
+<Base
+  title="Outils pour préparer votre voyage"
+  titreComplet={`Outils pour préparer votre voyage : liste de bagages et plus | ${NOM_SITE}`}
+  description="Les outils pratiques de Voyages Malins pour préparer un départ : liste de bagages à cocher et à imprimer, selon votre destination et la durée du séjour."
+  fil={[{ label: 'Outils' }]}
+  meta={false}
+  bandeau={false}
+>
+  <h1>Outils pour préparer votre voyage</h1>
+  <p class="lead">Des outils simples, qui fonctionnent dans votre navigateur et ne demandent aucun compte.</p>
+
+  <ul class="atouts">
+    {outils.map((o) => (
+      <li>
+        <span class="ico" aria-hidden="true">{o.icon}</span>
+        <div><h3><a href={url(o.href)}>{o.label}</a></h3><p>{o.desc}</p></div>
+      </li>
+    ))}
+  </ul>
+
+  <p class="src">Chaque outil complète les guides par pays : <a href={url('/#destinations')}>choisir une destination</a>.</p>
+</Base>
