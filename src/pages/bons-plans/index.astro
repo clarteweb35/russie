@@ -70,7 +70,10 @@ const badgeConfiance: Record<string, { label: string; classe: string }> = {
 // (pas de liste codée en dur, s'adapte automatiquement aux données).
 const villesDisponibles = Array.from(
   new Set(bonsPlans.map((o) => o.data.villeDepart).filter((v): v is string => Boolean(v)))
-).sort();
+).sort((a, b) => a.localeCompare(b, "fr"));
+// Nombre d'offres par ville, affiché dans le menu déroulant
+const nbParVille = new Map<string, number>();
+bonsPlans.forEach((o) => { const v = o.data.villeDepart; if (v) nbParVille.set(v, (nbParVille.get(v) ?? 0) + 1); });
 
 const tranchesBudget = [
   { value: "0-100", label: "– 100€" },
@@ -272,17 +275,13 @@ const populaires = [
             </div>
             {villesDisponibles.length > 0 && (
               <div class="filters__group">
-                <span class="filters__label">Départ</span>
-                <div class="filters__options" data-filter="ville">
-                  <button type="button" class="filter-pill is-active" data-value="all">
-                    Toutes
-                  </button>
+                <label class="filters__label" for="filtre-ville">Départ</label>
+                <select id="filtre-ville" class="filters__select" data-filter-select="ville">
+                  <option value="all">Toutes les villes</option>
                   {villesDisponibles.map((ville) => (
-                    <button type="button" class="filter-pill" data-value={ville}>
-                      {ville}
-                    </button>
+                    <option value={ville}>{ville} ({nbParVille.get(ville)})</option>
                   ))}
-                </div>
+                </select>
               </div>
             )}
           </section>
@@ -480,10 +479,14 @@ const populaires = [
             group.querySelectorAll(".filter-pill").forEach((b) => b.classList.remove("is-active"));
             btn.classList.add("is-active");
             if (filterType === "budget") activeBudget = btn.dataset.value || "all";
-            if (filterType === "ville") activeVille = btn.dataset.value || "all";
             applyFilters();
           });
         });
+      });
+      // Ville de départ : menu déroulant
+      document.querySelector<HTMLSelectElement>('[data-filter-select="ville"]')?.addEventListener("change", (e) => {
+        activeVille = (e.target as HTMLSelectElement).value || "all";
+        applyFilters();
       });
     </script>
     <VmFooter affilie={true} />

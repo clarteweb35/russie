@@ -316,14 +316,6 @@ Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fich
 
 - La page `/mentions-legales` ne parle plus d'un éditeur anonyme : elle affiche l'éditeur (Julien Guillois, à titre individuel), son adresse, son téléphone et le directeur de la publication, avec l'hébergeur (GitHub Pages). Pas d'e-mail ni de SIRET affichés tant qu'ils n'existent pas. Rubriques « Liens affiliés », « Bons plans », « Villes à connaître » ajoutées.
 
-## 16. Maquette de l’accueil Voyage Malin (7 novembre 2026)
-
-- Route de démonstration `/demo-index/`, noindex, sans remplacement de l’accueil : accroche locale Rennes/Nantes, exemples d’offres explicitement signalés, exploration par budget/départ, liens vers guides pays et transparence tarifaire. Aucune offre de démonstration n’est une offre réelle. Fichier : `src/pages/demo-index.astro`.
-
-## 17. Seconde maquette visuelle de l’accueil (7 novembre 2026)
-
-- Route non indexable `/demo-index-2/`, sans remplacement de l’accueil. Variante plus illustrée et colorée de la maquette précédente, avec l’illustration de valise et les logos partenaires déjà présents dans `public/`. Exemples d’offres et prix signalés comme fictifs. Fichier : `src/pages/demo-index-2.astro`.
-
 ## 16. Accueil : recherche progressive et marque neutre (7 novembre 2026)
 
 - **Recherche** : dès la première lettre, un panneau de suggestions s'affiche juste sous le champ (« a » : les pays en A ; « al » : Albanie, Algérie, Allemagne). Classement : nom qui commence par la saisie, puis mot du nom (dès 2 lettres), puis nom officiel ou capitale (dès 3 lettres, par exemple « Tbilissi » trouve la Géorgie). Clavier : Entrée ouvre le premier résultat, ↓ ↑ parcourent la liste, Échap vide la recherche. Le filtre par région s'applique aussi aux suggestions. La liste A–Z plus bas se filtre toujours.
@@ -332,4 +324,12 @@ Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fich
 ## 17. Public national (7 novembre 2026)
 
 - Voyage Malin s'adresse à toute la France, plus seulement à Rennes et Nantes : l'accroche de l'en-tête des pages bons plans et astuces devient « Départs de toute la France », le titre et la description de `/bons-plans/` aussi. La ville de départ affichée par défaut dans le tableau des départs, quand l'offre n'en donne pas, est « — » (et non plus RNS/NTE). Le filtre par ville de départ de la page des bons plans se construit déjà à partir des offres.
-- Pas encore traité : le flux Awin ne fournit pas toujours la ville de départ (champ `villeDepart` des offres) ; à vérifier au premier flux réel. Les pages de démonstration locales `demo-index*.astro` (non versionnées) parlent encore de Rennes et Nantes.
+- Pas encore traité : le flux Awin ne fournit pas toujours la ville de départ (champ `villeDepart` des offres) ; à vérifier au premier flux réel.
+
+## 18. Maquettes locales de l’accueil (7 novembre 2026)
+
+- Deux routes de démonstration non indexables, sans remplacement de l’accueil : `/demo-index/` (variante simple) et `/demo-index-2/` (variante plus visuelle). Toutes deux ciblent les départs de toute la France, avec plusieurs villes d’exemple, liens vers les guides et transparence sur les prix. Les offres et montants de la maquette sont fictifs. Les démos sont destinées à la consultation locale seulement.
+
+## 19. Filtre « Départ » en menu déroulant (7 novembre 2026)
+
+- Sur `/bons-plans/`, le filtre par ville de départ est un menu déroulant (« Toutes les villes », puis chaque ville avec son nombre d'offres, par ordre alphabétique) au lieu d'une rangée de boutons, pour tenir avec un public national. Les villes viennent des offres ; sans ville de départ dans les offres, le filtre n'apparaît pas. Le filtre de budget reste en boutons.
