@@ -188,7 +188,7 @@ const jsonLd = [{
       let rang = -1;
       const alias = (li.dataset.alias ?? '').split('|').filter(Boolean);
       // Un sigle ou un autre nom (USA, RDC, UK…) donne directement le bon pays, en tête de liste
-      if (n.startsWith(q) || alias.some((a) => a.startsWith(q))) rang = 0;
+      if (n.startsWith(q) || (q.length >= 2 && alias.some((a) => a.startsWith(q)))) rang = 0;
       else if (q.length >= 2 && mots(n).some((m) => m.startsWith(q))) rang = 1;
       else if (q.length >= 3 && (li.dataset.nom ?? '').includes(q)) rang = 2;
       if (rang >= 0) trouves.push({ li, rang });
