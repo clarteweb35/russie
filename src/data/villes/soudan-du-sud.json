@@ -1,0 +1,49 @@
+{
+  "slug": "soudan-du-sud",
+  "genere": "2026-11-07T01:00:47.887Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Parc national de Boma",
+      "pourquoi": "Le plus à l’est du pays, créé en 1986 et réputé pour son avifaune ; les grandes migrations d’antilopes y sont mentionnées, mais l’accès est spécialisé et les distances indiquées diffèrent selon les sources.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Juba",
+      "pourquoi": "Capitale ; le pont de Juba permet d’observer le fleuve, et le musée national, le mémorial de John Garang et les marchés de Konyo-Konyo sont cités.",
+      "a_voir": [
+        "Le musée national",
+        "Le mémorial de John Garang"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Parc national de Nimule",
+      "pourquoi": "À l’extrême sud, à la frontière ougandaise et à moins de 150 km de Juba, le plus accessible pour les touristes ; des excursions en rafting partent vers les chutes de Fula.",
+      "a_voir": [],
+      "conseil": "Une source recommande de circuler sur l’axe Juba–Nimule sous escorte ou avec un guide et de vérifier les conditions en temps réel."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Wikivoyage : Soudan du Sud",
+      "url": "https://fr.wikivoyage.org/wiki/Soudan_du_Sud"
+    },
+    {
+      "titre": "Wildtrips : Juba, que visiter",
+      "url": "https://www.wildtrips.net/lieux/Juba-Soudan-du-Sud-que-visiter.htm"
+    },
+    {
+      "titre": "LocaHotels : Soudan du Sud, guide pratique",
+      "url": "https://www.locahotels.com/soudan-du-sud-guide-pratique-et-selection-dhotels/"
+    },
+    {
+      "titre": "Silverback Gorilla Tours : attractions de Juba et du Soudan du Sud",
+      "url": "https://www.silverbackgorillatours.com/south-sudan/tourist-attractions-in-juba-and-south-sudan"
+    }
+  ]
+}

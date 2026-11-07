@@ -1,0 +1,47 @@
+{
+  "slug": "erythree",
+  "genere": "2026-11-07T01:00:47.887Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Massawa",
+      "pourquoi": "Ville portuaire sur la mer Rouge, à l’ambiance très différente d’Asmara : vieille ville aux maisons en blocs de corail et aux maisons ottomanes, palais impérial aux murs de corail et cheikh Hanafi, la plus ancienne mosquée du pays.",
+      "a_voir": [
+        "La mosquée du cheikh Hanafi",
+        "Le palais impérial"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Asmara",
+      "pourquoi": "Capitale, seul site du pays inscrit à l’UNESCO (en 2017, comme ville africaine moderniste) : architecture Art déco italienne, dont la station-service Fiat Tagliero, au toit en aile en porte-à-faux.",
+      "a_voir": [
+        "La station Fiat Tagliero"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Archipel de Dahlak",
+      "pourquoi": "Plus de 200 îles au large de Massawa (les sources divergent sur leur nombre), aux eaux claires, aux récifs coralliens et aux dugongs.",
+      "a_voir": [],
+      "conseil": "Un permis est nécessaire pour s’y rendre : anticipez les démarches."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Cultural Hub : sites UNESCO d’Érythrée",
+      "url": "https://cultural-hub.com/magazine/unesco-world-heritage-sites-eritrea-complete-guide/"
+    },
+    {
+      "titre": "Take Your Backpack : la vieille ville de Massawa",
+      "url": "https://www.takeyourbackpack.com/backpacking-in-eritrea/visit-massawa-old-town/"
+    },
+    {
+      "titre": "Visit Eritrea",
+      "url": "https://www.visiteritrea.net/"
+    }
+  ]
+}

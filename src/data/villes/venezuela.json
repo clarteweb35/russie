@@ -1,0 +1,52 @@
+{
+  "slug": "venezuela",
+  "genere": "2026-11-07T01:00:47.887Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Parc national de Canaima",
+      "pourquoi": "Classé à l’UNESCO, il abrite le Salto Ángel, la plus haute chute d’eau ininterrompue au monde ; à l’est, la Gran Sabana est une vaste savane parsemée de tepuis.",
+      "a_voir": [
+        "Le Salto Ángel"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Caracas",
+      "pourquoi": "Capitale ; le Petit Futé en recense dix incontournables, dont le parc Waraira-Repano (ex-El Ávila), le téléphérique, la place Bolívar, le Panthéon national, le Parque del Este et la maison natale de Bolívar.",
+      "a_voir": [
+        "Le téléphérique",
+        "Le Panthéon national",
+        "La place Bolívar"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Archipel de Los Roques",
+      "pourquoi": "Parc national depuis 1972, qui protège l’une des plus riches biodiversités marines de la région ; on n’y accède qu’en avion, depuis Caracas selon un site de voyage.",
+      "a_voir": [],
+      "conseil": "Le téléphérique de Mérida, l’un des plus hauts du monde, est aussi cité. Vérifiez les conseils aux voyageurs du ministère avant tout projet de voyage."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Partir.com : les 13 lieux à voir au Venezuela",
+      "url": "https://www.partir.com/Venezuela/lieux-d-interet.html"
+    },
+    {
+      "titre": "Petit Futé : que faire à Caracas",
+      "url": "https://www.petitfute.com/v50656-caracas/actualite/m17-top-10-insolites-voyage/a49150-que-faire-que-visiter-a-caracas-les-10-incontournables.html"
+    },
+    {
+      "titre": "Génération Voyage : les 10 plus beaux endroits du Venezuela",
+      "url": "https://generationvoyage.fr/endroits-visiter-venezuela/"
+    },
+    {
+      "titre": "Viventura : 10 endroits à ne pas manquer au Venezuela",
+      "url": "https://www.viventura.fr/blogs/10-endroits-a-ne-pas-manquer"
+    }
+  ]
+}

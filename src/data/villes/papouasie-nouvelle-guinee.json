@@ -1,0 +1,53 @@
+{
+  "slug": "papouasie-nouvelle-guinee",
+  "genere": "2026-11-07T01:00:47.887Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "La piste de Kokoda",
+      "pourquoi": "Sentier de 96 km qui traverse la chaîne Owen Stanley, entre Owers’ Corner, près de Port Moresby, et le village de Kokoda ; de loin le plus populaire et le plus organisé des treks du pays.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Port Moresby",
+      "pourquoi": "Capitale, qui sert surtout de porte d’entrée ; le Parlement national, le National Museum and Art Gallery et le Port Moresby Nature Park sont cités, ainsi qu’un marché artisanal mensuel près de la plage d’Ela.",
+      "a_voir": [
+        "Le National Museum and Art Gallery",
+        "Le Port Moresby Nature Park"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Madang",
+      "pourquoi": "Ville entourée de lagons, d’îlots volcaniques et de récifs coralliens, réputée pour la plongée.",
+      "a_voir": [],
+      "conseil": "Une source indique que les festivals des Hautes-Terres, le mont Wilhelm et le Sepik se trouvent en zone déconseillée et ne se conçoivent qu’avec une agence locale et une escorte : vérifiez les conseils aux voyageurs du ministère."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "OK Voyage : voyager en Papouasie-Nouvelle-Guinée",
+      "url": "https://www.okvoyage.com/post/papouasie-nouvelle-guinee/"
+    },
+    {
+      "titre": "Visiter la Papouasie : guide complet",
+      "url": "https://visiter-papouasie.fr/pratique/guide-complet-papouasie/"
+    },
+    {
+      "titre": "Génération Voyage : 10 incontournables de Papouasie-Nouvelle-Guinée",
+      "url": "https://generationvoyage.fr/visiter-papouasie-nouvelle-guinee-faire-voir/"
+    },
+    {
+      "titre": "Le Mag Voyage : que faire en Papouasie-Nouvelle-Guinée",
+      "url": "https://www.lemagvoyage.fr/papouasie-nouvelle-guinee/que-faire-papouasie-nouvelle-guinee/"
+    },
+    {
+      "titre": "Wikivoyage : Papouasie-Nouvelle-Guinée",
+      "url": "https://fr.wikivoyage.org/wiki/Papouasie-Nouvelle-Guin%C3%A9e"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "slug": "iles-marshall",
+  "genere": "2026-11-07T01:00:47.887Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Atoll de Bikini",
+      "pourquoi": "Classé à l’UNESCO et prisé des plongeurs, notamment pour ses épaves de navires ; il faut passer par un opérateur de plongée agréé, qui obtient les autorisations, avec un budget à part.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Majuro",
+      "pourquoi": "Porte d’entrée pratique et base logistique, avec un lagon propice à la plongée et au snorkeling.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Arno",
+      "pourquoi": "Atoll le plus accessible en dehors de Majuro, à 45 à 60 minutes de bateau (les sources divergent sur la distance) ; présenté comme le lieu où l’on voit à quoi ressemblent les Marshall avant le tourisme.",
+      "a_voir": [],
+      "conseil": "Hors de Majuro, les vols intérieurs sont peu fiables et les cartes bancaires souvent refusées : prévoyez des espèces."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Audiala : îles Marshall",
+      "url": "https://audiala.com/en/marshall-islands"
+    },
+    {
+      "titre": "Cyril Jarnias : sites touristiques des îles Marshall",
+      "url": "https://www.jarniascyril.com/expatriation/moving-to-the-marshall-islands-a-complete-expat-guide/must-see-tourist-sites-marshall-islands/"
+    },
+    {
+      "titre": "Take Your Backpack : îles Marshall",
+      "url": "https://www.takeyourbackpack.com/backpacking-in-marshall-islands/"
+    },
+    {
+      "titre": "The Trip Verdict : atolls extérieurs des îles Marshall",
+      "url": "https://www.thetripverdict.com/marshall-islands-outer-atolls"
+    }
+  ]
+}

@@ -224,5 +224,5 @@ Liste raisonnée des pays envisagés : `.ai/PAYS_PREVUS.md`. Suivi général du 
 
 ## Villes à connaître : rédaction par Claude (7 novembre 2026)
 
-- 187 pays sur 193 faits le 7 novembre 2026 (voir SPEC §19), y compris la Russie et les pays déconseillés, avec encadré d'avertissement. Reste, faute de sources suffisantes ou fiables : Angola, Érythrée, îles Marshall, Papouasie-Nouvelle-Guinée, Soudan du Sud, Venezuela. À relire par un humain (surtout les pays sensibles : Ukraine, Russie, Israël, Syrie, Corée du Nord, Somalie).
+- 193 pays sur 193 faits le 7 novembre 2026 (voir SPEC §19), Russie et pays déconseillés compris (encadré d'avertissement). Sources plus minces, à relire en priorité : Angola, Érythrée, îles Marshall, Papouasie-Nouvelle-Guinée, Soudan du Sud, Venezuela. Relecture humaine souhaitable aussi pour les pays sensibles : Ukraine, Russie, Israël, Syrie, Corée du Nord, Somalie.
 - Limites assumées : les sources sont des sites de voyage de qualité inégale ; le critère « importance pratique » se limite souvent à « capitale » faute de source sur les aéroports.

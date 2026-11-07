@@ -1,0 +1,48 @@
+{
+  "slug": "angola",
+  "genere": "2026-11-07T01:00:47.887Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Fenda da Tundavala et Serra da Leba",
+      "pourquoi": "Près de Lubango : la falaise de Tundavala tombe d’environ 1 000 m d’un seul coup et compte parmi les sept merveilles naturelles du pays ; la route en lacets de la Serra da Leba, entre Lubango et Namibe, est l’une des plus photographiées d’Afrique.",
+      "a_voir": [
+        "La falaise de Tundavala",
+        "La Serra da Leba"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Luanda",
+      "pourquoi": "Capitale : la Marginale, la forteresse São Miguel (coucher de soleil), la presqu’île de Mussulo et le musée de la Monnaie sont cités.",
+      "a_voir": [
+        "La Marginale",
+        "La forteresse São Miguel"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Chutes de Kalandula",
+      "pourquoi": "Dans la province de Malanje, d’environ 105 m de haut pour 400 m de large ; elles sont les plus belles en saison des pluies, surtout de novembre à janvier.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Le Mag Voyage : que faire en Angola",
+      "url": "https://www.lemagvoyage.fr/angola/que-faire-angola/"
+    },
+    {
+      "titre": "Vivre en Angola : découvrir l’Angola",
+      "url": "https://www.vivreenangola.com/bonnes-resolutions-2020-partir-sur-les-routes-dangola/"
+    },
+    {
+      "titre": "Angola Travel Guide : principaux sites",
+      "url": "https://angolatravelguide.com/angola-attractions/"
+    }
+  ]
+}
