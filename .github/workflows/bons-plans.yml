@@ -1,7 +1,9 @@
 name: Bons plans (collecte et articles)
 
 # Lancement manuel seulement, tant qu'un premier flux Awin réel n'a pas été vérifié à la main.
-# Secrets requis : AWIN_FEED_URL (adresse du datafeed) et une clé Gemini (GEMINI_API_KEY_BONS_PLANS, sinon GEMINI_API_KEY_GENERAL).
+# Secrets requis : une adresse de datafeed par flux déclaré dans scripts/bons-plans/flux.mjs (AWIN_FEED_URL pour le premier,
+# puis un secret par flux ajouté) et une clé Gemini (GEMINI_API_KEY_BONS_PLANS, sinon GEMINI_API_KEY_GENERAL).
+# Tous les secrets sont transmis par SECRETS_JSON : ajouter un flux ne demande aucune modification de ce fichier.
 on:
   workflow_dispatch:
 
