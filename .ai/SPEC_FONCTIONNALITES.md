@@ -130,6 +130,11 @@ Liste des sources et de leur fiabilité.
 
 Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fichier) et retirée une fois terminée et mise en ligne. Chaque entrée : date, objectif, fichiers concernés, étapes faites et restantes.
 
+### 7 novembre 2026 : villes à connaître, paquets 2 et suivants (150 pays)
+- Objectif : topos de villes rédigés par Claude à partir de recherches web (voir §19), par paquets de 10 recherches.
+- Fichiers : src/data/villes/<pays>.json, docs.
+- Fait : 50 pays (paquet 1 + Europe du Nord, de l'Est, Balkans, micro-États, Caucase). Restant : 100 pays (Amériques, Asie, Afrique, Océanie, Moyen-Orient) ; les 22 pays déconseillés et la Russie sont mis de côté en attendant décision.
+
 
 ## 8. Version « essentielle » (6 novembre 2026)
 
