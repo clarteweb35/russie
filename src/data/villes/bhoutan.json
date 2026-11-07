@@ -1,0 +1,50 @@
+{
+  "slug": "bhoutan",
+  "genere": "2026-11-07T00:31:13.462Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Monastère de Taktsang (Nid du Tigre)",
+      "pourquoi": "Niché à 3 000 m d’altitude près de Paro ; il faut compter 1 h de voiture depuis Paro, puis au moins 2 h de marche ou à cheval.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Thimphu",
+      "pourquoi": "Capitale, qui allie tradition et modernité ; un détour par le col de Dochula permet de voir ses 108 chortens alignés.",
+      "a_voir": [
+        "Le Tashichho Dzong",
+        "Le Bouddha Dordenma",
+        "Le col de Dochula"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Punakha",
+      "pourquoi": "Ancienne capitale, dont le dzong est l’un des plus beaux du pays, entouré de deux rivières sacrées (Pho et Mo).",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Evaneos : Bhoutan, que voir",
+      "url": "https://www.evaneos.fr/bhoutan/voyage/etape/"
+    },
+    {
+      "titre": "Petit Futé : guide de voyage Bhoutan",
+      "url": "https://petitfute.com/p187-bhoutan"
+    },
+    {
+      "titre": "Génération Voyage : 10 incontournables du Bhoutan",
+      "url": "https://generationvoyage.fr/?p=344298"
+    },
+    {
+      "titre": "Où et quand : visiter le Bhoutan",
+      "url": "https://www.ou-et-quand.net/ou-aller/bhoutan/"
+    }
+  ]
+}

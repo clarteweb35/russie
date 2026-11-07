@@ -1,0 +1,46 @@
+{
+  "slug": "tadjikistan",
+  "genere": "2026-11-07T00:31:13.462Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Route du Pamir (M41)",
+      "pourquoi": "Parmi les routes les plus hautes du monde, elle relie Douchanbé à Och, au Kirghizistan ; Khorog se trouve au milieu, à environ 600 km de Douchanbé.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Douchanbé",
+      "pourquoi": "Capitale, qui concentre les monuments modernes et les institutions culturelles ; le site de Hissar, à une vingtaine de kilomètres, est souvent présenté comme incontournable.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Lac Iskanderkul",
+      "pourquoi": "Site naturel des monts Fann, en accès libre et ouvert toute l’année, avec d’autres lacs d’altitude comme Alaudin et Kulikalon.",
+      "a_voir": [],
+      "conseil": "La meilleure période se situe entre juin et septembre, quand les cols sont ouverts."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Génération Voyage : 10 incontournables du Tadjikistan",
+      "url": "https://generationvoyage.fr/visiter-tadjikistan-faire-voir/"
+    },
+    {
+      "titre": "Partir.com : lieux d’intérêt au Tadjikistan",
+      "url": "https://www.partir.com/Tadjikistan/lieux-d-interet.html"
+    },
+    {
+      "titre": "Routard : route du Pamir",
+      "url": "https://www.routard.com/guide_voyage_lieu/5781-route_du_pamir.htm"
+    },
+    {
+      "titre": "Routard : voyage au Tadjikistan",
+      "url": "https://www.routard.com/fr/guide/asie/tadjikistan"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "afrique-du-sud",
+  "genere": "2026-11-07T00:32:22.354Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Le Cap",
+      "pourquoi": "Les sources présentent la péninsule comme le point fort de la région ; le Cap est un point de départ idéal pour de nombreuses découvertes.",
+      "a_voir": [
+        "Robben Island, l’ancienne île-prison",
+        "Le jardin botanique de Kirstenbosch",
+        "La colonie de manchots de Boulders Beach"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Johannesburg",
+      "pourquoi": "Poumon économique du pays, mégalopole en pleine mutation ; Pretoria est la capitale administrative.",
+      "a_voir": [
+        "Soweto",
+        "Le musée de l’Apartheid"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Parc Kruger",
+      "pourquoi": "Le grand incontournable du safari : on circule notamment entre Skukuza, Satara et Lower Sabie, avec de bonnes chances d’apercevoir lions, léopards et éléphants, surtout tôt le matin.",
+      "a_voir": [
+        "Le canyon de la Blyde River, souvent associé au parc"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Evaneos : Afrique du Sud, que voir",
+      "url": "https://www.evaneos.fr/afrique-du-sud/voyage/etape/"
+    },
+    {
+      "titre": "Routard : incontournables en Afrique du Sud",
+      "url": "https://www.routard.com/guide_a_voir/afrique_du_sud.htm"
+    },
+    {
+      "titre": "Milesopedia : guide de voyage Afrique du Sud",
+      "url": "https://milesopedia.com/guides/destination/guide-itineraire-afrique-du-sud/"
+    },
+    {
+      "titre": "Tourlane : sites touristiques d’Afrique du Sud",
+      "url": "https://www.tourlane.fr/afrique/afrique-du-sud/sites-touristiques"
+    },
+    {
+      "titre": "Génération Voyage : guide touristique Afrique du Sud",
+      "url": "https://generationvoyage.fr/visiter/afrique-du-sud/"
+    }
+  ]
+}

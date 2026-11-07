@@ -1,0 +1,58 @@
+{
+  "slug": "senegal",
+  "genere": "2026-11-07T00:32:22.354Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Île de Gorée",
+      "pourquoi": "Lieu de mémoire, l’un des symboles du passé du pays et de la traite négrière ; passer une soirée sur l’île permet de s’imprégner de son calme.",
+      "a_voir": [
+        "La Maison des Esclaves",
+        "Le musée de la Mer",
+        "La mosquée et l’église Saint-Charles"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Dakar",
+      "pourquoi": "Capitale ; un guide conseille de commencer par la ville et ses marchés animés, comme Sandaga, avant de découvrir Gorée.",
+      "a_voir": [
+        "La Grande Mosquée",
+        "L’IFAN",
+        "Les plages des Almadies et de N’Gor"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Saint-Louis",
+      "pourquoi": "Ancienne capitale et ville classée, au charme qui séduit dès le premier regard.",
+      "a_voir": [],
+      "conseil": "Un site conseille de venir de novembre à mars ; un autre indique la saison sèche, d’octobre à juin."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : incontournables au Sénégal",
+      "url": "https://www.routard.com/guide_a_voir/senegal.htm"
+    },
+    {
+      "titre": "Voyageurs du Monde : guide de voyage Sénégal",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/senegal"
+    },
+    {
+      "titre": "Club Med : guide de voyage au Sénégal",
+      "url": "https://www.clubmed.fr/l/guide-senegal"
+    },
+    {
+      "titre": "Partirou : visiter le Sénégal",
+      "url": "https://www.partirou.com/visiter/senegal/"
+    },
+    {
+      "titre": "Où et quand : préparer son voyage au Sénégal",
+      "url": "https://www.ou-et-quand.net/preparer-son-voyage/senegal/"
+    }
+  ]
+}

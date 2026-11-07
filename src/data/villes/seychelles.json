@@ -1,0 +1,55 @@
+{
+  "slug": "seychelles",
+  "genere": "2026-11-07T00:32:22.354Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "La Digue",
+      "pourquoi": "Île accessible en bateau depuis Mahé ou Praslin, où l’on se déplace souvent à vélo ou en charrette à bœufs ; Anse Source d’Argent est réputée pour ses rochers de granit sculptés.",
+      "a_voir": [
+        "Anse Source d’Argent"
+      ],
+      "conseil": "Pour éviter la foule à Anse Source d’Argent, les guides conseillent d’y aller tôt le matin ou en fin d’après-midi."
+    },
+    {
+      "critere": "pratique",
+      "nom": "Mahé",
+      "pourquoi": "Plus grande île du pays ; Victoria, sa capitale, est l’une des plus petites capitales du monde.",
+      "a_voir": [
+        "Les plages de Beau Vallon",
+        "Le parc national du Morne Seychellois"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Praslin",
+      "pourquoi": "Île de la Vallée de Mai, classée à l’UNESCO et abritant le coco de mer ; les plages d’Anse Lazio et d’Anse Georgette sont les plus emblématiques.",
+      "a_voir": [
+        "La Vallée de Mai",
+        "Anse Lazio",
+        "Anse Georgette"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Partirou : visiter les Seychelles",
+      "url": "https://www.partirou.com/visiter/seychelles/"
+    },
+    {
+      "titre": "Routard : visiter Praslin",
+      "url": "https://www.routard.com/guide_voyage_lieu/1774-praslin.htm"
+    },
+    {
+      "titre": "Où et quand : visiter les Seychelles",
+      "url": "https://www.ou-et-quand.net/ou-aller/seychelles/"
+    },
+    {
+      "titre": "Tropicalement vôtre : excursion Praslin / La Digue",
+      "url": "https://www.tropicalement-votre.com/excursions/seychelles/excursion-praslin-la-digue-9298.php"
+    }
+  ]
+}

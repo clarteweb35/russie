@@ -1,0 +1,48 @@
+{
+  "slug": "turkmenistan",
+  "genere": "2026-11-07T00:31:13.462Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Cratère de Darvaza",
+      "pourquoi": "Site le plus souvent mis en avant : un trou ardent dans le désert du Karakoum, qui ressemble la nuit aux « portes de l’enfer » selon Lonely Planet ; les voyageurs apprécient le camping sur place.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Achgabat",
+      "pourquoi": "Capitale, mélange de sites modernes et de curiosités ; le Musée national d’histoire, point de départ logique de nombreuses excursions, présente des collections de Nisa, Merv et Köneürgench.",
+      "a_voir": [
+        "Le Musée national d’histoire"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Merv",
+      "pourquoi": "Ancienne cité de la Route de la soie, classée à l’UNESCO, qui fut un temps capitale des Seldjoukides ; près de Mary.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Où et quand : visiter le Turkménistan",
+      "url": "https://www.ou-et-quand.net/ou-aller/turkmenistan/"
+    },
+    {
+      "titre": "Lonely Planet : que faire au Turkménistan",
+      "url": "https://www.lonelyplanet.fr/destinations/asie/turkmenistan/que-faire"
+    },
+    {
+      "titre": "Cyril Jarnias : sites touristiques du Turkménistan",
+      "url": "https://www.cyriljarnias.com/?p=34020"
+    },
+    {
+      "titre": "TravelDojo : Turkménistan",
+      "url": "https://www.traveldojo.com/turkmenistan/"
+    }
+  ]
+}

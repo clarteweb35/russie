@@ -1,0 +1,50 @@
+{
+  "slug": "tanzanie",
+  "genere": "2026-11-07T00:32:22.354Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Serengeti et cratère du Ngorongoro",
+      "pourquoi": "Le Serengeti est le plus grand parc national du pays, à la faune la plus riche d’Afrique selon un voyagiste ; le cratère du Ngorongoro est classé à l’UNESCO. Tarangire et Manyara complètent souvent le circuit.",
+      "a_voir": [],
+      "conseil": "La saison sèche, de juin à octobre, convient aux safaris, la faune étant concentrée."
+    },
+    {
+      "critere": "pratique",
+      "nom": "Arusha",
+      "pourquoi": "Surnommée la « capitale du safari », point de départ des parcs du nord.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Zanzibar",
+      "pourquoi": "Dimension balnéaire et culturelle à ajouter au voyage : Stone Town, plages et plongée.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Globe Trotting : que faire et que voir en Tanzanie",
+      "url": "https://www.globe-trotting.com/post/que-faire-et-que-voir-en-tanzanie"
+    },
+    {
+      "titre": "Evaneos : Tanzanie, que voir",
+      "url": "https://www.evaneos.fr/tanzanie/voyage/etape/"
+    },
+    {
+      "titre": "Tourlane : sites touristiques de Tanzanie",
+      "url": "https://www.tourlane.fr/afrique/tanzanie/sites-touristiques"
+    },
+    {
+      "titre": "Partirou : visiter la Tanzanie",
+      "url": "https://www.partirou.com/visiter/tanzanie/"
+    },
+    {
+      "titre": "Pleine Soleil Paris : que faire en Tanzanie",
+      "url": "https://www.pleinsoleilparis.fr/que-faire-en-tanzanie-guide-complet-des-incontournables-et-activites/"
+    }
+  ]
+}

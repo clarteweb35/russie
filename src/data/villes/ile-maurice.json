@@ -1,0 +1,57 @@
+{
+  "slug": "ile-maurice",
+  "genere": "2026-11-07T00:32:22.354Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Le Morne",
+      "pourquoi": "Le site du Morne Brabant est classé au patrimoine mondial de l’UNESCO ; la baie est appréciée des amateurs de kite et de planche à voile.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Port-Louis",
+      "pourquoi": "Capitale métissée, moderne et dynamique, dont le cœur bat autour de la place d’Armes ; un site conseille une demi-journée, à pied.",
+      "a_voir": [
+        "Le front de mer de Caudan",
+        "Le jardin de la Compagnie",
+        "L’ancienne citadelle"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Chamarel",
+      "pourquoi": "Cité parmi les sites géologiques les plus marquants de l’île.",
+      "a_voir": [
+        "Les Terres des Sept Couleurs",
+        "La cascade de Chamarel"
+      ],
+      "conseil": "Un guide conseille juin à octobre pour visiter et randonner."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Partirou : visiter Maurice",
+      "url": "https://www.partirou.com/visiter/maurice/"
+    },
+    {
+      "titre": "Fairmoove : que visiter à Maurice",
+      "url": "https://www.fairmoove.fr/guide-voyage/maurice/que-visiter"
+    },
+    {
+      "titre": "Toploc : 16 choses à voir à l’île Maurice",
+      "url": "https://toploc.com/blog/?p=29761"
+    },
+    {
+      "titre": "Selectour : que faire à l’île Maurice",
+      "url": "https://www.selectour.com/magazine/article/que-faire-a-l-ile-maurice"
+    },
+    {
+      "titre": "Où et quand : où aller à l’île Maurice",
+      "url": "https://www.ou-et-quand.net/guides-voyage/ile-maurice/ou-aller/"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "slug": "cote-divoire",
+  "genere": "2026-11-07T00:32:22.354Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Grand-Bassam",
+      "pourquoi": "Ville historique à l’est d’Abidjan, inscrite au patrimoine mondial de l’UNESCO, avec son ancien quartier colonial et ses plages.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Abidjan",
+      "pourquoi": "Porte d’entrée du pays, reliée directement à l’Europe, d’où l’on rejoint les autres grandes villes.",
+      "a_voir": [
+        "Le marché de Cocody",
+        "Le parc national du Banco",
+        "L’île Boulay, dans la lagune Ébrié"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Yamoussoukro",
+      "pourquoi": "Capitale officielle depuis 1983 ; on y voit la basilique Notre-Dame-de-la-Paix et le lac aux crocodiles qui entoure le palais présidentiel.",
+      "a_voir": [
+        "La basilique Notre-Dame-de-la-Paix"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Partirou : visiter la Côte d’Ivoire",
+      "url": "https://www.partirou.com/visiter/cote-d-ivoire/"
+    },
+    {
+      "titre": "Routard : itinéraires conseillés en Côte d’Ivoire",
+      "url": "https://www.routard.com/fr/guide/a/itineraires-conseilles/afrique/cote-d-ivoire"
+    },
+    {
+      "titre": "Evaneos : Côte d’Ivoire, que voir",
+      "url": "https://www.evaneos.fr/cotedivoire/voyage/etape/"
+    },
+    {
+      "titre": "Routard : voyage en Côte d’Ivoire",
+      "url": "https://www.routard.com/guide/code_dest/cote_d_ivoire.htm"
+    }
+  ]
+}

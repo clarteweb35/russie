@@ -1,0 +1,58 @@
+{
+  "slug": "ouzbekistan",
+  "genere": "2026-11-07T00:31:13.462Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Samarcande",
+      "pourquoi": "Ville la plus connue et la plus visitée du pays.",
+      "a_voir": [
+        "La place du Registan",
+        "La nécropole de Shah-i-Zinda",
+        "La mosquée Bibi-Khanym"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Tachkent",
+      "pourquoi": "Capitale et porte d’entrée du pays, moderne et chaotique, témoin du passé soviétique ; un guide conseille de s’y attarder un jour ou deux. Le train à grande vitesse la relie à Samarcande et Boukhara, mais les billets partent en quelques minutes à l’ouverture des ventes, 45 jours à l’avance.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Boukhara",
+      "pourquoi": "Ville-musée d’architecture et d’histoire, idéale pour flâner dans les ruelles, à l’ombre des médersas aux céramiques turquoise.",
+      "a_voir": [
+        "La place du Kalon",
+        "La forteresse Ark",
+        "Le mausolée d’Ismaïl Samani"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Chapka Direct : que voir en Ouzbékistan",
+      "url": "https://blog.chapkadirect.fr/que-voir-en-ouzbekistan/"
+    },
+    {
+      "titre": "Routard : incontournables en Ouzbékistan",
+      "url": "https://www.routard.com/guide_a_voir/ouzbekistan.htm"
+    },
+    {
+      "titre": "Milesopedia : guide de voyage Ouzbékistan",
+      "url": "https://milesopedia.fr/destinations/voyage-ouzbekistan/"
+    },
+    {
+      "titre": "Où et quand : visiter l’Ouzbékistan",
+      "url": "https://www.ou-et-quand.net/ou-aller/ouzbekistan/"
+    },
+    {
+      "titre": "Cityzeum : Ouzbékistan",
+      "url": "https://www.cityzeum.com/tourisme/ouzbekistan"
+    }
+  ]
+}

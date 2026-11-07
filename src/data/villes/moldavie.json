@@ -1,0 +1,46 @@
+{
+  "slug": "moldavie",
+  "genere": "2026-11-07T00:31:13.462Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Orheiul Vechi",
+      "pourquoi": "Présenté comme un musée en plein air pour les amateurs d’histoire et de randonnée ; cité parmi les monastères troglodytes du pays.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Chișinău",
+      "pourquoi": "Capitale, décrite comme verdoyante et préservée du tourisme de masse, avec une vie nocturne animée.",
+      "a_voir": [],
+      "conseil": "Un site conseille de louer une voiture pour visiter le pays, les trains étant insuffisants ; la saison recommandée va d’avril à octobre."
+    },
+    {
+      "critere": "diversite",
+      "nom": "Cricova",
+      "pourquoi": "Caves situées à 15 km au nord de Chișinău, datant de 1952, abritant un vaste réseau souterrain.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Génération Voyage : 10 incontournables de Moldavie",
+      "url": "https://generationvoyage.fr/visiter-moldavie-faire-voir/"
+    },
+    {
+      "titre": "Evaneos : Moldavie, que voir",
+      "url": "https://www.evaneos.fr/moldavie/voyage/etape/"
+    },
+    {
+      "titre": "Flytrippers : 6 meilleures destinations en Moldavie",
+      "url": "https://flytrippers.com/fr/meilleures-destinations-moldavie/"
+    },
+    {
+      "titre": "Visit World : voyager en Moldavie",
+      "url": "https://visitworld.today/fr/moldova/travel/info"
+    }
+  ]
+}

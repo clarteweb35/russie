@@ -1,0 +1,56 @@
+{
+  "slug": "azerbaidjan",
+  "genere": "2026-11-07T00:31:13.462Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Sheki",
+      "pourquoi": "Ville du Petit Caucase réputée pour son patrimoine : palais des Khans classé à l’UNESCO, vieille ville, caravansérails, halva et artisanat de la soie.",
+      "a_voir": [
+        "Le palais des Khans"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Bakou",
+      "pourquoi": "Capitale et point de départ de la plupart des itinéraires, plus grand port de la mer Caspienne.",
+      "a_voir": [
+        "Le palais des Chirvanchahs",
+        "La tour de la Vierge",
+        "Le temple du feu d’Ateshgah"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Gobustan",
+      "pourquoi": "Juste au sud de Bakou, célèbre pour ses pétroglyphes et ses volcans de boue ; souvent combiné avec la péninsule d’Absheron.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Où et quand : visiter l’Azerbaïdjan",
+      "url": "https://www.ou-et-quand.net/ou-aller/azerbaidjan/"
+    },
+    {
+      "titre": "Partirou : visiter l’Azerbaïdjan",
+      "url": "https://www.partirou.com/visiter/azerbaidjan/"
+    },
+    {
+      "titre": "Evaneos : Azerbaïdjan, que voir",
+      "url": "https://www.evaneos.fr/azerbaidjan/voyage/etape/"
+    },
+    {
+      "titre": "Flytrippers : 11 meilleures destinations en Azerbaïdjan",
+      "url": "https://flytrippers.com/fr/meilleures-destinations-azerbaidjan/"
+    },
+    {
+      "titre": "Génération Voyage : 10 incontournables d’Azerbaïdjan",
+      "url": "https://generationvoyage.fr/?p=348658"
+    }
+  ]
+}

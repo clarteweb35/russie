@@ -1,0 +1,52 @@
+{
+  "slug": "algerie",
+  "genere": "2026-11-07T00:32:22.354Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Tipasa",
+      "pourquoi": "Site antique au bord de la mer, à environ deux heures de route au sud-ouest d’Alger ; Lonely Planet compte les vestiges romains de Tipasa et de Timgad parmi les incontournables.",
+      "a_voir": [],
+      "conseil": "Une visite avec un guide local est souvent indispensable. Le Routard rappelle qu’une large partie du pays est déconseillée par le ministère des Affaires étrangères : consultez ses recommandations avant de partir."
+    },
+    {
+      "critere": "pratique",
+      "nom": "Alger",
+      "pourquoi": "Capitale ; la Casbah est classée à l’UNESCO et se visite de préférence avec un guide local pour ne pas s’y perdre.",
+      "a_voir": [
+        "La Casbah"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Ghardaïa",
+      "pourquoi": "Dans la vallée du M’Zab, classée à l’UNESCO ; une source indique que la visite change totalement d’univers.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : voyage en Algérie",
+      "url": "https://www.routard.com/guide/code_dest/algerie.htm"
+    },
+    {
+      "titre": "OK Voyage : que faire en Algérie, incontournables",
+      "url": "https://www.okvoyage.com/post/algerie-incontournables/"
+    },
+    {
+      "titre": "Le Mag Voyage : choses à voir et à faire en Algérie",
+      "url": "https://www.lemagvoyage.fr/algerie/algerie-choses-a-voir-faire-alger-oran-sahara-ghardaia-tassili/"
+    },
+    {
+      "titre": "Zoom Algérie : 15 villes touristiques à visiter",
+      "url": "https://zoomalgerie.com/?p=11508"
+    },
+    {
+      "titre": "Voyageurs du Monde : les essentiels de l’Algérie",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyage-algerie-alger-kabylie-beni-yenni-bejaia-constantine-batna-boussada/les-essentiels-de-l-algerie-d-alger-aux-villes-du-nord/poi7547"
+    }
+  ]
+}

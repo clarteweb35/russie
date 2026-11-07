@@ -1,0 +1,57 @@
+{
+  "slug": "mongolie",
+  "genere": "2026-11-07T00:31:13.462Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Désert de Gobi",
+      "pourquoi": "Décrit comme le cinquième plus grand désert du monde, accessible depuis Oulan-Bator ou depuis la Chine.",
+      "a_voir": [
+        "Le parc de Gurvan Saïkhan",
+        "Les falaises rouges de Bayanzag",
+        "Les dunes de Khongoryn Els"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Oulan-Bator",
+      "pourquoi": "Capitale moderne où les immeubles côtoient des champs de yourtes.",
+      "a_voir": [
+        "Le palais du Bogd Khan",
+        "Le monastère de Gandan"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Lac Khövsgöl",
+      "pourquoi": "Surnommé la « perle bleue », le plus profond de Mongolie ; kayak et randonnée à cheval y sont possibles.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Evaneos : Mongolie, que voir",
+      "url": "https://www.evaneos.fr/mongolie/voyage/etape/"
+    },
+    {
+      "titre": "Partirou : visiter la Mongolie",
+      "url": "https://www.partirou.com/visiter/mongolie/"
+    },
+    {
+      "titre": "Voyageurs du Monde : Mongolie, à voir à faire",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/mongolie/things-to-do/"
+    },
+    {
+      "titre": "Routard : incontournables en Mongolie",
+      "url": "https://www.routard.com/guide_a_voir/mongolie.htm"
+    },
+    {
+      "titre": "Génération Voyage : 10 plus beaux endroits de Mongolie",
+      "url": "https://generationvoyage.fr/endroits-visiter-mongolie/"
+    }
+  ]
+}

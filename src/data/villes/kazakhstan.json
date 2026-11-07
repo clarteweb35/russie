@@ -1,0 +1,52 @@
+{
+  "slug": "kazakhstan",
+  "genere": "2026-11-07T00:31:13.462Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Almaty",
+      "pourquoi": "Ancienne capitale, centre culturel et point d’entrée du pays, au pied des montagnes du Tian Shan, à l’ambiance vivante et aux parcs verdoyants.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Astana",
+      "pourquoi": "Capitale actuelle, qui se distingue par son architecture audacieuse et ses bâtiments spectaculaires.",
+      "a_voir": [
+        "Le monument Bayterek"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Canyon de Charyn",
+      "pourquoi": "Souvent comparé au Grand Canyon, à environ 220 km à l’est d’Almaty (3 à 4 heures de route) ; une excursion d’une journée le combine souvent avec les lacs Kolsai et Kaindy.",
+      "a_voir": [],
+      "conseil": "Le printemps et l’automne sont jugés les meilleures saisons, les étés étant secs et chauds et les hivers froids et venteux."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Génération Voyage : 10 incontournables du Kazakhstan",
+      "url": "https://generationvoyage.fr/?p=344297"
+    },
+    {
+      "titre": "Partirou : visiter le Kazakhstan",
+      "url": "https://www.partirou.com/visiter/kazakhstan/"
+    },
+    {
+      "titre": "Routard : voyage au Kazakhstan",
+      "url": "https://www.routard.com/fr/guide/asie/kazakhstan"
+    },
+    {
+      "titre": "Chapka Direct : que faire au Kazakhstan en 10 jours",
+      "url": "https://blog.chapkadirect.fr/que-faire-au-kazakhstan-en-10-jours-notre-circuit/"
+    },
+    {
+      "titre": "Visit World : que voir au Kazakhstan",
+      "url": "https://visitworld.today/fr/blog/1231/what-to-see-in-kazakhstan-all-necessary-information-for-the-tourist"
+    }
+  ]
+}

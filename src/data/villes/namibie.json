@@ -1,0 +1,50 @@
+{
+  "slug": "namibie",
+  "genere": "2026-11-07T00:32:22.354Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Parc national d’Etosha",
+      "pourquoi": "Le grand classique du safari, présenté comme le joyau du pays, avec plus de 200 000 visiteurs par an.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Windhoek",
+      "pourquoi": "Capitale où atterrissent la plupart des voyageurs venant d’Europe ; ville à taille humaine, agréable à découvrir.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Sossusvlei",
+      "pourquoi": "Dans le désert du Namib, l’un des plus vieux du monde, parmi les sites les plus visités ; le canyon de Sesriem est tout proche.",
+      "a_voir": [],
+      "conseil": "Les sources divergent sur la meilleure saison : de fin juin à octobre pour l’une, de mai à octobre (saison sèche) pour l’autre."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Club Med : que visiter en Namibie",
+      "url": "https://www.clubmed.fr/l/que-visiter-en-namibie"
+    },
+    {
+      "titre": "Génération Voyage : 12 plus beaux endroits de Namibie",
+      "url": "https://generationvoyage.fr/?p=85464"
+    },
+    {
+      "titre": "WeRoad : que faire en Namibie",
+      "url": "https://www.weroad.fr/blog/que-faire-en-namibie/"
+    },
+    {
+      "titre": "Où et quand : visiter la Namibie",
+      "url": "https://www.ou-et-quand.net/ou-aller/namibie/"
+    },
+    {
+      "titre": "Routard : désert du Namib",
+      "url": "https://www.routard.com/guide_voyage_lieu/1928-desert_du_namib.htm"
+    }
+  ]
+}

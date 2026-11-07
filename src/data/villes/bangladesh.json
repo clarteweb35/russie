@@ -1,0 +1,54 @@
+{
+  "slug": "bangladesh",
+  "genere": "2026-11-07T00:31:13.462Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Sundarbans",
+      "pourquoi": "Parc national partagé avec l’Inde, l’une des plus grandes forêts de mangrove du monde, classé à l’UNESCO ; les croisières en bateau sont l’activité phare. Un voyageur sur un forum juge qu’il faut garder des attentes réalistes.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Dacca",
+      "pourquoi": "Capitale, premier contact probable avec le pays ; vieille ville et marchés animés.",
+      "a_voir": [
+        "Le fort Lalbagh",
+        "Le musée de la Libération",
+        "Le Parlement (Jatiyo Sangshad Bhaban)"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Cox’s Bazar",
+      "pourquoi": "Station balnéaire la plus connue, dont la plage est présentée comme l’une des plus longues du monde sans interruption (les classements varient selon les sources) ; le monastère bouddhiste Aggmeda Khyang est cité.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Cityzeum : Bangladesh",
+      "url": "https://www.cityzeum.com/bangladesh"
+    },
+    {
+      "titre": "Evaneos : Bangladesh, que voir",
+      "url": "https://www.evaneos.fr/bangladesh/voyage/etape/"
+    },
+    {
+      "titre": "Génération Voyage : guide touristique Bangladesh",
+      "url": "https://generationvoyage.fr/?p=25083"
+    },
+    {
+      "titre": "Visit World : voyage au Bangladesh",
+      "url": "https://visitworld.today/fr/bangladesh/travel/info"
+    },
+    {
+      "titre": "Country Reports : guide de voyage Bangladesh",
+      "url": "https://countryreports.org/fr/articles/bangladesh-travel-guide"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "slug": "madagascar",
+  "genere": "2026-11-07T00:32:22.354Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Allée des Baobabs",
+      "pourquoi": "Entre Morondava et Belon’i Tsiribihina ; les sources conseillent d’y aller en fin d’après-midi, au coucher du soleil, pour les photos.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Antananarivo",
+      "pourquoi": "Capitale et plus grande ville de l’île, construite sur plusieurs collines à 1 300 m d’altitude ; Voyageurs du Monde conseille de ne pas trop y rester pour voir le reste du pays.",
+      "a_voir": [
+        "Les palais et les églises, témoins des anciens royaumes malgaches"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Parc national de l’Isalo",
+      "pourquoi": "Surnommé « Jurassic Park » pour ses formations de grès du jurassique, présenté comme le parc le plus visité de l’île selon une source ; le village de Ranohira en est la porte d’entrée.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : incontournables à Madagascar",
+      "url": "https://www.routard.com/guide_a_voir/madagascar.htm"
+    },
+    {
+      "titre": "Voyage avec nous : que faire à Madagascar",
+      "url": "https://www.voyageavecnous.fr/que-faire-a-madagascar"
+    },
+    {
+      "titre": "Partirou : visiter Madagascar",
+      "url": "https://www.partirou.com/visiter/madagascar/"
+    },
+    {
+      "titre": "Voyageurs du Monde : Madagascar, à voir à faire",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/madagascar/things-to-do/"
+    },
+    {
+      "titre": "Capmad : les meilleurs sites touristiques de Madagascar",
+      "url": "https://www.capmad.com/fr/tourisme-oi-fr/les-meilleurs-sites-touristiques-de-madagascar"
+    }
+  ]
+}

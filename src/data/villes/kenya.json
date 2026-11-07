@@ -1,0 +1,48 @@
+{
+  "slug": "kenya",
+  "genere": "2026-11-07T00:32:22.354Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Masai Mara",
+      "pourquoi": "La grande réserve de safari du pays, où l’on observe notamment antilopes, gnous, zèbres, éléphants et lions.",
+      "a_voir": [],
+      "conseil": "Les routes sont peu nombreuses : le trajet entre le Masai Mara et Amboseli oblige souvent à passer une nuit à Nairobi."
+    },
+    {
+      "critere": "pratique",
+      "nom": "Nairobi",
+      "pourquoi": "Capitale et point de départ de la plupart des séjours ; le Musée national aide à comprendre l’histoire du pays. Le train rapide la relie à Mombasa en environ 4 h 30.",
+      "a_voir": [
+        "Le Musée national"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Lamu",
+      "pourquoi": "Archipel paisible dont la vieille ville est inscrite au patrimoine mondial de l’UNESCO ; balades en dhow et observation de dauphins.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Partirou : visiter le Kenya",
+      "url": "https://www.partirou.com/visiter/kenya"
+    },
+    {
+      "titre": "Club Med : que visiter au Kenya",
+      "url": "https://www.clubmed.fr/l/que-visiter-au-kenya"
+    },
+    {
+      "titre": "Evaneos : Kenya, que voir",
+      "url": "https://www.evaneos.fr/kenya/voyage/etape/"
+    },
+    {
+      "titre": "Tourlane : sites touristiques du Kenya",
+      "url": "https://www.tourlane.fr/afrique/kenya/sites-touristiques"
+    }
+  ]
+}

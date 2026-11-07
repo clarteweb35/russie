@@ -1,0 +1,49 @@
+{
+  "slug": "kirghizistan",
+  "genere": "2026-11-07T00:31:13.462Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Lac Issyk-Kul",
+      "pourquoi": "Destination naturelle la plus accessible et la plus fréquentée du pays ; il ne gèle pas en hiver, d’où son nom de « lac chaud ». Le canyon de Skazka, facile à explorer à pied, est à proximité.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Bichkek",
+      "pourquoi": "Capitale, avec de larges boulevards, des bazars animés et des musées ; le parc national d’Ala-Archa, à environ 40 km au sud, est un lieu de randonnée.",
+      "a_voir": [
+        "La place Ala-Too",
+        "Le parc national d’Ala-Archa, à proximité"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Song-Kul",
+      "pourquoi": "Selon plusieurs sources, le plus beau lac du pays, à plus de 3 000 m d’altitude ; passer une nuit sous la yourte au bord du lac est l’expérience phare.",
+      "a_voir": [],
+      "conseil": "Accessible seulement en été et au début de l’automne, en randonnée de deux jours à pied ou à cheval ; vérifiez les conditions avant de partir."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "WeRoad : que voir au Kirghizistan",
+      "url": "https://www.weroad.fr/blog/que-voir-au-kirghizistan-les-10-incontournables-entre-lacs-steppes-et-yourtes"
+    },
+    {
+      "titre": "Où et quand : visiter le Kirghizistan",
+      "url": "https://www.ou-et-quand.net/ou-aller/kirghizistan/"
+    },
+    {
+      "titre": "Routard : région du lac Issyk-Kul",
+      "url": "https://www.routard.com/fr/guide/asie/kirghizistan/region-du-lac-issyk-kol"
+    },
+    {
+      "titre": "Avygeo : guide Kirghizistan",
+      "url": "https://www.avygeo.com/fr/guide/asie/kirghizistan"
+    }
+  ]
+}
