@@ -5,9 +5,9 @@ import type { TraductionsLecons } from './modele';
 import { LECONS_ANGLAIS } from './anglais';
 import { ALLEMAND, NEERLANDAIS } from './langues';
 import { ARABE, ESPAGNOL, HEBREU, PERSAN, PORTUGAIS, SWAHILI } from './langues-monde';
-import { grece } from './grece';
-import { italie } from './italie';
-import { croatie } from './croatie';
+import { grece } from './fiches/grece';
+import { italie } from './fiches/italie';
+import { croatie } from './fiches/croatie';
 import { ENTREES } from './monde-entrees';
 import fiches from '../monde/pays.json';
 

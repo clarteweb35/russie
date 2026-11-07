@@ -1,70 +1,21 @@
 import type { Pays, PaysComplet } from './types';
-import { finlande } from './finlande';
-import { albanie } from './albanie';
-import { espagne } from './espagne';
-import { allemagne } from './allemagne';
-import { senegal } from './senegal';
-import { vietnam } from './vietnam';
-import { georgie } from './georgie';
-import { turquie } from './turquie';
-import { armenie } from './armenie';
-import { kazakhstan } from './kazakhstan';
-import { serbie } from './serbie';
-import { emirats } from './emirats';
-import { thailande } from './thailande';
-import { maroc } from './maroc';
-import { portugal } from './portugal';
-import { italie } from './italie';
-import { grece } from './grece';
-import { pologne } from './pologne';
-import { suisse } from './suisse';
-import { royaumeUni } from './royaume-uni';
-
-import { estonie } from './estonie';
-import { lettonie } from './lettonie';
-import { lituanie } from './lituanie';
-import { azerbaidjan } from './azerbaidjan';
-import { bielorussie } from './bielorussie';
-import { kirghizistan } from './kirghizistan';
-import { moldavie } from './moldavie';
-import { ouzbekistan } from './ouzbekistan';
-import { tadjikistan } from './tadjikistan';
-import { turkmenistan } from './turkmenistan';
-import { ukraine } from './ukraine';
-import { japon } from './japon';
-import { chine } from './chine';
-import { coreeDuSud } from './coree-du-sud';
-import { inde } from './inde';
-import { indonesie } from './indonesie';
-import { egypte } from './egypte';
-import { canada } from './canada';
-import { etatsUnis } from './etats-unis';
-import { mexique } from './mexique';
-import { bresil } from './bresil';
-import { madagascar } from './madagascar';
-import { ileMaurice } from './ile-maurice';
-import { australie } from './australie';
-import { nouvelleZelande } from './nouvelle-zelande';
-import { belgique } from './belgique';
-import { paysBas } from './pays-bas';
-import { autriche } from './autriche';
-import { irlande } from './irlande';
-import { danemark } from './danemark';
-import { suede } from './suede';
-import { norvege } from './norvege';
-import { islande } from './islande';
-import { croatie } from './croatie';
-import { tchequie } from './tchequie';
-import { hongrie } from './hongrie';
-import { roumanie } from './roumanie';
-import { bulgarie } from './bulgarie';
 import { guidesMonde } from './monde-guides';
 import { avecOfficiel } from './officiel';
-import { avecComplements } from './complements-index';
+import { avecComplements } from './complements';
+import { verifierRegistre } from './verifier';
 
-// Guides détaillés (rubriques, leçons, sources). Les autres pays du monde n'ont qu'une fiche d'identité : voir src/data/monde/.
+// Guides rédigés un par un : tout fichier de `fiches/` est repris tel quel (un fichier = un pays, une seule exportation).
+// Pour ajouter un pays, il suffit de créer son fichier ; aucune liste à tenir à jour.
+const modules = import.meta.glob<Record<string, unknown>>('./fiches/*.ts', { eager: true });
+const redigees = Object.values(modules).flatMap((m) => Object.values(m)) as Pays[];
+
+// Les autres pays du monde sont générés (monde-guides.ts). Un même pays ne doit pas figurer deux fois : verifierRegistre() le refuse.
 // Un pays `test: true` est publié avec la mention « beta ».
-export const pays: Pays[] = [finlande, albanie, espagne, allemagne, senegal, vietnam, georgie, turquie, armenie, kazakhstan, serbie, emirats, thailande, maroc, portugal, italie, grece, pologne, suisse, royaumeUni, estonie, lettonie, lituanie, azerbaidjan, bielorussie, kirghizistan, moldavie, ouzbekistan, tadjikistan, turkmenistan, ukraine, japon, chine, coreeDuSud, inde, indonesie, egypte, canada, etatsUnis, mexique, bresil, madagascar, ileMaurice, australie, nouvelleZelande, belgique, paysBas, autriche, irlande, danemark, suede, norvege, islande, croatie, tchequie, hongrie, roumanie, bulgarie, ...guidesMonde].map((p) => (p.complet ? avecComplements(avecOfficiel(p)) : p));
+const brut: Pays[] = [...redigees, ...guidesMonde];
+
+export const pays: Pays[] = brut.map((p) => (p.complet ? avecComplements(avecOfficiel(p)) : p));
+
+verifierRegistre(pays);
 
 export const paysComplets = pays.filter((p): p is PaysComplet => p.complet);
 

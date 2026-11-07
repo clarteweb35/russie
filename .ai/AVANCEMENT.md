@@ -1,11 +1,17 @@
 # Avancement : Guide Russie
 
-Dernière mise à jour : 4 novembre 2026. Ce fichier est mis à jour à la fin de chaque session de travail.
+Dernière mise à jour : 7 novembre 2026. Ce fichier est mis à jour à la fin de chaque session de travail. Les sections les plus basses sont les plus récentes ; les tableaux du début sont l'historique du guide Russie d'origine.
 
 **Production** : https://clarteweb35.github.io/russie/ (déploiement automatique à chaque push sur `main`)
-**Note d'architecture** : 74 / 100 (détail dans `.ai/SPEC_FONCTIONNALITES.md`, §6)
+**Note d'architecture** : 82 / 100 le 7 novembre 2026 (76 avant la remise à plat ; dette restante dans `.ai/SPEC_FONCTIONNALITES.md`, §6)
 
-## En cours
+## État au 7 novembre 2026
+
+Site « Voyage Malin » : 194 pays, outils (bagages, quand partir, budget), bons plans, villes, fiches officielles automatiques, bandeau de consentement + GTM. Tout est en ligne sauf les pages `demo-*` et `src/assets/carousel/` (travail local non suivi).
+
+**Prochaines actions** : (1) GTM : vérifier en aperçu que la balise GA4 se déclenche après acceptation ; (2) refaire la mesure EcoIndex ; (3) quota Gemini (villes, actualités) ; (4) décision sur la page budget (aucune estimation sourcée) ; (5) domaine voyagesmalins.fr (voir plus bas) ; (6) dette technique restante : un fichier par pays pour les compléments, `lecons.js` en TypeScript, découpage de `global.css`, tests de comportement.
+
+## Historique : en cours au 4 novembre 2026 (obsolète)
 
 | Chantier | État | Remarque |
 |---|---|---|
@@ -63,7 +69,7 @@ Dernière mise à jour : 4 novembre 2026. Ce fichier est mis à jour à la fin d
 
 ### Nouvelles règles du 30 octobre 2026
 - [x] Contenu du site passé au vouvoiement (30 octobre 2026) : pages, leçons, alertes, composant.
-- [ ] **Google Analytics 4** (à venir) : bandeau de consentement, chargement uniquement après acceptation, mention dans une page de confidentialité.
+- [x] **Mesure d'audience** : bandeau de consentement et Google Tag Manager après acceptation, faits le 7 novembre 2026 (reste à vérifier dans GTM).
 - [ ] **EcoIndex** (à venir) : mesurer l'accueil, compter les éléments de la page avant d'ajouter du contenu.
 - [x] Script `npm test` créé : build + contrôle des liens internes (`scripts/verifier-liens.mjs`).
 - [x] Mentions de l'autre projet retirées de CLAUDE.md.
@@ -84,7 +90,7 @@ Le site https://clarteweb35.github.io/russie/ est le site général (marque « V
 2. [ ] GitHub : Réglages > Secrets and variables > Actions > Variables > créer `DOMAINE` = `www.voyagesmalins.fr`. Puis Réglages > Pages > Custom domain = `www.voyagesmalins.fr`, et cocher « Enforce HTTPS » après la vérification DNS. Relancer le déploiement (Actions > Déploiement > Run workflow).
 3. [ ] Vérifier : accueil, une fiche pays, `/robots.txt` et `/sitemap.xml` sur le nouveau domaine. Ajouter la propriété dans Search Console.
 4. [ ] Mettre à jour README.md, CLAUDE.md (« /russie/ ») et la spec une fois le domaine actif.
-5. [ ] **Google Analytics 4** : l'utilisateur fournit l'identifiant `G-XXXXXXXXXX`. Bandeau de consentement, page de confidentialité, gtag chargé seulement après acceptation.
+5. [x] (fait le 7 novembre 2026, via Google Tag Manager) **Google Analytics 4** : l’utilisateur fournit l'identifiant `G-XXXXXXXXXX`. Bandeau de consentement, page de confidentialité, gtag chargé seulement après acceptation.
 6. [ ] **EcoIndex** : mesurer l'accueil en ligne, compter les éléments avant d'ajouter du contenu.
 7. [~] Mentions légales : éditeur renseigné le 7 novembre 2026 (Julien Guillois, Chaumeré 35113 Domagné, téléphone, directeur de la publication). Reste : adresse e-mail de contact et numéro SIRET (à ajouter dès qu'ils existent, repère en commentaire dans `mentions-legales.astro`) ; déclaration d'activité (micro-entreprise) à faire par l'éditeur.
 

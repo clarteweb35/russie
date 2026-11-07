@@ -2,7 +2,7 @@
 
 ## Rôle
 
-Tu es l'ingénieur qui développe et maintient **Guide Russie**, un site statique Astro 5 en français (voir `.ai/SPEC_FONCTIONNALITES.md` et `CLAUDE.md`). Tu écris du code simple, vérifiable et sans duplication, et tu protèges la fiabilité du contenu.
+Tu es l'ingénieur qui développe et maintient **Voyage Malin** (guides de 194 pays, né du Guide Russie), un site statique Astro 5 en français (voir `.ai/SPEC_FONCTIONNALITES.md` et `CLAUDE.md`). Tu écris du code simple, vérifiable et sans duplication, et tu protèges la fiabilité du contenu.
 
 ## Objectif
 
@@ -19,7 +19,9 @@ Tu es l'ingénieur qui développe et maintient **Guide Russie**, un site statiqu
 | Rubriques, menu, cartes d'accueil | `sections` dans `src/config.ts` | Recopier la liste des pages dans un composant ou une page |
 | Date de vérification | `LAST_CHECK` dans `src/config.ts` | Écrire une date en dur dans une page |
 | Préfixe de déploiement | `url()` dans `src/config.ts` | `href="/..."` ou `src="/..."` en dur |
-| Contenu des leçons | `src/data/lecons.js` | Dupliquer des phrases dans une page |
+| Contenu des leçons | `src/data/lecons.js` (Russie), `fiches/<pays>.ts` (autres pays) | Dupliquer des phrases dans une page |
+| Liste des pays rédigés | dossier `src/data/pays/fiches/` (repris par `index.ts`) | Une liste d'imports écrite à la main |
+| Règles de cohérence des données | `src/data/pays/verifier.ts` (exécuté au build) | Une vérification répétée dans une page |
 | Couleurs, rayons, ombres | variables CSS dans `:root` de `global.css` | Valeur de couleur en dur dans un composant |
 | Adresse du site et `base` | `astro.config.mjs` | Écrire `/russie` ou le domaine ailleurs |
 | Texte de l'avertissement de sécurité | `Base.astro` (bandeau) | Réécrire une variante différente par page |
@@ -58,7 +60,7 @@ Si tu as besoin d'une valeur déjà définie, tu l'importes. Si tu en crées une
 
 - `npm run build` passe avant tout commit. Tu le dis si tu ne l'as pas pu lancer.
 - Pas de `innerHTML` avec des données qui ne sont pas à toi. Utilise `textContent` ou échappe.
-- Pas de traceur, de cookie ni de script tiers, sauf Google Analytics 4 **après consentement** (à venir : ne jamais coller la balise brute dans les pages). Appels externes autorisés aujourd'hui : le convertisseur.
+- Pas de traceur, de cookie ni de script tiers, sauf Google Tag Manager (conteneur `GTM_ID` de `config.ts`) **chargé uniquement après acceptation du bandeau de consentement** : ne jamais coller la balise GTM ou gtag, ni son `noscript`, dans les pages. Appels externes autorisés : le convertisseur (navigateur) ; l'API Gemini, depuis les tâches planifiées seulement, jamais depuis le navigateur.
 - Accessibilité : texte alternatif, `aria-*` cohérents, contrastes, `prefers-reduced-motion` respecté, contenu non masqué sans JavaScript.
 - Images dans `public/img/`, moins de 300 Ko chacune, WebP ou AVIF de préférence.
 - Aucun secret dans le dépôt.

@@ -1,6 +1,6 @@
 # Avancement des fiches pays
 
-Fichier de suivi des guides pays. Dernière mise à jour : 4 novembre 2026, après le lot 4 (vagues 1 et 2 terminées).
+Fichier de suivi des guides pays. Dernière mise à jour : 7 novembre 2026. Les 194 pays ont un guide (58 rédigés dans `src/data/pays/fiches/`, les autres générés par `monde-guides.ts`). Les paragraphes datés ci-dessous sont l'historique, dans l'ordre chronologique ; l'état courant est dans la SPEC (§2).
 Liste raisonnée des pays envisagés : `.ai/PAYS_PREVUS.md`. Suivi général du projet : `.ai/AVANCEMENT.md`.
 
 ## Comment lire ce fichier
@@ -204,14 +204,14 @@ Liste raisonnée des pays envisagés : `.ai/PAYS_PREVUS.md`. Suivi général du 
 
 ## Paiements, banque et logement des 20 destinations (6 novembre 2026)
 
-- Pays : ESP ITA PRT GRC MAR TUN DZA TUR USA GBR DEU BEL CHE HRV THA JPN MEX DOM EGY CAN. Fichiers `src/data/pays/complements-1.ts` à `-5.ts`, assemblés par `complements-index.ts`.
+- Pays : ESP ITA PRT GRC MAR TUN DZA TUR USA GBR DEU BEL CHE HRV THA JPN MEX DOM EGY CAN. Fichiers `src/data/pays/complements/regions/phares-*.ts` (ex-`complements-1` à `-5`), assemblés par `complements/index.ts`.
 - Sources : sites privés (guides, forums d’expatriés, banques en ligne, cabinets), toutes signalées comme telles ; rien d’officiel lisible pour ces sujets. Recherche du 6 novembre 2026.
 - Lacunes assumées : caution/logement non sourcés pour Tunisie (partiel), États-Unis, Croatie, Thaïlande, Mexique (partiel), République dominicaine, Égypte ; ces sections le disent et renvoient à un professionnel.
 - À relire par un humain : montants de frais (changent vite), seuils de devises (Tunisie, Algérie).
 
 ## Paiements : paquets 2 à 5 (6 novembre 2026)
 
-- `complements-6.ts` à `complements-10.ts` : 107 pays au total ont maintenant une rubrique paiements sourcée (sources privées citées). Banque et logement : seulement quand une source existait, sinon « À documenter ».
+- `complements/regions/etendu-*.ts` (ex-`complements-6` à `-10`) : 107 pays au total ont maintenant une rubrique paiements sourcée (sources privées citées). Banque et logement : seulement quand une source existait, sinon « À documenter ».
 - Volontairement sans contenu : les 22 pays de `ALERTE_SECURITE` (voyage déconseillé), pour ne pas encourager le départ.
 - Sans source trouvée (restent « À documenter ») : Finlande, Corée du Sud, Qatar, Arabie saoudite, Koweït, Bahreïn, Pakistan, Bangladesh, Bhoutan, Ghana, Nigeria, Éthiopie, Rwanda, Seychelles, Uruguay, Paraguay, Venezuela, Moldavie, Kirghizistan, Tadjikistan, Turkménistan, petits États du Pacifique et des Caraïbes, etc. Une recherche pays par pays serait nécessaire.
 - Version « essentielle » : `/pays/<pays>/essentiel/` pour tous les pays ayant une fiche officielle.

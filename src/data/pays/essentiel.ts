@@ -1,5 +1,5 @@
 import officiel from '../monde/officiel.json';
-import { COMPLEMENTS } from './complements-index';
+import { COMPLEMENTS } from './complements';
 
 // Version « essentielle » d'un pays : l'indispensable en quelques lignes, sans commentaire.
 // Tout est calculé à partir des fiches officielles importées (officiel.json) et des compléments sourcés : rien n'est écrit à la main,
