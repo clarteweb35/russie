@@ -14,7 +14,7 @@ npm run dev -- --host 127.0.0.1 --port 4321   # http://127.0.0.1:4321/russie/
 npm run build                                 # doit passer avant tout push
 ```
 
-Le site est servi sous `/russie/` en local comme en production (`base` dans `astro.config.mjs`). `http://127.0.0.1:4321/` seul renvoie une 404.
+En production le site est à la racine de **https://voyagesmalins.fr** (variable de dépôt `DOMAINE`, voir `astro.config.mjs`) ; en local, sans `DOMAINE`, il est servi sous `/russie/`. `http://127.0.0.1:4321/` seul renvoie une 404.
 
 ## Structure
 

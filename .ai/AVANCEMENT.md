@@ -2,7 +2,7 @@
 
 Dernière mise à jour : 7 novembre 2026. Ce fichier est mis à jour à la fin de chaque session de travail. Les sections les plus basses sont les plus récentes ; les tableaux du début sont l'historique du guide Russie d'origine.
 
-**Production** : https://clarteweb35.github.io/russie/ (déploiement automatique à chaque push sur `main`)
+**Production** : https://voyagesmalins.fr, en ligne le 7 novembre 2026 (déploiement automatique à chaque push sur `main` ; l'ancienne adresse github.io redirige). **À corriger** : `www.voyagesmalins.fr` redirige vers l'adresse sans www, mais le canonique et le plan du site déclarent encore www : mettre la variable de dépôt `DOMAINE` à `voyagesmalins.fr` puis relancer le déploiement.
 **Note d'architecture** : 90 / 100 le 7 novembre 2026 (76 avant la remise à plat ; dette restante dans `.ai/SPEC_FONCTIONNALITES.md`, §6)
 
 ## État au 7 novembre 2026
@@ -86,10 +86,10 @@ Site « Voyage Malin » : 194 pays, outils (bagages, quand partir, budget), bons
 ## Quand le nom de domaine sera transféré (site général « Voyage Malin »)
 
 Le site https://clarteweb35.github.io/russie/ est le site général (marque « Voyage Malin », choix de destination parmi 194 pays). Il est prêt : le passage au domaine ne demande aucune modification du code.
-1. [ ] Domaine voyagesmalins.fr : détacher de Vercel, puis chez OVH pointer `www` en CNAME vers `clarteweb35.github.io.` (et l'apex vers les 4 adresses A de GitHub Pages : 185.199.108.153, .109.153, .110.153, .111.153). Action de l'utilisateur.
-2. [ ] GitHub : Réglages > Secrets and variables > Actions > Variables > créer `DOMAINE` = `www.voyagesmalins.fr`. Puis Réglages > Pages > Custom domain = `www.voyagesmalins.fr`, et cocher « Enforce HTTPS » après la vérification DNS. Relancer le déploiement (Actions > Déploiement > Run workflow).
-3. [ ] Vérifier : accueil, une fiche pays, `/robots.txt` et `/sitemap.xml` sur le nouveau domaine. Ajouter la propriété dans Search Console.
-4. [ ] Mettre à jour README.md, CLAUDE.md (« /russie/ ») et la spec une fois le domaine actif.
+1. [x] (fait) Domaine voyagesmalins.fr : détacher de Vercel, puis chez OVH pointer `www` en CNAME vers `clarteweb35.github.io.` (et l'apex vers les 4 adresses A de GitHub Pages : 185.199.108.153, .109.153, .110.153, .111.153). Action de l'utilisateur.
+2. [~] (fait, mais à passer en `voyagesmalins.fr` sans www, voir en tête) GitHub : Réglages > Secrets and variables > Actions > Variables > créer `DOMAINE` = `www.voyagesmalins.fr`. Puis Réglages > Pages > Custom domain = `www.voyagesmalins.fr`, et cocher « Enforce HTTPS » après la vérification DNS. Relancer le déploiement (Actions > Déploiement > Run workflow).
+3. [x] (vérifié le 7 novembre 2026 : accueil, robots.txt, sitemap) Vérifier : accueil, une fiche pays, `/robots.txt` et `/sitemap.xml` sur le nouveau domaine. Ajouter la propriété dans Search Console.
+4. [x] (fait) Mettre à jour README.md, CLAUDE.md (« /russie/ ») et la spec une fois le domaine actif.
 5. [x] (fait le 7 novembre 2026, via Google Tag Manager) **Google Analytics 4** : l’utilisateur fournit l'identifiant `G-XXXXXXXXXX`. Bandeau de consentement, page de confidentialité, gtag chargé seulement après acceptation.
 6. [ ] **EcoIndex** : mesurer l'accueil en ligne, compter les éléments avant d'ajouter du contenu.
 7. [~] Mentions légales : éditeur renseigné le 7 novembre 2026 (Julien Guillois, Chaumeré 35113 Domagné, téléphone, directeur de la publication). Reste : adresse e-mail de contact et numéro SIRET (à ajouter dès qu'ils existent, repère en commentaire dans `mentions-legales.astro`) ; déclaration d'activité (micro-entreprise) à faire par l'éditeur.

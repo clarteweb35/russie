@@ -3,7 +3,7 @@
 Site statique d'information, en français, pour voyager, vivre et travailler dans tous les pays du monde (sauf la France) et apprendre les langues utiles. Né comme guide de la Russie, qui reste le guide le plus complet (`/pays/russie/`). Il est indépendant et non officiel, et il cite ses sources.
 
 - **Public** : francophones qui préparent un séjour ou une installation à l'étranger.
-- **URL de production** : https://clarteweb35.github.io/russie/
+- **URL de production** : https://voyagesmalins.fr (l'ancienne adresse clarteweb35.github.io/russie/ redirige vers elle)
 - **Dépôt** : https://github.com/clarteweb35/russie (branche `main`)
 
 ## 1. Principes éditoriaux

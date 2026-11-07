@@ -10,7 +10,7 @@ npm run dev -- --host 127.0.0.1 --port 4321   # http://127.0.0.1:4321/russie/
 npm test                                      # construit le site et vérifie les liens internes
 ```
 
-Le site est servi sous `/russie/` en local comme en production.
+En production : https://voyagesmalins.fr (variable de dépôt `DOMAINE`). En local, sans `DOMAINE`, le site est servi sous `/russie/`.
 
 ## Organisation
 
