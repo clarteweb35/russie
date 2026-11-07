@@ -8,7 +8,7 @@ export const sections = [
   { href: '/paiements', label: 'Paiements', icon: '💳', desc: 'Payer en Russie, compte en Géorgie et taux EUR/RUB.' },
   { href: '/langue-culture', label: 'Langue & culture', icon: '🎭', desc: 'Repères linguistiques et culturels.' },
   { href: '/lecons', label: 'Leçons de russe', icon: '🎧', desc: '6 leçons courtes avec audio et quiz d’écoute.' },
-  { href: '/sources', label: 'Sources', icon: '📚', desc: 'D’où viennent les informations et leur fiabilité.' },
+  { href: '/pays/russie/sources', label: 'Sources', icon: '📚', desc: 'D’où viennent les informations et leur fiabilité.' },
 ];
 
 // Préfixe les liens internes avec le sous-dossier de déploiement (ex. /russie sur GitHub Pages)

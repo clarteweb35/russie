@@ -13,6 +13,7 @@ export const GET: APIRoute = async ({ site }) => {
   const guides = await getCollection('guides');
   const chemins = [
     '/',
+    '/sources',
     // Voyages Malins : la page des bons plans n'est listée que s'il y a des offres (sinon elle est en noindex)
     ...pagesEditoriales.map((e) => e.href).filter((h) => h !== '/bons-plans' || bonsPlans.length > 0),
     // La page budget n'est listée que si au moins une destination a une estimation (sinon elle est en noindex)

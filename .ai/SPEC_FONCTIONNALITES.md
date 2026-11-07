@@ -376,3 +376,4 @@ Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fich
 - Un bandeau jaune sous l'en-tête de toutes les pages indique que le site vient d'être créé et qu'il est en version bêta. Texte : `MESSAGE_BETA` dans `config.ts` (le vider pour le retirer). Il n'affecte pas le bandeau de sécurité, et n'est pas imprimé.
 - Outils en ligne : liste de bagages, « Quand partir ? », « Estimer le budget ». La page budget est en `noindex` et absente du plan du site tant qu'aucune destination n'a d'estimation sourcée.
 - Correctif : le fil d'Ariane s'affichait en cartes (collision de la classe `.fil` avec le parcours de l'accueil, renommé `.parcours-liste`).
+- `/sources` est la page générale « Sources et méthode » (badges, sources du site, contenus IA, liens vers la page Sources de chaque pays). Les sources du guide Russie sont désormais sur `/pays/russie/sources` (avant : `/sources`, qui montrait la Russie à tort).

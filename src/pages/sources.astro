@@ -1,44 +1,47 @@
 ---
+// Sources et méthode du site : page générale. Les sources détaillées de chaque pays sont sur sa propre page « Sources ».
 import Base from '../layouts/Base.astro';
 import Badge from '../components/Badge.astro';
+import { paysComplets } from '../data/pays';
+import { LAST_CHECK, NOM_SITE, url } from '../config';
+
+const liste = [{ nom: 'Russie', href: '/pays/russie/sources' }, ...paysComplets.map((p) => ({ nom: p.nom, href: `/pays/${p.slug}/sources` }))]
+  .sort((a, b) => a.nom.localeCompare(b.nom, 'fr'));
 ---
-<Base title="Sources du guide Russie" fil={[{ label: 'Russie', href: '/pays/russie' }, { label: 'Sources' }]}>
+<Base
+  title="Sources et méthode"
+  titreComplet={`Sources et méthode : d’où viennent les informations | ${NOM_SITE}`}
+  description="D’où viennent les informations de Voyages Malins : conseils officiels du ministère, données ouvertes, résumés générés par IA signalés, et sources détaillées de chaque pays."
+  fil={[{ label: 'Sources' }]}
+  meta={false}
+  bandeau={false}
+>
   <h1>Sources et méthode</h1>
-  <p class="lead">Dernière recherche : 30 octobre 2026. Chaque information est classée selon son niveau de confiance.</p>
+  <p class="lead">Voyages Malins est un site indépendant. Il ne remplace pas les conseils officiels : pour chaque pays, la référence reste la fiche du ministère de l’Europe et des Affaires étrangères. Dernière vérification globale : {LAST_CHECK}.</p>
 
   <h2>Comment lire les badges</h2>
   <ul>
-    <li><Badge type="ok">Vérifié</Badge> : appuyé par une source officielle ou un document cité ci-dessous.</li>
-    <li><Badge type="warn">À confirmer</Badge> : information de seconde main, chiffre variable ou non recoupé lors de la recherche. Ne vous en servez pas pour décider sans vérification officielle.</li>
+    <li><Badge type="ok">Vérifié</Badge> : appuyé par une source officielle ou un document cité.</li>
+    <li><Badge type="warn">À confirmer</Badge> : information de seconde main, chiffre variable ou non recoupé. À vérifier auprès d’une source officielle avant de décider.</li>
+    <li><strong>À documenter</strong> : nous n’avons pas encore de source fiable ; nous préférons l’écrire plutôt que d’inventer.</li>
   </ul>
 
-  <h2>Sources officielles</h2>
+  <h2>Nos sources</h2>
   <ul>
-    <li><a href="https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/russie/">France Diplomatie — Russie : conseils aux voyageurs</a> (sécurité, entrée/séjour, zones, contacts)</li>
-    <li><a href="https://www.diplomatie.gouv.fr/fr/information-par-pays/russie/dernieres-minutes-et-alertes">France Diplomatie — Dernières minutes et alertes</a></li>
-    <li><a href="https://www.diplomatie.gouv.fr/fr/information-par-pays/russie/politique-et-economie">France Diplomatie — Politique et économie</a> (sanctions, entreprises françaises)</li>
-    <li><a href="https://diplomatie.belgium.be/fr/pays/russie/voyager-en-russie-conseils-aux-voyageurs/securite-generale-en-russie">Diplomatie belge — Sécurité générale en Russie</a> (Caucase du Nord, numéro d’urgence)</li>
+    <li><strong>Conseils officiels :</strong> les fiches « conseils aux voyageurs » et « informations par pays » de <a href="https://www.diplomatie.gouv.fr/" rel="noopener">France Diplomatie</a> (sécurité, entrée, santé, contacts), importées dans le site puis mises à jour régulièrement.</li>
+    <li><strong>Fiche d’identité des pays :</strong> jeu de données ouvert « countries » (GitHub), base de fuseaux horaires IANA, Banque mondiale (population), Wikidata (capitales).</li>
+    <li><strong>Taux de change :</strong> convertisseur interrogé depuis votre navigateur (Banque de Russie pour le rouble, taux de référence de la Banque centrale européenne, ExchangeRate-API en secours).</li>
+    <li><strong>Outil « Quand partir ? » :</strong> Eurostat (fréquentation et prix de l’hébergement) et NASA POWER (climat). Chaque donnée est affichée avec sa source et sa date sur <a href={url('/outils/quand-partir')}>la page de l’outil</a>.</li>
+    <li><strong>Guides détaillés :</strong> chaque pays a sa page « Sources », avec les liens consultés. Les sources commerciales (blogs, sites de voyage) y sont signalées comme telles.</li>
   </ul>
 
-  <h2>Sources secondaires utilisées</h2>
-  <ul>
-    <li><a href="https://www.gw2ru.com/plan-your-trip/245835-payments-in-russia-2026">Gateway to Russia — paiements 2026</a> : site financé par des organismes russes officiels ; informations pratiques à recouper.</li>
-    <li><a href="https://www.expatfocus.com/russia/guide/russia-work-permits-and-working-legally">Expat Focus — permis de travail</a> (revu mai 2026)</li>
-    <li><a href="https://rivermate.com/guides/russia/work-permits-and-visas">Rivermate — permis et visas</a></li>
-    <li><a href="https://www.vanrhijnlegal.com/?p=13780">Van Rhijn Legal — HQS et résidence</a></li>
-    <li><a href="https://visasnews.com/la-russie-lance-son-visa-electronique-pour-les-voyageurs-francais-et-de-55-autres-pays/">VisasNews — relance de l’e-visa (août 2023)</a></li>
-    <li><a href="https://www.lasourisglobe-trotteuse.fr/comment-obtenir-le-visa-tourisme-russie/">La Souris Globe-Trotteuse — visa 2026</a> (blog de voyage ; durée e-visa à recouper)</li>
-    <li>Articles de presse sur le départ de Visa et Mastercard (2022) et la fermeture de l’espace aérien (Écho Touristique).</li>
+  <h2>Contenus générés par intelligence artificielle</h2>
+  <p>Deux blocs sont des résumés générés par IA, toujours signalés comme tels : « L’actu de la semaine » et « Les villes à connaître ». Ils peuvent contenir des erreurs et ne sont ni un conseil de voyage ni une source officielle. Les villes sont tirées de sites de voyage, pas de sources officielles. Détails dans les <a href={url('/mentions-legales')}>mentions légales</a>.</p>
+
+  <h2>Sources pays par pays</h2>
+  <ul class="liens-sources">
+    {liste.map((p) => <li><a href={url(p.href)}>{p.nom}</a></li>)}
   </ul>
 
-  <h2>Ce qui reste à documenter</h2>
-  <ul>
-    <li>Prix et conditions exacts du e-visa sur le portail officiel russe.</li>
-    <li>Enregistrement migratoire : délais et procédure actuels.</li>
-    <li>Fiscalité du résident et conventions fiscales France–Russie.</li>
-    <li>Système de santé, assurance expatriés, coût de la vie par ville.</li>
-    <li>Texte officiel du dispositif de visa « talents » 2026.</li>
-  </ul>
-
-  <p class="src">Ce guide est indépendant et n’a aucun lien avec une administration. Il ne constitue ni un conseil juridique, ni fiscal, ni médical.</p>
+  <p class="src">Ce site est indépendant et n’a aucun lien avec une administration. Il ne constitue ni un conseil juridique, ni fiscal, ni médical.</p>
 </Base>

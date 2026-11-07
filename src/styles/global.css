@@ -534,3 +534,5 @@ header.site.accueil .wrap { justify-content: flex-end; }
 .budget-total p { margin: 0; }
 .budget-total .fort { font: 800 1.35rem var(--serif); color: var(--accent); }
 .banner-beta { background: var(--warn-soft); border-bottom-color: var(--line); }
+.liens-sources { list-style: none; padding: 0; columns: 3 160px; column-gap: 16px; }
+.liens-sources li { margin: 0 0 4px; break-inside: avoid; }

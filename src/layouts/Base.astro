@@ -31,9 +31,9 @@ const estPageRussie = path === '/pays/russie' || sections.some((s) => path === s
 const menuAffiche: ElementMenu[] = menu ?? (estPageRussie ? sections.map((s) => ({ label: s.label, href: s.href })) : isHome ? [{ label: 'Destinations', href: '/#destinations' }, ...pagesEditoriales.map((e) => ({ label: e.label, href: e.href }))] : []);
 const actif = (m: ElementMenu) => m.href.includes('#') ? false : path === m.href || (!m.exact && path.startsWith(m.href + '/'));
 
-const showMeta = meta ?? (!isHome && !['/sources', '/mentions-legales'].includes(path));
+const showMeta = meta ?? (!isHome && !['/sources', '/pays/russie/sources', '/mentions-legales'].includes(path));
 const dateVerif = verifie ?? VERIFICATIONS[path] ?? LAST_CHECK;
-const lienSources = pays ? `/pays/${pays.slug}/sources` : '/sources';
+const lienSources = pays ? `/pays/${pays.slug}/sources` : estPageRussie ? '/pays/russie/sources' : '/sources';
 const titreOnglet = titreComplet ?? `${title} — ${marque}`;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const image = new URL(url(cheminImage), Astro.site).href;
