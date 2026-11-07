@@ -1,0 +1,60 @@
+{
+  "slug": "danemark",
+  "genere": "2026-11-07T00:19:37.316Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Aarhus",
+      "pourquoi": "Deuxième ville du pays, réputée pour sa vie culturelle.",
+      "a_voir": [
+        "Le musée ARoS, grand musée d’art",
+        "Den Gamle By, musée en plein air de plus de 75 maisons danoises"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Copenhague",
+      "pourquoi": "Capitale, plus grande ville du pays et principale porte d’entrée en avion.",
+      "a_voir": [
+        "Le port de Nyhavn",
+        "Le parc Tivoli",
+        "Le musée Viking"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Odense",
+      "pourquoi": "Ville natale de Hans Christian Andersen, sur l’île de Fionie ; centre historique et ambiance paisible.",
+      "a_voir": [
+        "La cathédrale Saint-Knud",
+        "L’hôtel de ville"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Voyageurs du Monde : guide de voyage Danemark",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/danemark"
+    },
+    {
+      "titre": "OK Voyage : belles villes du Danemark",
+      "url": "https://www.okvoyage.com/post/belles-villes-danemark/"
+    },
+    {
+      "titre": "WeRoad : que voir au Danemark",
+      "url": "https://www.weroad.fr/blog/que-voir-au-danemark-les-meilleures-attractions-a-decouvrir"
+    },
+    {
+      "titre": "Evaneos : Danemark, que voir",
+      "url": "https://www.evaneos.fr/danemark/voyage/etape/"
+    },
+    {
+      "titre": "Partir.com : lieux d’intérêt au Danemark",
+      "url": "https://www.partir.com/Danemark/lieux-d-interet.html"
+    }
+  ]
+}

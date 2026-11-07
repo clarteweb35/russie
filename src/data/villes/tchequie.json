@@ -1,0 +1,46 @@
+{
+  "slug": "tchequie",
+  "genere": "2026-11-07T00:19:37.316Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Český Krumlov",
+      "pourquoi": "Classée par l’UNESCO, présentée comme la grande étape patrimoniale de Bohême du Sud ; une source conseille d’y dormir pour profiter du calme du soir.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Prague",
+      "pourquoi": "Capitale et ville la plus connue du pays, surnommée la ville aux mille tours ; un guide conseille de ne pas la réduire au pont Charles et à l’horloge astronomique.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Karlovy Vary",
+      "pourquoi": "Ville thermale qui attire des curistes grâce à ses sources naturelles, non loin de Prague.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Loudavým krokem : Tchéquie, que voir",
+      "url": "https://loudavymkrokem.cz/fr/destinations/tchequie/"
+    },
+    {
+      "titre": "Le Mag Voyage : que faire en Tchéquie",
+      "url": "https://www.lemagvoyage.fr/tchequie/que-faire-tchequie/"
+    },
+    {
+      "titre": "Visit Czechia : les merveilles de l’UNESCO en Tchéquie",
+      "url": "https://www.visitczechia.com/fr-fr/b2b/france/press-and-media/press-releases/2024/12/unesco-trip"
+    },
+    {
+      "titre": "Voyageurs du Monde : guide de voyage République tchèque",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/republique-tcheque"
+    }
+  ]
+}

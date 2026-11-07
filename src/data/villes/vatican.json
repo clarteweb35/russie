@@ -1,0 +1,55 @@
+{
+  "slug": "vatican",
+  "genere": "2026-11-07T00:21:54.817Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Musées du Vatican et chapelle Sixtine",
+      "pourquoi": "Complexe de douze musées ; le plafond de la chapelle Sixtine, avec « La création d’Adam », est l’incontournable. La chapelle ne se visite qu’en passant par les musées (billet payant) ; prévoir au moins 4 heures avec les jardins.",
+      "a_voir": [
+        "Les fresques de Michel-Ange",
+        "La Pinacothèque"
+      ],
+      "conseil": "Selon des sites de billetterie, l’attente sans réservation peut atteindre 3 à 4 heures ; un billet coupe-file ou une visite guidée l’évite."
+    },
+    {
+      "critere": "pratique",
+      "nom": "Basilique Saint-Pierre",
+      "pourquoi": "Entrée gratuite ; l’accès à la coupole demande un billet séparé, non inclus dans celui des musées. Compter environ une heure.",
+      "a_voir": [
+        "La coupole (billet séparé)"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Jardins du Vatican",
+      "pourquoi": "Souvent inclus dans les billets guidés ; on ne peut pas s’y promener seul, d’où l’intérêt d’une visite avec un guide.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "OK Voyage : visiter le Vatican",
+      "url": "https://www.okvoyage.com/post/vatican/"
+    },
+    {
+      "titre": "Voyage avec nous : visiter le Vatican",
+      "url": "https://www.voyageavecnous.fr/visiter-le-vatican/"
+    },
+    {
+      "titre": "Guías Viajar : musées du Vatican, horaires et prix",
+      "url": "https://guias-viajar.com/fr/Europe/tourisme-en-italie/mus%C3%A9es-du-vatican-horaires-prix-billets/"
+    },
+    {
+      "titre": "Enfant en voyage : visiter le Vatican",
+      "url": "https://www.enfant-en-voyage.com/visite-vatican/"
+    },
+    {
+      "titre": "Un sac sur le dos : le Vatican",
+      "url": "https://unsacsurledos.com/vatican/"
+    }
+  ]
+}

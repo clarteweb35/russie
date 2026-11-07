@@ -1,0 +1,53 @@
+{
+  "slug": "andorre",
+  "genere": "2026-11-07T00:21:54.817Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Grandvalira",
+      "pourquoi": "L’une des grandes stations du pays, avec Vallnord, aux pistes variées pour tous les niveaux.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Andorre-la-Vieille",
+      "pourquoi": "Capitale, la plus haute du continent (1 023 m), souvent point de départ ; sans voiture, le bus est la seule façon de la rejoindre.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Canillo",
+      "pourquoi": "Village d’où l’on rejoint l’église Sant Cerni de Llorts, remarquable, et la mine de fer de Llorts, seule mine restée intacte en Andorre, à 3 km.",
+      "a_voir": [
+        "L’église Sant Cerni de Llorts",
+        "La mine de fer de Llorts"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Saily : que faire en Andorre",
+      "url": "https://saily.com/fr/blog/que-faire-andorre/"
+    },
+    {
+      "titre": "Les Deux Pieds Dehors : que faire en Andorre",
+      "url": "https://lesdeuxpiedsdehors.com/que-faire-en-andorre/"
+    },
+    {
+      "titre": "Routard : visiter Andorre-la-Vieille",
+      "url": "https://www.routard.com/guide_voyage_lieu/2429-andorre_la_vieille_(andorra_la_vella).htm"
+    },
+    {
+      "titre": "Cityzeum : visiter Andorre",
+      "url": "https://www.cityzeum.com/ar/visiter-andorre-le-guide-complet-pour-decouvrir-la-principaute-des-pyrenees"
+    },
+    {
+      "titre": "Où et quand : visiter Andorre",
+      "url": "https://www.ou-et-quand.net/ou-aller/andorre/"
+    }
+  ]
+}

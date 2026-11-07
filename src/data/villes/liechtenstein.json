@@ -1,0 +1,53 @@
+{
+  "slug": "liechtenstein",
+  "genere": "2026-11-07T00:21:54.817Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Balzers",
+      "pourquoi": "Site le plus recommandé : le château de Gutenberg, ouvert au public comme musée, domine les toits, les vignes et la vallée du Rhin ; environ 20 minutes en voiture au sud de Vaduz, et accessible en bus.",
+      "a_voir": [
+        "Le château de Gutenberg"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Vaduz",
+      "pourquoi": "Capitale ; son château, emblème du pays, ne se visite pas car la famille princière y réside.",
+      "a_voir": [
+        "Le centre touristique (tampon sur le passeport)",
+        "Le tour de ville en CityTrain, d’environ une demi-heure"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Malbun",
+      "pourquoi": "Station de sports d’hiver et de randonnée, connue pour ses prairies alpines.",
+      "a_voir": [
+        "Le belvédère de Sareis"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Sixt : un week-end au Liechtenstein",
+      "url": "https://www.sixt.fr/magazine/voyages/un-week-end-au-liechtenstein"
+    },
+    {
+      "titre": "Génération Voyage : le Liechtenstein",
+      "url": "https://generationvoyage.fr/activites/liechtenstein-p351825/"
+    },
+    {
+      "titre": "Le Mag Voyage : que faire au Liechtenstein",
+      "url": "https://www.lemagvoyage.fr/liechtenstein/que-faire-liechtenstein/"
+    },
+    {
+      "titre": "The Wom Travel : que voir au Liechtenstein",
+      "url": "https://www.thewomtravel.fr/destinations/actualites-voyage/que-voir-liechtenstein.html"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "slug": "saint-marin",
+  "genere": "2026-11-07T00:21:54.817Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Monte Titano et les trois tours",
+      "pourquoi": "Le centre historique et le mont Titano sont inscrits au patrimoine mondial de l’UNESCO ; trois sommets portent les tours Guaita, Cesta et Montale, Guaita étant la plus ancienne et la plus grande, accessible aux visiteurs.",
+      "a_voir": [
+        "La tour Guaita",
+        "La tour Cesta",
+        "La tour Montale"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Ville de Saint-Marin",
+      "pourquoi": "Centre de la République, avec la place de la Liberté et la basilique néoclassique construite entre 1826 et 1838.",
+      "a_voir": [
+        "La place de la Liberté",
+        "La basilique"
+      ],
+      "conseil": "Il n’y a pas de transports en commun, hormis le téléphérique entre Saint-Marin et Borgo Maggiore ; selon un guide, se garer à Borgo Maggiore est souvent plus simple."
+    },
+    {
+      "critere": "diversite",
+      "nom": "Borgo Maggiore",
+      "pourquoi": "Village au pied de la capitale, souvent traversé trop vite alors qu’il permet de ressentir la vie quotidienne ; son marché se tient le jeudi.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : visiter la République de San Marino",
+      "url": "https://www.routard.com/guide_voyage_lieu/2847-republique_de_san_marino.htm"
+    },
+    {
+      "titre": "Génération Voyage : 11 choses à faire à Saint-Marin",
+      "url": "https://generationvoyage.fr/visiter-saint-marin-faire-voir/"
+    },
+    {
+      "titre": "Le Mag Voyage : que faire à Saint-Marin",
+      "url": "https://www.lemagvoyage.fr/saint-marin/que-faire-saint-marin"
+    },
+    {
+      "titre": "Finestre sull’Arte : Saint-Marin, 10 lieux à ne pas manquer",
+      "url": "https://www.finestresullarte.info/fr/voyage/saint-marin-que-voir-10-lieux-a-ne-pas-manquer-dans-la-republique-de-titano"
+    }
+  ]
+}

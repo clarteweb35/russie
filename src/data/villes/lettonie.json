@@ -1,0 +1,50 @@
+{
+  "slug": "lettonie",
+  "genere": "2026-11-07T00:20:44.210Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Sigulda",
+      "pourquoi": "À 53 km de Riga et accessible en train, porte d’entrée du parc national de la Gauja, avec ses châteaux dont celui de Turaida.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Riga",
+      "pourquoi": "Capitale, la plus grande et la plus cosmopolite des trois capitales baltes ; son centre historique et ses immeubles Art nouveau sont classés à l’UNESCO.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Jūrmala",
+      "pourquoi": "Station balnéaire à une trentaine de minutes de Riga en voiture, qui est en fait un chapelet de petites stations sur une quarantaine de kilomètres, avec des centres thermaux.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Où et quand : visiter la Lettonie",
+      "url": "https://www.ou-et-quand.net/ou-aller/lettonie/"
+    },
+    {
+      "titre": "Routard : incontournables en Lettonie",
+      "url": "https://www.routard.com/guide_a_voir/lettonie.htm"
+    },
+    {
+      "titre": "Evaneos : Lettonie, que voir",
+      "url": "https://www.evaneos.fr/lettonie/voyage/etape/"
+    },
+    {
+      "titre": "Génération Voyage : les 10 plus beaux endroits de Lettonie",
+      "url": "https://generationvoyage.fr/?p=293951"
+    },
+    {
+      "titre": "Cityzeum : Riga",
+      "url": "https://www.cityzeum.com/tourisme/riga"
+    }
+  ]
+}

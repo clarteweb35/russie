@@ -1,0 +1,57 @@
+{
+  "slug": "chypre",
+  "genere": "2026-11-07T00:21:54.817Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Paphos",
+      "pourquoi": "Ancienne capitale de l’île, chargée d’histoire, classée au patrimoine mondial de l’UNESCO en 1980.",
+      "a_voir": [
+        "Les mosaïques de Kato Paphos",
+        "Les Tombeaux des Rois",
+        "Le parc archéologique"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Larnaca",
+      "pourquoi": "Ville souvent choisie comme base (aéroport international desservi par des vols à bas prix) ; un itinéraire d’une semaine proposé par une agence commence par Larnaca avant Nicosie, Limassol et Paphos.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Limassol",
+      "pourquoi": "Deuxième ville du pays, port animé à l’ambiance festive et moderne.",
+      "a_voir": [
+        "La vieille ville, la cathédrale et le château",
+        "La promenade du Molos"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Où et quand : visiter Chypre",
+      "url": "https://www.ou-et-quand.net/ou-aller/chypre/"
+    },
+    {
+      "titre": "Selectour : itinéraire d’une semaine à Chypre",
+      "url": "https://www.selectour.com/magazine/article/itineraire-de-1-semaine-a-chypre"
+    },
+    {
+      "titre": "Toploc : 13 choses à voir à Chypre",
+      "url": "https://toploc.com/blog/europe/visiter-chypre"
+    },
+    {
+      "titre": "Cityzeum : une semaine à Chypre",
+      "url": "https://www.cityzeum.com/ar/une-semaine-a-chypre"
+    },
+    {
+      "titre": "Visit World : 8 lieux à voir à Chypre",
+      "url": "https://visitworld.today/fr/blog/1564/top-8-places-to-visit-in-cyprus"
+    }
+  ]
+}

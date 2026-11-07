@@ -1,0 +1,54 @@
+{
+  "slug": "pologne",
+  "genere": "2026-11-07T00:19:37.316Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Cracovie",
+      "pourquoi": "Ancienne capitale et souvent la ville la plus recommandée.",
+      "a_voir": [
+        "La vieille ville",
+        "Le château de Wawel",
+        "Le quartier juif de Kazimierz"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Varsovie",
+      "pourquoi": "Capitale depuis la fin du XVIe siècle, près de 1,8 million d’habitants ; décrite comme incontournable pour un séjour.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Zakopane",
+      "pourquoi": "Porte des Tatras, citée pour la randonnée et l’escalade.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Un sac sur le dos : que faire en Pologne",
+      "url": "https://unsacsurledos.com/que-faire-en-pologne/"
+    },
+    {
+      "titre": "Où et quand : où aller en Pologne",
+      "url": "https://www.ou-et-quand.net/guides-voyage/pologne/ou-aller/"
+    },
+    {
+      "titre": "Routard : incontournables en Pologne",
+      "url": "https://www.routard.com/guide_a_voir/pologne.htm"
+    },
+    {
+      "titre": "Ryo : 10 lieux incontournables en Pologne",
+      "url": "https://ryo.co/fr/articles/pologne/varsovie/visiter-pologne-10-incontournables/"
+    },
+    {
+      "titre": "WeRoad : 11 choses à voir en Pologne",
+      "url": "https://www.weroad.fr/blog/11-choses-a-voir-en-pologne-les-incontournables"
+    }
+  ]
+}

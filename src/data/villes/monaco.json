@@ -1,0 +1,58 @@
+{
+  "slug": "monaco",
+  "genere": "2026-11-07T00:21:54.817Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Monte-Carlo",
+      "pourquoi": "Quartier du casino conçu par Charles Garnier en 1879, de l’Opéra et des grands hôtels ; la façade du casino s’admire sans jouer.",
+      "a_voir": [
+        "Le casino de Monte-Carlo",
+        "L’Opéra Garnier",
+        "L’Hôtel de Paris"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Le Rocher (Monaco-Ville)",
+      "pourquoi": "Cœur historique de la Principauté, où se trouvent le Palais princier, la cathédrale et le musée océanographique ; une promenade sur les remparts offre des vues panoramiques.",
+      "a_voir": [
+        "Le Palais princier",
+        "La cathédrale",
+        "Le musée océanographique"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Fontvieille",
+      "pourquoi": "Quartier moderne gagné sur la mer, plus calme que Monte-Carlo ; accueille le Festival international du cirque en janvier.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Monte-Carlo SBM : que voir à Monaco",
+      "url": "https://www.montecarlosbm.com/fr/guide-monaco/que-voir"
+    },
+    {
+      "titre": "Routard : Monaco-Ville (le Rocher)",
+      "url": "https://www.routard.com/fr/guide/france/cote-d-azur/principaute-de-monaco/monaco-ville-le-rocher"
+    },
+    {
+      "titre": "Routard : Fontvieille",
+      "url": "https://www.routard.com/fr/guide/france/cote-d-azur/principaute-de-monaco/fontvieille"
+    },
+    {
+      "titre": "Voyage Tips : que faire à Monaco",
+      "url": "https://www.voyagetips.com/que-faire-a-monaco/"
+    },
+    {
+      "titre": "Cityzeum : guide Monaco",
+      "url": "https://www.cityzeum.com/guide/monaco"
+    }
+  ]
+}

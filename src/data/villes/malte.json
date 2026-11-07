@@ -1,0 +1,55 @@
+{
+  "slug": "malte",
+  "genere": "2026-11-07T00:21:54.817Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Mdina",
+      "pourquoi": "Ancienne capitale médiévale surnommée la « cité du silence » ; la ville voisine, Rabat, se visite dans la foulée.",
+      "a_voir": [
+        "La cathédrale Saint-Paul, la plus ancienne de l’île"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "La Valette",
+      "pourquoi": "Capitale de Malte, qui se parcourt facilement à pied ; un ferry rapide en part vers Gozo (environ 45 minutes).",
+      "a_voir": [
+        "Le fort Saint-Elme et le musée national de la guerre",
+        "Le musée national des beaux-arts"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Gozo",
+      "pourquoi": "Deuxième île de l’archipel, plus verte, plus calme et plus rurale ; appréciée pour la randonnée. Des ferries réguliers partent de Cirkewwa.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Voyage Tips : que faire à Malte",
+      "url": "https://www.voyagetips.com/malta-guide/"
+    },
+    {
+      "titre": "Toploc : 14 choses à voir à Malte",
+      "url": "https://toploc.com/blog/europe/visiter-malte"
+    },
+    {
+      "titre": "OK Voyage : visiter Malte en 7 jours",
+      "url": "https://www.okvoyage.com/post/7-jours-malte/"
+    },
+    {
+      "titre": "Routard : incontournables à Malte",
+      "url": "https://www.routard.com/guide_a_voir/malte.htm"
+    },
+    {
+      "titre": "Partirou : visiter Malte",
+      "url": "https://www.partirou.com/visiter/malte/"
+    }
+  ]
+}

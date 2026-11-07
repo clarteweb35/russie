@@ -1,0 +1,57 @@
+{
+  "slug": "bosnie-herzegovine",
+  "genere": "2026-11-07T00:20:44.210Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Mostar",
+      "pourquoi": "Citée parmi les villes de Bosnie les plus populaires auprès des touristes, avec sa vieille ville sur la Neretva et son pont médiéval.",
+      "a_voir": [
+        "Le pont médiéval",
+        "La mosquée Karadoz-beg",
+        "L’église des Franciscains"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Sarajevo",
+      "pourquoi": "Capitale, ville cosmopolite aux influences européennes et orientales, façonnée par la présence ottomane.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Jajce",
+      "pourquoi": "Ancienne capitale du royaume de Bosnie ; ses chutes d’eau comptent, selon un guide, parmi les plus beaux endroits à visiter en Bosnie.",
+      "a_voir": [
+        "Les chutes d’eau",
+        "La ville médiévale"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Où et quand : visiter la Bosnie-Herzégovine",
+      "url": "https://www.ou-et-quand.net/ou-aller/bosnie-herzegovine/"
+    },
+    {
+      "titre": "Génération Voyage : les 12 plus beaux endroits de Bosnie",
+      "url": "https://generationvoyage.fr/endroits-visiter-bosnie/"
+    },
+    {
+      "titre": "Ulysse : villes et villages de Bosnie-Herzégovine",
+      "url": "https://ulysse.com/news/bosnie-herzegovine-villes-et-villages-joyau-balkans"
+    },
+    {
+      "titre": "Cityzeum : Bosnie-Herzégovine",
+      "url": "https://www.cityzeum.com/tourisme/bosnie-herzegovine"
+    },
+    {
+      "titre": "Partir.com : lieux d’intérêt en Bosnie-Herzégovine",
+      "url": "https://www.partir.com/Bosnie-herzegovine/lieux-d-interet.html"
+    }
+  ]
+}

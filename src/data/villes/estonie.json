@@ -1,0 +1,53 @@
+{
+  "slug": "estonie",
+  "genere": "2026-11-07T00:20:44.210Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Tartu",
+      "pourquoi": "Ville universitaire souvent décrite comme la capitale culturelle du pays, à environ 2 heures de Tallinn en train.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Tallinn",
+      "pourquoi": "Capitale ; son centre médiéval est présenté comme l’un des mieux conservés d’Europe, et c’est le point de départ des bus vers Tartu, Pärnu et Saaremaa.",
+      "a_voir": [
+        "La colline de Toompea et sa vue sur la vieille ville",
+        "Le palais de Kadriorg et ses jardins"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Pärnu",
+      "pourquoi": "Considérée comme la capitale estivale du pays : plages de sable fin, spas et saunas.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Où et quand : visiter l’Estonie",
+      "url": "https://www.ou-et-quand.net/ou-aller/estonie/"
+    },
+    {
+      "titre": "Partirou : visiter l’Estonie",
+      "url": "https://www.partirou.com/visiter/estonie/"
+    },
+    {
+      "titre": "Toploc : 10 choses à voir en Estonie",
+      "url": "https://toploc.com/blog/?p=65181"
+    },
+    {
+      "titre": "Voyageurs du Monde : 5 expériences en Estonie",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/magazine-voyage/5-experiences-a-vivre-en-estonie-et-nulle-part-ailleurs"
+    },
+    {
+      "titre": "DFDS : guide de voyage à Tartu",
+      "url": "https://www.dfds.com/fr-be/ferries-passagers/destinations/estonie/tartu"
+    }
+  ]
+}

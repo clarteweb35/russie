@@ -1,0 +1,48 @@
+{
+  "slug": "norvege",
+  "genere": "2026-11-07T00:19:37.316Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Bergen",
+      "pourquoi": "Souvent décrite comme la porte d’entrée des fjords ; la ligne ferroviaire Oslo–Bergen est citée pour ses paysages.",
+      "a_voir": [
+        "Les entrepôts du quai de Bryggen, inscrits à l’UNESCO"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Oslo",
+      "pourquoi": "Capitale et point de départ des itinéraires ; des vols directs la relient à Paris en environ 2 h 30 selon une source.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Tromsø",
+      "pourquoi": "Au nord, porte d’entrée des îles Lofoten et base citée pour observer les aurores boréales ; soleil de minuit en été.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "WeRoad : que voir en Norvège",
+      "url": "https://www.weroad.fr/blog/que-voir-norvege"
+    },
+    {
+      "titre": "Toploc : 15 choses à voir en Norvège",
+      "url": "https://toploc.com/blog/europe/visiter-la-norvege"
+    },
+    {
+      "titre": "La Balaguère : 10 lieux à voir en Norvège",
+      "url": "https://www.labalaguere.com/le-mag/idees-de-voyages/les-10-lieux-a-voir-en-norvege"
+    },
+    {
+      "titre": "Voyage avec nous : visiter la Norvège",
+      "url": "https://www.voyageavecnous.fr/visiter-la-norvege/"
+    }
+  ]
+}

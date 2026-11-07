@@ -1,0 +1,55 @@
+{
+  "slug": "lituanie",
+  "genere": "2026-11-07T00:20:44.210Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Trakai",
+      "pourquoi": "À environ 30 km de Vilnius, connue pour son château insulaire sur le lac Galvė ; le trajet en train depuis Vilnius prend 33 minutes.",
+      "a_voir": [
+        "Le château insulaire sur le lac Galvė"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Vilnius",
+      "pourquoi": "Capitale, avec une cathédrale néoclassique, des églises baroques et le quartier bohème d’Užupis.",
+      "a_voir": [
+        "La cathédrale néoclassique",
+        "Le quartier d’Užupis"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Kaunas",
+      "pourquoi": "Deuxième ville du pays, plus locale ; capitale provisoire entre les deux guerres, connue pour son architecture moderniste remarquée par l’UNESCO.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "DFDS : que faire en Lituanie",
+      "url": "https://www.dfds.com/fr-fr/ferries-passagers/destinations/lituanie"
+    },
+    {
+      "titre": "Où et quand : visiter la Lituanie",
+      "url": "https://www.ou-et-quand.net/ou-aller/lituanie/"
+    },
+    {
+      "titre": "Le Mag Voyage : que faire en Lituanie",
+      "url": "https://www.lemagvoyage.fr/lituanie/que-faire-lituanie/"
+    },
+    {
+      "titre": "Routard : incontournables en Lituanie",
+      "url": "https://www.routard.com/guide_a_voir/lituanie.htm"
+    },
+    {
+      "titre": "Interrail : une semaine en Lituanie",
+      "url": "https://www.interrail.com/fr/plan-your-trip/trip-ideas/recommended-routes/classic-routes/one-week-lithuania"
+    }
+  ]
+}

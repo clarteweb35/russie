@@ -1,0 +1,60 @@
+{
+  "slug": "islande",
+  "genere": "2026-11-07T00:19:37.316Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Le Cercle d’Or",
+      "pourquoi": "Excursion accessible depuis Reykjavik ; les sources citent le parc national de Thingvellir et la zone géothermique de Geysir.",
+      "a_voir": [
+        "Le parc national de Thingvellir",
+        "La zone géothermique de Geysir"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Reykjavik",
+      "pourquoi": "Capitale et bonne porte d’entrée du pays.",
+      "a_voir": [
+        "L’église Hallgrímskirkja",
+        "La salle de concert Harpa",
+        "Le musée national d’Islande"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Akureyri",
+      "pourquoi": "Présentée comme la capitale du Nord (environ 20 000 habitants), calme, et base pour découvrir les fjords et les paysages volcaniques du Nord.",
+      "a_voir": [
+        "L’Akureyri Art Museum",
+        "Une église en bois du XIXe siècle"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Guide to Iceland : 6 villes à visiter en Islande",
+      "url": "https://guidetoiceland.is/fr/contactez-des-voyageurs-en-islande/10097/6-towns-you-need-to-visit-in-iceland"
+    },
+    {
+      "titre": "Blue Car Rental : Akureyri ou Reykjavik",
+      "url": "https://www.bluecarrental.is/fr/blog/akureyri-ou-reykjavik-quelle-ville-choisir/"
+    },
+    {
+      "titre": "Voyage avec nous : que faire à Akureyri",
+      "url": "https://www.voyageavecnous.fr/que-faire-a-akureyri/"
+    },
+    {
+      "titre": "Evaneos : Islande, que voir",
+      "url": "https://www.evaneos.fr/islande/voyage/etape/"
+    },
+    {
+      "titre": "Lonely Planet : Reykjavik et le sud-ouest de l’Islande",
+      "url": "https://www.lonelyplanet.fr/catalogue/reykjavik-et-le-sud-ouest-de-lislande-en-quelques-jours"
+    }
+  ]
+}

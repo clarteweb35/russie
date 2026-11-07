@@ -1,0 +1,56 @@
+{
+  "slug": "luxembourg",
+  "genere": "2026-11-07T00:21:54.817Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Vianden",
+      "pourquoi": "Souvent la favorite pour le charme médiéval ; son château domine la vallée de l’Our, et Victor Hugo y a trouvé refuge à cinq reprises pendant son exil.",
+      "a_voir": [
+        "Le château de Vianden",
+        "Le télésiège, à 5-10 minutes à pied du château"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Luxembourg-ville",
+      "pourquoi": "La plus complète pour l’animation, la culture et les monuments.",
+      "a_voir": [
+        "Les Casemates du Bock",
+        "Le Chemin de la Corniche"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Echternach",
+      "pourquoi": "Plus ancienne ville du pays, connue pour sa procession dansante inscrite au patrimoine immatériel de l’UNESCO (mardi de Pentecôte) ; porte du Mullerthal.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Sixt : villes à visiter au Luxembourg",
+      "url": "https://sixt.fr/magazine/voyages/villes-a-visiter-au-luxembourg"
+    },
+    {
+      "titre": "Routard : incontournables au Luxembourg",
+      "url": "https://www.routard.com/guide_a_voir/luxembourg.htm"
+    },
+    {
+      "titre": "WeRoad : que faire au Luxembourg",
+      "url": "https://www.weroad.fr/blog/que-faire-luxembourg"
+    },
+    {
+      "titre": "Touring : Schengen-Clervaux en 5 étapes",
+      "url": "https://www.touring.be/fr/articles/luxembourg-schengen-clervaux-en-5-belles-etapes"
+    },
+    {
+      "titre": "Où et quand : visiter le Luxembourg",
+      "url": "https://www.ou-et-quand.net/ou-aller/luxembourg/"
+    }
+  ]
+}

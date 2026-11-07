@@ -1,0 +1,52 @@
+{
+  "slug": "macedoine-du-nord",
+  "genere": "2026-11-07T00:20:44.210Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Ohrid",
+      "pourquoi": "Au bord de l’un des lacs les plus anciens et les plus profonds d’Europe ; églises byzantines et vieille ville paisible.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Skopje",
+      "pourquoi": "Capitale et plus grande ville du pays, remodelée à partir de 1963 après un séisme majeur ; musées, ponts et marchés.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Bitola",
+      "pourquoi": "Deuxième ville du pays, connue pour ses cafés et pour le site gréco-romain d’Heraclea Lyncestis, à 5 km ; portes du parc national de Pelister.",
+      "a_voir": [
+        "Le site d’Heraclea Lyncestis"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : visiter Ohrid",
+      "url": "https://www.routard.com/guide_voyage_lieu/5631-ohrid.htm"
+    },
+    {
+      "titre": "Génération Voyage : 10 incontournables de Macédoine du Nord",
+      "url": "https://generationvoyage.fr/?p=309508"
+    },
+    {
+      "titre": "Le Mag Voyage : pourquoi visiter la Macédoine du Nord",
+      "url": "https://www.lemagvoyage.fr/macedoine-du-nord/que-faire-macedoine-du-nord-activites-incontournables/"
+    },
+    {
+      "titre": "Evaneos : Macédoine, que voir",
+      "url": "https://www.evaneos.fr/macedoine/voyage/etape/"
+    },
+    {
+      "titre": "Voyageurs du Monde : Skopje et lac d’Ohrid",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyage-macedoine-du-nord-skopje-lac-d-ohrid/voyage-en-macedoine-du-nord-skopje-et-lac-d-ohrid/pei6640"
+    }
+  ]
+}

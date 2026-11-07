@@ -1,0 +1,54 @@
+{
+  "slug": "serbie",
+  "genere": "2026-11-07T00:20:44.210Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Novi Sad",
+      "pourquoi": "À environ une heure au nord de Belgrade ; sa forteresse de Petrovaradin est très souvent citée, et le festival EXIT s’y tient en été.",
+      "a_voir": [
+        "La forteresse de Petrovaradin"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Belgrade",
+      "pourquoi": "Capitale, décrite comme une ville en constante évolution qui mêle modernité et passé.",
+      "a_voir": [
+        "La forteresse de Kalemegdan"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Monastère de Studenica",
+      "pourquoi": "Classé à l’UNESCO en 1986, l’un des plus importants sanctuaires orthodoxes de Serbie ; le circuit Žiča, Manasija et Studenica est souvent recommandé.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Génération Voyage : les 13 plus beaux endroits de Serbie",
+      "url": "https://generationvoyage.fr/endroits-visiter-serbie/"
+    },
+    {
+      "titre": "Toploc : 11 choses à voir en Serbie",
+      "url": "https://toploc.com/blog/europe/location-de-vacances-en-serbie"
+    },
+    {
+      "titre": "Lonely Planet : Belgrade et la Serbie en quelques jours",
+      "url": "https://www.lonelyplanet.fr/catalogue/belgrade-et-la-serbie-en-quelques-jours"
+    },
+    {
+      "titre": "Evaneos : Serbie, que voir",
+      "url": "https://www.evaneos.fr/serbie/voyage/etape/"
+    },
+    {
+      "titre": "Routard : Serbie",
+      "url": "https://www.routard.com/fr/guide/europe/serbie"
+    }
+  ]
+}

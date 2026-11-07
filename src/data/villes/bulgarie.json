@@ -1,0 +1,48 @@
+{
+  "slug": "bulgarie",
+  "genere": "2026-11-07T00:19:37.316Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Plovdiv",
+      "pourquoi": "Décrite comme l’une des plus anciennes villes habitées d’Europe, mise en avant pour son patrimoine et son ambiance.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Sofia",
+      "pourquoi": "Capitale, citée comme première étape à découvrir ; un guide conseille toutefois de n’y passer que peu de temps.",
+      "a_voir": [
+        "Le monastère de Rila, en excursion depuis Sofia"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Varna",
+      "pourquoi": "Principale station balnéaire du littoral de la mer Noire ; Sozopol et Nessebar sont aussi citées pour la côte.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Guías Viajar : que voir en Bulgarie",
+      "url": "https://guias-viajar.com/fr/Europe/tourisme-en-Bulgarie/que-voir-en-Bulgarie/"
+    },
+    {
+      "titre": "Toploc : 13 choses à voir en Bulgarie",
+      "url": "https://toploc.com/blog/europe/visiter-la-bulgarie"
+    },
+    {
+      "titre": "Où et quand : visiter la Bulgarie",
+      "url": "https://www.ou-et-quand.net/ou-aller/bulgarie/"
+    },
+    {
+      "titre": "Voyageurs du Monde : road-trip en Bulgarie",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyage-bulgarie-sofia-plovdiv-mer-noire-veliko-tarnovo/road-trip-en-bulgarie-de-sofia-a-veliko-tarnovo-via-la-mer-noire/pei5686"
+    }
+  ]
+}

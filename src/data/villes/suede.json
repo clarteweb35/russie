@@ -1,0 +1,59 @@
+{
+  "slug": "suede",
+  "genere": "2026-11-07T00:19:37.316Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Göteborg",
+      "pourquoi": "Deuxième ville du pays, sur la côte ouest, face à l’archipel du Bohuslän.",
+      "a_voir": [
+        "Le parc d’attractions Liseberg",
+        "Le musée maritime"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Stockholm",
+      "pourquoi": "Capitale, desservie par l’aéroport d’Arlanda et reliée par train à Göteborg et Malmö.",
+      "a_voir": [
+        "La vieille ville, Gamla Stan",
+        "Les croisières dans l’archipel"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Kiruna",
+      "pourquoi": "Ville la plus septentrionale de Suède, en Laponie, appréciée pour l’Icehotel et l’observation des aurores boréales.",
+      "a_voir": [
+        "L’Icehotel",
+        "Le parc national d’Abisko, dans la région"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Lonely Planet : que faire en Suède",
+      "url": "https://www.lonelyplanet.fr/destinations/europe/suede/que-faire"
+    },
+    {
+      "titre": "Toploc : 13 choses à voir en Suède",
+      "url": "https://toploc.com/blog/europe/sejour-au-ski-en-suede"
+    },
+    {
+      "titre": "Partirou : visiter la Suède",
+      "url": "https://www.partirou.com/visiter/suede/"
+    },
+    {
+      "titre": "Interrail : la Suède en hiver",
+      "url": "https://www.interrail.com/fr/plan-your-trip/trip-ideas/recommended-routes/seasonal-routes/sweden-winter"
+    },
+    {
+      "titre": "Cityzeum : carte touristique de Suède",
+      "url": "https://www.cityzeum.com/carte-touristique/suede"
+    }
+  ]
+}

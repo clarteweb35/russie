@@ -1,0 +1,56 @@
+{
+  "slug": "armenie",
+  "genere": "2026-11-07T00:21:54.817Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Tatev",
+      "pourquoi": "Monastère du IXe siècle surplombant les gorges de Vorotan, accessible par le téléphérique des « ailes de Tatev », présenté comme le plus long du monde.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Erevan",
+      "pourquoi": "Capitale, présentée comme plus ancienne que Rome et comme point de départ idéal pour un séjour.",
+      "a_voir": [
+        "La place de la République",
+        "Le mémorial de Tsitsernakaberd, à visiter tôt le matin"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Dilidjan",
+      "pourquoi": "Surnommée la « Suisse arménienne », dans les forêts des montagnes du Tavush, au nord du pays ; ses monastères historiques sont un atout.",
+      "a_voir": [
+        "Le monastère de Haghartsin",
+        "Jukhtak Vank"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Partir.com : lieux d’intérêt en Arménie",
+      "url": "https://www.partir.com/Armenie/lieux-d-interet.html"
+    },
+    {
+      "titre": "Toploc : 14 choses à voir en Arménie",
+      "url": "https://toploc.com/blog/europe/weekend-en-armenie"
+    },
+    {
+      "titre": "OK Voyage : visiter l’Arménie",
+      "url": "https://www.okvoyage.com/post/armenie-incontournables/"
+    },
+    {
+      "titre": "Où et quand : visiter l’Arménie",
+      "url": "https://www.ou-et-quand.net/ou-aller/armenie/"
+    },
+    {
+      "titre": "Ulysse : sites exceptionnels d’Arménie",
+      "url": "https://ulysse.com/news/armenie-sites-exceptionnels-explorer"
+    }
+  ]
+}

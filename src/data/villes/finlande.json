@@ -1,0 +1,54 @@
+{
+  "slug": "finlande",
+  "genere": "2026-11-07T00:19:37.316Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Turku",
+      "pourquoi": "Citée parmi les villes médiévales préservées de Finlande, souvent mentionnée pour son château médiéval.",
+      "a_voir": [
+        "Le château médiéval"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Helsinki",
+      "pourquoi": "Capitale, l’une des rares grandes villes du pays.",
+      "a_voir": [
+        "La forteresse de Suomenlinna, au patrimoine mondial de l’UNESCO"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Rovaniemi",
+      "pourquoi": "Dans le nord, porte de la Laponie ; le train de nuit Helsinki–Rovaniemi est particulièrement apprécié, mais l’avion est souvent privilégié à cause des distances.",
+      "a_voir": [],
+      "conseil": "Un guide indique février-mars pour la Laponie, contre juin à septembre pour les villes et les lacs."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Où et quand : où aller en Finlande",
+      "url": "https://www.ou-et-quand.net/ou-aller/finlande/"
+    },
+    {
+      "titre": "Audiala : Finlande",
+      "url": "https://audiala.com/fr/finlande"
+    },
+    {
+      "titre": "Voyageurs du Monde : guide de voyage Finlande",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/finlande"
+    },
+    {
+      "titre": "Chéri fais tes valises : top 9 des plus belles villes de Finlande",
+      "url": "https://www.cherifaistesvalises.com/top-9-des-plus-belles-villes-de-finlande-en-2023/"
+    },
+    {
+      "titre": "Evaneos : Finlande, que voir",
+      "url": "https://www.evaneos.fr/finlande/voyage/etape/"
+    }
+  ]
+}

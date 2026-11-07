@@ -1,0 +1,48 @@
+{
+  "slug": "hongrie",
+  "genere": "2026-11-07T00:19:37.316Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Eger",
+      "pourquoi": "Citée pour son château médiéval et, selon un forum, pour ses vins, la région viticole étant proche.",
+      "a_voir": [
+        "Le château médiéval"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Budapest",
+      "pourquoi": "Capitale, présentée par plusieurs sources comme l’étape incontournable du pays.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Lac Balaton",
+      "pourquoi": "Le plus grand lac de Hongrie, surnommé la « petite mer hongroise », à environ une heure de Budapest.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : incontournables en Hongrie",
+      "url": "https://www.routard.com/guide_a_voir/hongrie.htm"
+    },
+    {
+      "titre": "Où et quand : visiter la Hongrie",
+      "url": "https://www.ou-et-quand.net/ou-aller/hongrie/"
+    },
+    {
+      "titre": "Génération Voyage : les plus beaux endroits de Hongrie",
+      "url": "https://generationvoyage.fr/?p=83026"
+    },
+    {
+      "titre": "The Wom Travel : que voir en Hongrie",
+      "url": "https://www.thewomtravel.fr/hongrie/que-voir-en-hongrie.html"
+    }
+  ]
+}

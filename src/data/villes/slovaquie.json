@@ -1,0 +1,57 @@
+{
+  "slug": "slovaquie",
+  "genere": "2026-11-07T00:20:44.210Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Banská Štiavnica",
+      "pourquoi": "Ville minière médiévale au centre historique classé, citée parmi les moments forts d’un voyage en Slovaquie, avec Trnava.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Bratislava",
+      "pourquoi": "Capitale, présentée comme une belle entrée en matière ; la cité la plus « méditerranéenne » du pays.",
+      "a_voir": [
+        "La cathédrale Sainte-Élisabeth",
+        "Les châteaux perchés sur les collines voisines"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Hautes Tatras",
+      "pourquoi": "Principal massif montagneux du pays, avec des stations de ski réputées.",
+      "a_voir": [
+        "Jasná (Chopok)",
+        "Tatranská Lomnica",
+        "Štrbské Pleso"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Audiala : destinations en Slovaquie",
+      "url": "https://audiala.com/fr/slovaquie/"
+    },
+    {
+      "titre": "Voyageurs du Monde : guide de voyage Slovaquie",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/slovaquie"
+    },
+    {
+      "titre": "Routard : visiter Bratislava",
+      "url": "https://www.routard.com/guide_voyage_lieu/14765-bratislava.htm"
+    },
+    {
+      "titre": "Partirou : visiter la Slovaquie",
+      "url": "https://www.partirou.com/visiter/slovaquie"
+    },
+    {
+      "titre": "Où et quand : visiter la Slovaquie",
+      "url": "https://www.ou-et-quand.net/ou-aller/slovaquie/"
+    }
+  ]
+}

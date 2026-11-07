@@ -1,0 +1,55 @@
+{
+  "slug": "slovenie",
+  "genere": "2026-11-07T00:20:44.210Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Lac de Bled",
+      "pourquoi": "Présenté comme l’icône de la Slovénie ; baignade et visite du château qui le surplombe sont recommandées.",
+      "a_voir": [
+        "Le château de Bled",
+        "Les gorges de Vintgar, site le plus sauvage de la région"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Ljubljana",
+      "pourquoi": "Capitale, l’une des plus petites capitales européennes, à l’atmosphère paisible ; une journée suffit pour les principaux sites.",
+      "a_voir": [
+        "Le château qui domine la ville"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Piran",
+      "pourquoi": "Station balnéaire adriatique, cité médiévale mêlant architecture vénitienne et panoramas sur la mer ; surnommée la Venise slovène.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Où et quand : visiter la Slovénie",
+      "url": "https://www.ou-et-quand.net/ou-aller/slovenie/"
+    },
+    {
+      "titre": "Flytrippers : 3 villes à voir absolument en Slovénie",
+      "url": "https://flytrippers.com/fr/3-villes-a-voir-absolument-en-slovenie-et-3-astuces-pour-ton-voyage/"
+    },
+    {
+      "titre": "Génération Voyage : 10 incontournables de Slovénie",
+      "url": "https://generationvoyage.fr/endroits-visiter-slovenie/"
+    },
+    {
+      "titre": "Visit Ljubljana : 10 idées d’excursions d’une journée",
+      "url": "https://www.visitljubljana.com/fr/visiteurs/decouvrez/10-idees-pour-des-excursions-dune-journee-depuis-ljubljana"
+    },
+    {
+      "titre": "Voyageurs du Monde : guide de voyage Slovénie",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/slovenie/things-to-do/"
+    }
+  ]
+}

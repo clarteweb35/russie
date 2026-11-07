@@ -1,0 +1,56 @@
+{
+  "slug": "roumanie",
+  "genere": "2026-11-07T00:19:37.316Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Brașov",
+      "pourquoi": "Souvent citée comme l’une des villes phares de la Transylvanie ; le château de Bran, lié à la légende de Dracula, est à quelques kilomètres.",
+      "a_voir": [
+        "L’Église noire, monument gothique",
+        "La colline Tâmpa, pour la vue",
+        "Le château de Bran, à proximité"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Bucarest",
+      "pourquoi": "Capitale, l’une des plus grandes villes d’Europe ; plusieurs forums de voyageurs conseillent d’y passer seulement un ou deux jours.",
+      "a_voir": [
+        "Le Palais du Parlement"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Delta du Danube",
+      "pourquoi": "Classé au patrimoine mondial de l’UNESCO, il se découvre surtout en bateau.",
+      "a_voir": [],
+      "conseil": "Des voyageurs le trouvent plus beau au printemps et en été ; le réseau mobile y est capricieux."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Lonely Planet : les incontournables de Roumanie",
+      "url": "https://www.lonelyplanet.fr/destinations/europe/roumanie/les-incontournables"
+    },
+    {
+      "titre": "OK Voyage : les villes de Roumanie",
+      "url": "https://www.okvoyage.com/post/villes-de-roumanie/"
+    },
+    {
+      "titre": "Voyages Idéoz : visiter la Transylvanie",
+      "url": "https://voyages.ideoz.fr/visiter-transylvanie-guide-voyage-roumanie/"
+    },
+    {
+      "titre": "Evaneos : Roumanie, que voir",
+      "url": "https://www.evaneos.fr/roumanie/voyage/etape/"
+    },
+    {
+      "titre": "Romania Tourism : régions et villes",
+      "url": "https://romaniatourism.com/fr/regions-et-villes-brochure-de-demande.html"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "slug": "georgie",
+  "genere": "2026-11-07T00:21:54.817Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Koutaïssi",
+      "pourquoi": "Deuxième ville du pays, décrite comme aussi charmante que Tbilissi mais plus authentique et tranquille.",
+      "a_voir": [
+        "La cathédrale de Bagrati",
+        "La grotte de Prométhée, à une demi-heure de route"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Tbilissi",
+      "pourquoi": "Capitale, présentée comme le cœur du voyage : ruelles, bains thermaux et architecture ; le train la relie à Koutaïssi et à Batoumi (à réserver tôt en haute saison).",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Kazbegi (Stepantsminda)",
+      "pourquoi": "Au pied des monts du Caucase, au bout de la route militaire géorgienne, dominée par l’église de la Trinité de Guerguétie.",
+      "a_voir": [
+        "L’église de la Trinité de Guerguétie"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Génération Voyage : 17 choses à faire en Géorgie",
+      "url": "https://generationvoyage.fr/visiter-georgie-faire-voir/"
+    },
+    {
+      "titre": "Où et quand : visiter la Géorgie",
+      "url": "https://www.ou-et-quand.net/ou-aller/georgie/"
+    },
+    {
+      "titre": "OK Voyage : visiter la Géorgie",
+      "url": "https://www.okvoyage.com/post/georgie-incontournables/"
+    },
+    {
+      "titre": "Ulysse : sites à visiter en Géorgie",
+      "url": "https://ulysse.com/news/georgie-sites-visiter"
+    },
+    {
+      "titre": "Partir.com : lieux d’intérêt en Géorgie",
+      "url": "https://www.partir.com/Georgie/lieux-d-interet.html"
+    }
+  ]
+}

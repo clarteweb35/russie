@@ -1,0 +1,50 @@
+{
+  "slug": "montenegro",
+  "genere": "2026-11-07T00:20:44.210Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Kotor",
+      "pourquoi": "Au fond des bouches de Kotor classées à l’UNESCO, entourée de remparts ; son vieux centre médiéval est très prisé.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Podgorica",
+      "pourquoi": "Capitale, qui a peu d’attrait touristique selon les sources : son intérêt est pratique, comme point de départ proche du lac de Skadar, de Sveti Stefan et de Budva.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Parc national du Durmitor",
+      "pourquoi": "Recommandé aux randonneurs ; le canyon de la Tara, long de 78 km, est prisé des amateurs de rafting.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Où et quand : visiter le Monténégro",
+      "url": "https://www.ou-et-quand.net/ou-aller/montenegro/"
+    },
+    {
+      "titre": "Univers Vacances : que faire au Monténégro",
+      "url": "https://www.univers-vacances.fr/quoi-faire-montenegro-visiter"
+    },
+    {
+      "titre": "Partirou : visiter le Monténégro",
+      "url": "https://www.partirou.com/visiter/montenegro/"
+    },
+    {
+      "titre": "Visit World : 5 villes pittoresques du Monténégro",
+      "url": "https://visitworld.today/fr/blog/3546/where-to-go-in-montenegro-5-picturesque-towns-for-the-perfect-vacation"
+    },
+    {
+      "titre": "Havas Voyages : Monténégro",
+      "url": "https://www.havas-voyages.fr/montenegro"
+    }
+  ]
+}

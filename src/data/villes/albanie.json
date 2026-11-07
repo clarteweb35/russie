@@ -1,0 +1,50 @@
+{
+  "slug": "albanie",
+  "genere": "2026-11-07T00:20:44.210Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Berat",
+      "pourquoi": "Surnommée la ville aux mille fenêtres, connue pour ses maisons de style ottoman ; classée à l’UNESCO.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Tirana",
+      "pourquoi": "Capitale, présentée comme un excellent point de départ pour découvrir le pays, avec ses façades colorées et ses musées.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Riviera albanaise",
+      "pourquoi": "Le long de la mer Ionienne, présentée comme un joyau méditerranéen encore préservé ; Ksamil, Himarë et Porto Palermo sont citées comme étapes.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Génération Voyage : 8 endroits à visiter en Albanie",
+      "url": "https://generationvoyage.fr/8-endroits-visiter-en-albanie/"
+    },
+    {
+      "titre": "Toploc : 11 choses à voir en Albanie",
+      "url": "https://toploc.com/blog/europe/visiter-l-albanie"
+    },
+    {
+      "titre": "Lonely Planet : que faire en Albanie",
+      "url": "https://www.lonelyplanet.fr/destinations/europe/albanie/que-faire"
+    },
+    {
+      "titre": "Ryo : visiter l’Albanie",
+      "url": "https://ryo.co/fr/destinations/albanie/"
+    },
+    {
+      "titre": "Routard : le nouveau guide Albanie",
+      "url": "https://www.routard.com/fr/mag/actu/a/le-nouveau-guide-du-routard-albanie"
+    }
+  ]
+}
