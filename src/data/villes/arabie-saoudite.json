@@ -1,0 +1,52 @@
+{
+  "slug": "arabie-saoudite",
+  "genere": "2026-11-07T00:28:47.296Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "AlUla et Hégra",
+      "pourquoi": "Le site nabatéen de Hégra compte parmi les plus célèbres de la région ; les circuits l’associent souvent à Médine et à Djeddah.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Riyad",
+      "pourquoi": "Capitale, associée à la forteresse de Masmak, aux souks et aux musées ; le site de Diriyah (At-Turaif) est inscrit à l’UNESCO.",
+      "a_voir": [
+        "La forteresse de Masmak",
+        "Diriyah (At-Turaif)"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Djeddah",
+      "pourquoi": "Sa vieille ville, Al-Balad, est classée au patrimoine mondial de l’UNESCO depuis 2014 ; les visiteurs citent aussi la longue corniche sur la mer Rouge, les souks traditionnels et la mosquée flottante.",
+      "a_voir": [
+        "Al-Balad, la vieille ville",
+        "La corniche sur la mer Rouge"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Airalo : les plus beaux endroits d’Arabie saoudite",
+      "url": "https://www.airalo.com/fr/blog/les-plus-beaux-endroits-a-voir-en-arabie-saoudite"
+    },
+    {
+      "titre": "Génération Voyage : guide touristique Arabie saoudite",
+      "url": "https://generationvoyage.fr/?p=282885"
+    },
+    {
+      "titre": "Voyageurs du Monde : premier voyage en Arabie saoudite",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyage-arabie-saoudite-riyadh-tabuk-al-ula-jeddah/voyage-en-arabie-saoudite-de-riyadh-a-jeddah/poi6715"
+    },
+    {
+      "titre": "Nomade Aventure : visiter l’Arabie saoudite",
+      "url": "https://www.nomade-aventure.com/voyage-aventure/arabie-saoudite/visiter-l-arabie-saoudite-alula-djeddah-medine-taif/sau06"
+    }
+  ]
+}

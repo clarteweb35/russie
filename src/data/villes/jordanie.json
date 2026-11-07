@@ -1,0 +1,50 @@
+{
+  "slug": "jordanie",
+  "genere": "2026-11-07T00:28:47.296Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Pétra",
+      "pourquoi": "Le grand incontournable du pays ; un guide recommande d’y consacrer une journée entière.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Amman",
+      "pourquoi": "Capitale, surnommée « Amman la blanche » et point de départ de la plupart des circuits.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Wadi Rum",
+      "pourquoi": "Désert du sud, à environ 2 heures de Pétra ; les circuits proposent une balade en 4×4 au coucher du soleil, à dos de chameau et une nuit dans le désert avec un dîner bédouin.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : voyage en Jordanie",
+      "url": "https://www.routard.com/fr/guide/moyen-orient/jordanie"
+    },
+    {
+      "titre": "WeRoad : que voir en Jordanie",
+      "url": "https://www.weroad.fr/blog/que-voir-en-jordanie"
+    },
+    {
+      "titre": "Club Med : le top des lieux à visiter en Jordanie",
+      "url": "https://www.clubmed.fr/l/que-visiter-en-jordanie"
+    },
+    {
+      "titre": "Partirou : visiter la Jordanie",
+      "url": "https://www.partirou.com/visiter/jordanie/"
+    },
+    {
+      "titre": "Génération Voyage : 11 plus beaux endroits de Jordanie",
+      "url": "https://generationvoyage.fr/?p=85527"
+    }
+  ]
+}

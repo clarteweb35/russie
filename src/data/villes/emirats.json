@@ -1,0 +1,57 @@
+{
+  "slug": "emirats",
+  "genere": "2026-11-07T00:28:47.296Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Dubaï",
+      "pourquoi": "Ville la plus citée du pays ; le Burj Khalifa et le Palm Jumeirah sont les monuments les plus cités.",
+      "a_voir": [
+        "Le sommet du Burj Khalifa",
+        "Le Palm Jumeirah",
+        "L’hôtel Burj al-Arab"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Abou Dabi",
+      "pourquoi": "Capitale du pays, présentée comme le côté plus sophistiqué et culturel des Émirats ; la grande mosquée est souvent recommandée.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Al Ain",
+      "pourquoi": "À environ deux heures de route de la capitale, présentée comme une étape pour sortir des sentiers battus.",
+      "a_voir": [
+        "Les palmeraies",
+        "Le fort Al Jahili"
+      ],
+      "conseil": "Selon les guides consultés, le meilleur moment pour voyager va de novembre à mars."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Voyageurs du Monde : guide de voyage Émirats arabes unis",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/dubai-les-emirats"
+    },
+    {
+      "titre": "Où et quand : visiter les Émirats arabes unis",
+      "url": "https://www.ou-et-quand.net/ou-aller/emirats-arabes-unis/"
+    },
+    {
+      "titre": "Partirou : Émirats arabes unis",
+      "url": "https://www.partirou.com/visiter/emirats-arabes-unis/"
+    },
+    {
+      "titre": "Evaneos : Émirats arabes unis, que voir",
+      "url": "https://www.evaneos.fr/emirats-arabes-unis/voyage/etape/"
+    },
+    {
+      "titre": "Club Med : voyages aux Émirats arabes unis",
+      "url": "https://www.clubmed.fr/d/afrique-et-moyen-orient/emirats-arabes-unis"
+    }
+  ]
+}

@@ -133,7 +133,7 @@ Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fich
 ### 7 novembre 2026 : villes à connaître, paquets 2 et suivants (150 pays)
 - Objectif : topos de villes rédigés par Claude à partir de recherches web (voir §19), par paquets de 10 recherches.
 - Fichiers : src/data/villes/<pays>.json, docs.
-- Fait : 70 pays (Europe, Caucase, Amériques et Caraïbes en grande partie). Restant : 80 pays (Asie, Moyen-Orient, Afrique, Océanie, quelques États des Amériques) ; les 22 pays déconseillés et la Russie sont mis de côté en attendant décision.
+- Fait : 90 pays (Europe, Caucase, Amériques, Asie du Sud-Est et du Sud, Moyen-Orient en grande partie). Restant : 60 pays (Asie centrale, Afrique, Océanie, quelques autres) ; les 22 pays déconseillés et la Russie sont mis de côté en attendant décision.
 
 
 ## 8. Version « essentielle » (6 novembre 2026)

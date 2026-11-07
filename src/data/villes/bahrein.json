@@ -1,0 +1,52 @@
+{
+  "slug": "bahrein",
+  "genere": "2026-11-07T00:28:47.296Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Fort de Bahreïn (Qal’at al-Bahreïn)",
+      "pourquoi": "Grand site historique du pays, classé à l’UNESCO, qui raconte l’histoire de Bahreïn depuis plus de 4 000 ans ; décrit comme l’ancienne capitale de la civilisation de Dilmun.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Manama",
+      "pourquoi": "Capitale, ville cosmopolite et moderne avec un souk animé ; la grande mosquée Al-Fateh et le Musée national reviennent souvent.",
+      "a_voir": [
+        "La grande mosquée Al-Fateh",
+        "Le Musée national"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Désert de Sakhir",
+      "pourquoi": "Excursion citée depuis Manama, pour voir l’« arbre de vie », qui a survécu plus de 400 ans dans le désert, le circuit de Formule 1 et le premier puits de pétrole du pays.",
+      "a_voir": [
+        "L’arbre de vie",
+        "Le circuit de Formule 1"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Cityzeum : Manama",
+      "url": "https://www.cityzeum.com/manama"
+    },
+    {
+      "titre": "Cyril Jarnias : incontournables de Bahreïn",
+      "url": "https://www.cyriljarnias.com/?p=26301"
+    },
+    {
+      "titre": "Barceló : guide de Bahreïn",
+      "url": "https://www.barcelo.com/guia-turismo/fr/bahrain/"
+    },
+    {
+      "titre": "Voyage Privé : guide de voyage à Bahreïn",
+      "url": "https://www.voyage-prive.com/offres/guide-de-voyage-a-bahrein"
+    }
+  ]
+}

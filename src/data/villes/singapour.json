@@ -1,0 +1,55 @@
+{
+  "slug": "singapour",
+  "genere": "2026-11-07T00:27:40.887Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Gardens by the Bay",
+      "pourquoi": "Visite présentée comme incontournable, au pied du Marina Bay Sands, avec ses Supertrees.",
+      "a_voir": [
+        "Les Supertrees"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Marina Bay",
+      "pourquoi": "Quartier le plus récent de la ville, dominé par le complexe Marina Bay Sands et le Marina Barrage ; on peut profiter de la vue depuis la terrasse d’observation sans y séjourner.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Little India",
+      "pourquoi": "Quartier décrit comme le plus coloré de la ville, avec des temples hindous et une cuisine indienne.",
+      "a_voir": [
+        "Le temple Sri Vadapathira Kaliamman",
+        "Le Little India Arcade"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Où et quand : visiter Singapour",
+      "url": "https://www.ou-et-quand.net/ou-aller/singapour/"
+    },
+    {
+      "titre": "Un sac sur le dos : que faire à Singapour",
+      "url": "https://unsacsurledos.com/que-faire-a-singapour/"
+    },
+    {
+      "titre": "Voyage avec nous : que faire à Singapour",
+      "url": "https://www.voyageavecnous.fr/que-faire-a-singapour/"
+    },
+    {
+      "titre": "OK Voyage : que faire à Singapour",
+      "url": "https://www.okvoyage.com/post/singapour-incontournables/"
+    },
+    {
+      "titre": "Partir.com : lieux d’intérêt à Singapour",
+      "url": "https://www.partir.com/Singapour/lieux-d-interet.html"
+    }
+  ]
+}

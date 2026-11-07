@@ -1,0 +1,53 @@
+{
+  "slug": "malaisie",
+  "genere": "2026-11-07T00:27:40.887Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "George Town (Penang)",
+      "pourquoi": "Ville inscrite à l’UNESCO, connue pour sa gastronomie de rue, notamment le laksa de Penang ; les plages de Batu Ferringhi sont proches.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Kuala Lumpur",
+      "pourquoi": "Capitale, réputée pour ses tours Petronas, sa street-food et ses marchés ; les grottes de Batu, à environ dix kilomètres au nord et accessibles en train, abritent un grand sanctuaire hindou.",
+      "a_voir": [
+        "Les tours Petronas",
+        "Les grottes de Batu"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Kota Kinabalu",
+      "pourquoi": "Capitale de Sabah, à Bornéo, porte d’entrée vers les richesses naturelles de l’île et proche du mont Kinabalu, plus haut sommet de Bornéo.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Partirou : péninsule ouest de la Malaisie",
+      "url": "https://www.partirou.com/visiter/malaisie/peninsule-ouest/"
+    },
+    {
+      "titre": "Génération Voyage : les 12 plus beaux endroits de Malaisie",
+      "url": "https://generationvoyage.fr/?p=83740"
+    },
+    {
+      "titre": "Tourlane : sites touristiques de Malaisie",
+      "url": "https://tourlane.fr/asie/malaisie/sites-touristiques"
+    },
+    {
+      "titre": "Chéri fais tes valises : que visiter en Malaisie en 2 semaines",
+      "url": "https://www.cherifaistesvalises.com/que-visiter-en-malaisie-en-2-semaines-mon-guide-pratique/"
+    },
+    {
+      "titre": "Evaneos : Malaisie, que voir",
+      "url": "https://www.evaneos.fr/malaisie/voyage/etape/?p=2"
+    }
+  ]
+}

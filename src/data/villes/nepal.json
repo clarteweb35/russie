@@ -1,0 +1,53 @@
+{
+  "slug": "nepal",
+  "genere": "2026-11-07T00:28:47.296Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Pokhara",
+      "pourquoi": "À 210 km à l’ouest de Katmandou, associée au lac Phewa, à la pagode de la paix et aux vues sur le Machapuchare ; parapente et rafting sont cités.",
+      "a_voir": [
+        "Le lac Phewa",
+        "La pagode de la paix"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Katmandou",
+      "pourquoi": "Capitale « mystique et chaotique » ; le temple Swayambhunath est l’un des plus célèbres du pays, et la vallée compte Patan (Durbar Square) et Bhaktapur, classée à l’UNESCO.",
+      "a_voir": [
+        "Le temple Swayambhunath",
+        "Patan et son Durbar Square",
+        "Bhaktapur"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Annapurna",
+      "pourquoi": "Point de départ de nombreux treks : le circuit de l’Annapurna dure 17 à 21 jours jusqu’au col de Thorong La (5 416 m), et le camp de base est une option plus courte.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Partirou : visiter le Népal",
+      "url": "https://www.partirou.com/visiter/nepal/"
+    },
+    {
+      "titre": "Génération Voyage : 11 plus beaux endroits du Népal",
+      "url": "https://generationvoyage.fr/?p=81641"
+    },
+    {
+      "titre": "WeRoad : que faire au Népal",
+      "url": "https://www.weroad.fr/blog/que-faire-au-nepal"
+    },
+    {
+      "titre": "Evaneos : Népal, que voir",
+      "url": "https://www.evaneos.fr/nepal/voyage/etape/"
+    }
+  ]
+}

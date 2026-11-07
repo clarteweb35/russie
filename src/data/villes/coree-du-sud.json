@@ -1,0 +1,46 @@
+{
+  "slug": "coree-du-sud",
+  "genere": "2026-11-07T00:27:40.887Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Gyeongju",
+      "pourquoi": "Citée avec Séoul et Busan parmi les étapes à inclure dans un premier voyage, pour sa richesse historique.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Séoul",
+      "pourquoi": "Capitale, ville éclectique entre marchés de nuit, palais et gratte-ciel, entourée de montagnes avec des sentiers de randonnée près du Bukhansan.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Busan",
+      "pourquoi": "Deuxième grande métropole du pays, réputée pour sa richesse culturelle.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "La Balaguère : 10 lieux à voir en Corée du Sud",
+      "url": "https://www.labalaguere.com/le-mag/idees-de-voyages/les-10-lieux-a-voir-en-coree-du-sud"
+    },
+    {
+      "titre": "TourMaG : Séoul, Gyeongju, Busan",
+      "url": "https://www.tourmag.com/Seoul-Gyeongju-Busan-les-trois-dynamiques-incontournables-de-Coree_a122054.html"
+    },
+    {
+      "titre": "Ryo : 7 villes à visiter en Corée du Sud",
+      "url": "https://ryo.co/fr/articles/coree-du-sud/seoul/coree-du-sud-7-villes-a-visiter-absolument-dans-ce-pays-fascinant/"
+    },
+    {
+      "titre": "OK Voyage : les plus belles villes de Corée du Sud",
+      "url": "https://www.okvoyage.com/post/villes-coree-du-sud"
+    }
+  ]
+}

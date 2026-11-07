@@ -1,0 +1,53 @@
+{
+  "slug": "chine",
+  "genere": "2026-11-07T00:27:40.887Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Xi’an",
+      "pourquoi": "Capitale de la province du Shaanxi, liée à l’armée de terre cuite ; ses remparts sont parmi les mieux conservés de Chine.",
+      "a_voir": [
+        "L’armée de terre cuite",
+        "Les remparts"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Pékin",
+      "pourquoi": "Capitale et point de départ classique d’un premier voyage en Chine.",
+      "a_voir": [
+        "Le Palais d’été",
+        "Les hutongs",
+        "La Grande Muraille et les tombeaux Ming, en excursion"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Guilin",
+      "pourquoi": "Ville des paysages karstiques, placée par un guide parmi les incontournables.",
+      "a_voir": [],
+      "conseil": "Le printemps ou l’automne sont conseillés pour la météo."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Guías Viajar : résumé des visites recommandées en Chine",
+      "url": "https://guias-viajar.com/fr/Asie/tourisme-en-Chine/r%C3%A9sum%C3%A9-des-visites-recommand%C3%A9es-en-Chine/"
+    },
+    {
+      "titre": "Guías Viajar : lacs et paysages de montagne en Chine",
+      "url": "https://guias-viajar.com/fr/Asie/tourisme-en-Chine/visitez-de-magnifiques-lacs-et-paysages-de-montagne/"
+    },
+    {
+      "titre": "Into Travel China : tournée de 13 jours",
+      "url": "https://intotravelchina.com/fr/tours/beijing_tours/13day-china-highlights-tour.html"
+    },
+    {
+      "titre": "The China Guide : Xi’an",
+      "url": "https://www.thechinaguide.com/fr/destination/xi'an/experiences"
+    }
+  ]
+}

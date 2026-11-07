@@ -1,0 +1,58 @@
+{
+  "slug": "sri-lanka",
+  "genere": "2026-11-07T00:28:47.296Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Sigiriya",
+      "pourquoi": "Surnommé le « Rocher du Lion », à environ 160 km de Colombo ; classé à l’UNESCO, son ancien palais est l’un des incontournables de l’île.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Colombo",
+      "pourquoi": "Porte d’entrée et métropole du pays ; un guide suggère d’y prévoir peu de temps.",
+      "a_voir": [
+        "Le temple de Gangaramaya",
+        "Galle Face Green",
+        "Le marché de Pettah"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Ella",
+      "pourquoi": "Lieu de randonnée ; le trajet en train depuis Kandy est souvent décrit comme l’un des plus beaux au monde.",
+      "a_voir": [
+        "Little Adam’s Peak",
+        "Le Nine Arch Bridge",
+        "Ella Rock"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Flytrippers : 10 endroits à visiter au Sri Lanka",
+      "url": "https://flytrippers.com/fr/10-endroits-a-visiter-au-sri-lanka/"
+    },
+    {
+      "titre": "Partir.com : lieux d’intérêt au Sri Lanka",
+      "url": "https://www.partir.com/Sri-lanka/lieux-d-interet.html"
+    },
+    {
+      "titre": "Evaneos : Sri Lanka, que voir",
+      "url": "https://www.evaneos.fr/sri-lanka/voyage/etape/"
+    },
+    {
+      "titre": "Club Med : que faire au Sri Lanka",
+      "url": "https://www.clubmed.fr/l/que-faire-au-sri-lanka"
+    },
+    {
+      "titre": "Avygeo : guide Sri Lanka",
+      "url": "https://www.avygeo.com/fr/guide/asie/sri_lanka"
+    }
+  ]
+}

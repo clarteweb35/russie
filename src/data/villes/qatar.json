@@ -1,0 +1,56 @@
+{
+  "slug": "qatar",
+  "genere": "2026-11-07T00:28:47.296Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Musée d’art islamique (Doha)",
+      "pourquoi": "Conçu par I. M. Pei, il abrite manuscrits, céramiques, textiles et orfèvreries ; plusieurs sources conseillent de le visiter à la tombée de la nuit, quand l’éclairage met en valeur son architecture.",
+      "a_voir": [
+        "Le musée",
+        "Le parc MIA"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Doha",
+      "pourquoi": "Capitale ; la Corniche longe le golfe Persique sur environ sept kilomètres, entre West Bay et le musée, et le Souq Waqif est le marché traditionnel du centre.",
+      "a_voir": [
+        "Le Souq Waqif",
+        "La Corniche"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Khor Al Adaid",
+      "pourquoi": "Réserve naturelle au sud, « mer intérieure » où les dunes rencontrent la mer, à environ une heure de Doha ; excursions en 4×4 et à dos de chameau.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Milesopedia : que faire à Doha",
+      "url": "https://milesopedia.fr/destinations/que-faire-visiter-doha-qatar/"
+    },
+    {
+      "titre": "Selectour : que voir au Qatar",
+      "url": "https://www.selectour.com/magazine/article/que-voir-au-qatar"
+    },
+    {
+      "titre": "Guías Viajar : que voir à Doha",
+      "url": "https://guias-viajar.com/fr/asia/turismo-en-qatar/que-ver-visitar-doha/"
+    },
+    {
+      "titre": "Voyage avec nous : visiter Doha",
+      "url": "https://www.voyageavecnous.fr/visiter-doha/"
+    },
+    {
+      "titre": "Ryo : que faire à Doha",
+      "url": "https://ryo.co/fr/articles/qatar/doha/que-faire-doha/"
+    }
+  ]
+}

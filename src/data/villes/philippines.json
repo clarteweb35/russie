@@ -1,0 +1,56 @@
+{
+  "slug": "philippines",
+  "genere": "2026-11-07T00:27:40.887Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "El Nido (Palawan)",
+      "pourquoi": "Célèbre pour ses paysages marins spectaculaires, ses lagons turquoise et ses falaises karstiques ; l’archipel de Bacuit compte 45 îles et îlots.",
+      "a_voir": [],
+      "conseil": "Une source indique que mars à mai offre un temps sec et ensoleillé, idéal pour Palawan, Coron ou Bohol."
+    },
+    {
+      "critere": "pratique",
+      "nom": "Manille",
+      "pourquoi": "Capitale, mêlant gratte-ciel, quartiers animés et héritage colonial.",
+      "a_voir": [
+        "Intramuros, le plus ancien quartier",
+        "L’église San Agustín",
+        "Fort Santiago"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Bohol",
+      "pourquoi": "Les Chocolate Hills sont la principale attraction citée ; une rivière souterraine peu fréquentée est aussi recommandée.",
+      "a_voir": [
+        "Les Chocolate Hills"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Partirou : visiter les Philippines",
+      "url": "https://www.partirou.com/visiter/philippines/"
+    },
+    {
+      "titre": "WeRoad : que faire aux Philippines",
+      "url": "https://www.weroad.fr/blog/que-faire-philippines"
+    },
+    {
+      "titre": "Où et quand : visiter les Philippines",
+      "url": "https://www.ou-et-quand.net/ou-aller/philippines/"
+    },
+    {
+      "titre": "Routard : Philippines",
+      "url": "https://www.routard.com/fr/guide/asie/philippines"
+    },
+    {
+      "titre": "Evaneos : Philippines, que voir",
+      "url": "https://www.evaneos.fr/philippines/voyage/etape/"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "slug": "inde",
+  "genere": "2026-11-07T00:27:40.887Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Agra",
+      "pourquoi": "Le Taj Mahal, classé à l’UNESCO, est présenté comme le monument emblématique à visiter lors de tout voyage en Inde.",
+      "a_voir": [
+        "Le Taj Mahal"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Delhi",
+      "pourquoi": "Capitale animée aux multiples visages, avec Agra et Jaipur le « Triangle d’or » ; des forums conseillent de limiter le temps passé à Delhi et à Agra.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Varanasi",
+      "pourquoi": "Ville sainte dédiée à Shiva ; la cérémonie quotidienne du Ganga Aarti sur le fleuve est recommandée.",
+      "a_voir": [
+        "Le Ganga Aarti"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : incontournables en Inde",
+      "url": "https://www.routard.com/guide_a_voir/inde.htm"
+    },
+    {
+      "titre": "Voyageurs du Monde : Inde, à voir à faire",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/inde/a-voir-a-faire"
+    },
+    {
+      "titre": "Où et quand : où aller en Inde",
+      "url": "https://www.ou-et-quand.net/guides-voyage/inde/ou-aller/"
+    },
+    {
+      "titre": "Bouger Voyager : 5 visites incontournables en Inde",
+      "url": "https://www.bouger-voyager.com/voyage-inde-5-visites-incontournables/"
+    },
+    {
+      "titre": "Génération Voyage : guide touristique Inde",
+      "url": "https://generationvoyage.fr/visiter/inde/"
+    }
+  ]
+}

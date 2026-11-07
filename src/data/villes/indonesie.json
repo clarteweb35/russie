@@ -1,0 +1,50 @@
+{
+  "slug": "indonesie",
+  "genere": "2026-11-07T00:27:40.887Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Bali",
+      "pourquoi": "Citée parmi les destinations phares du pays ; Club Med évoque la plongée à Bali et à Nusa Penida, sanctuaire des raies mantas.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Jakarta",
+      "pourquoi": "Capitale du pays, dans un archipel volcanique d’environ 13 000 îles.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Parc national de Komodo",
+      "pourquoi": "Lonely Planet le cite parmi les sites incontournables, avec Borobudur, les îles Gili et le pays toraja ; l’archipel abrite le dragon de Komodo.",
+      "a_voir": [],
+      "conseil": "Une source indique que la saison sèche, de mai à septembre, est la période idéale."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : incontournables en Indonésie",
+      "url": "https://www.routard.com/guide_a_voir/indonesie.htm"
+    },
+    {
+      "titre": "Club Med : que découvrir en Indonésie",
+      "url": "https://www.clubmed.fr/l/que-faire-en-indonesie"
+    },
+    {
+      "titre": "Lonely Planet : que faire en Indonésie",
+      "url": "https://www.lonelyplanet.fr/destinations/asie/indonesie/que-faire?page=0"
+    },
+    {
+      "titre": "Evaneos : Indonésie, que voir",
+      "url": "https://www.evaneos.fr/indonesie/voyage/etape/?p=2"
+    },
+    {
+      "titre": "The Bit Joy : guide de voyage Indonésie",
+      "url": "https://thebitjoy.com/fr/pages/travel-guide-indonesia"
+    }
+  ]
+}

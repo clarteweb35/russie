@@ -1,0 +1,50 @@
+{
+  "slug": "maldives",
+  "genere": "2026-11-07T00:28:47.296Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Atoll d’Ari",
+      "pourquoi": "Souvent cité en premier pour la plongée : raies manta, requins de récif et requins-baleines ; célèbre pour ses plages et ses resorts privés.",
+      "a_voir": [],
+      "conseil": "Selon une source, la meilleure période pour la plongée va de décembre à avril (mousson sèche du nord-est)."
+    },
+    {
+      "critere": "pratique",
+      "nom": "Malé",
+      "pourquoi": "Capitale, qui contraste avec le calme des îles-hôtels ; un forum la décrit comme sans rien d’exceptionnel, mais intéressante pour voir la vie quotidienne des Maldiviens.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Maafushi",
+      "pourquoi": "Île habitée qui offre un aperçu du mode de vie maldivien, avec des hébergements allant des maisons d’hôtes économiques aux hôtels de milieu de gamme.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : atoll de Malé Nord",
+      "url": "https://www.routard.com/fr/guide/asie/maldives/atoll-de-male-nord"
+    },
+    {
+      "titre": "WeRoad : les activités incontournables aux Maldives",
+      "url": "https://www.weroad.fr/blog/maldives-que-faire"
+    },
+    {
+      "titre": "Chapka Direct : les plus belles îles des Maldives",
+      "url": "https://blog.chapkadirect.fr/les-plus-belles-iles-des-maldives/"
+    },
+    {
+      "titre": "Partirou : visiter les Maldives",
+      "url": "https://www.partirou.com/visiter/maldives/"
+    },
+    {
+      "titre": "Tourlane : atoll d’Ari",
+      "url": "https://www.tourlane.fr/asie/maldives/atoll-ari"
+    }
+  ]
+}

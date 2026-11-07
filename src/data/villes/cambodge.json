@@ -1,0 +1,52 @@
+{
+  "slug": "cambodge",
+  "genere": "2026-11-07T00:27:40.887Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Siem Reap et Angkor",
+      "pourquoi": "Passage obligé : les temples d’Angkor sont présentés comme incontournables, et le marché nocturne de Siem Reap est cité pour une sortie en fin de journée.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Phnom Penh",
+      "pourquoi": "Capitale à taille humaine, avec ses lieux de mémoire liés aux Khmers rouges ; le réseau aérien intérieur est limité et les trajets se font surtout en bus.",
+      "a_voir": [
+        "Le musée du génocide de Tuol Sleng"
+      ],
+      "conseil": "Selon Milesopedia, comptez environ 6 h de bus pour Phnom Penh–Siem Reap et 3 h pour Phnom Penh–Sihanoukville."
+    },
+    {
+      "critere": "diversite",
+      "nom": "Kampot",
+      "pourquoi": "Ville où l’on flâne dans une ambiance détendue, proche de Kep pour le bord de mer.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : incontournables au Cambodge",
+      "url": "https://www.routard.com/guide_a_voir/cambodge.htm"
+    },
+    {
+      "titre": "Partir.com : lieux d’intérêt au Cambodge",
+      "url": "https://www.partir.com/Cambodge/lieux-d-interet.html"
+    },
+    {
+      "titre": "Selectour : que faire au Cambodge",
+      "url": "https://www.selectour.com/magazine/article/que-faire-au-cambodge"
+    },
+    {
+      "titre": "Milesopedia : guide de voyage Cambodge",
+      "url": "https://milesopedia.com/guides/destination/cambodge-guide-voyage/"
+    },
+    {
+      "titre": "Cityzeum : guide Cambodge",
+      "url": "https://www.cityzeum.com/guide/cambodge"
+    }
+  ]
+}

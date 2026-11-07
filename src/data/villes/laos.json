@@ -1,0 +1,55 @@
+{
+  "slug": "laos",
+  "genere": "2026-11-07T00:27:40.887Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Luang Prabang",
+      "pourquoi": "Ville inscrite à l’UNESCO, très touristique mais riche en temples ; le marché nocturne et les pirogues sur la Nam Ou sont cités.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Vientiane",
+      "pourquoi": "Capitale, décrite comme calme pour une capitale asiatique ; les aéroports internationaux du pays sont à Vientiane, Luang Prabang et Pakse.",
+      "a_voir": [
+        "Patuxai, l’arc de triomphe laotien",
+        "Le Buddha Park, en dehors de la ville"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "4000 îles (Si Phan Don)",
+      "pourquoi": "Archipel fluvial du sud ; un pont colonial relie Don Det, à l’ambiance décontractée, à Don Khone, où se trouvent les chutes de Li Phi.",
+      "a_voir": [
+        "Les chutes de Li Phi"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Les Deux Pieds Dehors : que faire au Laos",
+      "url": "https://lesdeuxpiedsdehors.com/que-faire-au-laos/"
+    },
+    {
+      "titre": "Cityzeum : incontournables du Laos",
+      "url": "https://www.cityzeum.com/guide/laos"
+    },
+    {
+      "titre": "Voyageurs du Monde : Laos, à voir à faire",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/laos/things-to-do/"
+    },
+    {
+      "titre": "Partirou : visiter le Laos",
+      "url": "https://www.partirou.com/visiter/laos/"
+    },
+    {
+      "titre": "Où et quand : visiter le Laos",
+      "url": "https://www.ou-et-quand.net/ou-aller/laos/"
+    }
+  ]
+}

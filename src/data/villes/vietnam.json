@@ -1,0 +1,52 @@
+{
+  "slug": "vietnam",
+  "genere": "2026-11-07T00:27:40.887Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Hoi An",
+      "pourquoi": "Présentée comme l’une des villes historiques qui comptent parmi les joyaux du pays, classée à l’UNESCO avec Hué.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Hanoï",
+      "pourquoi": "Capitale mêlant traditions et modernité, avec plus de 1 000 ans d’histoire ; le mausolée de Hô Chi Minh est un symbole du pays.",
+      "a_voir": [
+        "Le mausolée de Hô Chi Minh"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Baie d’Ha Long",
+      "pourquoi": "L’attraction touristique la plus célèbre du pays, dans le nord-est, à environ 3 heures de route de Hanoï.",
+      "a_voir": [],
+      "conseil": "Selon un guide, la meilleure période pour visiter le pays est la saison sèche, généralement de novembre à avril."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Lonely Planet : villes et régions du Vietnam",
+      "url": "https://www.lonelyplanet.fr/destinations/asie/vietnam/villes-et-regions"
+    },
+    {
+      "titre": "Voyageurs du Monde : Vietnam, à voir à faire",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/vietnam/a-voir-a-faire"
+    },
+    {
+      "titre": "Vietnam Travel : les villes du Vietnam en 360°",
+      "url": "https://vietnam.travel/fr/things-to-do/vietnam-360-degrees"
+    },
+    {
+      "titre": "Où et quand : où aller au Vietnam",
+      "url": "https://www.ou-et-quand.net/guides-voyage/vietnam/ou-aller/"
+    },
+    {
+      "titre": "Le Petit Journal : top des endroits à visiter au Vietnam",
+      "url": "https://lepetitjournal.com/ho-chi-minh/a-voir-a-faire/top-endroits-visiter-vietnam-404511"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "slug": "oman",
+  "genere": "2026-11-07T00:28:47.296Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Nizwa",
+      "pourquoi": "Ville la plus visitée après la capitale, à environ 1 h 30 de Mascate ; son fort et son souk sont ses deux grandes attractions, avec le fort de Bahla et le village d’Al Hamra à proximité.",
+      "a_voir": [
+        "Le fort",
+        "Le souk"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Mascate",
+      "pourquoi": "Capitale, souvent la première étape d’un voyage.",
+      "a_voir": [
+        "La Grande Mosquée",
+        "L’Opéra",
+        "Le fort de Mutrah"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Wahiba Sands",
+      "pourquoi": "Désert le plus emblématique du pays, à environ deux heures de route de Mascate, avec des dunes pouvant dépasser 100 mètres et des Bédouins.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Où et quand : visiter Oman",
+      "url": "https://www.ou-et-quand.net/ou-aller/oman/"
+    },
+    {
+      "titre": "La Balaguère : 10 lieux à voir à Oman",
+      "url": "https://www.labalaguere.com/le-mag/idees-de-voyages/les-10-lieux-a-voir-a-oman"
+    },
+    {
+      "titre": "Voyageurs du Monde : Oman grand angle",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyage-oman-mascate-wahiba-sands-djebel-shams-al-hamrah/voyage-a-oman-mascate-dans-le-pas-d-une-expat-le-desert-la-mer-le-djebel/poi5850"
+    },
+    {
+      "titre": "Voyage avec nous : Oman",
+      "url": "https://www.voyageavecnous.fr/?p=204065"
+    }
+  ]
+}
