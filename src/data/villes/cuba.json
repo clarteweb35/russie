@@ -1,0 +1,54 @@
+{
+  "slug": "cuba",
+  "genere": "2026-11-07T00:24:12.013Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Trinidad",
+      "pourquoi": "Ville coloniale classée à l’UNESCO ; un voyageur conseille au minimum deux jours pour apprécier son architecture, son ambiance et ses environs.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "La Havane",
+      "pourquoi": "Capitale, présentée comme incontournable ; la Vieille Havane et son système de fortifications sont classés à l’UNESCO.",
+      "a_voir": [
+        "Le Capitole",
+        "Le Grand Théâtre",
+        "La place de la Cathédrale"
+      ],
+      "conseil": "Un site conseille de venir de novembre à avril (saison sèche) ; un autre cite mars-avril et octobre-novembre."
+    },
+    {
+      "critere": "diversite",
+      "nom": "Viñales",
+      "pourquoi": "À environ 2 h 30 de La Havane, vallée aux formations rocheuses et centre de la production du tabac cubain ; adaptée à la randonnée, à vélo ou à cheval.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Club Med : le top des lieux à visiter à Cuba",
+      "url": "https://www.clubmed.fr/l/que-visiter-a-cuba"
+    },
+    {
+      "titre": "Ulysse : villes de Cuba",
+      "url": "https://ulysse.com/news/cuba-villes-voyage-inoubliable"
+    },
+    {
+      "titre": "Milesopedia : guide de voyage à Cuba",
+      "url": "https://milesopedia.fr/destinations/voyage-cuba/"
+    },
+    {
+      "titre": "Guías Viajar : que voir à Cuba",
+      "url": "https://guias-viajar.com/fr/Am%C3%A9rique/tourisme-%C3%A0-Cuba/que-voir-%C3%A0-cuba/"
+    },
+    {
+      "titre": "Partir.com : lieux d’intérêt à Cuba",
+      "url": "https://www.partir.com/Cuba/lieux-d-interet.html"
+    }
+  ]
+}

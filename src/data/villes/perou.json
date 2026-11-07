@@ -1,0 +1,50 @@
+{
+  "slug": "perou",
+  "genere": "2026-11-07T00:24:12.013Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Cusco",
+      "pourquoi": "À 3 400 m d’altitude au cœur des Andes, surnommée la capitale historique du Pérou et inscrite à l’UNESCO ; point de départ pour Machu Picchu (Chemin de l’Inca, trek de Salkantay).",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Lima",
+      "pourquoi": "Capitale d’environ neuf millions d’habitants, réputée pour sa gastronomie ; point de départ habituel du voyage, avec une vieille ville coloniale et la Plaza Mayor.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Lac Titicaca",
+      "pourquoi": "Autour de Puno, étape présentée comme indispensable d’un circuit de 10 jours ; associé aux îles flottantes en roseau.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Lonely Planet : Pérou",
+      "url": "https://www.lonelyplanet.fr/catalogue/perou"
+    },
+    {
+      "titre": "The Only Peru Guide : Pérou",
+      "url": "https://www.theonlyperuguide.com/fr/?p=20907"
+    },
+    {
+      "titre": "Voyage avec nous : que faire au Pérou",
+      "url": "https://www.voyageavecnous.fr/que-faire-au-perou/"
+    },
+    {
+      "titre": "Tourlane : circuit de 10 jours au Pérou",
+      "url": "https://www.tourlane.fr/amerique-du-sud/perou/circuit-10-jours-au-perou"
+    },
+    {
+      "titre": "Où et quand : visiter le Pérou",
+      "url": "https://www.ou-et-quand.net/ou-aller/perou/"
+    }
+  ]
+}

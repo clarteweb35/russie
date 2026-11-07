@@ -1,0 +1,55 @@
+{
+  "slug": "nicaragua",
+  "genere": "2026-11-07T00:25:16.801Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Granada",
+      "pourquoi": "Jugée idéale pour son architecture coloniale, à environ une heure de Managua ; point de départ d’une excursion vers le volcan Mombacho.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Managua",
+      "pourquoi": "Capitale, présentée surtout comme un point de départ ; un auteur la décrit comme sans grand intérêt en soi, avec un transfert direct vers León recommandé.",
+      "a_voir": [
+        "Le Malecón, la jetée au bord du lac"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Île d’Ometepe",
+      "pourquoi": "Île formée par deux volcans sur le lac Nicaragua ; la randonnée vers le volcan Maderas offre un point de vue sur l’île et sur le volcan Concepción.",
+      "a_voir": [
+        "La randonnée sur le volcan Maderas",
+        "Les plantations de café"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : incontournables au Nicaragua",
+      "url": "https://www.routard.com/guide_a_voir/nicaragua.htm"
+    },
+    {
+      "titre": "Génération Voyage : 10 incontournables du Nicaragua",
+      "url": "https://generationvoyage.fr/?p=333678"
+    },
+    {
+      "titre": "Où et quand : visiter le Nicaragua",
+      "url": "https://www.ou-et-quand.net/ou-aller/nicaragua/"
+    },
+    {
+      "titre": "Milesopedia : guide de voyage Nicaragua",
+      "url": "https://milesopedia.com/guides/destination/decouvrir-nicaragua/"
+    },
+    {
+      "titre": "The Wom Travel : que voir au Nicaragua",
+      "url": "https://www.thewomtravel.fr/nicaragua/que-voir-nicaragua.html"
+    }
+  ]
+}

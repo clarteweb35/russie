@@ -1,0 +1,53 @@
+{
+  "slug": "barbade",
+  "genere": "2026-11-07T00:25:16.801Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Bathsheba",
+      "pourquoi": "Sur la côte est ; le Routard en fait une étape incontournable. Les plages de l’est sont magnifiques mais agitées, ce qui rend la baignade plus compliquée.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Bridgetown",
+      "pourquoi": "Capitale ; son centre-ville est classé au patrimoine mondial de l’UNESCO.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Saint Nicholas Abbey",
+      "pourquoi": "Demeure historique dont on peut visiter le premier étage et les jardins luxuriants.",
+      "a_voir": [
+        "Le premier étage",
+        "Les jardins"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : incontournables à la Barbade",
+      "url": "https://www.routard.com/guide_a_voir/barbade.htm"
+    },
+    {
+      "titre": "Où et quand : visiter la Barbade",
+      "url": "https://www.ou-et-quand.net/ou-aller/barbade/"
+    },
+    {
+      "titre": "Voyageurs du Monde : guide de voyage Barbade",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/barbade"
+    },
+    {
+      "titre": "Lonely Planet : huit raisons de visiter la Barbade",
+      "url": "https://www.lonelyplanet.fr/article/huit-raisons-de-visiter-la-barbade"
+    },
+    {
+      "titre": "Les Deux Pieds Dehors : que faire à la Barbade",
+      "url": "https://lesdeuxpiedsdehors.com/?p=53594"
+    }
+  ]
+}

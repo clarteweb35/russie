@@ -1,0 +1,54 @@
+{
+  "slug": "jamaique",
+  "genere": "2026-11-07T00:24:12.013Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Negril",
+      "pourquoi": "La destination la plus détendue de l’ouest de l’île, aux plages spectaculaires ; un itinéraire la décrit comme plus décontractée que Montego Bay.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Kingston",
+      "pourquoi": "Capitale ; le bus Knutsford Express la relie aux principales villes touristiques (environ 2 h jusqu’à Ocho Rios).",
+      "a_voir": [
+        "Le musée Bob Marley",
+        "Trench Town",
+        "Port Royal, à proximité"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Port Antonio",
+      "pourquoi": "La destination la plus calme et la moins touristique de l’est ; le Blue Lagoon y est incontournable, avec les plages de Boston Beach et de Frenchman’s Cove.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Où et quand : visiter la Jamaïque",
+      "url": "https://www.ou-et-quand.net/ou-aller/jamaique/"
+    },
+    {
+      "titre": "Bouger Voyager : guide de voyage pour la Jamaïque",
+      "url": "https://www.bouger-voyager.com/guide-de-voyage-pour-la-jamaique/"
+    },
+    {
+      "titre": "Globe Trotting : itinéraire en Jamaïque",
+      "url": "https://www.globe-trotting.com/post/jamaique-itineraire"
+    },
+    {
+      "titre": "Génération Voyage : 10 choses à faire en Jamaïque",
+      "url": "https://generationvoyage.fr/?p=73456"
+    },
+    {
+      "titre": "Partirou : visiter la Jamaïque",
+      "url": "https://www.partirou.com/visiter/jamaique/"
+    }
+  ]
+}

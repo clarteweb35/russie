@@ -1,0 +1,50 @@
+{
+  "slug": "equateur",
+  "genere": "2026-11-07T00:25:16.801Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Îles Galápagos",
+      "pourquoi": "Souvent le « must » du voyage ; trois îles sont habitées : Isabela, Santa Cruz et San Cristóbal. Les sources conseillent au moins cinq jours sur place.",
+      "a_voir": [],
+      "conseil": "Une alternative moins chère est une excursion d’une journée en bateau à l’Isla de la Plata ; le budget est plus élevé avec les Galápagos."
+    },
+    {
+      "critere": "pratique",
+      "nom": "Quito",
+      "pourquoi": "Capitale ; son centre historique est le joyau du pays (couvents, vieilles églises, façades coloniales) et la ville est au patrimoine mondial de l’UNESCO depuis 1978.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Baños",
+      "pourquoi": "Station d’aventure au pied du volcan Tungurahua, réputée pour les activités sportives ; surnommée la « porte de l’Amazonie ».",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : voyage en Équateur",
+      "url": "https://www.routard.com/fr/guide/ameriques/equateur"
+    },
+    {
+      "titre": "Guías Viajar : voyage dans les Andes, l’Amazonie et les Galápagos",
+      "url": "https://guias-viajar.com/fr/Am%C3%A9rique/tourisme-en-equateur/voyage-dans-les-Andes--l%27Amazonie-et-les-%C3%AEles-Galapagos/"
+    },
+    {
+      "titre": "Globe Trotting : Équateur, que voir",
+      "url": "https://www.globe-trotting.com/post/equateur-que-voir-que-faire"
+    },
+    {
+      "titre": "Partir.com : lieux d’intérêt en Équateur",
+      "url": "https://www.partir.com/Equateur/lieux-d-interet.html"
+    },
+    {
+      "titre": "Voyageurs du Monde : guide de voyage Équateur",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/equateur/things-to-do"
+    }
+  ]
+}

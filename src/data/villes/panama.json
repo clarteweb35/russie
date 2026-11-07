@@ -1,0 +1,60 @@
+{
+  "slug": "panama",
+  "genere": "2026-11-07T00:25:16.801Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Le canal de Panama",
+      "pourquoi": "Les sources citent les écluses de Miraflores, le lac Gatún et le parc de Soberanía, côté Gamboa.",
+      "a_voir": [
+        "Les écluses de Miraflores",
+        "Le lac Gatún",
+        "Le parc de Soberanía"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Panama (ville)",
+      "pourquoi": "Capitale, souvent présentée comme le point de départ du voyage.",
+      "a_voir": [
+        "Le quartier historique de Casco Viejo",
+        "Le marché aux poissons",
+        "Les vestiges de Panama Vieja"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Bocas del Toro",
+      "pourquoi": "Archipel des Caraïbes réputé pour ses plages, le snorkeling, la plongée et le surf ; Isla Colón est l’île principale.",
+      "a_voir": [
+        "Isla Bastimentos et Cayo Zapatilla, pour la plongée et le snorkeling"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Partirou : visiter le Panama",
+      "url": "https://www.partirou.com/visiter/panama/"
+    },
+    {
+      "titre": "Evaneos : Panama, que voir",
+      "url": "https://www.evaneos.fr/panama/voyage/etape/"
+    },
+    {
+      "titre": "Routard : Panama",
+      "url": "https://www.routard.com/fr/guide/ameriques/panama"
+    },
+    {
+      "titre": "Wild Expedition : guide complet du Panama",
+      "url": "https://wildexpedition.com/fr/guide-complet-de-voyage-pour-le-panama/"
+    },
+    {
+      "titre": "Evaneos : 10 jours au Panama",
+      "url": "https://www.evaneos.fr/panama/circuits-dix-jours/"
+    }
+  ]
+}

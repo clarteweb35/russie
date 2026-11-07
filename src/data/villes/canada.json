@@ -1,0 +1,56 @@
+{
+  "slug": "canada",
+  "genere": "2026-11-07T00:24:12.013Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Montréal",
+      "pourquoi": "Vieux-Montréal, festivals d’été et scène gastronomique réputée.",
+      "a_voir": [
+        "Le Vieux-Montréal",
+        "Le parc du Mont-Royal"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Ottawa",
+      "pourquoi": "Capitale du pays ; la colline du Parlement et le patinage sur le canal Rideau sont les attractions phares.",
+      "a_voir": [
+        "La colline du Parlement",
+        "Le canal Rideau"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Banff",
+      "pourquoi": "Parc national de l’Alberta aux paysages de montagnes, de vallées et de lacs turquoise ; Calgary sert de porte d’entrée vers les Rocheuses.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Milesopedia : les 15 plus beaux endroits du Canada",
+      "url": "https://milesopedia.com/guides/destination/15-plus-beaux-endroits-visiter-canada/"
+    },
+    {
+      "titre": "Le Petit Journal : 10 lieux à voir au Canada",
+      "url": "https://lepetitjournal.com/expat-pratique/voyage-au-canada-10-lieux-voir-absolument-389030"
+    },
+    {
+      "titre": "Toploc : 21 choses à voir au Canada",
+      "url": "https://toploc.com/blog/amerique/visiter-le-canada"
+    },
+    {
+      "titre": "Où et quand : visiter le Canada",
+      "url": "https://www.ou-et-quand.net/ou-aller/canada/"
+    },
+    {
+      "titre": "Your Little Black Book : guide de voyage au Canada",
+      "url": "https://www.yourlittleblackbook.me/fr/travelguide/north-america/canada/"
+    }
+  ]
+}

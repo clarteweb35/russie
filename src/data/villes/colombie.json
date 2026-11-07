@@ -1,0 +1,53 @@
+{
+  "slug": "colombie",
+  "genere": "2026-11-07T00:24:12.013Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Carthagène des Indes",
+      "pourquoi": "Entourée de remparts coloniaux ; ses vestiges de l’époque coloniale comptent parmi les mieux conservés du pays ; plages caribéennes.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Bogotá",
+      "pourquoi": "Capitale, dans les hauteurs des Andes, présentée comme le cœur culturel du pays.",
+      "a_voir": [
+        "Le musée de l’Or",
+        "Le musée Botero"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Santa Marta",
+      "pourquoi": "Ville de la côte caraïbe, à environ une heure de bus ou de voiture du parc Tayrona.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Club Med : que voir en Colombie",
+      "url": "https://www.clubmed.fr/l/que-voir-en-colombie"
+    },
+    {
+      "titre": "Tom Plan My Trip : villes de Colombie",
+      "url": "https://www.tomplanmytrip.com/fr/meilleures-villes-colombie/"
+    },
+    {
+      "titre": "Un sac sur le dos : où aller en Colombie",
+      "url": "https://unsacsurledos.com/ou-aller-en-colombie"
+    },
+    {
+      "titre": "Terdav : dix lieux incontournables en Colombie",
+      "url": "https://www.terdav.com/magazine-voyage/dix-lieux-incontournables-a-visiter-en-colombie"
+    },
+    {
+      "titre": "Calendario de Colombia : meilleures destinations",
+      "url": "https://www.calendariodecolombia.com/fr/tourisme/meilleures-destinations-a-visiter-en-colombie"
+    }
+  ]
+}

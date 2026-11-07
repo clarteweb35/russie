@@ -1,0 +1,46 @@
+{
+  "slug": "belize",
+  "genere": "2026-11-07T00:25:16.801Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "San Ignacio",
+      "pourquoi": "Étape majeure, point de départ idéal pour visiter les ruines mayas des environs et explorer les grottes de la région.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Belize City",
+      "pourquoi": "Ville assez moderne, dont l’Assemblée nationale, semblable à un temple maya, vaut le détour ; Caye Caulker est facilement accessible en bateau depuis la ville.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Ambergris Caye",
+      "pourquoi": "Île qui abrite le village de San Pedro et fait partie des meilleurs sites de plongée, avec le Great Blue Hole parmi les grands sites du pays.",
+      "a_voir": [],
+      "conseil": "Le meilleur moment pour visiter le Belize est de décembre à avril, pendant la saison sèche."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : guide de voyage Belize",
+      "url": "https://www.routard.com/fr/guide/ameriques/belize"
+    },
+    {
+      "titre": "Voyageurs du Monde : Belize, à voir à faire",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/belize/things-to-do/"
+    },
+    {
+      "titre": "Milesopedia : guide de voyage Belize",
+      "url": "https://milesopedia.com/guides/destination/guide-voyage-belize/"
+    },
+    {
+      "titre": "Lonely Planet : que faire au Belize",
+      "url": "https://www.lonelyplanet.fr/destinations/amerique/belize/que-faire"
+    }
+  ]
+}

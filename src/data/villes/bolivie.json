@@ -1,0 +1,57 @@
+{
+  "slug": "bolivie",
+  "genere": "2026-11-07T00:25:16.801Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Salar d’Uyuni",
+      "pourquoi": "La plus vaste étendue de sel du monde ; l’excursion typique part d’Uyuni et passe par le Sud Lípez.",
+      "a_voir": [
+        "L’île d’Incahuasi et ses cactus géants",
+        "Les geysers de la réserve Eduardo Avaroa"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "La Paz",
+      "pourquoi": "Capitale la plus haute du monde, perchée à environ 3 600 m, siège de l’administration du pays.",
+      "a_voir": [
+        "La place Murillo, depuis le mirador Killi Killi"
+      ],
+      "conseil": "Un guide conseille de venir entre septembre et novembre ; il n’y a pas de vol direct depuis Paris (escale le plus souvent par Madrid, Lima ou Bogotá)."
+    },
+    {
+      "critere": "diversite",
+      "nom": "Sucre",
+      "pourquoi": "Capitale constitutionnelle, classée à l’UNESCO et surnommée la « ville blanche » ; à 2 800 m, elle permet de s’acclimater en douceur.",
+      "a_voir": [
+        "Le Museo del Tesoro"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : Bolivie",
+      "url": "https://www.routard.com/fr/guide/ameriques/bolivie"
+    },
+    {
+      "titre": "Voyageurs du Monde : 10 paysages à voir en Bolivie",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/magazine-voyage/10-spots-immanquables-a-voir-en-bolivie"
+    },
+    {
+      "titre": "Avygeo : visiter La Paz",
+      "url": "https://www.avygeo.com/fr/carnets-voyage/465-visiter-la-paz-la-perle-des-andes"
+    },
+    {
+      "titre": "Club Med : que visiter en Bolivie",
+      "url": "https://www.clubmed.fr/l/que-visiter-bolivie"
+    },
+    {
+      "titre": "WeRoad : que faire en Bolivie",
+      "url": "https://www.weroad.fr/blog/que-faire-en-bolivie"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "slug": "uruguay",
+  "genere": "2026-11-07T00:25:16.801Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Colonia del Sacramento",
+      "pourquoi": "Ville la plus ancienne du pays, au charme patrimonial ; base pour la route des vins.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Montevideo",
+      "pourquoi": "Capitale, qui se visite surtout à pied ; la Ciudad Vieja est recommandée, et la Rambla est appréciée pour ses couchers de soleil.",
+      "a_voir": [
+        "La Ciudad Vieja",
+        "La Rambla"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Punta del Este",
+      "pourquoi": "Station balnéaire la plus animée et la plus chic du pays ; l’île de Lobos, réputée pour ses lions de mer, est une excursion en bateau possible.",
+      "a_voir": [
+        "La sculpture « La Main dans le sable »"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Partirou : visiter l’Uruguay",
+      "url": "https://www.partirou.com/visiter/uruguay/"
+    },
+    {
+      "titre": "Génération Voyage : les 12 plus beaux endroits d’Uruguay",
+      "url": "https://generationvoyage.fr/?p=84735"
+    },
+    {
+      "titre": "Où et quand : visiter l’Uruguay",
+      "url": "https://www.ou-et-quand.net/ou-aller/uruguay/"
+    },
+    {
+      "titre": "Le Mag Voyage : que faire en Uruguay",
+      "url": "https://www.lemagvoyage.fr/que-faire-uruguay/"
+    }
+  ]
+}

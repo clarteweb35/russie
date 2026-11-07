@@ -1,0 +1,50 @@
+{
+  "slug": "bahamas",
+  "genere": "2026-11-07T00:25:16.801Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Exuma",
+      "pourquoi": "Îles connues pour leurs cochons qui nagent et leurs trous bleus (le plus profond atteint 203 m) ; Great Exuma et Little Exuma sont reliées par un pont.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Nassau",
+      "pourquoi": "Capitale et principal pôle culturel, économique et touristique ; un guide la juge davantage tournée vers les croisières et le duty free que vers l’exploration. Des ferries la relient à Eleuthera, Andros et Great Exuma.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Eleuthera et Harbour Island",
+      "pourquoi": "Îles appréciées pour leurs plages et leur ambiance calme.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Voyageurs du Monde : guide de voyage Bahamas",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/bahamas"
+    },
+    {
+      "titre": "Toploc : 14 choses à voir aux Bahamas",
+      "url": "https://toploc.com/blog/amerique/visiter-les-bahamas"
+    },
+    {
+      "titre": "Génération Voyage : 7 choses à faire aux Bahamas",
+      "url": "https://generationvoyage.fr/?p=73302"
+    },
+    {
+      "titre": "Routard : visiter les Exumas",
+      "url": "https://www.routard.com/fr/guide/ameriques/bahamas/exumas"
+    },
+    {
+      "titre": "Partirou : visiter les Bahamas",
+      "url": "https://www.partirou.com/visiter/bahamas/"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "slug": "costa-rica",
+  "genere": "2026-11-07T00:24:12.013Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Manuel Antonio",
+      "pourquoi": "Parc national aux plages de sable blanc, où l’on observe des singes.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "San José",
+      "pourquoi": "Capitale, point de départ habituel d’un voyage au Costa Rica ; décrite comme animée et accueillante.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Monteverde",
+      "pourquoi": "Forêt de nuages citée par Lonely Planet parmi les incontournables, avec la péninsule de Nicoya et le volcan Arenal.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Voyageurs du Monde : guide de voyage Costa Rica",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/costa-rica"
+    },
+    {
+      "titre": "Lonely Planet : Costa Rica",
+      "url": "https://www.lonelyplanet.fr/catalogue/costa-rica"
+    },
+    {
+      "titre": "Routard : incontournables au Costa Rica",
+      "url": "https://www.routard.com/guide_a_voir/costa_rica.htm"
+    },
+    {
+      "titre": "Partirou : visiter le Costa Rica",
+      "url": "https://www.partirou.com/visiter/costa-rica/"
+    },
+    {
+      "titre": "Evaneos : Costa Rica, que voir",
+      "url": "https://www.evaneos.fr/costa-rica/voyage/etape/"
+    }
+  ]
+}

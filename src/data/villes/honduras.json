@@ -1,0 +1,53 @@
+{
+  "slug": "honduras",
+  "genere": "2026-11-07T00:25:16.801Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Copán",
+      "pourquoi": "Grande étape culturelle : le site maya est inscrit au patrimoine mondial, avec des stèles sculptées et des pyramides bien préservées ; le village de Copán Ruinas est proche de la frontière avec le Guatemala.",
+      "a_voir": [
+        "Le site maya",
+        "Le musée de la sculpture maya"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Tegucigalpa",
+      "pourquoi": "Capitale, aux rues et bâtiments coloniaux, qui sert de point de départ pour explorer d’autres régions du pays.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Roatán",
+      "pourquoi": "Île de l’archipel de la Baie, réputée pour la plongée ; son récif corallien est présenté comme le deuxième plus grand du monde.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Evaneos : Honduras, que voir",
+      "url": "https://www.evaneos.fr/honduras/voyage/etape/"
+    },
+    {
+      "titre": "Voyageurs du Monde : guide de voyage Honduras",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/honduras"
+    },
+    {
+      "titre": "Génération Voyage : guide touristique du Honduras",
+      "url": "https://generationvoyage.fr/?p=70127"
+    },
+    {
+      "titre": "Noovo Moi : le Honduras à découvrir",
+      "url": "https://www.noovomoi.ca/voyager/destinations/article.honduras-a-decouvrir.1.8500073.html"
+    },
+    {
+      "titre": "Cityzeum : Honduras",
+      "url": "https://www.cityzeum.com/tourisme/honduras"
+    }
+  ]
+}

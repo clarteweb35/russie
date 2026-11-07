@@ -1,0 +1,53 @@
+{
+  "slug": "bresil",
+  "genere": "2026-11-07T00:24:12.013Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Rio de Janeiro",
+      "pourquoi": "Passage quasi obligé : difficile de quitter le pays sans voir Copacabana ou le Christ Rédempteur ; le quartier historique est classé à l’UNESCO.",
+      "a_voir": [
+        "Les plages de Copacabana",
+        "Le Christ Rédempteur, sur le Corcovado"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Brasília",
+      "pourquoi": "Capitale du pays, citée comme l’une des villes les plus singulières du Brésil.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Salvador de Bahia",
+      "pourquoi": "L’une des villes les plus culturelles et historiques du pays : patrimoine baroque et culture afro-brésilienne vivante, avec la ville voisine d’Olinda.",
+      "a_voir": [],
+      "conseil": "Un guide recommande de venir de septembre à décembre."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "TourMaG : les incontournables du Brésil",
+      "url": "https://www.tourmag.com/Preparez-votre-voyage-au-Bresil-Les-incontournables_a114005.html"
+    },
+    {
+      "titre": "Toploc : 17 choses à voir au Brésil",
+      "url": "https://toploc.com/blog/amerique/visiter-le-bresil"
+    },
+    {
+      "titre": "Voyageurs du Monde : Brésil, un petit tour en ville",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/idees-voyage/un-petit-tour-en-ville/bresil-38"
+    },
+    {
+      "titre": "Cityzeum : incontournables au Brésil",
+      "url": "https://www.cityzeum.com/guide/bresil-17635"
+    },
+    {
+      "titre": "Ryo : visiter le Brésil",
+      "url": "https://ryo.co/fr/destinations/bresil/"
+    }
+  ]
+}

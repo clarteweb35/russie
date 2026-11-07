@@ -1,0 +1,50 @@
+{
+  "slug": "mexique",
+  "genere": "2026-11-07T00:24:12.013Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Oaxaca",
+      "pourquoi": "Décrite comme une ville coloniale parfaitement préservée ; les voyageurs la visitent souvent avec Puebla et la pyramide de Cholula.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Mexico",
+      "pourquoi": "Capitale et ville la plus peuplée du pays (9,2 millions d’habitants) ; une source juge impossible de visiter le Mexique sans la découvrir.",
+      "a_voir": [],
+      "conseil": "Une source indique que la meilleure période pour voyager au Mexique va de novembre à avril."
+    },
+    {
+      "critere": "diversite",
+      "nom": "Cancún",
+      "pourquoi": "Ville touristique la plus populaire du pays (6,1 millions de visiteurs par an) ; une source la recommande comme étape balnéaire après la péninsule du Yucatán.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Audiala : Mexique",
+      "url": "https://audiala.com/fr/mexique"
+    },
+    {
+      "titre": "Lonely Planet : villes et régions du Mexique",
+      "url": "https://www.lonelyplanet.fr/destinations/amerique/mexique/villes-et-regions"
+    },
+    {
+      "titre": "Partir.com : les plus belles villes du Mexique",
+      "url": "https://www.partir.com/Mexique/mexique-villes/visite-a-voir.html"
+    },
+    {
+      "titre": "OK Voyage : les belles villes du Mexique",
+      "url": "https://www.okvoyage.com/post/villes-mexique/"
+    },
+    {
+      "titre": "Où et quand : où aller au Mexique",
+      "url": "https://www.ou-et-quand.net/guides-voyage/mexique/ou-aller/"
+    }
+  ]
+}

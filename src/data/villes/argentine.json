@@ -1,0 +1,54 @@
+{
+  "slug": "argentine",
+  "genere": "2026-11-07T00:24:12.013Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Chutes d’Iguazú",
+      "pourquoi": "Destination de fin de nombreux circuits, dans le parc national du même nom.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Buenos Aires",
+      "pourquoi": "Capitale et porte d’entrée de tout circuit ; ville à l’européenne aux quartiers bien distincts.",
+      "a_voir": [
+        "Le quartier de La Boca",
+        "San Telmo",
+        "Recoleta"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Ushuaïa",
+      "pourquoi": "Ville la plus australe de la planète, accessible en vol intérieur depuis Buenos Aires ; associée au parc national de la Terre de Feu.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Audiala : Argentine",
+      "url": "https://audiala.com/fr/argentine"
+    },
+    {
+      "titre": "Guías Viajar : tourisme en Argentine",
+      "url": "https://guias-viajar.com/fr/america/turismo-en-argentina/"
+    },
+    {
+      "titre": "Génération Voyage : 11 plus beaux endroits d’Argentine",
+      "url": "https://generationvoyage.fr/endroits-visiter-argentine/"
+    },
+    {
+      "titre": "Evaneos : Argentine, que voir",
+      "url": "https://www.evaneos.fr/argentine/voyage/etape/?p=3"
+    },
+    {
+      "titre": "Selectour : circuit de 15 jours en Argentine",
+      "url": "https://www.selectour.com/magazine/article/circuit-15-jours-en-argentine"
+    }
+  ]
+}

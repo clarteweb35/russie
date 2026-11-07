@@ -1,0 +1,54 @@
+{
+  "slug": "guatemala",
+  "genere": "2026-11-07T00:25:16.801Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Antigua",
+      "pourquoi": "Ancienne capitale du pays, avec ses monuments coloniaux.",
+      "a_voir": [
+        "Le Palais des Capitaines-Généraux",
+        "La cathédrale Saint-Joseph",
+        "Le couvent des Capucines"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Guatemala City",
+      "pourquoi": "Capitale, présentée surtout comme une étape de passage ; une source la juge anecdotique, d’autres une visite incontournable.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Tikal",
+      "pourquoi": "Site archéologique maya phare, aux temples au cœur de la jungle, inscrit au patrimoine mondial de l’UNESCO.",
+      "a_voir": [],
+      "conseil": "La saison sèche va de novembre à avril."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Toploc : 10 choses à voir au Guatemala",
+      "url": "https://toploc.com/blog/amerique/visiter-le-guatemala"
+    },
+    {
+      "titre": "Partirou : visiter le Guatemala",
+      "url": "https://www.partirou.com/visiter/guatemala/"
+    },
+    {
+      "titre": "Club Med : que faire au Guatemala",
+      "url": "https://www.clubmed.fr/l/que-faire-au-guatemala"
+    },
+    {
+      "titre": "Routard : Guatemala",
+      "url": "https://www.routard.com/fr/guide/ameriques/guatemala"
+    },
+    {
+      "titre": "Cityzeum : Antigua",
+      "url": "https://www.cityzeum.com/tourisme/antigua"
+    }
+  ]
+}

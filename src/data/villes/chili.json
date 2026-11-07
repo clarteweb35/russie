@@ -1,0 +1,52 @@
+{
+  "slug": "chili",
+  "genere": "2026-11-07T00:24:12.013Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "San Pedro de Atacama",
+      "pourquoi": "Village au cœur du désert d’Atacama, base pour explorer la Vallée de la Lune, les geysers del Tatio et les lagons des hautes terres.",
+      "a_voir": [
+        "La Vallée de la Lune",
+        "Les geysers del Tatio"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Santiago",
+      "pourquoi": "Capitale qui juxtapose gratte-ciels et bâtiments coloniaux ; le métro et les bus facilitent les déplacements.",
+      "a_voir": [
+        "Le Cerro San Cristóbal",
+        "La colline Santa Lucía"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Valparaíso",
+      "pourquoi": "Ville portuaire inscrite à l’UNESCO depuis 2003, célèbre pour son street art et ses collines colorées ; à quelques heures de route de Santiago.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Chile Travel : les meilleures villes du Chili",
+      "url": "https://chile.travel/fr/blog/les-meilleures-villes-du-chili-selon-le-type-de-voyageur-que-vous-etes/"
+    },
+    {
+      "titre": "Liligo : le meilleur du Chili",
+      "url": "https://www.liligo.fr/magazine-voyage/guide-numerique-pour-decouvrir-le-meilleur-du-chili-31980.html"
+    },
+    {
+      "titre": "Où et quand : visiter le Chili",
+      "url": "https://www.ou-et-quand.net/ou-aller/chili/"
+    },
+    {
+      "titre": "Evaneos : Chili, que voir",
+      "url": "https://www.evaneos.fr/chili/voyage/etape/"
+    }
+  ]
+}
