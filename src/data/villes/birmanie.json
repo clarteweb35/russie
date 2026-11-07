@@ -1,0 +1,48 @@
+{
+  "slug": "birmanie",
+  "genere": "2026-11-07T00:56:13.361Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Bagan",
+      "pourquoi": "Souvent présentée comme l’image emblématique du pays ; un guide conseille de la visiter à vélo ou en véhicule électrique pour ne pas grimper sur les monuments.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Yangon",
+      "pourquoi": "Ville multiculturelle où temples bouddhistes, mosquées et restaurants birmans, chinois ou indiens se côtoient ; le Routard conseille de contempler la pagode Shwedagon en fin d’après-midi.",
+      "a_voir": [
+        "La pagode Shwedagon"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Lac Inle",
+      "pourquoi": "Deuxième plus grand lac du pays, célèbre pour ses pêcheurs ; les circuits proposent une excursion en pirogue motorisée et Indein, avec ses anciens stupas.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : incontournables en Birmanie",
+      "url": "https://www.routard.com/guide_a_voir/birmanie.htm"
+    },
+    {
+      "titre": "Club Med : que visiter en Birmanie",
+      "url": "https://www.clubmed.fr/l/que-visiter-en-birmanie"
+    },
+    {
+      "titre": "OK Voyage : incontournables en Birmanie",
+      "url": "https://www.okvoyage.com/?p=1901"
+    },
+    {
+      "titre": "Voyageurs du Monde : Birmanie, à voir à faire",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/birmanie/things-to-do/"
+    }
+  ]
+}

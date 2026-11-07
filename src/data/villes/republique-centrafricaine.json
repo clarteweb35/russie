@@ -1,0 +1,51 @@
+{
+  "slug": "republique-centrafricaine",
+  "genere": "2026-11-07T00:57:11.183Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Parc national de Dzanga-Sangha",
+      "pourquoi": "Principal joyau naturel du pays, au sud-ouest : gorilles de plaine, éléphants de forêt et grande diversité d’oiseaux ; Dzanga Bai est une grande clairière où se rassemblent des dizaines d’éléphants. Bayanga est le village d’accès.",
+      "a_voir": [
+        "Dzanga Bai"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Bangui",
+      "pourquoi": "Capitale et généralement porte d’entrée du pays, sur la rive nord de l’Oubangui ; sont cités la cathédrale Notre-Dame de l’Immaculée Conception, le marché Sambo, le musée Boganda et le zoo.",
+      "a_voir": [
+        "Le marché Sambo",
+        "Le musée Boganda"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Chutes de Boali",
+      "pourquoi": "Accessibles depuis la capitale ; les sources divergent sur la distance (65 ou 100 km) et la hauteur (50 ou 164 m), et s’accordent sur le fait qu’elles ne valent la visite qu’en saison des pluies, à plein débit.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Wildtrips : République centrafricaine, que visiter",
+      "url": "https://www.wildtrips.net/monde/République-centrafricaine-que-visiter.htm"
+    },
+    {
+      "titre": "Le Mag Voyage : que faire en République centrafricaine",
+      "url": "https://www.lemagvoyage.fr/republique-centrafricaine/que-faire-republique-centrafricaine/"
+    },
+    {
+      "titre": "World Travel Guide : République centrafricaine",
+      "url": "https://www.worldtravelguide.net/guides/africa/central-african-republic/things-to-do"
+    },
+    {
+      "titre": "Travel Extra : 10 sites à voir en République centrafricaine",
+      "url": "https://www.travelextra.ie/?p=38030"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "slug": "coree-du-nord",
+  "genere": "2026-11-07T00:58:06.335Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Monts Kumgang",
+      "pourquoi": "Les « montagnes du diamant », dans le sud-est du pays, citées par Noovo Moi parmi les lieux que l’on peut visiter.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Pyongyang",
+      "pourquoi": "Capitale ; le Petit Futé cite la place Kim Il-sung, le métro, la colline Moran et le palais Kumsusan, ancienne résidence de Kim Il-sung devenue musée.",
+      "a_voir": [
+        "La place Kim Il-sung",
+        "Le métro",
+        "La colline Moran"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Panmunjom et la zone démilitarisée",
+      "pourquoi": "Lieu de la signature de l’armistice, qui a créé la zone démilitarisée ; le Petit Futé présente le musée de la paix de Panmunjeom.",
+      "a_voir": [],
+      "conseil": "Les voyages ne se font qu’en circuit encadré par une agence agréée, avec deux guides officiels en permanence (Lonely Planet) ; les voyages indépendants ne sont pas autorisés."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Lonely Planet : Corée du Nord",
+      "url": "https://www.lonelyplanet.fr/destinations/asie/coree-du-nord"
+    },
+    {
+      "titre": "Air Journal : voyager en Corée du Nord",
+      "url": "https://www.air-journal.fr/?p=260421"
+    },
+    {
+      "titre": "Noovo Moi : voyager en Corée du Nord",
+      "url": "https://www.noovomoi.ca/voyager/conseils-voyage/article.voyager-en-coree-du-nord.1.1688308.html"
+    },
+    {
+      "titre": "Paris Match : le Petit Futé consacre un guide à la Corée du Nord",
+      "url": "https://www.parismatch.be/lifestyle/voyages/2019/03/25/le-petit-fute-consacre-un-guide-a-la-coree-du-nord-une-destination-confidentielle-77FN6UE5M5DDZA2AK55AU2B444/"
+    }
+  ]
+}

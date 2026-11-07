@@ -1,0 +1,48 @@
+{
+  "slug": "yemen",
+  "genere": "2026-11-07T00:58:06.335Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Shibam (Hadramaout)",
+      "pourquoi": "Surnommée la « Manhattan du désert » pour ses hautes maisons en terre crue, qui datent du XVIe siècle selon un guide.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Sanaa",
+      "pourquoi": "Capitale ; sa vieille ville, perchée à 2 350 m d’altitude, est inscrite à l’UNESCO depuis 1986, avec ses maisons-tours aux fenêtres en albâtre.",
+      "a_voir": [
+        "La vieille ville"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Socotra",
+      "pourquoi": "Île connue pour sa flore et sa faune uniques ; le plateau de Dixam et les dragonniers sont cités parmi les incontournables.",
+      "a_voir": [],
+      "conseil": "Un guide signale que l’accès à certains sites, dont Sanaa, n’est pas possible actuellement, et que Socotra demande un visa différent ; les check-points, l’état des routes et les fermetures changent vite. Octobre à mars est la meilleure période."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Partirou : visiter le Yémen",
+      "url": "https://www.partirou.com/visiter/yemen/"
+    },
+    {
+      "titre": "Le Mag Voyage : que faire au Yémen",
+      "url": "https://www.lemagvoyage.fr/yemen/que-faire-yemen/"
+    },
+    {
+      "titre": "Audiala : Yémen",
+      "url": "https://audiala.com/fr/yemen"
+    },
+    {
+      "titre": "Cityzeum : visiter le Yémen",
+      "url": "https://www.cityzeum.com/tourisme/yemen"
+    }
+  ]
+}

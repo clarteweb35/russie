@@ -1,0 +1,52 @@
+{
+  "slug": "haiti",
+  "genere": "2026-11-07T00:58:06.335Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Citadelle Laferrière et Sans-Souci",
+      "pourquoi": "Forteresse emblématique perchée en montagne, aux vastes vues, avec le palais de Sans-Souci, à Milot, souvent associé à la visite ; le parc national historique est proche de Cap-Haïtien, deuxième ville du pays.",
+      "a_voir": [
+        "La Citadelle Laferrière",
+        "Le palais de Sans-Souci"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Port-au-Prince",
+      "pourquoi": "Capitale, présentée comme le centre culturel et économique du pays ; le marché de Fer, le musée du Panthéon national et la scène artistique sont cités.",
+      "a_voir": [
+        "Le marché de Fer",
+        "Le musée du Panthéon national"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Jacmel",
+      "pourquoi": "Ville portuaire colorée, reconnue pour sa richesse artistique (ville créative de l’UNESCO) ; le Bassin Bleu, site naturel de montagne, est proche.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Génération Voyage : les 14 plus beaux endroits d’Haïti",
+      "url": "https://generationvoyage.fr/endroits-visiter-haiti/"
+    },
+    {
+      "titre": "Evaneos : Haïti, que voir",
+      "url": "https://www.evaneos.fr/haiti/voyage/etape/"
+    },
+    {
+      "titre": "Air Caraïbes : activités en Haïti",
+      "url": "https://www.aircaraibes.com/destinations/haiti/activites-haiti"
+    },
+    {
+      "titre": "Voyageurs du Monde : à vivre en Haïti",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/magazine-voyage/a-vivre-en-haiti-avant-qu-il-ne-soit-trop-tard"
+    }
+  ]
+}

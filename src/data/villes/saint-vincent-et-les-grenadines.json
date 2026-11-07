@@ -1,0 +1,52 @@
+{
+  "slug": "saint-vincent-et-les-grenadines",
+  "genere": "2026-11-07T00:58:06.335Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Tobago Cays",
+      "pourquoi": "Grand site de snorkeling et de plongée de l’archipel : un parc marin de cinq îlots inhabités, où l’on peut nager avec les tortues.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Kingstown",
+      "pourquoi": "Capitale, sur Saint-Vincent, avec ses marchés, ses cathédrales et son jardin botanique ; des excursions mènent aux paysages volcaniques de l’île.",
+      "a_voir": [
+        "Les marchés",
+        "Le jardin botanique"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Bequia",
+      "pourquoi": "Plages de sable blanc, randonnées et tradition de construction de bateaux ; le Mount Pleasant est l’objectif de randonnée phare, et le sanctuaire Old Hegg Turtle permet d’en apprendre sur les tortues. Environ une heure de ferry depuis Saint-Vincent.",
+      "a_voir": [
+        "Le Mount Pleasant",
+        "Le sanctuaire Old Hegg Turtle"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : incontournables à Saint-Vincent-et-les-Grenadines",
+      "url": "https://www.routard.com/fr/guide/top/ameriques/saint-vincent-et-les-grenadines"
+    },
+    {
+      "titre": "Routard : l’île de Bequia",
+      "url": "https://www.routard.com/guide_voyage_lieu/2953-ile_bequia.htm"
+    },
+    {
+      "titre": "Figaro Nautisme : les Grenadines",
+      "url": "https://figaronautisme.meteoconsult.fr/actus-nautisme-escales/2025-03-08/32609-les-grenadines-un-bassin-de-navigation-aux-airs-de-carte-postale"
+    },
+    {
+      "titre": "Kayak : guide de Saint-Vincent-et-les-Grenadines",
+      "url": "https://kayak.fr/Saint-Vincent-et-les-Grenadines.208.dc.guide"
+    }
+  ]
+}

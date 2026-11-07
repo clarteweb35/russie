@@ -1,0 +1,52 @@
+{
+  "slug": "liban",
+  "genere": "2026-11-07T00:56:13.361Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Byblos",
+      "pourquoi": "Fondée il y a plus de 7 000 ans, inscrite à l’UNESCO comme témoin des débuts de la civilisation phénicienne ; l’un des sites les plus cités.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Beyrouth",
+      "pourquoi": "Capitale, souvent mise en avant pour sa vie nocturne ; le Musée national est à visiter.",
+      "a_voir": [
+        "Le Musée national"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Vallée de la Qadisha",
+      "pourquoi": "Destination de randonnée, aux sentiers spectaculaires entre monastères troglodytes, forêts de cèdres et villages accrochés à la montagne ; la forêt des Cèdres de Dieu est inscrite à l’UNESCO depuis 1998.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : incontournables au Liban",
+      "url": "https://www.routard.com/guide_a_voir/liban.htm"
+    },
+    {
+      "titre": "Génération Voyage : 10 incontournables du Liban",
+      "url": "https://generationvoyage.fr/visiter-liban-faire-voir/"
+    },
+    {
+      "titre": "Où et quand : visiter le Liban",
+      "url": "https://www.ou-et-quand.net/ou-aller/liban/"
+    },
+    {
+      "titre": "Evaneos : Liban, que voir",
+      "url": "https://www.evaneos.fr/liban/voyage/etape/"
+    },
+    {
+      "titre": "Partirou : visiter le Liban",
+      "url": "https://www.partirou.com/visiter/liban/"
+    }
+  ]
+}

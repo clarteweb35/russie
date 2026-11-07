@@ -224,5 +224,5 @@ Liste raisonnée des pays envisagés : `.ai/PAYS_PREVUS.md`. Suivi général du 
 
 ## Villes à connaître : rédaction par Claude (7 novembre 2026)
 
-- 164 pays sur 193 faits le 7 novembre 2026 (voir SPEC §19). Reste : la Russie et les 22 pays de `ALERTE_SECURITE` (décision à prendre : suggérer ou non des villes là où le ministère déconseille le voyage) ; Angola, Érythrée, îles Marshall, Papouasie-Nouvelle-Guinée, Saint-Vincent-et-les-Grenadines et Venezuela, faute de sources suffisantes ou fiables.
+- 187 pays sur 193 faits le 7 novembre 2026 (voir SPEC §19), y compris la Russie et les pays déconseillés, avec encadré d'avertissement. Reste, faute de sources suffisantes ou fiables : Angola, Érythrée, îles Marshall, Papouasie-Nouvelle-Guinée, Soudan du Sud, Venezuela. À relire par un humain (surtout les pays sensibles : Ukraine, Russie, Israël, Syrie, Corée du Nord, Somalie).
 - Limites assumées : les sources sont des sites de voyage de qualité inégale ; le critère « importance pratique » se limite souvent à « capitale » faute de source sur les aéroports.

@@ -1,0 +1,52 @@
+{
+  "slug": "niger",
+  "genere": "2026-11-07T00:57:11.183Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Agadez, l’Aïr et le Ténéré",
+      "pourquoi": "Agadez est la « porte du désert », point de départ pour l’Aïr, massif classé à l’UNESCO, et le Ténéré, surnommé le « désert des déserts », qui abriterait les plus belles dunes du Sahara.",
+      "a_voir": [
+        "Le massif de l’Aïr",
+        "Le désert du Ténéré"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Niamey",
+      "pourquoi": "Capitale ; le Routard recommande de flâner au grand marché et d’observer le commerce des poteries de l’île de Boubon ; les girafes de Kouré sont proches.",
+      "a_voir": [
+        "Le grand marché",
+        "L’île de Boubon"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Zinder",
+      "pourquoi": "Le palais du sultan est la visite incontournable.",
+      "a_voir": [],
+      "conseil": "Les sources insistent sur l’encadrement : agence spécialisée et guides locaux pour le Ténéré, 4×4 et guide pour Iferouane."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : incontournables au Niger",
+      "url": "https://www.routard.com/guide_a_voir/niger.htm"
+    },
+    {
+      "titre": "Routard : désert du Ténéré",
+      "url": "https://www.routard.com/fr/guide/afrique/niger/sahara/desert-du-tenere"
+    },
+    {
+      "titre": "Partirou : visiter le Niger",
+      "url": "https://www.partirou.com/visiter/niger/"
+    },
+    {
+      "titre": "Le Mag Voyage : que faire au Niger",
+      "url": "https://www.lemagvoyage.fr/que-faire-niger/"
+    }
+  ]
+}

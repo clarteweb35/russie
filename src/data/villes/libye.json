@@ -1,0 +1,53 @@
+{
+  "slug": "libye",
+  "genere": "2026-11-07T00:57:11.183Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Leptis Magna",
+      "pourquoi": "Site phare du pays : si l’on ne visite qu’un seul site archéologique en Libye, c’est celui-ci ; considéré comme le meilleur site romain de la Méditerranée.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Tripoli",
+      "pourquoi": "Souvent la meilleure base de départ ; sa médina, ses mosquées et son palais sont cités, avec l’Arc de Marc Aurèle et la citadelle.",
+      "a_voir": [
+        "La médina",
+        "L’Arc de Marc Aurèle"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Ghadamès",
+      "pourquoi": "Ville-oasis classée à l’UNESCO, à la vieille ville particulière : ruelles couvertes en bas, circulation sur les toits en haut ; le festival des dattes s’y tient en octobre.",
+      "a_voir": [],
+      "conseil": "La consommation d’alcool est strictement interdite en Libye."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Partirou : visiter la Libye",
+      "url": "https://www.partirou.com/visiter/libye/"
+    },
+    {
+      "titre": "Audiala : Libye",
+      "url": "https://audiala.com/fr/libye"
+    },
+    {
+      "titre": "Cityzeum : à voir et à faire en Libye",
+      "url": "https://www.cityzeum.com/libye"
+    },
+    {
+      "titre": "Le Mag Voyage : que faire en Libye",
+      "url": "https://www.lemagvoyage.fr/que-faire-libye/"
+    },
+    {
+      "titre": "Wildtrips : Libye, que visiter",
+      "url": "https://www.wildtrips.net/monde/Libye-que-visiter.htm"
+    }
+  ]
+}

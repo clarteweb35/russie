@@ -1,0 +1,45 @@
+{
+  "slug": "afghanistan",
+  "genere": "2026-11-07T00:58:06.335Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Bamiyan",
+      "pourquoi": "Ses vallées sont inscrites à l’UNESCO depuis 2003 : un patrimoine à la fois paysager et de vestiges.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Kaboul",
+      "pourquoi": "Capitale ; les jardins de Bâbur, en terrasses, offrent une vue sur la ville, et la mosquée Shah-Do Shamshira, à la façade jaune, est citée.",
+      "a_voir": [
+        "Les jardins de Bâbur",
+        "La mosquée Shah-Do Shamshira"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Hérat",
+      "pourquoi": "Sa grande mosquée aux mosaïques bleu cobalt, la citadelle Ekhtiyaruddin, bâtie en 1304 selon une source, et les minarets de Musalla sont cités.",
+      "a_voir": [],
+      "conseil": "Les avis sont contradictoires sur l’opportunité de voyager. Le paiement par carte est presque impossible (prévoir des espèces), et le Ramadan est à éviter, la plupart des restaurants étant fermés."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Audiala : Afghanistan",
+      "url": "https://audiala.com/fr/afghanistan"
+    },
+    {
+      "titre": "Le Mag Voyage : la capitale de l’Afghanistan, que voir",
+      "url": "https://www.lemagvoyage.fr/afghanistan/quelle-est-la-capitale-afghanistan-que-voir-acces-conseils-de-visite/"
+    },
+    {
+      "titre": "Autour des voyages : voyager en Afghanistan",
+      "url": "https://www.autourdesvoyages.com/?p=1329"
+    }
+  ]
+}

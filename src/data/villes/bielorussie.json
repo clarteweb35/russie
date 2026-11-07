@@ -1,0 +1,50 @@
+{
+  "slug": "bielorussie",
+  "genere": "2026-11-07T00:56:13.361Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Mir et Nesvij",
+      "pourquoi": "Les deux sites les plus connus hors de la capitale, classés à l’UNESCO et décrits comme deux des plus belles mises en scène aristocratiques du pays ; accessibles en excursion depuis Minsk.",
+      "a_voir": [],
+      "conseil": "Une source met en garde : la Biélorussie n’est pas, en ce moment, une destination de loisir sans friction. Les conditions d’entrée varient selon la nationalité."
+    },
+    {
+      "critere": "pratique",
+      "nom": "Minsk",
+      "pourquoi": "Capitale et point d’entrée le plus fréquent, avec ses boulevards et ses stations de métro de l’époque soviétique ; la Bibliothèque nationale, énorme polyèdre, offre un belvédère.",
+      "a_voir": [
+        "La Bibliothèque nationale et son belvédère"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Brest",
+      "pourquoi": "Connue pour sa forteresse, symbole majeur de la mémoire de guerre en Biélorussie ; excursion possible en une journée depuis Minsk.",
+      "a_voir": [
+        "La forteresse de Brest"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Le Mag Voyage : Biélorussie, choses à voir et à faire",
+      "url": "https://www.lemagvoyage.fr/bielorussie/bielorussie-choses-a-voir-faire-minsk-chateaux-nature-culture/"
+    },
+    {
+      "titre": "Routard : itinéraires conseillés en Biélorussie",
+      "url": "https://www.routard.com/fr/guide/a/itineraires-conseilles/europe/bielorussie"
+    },
+    {
+      "titre": "Routard : Grodno",
+      "url": "https://www.routard.com/fr/guide/europe/bielorussie/grodno-hrodna"
+    },
+    {
+      "titre": "The Wom Travel : Minsk",
+      "url": "https://www.thewomtravel.fr/bielorussie/minsk/"
+    }
+  ]
+}

@@ -150,7 +150,7 @@ const autres = g ? g.rubriques.filter((r) => !['voyager', 'vivre'].includes(r.sl
   </section>
 
   {g && (
-    <VillesPays slug={g.slug} libelle={g.article} />
+    <VillesPays slug={g.slug} libelle={g.article} alerte={ALERTE_SECURITE.has(p.iso)} />
     <Actualites slug={g.slug} libelle={g.article} medias={g.mediasLocaux} officiel={{ texte: `Conseils aux voyageurs du ministère français pour ${g.nom}`, url: g.conseilsVoyageurs }} />
   )}
 

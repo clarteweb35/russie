@@ -1,0 +1,46 @@
+{
+  "slug": "syrie",
+  "genere": "2026-11-07T00:58:06.335Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Palmyre",
+      "pourquoi": "Site gréco-romain inscrit à l’UNESCO, présenté comme une oasis en plein désert ; un itinéraire propose de la relier à Damas par la route.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Damas",
+      "pourquoi": "Capitale, présentée par un guide comme la plus ancienne ville habitée du monde.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Maaloula",
+      "pourquoi": "Citée pour ses monastères accrochés à la roche et son araméen encore vivant ; proposée dans un circuit d’environ dix jours avec Palmyre.",
+      "a_voir": [],
+      "conseil": "La plupart des sources consultées sont anciennes et ne reflètent pas la situation actuelle : vérifiez les informations auprès des autorités."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Partirou : visiter la Syrie",
+      "url": "https://www.partirou.com/visiter/syrie/"
+    },
+    {
+      "titre": "Wildtrips : Syrie, que visiter",
+      "url": "https://www.wildtrips.net/monde/Syrie-que-visiter.htm"
+    },
+    {
+      "titre": "Audiala : Syrie",
+      "url": "https://audiala.com/fr/syrie"
+    },
+    {
+      "titre": "Voice of Guides : que visiter en Syrie",
+      "url": "https://voiceofguides.com/what-to-visit-in-syria-after-the-war/"
+    }
+  ]
+}

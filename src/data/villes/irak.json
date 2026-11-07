@@ -1,0 +1,46 @@
+{
+  "slug": "irak",
+  "genere": "2026-11-07T00:56:13.361Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Babylone",
+      "pourquoi": "Souvent l’étape phare : site archéologique emblématique, avec la ziggourat d’Etemenanki et les vestiges de la porte d’Ishtar, à 2-3 heures au sud de Bagdad ; beaucoup de voyageurs en font une excursion d’une journée.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Bagdad",
+      "pourquoi": "Capitale, qui abrite mosquées, musées et bazars.",
+      "a_voir": [
+        "Le Musée national",
+        "Le marché du cuivre (Safafeer)",
+        "Le café Shabandar, l’une des plus anciennes maisons de thé du pays"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Ur",
+      "pourquoi": "On y voit la grande ziggourat sumérienne du dieu de la lune Nanna, qui ressemble à une pyramide à degrés.",
+      "a_voir": [],
+      "conseil": "Les sources recommandent de passer par un guide local ou une agence de voyage ; elles ne sont pas datées avec précision."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Visit World : pourquoi visiter l’Irak",
+      "url": "https://visitworld.today/fr/blog/1171/contrasting-iraq-why-you-should-visit-the-country-and-how-to-protect-yourself"
+    },
+    {
+      "titre": "Cityzeum : Irak",
+      "url": "https://www.cityzeum.com/tourisme/irak"
+    },
+    {
+      "titre": "Against the Compass : itinéraire de 10 jours en Irak",
+      "url": "https://againstthecompass.com/en/iraq-itinerary/"
+    }
+  ]
+}

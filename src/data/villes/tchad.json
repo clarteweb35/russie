@@ -1,0 +1,48 @@
+{
+  "slug": "tchad",
+  "genere": "2026-11-07T00:57:11.183Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Lacs d’Ounianga",
+      "pourquoi": "Inscrits à l’UNESCO, ils forment l’un des paysages les plus irréels du Sahara, avec des plans d’eau salés ou doux, des roselières et des dunes.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "N’Djamena",
+      "pourquoi": "Capitale et point de départ de la plupart des voyages ; la Grande Mosquée est un repère urbain, et le village de Gaoui, près de la ville, est la capitale de la civilisation Sao, avec un musée de fouilles.",
+      "a_voir": [
+        "Le musée de Gaoui"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Ennedi",
+      "pourquoi": "Massif gréseux aux arches et aux piliers ; l’accès depuis N’Djamena demande plusieurs jours de 4×4, avec Fada comme point d’entrée.",
+      "a_voir": [],
+      "conseil": "Pour circuler dans l’Ennedi, il faut engager des guides locaux de Fada ; les itinéraires hors de N’Djamena demandent de la marge et des permis."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Le Mag Voyage : que faire au Tchad",
+      "url": "https://www.lemagvoyage.fr/que-faire-tchad/"
+    },
+    {
+      "titre": "World Travel Guide : Tchad",
+      "url": "https://www.worldtravelguide.net/guides/africa/chad/things-to-do"
+    },
+    {
+      "titre": "Terdav : voyage au Tchad",
+      "url": "https://www.terdav.com/ps-tchad"
+    },
+    {
+      "titre": "Visit World : Tchad",
+      "url": "https://visitworld.today/fr/chad/country"
+    }
+  ]
+}

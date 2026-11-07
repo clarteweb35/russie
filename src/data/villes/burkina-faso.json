@@ -1,0 +1,50 @@
+{
+  "slug": "burkina-faso",
+  "genere": "2026-11-07T00:57:11.183Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Ruines de Loropéni",
+      "pourquoi": "Site le plus emblématique du Sud-Ouest : ruines classées à l’UNESCO, datant du XIe siècle selon Wildtrips ; les sanctuaires des rois Gan se trouvent à environ 7 km, à Obiré.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Ouagadougou",
+      "pourquoi": "Capitale, incontournable pour les cinéphiles grâce au FESPACO.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Banfora et les cascades de Karfiguéla",
+      "pourquoi": "Chef-lieu de la région des Cascades, entouré de vastes plantations de canne à sucre ; Sindou et son marché artisanal figurent dans les circuits d’une semaine.",
+      "a_voir": [],
+      "conseil": "La saison sèche est la meilleure période : de décembre à février pour Banfora, selon le Routard."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Partirou : visiter le Burkina Faso",
+      "url": "https://www.partirou.com/visiter/burkina-faso/"
+    },
+    {
+      "titre": "Audiala : Burkina Faso",
+      "url": "https://audiala.com/fr/burkina-faso"
+    },
+    {
+      "titre": "Routard : Banfora",
+      "url": "https://www.routard.com/fr/guide/afrique/burkina-faso/sud-ouest/banfora"
+    },
+    {
+      "titre": "Wildtrips : Burkina Faso, que visiter",
+      "url": "https://www.wildtrips.net/monde/Burkina-Faso-que-visiter.htm"
+    },
+    {
+      "titre": "Evaneos : Burkina Faso, que voir",
+      "url": "https://www.evaneos.fr/burkina-faso/voyage/etape/"
+    }
+  ]
+}

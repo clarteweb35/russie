@@ -1,0 +1,52 @@
+{
+  "slug": "israel",
+  "genere": "2026-11-07T00:56:13.361Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Jérusalem",
+      "pourquoi": "Cœur spirituel et historique du pays ; les guides recommandent environ trois jours pour la ville.",
+      "a_voir": [
+        "La Vieille Ville",
+        "Le Mur des Lamentations",
+        "Le Saint-Sépulcre"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Tel Aviv",
+      "pourquoi": "Ville moderne et balnéaire, avec plages et cafés ; le vieux Jaffa, voisin, est un quartier historique.",
+      "a_voir": [
+        "Le vieux Jaffa"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Mer Morte et Massada",
+      "pourquoi": "La mer Morte, point le plus bas de la Terre (430 m sous le niveau de la mer), est prisée pour la détente et les bains de boue ; la forteresse de Massada, bâtie sous Hérode, est un site archéologique majeur souvent visité en excursion.",
+      "a_voir": [],
+      "conseil": "Le printemps (mars à mai) et l’automne (septembre à novembre) offrent des températures agréables."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : incontournables en Israël et Palestine",
+      "url": "https://www.routard.com/fr/guide/top/moyen-orient/israel-palestine"
+    },
+    {
+      "titre": "Génération Voyage : les 12 plus beaux endroits d’Israël",
+      "url": "https://generationvoyage.fr/?p=124943"
+    },
+    {
+      "titre": "Partirou : visiter Israël",
+      "url": "https://www.partirou.com/visiter/israel/"
+    },
+    {
+      "titre": "Evaneos : Israël, que voir",
+      "url": "https://www.evaneos.fr/israel/voyage/etape/?p=2"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "slug": "mali",
+  "genere": "2026-11-07T00:57:11.183Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Djenné",
+      "pourquoi": "Sa grande mosquée est inscrite à l’UNESCO et la ville est jugée très belle ; la cérémonie de crépissage de la mosquée est un moment culturel fort. À environ 600 km de Bamako.",
+      "a_voir": [
+        "La grande mosquée de Djenné"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Bamako",
+      "pourquoi": "Capitale et point de départ classique d’un séjour, avec son grand marché et sa Grande Mosquée.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Pays dogon",
+      "pourquoi": "Les falaises de Bandiagara dominent le pays dogon, un amphithéâtre naturel où se nichent villages perchés, greniers sculptés et sanctuaires ; les randonnées partent souvent de Mopti.",
+      "a_voir": [],
+      "conseil": "La saison sèche est recommandée : un guide indique octobre à février. Un guide local est conseillé pour les treks."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Evaneos : Mali, que voir",
+      "url": "https://www.evaneos.fr/mali/voyage/etape/"
+    },
+    {
+      "titre": "Partirou : visiter le Mali",
+      "url": "https://www.partirou.com/visiter/mali/"
+    },
+    {
+      "titre": "Routard : régions de Ségou et Mopti",
+      "url": "https://www.routard.com/fr/guide/afrique/mali/regions-de-segou-et-mopti"
+    },
+    {
+      "titre": "Toploc : les 10 plus belles villes du Mali",
+      "url": "https://toploc.com/blog/afrique/villes-mali"
+    },
+    {
+      "titre": "OK Voyage : le pays dogon",
+      "url": "https://www.okvoyage.com/?p=229"
+    }
+  ]
+}

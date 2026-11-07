@@ -1,0 +1,49 @@
+{
+  "slug": "republique-democratique-du-congo",
+  "genere": "2026-11-07T00:57:11.183Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Parc national des Virunga",
+      "pourquoi": "Classé à l’UNESCO, il abrite des gorilles de montagne et le volcan Nyiragongo, qui renferme le plus grand lac de lave du monde ; Goma en est la porte d’entrée.",
+      "a_voir": [],
+      "conseil": "Une source précise que le parc est souvent inaccessible à cause des conflits."
+    },
+    {
+      "critere": "pratique",
+      "nom": "Kinshasa",
+      "pourquoi": "Capitale, au bord du fleuve Congo ; le Musée national et le mont Ngaliema, dominé par la résidence présidentielle et son zoo, sont cités.",
+      "a_voir": [
+        "Le Musée national",
+        "Le mont Ngaliema"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Kisangani et le fleuve Congo",
+      "pourquoi": "Troisième ville du pays, en pleine forêt tropicale ; des croisières sur le fleuve partent de Kisangani et de Lisala, et les chutes de Boyoma sont à proximité.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Toploc : les 10 choses à voir au Congo",
+      "url": "https://toploc.com/blog/afrique/visiter-le-congo"
+    },
+    {
+      "titre": "Visit World : voyage en République démocratique du Congo",
+      "url": "https://visitworld.today/fr/democratic-republic-of-the-congo/travel/info"
+    },
+    {
+      "titre": "Wanderlust : République démocratique du Congo",
+      "url": "https://www.wanderlustmagazine.com/?p=3250"
+    },
+    {
+      "titre": "The Crazy Tourist : 15 meilleurs lieux de la RDC",
+      "url": "https://thecrazytourist.com/?p=9241"
+    }
+  ]
+}

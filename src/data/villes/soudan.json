@@ -1,0 +1,48 @@
+{
+  "slug": "soudan",
+  "genere": "2026-11-07T00:57:11.183Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Pyramides de Méroé",
+      "pourquoi": "Image la plus forte du Soudan antique, au nord de Khartoum : plus petites et plus nombreuses que celles d’Égypte, elles appartiennent au royaume de Koush ; le site est classé à l’UNESCO.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Khartoum",
+      "pourquoi": "Capitale, au point où le Nil Bleu et le Nil Blanc se rejoignent ; le Musée national est présenté comme essentiel pour comprendre l’histoire du pays, avec des objets de Kerma, de Napata et de Méroé.",
+      "a_voir": [
+        "Le Musée national"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Jebel Barkal et Karima",
+      "pourquoi": "Sanctuaire au pied de la montagne sacrée du Gebel Barkal, site de l’ancienne Napata, première capitale du royaume de Koush.",
+      "a_voir": [],
+      "conseil": "Un guide français recommande un voyage encadré, vérifié et compatible avec les avis officiels."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Le Mag Voyage : que faire au Soudan",
+      "url": "https://www.lemagvoyage.fr/soudan/que-faire-soudan/"
+    },
+    {
+      "titre": "Wildtrips : Soudan, que visiter",
+      "url": "https://www.wildtrips.net/monde/Soudan-que-visiter.htm"
+    },
+    {
+      "titre": "Audiala : Soudan",
+      "url": "https://audiala.com/fr/sudan"
+    },
+    {
+      "titre": "Visit World : voyage au Soudan",
+      "url": "https://visitworld.today/fr/sudan/travel/info"
+    }
+  ]
+}

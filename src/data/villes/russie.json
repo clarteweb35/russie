@@ -1,0 +1,53 @@
+{
+  "slug": "russie",
+  "genere": "2026-11-07T00:56:13.361Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Saint-Pétersbourg",
+      "pourquoi": "Citée avec Moscou comme l’un des deux incontournables du pays ; palais sur la Néva, musée de l’Ermitage et perspective Nevski.",
+      "a_voir": [
+        "Le musée de l’Ermitage",
+        "La perspective Nevski",
+        "Les palais sur la Néva"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Moscou",
+      "pourquoi": "Capitale ; le Kremlin et la place Rouge reviennent systématiquement dans les guides.",
+      "a_voir": [
+        "Le Kremlin",
+        "La place Rouge"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "L’Anneau d’or",
+      "pourquoi": "Ensemble de villes historiques russes au nord-est de Moscou, qui vaut la peine d’être parcouru pour ses églises.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Voyageurs du Monde : Russie, à voir à faire",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/voyages/guide-voyage/russie/things-to-do/"
+    },
+    {
+      "titre": "Où et quand : visiter la Russie",
+      "url": "https://www.ou-et-quand.net/ou-aller/russie/"
+    },
+    {
+      "titre": "Guías Viajar : tourisme en Russie",
+      "url": "https://guias-viajar.com/fr/Europe/tourisme-en-russie/"
+    },
+    {
+      "titre": "Partirou : visiter la Russie",
+      "url": "https://www.partirou.com/visiter/russie/"
+    }
+  ]
+}

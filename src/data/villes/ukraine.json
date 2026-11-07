@@ -1,0 +1,46 @@
+{
+  "slug": "ukraine",
+  "genere": "2026-11-07T00:56:13.361Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Lviv",
+      "pourquoi": "Ville de l’ouest, ancienne capitale régionale, dont le centre historique est classé à l’UNESCO et compte des bâtiments anciens, certains du XIIIe siècle ; son caractère très centre-européen vient de l’époque austro-hongroise.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Kyiv",
+      "pourquoi": "Capitale, au patrimoine civil et religieux, avec des îles et de la verdure ; un guide juge qu’il serait dommage de visiter l’Ukraine sans la découvrir.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Odessa",
+      "pourquoi": "Ville portuaire sur la mer Noire, appréciée pour ses plages et son climat doux ; elle a été dessinée au début du XIXe siècle par des Français, selon le Routard.",
+      "a_voir": [],
+      "conseil": "Plusieurs pages consultées datent d’avant ou pendant le conflit : vérifiez la situation auprès des autorités françaises."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Génération Voyage : les 12 plus beaux endroits d’Ukraine",
+      "url": "https://generationvoyage.fr/?p=80940"
+    },
+    {
+      "titre": "Routard : voyage en Ukraine",
+      "url": "https://www.routard.com/fr/guide/europe/ukraine"
+    },
+    {
+      "titre": "Voyageurs du Monde : Lviv, Odessa, Kiev",
+      "url": "https://www.voyageursdumonde.fr/voyage-sur-mesure/magazine-voyage/lviv-odessa-kiev-triptyque-ukrainien"
+    },
+    {
+      "titre": "Où et quand : visiter l’Ukraine",
+      "url": "https://www.ou-et-quand.net/ou-aller/ukraine/"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "slug": "iran",
+  "genere": "2026-11-07T00:56:13.361Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Ispahan",
+      "pourquoi": "Étape incontournable pour les amateurs d’histoire ; la mosquée Nasir-ol-Molk, avec ses vitraux, est parmi les lieux les plus appréciés, et les circuits recommandent souvent deux jours entiers.",
+      "a_voir": [
+        "La mosquée Nasir-ol-Molk"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Téhéran",
+      "pourquoi": "Capitale, étape classique avec ses grands musées.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Chiraz et Persépolis",
+      "pourquoi": "Persépolis, à 70 km au nord-est de Chiraz, est classée à l’UNESCO depuis 1979 ; le site de Naqsh-e Rostam, aux tombeaux taillés dans la falaise, est proche.",
+      "a_voir": [
+        "Persépolis",
+        "Naqsh-e Rostam"
+      ],
+      "conseil": "Plusieurs sources datent de 2018 à 2021 : vérifiez les informations actuelles."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Génération Voyage : les 12 plus beaux endroits d’Iran",
+      "url": "https://generationvoyage.fr/endroits-visiter-iran/"
+    },
+    {
+      "titre": "Routard : incontournables en Iran",
+      "url": "https://www.routard.com/fr/guide/top/moyen-orient/iran"
+    },
+    {
+      "titre": "Où et quand : visiter l’Iran",
+      "url": "https://www.ou-et-quand.net/ou-aller/iran/"
+    },
+    {
+      "titre": "Partir.com : lieux d’intérêt en Iran",
+      "url": "https://www.partir.com/Iran/lieux-d-interet.html"
+    }
+  ]
+}

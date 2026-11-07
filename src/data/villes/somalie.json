@@ -1,0 +1,46 @@
+{
+  "slug": "somalie",
+  "genere": "2026-11-07T00:58:06.335Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Laas Geel",
+      "pourquoi": "Site le plus cité : à une cinquantaine de kilomètres au nord-est de Hargeisa, des peintures rupestres parmi les plus anciennes et les mieux conservées d’Afrique ; les estimations d’âge varient selon les sources (de 5 000 à 11 000 ans). Il se trouve au Somaliland, région qui se déclare indépendante.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Mogadiscio",
+      "pourquoi": "Capitale ; le ministère du Tourisme somalien la place parmi les principales destinations, mais les guides de voyage insistent sur la sécurité, et la plupart des voyageurs ne s’y rendent plus.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Berbera",
+      "pourquoi": "Port sur le golfe d’Aden, réputé pour ses plages et son patrimoine ottoman, nettement plus accessible que Mogadiscio et inclus dans la plupart des circuits au Somaliland ; Hargeisa, capitale du Somaliland, a son musée Saryan.",
+      "a_voir": [],
+      "conseil": "Les sources recommandent de distinguer la Somalie du Somaliland et de passer par des opérateurs établis."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Ministère du Tourisme de Somalie : lieux touristiques",
+      "url": "https://tourism.gov.so/tourist-locations-2"
+    },
+    {
+      "titre": "Audiala : Somalie",
+      "url": "https://audiala.com/fr/somalia"
+    },
+    {
+      "titre": "Penguin Travel : Somalie",
+      "url": "https://www.penguintravel.com/Destination/216/0/0/Somalia.html"
+    },
+    {
+      "titre": "Travel Extra : 10 sites à voir en Somalie",
+      "url": "https://www.travelextra.ie/?p=35976"
+    }
+  ]
+}
