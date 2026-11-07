@@ -1,0 +1,28 @@
+---
+// Bloc « Fil d'Ariane » (service d'alertes gratuit du ministère de l'Europe et des Affaires étrangères), affiché sur toutes les fiches pays.
+// Ce n'est pas notre fil d'Ariane de navigation (breadcrumb) : adresses et textes dans config.ts (FIL_ARIANE_SERVICE).
+// Le lien vers l'assurance voyage (partenaire affilié) n'apparaît pas pour la Russie ni pour les pays déconseillés, comme ailleurs.
+import Badge from './Badge.astro';
+import { ALERTE_SECURITE } from '../data/monde';
+import { ASSURANCE_VOYAGE, SANS_MONETISATION, mention } from '../data/partenaires';
+import { FIL_ARIANE_SERVICE } from '../config';
+
+interface Props { iso?: string }
+const { iso } = Astro.props;
+const assurance = !iso || (!SANS_MONETISATION.has(iso) && !ALERTE_SECURITE.has(iso));
+---
+<section class="service-fil" id="fil-ariane" aria-labelledby="fil-ariane-titre">
+  <h2 id="fil-ariane-titre">Inscrivez-vous à Fil d’Ariane <Badge type="ok">Service officiel</Badge></h2>
+  <p>Fil d’Ariane est le service <strong>gratuit</strong> du ministère de l’Europe et des Affaires étrangères : en cas d’événement sur le lieu de votre séjour, vous recevez un message d’alerte et de sécurité. Quelle que soit votre destination, inscrivez-vous avant de partir, ou même pendant votre séjour.</p>
+  <ul>
+    <li>L’inscription est simple et rapide, notamment avec FranceConnect.</li>
+    <li>Elle concerne les voyages touristiques ou professionnels de moins de six mois.</li>
+    <li>Fil d’Ariane n’est ni une assurance voyage ni un service de géolocalisation : vérifiez que vous êtes couvert à l’étranger.</li>
+  </ul>
+  <p class="actions">
+    <a class="btn-bagages" href={FIL_ARIANE_SERVICE.inscription} target="_blank" rel="noopener">S’inscrire à Fil d’Ariane →</a>
+    <a class="btn-bagages secondaire" href={FIL_ARIANE_SERVICE.accueil} target="_blank" rel="noopener">Découvrir le service</a>
+    {assurance && <a class="btn-bagages secondaire" href={ASSURANCE_VOYAGE.url} target="_blank" rel="sponsored noopener">Comparer les assurances voyage</a>}
+  </p>
+  <p class="src">Source : présentation officielle du service Fil d’Ariane (diplomatie.gouv.fr), reprise le 7 novembre 2026.{assurance && ` ${mention}`}</p>
+</section>

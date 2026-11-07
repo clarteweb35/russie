@@ -1,4 +1,5 @@
 ---
+import FilArianeService from '../../../components/FilArianeService.astro';
 import Base from '../../../layouts/Base.astro';
 import FicheIdentite from '../../../components/FicheIdentite.astro';
 import BlocDevise from '../../../components/BlocDevise.astro';
@@ -39,6 +40,8 @@ const essentiels = sections.filter((s) => ['/travailler', '/paiements', '/langue
       </div>
     </div>
   </section>
+
+  <FilArianeService iso="RUS" />
 
   <h2>Que souhaitez-vous faire ?</h2>
   <div class="steps">

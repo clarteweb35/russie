@@ -36,7 +36,7 @@ export const CATEGORIES: { id: Categorie; label: string }[] = [
 export type Cond = { sejour?: Sejour[]; climat?: Climat[]; pluie?: boolean; enfant?: boolean };
 // Quantité calculée selon la durée : base + parJour × jours, bornée. Le libellé contient « {n} ».
 export type Qte = { base: number; parJour: number; min: number; max: number };
-export type Objet = { id: string; cat: Categorie; label: string; note?: string; quand?: Cond[]; qte?: Qte };
+export type Objet = { id: string; cat: Categorie; label: string; note?: string; lien?: { href: string; texte: string }; quand?: Cond[]; qte?: Qte };
 
 const o = (id: string, cat: Categorie, label: string, note?: string, quand?: Cond[], qte?: Qte): Objet => ({ id, cat, label, ...(note ? { note } : {}), ...(quand ? { quand } : {}), ...(qte ? { qte } : {}) });
 const FROID: Cond = { climat: ['froid'] };
@@ -49,6 +49,7 @@ export const OBJETS: Objet[] = [
   o('passeport', 'papiers', 'Passeport ou carte d’identité en cours de validité', 'Certains pays exigent une validité minimale au-delà de la date de retour : vérifiez la fiche officielle du pays.'),
   o('visa', 'papiers', 'Visa ou autorisation de voyage, si la destination l’exige', 'À vérifier sur la fiche officielle du pays, avant de réserver.'),
   o('billets', 'papiers', 'Billets de transport et réservations d’hébergement', 'Au format papier ou téléchargés sur le téléphone.'),
+  { id: 'fil-ariane', cat: 'papiers', label: 'Inscription à Fil d’Ariane (alertes du ministère)', note: 'Service public gratuit, pour les voyages de moins de six mois. Ce n’est pas une assurance. ', lien: { href: 'https://fildariane.diplomatie.gouv.fr/fildariane-internet/inscription', texte: 'S’inscrire' } },
   o('assurance', 'papiers', 'Attestation d’assurance voyage, si vous en avez une'),
   o('copies', 'papiers', 'Copies de vos papiers (photos sur le téléphone ou photocopies), rangées séparément'),
   o('permis', 'papiers', 'Permis de conduire, si vous comptez louer un véhicule', 'Renseignez-vous sur les règles locales (permis international éventuel).'),

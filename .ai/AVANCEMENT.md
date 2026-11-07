@@ -210,3 +210,7 @@ Accueil = choix de destination, 194 pays, fiche d'identité, drapeaux, convertis
 
 ## 7 novembre 2026 (nuit) : calendrier climatique pour tous les pays
 - Fait : 194 pays dans `quand-partir.json` (10 documentés + 184 capitales). Calendrier sur chaque fiche, sauf pays déconseillés et Russie. À faire : relire les libellés sur quelques pays (la capitale peut mal représenter un pays), et chercher une source d’affluence et de prix hors Europe.
+
+## 7 novembre 2026 (nuit) : Fil d'Ariane, déconseillé, consentement
+- Fait : bloc Fil d'Ariane sur toutes les fiches, calendrier « Déconseillé » pour les pays à risque, bandeau de consentement et Google Tag Manager (GTM-K6DKPJXN) après acceptation, mentions légales et CLAUDE.md mis à jour.
+- À vérifier : dans GTM (mode aperçu), que la balise Google Analytics se déclenche après acceptation ; refaire la mesure EcoIndex (nouveaux blocs, bandeau). Le bandeau et le script ajoutent des éléments : l'accueil peut avoir dépassé le seuil du A.

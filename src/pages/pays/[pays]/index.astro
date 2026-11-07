@@ -7,6 +7,7 @@ import VillesPays from '../../../components/VillesPays.astro';
 import AvantDePartir from '../../../components/AvantDePartir.astro';
 import CalendrierPays from '../../../components/CalendrierPays.astro';
 import OutilsPays from '../../../components/OutilsPays.astro';
+import FilArianeService from '../../../components/FilArianeService.astro';
 import BonsPlansPays from '../../../components/BonsPlansPays.astro';
 import FicheIdentite from '../../../components/FicheIdentite.astro';
 import BlocDevise from '../../../components/BlocDevise.astro';
@@ -80,6 +81,8 @@ const autres = g ? g.rubriques.filter((r) => !['voyager', 'vivre'].includes(r.sl
     </Alert>
   )}
   <BlocRusse p={p} />
+
+  <FilArianeService iso={p.iso} />
 
   <FicheIdentite p={p} />
 

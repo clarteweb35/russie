@@ -556,3 +556,21 @@ header.site.accueil .wrap { justify-content: flex-end; }
 .niveau-moins .etat { background: var(--warn-soft); color: var(--warn); }
 .niveau-eviter { border-top-color: var(--bad); }
 .niveau-eviter .etat { background: var(--bad-soft); color: var(--bad); }
+
+/* Fil d'Ariane (service du ministère) : bloc bien visible sur les fiches pays */
+.service-fil { margin: 22px 0; padding: 18px 20px; border-radius: 16px; background: var(--accent-soft); border: 2px solid var(--accent); }
+.service-fil h2 { margin: 0 0 8px; padding-left: 0; font-size: 1.35rem; }
+.service-fil h2::before { display: none; }
+.service-fil ul { margin: 8px 0 12px; padding-left: 20px; font-size: 15px; }
+.service-fil .actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0; }
+a.btn-bagages { display: inline-flex; align-items: center; text-decoration: none; }
+.service-fil .btn-bagages.secondaire { background: var(--card); }
+
+/* Bandeau de consentement à la mesure d'audience */
+.consentement { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 60; max-width: 780px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; padding: 14px 16px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow-hi); font-size: 14.5px; }
+.consentement[hidden] { display: none; }
+.consentement p { margin: 0; flex: 1 1 320px; }
+.consentement .actions { display: flex; gap: 10px; }
+.consentement .btn-bagages { min-height: 44px; padding: 10px 18px; background: var(--card); }
+.lien-bouton { padding: 0; border: 0; background: none; color: var(--accent); font: inherit; text-decoration: underline; cursor: pointer; }
+@media print { .consentement, .service-fil .actions { display: none !important; } }

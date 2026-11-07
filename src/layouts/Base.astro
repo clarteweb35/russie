@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import Badge from '../components/Badge.astro';
-import { sections, LAST_CHECK, VERIFICATIONS, pagesLegales, pagesEditoriales, NOM_SITE, MESSAGE_BETA, url } from '../config';
+import { sections, LAST_CHECK, VERIFICATIONS, pagesLegales, pagesEditoriales, NOM_SITE, MESSAGE_BETA, GTM_ID, url } from '../config';
 
 interface ElementMenu { label: string; href: string; exact?: boolean }
 interface ElementFil { label: string; href?: string }
@@ -138,14 +138,23 @@ const donneesStructurees: object[] = [
       )}
       <slot />
     </main>
+    <div id="consentement" class="consentement" role="dialog" aria-modal="false" aria-label="Mesure d’audience" data-gtm={GTM_ID} hidden>
+      <p><strong>Mesure d’audience.</strong> Avec votre accord, ce site utilise Google Tag Manager (Google Analytics) pour compter les visites. Rien n’est chargé avant votre choix. <a href={url('/mentions-legales#donnees')}>En savoir plus</a></p>
+      <div class="actions">
+        <button type="button" class="btn-bagages secondaire" data-choix="non">Refuser</button>
+        <button type="button" class="btn-bagages secondaire" data-choix="oui">Accepter</button>
+      </div>
+    </div>
+
     <footer>
       <div class="wrap">
         <p>Guide d’information indépendant, non officiel. Il ne remplace ni les sources officielles ni un avis juridique, médical ou fiscal.
         Les règles changent vite : vérifiez toujours auprès des autorités avant d’agir.</p>
         <p>Dernière vérification globale : {LAST_CHECK}. <a href={url("/sources")}>Voir les sources</a>. <a href={url("/#destinations")}>Toutes les destinations</a>.
-        {[...pagesEditoriales, ...pagesLegales].map((p) => (<> · <a href={url(p.href)}>{p.label}</a></>))}</p>
+        {[...pagesEditoriales, ...pagesLegales].map((p) => (<> · <a href={url(p.href)}>{p.label}</a></>))} · <button type="button" id="gerer-cookies" class="lien-bouton">Mesure d’audience</button></p>
       </div>
     </footer>
+    <script>import '../scripts/consentement';</script>
     <script>
       const bar = document.getElementById('progress');
       const onScroll = () => {

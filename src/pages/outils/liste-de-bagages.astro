@@ -184,7 +184,7 @@ const donnees = { objets: OBJETS, categories: CATEGORIES, pays: destinations, se
 
   function lignes(): Ligne[] {
     const res: Ligne[] = objets.filter(concerne).map((o) => ({
-      id: o.id, cat: o.cat, note: o.note,
+      id: o.id, cat: o.cat, note: o.note, lien: o.lien,
       label: o.qte ? o.label.replace('{n}', String(borne(Math.round(o.qte.base + o.qte.parJour * choix.jours), o.qte.min, o.qte.max))) : o.label,
     }));
     const p = pays.find((x) => x.s === choix.pays);

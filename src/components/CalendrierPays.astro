@@ -4,6 +4,8 @@
 // Pays déconseillés par le ministère : aucun calendrier (règle de sécurité du site).
 import { DONNEES, MOIS, REGLES, SEUILS, LIBELLE_NIVEAU, LIBELLE_CLIMAT, climatSeul, sansCalendrier, lectureMois } from '../data/quand-partir';
 import { url } from '../config';
+import Alert from './Alert.astro';
+import { conseilsDe } from '../data/monde';
 import type { FicheMonde } from '../data/monde';
 
 interface Props { p: FicheMonde }
@@ -17,7 +19,20 @@ const dateFr = (iso: string) => new Date(`${iso}T12:00:00`).toLocaleDateString('
 const s = DONNEES.sources;
 ---
 {refus ? (
-  <p class="src" id="quand-partir">Calendrier « quand partir » non proposé : le ministère français déconseille de voyager dans ce pays, et nous ne présentons pas de « bon moment » pour s’y rendre. Consultez les conseils aux voyageurs.</p>
+  <section id="quand-partir" aria-labelledby="quand-titre">
+    <h2 id="quand-titre">Quand partir : {p.nom}</h2>
+    <Alert titre="Aucun bon moment : voyage déconseillé" warn>
+      Quels que soient le temps et l’affluence touristique, ce pays est déconseillé par le ministère de l’Europe et des Affaires étrangères : aucun mois n’est un bon moment pour s’y rendre. Avant tout projet, consultez les <a href={conseilsDe(p)} target="_blank" rel="noopener">conseils aux voyageurs du ministère</a>.
+    </Alert>
+    <ol class="calendrier">
+      {MOIS.map((nom) => (
+        <li class="mois-cal niveau-eviter">
+          <h3>{nom.charAt(0).toUpperCase() + nom.slice(1)} <span class="etat">Déconseillé</span></h3>
+          <ul class="raisons"><li class="att">Pays déconseillé, quel que soit le mois</li></ul>
+        </li>
+      ))}
+    </ol>
+  </section>
 ) : d ? (
   <section id="quand-partir" aria-labelledby="quand-titre">
     <h2 id="quand-titre">Quand partir : {p.nom}</h2>

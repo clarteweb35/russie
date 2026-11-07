@@ -53,3 +53,12 @@ export const outils = [
 
 // Bandeau affiché en haut de toutes les pages tant que le site est jeune : à retirer (vider la chaîne) quand il ne l'est plus.
 export const MESSAGE_BETA = 'Voyages Malins vient d’être créé : le site est en version bêta. Certaines fiches n’ont pas encore été relues et le contenu évolue.';
+
+// Fil d'Ariane : service d'alertes gratuit du ministère de l'Europe et des Affaires étrangères (à ne pas confondre avec le fil d'Ariane de navigation).
+export const FIL_ARIANE_SERVICE = {
+  accueil: 'https://fildariane.diplomatie.gouv.fr/fildariane-internet/accueil',
+  inscription: 'https://fildariane.diplomatie.gouv.fr/fildariane-internet/inscription',
+};
+
+// Google Tag Manager : chargé uniquement après acceptation du bandeau de consentement (jamais d'office).
+export const GTM_ID = 'GTM-K6DKPJXN';
