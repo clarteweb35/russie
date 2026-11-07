@@ -1,0 +1,44 @@
+{
+  "slug": "nauru",
+  "genere": "2026-11-07T00:43:34.491Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Command Ridge",
+      "pourquoi": "Point culminant de l’île (65 à 70 m selon les sources), occupé par les Japonais pendant la Seconde Guerre mondiale ; il reste des vestiges, notamment des canons rouillés.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Yaren",
+      "pourquoi": "Le musée de Nauru, à Yaren, permet de mieux comprendre l’histoire industrielle du phosphate, qui a fait la richesse de l’île mais a marqué son paysage.",
+      "a_voir": [
+        "Le musée de Nauru"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Buada Lagoon",
+      "pourquoi": "Seul plan d’eau douce de l’île, dans une végétation dense, plus adapté à la photographie qu’à la baignade selon une source ; bon endroit pour observer la rousserolle de Nauru, seul oiseau terrestre endémique.",
+      "a_voir": [],
+      "conseil": "Le Mag Voyage conseille de prévoir 3 à 5 jours plutôt qu’une escale express."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Le Mag Voyage : que faire à Nauru",
+      "url": "https://www.lemagvoyage.fr/nauru/que-faire-nauru/"
+    },
+    {
+      "titre": "Ulysse : Nauru, pays insulaire méconnu d’Océanie",
+      "url": "https://ulysse.com/news/nauru-pays-insulaire-meconnu-oceanie"
+    },
+    {
+      "titre": "Outlook Traveller : 8 choses à voir à Nauru",
+      "url": "https://www.outlooktraveller.com/destinations/international/nauru-is-now-naoero-8-things-to-see-on-the-tiny-pacific-island"
+    }
+  ]
+}

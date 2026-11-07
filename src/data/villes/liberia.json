@@ -1,0 +1,50 @@
+{
+  "slug": "liberia",
+  "genere": "2026-11-07T00:43:34.491Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Robertsport",
+      "pourquoi": "Présentée comme la « mecque du surf » du Liberia, avec des plages, de bonnes vagues et une ambiance détendue, à environ 100 km de Monrovia selon une source.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Monrovia",
+      "pourquoi": "Capitale : le marché Waterside, près de la rivière Mesurado, le musée national et la péninsule de Cape Mesurado sont cités ; l’hôtel Ducor, en ruines, est l’un des lieux les plus photographiés.",
+      "a_voir": [
+        "Le marché Waterside",
+        "Le musée national du Liberia",
+        "Le Centennial Pavilion"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Parc national de Sapo",
+      "pourquoi": "Forêt tropicale humide abritant hippopotames pygmées, chimpanzés, éléphants et plus de 500 espèces d’oiseaux ; il vaut un détour de quelques jours, et les sources donnent des temps de trajet très variables depuis Monrovia (de six à plus de huit heures).",
+      "a_voir": [],
+      "conseil": "La meilleure période va de novembre à avril, pour éviter les fortes pluies."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Kayak : guide du Libéria",
+      "url": "https://www.kayak.fr/Lib%C3%A9ria.139.dc.guide"
+    },
+    {
+      "titre": "Wildtrips : Libéria, que visiter",
+      "url": "https://www.wildtrips.net/monde/Libéria-que-visiter.htm"
+    },
+    {
+      "titre": "Africa.com : guide de voyage du Liberia",
+      "url": "https://africa.com/travel-guide/liberia-travel-guide"
+    },
+    {
+      "titre": "The Crazy Tourist : 15 meilleurs lieux du Liberia",
+      "url": "https://www.thecrazytourist.com/15-best-places-visit-liberia/"
+    }
+  ]
+}

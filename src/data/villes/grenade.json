@@ -1,0 +1,49 @@
+{
+  "slug": "grenade",
+  "genere": "2026-11-07T00:43:34.491Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Parc de sculptures sous-marines (Molinière-Beausejour)",
+      "pourquoi": "Œuvre de Jason deCaires Taylor, au large de la côte ouest, à quelques minutes de Saint-Georges, dans une aire marine protégée ; les sculptures sont peu profondes, ce qui permet plongée ou snorkeling. Compter environ 10 minutes en bateau depuis Saint-Georges, 15 depuis Grand Anse.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Saint-Georges",
+      "pourquoi": "Capitale fondée par les Français en 1650 ; le marché du samedi matin et le carnaval de la mi-août sont cités, et une promenade relie la ville au marché et au musée national.",
+      "a_voir": [
+        "Le marché du samedi matin",
+        "Le musée national"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Carriacou",
+      "pourquoi": "Île accessible en ferry rapide depuis le port de Carenage (60 à 90 minutes) ou par avion ; un second parc de sculptures sous-marines, « A World Adrift », y a été lancé en octobre 2024.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Pure Grenada : parc de sculptures sous-marines de Carriacou",
+      "url": "https://www.puregrenada.com/?p=18511"
+    },
+    {
+      "titre": "PlanetWare : 15 attractions de la Grenade",
+      "url": "https://www.planetware.com/tourist-attractions/grenada-gre.htm"
+    },
+    {
+      "titre": "Outlook Traveller : guide de voyage de la Grenade",
+      "url": "https://www.outlooktravelmag.com/travel-guides/the-caribbean/grenada/grenada-travel-guide"
+    },
+    {
+      "titre": "Celebrity Cruises : guide du port de Saint-Georges",
+      "url": "https://www.celebritycruises.com/ca/fr/ports/grenada"
+    }
+  ]
+}

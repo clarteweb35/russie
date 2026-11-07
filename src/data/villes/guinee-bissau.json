@@ -1,0 +1,49 @@
+{
+  "slug": "guinee-bissau",
+  "genere": "2026-11-07T00:42:28.790Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Îles Bijagós",
+      "pourquoi": "Principal attrait du pays : archipel de 88 îles, dont une vingtaine seulement sont habitées en permanence ; Bubaque est la plus accessible depuis Bissau, et la ponte des tortues marines s’y déroule d’août à novembre.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Bissau",
+      "pourquoi": "Capitale ; la forteresse d’Amura et le grand marché de Bandim sont cités.",
+      "a_voir": [
+        "La forteresse d’Amura",
+        "Le marché de Bandim"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Bolama",
+      "pourquoi": "Ancienne capitale coloniale, aux ruines de l’administration portugaise (la capitale a été transférée à Bissau en 1941), avec plages et mangroves ; accès par ferry depuis Bissau, environ trois fois par semaine quand il fonctionne.",
+      "a_voir": [],
+      "conseil": "Les horaires de bateau dépendent des marées : confirmez-les sur place la veille du départ."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Audiala : destinations en Guinée-Bissau",
+      "url": "https://audiala.com/fr/guinea-bissau"
+    },
+    {
+      "titre": "Travel Extra : 10 sites à voir en Guinée-Bissau",
+      "url": "https://www.travelextra.ie/?p=37500"
+    },
+    {
+      "titre": "World Travel Guide : Guinée-Bissau",
+      "url": "https://www.worldtravelguide.net/guides/africa/guinea-bissau/things-to-do"
+    },
+    {
+      "titre": "TAP : 5 lieux à voir en Guinée-Bissau",
+      "url": "https://flytap.com/en-ao/destinations/suggestions/5-must-see-places-in-guinea-bissau"
+    }
+  ]
+}

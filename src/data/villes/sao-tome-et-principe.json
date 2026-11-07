@@ -1,0 +1,46 @@
+{
+  "slug": "sao-tome-et-principe",
+  "genere": "2026-11-07T00:42:28.790Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Pico Cão Grande",
+      "pourquoi": "Aiguille volcanique du parc naturel d’Obô, à environ 51 km de la capitale ; les sources divergent sur sa hauteur (663 m ou 370 m), et le meilleur point de vue est le belvédère près de la Praia Grande.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "São Tomé (ville)",
+      "pourquoi": "Capitale, à la culture créole détendue et à l’architecture coloniale fanée ; on peut y voir le palais présidentiel.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Príncipe",
+      "pourquoi": "Île de moins de 10 000 habitants, en grande partie couverte de forêt tropicale et entièrement classée réserve de biosphère de l’UNESCO ; la Praia Banana, la plage la plus célèbre, s’admire depuis la Roça Belo Monte.",
+      "a_voir": [],
+      "conseil": "La saison sèche est la plus recommandée (de juin à octobre, ou de juin à septembre selon la source) ; les routes sont de qualité variable, d’où l’intérêt d’un guide ou d’un chauffeur."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Lonely Planet : São Tomé-et-Príncipe",
+      "url": "https://www.lonelyplanet.fr/destinations/afrique/sao-tome-et-principe"
+    },
+    {
+      "titre": "Wildtrips : São Tomé-et-Príncipe, que visiter",
+      "url": "https://www.wildtrips.net/monde/Sao-Tomé-et-Principe-que-visiter.htm"
+    },
+    {
+      "titre": "Cityzeum : São Tomé-et-Príncipe",
+      "url": "https://www.cityzeum.com/tourisme/sao-tome-et-principe"
+    },
+    {
+      "titre": "TAP : deux petits paradis sur Terre",
+      "url": "https://www.flytap.com/es-ar/destinos/sugerencias/two-small-paradises-on-earth-sao-tome-and-principe"
+    }
+  ]
+}

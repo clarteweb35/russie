@@ -130,11 +130,6 @@ Liste des sources et de leur fiabilité.
 
 Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fichier) et retirée une fois terminée et mise en ligne. Chaque entrée : date, objectif, fichiers concernés, étapes faites et restantes.
 
-### 7 novembre 2026 : villes à connaître, paquets 2 et suivants (150 pays)
-- Objectif : topos de villes rédigés par Claude à partir de recherches web (voir §19), par paquets de 10 recherches.
-- Fichiers : src/data/villes/<pays>.json, docs.
-- Fait : 146 pays (tous les continents). Restant : petits États d'Afrique, du Pacifique et des Caraïbes ; Grenade, Venezuela et Papouasie-Nouvelle-Guinée non traités (sources insuffisantes) ; les 22 pays déconseillés et la Russie sont mis de côté en attendant décision.
-
 
 ## 8. Version « essentielle » (6 novembre 2026)
 
@@ -347,3 +342,4 @@ Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fich
 
 - Faute de quota Gemini, les topos de villes sont aussi rédigés par Claude à partir de recherches web, par paquets de 20 pays, dans les mêmes fichiers `src/data/villes/<pays>.json` ; le champ `modele` vaut « Claude (recherche web) » et s'affiche sur le bloc. Si le workflow `villes.yml` fonctionne un jour, il remplace ces fichiers. Règles : rien d'autre que ce que disent les résultats de recherche ; les sources sont des sites de voyage (signalés comme non officiels) ; le critère « importance pratique » repose sur la capitale ou un nœud de transport cité, jamais sur un aéroport non vérifié ; conseils pratiques seulement s'ils sont sourcés ; le bloc disparaît après 120 jours.
 - Paquet 1 (20 pays) : Espagne, Italie, Portugal, Grèce, Maroc, Turquie, Allemagne, Royaume-Uni, Belgique, Suisse, États-Unis, Thaïlande, Tunisie, Croatie, Pays-Bas, Irlande, Japon, Autriche, Égypte, République dominicaine.
+- **Bilan (7 novembre 2026)** : 164 pays sur 193 ont leur topo. Mis de côté volontairement : la Russie et les 22 pays de `ALERTE_SECURITE` (est-il pertinent de suggérer des villes là où le ministère déconseille le voyage ?). Non traités faute de sources suffisantes ou fiables : Angola, Érythrée, îles Marshall, Papouasie-Nouvelle-Guinée, Saint-Vincent-et-les-Grenadines, Venezuela. Pour les micro-États, les « villes » sont des quartiers, îles ou sites ; quand une capitale n'est pas décrite par les sources, la fiche le dit plutôt que d'inventer.

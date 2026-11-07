@@ -1,0 +1,45 @@
+{
+  "slug": "comores",
+  "genere": "2026-11-07T00:42:28.790Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Mohéli",
+      "pourquoi": "Destination phare pour la plongée : le parc marin national compte une trentaine de sites, et Itsamia est l’un des sites les plus connus pour observer les tortues marines qui viennent pondre, sous encadrement strict. De août à octobre, on peut y voir baleines, requins, raies et dauphins.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Moroni (Grande Comore)",
+      "pourquoi": "Capitale, avec sa médina, son front de mer et la mosquée Badjanani ; des vols intérieurs la relient à Mohéli (environ 45 minutes) et à Anjouan (environ 30 minutes).",
+      "a_voir": [
+        "La médina",
+        "La mosquée Badjanani"
+      ],
+      "conseil": "Les cartes bancaires sont rarement acceptées et les distributeurs fonctionnent de façon aléatoire : apportez des euros en espèces."
+    },
+    {
+      "critere": "diversite",
+      "nom": "Volcan Karthala",
+      "pourquoi": "Volcan actif que l’on peut gravir à pied, point culminant de l’archipel avec 2 361 m ; des excursions de randonnée sont proposées.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Le Mag Voyage : que faire aux Comores",
+      "url": "https://www.lemagvoyage.fr/que-faire-comores/"
+    },
+    {
+      "titre": "Ulysse : les Comores, alternative aux Seychelles",
+      "url": "https://ulysse.com/news/comores-alternative-seychelles-ocean-indien"
+    },
+    {
+      "titre": "Liligo : les beautés des Comores",
+      "url": "https://www.liligo.fr/magazine-voyage/les-beautes-des-comores-dans-locean-indien-23112.html"
+    }
+  ]
+}

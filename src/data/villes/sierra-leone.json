@@ -1,0 +1,48 @@
+{
+  "slug": "sierra-leone",
+  "genere": "2026-11-07T00:42:28.790Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Bunce Island",
+      "pourquoi": "Ancien fort négrier britannique à une trentaine de kilomètres en amont de Freetown, présenté comme un pilier du « tourisme des racines » pour les diasporas africaines ; il ne se visite qu’en excursion guidée, sans hébergement ni restauration sur place.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Freetown",
+      "pourquoi": "Capitale, dont le Cotton Tree, au centre-ville, est l’un des sites les plus symboliques du pays ; les plages de la presqu’île sont très prisées le week-end.",
+      "a_voir": [
+        "Le Cotton Tree"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Îles Banana",
+      "pourquoi": "Groupe d’îles à une vingtaine de kilomètres au large de la presqu’île, avec plages, eaux claires et bons spots de snorkeling.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Cap Mad : Sierra Leone, 10 expériences clés",
+      "url": "https://www.capmad.com/article/sierra-leone-10-experiences-cles-entre-plages-iles-et-forets-pour-comprendre-le-potentiel-touristique-du-pays"
+    },
+    {
+      "titre": "Tourism Sierra Leone : les 5 meilleures îles",
+      "url": "https://tourismsierraleone.com/stories/5-best-islands-in-sierra-leone/"
+    },
+    {
+      "titre": "Lonely Planet : 7 lieux à visiter en Sierra Leone",
+      "url": "https://www.lonelyplanet.com/articles/best-places-to-visit-in-sierra-leone"
+    },
+    {
+      "titre": "Africa.com : guide de voyage de la Sierra Leone",
+      "url": "https://africa.com/travel-guide/sierra-leone-travel-guide"
+    }
+  ]
+}

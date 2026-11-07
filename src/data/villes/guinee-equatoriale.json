@@ -1,0 +1,48 @@
+{
+  "slug": "guinee-equatoriale",
+  "genere": "2026-11-07T00:43:34.491Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Parc national de Monte Alén",
+      "pourquoi": "Le site naturel le plus cité : environ 1 400 km² de forêt tropicale au centre de Río Muni, avec randonnées guidées, cascades, grottes et possibilité d’observer chimpanzés, gorilles et éléphants.",
+      "a_voir": [],
+      "conseil": "Une source affirme que l’accès demande un 4×4 et une autorisation préalable de l’institut des parcs nationaux : à confirmer avant de partir."
+    },
+    {
+      "critere": "pratique",
+      "nom": "Malabo (Bioko)",
+      "pourquoi": "Capitale, sur l’île de Bioko, qui oppose un centre historique d’allure traditionnelle à un développement rapide ; le pic Basilé, qui domine la ville, est cité comme point de vue.",
+      "a_voir": [
+        "Le pic Basilé"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Bata (Río Muni)",
+      "pourquoi": "Principale ville du continent et centre de transport, à l’architecture coloniale ; un guide la suggère comme pause, plus calme que Malabo.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Evaneos : Guinée équatoriale, que voir",
+      "url": "https://www.evaneos.fr/guinee-equatoriale/voyage/etape/"
+    },
+    {
+      "titre": "The Crazy Tourist : 15 meilleurs lieux de Guinée équatoriale",
+      "url": "https://www.thecrazytourist.com/15-best-places-visit-equatorial-guinea/"
+    },
+    {
+      "titre": "Travel Extra : 10 sites à voir en Guinée équatoriale",
+      "url": "https://www.travelextra.ie/?p=37902"
+    },
+    {
+      "titre": "Penguin Travel : Guinée équatoriale",
+      "url": "https://www.penguintravel.com/Destination/72/0/0/EquatorialGuinea.html"
+    }
+  ]
+}

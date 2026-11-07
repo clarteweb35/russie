@@ -1,0 +1,49 @@
+{
+  "slug": "burundi",
+  "genere": "2026-11-07T00:42:28.790Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Lac Tanganyika",
+      "pourquoi": "Lieu d’activités nautiques, de la natation au kayak, dans des eaux présentées comme cristallines.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Bujumbura",
+      "pourquoi": "Capitale économique et porte d’entrée du pays ; une source cite le marché central, la plage de la Brasserie, le mausolée du prince Louis Rwagasore et le musée vivant de la culture burundaise.",
+      "a_voir": [
+        "Le marché central",
+        "Le mausolée du prince Louis Rwagasore"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Gitega",
+      "pourquoi": "Capitale politique, que l’on rejoint en visite guidée depuis Bujumbura ; on y voit le Boma allemand, un fortin militaire, et la cathédrale.",
+      "a_voir": [],
+      "conseil": "Une source conseille la saison sèche, en particulier de juin à août."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Cityzeum : Bujumbura",
+      "url": "https://www.cityzeum.com/bujumbura"
+    },
+    {
+      "titre": "Evaneos : Burundi, que voir",
+      "url": "https://www.evaneos.fr/burundi/voyage/etape/"
+    },
+    {
+      "titre": "Wildtrips : Burundi, que visiter",
+      "url": "https://www.wildtrips.net/monde/Burundi-que-visiter.htm"
+    },
+    {
+      "titre": "Visit World : voyage au Burundi",
+      "url": "https://visitworld.today/fr/burundi/travel/info"
+    }
+  ]
+}

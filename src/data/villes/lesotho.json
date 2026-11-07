@@ -1,0 +1,44 @@
+{
+  "slug": "lesotho",
+  "genere": "2026-11-07T00:42:28.790Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Sani Pass",
+      "pourquoi": "Route reliant le KwaZulu-Natal au Lesotho : elle grimpe d’environ 1 544 m à 2 873 m en 9 km de lacets de gravier ; le sommet abrite, selon Evaneos, le bar le plus haut du continent.",
+      "a_voir": [],
+      "conseil": "Un 4×4 est recommandé ; vérifiez les conditions d’accès avant de partir."
+    },
+    {
+      "critere": "pratique",
+      "nom": "Maseru",
+      "pourquoi": "Capitale, à la frontière avec l’Afrique du Sud, souvent le point d’entrée le plus simple et la base logistique avant de partir vers l’intérieur ; les marchés sont plus animés le matin.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Semonkong",
+      "pourquoi": "Village du centre du pays, près des chutes de Maletsunyane, hautes de 192 m, qui tombent dans une gorge profonde ; la région attire randonneurs et cavaliers (poney trekking).",
+      "a_voir": [
+        "Les chutes de Maletsunyane"
+      ],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Evaneos : Lesotho, que voir",
+      "url": "https://www.evaneos.fr/lesotho/voyage/etape/"
+    },
+    {
+      "titre": "Le Mag Voyage : que faire au Lesotho",
+      "url": "https://www.lemagvoyage.fr/lesotho/que-faire-lesotho/"
+    },
+    {
+      "titre": "Africa.com : guide de voyage du Lesotho",
+      "url": "https://africa.com/travel-africa/lesotho-travel-guide"
+    }
+  ]
+}

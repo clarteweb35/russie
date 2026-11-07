@@ -1,0 +1,50 @@
+{
+  "slug": "tuvalu",
+  "genere": "2026-11-07T00:43:34.491Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Funafuti Conservation Area",
+      "pourquoi": "Grand site naturel à privilégier pour un premier voyage : environ 33 km² de récifs, de lagon, de passes et de six petits îlots, à une quinzaine de kilomètres de Fongafale, sur la façade ouest de l’atoll ; on y accède en bateau et l’on y observe des oiseaux marins et, avec de la chance, des tortues.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Funafuti (Fongafale)",
+      "pourquoi": "Atoll-capitale et seule porte d’entrée aérienne du pays, aussi le seul endroit qui offre des hébergements touristiques ; l’aéroport et les services se trouvent sur l’îlot de Fongafale.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Vaiaku",
+      "pourquoi": "Quartier qui se rapproche le plus d’un centre civique, avec l’église de Teone et des rues résidentielles.",
+      "a_voir": [],
+      "conseil": "Les sources divergent sur la baignade dans le lagon et déconseillent parfois la mer (courants, marées) : renseignez-vous sur place. Saison sèche : mai à septembre."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Audiala : Funafuti, Tuvalu",
+      "url": "https://audiala.com/fr/tuvalu/funafuti"
+    },
+    {
+      "titre": "Le Mag Voyage : que faire à Tuvalu",
+      "url": "https://www.lemagvoyage.fr/tuvalu/que-faire-tuvalu/"
+    },
+    {
+      "titre": "Cyril Jarnias : sites touristiques de Tuvalu",
+      "url": "https://www.cyriljarnias.com/?p=41243"
+    },
+    {
+      "titre": "Wildtrips : Funafuti, Tuvalu",
+      "url": "https://www.wildtrips.net/lieux/Funafuti-Tuvalu-que-visiter.htm"
+    },
+    {
+      "titre": "World Travel Guide : Tuvalu",
+      "url": "https://worldtravelguide.net/guides/oceania/tuvalu/things-to-do"
+    }
+  ]
+}

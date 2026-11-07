@@ -1,0 +1,46 @@
+{
+  "slug": "guinee",
+  "genere": "2026-11-07T00:43:34.491Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Îles de Los",
+      "pourquoi": "Destination la plus citée : archipel accessible en bateau depuis la capitale, aux plages décrites comme idéales pour se détendre, manger du poisson frais et faire de la plongée ou du snorkeling.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Conakry",
+      "pourquoi": "Capitale, que plusieurs guides conseillent d’utiliser comme point de départ, notamment pour ses marchés et son front de mer (la Corniche).",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Fouta-Djalon",
+      "pourquoi": "Zone de randonnée et de paysages de montagne, au plateau aux vues spectaculaires ; Labé en est présentée comme le cœur culturel, et Dalaba est réputée pour son climat agréable.",
+      "a_voir": [],
+      "conseil": "Les sources sont des blogs et des sites de voyage généralistes : vérifiez les conseils officiels de votre pays avant tout projet de voyage."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Toploc : 10 choses à voir en Guinée-Conakry",
+      "url": "https://toploc.com/blog/?p=29606"
+    },
+    {
+      "titre": "World Travel Guide : Guinée",
+      "url": "https://www.worldtravelguide.net/guides/africa/guinea/things-to-do"
+    },
+    {
+      "titre": "The Crazy Tourist : 15 meilleurs lieux de Guinée",
+      "url": "https://www.thecrazytourist.com/15-best-places-visit-guinea/"
+    },
+    {
+      "titre": "Travel Extra : 10 sites à voir en Guinée",
+      "url": "https://www.travelextra.ie/?p=37504"
+    }
+  ]
+}

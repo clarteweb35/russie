@@ -1,0 +1,48 @@
+{
+  "slug": "eswatini",
+  "genere": "2026-11-07T00:42:28.790Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Mlilwane Wildlife Sanctuary",
+      "pourquoi": "Sanctuaire animalier le plus connu du pays, avec zèbres et antilopes, où l’on peut marcher ou faire du vélo ; à 15 km de Lobamba, présenté comme exempt de malaria.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Mbabane et Lobamba",
+      "pourquoi": "Mbabane est la capitale administrative ; Lobamba, à environ 20 km au sud, est la capitale royale et législative, avec le Royal Kraal, le Parlement et le Musée national.",
+      "a_voir": [
+        "Le Musée national, à Lobamba"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Parc de Hlane",
+      "pourquoi": "Plus grand espace protégé du pays, avec lions, éléphants et rhinocéros blancs.",
+      "a_voir": [],
+      "conseil": "Les distances varient selon les sources, et un guide est généralement requis ou conseillé pour les activités animalières."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Routard : vallée d’Ezulwini",
+      "url": "https://www.routard.com/fr/guide/afrique/swaziland-eswatini/ezulwini-valley"
+    },
+    {
+      "titre": "Routard : que voir en Eswatini",
+      "url": "https://www.routard.com/fr/guide/a/que-voir-que-visiter/afrique/swaziland-eswatini"
+    },
+    {
+      "titre": "World Travel Guide : Eswatini",
+      "url": "https://www.worldtravelguide.net/guides/africa/eswatini/things-to-do"
+    },
+    {
+      "titre": "Ulysse : Eswatini, itinéraire d’aventure",
+      "url": "https://ulysse.com/news/eswatini-itineraire-aventure-swaziland-afrique-australe"
+    }
+  ]
+}

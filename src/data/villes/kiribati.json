@@ -1,0 +1,49 @@
+{
+  "slug": "kiribati",
+  "genere": "2026-11-07T00:43:34.491Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Kiritimati (île Christmas)",
+      "pourquoi": "Présenté comme le plus grand atoll de corail du monde, resté en grande partie sauvage ; la pêche au bonefish y est célèbre. Le fuseau horaire (UTC+14) en fait l’un des premiers endroits à fêter le Nouvel An.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Tarawa-Sud",
+      "pourquoi": "Capitale : l’administration, les hôpitaux, l’unique université et les distributeurs de billets s’y concentrent ; les autres îles sont très isolées, prévoyez des espèces. Pas de vol direct depuis l’Europe (escale en général par Nadi, aux Fidji, ou par Hawaï).",
+      "a_voir": [
+        "Le lagon de l’atoll",
+        "Le Musée national de Kiribati"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Vestiges de la Seconde Guerre mondiale (Tarawa)",
+      "pourquoi": "En poursuivant vers l’est de l’atoll, on trouve des vestiges et des sites de bataille accessibles en circuit guidé.",
+      "a_voir": [],
+      "conseil": ""
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Visit World : pourquoi choisir Kiribati",
+      "url": "https://visitworld.today/fr/blog/3136/vacation-at-the-edge-of-the-world-why-tourists-choose-kiribati"
+    },
+    {
+      "titre": "Ulysse : Kiribati, paradis au cœur du Pacifique",
+      "url": "https://ulysse.com/news/kiribati-paradis-au-coeur-pacifique"
+    },
+    {
+      "titre": "Figaro Nautisme : Kiribati, l’île de l’autre bout du monde",
+      "url": "https://figaronautisme.meteoconsult.fr/actus-nautisme-escales/2025-04-10/76894-kiribati-lile-de-lautre-bout-du-monde-lagons-secrets-et-aventure-pacifique"
+    },
+    {
+      "titre": "Visit Kiribati : office de tourisme",
+      "url": "https://visitkiribati.travel/?p=530"
+    }
+  ]
+}

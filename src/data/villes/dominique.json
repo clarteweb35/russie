@@ -1,0 +1,55 @@
+{
+  "slug": "dominique",
+  "genere": "2026-11-07T00:43:34.491Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Parc national du Morne Trois Pitons",
+      "pourquoi": "Classé à l’UNESCO ; le volcan culmine à 1 342 m, entouré de sources chaudes, de bassins de boue bouillonnante, de lacs de cratère et de forêt tropicale. La randonnée du Boiling Lake y est l’une des plus éprouvantes de l’île.",
+      "a_voir": [
+        "Le Boiling Lake"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Roseau",
+      "pourquoi": "Capitale paisible d’environ 25 000 habitants, souvent le premier endroit où arrivent les visiteurs.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Champagne Reef et Titou Gorge",
+      "pourquoi": "Champagne Reef, dans la réserve marine de Soufrière Scott’s Head, est le spot de snorkeling le plus connu, au-dessus de sources géothermiques ; Titou Gorge est un canyon creusé par la lave et l’eau, que l’on découvre à la nage.",
+      "a_voir": [
+        "Champagne Reef",
+        "Titou Gorge"
+      ],
+      "conseil": "Un gilet de sauvetage est obligatoire à Titou Gorge ; le soufre ternit les bijoux en or et en argent."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Où et quand : visiter la Dominique",
+      "url": "https://www.ou-et-quand.net/ou-aller/dominique/"
+    },
+    {
+      "titre": "Génération Voyage : la Dominique",
+      "url": "https://generationvoyage.fr/dominique-p338964/"
+    },
+    {
+      "titre": "Air Caraïbes : la Dominique",
+      "url": "https://www.aircaraibes.com/destinations/la-dominique/articles"
+    },
+    {
+      "titre": "Kayak : guide de la Dominique",
+      "url": "https://www.kayak.fr/Dominique.67.dc.guide"
+    },
+    {
+      "titre": "PlanetWare : Roseau, la Dominique",
+      "url": "https://www.planetware.com/map/roseau-map-dmn-dmn217.htm"
+    }
+  ]
+}

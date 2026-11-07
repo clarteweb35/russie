@@ -1,0 +1,52 @@
+{
+  "slug": "congo",
+  "genere": "2026-11-07T00:42:28.790Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Parc national de Nouabalé-Ndoki",
+      "pourquoi": "Forêt équatoriale de 7 320 km², réputée pour ses gorilles et ses éléphants ; Mbeli Bai est une clairière marécageuse où l’on observe éléphants et gorilles. L’accès passe par le village de Bomassa, en pirogue, et un guide est indispensable.",
+      "a_voir": [
+        "Mbeli Bai"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Brazzaville",
+      "pourquoi": "Capitale, décrite comme calme et face à Kinshasa, avec ses marchés typiques et la cathédrale Sainte-Anne ; la réserve de Lesio-Louna, connue pour la protection des gorilles, est à courte distance au nord.",
+      "a_voir": [
+        "La cathédrale Sainte-Anne"
+      ],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Pointe-Noire",
+      "pourquoi": "Deuxième ville du pays et port important, avec des plages de sable bordées de palmiers ; les gorges de Diosso sont à 35 km, et le musée du Cercle africain est cité.",
+      "a_voir": [
+        "Les gorges de Diosso"
+      ],
+      "conseil": "Évitez la saison des pluies, qui rend les routes boueuses. Certaines sources signalent des risques élevés hors de Brazzaville et Pointe-Noire : vérifiez les conseils officiels de votre pays avant de partir."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Evaneos : Congo, que voir",
+      "url": "https://www.evaneos.fr/congo/voyage/etape/"
+    },
+    {
+      "titre": "Partir.com : lieux d’intérêt au Congo",
+      "url": "https://www.partir.com/Congo/lieux-d-interet.html"
+    },
+    {
+      "titre": "Africa.com : guide de voyage du Congo",
+      "url": "https://africa.com/travel-guide/republic-of-congo-travel-guide"
+    },
+    {
+      "titre": "World Travel Guide : République du Congo",
+      "url": "https://worldtravelguide.net/guides/africa/republic-of-congo/things-to-do"
+    }
+  ]
+}

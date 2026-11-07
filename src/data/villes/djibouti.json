@@ -1,0 +1,46 @@
+{
+  "slug": "djibouti",
+  "genere": "2026-11-07T00:42:28.790Z",
+  "modele": "Claude (recherche web)",
+  "villes": [
+    {
+      "critere": "interet",
+      "nom": "Lac Assal",
+      "pourquoi": "À 155 m sous le niveau de la mer, il compte parmi les points les plus bas de la planète.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "pratique",
+      "nom": "Djibouti (ville)",
+      "pourquoi": "Capitale ; des excursions incluent le marché central et les plages de Khor Ambado.",
+      "a_voir": [],
+      "conseil": ""
+    },
+    {
+      "critere": "diversite",
+      "nom": "Lac Abbé",
+      "pourquoi": "À la frontière éthiopienne, célèbre pour ses cheminées naturelles formées par l’échappement de vapeurs souterraines ; il ne se visite qu’en 4×4, avec un guide, et demande au minimum deux jours d’excursion.",
+      "a_voir": [],
+      "conseil": "Les dates d’observation des requins-baleines varient selon les sources (de mi-novembre à fin janvier, ou d’octobre à février) : vérifiez-les auprès d’un opérateur local."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Lonely Planet : les lacs Assal et Abbé",
+      "url": "https://www.lonelyplanet.fr/destinations/afrique/djibouti/que-faire/les-lacs-assal-et-abbe"
+    },
+    {
+      "titre": "Partirou : visiter Djibouti",
+      "url": "https://www.partirou.com/visiter/djibouti"
+    },
+    {
+      "titre": "Toploc : 10 choses à voir à Djibouti",
+      "url": "https://toploc.com/blog/?p=29579"
+    },
+    {
+      "titre": "Cityzeum : Djibouti",
+      "url": "https://www.cityzeum.com/tourisme/djibouti"
+    }
+  ]
+}
