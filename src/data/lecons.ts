@@ -1,6 +1,8 @@
 // Chaque phrase : [russe, prononciation à la française, traduction]
 // img et imgAlt : photo de la carte de leçon (public/img/lecons/)
-export const lecons = [
+import type { Lecon } from './pays/types';
+
+export const lecons: Lecon[] = [
   {
     slug: 'salutations',
     img: '/img/lecons/salutations.webp',

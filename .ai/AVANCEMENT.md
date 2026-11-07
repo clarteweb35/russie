@@ -3,13 +3,13 @@
 Dernière mise à jour : 7 novembre 2026. Ce fichier est mis à jour à la fin de chaque session de travail. Les sections les plus basses sont les plus récentes ; les tableaux du début sont l'historique du guide Russie d'origine.
 
 **Production** : https://clarteweb35.github.io/russie/ (déploiement automatique à chaque push sur `main`)
-**Note d'architecture** : 82 / 100 le 7 novembre 2026 (76 avant la remise à plat ; dette restante dans `.ai/SPEC_FONCTIONNALITES.md`, §6)
+**Note d'architecture** : 86 / 100 le 7 novembre 2026 (76 avant la remise à plat ; dette restante dans `.ai/SPEC_FONCTIONNALITES.md`, §6)
 
 ## État au 7 novembre 2026
 
 Site « Voyage Malin » : 194 pays, outils (bagages, quand partir, budget), bons plans, villes, fiches officielles automatiques, bandeau de consentement + GTM. Tout est en ligne sauf les pages `demo-*` et `src/assets/carousel/` (travail local non suivi).
 
-**Prochaines actions** : (1) GTM : vérifier en aperçu que la balise GA4 se déclenche après acceptation ; (2) refaire la mesure EcoIndex ; (3) quota Gemini (villes, actualités) ; (4) décision sur la page budget (aucune estimation sourcée) ; (5) domaine voyagesmalins.fr (voir plus bas) ; (6) dette technique restante : un fichier par pays pour les compléments, `lecons.js` en TypeScript, découpage de `global.css`, tests de comportement.
+**Prochaines actions** : (1) GTM : vérifier en aperçu que la balise GA4 se déclenche après acceptation ; (2) refaire la mesure EcoIndex ; (3) quota Gemini (villes, actualités) ; (4) décision sur la page budget (aucune estimation sourcée) ; (5) domaine voyagesmalins.fr (voir plus bas) ; (6) dette technique restante : un fichier par pays pour les compléments, fusion des deux feuilles de style (`public/styles/global.css` pour bons plans et guides), tests de comportement dans un navigateur.
 
 ## Historique : en cours au 4 novembre 2026 (obsolète)
 
@@ -54,8 +54,8 @@ Site « Voyage Malin » : 194 pays, outils (bagages, quand partir, budget), bons
 4. [x] Quiz et audio extraits de la page de leçon (`src/scripts/lecon.ts`, `Quiz.astro`), CSS déplacé dans `global.css`.
 5. [x] Composants `Alert` et `Badge` créés et utilisés partout. Reste éventuellement `Sources`.
 6. [x] Date de vérification par page (`VERIFICATIONS` dans `config.ts`, à renseigner quand une page est revérifiée seule).
-7. [ ] Passer `lecons.js` en TypeScript, avec un type `Lecon` et des objets `{ru, pron, fr}`.
-8. [ ] Découper `global.css` (225 lignes) et supprimer les règles en doublon sur le menu mobile.
+7. [x] `lecons.js` passé en TypeScript (`lecons.ts`, type `Lecon`), 7 novembre 2026.
+8. [x] `global.css` découpé en 7 fichiers par thème (7 novembre 2026). Reste à supprimer d'éventuelles règles en doublon sur le menu mobile.
 
 ### Priorité 3 : SEO et robustesse
 9. [x] Sitemap généré (`src/pages/sitemap.xml.ts`), favicon, `robots.txt`, balises `canonical` et Open Graph.

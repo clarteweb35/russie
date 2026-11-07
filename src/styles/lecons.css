@@ -1,0 +1,27 @@
+/* leçons */
+.controls { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; margin: 18px 0; padding: 14px 18px; border-radius: 16px; background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow); font-size: 15px; }
+.phrases { list-style: none; padding: 0; margin: 16px 0; display: grid; gap: 12px; }
+.phrases li { display: flex; gap: 16px; align-items: center; margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 14px 18px; box-shadow: var(--shadow); }
+.phrases li:hover { border-color: var(--accent); }
+.play { flex: none; width: 48px; height: 48px; border-radius: 50%; border: 0; color: #fff; font-size: 16px; cursor: pointer; background: linear-gradient(135deg, var(--accent), var(--accent2)); box-shadow: 0 6px 14px -4px color-mix(in srgb, var(--accent) 60%, transparent); transition: transform .25s cubic-bezier(.34, 1.56, .64, 1); }
+.play:hover { transform: scale(1.12); }
+.play.active { animation: pulse 1s ease-in-out infinite; }
+@keyframes pulse { 50% { box-shadow: 0 0 0 10px color-mix(in srgb, var(--accent) 22%, transparent); } }
+.ru { font: 700 1.4rem var(--serif); }
+.pron { color: var(--accent); font-size: 15px; font-weight: 500; }
+.fr { color: var(--muted); font-size: 15px; }
+.pager { display: flex; justify-content: space-between; gap: 12px; margin-top: 44px; font-size: 15px; font-weight: 600; }
+.quiz-opts { display: grid; gap: 10px; margin: 14px 0; }
+.quiz-opts button { text-align: left; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--line); background: var(--card); color: var(--fg); font: 500 15px var(--sans); cursor: pointer; transition: transform .2s, border-color .2s; }
+.quiz-opts button:hover:not(:disabled) { transform: translateX(6px); border-color: var(--accent); }
+.quiz-opts button.good { border-color: var(--ok); background: var(--ok-soft); }
+.quiz-opts button.bad { border-color: var(--accent); background: var(--accent-soft); }
+
+/* cartes de leçons avec photo */
+.card-photo { padding: 0; }
+.card-photo .photo { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; transition: transform .6s cubic-bezier(.2, .8, .2, 1); }
+.card-photo:hover .photo { transform: scale(1.06); }
+.card-photo { overflow: hidden; }
+.card-photo h3 { margin: 18px 22px 4px; }
+.card-photo p { margin: 0 22px 20px; }
+

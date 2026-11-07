@@ -8,7 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "actualites": "node scripts/actualites.mjs",
-    "test": "astro build && node scripts/verifier-liens.mjs"
+    "test": "astro build && node scripts/verifier-liens.mjs && node scripts/verifier-pages.mjs"
   },
   "dependencies": {
     "astro": "^5.0.0"

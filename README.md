@@ -17,8 +17,8 @@ Le site est servi sous `/russie/` en local comme en production.
 - `src/pages/` : une page par rubrique (`lecons/[slug].astro` génère les leçons).
 - `src/components/` : `Alert`, `Badge`, `Quiz`, `Convertisseur`.
 - `src/config.ts` : rubriques, date de vérification, fonction `url()`.
-- `src/data/lecons.js` : contenu des leçons.
-- `scripts/` : outils (`verifier-liens.mjs`, `optimiser-images.mjs`).
+- `src/data/lecons.ts` : contenu des leçons.
+- `scripts/` : outils (`verifier-liens.mjs`, `verifier-pages.mjs`, `optimiser-images.mjs`).
 - `.ai/` : spécification, principes d'architecture et suivi d'avancement. Voir aussi `CLAUDE.md`.
 
 ## Déploiement

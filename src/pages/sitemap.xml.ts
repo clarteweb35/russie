@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { sections, pagesLegales, pagesEditoriales, outils, url } from '../config';
-import { lecons } from '../data/lecons.js';
+import { lecons } from '../data/lecons';
 import { paysComplets } from '../data/pays';
 import { monde } from '../data/monde';
 import { BUDGETS } from '../data/budget-voyage';

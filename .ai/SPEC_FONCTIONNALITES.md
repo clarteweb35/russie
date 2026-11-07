@@ -52,7 +52,7 @@ Permis de travail et cadre juridique.
 Alphabet cyrillique, phrases utiles, repères culturels.
 
 ### Leçons `/lecons` et `/lecons/[slug]`
-- 6 leçons : salutations, se présenter, chiffres/prix/heure, etc. Source des données : `src/data/lecons.js`. Chaque carte de la liste porte une photo (zoom au survol), définie par `img` et `imgAlt` dans les données.
+- 6 leçons : salutations, se présenter, chiffres/prix/heure, etc. Source des données : `src/data/lecons.ts`. Chaque carte de la liste porte une photo (zoom au survol), définie par `img` et `imgAlt` dans les données.
 - Chaque phrase : russe, prononciation à la française, traduction.
 - Audio par synthèse vocale du navigateur (voix `ru-RU`), avec lecture lente et « Tout écouter ».
 - Quiz d'écoute : 6 questions, 4 choix, score final.
@@ -120,11 +120,11 @@ Liste des sources et de leur fiabilité.
 2. Composants `Badge` et `Alert` faits ; reste le bloc « Sources » et le passage en Content Collections si le contenu grossit.
 3. ~~Date de vérification globale~~ : faite (`VERIFICATIONS` dans `config.ts`, par page, repli sur `LAST_CHECK`).
 4. ~~Image d'accueil de 2,6 Mo~~ : faite (WebP, 218 Ko). Reste à mesurer EcoIndex.
-5. CSS global sans découpage (576 lignes).
+5. ~~CSS global sans découpage~~ : fait (7 fichiers par thème, §30). Reste la seconde feuille `public/styles/global.css` (1025 lignes, bons plans et guides), à fusionner avec la première.
 6. ~~SEO~~ : fait (sitemap généré, robots.txt, favicon, canonical, Open Graph). Reste une image de partage 1200x630.
-7. `lecons.js` non typé (tuples) : passer en TypeScript avec un type `Lecon`.
+7. ~~`lecons.js` non typé~~ : fait (`lecons.ts`, type `Lecon`).
 8. ~~Convertisseur fragile~~ : fait (délai de 5 s, dernier taux connu mémorisé).
-9. README et contrôle des liens en CI faits. Restent un lint et des tests de comportement.
+9. README et contrôle des liens en CI faits. Contrôle des pages construites ajouté (§30). Restent un lint et des tests de comportement dans un navigateur.
 10. ~~Registre des pays écrit à la main, compléments en lots numérotés, aucun contrôle des données~~ : fait le 7 novembre 2026 (§29).
 11. Compléments : un fichier par région (`complements/regions/`), pas encore un fichier par pays (constantes partagées entre pays d'un même fichier).
 12. `officiel.json` (6,5 Mo) est généré et versionné : alourdit l'historique Git.
@@ -267,3 +267,10 @@ Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fich
 - `src/data/pays/complements/` : `outils.ts` (aides de rédaction), `regions/*.ts` (tables { ISO: complément } reprises automatiquement ; un ISO en double arrête le build).
 - `src/data/pays/verifier.ts` : à chaque build, refuse ISO ou slug en double, badge « Vérifié » sans source, URL de source invalide.
 - Documentation : doublons de cette spec supprimés, sections renumérotées, contradictions sur la mesure d'audience corrigées.
+
+## 30. Qualité : tests des pages, CSS découpé, leçons typées (7 novembre 2026)
+
+- `npm test` lance maintenant `scripts/verifier-pages.mjs` après le contrôle des liens : sur chaque page construite, `lang="fr"`, `<title>`, meta description, un seul `<h1>`, `alt` sur les images, aucun script externe, **aucune balise Google Tag Manager / Analytics dans le HTML** (elle n'apparaît qu'après le consentement), `rel="noopener"` sur les liens externes et affiliés.
+- Premier résultat : `/bons-plans/` n'avait pas de `<h1>` ; un titre masqué à l'œil (lu par les lecteurs d'écran) a été ajouté, sans changement visible.
+- `src/styles/global.css` devient une liste d'`@import` ordonnée vers 7 fichiers thématiques ; le CSS produit est inchangé.
+- Les leçons de russe sont typées (`Lecon`), comme celles des autres pays.

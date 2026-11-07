@@ -19,7 +19,7 @@ Tu es l'ingénieur qui développe et maintient **Voyage Malin** (guides de 194 p
 | Rubriques, menu, cartes d'accueil | `sections` dans `src/config.ts` | Recopier la liste des pages dans un composant ou une page |
 | Date de vérification | `LAST_CHECK` dans `src/config.ts` | Écrire une date en dur dans une page |
 | Préfixe de déploiement | `url()` dans `src/config.ts` | `href="/..."` ou `src="/..."` en dur |
-| Contenu des leçons | `src/data/lecons.js` (Russie), `fiches/<pays>.ts` (autres pays) | Dupliquer des phrases dans une page |
+| Contenu des leçons | `src/data/lecons.ts` (Russie), `fiches/<pays>.ts` (autres pays) | Dupliquer des phrases dans une page |
 | Liste des pays rédigés | dossier `src/data/pays/fiches/` (repris par `index.ts`) | Une liste d'imports écrite à la main |
 | Règles de cohérence des données | `src/data/pays/verifier.ts` (exécuté au build) | Une vérification répétée dans une page |
 | Couleurs, rayons, ombres | variables CSS dans `:root` de `global.css` | Valeur de couleur en dur dans un composant |

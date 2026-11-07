@@ -24,7 +24,7 @@ Le site est servi sous `/russie/` en local comme en production (`base` dans `ast
 - `src/data/villes/<pays>.json` : villes à connaître (générées par `scripts/villes.mjs`, workflow mensuel). `src/content/` : bons plans et guides (Content Collections, `src/content.config.ts`). `src/data/bagages.ts`, `budget-voyage.ts`, `quand-partir.json` (import par `scripts/importer-quand-partir.mjs`) alimentent les pages `src/pages/outils/` et les blocs `OutilsPays`, `CalendrierPays`.
 - `src/data/monde/` : les 194 États (`pays.json` généré par `scripts/importer-monde.mjs`, ne pas éditer à la main), `index.ts` (aides, `contextePays`), `devises.ts` (facilité d'obtention, à confirmer), `drapeaux.ts` (significations). Drapeaux SVG : `public/drapeaux/<iso3>.svg`.
 - Composants pays : `FicheIdentite`, `BlocDevise`, `BlocRusse` (ex-URSS), `PhotosPays` (photos déposées dans `src/assets/pays/<slug>/`, voir le LISEZMOI du dossier).
-- `src/pages/*.astro` : une page par rubrique. `lecons/[slug].astro` génère les leçons depuis `src/data/lecons.js`.
+- `src/pages/*.astro` : une page par rubrique. `lecons/[slug].astro` génère les leçons depuis `src/data/lecons.ts`.
 - `src/components/` : `Alert`, `Badge` (à utiliser pour tout encadré ou pastille, jamais le HTML en dur), `Quiz`, `Convertisseur`.
 - `src/data/pays/` : `fiches/` (un fichier par pays rédigé, `finlande.ts`... : **repris automatiquement par `index.ts`**, aucune liste à tenir), `complements/` (moyens de paiement, banque, logement : `regions/*.ts` repris automatiquement, `outils.ts` = aides de rédaction), le modèle de données `types.ts`, le registre `index.ts`, `verifier.ts` (contrôle des données **à chaque build** : ISO et slug uniques, badge « Vérifié » sans source refusé, URL de source valide) et les aides communes `aides.ts` (`diplo()`, `aDocumenter()`, `securiteALire()`...). Suivi pays par pays : `.ai/AVANCEMENT_PAYS.md`. Un pays « bientôt » y figure avec `complet: false`.
 - `src/pages/pays/` : les pages de tous les guides pays (accueil, rubriques, sources, leçons), générées depuis le registre. Ne jamais copier une page par pays.
@@ -33,8 +33,8 @@ Le site est servi sous `/russie/` en local comme en production (`base` dans `ast
 - `src/scripts/` : scripts navigateur (`lecon.ts` : audio et quiz).
 - `.github/workflows/` : `deploy.yml` (tests puis GitHub Pages), `actualites.yml` (hebdomadaire), `fiches-officielles.yml` (mensuel), `villes.yml` (mensuel), `bons-plans.yml` (manuel).
 - `src/pages/demo-*.astro` : maquettes locales de travail, non publiées : ne pas les commiter ni y copier de styles.
-- `scripts/` (racine) : outils de développement (`verifier-liens.mjs`, `optimiser-images.mjs`, `actualites.mjs` (topo hebdomadaire, voir `.ai/AVANCEMENT.md`), `convertir-image.mjs` pour toute nouvelle image, avec recadrage optionnel `x,y,largeur,hauteur`).
-- `src/styles/global.css` : tous les styles, variables CSS en haut, thème sombre automatique.
+- `scripts/` (racine) : outils de développement (`verifier-liens.mjs` et `verifier-pages.mjs` (lancés par `npm test` : liens internes, puis h1/title/description/alt, aucune balise GTM hors consentement, pas de script externe, `rel` des liens externes et affiliés), `optimiser-images.mjs`, `actualites.mjs` (topo hebdomadaire, voir `.ai/AVANCEMENT.md`), `convertir-image.mjs` pour toute nouvelle image, avec recadrage optionnel `x,y,largeur,hauteur`).
+- `src/styles/global.css` : liste ordonnée d'`@import` (l'ordre est celui de la cascade) vers `base.css` (variables CSS, thème sombre, en-tête), `pages.css`, `lecons.css`, `navigation.css`, `monde.css`, `outils.css`, `services.css`. Ajouter un style dans le fichier du thème concerné. `public/styles/global.css` est une **seconde feuille, indépendante**, utilisée seulement par les pages bons plans et guides (dette connue).
 - `public/` : fichiers servis tels quels (images). Pas de copie des images à la racine du projet.
 
 ## Règles à respecter
