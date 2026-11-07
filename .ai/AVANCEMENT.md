@@ -186,3 +186,6 @@ Accueil = choix de destination, 194 pays, fiche d'identité, drapeaux, convertis
 - Après le changement de modèle, les villes échouent en 429 « You exceeded your current quota » : le projet Google de la clé n'a pas (ou plus) de quota pour ce modèle avec la recherche web. Ce n'est pas un défaut du code.
 - Les scripts villes et actualités s'arrêtent maintenant après 3 refus de quota consécutifs (au lieu de ~2 min perdues par pays). Les lancements manuels des deux workflows acceptent « limite » (nombre de pays, 3 pour un essai) et « modele ».
 - À faire côté utilisateur : regarder https://ai.dev/rate-limit (quota du modèle et de la recherche web), activer la facturation du projet si le palier gratuit n'inclut pas la recherche web pour ce modèle, ou essayer un autre modèle via l'entrée « modele ».
+
+## 7 novembre 2026 : nouvel accueil et identité Voyages Malins
+- Fait : accueil refondu, palette et nom du logo. À voir : le compte d'éléments de l'accueil (EcoIndex) a augmenté ; logo carré à brancher en favicon ; trois maquettes `demo-*.astro` toujours non commitées.

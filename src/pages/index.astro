@@ -2,10 +2,21 @@
 // Page d'accueil : sélecteur de destination. Tous les pays du monde, par ordre alphabétique, avec recherche et filtre par région.
 import Base from '../layouts/Base.astro';
 import { monde, groupesAlphabetiques, REGIONS } from '../data/monde';
-import { NOM_SITE, url } from '../config';
+import { paysComplets } from '../data/pays';
+import { NOM_SITE, url, legendeIA } from '../config';
 
 const groupes = groupesAlphabetiques();
 const guides = monde.filter((p) => p.guide || p.iso === 'RUS');
+// Chiffres de l'accueil calculés depuis les données (jamais écrits en dur)
+const nbLecons = paysComplets.filter((p) => p.lecons.length > 0).length + 1; // + la Russie, hors registre
+const nbVilles = Object.keys(import.meta.glob('../data/villes/*.json')).length;
+const exemple = paysComplets.find((p) => p.slug === 'japon' && p.lecons.length > 0);
+const vignettes = [
+  { titre: 'Salutations', img: '/img/lecons/salutations.webp', alt: 'Une poignée de main entre deux personnes' },
+  { titre: 'Se présenter', img: '/img/lecons/se-presenter.webp', alt: 'Un homme souriant présente sa carte de visite' },
+  { titre: 'Se déplacer', img: '/img/lecons/se-deplacer-monde.webp', alt: 'Une table dans un compartiment de train avec une tasse, un carnet et un stylo' },
+  { titre: 'Restaurant et courses', img: '/img/lecons/restaurant-courses-monde.webp', alt: 'Une table de restaurant dressée, avec des clients attablés' },
+];
 const sansAccent = (t: string) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
 const jsonLd = [{
@@ -18,18 +29,18 @@ const jsonLd = [{
 ---
 <Base
   title="Choisissez votre destination"
-  titreComplet={`Guide des pays du monde : voyager, vivre, travailler à l’étranger | ${NOM_SITE}`}
+  titreComplet={`${NOM_SITE} : toutes les clés pour voyager, vivre et travailler à l’étranger`}
   description={`Choisissez votre destination parmi ${monde.length} pays : fiche d’identité, drapeau, monnaie et taux de change, conseils officiels, et guides détaillés avec leçons de langue.`}
   jsonLd={jsonLd}
   bandeau={false}
 >
-  <section class="accueil-hero">
-    <span class="eyebrow">Guide indépendant · {monde.length} pays · {guides.length} guides détaillés</span>
-    <h1>Choisissez votre <em>destination</em></h1>
-    <p class="lead">Voyager, vivre, travailler ou apprendre quelques mots de la langue : pour chaque pays, une fiche d’identité, le taux de change, les conseils officiels du ministère français, et, quand il existe, un guide détaillé avec sources et leçons audio.</p>
+    <section class="accueil-hero">
+    <img class="logo-hero" src={url('/img/logo-voyages-malins.webp')} alt="Voyages Malins : toutes les clés pour voyager" width="640" height="232" fetchpriority="high" />
+    <h1>Tout pour préparer votre voyage, <em>au même endroit</em></h1>
+    <p class="lead">Conseils officiels, guide détaillé, leçons audio dans la langue du pays, villes à connaître et bons plans : plus besoin de jongler entre dix sites. Choisissez un pays, tout y est.</p>
 
     <div class="recherche" role="search">
-      <label for="recherche">Rechercher un pays</label>
+      <label for="recherche">Rechercher un pays ({monde.length} au choix)</label>
       <input id="recherche" type="search" placeholder="Ex. : Japon, Géorgie, Maroc…" autocomplete="off" aria-controls="resultats" />
       <!-- Suggestions : remplies par le script au fil de la frappe, directement sous le champ -->
       <ul id="resultats" class="liste-pays resultats" aria-label="Pays correspondants" hidden></ul>
@@ -40,6 +51,34 @@ const jsonLd = [{
       <p id="compte" class="src" aria-live="polite"></p>
     </div>
   </section>
+
+  <section id="tout-au-meme-endroit" aria-labelledby="tout-titre">
+    <h2 id="tout-titre">Tout au même endroit, pour chaque pays</h2>
+    <ul class="atouts">
+      <li><span class="ico" aria-hidden="true">⚡</span><div><h3>L’essentiel en une page</h3><p>Entrée, sécurité, santé, argent, urgences : l’indispensable en quelques lignes, tiré des fiches du ministère des Affaires étrangères.</p></div></li>
+      <li><span class="ico" aria-hidden="true">🧭</span><div><h3>Des guides détaillés</h3><p>Voyager, vivre, travailler, payer sur place, avec les sources et un badge « vérifié » ou « à confirmer ». {guides.length} pays déjà.</p></div></li>
+      <li><span class="ico" aria-hidden="true">🎧</span><div><h3>Des leçons pour parler</h3><p>Les phrases utiles dans la langue du pays : vous écoutez, vous répétez, vous vous entraînez avec un quiz. {nbLecons} pays déjà.</p></div></li>
+      <li><span class="ico" aria-hidden="true">📍</span><div><h3>Les villes à connaître</h3><p>Trois idées de villes ou de sites par pays, avec les sources consultées. {nbVilles} pays.</p></div></li>
+      <li><span class="ico" aria-hidden="true">🏷️</span><div><h3>Bons plans et astuces</h3><p>Des offres retenues seulement si le prix est vraiment bas, et des astuces pour voyager moins cher. <a href={url('/bons-plans')}>Bons plans</a> · <a href={url('/guides')}>Astuces</a></p></div></li>
+    </ul>
+  </section>
+
+  {exemple && (
+    <section id="exemple" aria-labelledby="exemple-titre">
+      <h2 id="exemple-titre">Un exemple : {exemple.nom}</h2>
+      <p>Une seule page pays, et tout se déroule : de l’information officielle aux premiers mots de la langue.</p>
+      <ul class="etapes">
+        <li><a href={url(`/pays/${exemple.slug}/essentiel`)}><strong>1. L’essentiel</strong><span>Entrée, sécurité, santé, urgences</span></a></li>
+        <li><a href={url(`/pays/${exemple.slug}`)}><strong>2. Le guide</strong><span>Voyager, argent, villes à connaître</span></a></li>
+        <li><a href={url(`/pays/${exemple.slug}/lecons`)}><strong>3. Les leçons</strong><span>{exemple.lecons.length} leçons audio avec quiz</span></a></li>
+      </ul>
+      <ul class="vignettes-lecons">
+        {vignettes.map((v) => (
+          <li><a href={url(`/pays/${exemple.slug}/lecons`)}><img src={url(v.img)} alt={legendeIA(v.alt)} title={legendeIA(v.alt)} width="320" height="190" loading="lazy" /><span>{v.titre}</span></a></li>
+        ))}
+      </ul>
+    </section>
+  )}
 
   <section id="guides" aria-labelledby="guides-titre">
     <h2 id="guides-titre">Guides détaillés</h2>

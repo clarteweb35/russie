@@ -1,4 +1,4 @@
-// Partenaires affiliés Awin : source unique pour l'accueil de Voyage Malin ET pour les fiches pays.
+// Partenaires affiliés Awin : source unique pour l'accueil de Voyages Malins ET pour les fiches pays.
 // Pour changer un partenaire, une règle par région ou la liste des pays Schengen, c'est ici et nulle part ailleurs.
 
 // Identifiant d'éditeur Awin (public : il figure dans chaque lien affilié).

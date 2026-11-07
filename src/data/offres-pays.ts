@@ -2,7 +2,7 @@ import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import { parIso } from './monde';
 
-// Lien entre les offres de Voyage Malin (bons plans) et les fiches pays.
+// Lien entre les offres de Voyages Malins (bons plans) et les fiches pays.
 // Une offre est rattachée à un pays par son champ `pays` (code ISO, par exemple « PRT »).
 // À défaut, on le déduit du nom de la destination avec la table ci-dessous (à compléter au fil des offres).
 // Le pipeline de génération des offres devrait idéalement renseigner `pays` lui-même.

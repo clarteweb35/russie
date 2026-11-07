@@ -12,7 +12,7 @@ export const GET: APIRoute = async ({ site }) => {
   const guides = await getCollection('guides');
   const chemins = [
     '/',
-    // Voyage Malin : la page des bons plans n'est listée que s'il y a des offres (sinon elle est en noindex)
+    // Voyages Malins : la page des bons plans n'est listée que s'il y a des offres (sinon elle est en noindex)
     ...pagesEditoriales.map((e) => e.href).filter((h) => h !== '/bons-plans' || bonsPlans.length > 0),
     ...bonsPlans.map((o) => `/bons-plans/${o.id}`),
     ...guides.map((g) => `/guides/${g.id}`),

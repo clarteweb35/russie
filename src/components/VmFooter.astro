@@ -1,6 +1,6 @@
 ---
 import { url } from "../config";
-// Pied de page commun des pages de Voyage Malin.
+// Pied de page commun des pages de Voyages Malins.
 import { mention } from '../data/partenaires';
 interface Props { affilie?: boolean } // true : la page contient des liens affiliés
 const { affilie = false } = Astro.props;
@@ -8,7 +8,7 @@ const { affilie = false } = Astro.props;
 <footer class="vm-footer">
   {affilie && <p class="vm-footer__affil">{mention}</p>}
   <p>
-    Voyage Malin · <a href={url("/guides/")}>Astuces &amp; Hacks Voyage</a> · <a href={url("/#destinations")}>Pays</a> · <a href={url("/mentions-legales")}>Mentions légales</a>
+    Voyages Malins · <a href={url("/guides/")}>Astuces &amp; Hacks Voyage</a> · <a href={url("/#destinations")}>Pays</a> · <a href={url("/mentions-legales")}>Mentions légales</a>
   </p>
 </footer>
 <style>
