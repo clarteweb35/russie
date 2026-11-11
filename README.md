@@ -1,6 +1,6 @@
 # Voyage Malin : guide des pays du monde
 
-Site statique d'information en français sur 194 pays (voyager, vivre, travailler, apprendre la langue), avec un guide historique sur la Russie, construit avec [Astro](https://astro.build) et publié sur GitHub Pages : https://clarteweb35.github.io/russie/
+Site statique d'information en français sur 194 pays (voyager, vivre, travailler, apprendre la langue), avec un guide historique sur la Russie, construit avec [Astro](https://astro.build) et publié sur GitHub Pages : https://voyagesmalins.fr (l'ancienne adresse https://clarteweb35.github.io/russie/ redirige).
 
 ## Démarrer
 

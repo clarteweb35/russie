@@ -1,15 +1,16 @@
 # Avancement : Guide Russie
 
-Dernière mise à jour : 7 novembre 2026. Ce fichier est mis à jour à la fin de chaque session de travail. Les sections les plus basses sont les plus récentes ; les tableaux du début sont l'historique du guide Russie d'origine.
+Dernière mise à jour : 11 novembre 2026. Ce fichier est mis à jour à la fin de chaque session de travail. Les sections les plus basses sont les plus récentes ; les tableaux du début sont l'historique du guide Russie d'origine.
 
 **Production** : https://voyagesmalins.fr, en ligne le 7 novembre 2026 (déploiement automatique à chaque push sur `main` ; l'ancienne adresse github.io redirige). **À corriger** : `www.voyagesmalins.fr` redirige vers l'adresse sans www, mais le canonique et le plan du site déclarent encore www : mettre la variable de dépôt `DOMAINE` à `voyagesmalins.fr` puis relancer le déploiement.
 **Note d'architecture** : 90 / 100 le 7 novembre 2026 (76 avant la remise à plat ; dette restante dans `.ai/SPEC_FONCTIONNALITES.md`, §6)
+**Note globale du projet** : 78 / 100 le 11 novembre 2026 (audit complet en bas de ce fichier : architecture 17/20, contenu 13/20, sobriété 10/15, tests 12/15, sécurité 9/10, documentation 9/10, hygiène du dépôt 8/10).
 
 ## État au 7 novembre 2026
 
 Site « Voyage Malin » : 194 pays, outils (bagages, quand partir, budget), bons plans, villes, fiches officielles automatiques, bandeau de consentement + GTM. Tout est en ligne sauf les pages `demo-*` et `src/assets/carousel/` (travail local non suivi).
 
-**Prochaines actions** : (1) GTM : vérifier en aperçu que la balise GA4 se déclenche après acceptation ; (2) refaire la mesure EcoIndex ; (3) quota Gemini (villes, actualités) ; (4) décision sur la page budget (aucune estimation sourcée) ; (5) domaine voyagesmalins.fr (voir plus bas) ; (6) dette technique restante : un fichier par pays pour les compléments, tests de comportement dans un navigateur.
+**Prochaines actions** (ordre revu le 11 novembre 2026, voir l'audit en bas) : (1) **alléger l'accueil** (1 477 éléments et 117 Ko : quatre fois le seuil EcoIndex A) ; (2) faire tourner en réel les pipelines Gemini (quota) et Awin (premier flux) ; (3) sortir des fiches du mode test, destinations les plus visitées d'abord ; (4) décision sur la page budget (aucune estimation sourcée : la retirer du menu en attendant ?) ; (5) GTM : vérifier en aperçu que la balise GA4 se déclenche après acceptation ; (6) variable `DOMAINE` à passer en `voyagesmalins.fr` sans www ; (7) dette technique : un fichier par pays pour les compléments, tests de comportement dans un navigateur.
 
 ## Historique : en cours au 4 novembre 2026 (obsolète)
 
@@ -221,3 +222,19 @@ Accueil = choix de destination, 194 pays, fiche d'identité, drapeaux, convertis
 ## 7 novembre 2026 (nuit) : Fil d'Ariane, déconseillé, consentement
 - Fait : bloc Fil d'Ariane sur toutes les fiches, calendrier « Déconseillé » pour les pays à risque, bandeau de consentement et Google Tag Manager (GTM-K6DKPJXN) après acceptation, mentions légales et CLAUDE.md mis à jour.
 - À vérifier : dans GTM (mode aperçu), que la balise Google Analytics se déclenche après acceptation ; refaire la mesure EcoIndex (nouveaux blocs, bandeau). Le bandeau et le script ajoutent des éléments : l'accueil peut avoir dépassé le seuil du A.
+
+## 11 novembre 2026 : audit complet du projet (78 / 100)
+
+Audit fait sur le code, la documentation et le site construit (`npm test` : 2 685 pages, liens et règles de pages OK). Aucune fonctionnalité modifiée ce jour : seulement ce suivi, le README (adresse de production) et le constat ci-dessous.
+
+| Axe | Note | Constat |
+|---|---|---|
+| Architecture et code | 17 / 20 | Source unique respectée (registre automatique, contrôle au build, aucun lien en dur, aucun `any`, aucun badge en HTML brut). Manque : pas de `tsconfig.json` ni d'`astro check` (ajouterait une dépendance : à décider). |
+| Fiabilité du contenu | 13 / 20 | Système honnête (165 badges « À confirmer » pour 22 « Vérifié »). Mais 44 fiches sur 58 encore en test, page budget vide, aucun article dans `src/content/bons-plans/`, pipelines Gemini (actualités, villes) jamais passés en réel. |
+| Sobriété et performance | 10 / 15 | Accueil construit : **1 477 éléments HTML, 117 Ko**, soit plus de quatre fois le seuil EcoIndex A (~330) visé. Cause : les 194 cartes de pays. Les drapeaux sont en `loading="lazy"`, mais ils pèsent 3,8 Mo au total pour 36 × 24 px affichés (`mex.svg` 345 Ko, `ecu.svg` 279 Ko…) : un sprite ou des miniatures WebP seraient plus sobres. Ces SVG sont générés par `scripts/importer-monde.mjs`, donc à traiter dans le script, pas à la main. |
+| Tests et qualité | 12 / 15 | Quatre contrôles en CI. Rien dans un navigateur (consentement, quiz, convertisseur, menu mobile), pas de lint. |
+| Sécurité et vie privée | 9 / 10 | Consentement avant GTM, cookies effacés au retrait, aucun secret, `innerHTML` seulement sur données échappées. `npm audit` : 5 vulnérabilités, toutes dans l'outillage de build (Astro 5.18, esbuild, sharp, zod), sans effet sur le site publié ; à reprendre lors d'une montée de version d'Astro. |
+| Documentation et suivi | 9 / 10 | Très complète. Ce fichier mélange historique et actions ; README corrigé (adresse de production). |
+| Hygiène du dépôt | 8 / 10 | Non suivis : `demo-*.astro`, `src/assets/carousel/`, `maquettes/`, un PNG à la racine. `officiel.json` (6,7 Mo) versionné à chaque import mensuel. Canonique `www` à corriger. |
+
+Actions qui rapporteraient le plus : (1) accueil allégé (ne rendre que les guides mis en avant et les régions, liste complète à la demande ou par région) ; (2) un premier passage réel des pipelines ; (3) relecture des fiches les plus visitées et retrait provisoire de la page budget.
