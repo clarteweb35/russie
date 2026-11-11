@@ -1,0 +1,24 @@
+---
+// Recherche d'un pays : champ avec suggestions, filtres par région, compteur. Utilisé sur l'accueil et sur la page /pays/.
+// Les pays sont embarqués dans un seul bloc JSON (un élément HTML) : l'accueil n'a plus à rendre 194 cartes.
+// Sur la page /pays/, le script masque aussi les cartes de la liste (#liste) qui ne correspondent pas.
+import { monde, REGIONS, donneesRecherche } from '../data/monde';
+import { url } from '../config';
+
+// « </script » dans une donnée casserait le bloc : on neutralise le chevron par précaution
+const json = JSON.stringify(donneesRecherche()).replace(/</g, '\\u003c');
+---
+<div class="recherche" role="search" data-base={url('')}>
+  <label for="recherche">Rechercher un pays ({monde.length} au choix)</label>
+  <input id="recherche" type="search" placeholder="Ex. : Japon, Géorgie, USA, RDC…" autocomplete="off" aria-controls="resultats" />
+  <!-- Suggestions : remplies par le script au fil de la frappe, directement sous le champ -->
+  <ul id="resultats" class="liste-pays resultats" aria-label="Pays correspondants" hidden></ul>
+  <div class="filtres" role="group" aria-label="Filtrer par région">
+    <button type="button" class="filtre actif" data-region="">Toutes les régions</button>
+    {REGIONS.map((r) => <button type="button" class="filtre" data-region={r}>{r}</button>)}
+  </div>
+  <p id="compte" class="src" aria-live="polite"></p>
+  <p id="aucun" class="src" hidden>Aucun pays ne correspond à votre recherche.</p>
+  <script type="application/json" id="donnees-pays" set:html={json} />
+</div>
+<script>import '../scripts/recherche-pays';</script>

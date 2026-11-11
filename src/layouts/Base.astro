@@ -26,9 +26,11 @@ const { title, titreComplet, description = 'Guide d’information sur les pays d
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const path = Astro.url.pathname.slice(base.length).replace(/\/$/, '') || '/';
 const isHome = path === '/';
+// Accueil et liste des pays : même menu général (destinations, cours, outils, bons plans, astuces)
+const menuGeneral = isHome || path === '/pays';
 // Pages de la Russie : leur menu est celui de la Russie
 const estPageRussie = path === '/pays/russie' || sections.some((s) => path === s.href || path.startsWith(s.href + '/'));
-const menuAffiche: ElementMenu[] = menu ?? (estPageRussie ? sections.map((s) => ({ label: s.label, href: s.href })) : isHome ? [{ label: 'Destinations', href: '/#destinations' }, ...pagesEditoriales.map((e) => ({ label: e.label, href: e.href }))] : []);
+const menuAffiche: ElementMenu[] = menu ?? (estPageRussie ? sections.map((s) => ({ label: s.label, href: s.href })) : menuGeneral ? [{ label: 'Destinations', href: '/pays', exact: true }, ...pagesEditoriales.map((e) => ({ label: e.label, href: e.href }))] : []);
 const actif = (m: ElementMenu) => m.href.includes('#') ? false : path === m.href || (!m.exact && path.startsWith(m.href + '/'));
 
 const showMeta = meta ?? (!isHome && !['/sources', '/pays/russie/sources', '/mentions-legales'].includes(path));
@@ -40,7 +42,7 @@ const image = new URL(url(cheminImage), Astro.site).href;
 const accueil = new URL(url('/'), Astro.site).href;
 
 // Fil d'Ariane : visible et déclaré aux moteurs de recherche
-const filComplet: ElementFil[] | undefined = fil ? [{ label: 'Destinations', href: '/' }, ...fil] : undefined;
+const filComplet: ElementFil[] | undefined = fil ? [{ label: 'Accueil', href: '/' }, ...fil] : undefined;
 const donneesStructurees: object[] = [
   ...(filComplet ? [{
     '@context': 'https://schema.org',
@@ -103,7 +105,7 @@ const donneesStructurees: object[] = [
         {!isHome && <a class="brand" href={url("/")} aria-label={`${NOM_SITE}, accueil`}><img src={url("/img/logo-voyages-malins.webp")} alt={NOM_SITE} width="127" height="46" /></a>}
         <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
         <nav id="menu" aria-label="Navigation principale">
-          {!isHome && <a class="retour" href={url('/#destinations')}>← Toutes les destinations</a>}
+          {!menuGeneral && <a class="retour" href={url('/pays')}>← Toutes les destinations</a>}
           {menuAffiche.map((m) => (
             <a href={url(m.href)} aria-current={actif(m) ? 'page' : undefined}>{m.label}</a>
           ))}
@@ -157,7 +159,7 @@ const donneesStructurees: object[] = [
       <div class="wrap">
         <p>Guide d’information indépendant, non officiel. Il ne remplace ni les sources officielles ni un avis juridique, médical ou fiscal.
         Les règles changent vite : vérifiez toujours auprès des autorités avant d’agir.</p>
-        <p>Dernière vérification globale : {LAST_CHECK}. <a href={url("/sources")}>Voir les sources</a>. <a href={url("/#destinations")}>Toutes les destinations</a>.
+        <p>Dernière vérification globale : {LAST_CHECK}. <a href={url("/sources")}>Voir les sources</a>. <a href={url('/pays')}>Toutes les destinations</a>.
         {[...pagesEditoriales, ...pagesLegales].map((p) => (<> · <a href={url(p.href)}>{p.label}</a></>))} · <button type="button" id="gerer-cookies" class="lien-bouton">Mesure d’audience</button></p>
       </div>
     </footer>

@@ -10,7 +10,7 @@ Dernière mise à jour : 11 novembre 2026. Ce fichier est mis à jour à la fin 
 
 Site « Voyage Malin » : 194 pays, outils (bagages, quand partir, budget), bons plans, villes, fiches officielles automatiques, bandeau de consentement + GTM. Tout est en ligne sauf les pages `demo-*` et `src/assets/carousel/` (travail local non suivi).
 
-**Prochaines actions** (ordre revu le 11 novembre 2026, voir l'audit en bas) : (1) **alléger l'accueil** (1 477 éléments et 117 Ko : quatre fois le seuil EcoIndex A) ; (2) faire tourner en réel les pipelines Gemini (quota) et Awin (premier flux) ; (3) sortir des fiches du mode test, destinations les plus visitées d'abord ; (4) décision sur la page budget (aucune estimation sourcée : la retirer du menu en attendant ?) ; (5) GTM : vérifier en aperçu que la balise GA4 se déclenche après acceptation ; (6) variable `DOMAINE` à passer en `voyagesmalins.fr` sans www ; (7) dette technique : un fichier par pays pour les compléments, tests de comportement dans un navigateur.
+**Prochaines actions** (ordre revu le 11 novembre 2026, voir l'audit en bas) : (1) ~~alléger l'accueil~~ fait le 11 novembre 2026 (216 éléments), reste la mesure EcoIndex en ligne et les drapeaux SVG ; (2) faire tourner en réel les pipelines Gemini (quota) et Awin (premier flux) ; (3) sortir des fiches du mode test, destinations les plus visitées d'abord ; (4) décision sur la page budget (aucune estimation sourcée : la retirer du menu en attendant ?) ; (5) GTM : vérifier en aperçu que la balise GA4 se déclenche après acceptation ; (6) variable `DOMAINE` à passer en `voyagesmalins.fr` sans www ; (7) dette technique : un fichier par pays pour les compléments, tests de comportement dans un navigateur.
 
 ## Historique : en cours au 4 novembre 2026 (obsolète)
 
@@ -238,3 +238,7 @@ Audit fait sur le code, la documentation et le site construit (`npm test` : 2 68
 | Hygiène du dépôt | 8 / 10 | Non suivis : `demo-*.astro`, `src/assets/carousel/`, `maquettes/`, un PNG à la racine. `officiel.json` (6,7 Mo) versionné à chaque import mensuel. Canonique `www` à corriger. |
 
 Actions qui rapporteraient le plus : (1) accueil allégé (ne rendre que les guides mis en avant et les régions, liste complète à la demande ou par région) ; (2) un premier passage réel des pipelines ; (3) relecture des fiches les plus visitées et retrait provisoire de la page budget.
+
+## 11 novembre 2026 : accueil allégé (SPEC §33)
+- Fait et publié : liste des 194 pays déplacée sur `/pays/`, recherche partagée depuis un bloc JSON. Accueil : 1 477 → 216 éléments, 117 → 61 Ko. `npm test` OK (2 685 pages). Captures vérifiées (accueil, `/pays/`).
+- À faire : mesurer l'EcoIndex réel de l'accueil en ligne ; alléger les drapeaux SVG dans le script d'import (sprite ou miniatures) ; tester la recherche au clavier et le filtre par région sur téléphone.

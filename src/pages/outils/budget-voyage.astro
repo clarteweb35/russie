@@ -104,7 +104,7 @@ const donnees = { budgets: BUDGETS, niveaux, sourceNiveau: DONNEES.sources.nivea
         </li>
       ))}
     </ul>
-    <p>Autres outils : {outils.filter((o) => o.href !== '/outils/budget-voyage').map((o, i) => <>{i > 0 && ' · '}<a href={url(o.href)}>{o.label}</a></>)} · <a href={url('/outils')}>Tous les outils</a> · <a href={url('/#destinations')}>Tous les pays</a></p>
+    <p>Autres outils : {outils.filter((o) => o.href !== '/outils/budget-voyage').map((o, i) => <>{i > 0 && ' · '}<a href={url(o.href)}>{o.label}</a></>)} · <a href={url('/outils')}>Tous les outils</a> · <a href={url('/pays')}>Tous les pays</a></p>
   </section>
 
   <section aria-labelledby="faq-budget">

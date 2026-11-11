@@ -135,8 +135,32 @@ export const ALIAS: Record<string, string[]> = {
 };
 export const estRussie = (p: Fiche) => p.iso === RUSSIE;
 
+// Texte sans accent ni majuscule, pour comparer une saisie à un nom (« Émirats » et « emirats » se valent)
+export const sansAccent = (t: string) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+
 // Lettre de regroupement alphabétique, sans accent (« Émirats » range sous E, « Île Maurice » sous I)
-export const lettreDe = (nom: string) => nom.normalize('NFD').replace(/[̀-ͯ]/g, '').charAt(0).toUpperCase();
+export const lettreDe = (nom: string) => sansAccent(nom).charAt(0).toUpperCase();
+
+// Étiquette à côté du nom dans les listes : « guide » (fiche relue, ou la Russie), « beta » (fiche en test), ou rien
+export const etiquetteGuide = (p: FicheMonde) => (p.guide ? (p.guide.test ? 'beta' : 'guide') : p.iso === RUSSIE ? 'guide' : '');
+
+// Ligne secondaire des listes : capitale, puis sous-région
+export const detailPays = (p: FicheMonde) => `${p.capitales[0] ? `${p.capitales[0]} · ` : ''}${p.sousRegion || p.region}`;
+
+// Données compactes de la recherche (accueil et page /pays/), embarquées en JSON : une entrée par pays, sans HTML.
+// n : nom comparable ; alias : sigles et autres noms ; long : tout ce qui peut matcher (nom officiel, capitales, alias).
+export const donneesRecherche = () =>
+  monde.map((p) => ({
+    iso: p.iso,
+    nom: p.nom,
+    href: p.href,
+    n: sansAccent(p.nom),
+    alias: ALIAS[p.iso] ?? [],
+    long: sansAccent(`${p.nom} ${p.nomOfficiel} ${p.capitales.join(' ')} ${(ALIAS[p.iso] ?? []).join(' ')}`),
+    region: p.region,
+    det: detailPays(p),
+    tag: etiquetteGuide(p),
+  }));
 
 export const groupesAlphabetiques = () => {
   const groupes = new Map<string, FicheMonde[]>();

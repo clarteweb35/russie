@@ -1,5 +1,57 @@
 ---
-// L'ancienne liste des pays est remplacée par la page d'accueil, qui est le sélecteur de destination.
+// Tous les pays du monde, de A à Z, avec recherche et filtre par région. Cette liste vivait sur l'accueil : elle en a été
+// sortie pour l'alléger (194 cartes = plus de 1 000 éléments HTML). Lisible sans JavaScript.
+import Base from '../../layouts/Base.astro';
+import RechercheDestination from '../../components/RechercheDestination.astro';
+import { monde, groupesAlphabetiques, etiquetteGuide, detailPays } from '../../data/monde';
 import { url } from '../../config';
-return Astro.redirect(url('/'));
+
+const groupes = groupesAlphabetiques();
+const jsonLd = [{
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Pays du monde',
+  numberOfItems: monde.length,
+  itemListElement: monde.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.nom, url: new URL(url(p.href), Astro.site).href })),
+}];
 ---
+<Base
+  title="Tous les pays, de A à Z"
+  description={`Les ${monde.length} pays du monde classés par ordre alphabétique, avec drapeau, capitale et région : choisissez votre destination et ouvrez sa fiche ou son guide.`}
+  jsonLd={jsonLd}
+  bandeau={false}
+  meta={false}
+  fil={[{ label: 'Tous les pays' }]}
+>
+  <h1>Tous les pays, de A à Z</h1>
+  <p class="lead">Chaque pays a sa fiche : identité, monnaie, conseils officiels. Les pays marqués « guide » ou « beta » ont en plus un guide détaillé.</p>
+
+  <RechercheDestination />
+
+  <section id="destinations" aria-label="Liste des pays">
+    <nav class="alphabet" aria-label="Aller à une lettre">
+      {groupes.map((g) => <a href={`#lettre-${g.lettre}`}>{g.lettre}</a>)}
+    </nav>
+
+    <div id="liste">
+      {groupes.map((g) => (
+        <section class="groupe" id={`lettre-${g.lettre}`} aria-label={`Pays commençant par ${g.lettre}`}>
+          <h3>{g.lettre}</h3>
+          <ul class="liste-pays">
+            {g.pays.map((p) => (
+              <li data-iso={p.iso}>
+                <a href={url(p.href)}>
+                  <img src={url(`/drapeaux/${p.iso.toLowerCase()}.svg`)} alt="" width="36" height="24" loading="lazy" />
+                  <span class="nom">{p.nom}{etiquetteGuide(p) && <small class="tag-guide">{etiquetteGuide(p)}</small>}</span>
+                  <span class="det">{detailPays(p)}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+  </section>
+
+  <p class="src">Ce site est indépendant et non officiel. Pour chaque pays, les conseils aux voyageurs du ministère de l’Europe et des Affaires étrangères restent la référence.</p>
+</Base>

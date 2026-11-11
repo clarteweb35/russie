@@ -20,9 +20,13 @@ Site statique d'information, en français, pour voyager, vivre et travailler dan
 ## 2. Pages et fonctionnalités
 
 ### Accueil `/` : choix de la destination
-- Page générale : titre, champ de recherche (sans tenir compte des accents), filtre par région, puis **tous les pays du monde (194 États) classés par ordre alphabétique**, chacun avec son drapeau. Les pays à guide détaillé sont mis en avant (liste « guides détaillés », ancre `#guides`).
-- SEO : titre et description propres, balise canonique, Open Graph, données structurées (WebSite, ItemList), fil d'Ariane, plan du site généré depuis les données.
+- Page générale : logo, titre, champ de recherche (sans tenir compte des accents, suggestions au fil de la frappe, sigles et autres noms reconnus), filtre par région (sans saisie, une région affiche tous ses pays sous le champ), lien « Voir les 194 pays, de A à Z » vers `/pays/`, atouts du site, parcours d'exemple (Finlande), pays à la une (ancre `#guides`). **La liste complète des pays n'est plus rendue sur l'accueil** depuis le 11 novembre 2026 (§33) : la page est passée de 1 477 à 216 éléments HTML.
+- SEO : titre et description propres, balise canonique, Open Graph, données structurées (WebSite), plan du site généré depuis les données.
 - L'ancien accueil russe est devenu la page `/pays/russie/`.
+
+### Tous les pays `/pays/` : liste de A à Z
+- Les 194 États par ordre alphabétique (lettres cliquables), chacun avec drapeau, capitale, sous-région et étiquette « guide » (fiche relue, Russie) ou « beta » (fiche en test). Même champ de recherche et mêmes filtres que l'accueil : la liste se filtre en direct. Lisible sans JavaScript. Données structurées ItemList, fil d'Ariane « Accueil › Tous les pays ». Le menu « Destinations », le lien « ← Toutes les destinations » des autres pages et le pied de page mènent ici.
+- Recherche partagée : composant `RechercheDestination`, script `src/scripts/recherche-pays.ts`, données compactes `donneesRecherche()` (`src/data/monde/index.ts`) embarquées dans un bloc JSON (un seul élément HTML). Le script construit les suggestions sans HTML brut.
 
 ### Page d'un pays `/pays/<pays>/` (identique pour tous)
 - En-tête avec drapeau, **fiche d'identité** (nom officiel, capitale, région, langues, monnaie, indicatif, conduite, population, superficie, décalage horaire avec Paris, domaine internet), **signification du drapeau** (pays à guide uniquement, interprétation courante non officielle), repères déduits des données, pays voisins cliquables.
@@ -289,3 +293,11 @@ Une action est inscrite ici **dès qu'elle commence** (avant de modifier un fich
 - `node scripts/bons-plans/collecter.mjs --flux <id> --apercu` affiche les colonnes réelles d'un flux et ses deux premiers produits, sans rien enregistrer : c'est la façon de régler `champs` sans deviner.
 - Les règles de publication (historique, médiane, seuils) sont inchangées et valent pour tous les flux.
 - Testé hors ligne (`scripts/bons-plans/verifier-collecte.mjs`, dans `npm test`) et de bout en bout avec de faux flux (XML, CSV gzip, flux en panne). **Toujours aucun test sur un vrai flux Awin** : les colonnes par défaut sont celles du prototype.
+
+## 33. Accueil allégé : la liste des pays sur `/pays/` (11 novembre 2026)
+
+- Constat de l'audit : l'accueil construit comptait 1 477 éléments HTML (117 Ko), plus de quatre fois le seuil EcoIndex A, à cause des 194 cartes de pays.
+- Fait : la liste de A à Z vit sur `/pays/` (qui n'est plus une redirection) ; l'accueil garde la recherche avec suggestions, les filtres par région, les atouts, le parcours et les pays à la une. Résultat : 216 éléments et 61 Ko, dont 44 Ko de données JSON de recherche.
+- Une seule logique de recherche pour les deux pages (`RechercheDestination`, `recherche-pays.ts`) ; le bloc `#aucun` et le compteur font partie du composant. Sur l'accueil, choisir une région sans rien saisir liste ses pays sous le champ.
+- Tous les liens `/#destinations` du site pointent vers `/pays` ; le menu général (Destinations, cours, outils, bons plans, astuces) s'affiche sur l'accueil et sur `/pays/` ; la racine du fil d'Ariane s'appelle « Accueil ».
+- Non fait : réduire le poids des drapeaux SVG (3,8 Mo au total, en `loading="lazy"`), à traiter dans `scripts/importer-monde.mjs`.
